@@ -63,6 +63,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
   const [status, setStatus] = useState<AuthContextValue["status"]>("loading");
   const [backendChecked, setBackendChecked] = useState(false);
   const [discordToken, setDiscordToken] = useState<string | null>(null);
+  const [sessionRetryTick, setSessionRetryTick] = useState(0);
 
   const navigate = useNavigate();
   const { login: privyLogin, authenticated, ready, user: privyUser } = usePrivy();
@@ -77,6 +78,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
   const tokenSynced = useRef(false);
   const walletSynced = useRef(false);
   const walletCreating = useRef(false);
+  const retryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Capture Discord OAuth token when Privy grants it (triggers re-render via setState)
   const { reauthorize } = useOAuthTokens({
@@ -92,6 +94,14 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
   });
 
   // 1. On mount: check if backend session already exists (returning user)
+  useEffect(() => {
+    return () => {
+      if (retryTimer.current) {
+        clearTimeout(retryTimer.current);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     api
       .get<DiscordUser>("/auth/me")
@@ -114,6 +124,10 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
     if (status === "authenticated") return;
 
     if (!authenticated) {
+      if (retryTimer.current) {
+        clearTimeout(retryTimer.current);
+        retryTimer.current = null;
+      }
       sessionAttempted.current = false;
       oauthReauthAttempted.current = false;
       tokenSynced.current = false;
@@ -145,13 +159,24 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
       })
       .catch(() => {
         sessionAttempted.current = false;
+        // Keep recovering backend session silently while Privy is still authenticated.
+        if (authenticated) {
+          setStatus("loading");
+          if (!retryTimer.current) {
+            retryTimer.current = setTimeout(() => {
+              retryTimer.current = null;
+              setSessionRetryTick((v) => v + 1);
+            }, 1500);
+          }
+          return;
+        }
         setUser(null);
         setStatus("unauthenticated");
       })
       .finally(() => {
         sessionCreating.current = false;
       });
-  }, [ready, backendChecked, authenticated, privyUser, status, navigate, discordToken]);
+  }, [ready, backendChecked, authenticated, privyUser, status, navigate, discordToken, sessionRetryTick]);
 
   // If Discord token was not issued during initial sign-in, ask Privy to reauthorize Discord once.
   useEffect(() => {

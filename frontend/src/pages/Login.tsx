@@ -1,15 +1,19 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 
 export default function Login() {
   const { status, login } = useAuth();
   const navigate = useNavigate();
+  const loginTriggered = useRef(false);
 
   useEffect(() => {
     if (status === "unauthenticated") {
+      if (loginTriggered.current) return;
+      loginTriggered.current = true;
       login();
     } else if (status === "authenticated") {
+      loginTriggered.current = false;
       navigate("/servers", { replace: true });
     }
   }, [status, login, navigate]);
