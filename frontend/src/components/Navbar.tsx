@@ -129,6 +129,8 @@ const Navbar = () => {
                   </motion.div>
                 )}
               </div>
+            ) : status === "loading" ? (
+              <div className="w-7 h-7 border-2 border-pink-500/30 border-t-pink-500 rounded-full animate-spin" />
             ) : (
               <button onClick={login} className="btn-primary-glass text-sm py-2 px-4 flex items-center gap-2">
                 <DiscordIcon className="w-4 h-4" />
@@ -203,6 +205,10 @@ const Navbar = () => {
                   Logout
                 </button>
               </>
+            ) : status === "loading" ? (
+              <div className="flex items-center justify-center py-3">
+                <div className="w-6 h-6 border-2 border-pink-500/30 border-t-pink-500 rounded-full animate-spin" />
+              </div>
             ) : (
               <button onClick={login} className="btn-primary-glass text-sm py-2 px-4 justify-center flex items-center gap-2">
                 <DiscordIcon className="w-4 h-4" />

@@ -1,19 +1,5 @@
-/**
- * usePlayer seq-based ordering test.
- *
- * Validates that the seq-based event ordering logic in usePlayer correctly
- * rejects stale playerState events that arrive out of order during rapid
- * track transitions. This is the core fix for the dashboard desync bug.
- *
- * Run: cd frontend && npx vitest run src/hooks/usePlayer.test.ts
- */
 import { describe, it, expect } from "vitest";
 
-/**
- * Extracted acceptance logic from usePlayer's onStateUpdate handler.
- * This mirrors the exact logic used in production to decide whether an
- * incoming event should be accepted or rejected.
- */
 function shouldAcceptEvent(
   incomingSeq: number,
   incomingTs: number,
@@ -55,9 +41,6 @@ describe("usePlayer seq-based event ordering", () => {
   });
 
   it("simulates complete track transition race condition", () => {
-    // Simulate the exact race that causes the desync bug:
-    // 1. trackStart's playerState arrives first (seq=2, current=newTrack)
-    // 2. trackEnd's stale playerState arrives later (seq=1, current=null)
     let lastSeq = 0;
     let lastTs = 0;
     let currentTrack: string | null = null;
@@ -86,8 +69,6 @@ describe("usePlayer seq-based event ordering", () => {
   });
 
   it("simulates same-millisecond timestamps without seq (old behavior)", () => {
-    // Before the fix, two events with the same timestamp both passed through.
-    // With seq, this can't happen. Without seq (legacy), >= still allows it.
     let lastTs = 0;
     let lastSeq = 0;
 
@@ -125,8 +106,6 @@ describe("usePlayer seq-based event ordering", () => {
       }
     }
 
-    // Only Track C (seq=3) and Track E (seq=5) should have been accepted.
-    // Final state should be Track E.
     expect(acceptedTrack).toBe("Track E");
     expect(lastSeq).toBe(5);
   });

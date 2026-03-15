@@ -69,11 +69,12 @@ export default function Dashboard() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams, status]);
 
+  const lowerSearch = search.toLowerCase();
   const withBot = guilds.filter(
-    (g) => g.hasBot && g.name.toLowerCase().includes(search.toLowerCase())
+    (g) => g.hasBot && g.name.toLowerCase().includes(lowerSearch)
   );
   const withoutBot = guilds.filter(
-    (g) => !g.hasBot && g.name.toLowerCase().includes(search.toLowerCase())
+    (g) => !g.hasBot && g.name.toLowerCase().includes(lowerSearch)
   );
 
   if (status === "loading" || (status === "authenticated" && loading)) {
@@ -101,28 +102,30 @@ export default function Dashboard() {
         </div>
 
         {/* Search */}
-        <div className="relative mx-auto mb-10 max-w-xl">
-          <svg
-            className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
+        {guilds.length > 0 && (
+          <div className="relative mx-auto mb-10 max-w-xl">
+            <svg
+              className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search servers..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full rounded-xl border border-white/10 bg-white/5 py-3 pl-11 pr-4 text-sm text-foreground placeholder-muted-foreground backdrop-blur-sm transition focus:border-pink-500/50 focus:outline-none focus:ring-1 focus:ring-pink-500/30"
             />
-          </svg>
-          <input
-            type="text"
-            placeholder="Search servers..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full rounded-xl border border-white/10 bg-white/5 py-3 pl-11 pr-4 text-sm text-foreground placeholder-muted-foreground backdrop-blur-sm transition focus:border-pink-500/50 focus:outline-none focus:ring-1 focus:ring-pink-500/30"
-          />
-        </div>
+          </div>
+        )}
 
         {error && (
           <div className="glass-card rounded-xl p-4 mb-8 border-red-500/20 text-red-400 text-sm text-center">
@@ -154,16 +157,14 @@ export default function Dashboard() {
           </MotionDiv>
         )}
 
-        {guilds.filter((g) => g.hasBot).length > 0 &&
-          withBot.length === 0 &&
-          search && (
-            <div className="text-center py-8 mb-10">
-              <p className="text-muted-foreground">No servers match your search.</p>
-            </div>
-          )}
+        {guilds.some((g) => g.hasBot) && withBot.length === 0 && search && (
+          <div className="text-center py-8 mb-10">
+            <p className="text-muted-foreground">No servers match your search.</p>
+          </div>
+        )}
 
-        {/* Servers without bot */}
-        {(withoutBot.length > 0 || guilds.some((g) => !g.hasBot)) && (
+        {/* Servers without bot — invite section */}
+        {(withoutBot.length > 0 || (guilds.some((g) => !g.hasBot) && !search)) && (
           <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

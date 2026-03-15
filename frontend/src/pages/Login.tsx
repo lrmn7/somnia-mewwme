@@ -1,16 +1,18 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 
 export default function Login() {
   const { status, login } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (status === "unauthenticated") {
       login();
     } else if (status === "authenticated") {
-      window.location.href = "/servers";
+      navigate("/servers", { replace: true });
     }
-  }, [status, login]);
+  }, [status, login, navigate]);
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center">

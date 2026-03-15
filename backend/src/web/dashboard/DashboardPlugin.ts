@@ -299,6 +299,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
 
   // Privy-based login: frontend sends Discord user info from Privy user object
   // Accepts either { accessToken } (Discord OAuth token) or { discordId, username, avatar }
+  // Returns immediately after user validation; guild list is resolved lazily on /api/guilds
   fastify.post<{ Body: { accessToken?: string; discordId?: string; username?: string; avatar?: string | null; globalName?: string | null } }>(
     "/auth/privy-session",
     async (req, reply) => {
@@ -315,7 +316,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
             try {
               guilds = await discordOAuth.fetchUserGuilds(accessToken);
             } catch {
-              // guilds scope not available, will fallback below
+              // guilds scope not available, will be resolved lazily
             }
           } catch {
             return reply.code(401).send({ error: "Invalid Discord access token." });
@@ -336,33 +337,6 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
           }
         } else {
           return reply.code(400).send({ error: "Missing accessToken or discordId+username." });
-        }
-
-        // If no guilds yet (Privy login), check actual membership in bot guilds
-        if (guilds.length === 0) {
-          try {
-            const memberGuilds: typeof guilds = [];
-            const checks = Array.from(client.guilds.cache.values()).map(async (guild) => {
-              try {
-                const member = await guild.members.fetch(user.id);
-                if (member) {
-                  memberGuilds.push({
-                    id: guild.id,
-                    name: guild.name,
-                    icon: guild.icon,
-                    permissions: member.permissions.bitfield.toString(),
-                    owner: guild.ownerId === user.id,
-                  });
-                }
-              } catch {
-                // User not in this guild, skip
-              }
-            });
-            await Promise.allSettled(checks);
-            guilds = memberGuilds;
-          } catch {
-            client.logger.warn("DashboardPlugin", "Could not resolve user guild membership");
-          }
         }
 
         req.session.user = user;
@@ -386,10 +360,40 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
 
   fastify.get("/api/guilds", { preHandler: requireAuth }, async (req, reply) => {
     try {
-      const userGuilds = req.session.guilds ?? [];
+      let userGuilds = req.session.guilds ?? [];
+
+      // Lazy-resolve guild membership for Privy sessions that skipped guild check
+      if (userGuilds.length === 0 && req.session.user) {
+        try {
+          const userId = req.session.user.id;
+          const memberGuilds: typeof userGuilds = [];
+          const checks = Array.from(client.guilds.cache.values()).map(async (guild) => {
+            try {
+              const member = await guild.members.fetch(userId);
+              if (member) {
+                memberGuilds.push({
+                  id: guild.id,
+                  name: guild.name,
+                  icon: guild.icon,
+                  permissions: member.permissions.bitfield.toString(),
+                  owner: guild.ownerId === userId,
+                });
+              }
+            } catch {
+              // User not in this guild, skip
+            }
+          });
+          await Promise.allSettled(checks);
+          userGuilds = memberGuilds;
+          // Cache in session for subsequent requests
+          req.session.guilds = userGuilds;
+          await req.session.save();
+        } catch {
+          client.logger.warn("DashboardPlugin", "Lazy guild resolve failed");
+        }
+      }
 
       const botGuildIds = new Set(client.guilds.cache.keys());
-
       const MANAGE_GUILD = BigInt(0x20);
 
       return userGuilds

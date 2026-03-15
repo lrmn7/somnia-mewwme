@@ -28,11 +28,11 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <PrivyWalletProvider>
-      <AuthProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <AuthProvider>
             <SmoothScroll>
               <div className="dark">
                 <Routes>
@@ -56,9 +56,9 @@ const App = () => (
               </div>
             </SmoothScroll>
             <BackgroundMusicPlayer />
-          </BrowserRouter>
-        </TooltipProvider>
-      </AuthProvider>
+          </AuthProvider>
+        </BrowserRouter>
+      </TooltipProvider>
     </PrivyWalletProvider>
   </QueryClientProvider>
 );
