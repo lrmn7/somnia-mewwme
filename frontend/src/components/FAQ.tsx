@@ -150,7 +150,7 @@ const faqs = [
         </ul>
         <p className="text-sm">
           All transactions are verifiable on{' '}
-          <LinkWrapper href="https://somnia.blockscout.com">Somnia Blockscout</LinkWrapper>.
+          <LinkWrapper href="https://shannon-explorer.somnia.network">Shannon Explorer</LinkWrapper>.
         </p>
       </div>
     ),

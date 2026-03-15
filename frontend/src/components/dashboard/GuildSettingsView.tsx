@@ -819,7 +819,7 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
             <div className="flex items-center gap-2">
               <span className="text-xs text-muted-foreground">Contract:</span>
               <a
-                href={`https://somnia.blockscout.com/address/${contractAddress}`}
+                href={`https://shannon-explorer.somnia.network/address/${contractAddress}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-mono text-purple-400 hover:text-purple-300 underline"
