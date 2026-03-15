@@ -828,13 +828,13 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
               </a>
             </div>
             <p className="text-[11px] text-muted-foreground/70">
-              Members can tip this server using USDC on Somnia Network.
+              Members can tip this server using STT on Somnia Network.
             </p>
           </div>
         ) : isOwner ? (
           <div className="space-y-3">
             <p className="text-xs text-muted-foreground">
-              Create a tip contract to allow members to send USDC tips to this server.
+              Create a tip contract to allow members to send STT tips to this server.
             </p>
             <button
               onClick={handleCreate}
