@@ -248,7 +248,7 @@ Quota stacking: purchasing multiple plans increases your total server slots.
 
 ## Data Philosophy
 
-- **Tips are NOT stored in the database.** Tip history is read directly from on-chain events using `eth_getLogs` with localStorage caching for performance.
+- **Tips are NOT stored in the database.** Tip history is read directly from on-chain+save db with localStorage caching for performance.
 - **Database is only for essential data:** user wallets, premium subscriptions, guild settings.
 - **New events arrive via Somnia Reactivity** and are pushed to the frontend in real-time via Socket.IO.
 
