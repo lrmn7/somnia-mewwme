@@ -72,15 +72,19 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
 
   const sessionCreating = useRef(false);
   const sessionAttempted = useRef(false);
+  const oauthReauthAttempted = useRef(false);
   const tokenSyncing = useRef(false);
   const tokenSynced = useRef(false);
   const walletSynced = useRef(false);
   const walletCreating = useRef(false);
 
   // Capture Discord OAuth token when Privy grants it (triggers re-render via setState)
-  useOAuthTokens({
+  const { reauthorize } = useOAuthTokens({
     onOAuthTokenGrant: (params: any) => {
-      const token = params?.oauthTokens?.accessToken ?? params?.oAuthToken ?? null;
+      const oauthTokens = params?.oAuthTokens ?? params?.oauthTokens;
+      const provider = oauthTokens?.provider;
+      const token = oauthTokens?.accessToken ?? params?.oAuthToken ?? null;
+      if (provider && provider !== "discord") return;
       if (token) {
         setDiscordToken(token);
       }
@@ -111,6 +115,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
 
     if (!authenticated) {
       sessionAttempted.current = false;
+      oauthReauthAttempted.current = false;
       tokenSynced.current = false;
       setStatus("unauthenticated");
       return;
@@ -148,6 +153,17 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
       });
   }, [ready, backendChecked, authenticated, privyUser, status, navigate, discordToken]);
 
+  // If Discord token was not issued during initial sign-in, ask Privy to reauthorize Discord once.
+  useEffect(() => {
+    if (!authenticated || status !== "authenticated" || !privyUser?.discord) return;
+    if (discordToken || tokenSynced.current || tokenSyncing.current || oauthReauthAttempted.current) return;
+
+    oauthReauthAttempted.current = true;
+    reauthorize({ provider: "discord" }).catch(() => {
+      oauthReauthAttempted.current = false;
+    });
+  }, [authenticated, status, privyUser, discordToken, reauthorize]);
+
   // 2b. If session was created before OAuth token arrived, upgrade it once
   // so backend can fetch full guild list (including servers without the bot).
   useEffect(() => {
@@ -163,6 +179,9 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
         username: privyUser.discord.username ?? "unknown",
         avatar: null,
         globalName: privyUser.discord.username,
+      })
+      .then(() => {
+        window.dispatchEvent(new Event("mewwme:guilds-refresh"));
       })
       .finally(() => {
         tokenSynced.current = true;

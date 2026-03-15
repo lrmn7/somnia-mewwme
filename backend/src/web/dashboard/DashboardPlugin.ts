@@ -49,7 +49,8 @@ declare module "@fastify/session" {
       id: string;
       name: string;
       icon: string | null;
-      permissions: string;
+      permissions?: string;
+      permissions_new?: string;
       owner: boolean;
     }>;
     oauthState?: string;
@@ -415,10 +416,15 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
       return userGuilds
         .filter((g) => {
           if (botGuildIds.has(g.id)) return true;
+          if (g.owner) return true;
+          const permissionBits =
+            (g as { permissions?: string; permissions_new?: string }).permissions ??
+            (g as { permissions?: string; permissions_new?: string }).permissions_new;
+          if (!permissionBits) return true;
           try {
-            return (BigInt(g.permissions ?? "0") & MANAGE_GUILD) !== BigInt(0);
+            return (BigInt(permissionBits) & MANAGE_GUILD) !== BigInt(0);
           } catch {
-            return false;
+            return true;
           }
         })
         .map((g) => ({

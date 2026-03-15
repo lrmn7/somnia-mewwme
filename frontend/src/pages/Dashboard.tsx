@@ -57,6 +57,14 @@ export default function Dashboard() {
   }, [status, navigate, fetchGuilds]);
 
   useEffect(() => {
+    const refreshGuilds = () => {
+      fetchGuilds();
+    };
+    window.addEventListener("mewwme:guilds-refresh", refreshGuilds);
+    return () => window.removeEventListener("mewwme:guilds-refresh", refreshGuilds);
+  }, [fetchGuilds]);
+
+  useEffect(() => {
     const invited = searchParams.get("invited");
     if (!invited || status !== "authenticated") return;
 
