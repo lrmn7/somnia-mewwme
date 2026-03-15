@@ -329,9 +329,19 @@ export default function Profile() {
 
   if (!user) return null;
 
+  const defaultAvatarIndex = (() => {
+    const disc = Number.parseInt(user.discriminator || "", 10);
+    if (Number.isFinite(disc) && disc > 0) return disc % 5;
+    try {
+      return Number((BigInt(user.id) >> 22n) % 6n);
+    } catch {
+      return 0;
+    }
+  })();
+
   const avatarUrl = user.avatar
     ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=128`
-    : `https://cdn.discordapp.com/embed/avatars/${parseInt(user.discriminator || "0") % 5}.png`;
+    : `https://cdn.discordapp.com/embed/avatars/${defaultAvatarIndex}.png`;
 
   return (
     <div className="min-h-screen bg-background relative">

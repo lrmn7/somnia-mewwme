@@ -259,7 +259,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
         req.session.user = user;
         req.session.accessToken = accessToken;
         req.session.guilds = guilds;
-        await UserProfileService.recordLogin(user.id);
+        await UserProfileService.recordLogin(user.id, user);
         await req.session.save();
         return reply.redirect(`${FRONTEND_URL}/servers`);
       } catch (err) {
@@ -320,6 +320,36 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
             avatar: avatar ?? null,
             global_name: globalName ?? null,
           };
+
+          // Reuse previously persisted identity to keep avatar/display name stable
+          // across backend restarts even when Discord APIs are rate-limited.
+          const savedProfile = await UserProfileService.getProfile(discordId).catch(() => undefined);
+          if (savedProfile) {
+            user = {
+              ...user,
+              username: savedProfile.username || user.username,
+              discriminator: savedProfile.discriminator || user.discriminator,
+              avatar: savedProfile.avatar ?? user.avatar,
+              global_name: savedProfile.global_name ?? user.global_name,
+            };
+          }
+
+          // If OAuth access token is available, prefer /users/@me to hydrate latest identity.
+          if (accessToken && typeof accessToken === "string") {
+            try {
+              const oauthUser = await discordOAuth.fetchUser(accessToken);
+              user = {
+                ...user,
+                username: oauthUser.username || user.username,
+                discriminator: oauthUser.discriminator || user.discriminator,
+                avatar: oauthUser.avatar ?? user.avatar,
+                global_name: oauthUser.global_name ?? user.global_name,
+              };
+            } catch {
+              // keep fallback identity
+            }
+          }
+
           // Enrich avatar/display name from Discord when possible.
           // If this fails (network/rate limit), keep Privy identity fallback.
           try {
@@ -368,7 +398,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
         req.session.guilds = guilds;
         if (guilds.length > 0) req.session.guildsFetchRetryAt = undefined;
         client.logger.info("DashboardPlugin", `Privy session created: userId=${user.id} username=${user.username} guilds=${guilds.length}`);
-        await UserProfileService.recordLogin(user.id);
+        await UserProfileService.recordLogin(user.id, user);
         await req.session.save();
         return { ok: true, user, hasGuilds: guilds.length > 0 };
       } catch (err) {

@@ -27,10 +27,21 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  const defaultAvatarIndex = (() => {
+    if (!user) return 0;
+    const disc = Number.parseInt(user.discriminator || "", 10);
+    if (Number.isFinite(disc) && disc > 0) return disc % 5;
+    try {
+      return Number((BigInt(user.id) >> 22n) % 6n);
+    } catch {
+      return 0;
+    }
+  })();
+
   const avatarUrl = user?.avatar
     ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=64`
     : user
-    ? `https://cdn.discordapp.com/embed/avatars/${parseInt(user.discriminator || "0") % 5}.png`
+    ? `https://cdn.discordapp.com/embed/avatars/${defaultAvatarIndex}.png`
     : null;
 
   return (
