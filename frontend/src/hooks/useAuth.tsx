@@ -79,6 +79,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
   const walletSynced = useRef(false);
   const walletCreating = useRef(false);
   const retryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const sessionRetryCount = useRef(0);
 
   // Capture Discord OAuth token when Privy grants it (triggers re-render via setState)
   const { reauthorize } = useOAuthTokens({
@@ -128,6 +129,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
         clearTimeout(retryTimer.current);
         retryTimer.current = null;
       }
+      sessionRetryCount.current = 0;
       sessionAttempted.current = false;
       oauthReauthAttempted.current = false;
       tokenSynced.current = false;
@@ -151,6 +153,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
       })
       .then(({ data }) => {
         if (data.ok && data.user) {
+          sessionRetryCount.current = 0;
           setUser(data.user);
           setStatus("authenticated");
           tokenSynced.current = Boolean(discordToken);
@@ -163,10 +166,12 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
         if (authenticated) {
           setStatus("loading");
           if (!retryTimer.current) {
+            const retryDelayMs = Math.min(30_000, 2_000 * Math.max(1, 2 ** sessionRetryCount.current));
+            sessionRetryCount.current += 1;
             retryTimer.current = setTimeout(() => {
               retryTimer.current = null;
               setSessionRetryTick((v) => v + 1);
-            }, 1500);
+            }, retryDelayMs);
           }
           return;
         }

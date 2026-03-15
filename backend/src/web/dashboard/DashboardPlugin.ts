@@ -53,6 +53,7 @@ declare module "@fastify/session" {
       permissions_new?: string;
       owner: boolean;
     }>;
+    guildsFetchRetryAt?: number;
     oauthState?: string;
   }
 }
@@ -308,35 +309,39 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
 
       try {
         let user: import("./DiscordOAuth.js").DiscordUser | undefined;
-        let guilds: import("./DiscordOAuth.js").DiscordGuild[] = [];
+        let guilds: import("./DiscordOAuth.js").DiscordGuild[] = req.session.guilds ?? [];
 
-        // Path A: Try Discord OAuth token first (from Privy useOAuthTokens)
-        if (accessToken && typeof accessToken === "string") {
+        // Path A: Trust Privy identity first to avoid repeated Discord API calls.
+        if (discordId && username) {
+          user = {
+            id: discordId,
+            username,
+            discriminator: "0",
+            avatar: avatar ?? null,
+            global_name: globalName ?? null,
+          };
+        }
+
+        // Path B: Fallback to Discord /users/@me when identity is missing.
+        if (!user && accessToken && typeof accessToken === "string") {
           try {
             user = await discordOAuth.fetchUser(accessToken);
-            try {
-              guilds = await discordOAuth.fetchUserGuilds(accessToken);
-            } catch {
-              // guilds scope not available
-            }
           } catch {
-            // Token invalid — fall through to Path B
-            client.logger.warn("DashboardPlugin", "Privy Discord token rejected, falling through to Path B");
+            client.logger.warn("DashboardPlugin", "Privy Discord token rejected and no Privy identity payload.");
           }
         }
 
-        // Path B: Use discordId + username (fallback if Path A failed or no token)
-        if (!user && discordId && username) {
+        // Try to hydrate guild list when token exists and cache is empty.
+        // Never fail session creation if Discord API is rate-limited.
+        if (accessToken && typeof accessToken === "string" && guilds.length === 0) {
           try {
-            user = await discordOAuth.fetchUserById(discordId);
-          } catch {
-            user = {
-              id: discordId,
-              username: username,
-              discriminator: "0",
-              avatar: avatar ?? null,
-              global_name: globalName ?? null,
-            };
+            guilds = await discordOAuth.fetchUserGuilds(accessToken);
+          } catch (err) {
+            const e = err as any;
+            const retryAfter = Number(e?.response?.data?.retry_after);
+            if (Number.isFinite(retryAfter) && retryAfter > 0) {
+              req.session.guildsFetchRetryAt = Date.now() + retryAfter;
+            }
           }
         }
 
@@ -347,6 +352,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
         req.session.user = user;
         req.session.accessToken = accessToken ?? "";
         req.session.guilds = guilds;
+        if (guilds.length > 0) req.session.guildsFetchRetryAt = undefined;
         client.logger.info("DashboardPlugin", `Privy session created: userId=${user.id} username=${user.username} guilds=${guilds.length}`);
         await UserProfileService.recordLogin(user.id);
         await req.session.save();
@@ -366,16 +372,24 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
   fastify.get("/api/guilds", { preHandler: requireAuth }, async (req, reply) => {
     try {
       let userGuilds = req.session.guilds ?? [];
+      const now = Date.now();
+      const guildsRetryAt = req.session.guildsFetchRetryAt ?? 0;
 
       // Prefer Discord OAuth guild list when access token exists but guild cache is empty.
       // This enables Privy single-login flow to populate inviteable servers without re-login.
-      if (userGuilds.length === 0 && req.session.accessToken) {
+      if (userGuilds.length === 0 && req.session.accessToken && now >= guildsRetryAt) {
         try {
           userGuilds = await discordOAuth.fetchUserGuilds(req.session.accessToken);
           req.session.guilds = userGuilds;
+          req.session.guildsFetchRetryAt = undefined;
           await req.session.save();
-        } catch {
-          // Token may be missing guilds scope; fallback to mutual-guild resolution below.
+        } catch (err) {
+          const e = err as any;
+          const retryAfter = Number(e?.response?.data?.retry_after);
+          req.session.guildsFetchRetryAt =
+            Date.now() + (Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60_000);
+          await req.session.save();
+          // Token may be missing guilds scope or currently rate-limited; fallback below.
         }
       }
 
