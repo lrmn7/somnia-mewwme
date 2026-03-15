@@ -300,137 +300,22 @@ export default function GuildStatsView({ guildId }: Props) {
     })();
   }, [web3?.contractAddress, hasWallet, getProviderAndSigner, refreshCounter]);
 
-  // Lazy-load full tip history when Tip Stats tab is selected
-  // Uses localStorage cache + incremental on-chain scan for speed
+  // Lazy-load tip history from backend DB (fed by ReactivityService)
   useEffect(() => {
     if (activeTab !== "tips" || !web3?.contractAddress || tipHistory) return;
     setTipHistoryLoading(true);
 
-    const cacheKey = `tipHistory:v2:${web3.contractAddress}`;
-
     (async () => {
       try {
-        const { Contract, JsonRpcProvider } = await import("ethers");
-        const provider = new JsonRpcProvider("https://dream-rpc.somnia.network");
-        const contract = new Contract(web3.contractAddress!, GUILD_TIP_ABI, provider);
-
-        // Load cache from localStorage
-        let cachedTips: any[] = [];
-        let lastScannedBlock = 0;
-        try {
-          const raw = localStorage.getItem(cacheKey);
-          if (raw) {
-            const parsed = JSON.parse(raw);
-            cachedTips = parsed.tips ?? [];
-            lastScannedBlock = parsed.lastBlock ?? 0;
-          }
-          // Clean old cache keys
-          localStorage.removeItem(`tipHistory:${web3.contractAddress}`);
-        } catch { /* corrupted cache, ignore */ }
-
-        const currentBlock = await provider.getBlockNumber();
-
-        // If cache is fresh (scanned up to current block), use it directly
-        if (lastScannedBlock >= currentBlock && cachedTips.length > 0) {
-          const totalAmount = cachedTips.reduce(
-            (acc: bigint, t: any) => acc + BigInt(t.amount), BigInt(0)
-          );
-          setTipHistory({
-            guildId,
-            totalTips: totalAmount.toString(),
-            tipCount: cachedTips.length,
-            tips: cachedTips.slice(0, 10),
-          });
-          return;
-        }
-
-        // Only scan blocks AFTER the last cached block
-        const CHUNK = 999;
-        const PARALLEL = 5;
-        const MIN_TIPS = 10;
-        const MAX_ROUNDS = 100; // 100 rounds × 5 = 500 chunks (~500k blocks, ~2.5 days on Somnia)
-        const filter = contract.filters.TipReceived();
-        const newEvents: any[] = [];
-
-        const hasCache = lastScannedBlock > 0;
-
-        if (hasCache) {
-          // Incremental: scan forward from cache to current block
-          const startBlock = lastScannedBlock + 1;
-          const blocksToScan = currentBlock - startBlock;
-          if (blocksToScan > 0) {
-            const totalChunks = Math.ceil(blocksToScan / CHUNK);
-            let scanned = 0;
-            while (scanned < totalChunks) {
-              const promises: Promise<any[]>[] = [];
-              for (let j = 0; j < PARALLEL && scanned + j < totalChunks; j++) {
-                const idx = scanned + j;
-                const from = startBlock + idx * CHUNK;
-                const to = Math.min(from + CHUNK - 1, currentBlock);
-                promises.push(contract.queryFilter(filter, from, to).catch(() => [] as any[]));
-              }
-              if (promises.length === 0) break;
-              const results = await Promise.all(promises);
-              for (const ev of results) newEvents.push(...ev);
-              scanned += promises.length;
-            }
-          }
-        } else {
-          // Cold start: scan BACKWARDS from current block, stop when >= 10 tips found
-          let cursor = currentBlock;
-          for (let round = 0; round < MAX_ROUNDS; round++) {
-            const promises: Promise<any[]>[] = [];
-            for (let j = 0; j < PARALLEL; j++) {
-              const toBlock = cursor - j * CHUNK;
-              const fromBlock = Math.max(0, toBlock - CHUNK + 1);
-              if (toBlock < 0) break;
-              promises.push(contract.queryFilter(filter, fromBlock, toBlock).catch(() => [] as any[]));
-              if (fromBlock === 0) break;
-            }
-            if (promises.length === 0) break;
-            const results = await Promise.all(promises);
-            for (const ev of results) newEvents.push(...ev);
-            cursor -= PARALLEL * CHUNK;
-            // Stop early: found enough tips or reached block 0
-            if (newEvents.length >= MIN_TIPS || cursor <= 0) break;
-          }
-        }
-
-        // Merge new events with cached tips
-        const newTips = newEvents.map((e: any) => ({
-          id: e.transactionHash,
-          guildId: guildId,
-          senderWallet: e.args?.sender ?? "",
-          amount: (e.args?.amount ?? BigInt(0)).toString(),
-          txHash: e.transactionHash,
-          timestamp: Number(e.args?.timestamp ?? 0) * 1000,
-          message: e.args?.message ?? "",
-        }));
-
-        const allTips = [...cachedTips, ...newTips]
-          .filter((t, i, arr) => arr.findIndex((x) => x.txHash === t.txHash) === i) // dedupe
-          .sort((a, b) => b.timestamp - a.timestamp);
-
-        // Save to localStorage cache
-        try {
-          localStorage.setItem(cacheKey, JSON.stringify({
-            tips: allTips,
-            lastBlock: currentBlock,
-          }));
-        } catch { /* storage full, ignore */ }
-
-        const totalAmount = allTips.reduce(
-          (acc: bigint, t: any) => acc + BigInt(t.amount), BigInt(0)
-        );
-
+        const { data } = await api.get<TipHistoryResponse>(`/api/web3/guild/${guildId}/tips`);
         setTipHistory({
           guildId,
-          totalTips: totalAmount.toString(),
-          tipCount: allTips.length,
-          tips: allTips.slice(0, 10),
+          totalTips: data.totalTips ?? "0",
+          tipCount: data.tipCount ?? 0,
+          tips: (data.tips ?? []).slice(0, 10),
         });
       } catch (err) {
-        console.error("[TipHistory] Failed to read on-chain events:", err);
+        console.error("[TipHistory] Failed to read backend tips:", err);
         setTipHistory({ guildId, totalTips: "0", tipCount: 0, tips: [] });
       } finally {
         setTipHistoryLoading(false);

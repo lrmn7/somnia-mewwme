@@ -5,6 +5,7 @@ import { api } from "@/lib/api";
 import { formatSTT, parseSTT, shortenAddress, GUILD_TIP_ABI } from "@/lib/web3";
 import { useWallet } from "@/hooks/useWallet";
 import { useEmbeddedWallet } from "@/hooks/useEmbeddedWallet";
+import { useSocket } from "@/hooks/useSocket";
 import { PRIVY_APP_ID } from "@/lib/config";
 import Navbar from "@/components/Navbar";
 import BackgroundGlow from "@/components/BackgroundGlow";
@@ -31,6 +32,7 @@ interface TipEvent {
 
 export default function CommunityDetail() {
   const { guildId } = useParams<{ guildId: string }>();
+  const { socket } = useSocket(guildId || "");
   const { wallet } = useWallet();
   const { hasWallet, getProviderAndSigner } = useEmbeddedWallet();
   const privyAvailable = !!PRIVY_APP_ID;
@@ -60,110 +62,63 @@ export default function CommunityDetail() {
       .finally(() => setLoading(false));
   }, [guildId]);
 
-  // Read tip history from on-chain (with localStorage cache)
+  // Read tip history from backend DB (fed by ReactivityService)
   useEffect(() => {
     if (!server?.contractAddress) return;
     setTipsLoading(true);
 
-    const cacheKey = `communityTips:v1:${server.contractAddress}`;
-
     (async () => {
       try {
-        const { Contract, JsonRpcProvider } = await import("ethers");
-        const provider = new JsonRpcProvider("https://dream-rpc.somnia.network");
-        const contract = new Contract(server.contractAddress, GUILD_TIP_ABI, provider);
-
-        // Read totalTips from contract
-        const onChainTotal: bigint = await contract.totalTips().catch(() => BigInt(0));
-
-        // Load cache
-        let cachedTips: TipEvent[] = [];
-        let lastScannedBlock = 0;
-        try {
-          const raw = localStorage.getItem(cacheKey);
-          if (raw) {
-            const parsed = JSON.parse(raw);
-            cachedTips = parsed.tips ?? [];
-            lastScannedBlock = parsed.lastBlock ?? 0;
-          }
-        } catch { /* ignore */ }
-
-        const currentBlock = await provider.getBlockNumber();
-
-        const CHUNK = 999;
-        const PARALLEL = 5;
-        const MAX_ROUNDS = 100;
-        const MIN_TIPS = 10;
-        const filter = contract.filters.TipReceived();
-        const newEvents: any[] = [];
-        const hasCache = lastScannedBlock > 0;
-
-        if (hasCache) {
-          const startBlock = lastScannedBlock + 1;
-          const blocksToScan = currentBlock - startBlock;
-          if (blocksToScan > 0) {
-            const totalChunks = Math.ceil(blocksToScan / CHUNK);
-            let scanned = 0;
-            while (scanned < totalChunks) {
-              const promises: Promise<any[]>[] = [];
-              for (let j = 0; j < PARALLEL && scanned + j < totalChunks; j++) {
-                const idx = scanned + j;
-                const from = startBlock + idx * CHUNK;
-                const to = Math.min(from + CHUNK - 1, currentBlock);
-                promises.push(contract.queryFilter(filter, from, to).catch(() => [] as any[]));
-              }
-              if (promises.length === 0) break;
-              const results = await Promise.all(promises);
-              for (const ev of results) newEvents.push(...ev);
-              scanned += promises.length;
-            }
-          }
-        } else {
-          let cursor = currentBlock;
-          for (let round = 0; round < MAX_ROUNDS; round++) {
-            const promises: Promise<any[]>[] = [];
-            for (let j = 0; j < PARALLEL; j++) {
-              const toBlock = cursor - j * CHUNK;
-              const fromBlock = Math.max(0, toBlock - CHUNK + 1);
-              if (toBlock < 0) break;
-              promises.push(contract.queryFilter(filter, fromBlock, toBlock).catch(() => [] as any[]));
-              if (fromBlock === 0) break;
-            }
-            if (promises.length === 0) break;
-            const results = await Promise.all(promises);
-            for (const ev of results) newEvents.push(...ev);
-            cursor -= PARALLEL * CHUNK;
-            if (newEvents.length >= MIN_TIPS || cursor <= 0) break;
-          }
-        }
-
-        const newTips: TipEvent[] = newEvents.map((e: any) => ({
-          sender: e.args?.sender ?? "",
-          amount: (e.args?.amount ?? BigInt(0)).toString(),
-          message: e.args?.message ?? "",
-          txHash: e.transactionHash,
-          timestamp: Number(e.args?.timestamp ?? 0) * 1000,
+        const { data } = await api.get(`/api/web3/guild/${guildId}/tips`);
+        const backendTips: TipEvent[] = (data?.tips ?? []).map((t: any) => ({
+          sender: t.senderWallet ?? "",
+          amount: t.amount ?? "0",
+          message: t.message ?? "",
+          txHash: t.txHash ?? "",
+          timestamp: t.timestamp ?? 0,
         }));
-
-        const allTips = [...cachedTips, ...newTips]
-          .filter((t, i, arr) => arr.findIndex((x) => x.txHash === t.txHash) === i)
-          .sort((a, b) => b.timestamp - a.timestamp);
-
-        // Save cache
-        try {
-          localStorage.setItem(cacheKey, JSON.stringify({ tips: allTips, lastBlock: currentBlock }));
-        } catch { /* ignore */ }
-
-        setTips(allTips.slice(0, 10));
-        setTipCount(allTips.length);
-        setTotalTips(onChainTotal.toString());
+        setTips(backendTips.slice(0, 10));
+        setTipCount(data?.tipCount ?? backendTips.length);
+        setTotalTips(data?.totalTips ?? "0");
       } catch (err) {
-        console.error("[CommunityDetail] Failed to read on-chain tips:", err);
+        console.error("[CommunityDetail] Failed to read backend tips:", err);
       } finally {
         setTipsLoading(false);
       }
     })();
-  }, [server?.contractAddress]);
+  }, [server?.contractAddress, guildId]);
+
+  // Realtime updates from Somnia Reactivity stream via backend socket bridge
+  useEffect(() => {
+    if (!socket || !guildId) return;
+    const onTipReceived = (data: any) => {
+      const incomingTx = String(data?.txHash ?? "");
+      const newTip: TipEvent = {
+        sender: String(data?.sender ?? ""),
+        amount: String(data?.amount ?? "0"),
+        message: String(data?.message ?? ""),
+        txHash: incomingTx || `rt-${Date.now()}`,
+        timestamp: (() => {
+          const ts = Number(data?.timestamp ?? Date.now());
+          return ts < 1_000_000_000_000 ? ts * 1000 : ts;
+        })(),
+      };
+
+      setTips((prev) => {
+        if (incomingTx && prev.some((t) => t.txHash === incomingTx)) return prev;
+        return [newTip, ...prev].sort((a, b) => b.timestamp - a.timestamp).slice(0, 10);
+      });
+      api.get(`/api/web3/guild/${guildId}/tips`).then(({ data }) => {
+        setTipCount(data?.tipCount ?? 0);
+        setTotalTips(data?.totalTips ?? "0");
+      }).catch(() => {});
+    };
+
+    socket.on("tipReceived", onTipReceived);
+    return () => {
+      socket.off("tipReceived", onTipReceived);
+    };
+  }, [socket, guildId]);
 
   // Handle sending tip
   const handleTip = useCallback(async () => {
