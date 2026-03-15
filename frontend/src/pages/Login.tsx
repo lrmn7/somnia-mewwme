@@ -8,11 +8,7 @@ export default function Login() {
   const loginTriggered = useRef(false);
 
   useEffect(() => {
-    if (status === "unauthenticated") {
-      if (loginTriggered.current) return;
-      loginTriggered.current = true;
-      login();
-    } else if (status === "authenticated") {
+    if (status === "authenticated") {
       loginTriggered.current = false;
       navigate("/servers", { replace: true });
     }
@@ -21,8 +17,23 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center">
       <div className="text-center">
-        <div className="w-12 h-12 border-4 border-pink-500/30 border-t-pink-500 rounded-full animate-spin mx-auto mb-4" />
-        <p className="text-muted-foreground">Connecting to Discord...</p>
+        {status === "loading" ? (
+          <>
+            <div className="w-12 h-12 border-4 border-pink-500/30 border-t-pink-500 rounded-full animate-spin mx-auto mb-4" />
+            <p className="text-muted-foreground">Checking your session...</p>
+          </>
+        ) : (
+          <button
+            onClick={() => {
+              if (loginTriggered.current) return;
+              loginTriggered.current = true;
+              login();
+            }}
+            className="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors"
+          >
+            Login with Discord
+          </button>
+        )}
       </div>
     </div>
   );
