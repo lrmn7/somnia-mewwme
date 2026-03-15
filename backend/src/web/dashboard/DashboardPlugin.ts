@@ -394,7 +394,9 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
         }
 
         req.session.user = user;
-        req.session.accessToken = accessToken ?? "";
+        if (accessToken && typeof accessToken === "string") {
+          req.session.accessToken = accessToken;
+        }
         req.session.guilds = guilds;
         if (guilds.length > 0) req.session.guildsFetchRetryAt = undefined;
         client.logger.info("DashboardPlugin", `Privy session created: userId=${user.id} username=${user.username} guilds=${guilds.length}`);

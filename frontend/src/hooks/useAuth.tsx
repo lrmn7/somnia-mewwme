@@ -27,6 +27,8 @@ const AuthContext = createContext<AuthContextValue>({
   logout: async () => {},
 });
 
+const DISCORD_TOKEN_STORAGE_KEY = "mewwme.discord.oauthToken";
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   if (!PRIVY_APP_ID) {
     return <LegacyAuthProvider>{children}</LegacyAuthProvider>;
@@ -62,7 +64,13 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<DiscordUser | null>(null);
   const [status, setStatus] = useState<AuthContextValue["status"]>("loading");
   const [backendChecked, setBackendChecked] = useState(false);
-  const [discordToken, setDiscordToken] = useState<string | null>(null);
+  const [discordToken, setDiscordToken] = useState<string | null>(() => {
+    try {
+      return window.localStorage.getItem(DISCORD_TOKEN_STORAGE_KEY);
+    } catch {
+      return null;
+    }
+  });
   const [sessionRetryTick, setSessionRetryTick] = useState(0);
 
   const navigate = useNavigate();
@@ -89,6 +97,11 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
       if (provider && provider !== "discord") return;
       if (token) {
         setDiscordToken(token);
+        try {
+          window.localStorage.setItem(DISCORD_TOKEN_STORAGE_KEY, token);
+        } catch {
+          // ignore storage errors
+        }
       }
     },
   });
@@ -258,6 +271,12 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
       /* ignore */
     }
     setUser(null);
+    setDiscordToken(null);
+    try {
+      window.localStorage.removeItem(DISCORD_TOKEN_STORAGE_KEY);
+    } catch {
+      // ignore storage errors
+    }
     setStatus("unauthenticated");
     navigate("/", { replace: true });
   }, [privyLogout, navigate]);
