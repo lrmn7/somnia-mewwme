@@ -306,27 +306,29 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
       const { accessToken, discordId, username, avatar, globalName } = req.body ?? {};
 
       try {
-        let user: import("./DiscordOAuth.js").DiscordUser;
+        let user: import("./DiscordOAuth.js").DiscordUser | undefined;
         let guilds: import("./DiscordOAuth.js").DiscordGuild[] = [];
 
+        // Path A: Try Discord OAuth token first (from Privy useOAuthTokens)
         if (accessToken && typeof accessToken === "string") {
-          // Path A: Discord access token available (from useOAuthTokens)
           try {
             user = await discordOAuth.fetchUser(accessToken);
             try {
               guilds = await discordOAuth.fetchUserGuilds(accessToken);
             } catch {
-              // guilds scope not available, will be resolved lazily
+              // guilds scope not available
             }
           } catch {
-            return reply.code(401).send({ error: "Invalid Discord access token." });
+            // Token invalid — fall through to Path B
+            client.logger.warn("DashboardPlugin", "Privy Discord token rejected, falling through to Path B");
           }
-        } else if (discordId && username) {
-          // Path B: Privy user info — fetch full Discord profile via Bot token
+        }
+
+        // Path B: Use discordId + username (fallback if Path A failed or no token)
+        if (!user && discordId && username) {
           try {
             user = await discordOAuth.fetchUserById(discordId);
           } catch {
-            // Fallback to minimal info if bot can't fetch the user
             user = {
               id: discordId,
               username: username,
@@ -335,17 +337,19 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
               global_name: globalName ?? null,
             };
           }
-        } else {
+        }
+
+        if (!user) {
           return reply.code(400).send({ error: "Missing accessToken or discordId+username." });
         }
 
         req.session.user = user;
         req.session.accessToken = accessToken ?? "";
         req.session.guilds = guilds;
-        client.logger.info("DashboardPlugin", `Privy session created: userId=${user.id} username=${user.username}`);
+        client.logger.info("DashboardPlugin", `Privy session created: userId=${user.id} username=${user.username} guilds=${guilds.length}`);
         await UserProfileService.recordLogin(user.id);
         await req.session.save();
-        return { ok: true, user };
+        return { ok: true, user, hasGuilds: guilds.length > 0 };
       } catch (err) {
         client.logger.error("DashboardPlugin", `Privy session error: ${err}`);
         return reply.code(500).send({ error: "Failed to create session." });

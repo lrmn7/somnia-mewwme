@@ -76,6 +76,8 @@ export default function Dashboard() {
   const withoutBot = guilds.filter(
     (g) => !g.hasBot && g.name.toLowerCase().includes(lowerSearch)
   );
+  const hasAnyWithBot = guilds.some((g) => g.hasBot);
+  const hasAnyWithoutBot = guilds.some((g) => !g.hasBot);
 
   if (status === "loading" || (status === "authenticated" && loading)) {
     return (
@@ -134,16 +136,17 @@ export default function Dashboard() {
         )}
 
         {/* Servers with bot */}
-        {withBot.length > 0 && (
-          <MotionDiv
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <h2 className="text-lg font-semibold text-foreground mb-4">
-              Servers with Mewwme
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+        <MotionDiv
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="mb-10"
+        >
+          <h2 className="text-lg font-semibold text-foreground mb-4">
+            Servers with Mewwme
+          </h2>
+          {withBot.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {withBot.map((guild) => (
                 <ServerCard
                   key={guild.id}
@@ -154,48 +157,52 @@ export default function Dashboard() {
                 />
               ))}
             </div>
-          </MotionDiv>
-        )}
-
-        {guilds.some((g) => g.hasBot) && withBot.length === 0 && search && (
-          <div className="text-center py-8 mb-10">
-            <p className="text-muted-foreground">No servers match your search.</p>
-          </div>
-        )}
+          ) : (
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">
+                {search && hasAnyWithBot
+                  ? "No servers match your search."
+                  : "No servers currently have Mewwme."}
+              </p>
+            </div>
+          )}
+        </MotionDiv>
 
         {/* Servers without bot — invite section */}
-        {(withoutBot.length > 0 || (guilds.some((g) => !g.hasBot) && !search)) && (
-          <MotionDiv
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <h2 className="text-lg font-semibold text-muted-foreground mb-1">
-              Add Mewwme to a Server
-            </h2>
-            <p className="text-sm text-muted-foreground/60 mb-4">
-              Servers where you have permission to add bots
-            </p>
-            {withoutBot.length === 0 && search ? (
-              <div className="text-center py-8">
-                <p className="text-muted-foreground">No servers match your search.</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {withoutBot.map((guild) => (
-                  <ServerCard
-                    key={guild.id}
-                    guild={guild}
-                    hasBot={false}
-                    onAction={() => {
-                      window.location.href = getInviteUrl(guild.id);
-                    }}
-                  />
-                ))}
-              </div>
-            )}
-          </MotionDiv>
-        )}
+        <MotionDiv
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <h2 className="text-lg font-semibold text-muted-foreground mb-1">
+            Add Mewwme to a Server
+          </h2>
+          <p className="text-sm text-muted-foreground/60 mb-4">
+            Servers where you have permission to add bots
+          </p>
+          {withoutBot.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {withoutBot.map((guild) => (
+                <ServerCard
+                  key={guild.id}
+                  guild={guild}
+                  hasBot={false}
+                  onAction={() => {
+                    window.location.href = getInviteUrl(guild.id);
+                  }}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">
+                {search && hasAnyWithoutBot
+                  ? "No servers match your search."
+                  : "No available servers to invite Mewwme right now."}
+              </p>
+            </div>
+          )}
+        </MotionDiv>
 
         {guilds.length === 0 && !loading && !error && (
           <div className="text-center py-20">
