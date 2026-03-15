@@ -364,6 +364,9 @@ export default function Profile() {
               <h1 className="text-2xl font-bold text-foreground">
                 {user.global_name || user.username}
               </h1>
+              {user.global_name && user.global_name !== user.username && (
+                <p className="text-sm text-muted-foreground mt-1">@{user.username}</p>
+              )}
               <div className="flex items-center justify-center sm:justify-start gap-2 mt-2">
                 {isPremium ? (
                   <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-green-500/15 text-green-400 text-xs font-medium">

@@ -320,6 +320,20 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
             avatar: avatar ?? null,
             global_name: globalName ?? null,
           };
+          // Enrich avatar/display name from Discord when possible.
+          // If this fails (network/rate limit), keep Privy identity fallback.
+          try {
+            const discordUser = await discordOAuth.fetchUserById(discordId);
+            user = {
+              ...user,
+              username: discordUser.username || user.username,
+              discriminator: discordUser.discriminator || user.discriminator,
+              avatar: discordUser.avatar ?? user.avatar,
+              global_name: discordUser.global_name ?? user.global_name,
+            };
+          } catch {
+            // keep fallback user from Privy payload
+          }
         }
 
         // Path B: Fallback to Discord /users/@me when identity is missing.
