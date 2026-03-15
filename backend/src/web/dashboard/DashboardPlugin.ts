@@ -309,7 +309,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
 
       try {
         let user: import("./DiscordOAuth.js").DiscordUser | undefined;
-        let guilds: import("./DiscordOAuth.js").DiscordGuild[] = req.session.guilds ?? [];
+        let guilds = [...(req.session.guilds ?? [])];
 
         // Path A: Trust Privy identity first to avoid repeated Discord API calls.
         if (discordId && username) {
