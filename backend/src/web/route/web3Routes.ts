@@ -143,6 +143,7 @@ export async function getGuildTipContract(
     guildId,
     contractAddress: guildWeb3?.contractAddress ?? null,
     createdAt: guildWeb3?.createdAt ?? null,
+    tipNotifyChannelId: guildWeb3?.tipNotifyChannelId ?? null,
   });
 }
 
@@ -163,13 +164,24 @@ export async function registerGuildTipContract(
     return reply.code(400).send({ error: "Invalid guildId or contract address" });
   }
 
-  // Check if the user is the guild owner
+  // Allow guild owner OR users with Manage Server permission
   const guilds = req.session.guilds;
   const sessionGuild = guilds?.find((g) => g.id === guildId);
   const botGuild = client.guilds.cache.get(guildId);
   const isGuildOwner = sessionGuild?.owner === true || botGuild?.ownerId === userId;
-  if (!isGuildOwner) {
-    return reply.code(403).send({ error: "Only the server owner can create a tip contract" });
+  const permissionBits =
+    (sessionGuild as { permissions?: string; permissions_new?: string } | undefined)?.permissions ??
+    (sessionGuild as { permissions?: string; permissions_new?: string } | undefined)?.permissions_new;
+  let hasManageGuild = false;
+  if (permissionBits) {
+    try {
+      hasManageGuild = (BigInt(permissionBits) & BigInt(0x20)) !== BigInt(0);
+    } catch {
+      hasManageGuild = false;
+    }
+  }
+  if (!isGuildOwner && !hasManageGuild) {
+    return reply.code(403).send({ error: "You need Manage Server permission to create a tip contract" });
   }
 
   const existing = await client.db.GuildWeb3.get(guildId);
@@ -189,6 +201,75 @@ export async function registerGuildTipContract(
   }
 
   return reply.send({ success: true, contractAddress: contractAddress.toLowerCase() });
+}
+
+export async function getGuildTipNotify(
+  client: Manager,
+  req: FastifyRequest,
+  reply: FastifyReply
+) {
+  const { guildId } = req.params as { guildId: string };
+  const guildWeb3 = await client.db.GuildWeb3.get(guildId);
+  return reply.send({
+    guildId,
+    tipNotifyChannelId: guildWeb3?.tipNotifyChannelId ?? null,
+  });
+}
+
+export async function setGuildTipNotify(
+  client: Manager,
+  req: FastifyRequest,
+  reply: FastifyReply
+) {
+  const userId = req.session.user?.id;
+  if (!userId) return reply.code(401).send({ error: "Unauthorized" });
+
+  const { guildId } = req.params as { guildId: string };
+  const { channelId } = req.body as { channelId?: string | null };
+  const guild = client.guilds.cache.get(guildId);
+  if (!guild) return reply.code(404).send({ error: "Guild not found" });
+
+  const sessionGuild = req.session.guilds?.find((g) => g.id === guildId);
+  const isGuildOwner = sessionGuild?.owner === true || guild.ownerId === userId;
+  const permissionBits =
+    (sessionGuild as { permissions?: string; permissions_new?: string } | undefined)?.permissions ??
+    (sessionGuild as { permissions?: string; permissions_new?: string } | undefined)?.permissions_new;
+  let hasManageGuild = false;
+  if (permissionBits) {
+    try {
+      hasManageGuild = (BigInt(permissionBits) & BigInt(0x20)) !== BigInt(0);
+    } catch {
+      hasManageGuild = false;
+    }
+  }
+  if (!isGuildOwner && !hasManageGuild) {
+    return reply.code(403).send({ error: "You need Manage Server permission to manage tip notifications" });
+  }
+
+  const existing = await client.db.GuildWeb3.get(guildId);
+  if (!existing?.contractAddress) {
+    return reply.code(400).send({ error: "This server does not have a tip contract yet" });
+  }
+
+  if (!channelId) {
+    await client.db.GuildWeb3.set(guildId, {
+      ...existing,
+      tipNotifyChannelId: null,
+    });
+    return reply.send({ success: true, tipNotifyChannelId: null });
+  }
+
+  const channel = await guild.channels.fetch(channelId).catch(() => null);
+  if (!channel || !channel.isTextBased() || channel.isVoiceBased() || channel.isThread()) {
+    return reply.code(400).send({ error: "Selected channel must be a text channel" });
+  }
+
+  await client.db.GuildWeb3.set(guildId, {
+    ...existing,
+    tipNotifyChannelId: channelId,
+  });
+
+  return reply.send({ success: true, tipNotifyChannelId: channelId });
 }
 
 export async function getGuildTips(

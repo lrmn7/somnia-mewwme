@@ -294,7 +294,7 @@ export default function Queue({ current, queue, onSkipTo, onRemove, onReorder }:
           <svg className="h-10 w-10 text-white/10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
           </svg>
-          <p className="text-xs text-white/40">Queue is empty — search to add more tracks.</p>
+          <p className="text-xs text-white/40">Queue is empty, search to add more tracks.</p>
         </div>
       ) : (
         <DndContext

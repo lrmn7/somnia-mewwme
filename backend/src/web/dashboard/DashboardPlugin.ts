@@ -22,6 +22,8 @@ import {
   getGuildTipContract,
   registerGuildTipContract,
   getGuildTips,
+  getGuildTipNotify,
+  setGuildTipNotify,
   getCommunityServers,
   getCommunityServerDetail,
   getUserSubscriptions,
@@ -1935,6 +1937,8 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
   // Guild tip contract management (session-authenticated)
   fastify.get("/api/web3/guild/:guildId/contract", (req, reply) => getGuildTipContract(client, req, reply));
   fastify.post("/api/web3/guild/contract", { preHandler: requireAuth }, (req, reply) => registerGuildTipContract(client, req, reply));
+  fastify.get("/api/web3/guild/:guildId/tip-notify", (req, reply) => getGuildTipNotify(client, req, reply));
+  fastify.patch("/api/web3/guild/:guildId/tip-notify", { preHandler: requireAuth }, (req, reply) => setGuildTipNotify(client, req, reply));
   fastify.get("/api/web3/guild/:guildId/tips", (req, reply) => getGuildTips(client, req, reply));
 
   // Community pages (public)

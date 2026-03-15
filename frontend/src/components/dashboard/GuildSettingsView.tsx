@@ -311,7 +311,10 @@ export default function GuildSettingsView({ guildId }: Props) {
       </section>
 
       {/* Web3 Tip Contract */}
-      <Web3TipContractSection guildId={guildId} isOwner={settings.isGuildOwner === true} />
+      <Web3TipContractSection
+        guildId={guildId}
+        canManage={settings.hasManageGuild === true || settings.isOwner === true || settings.isAdmin === true}
+      />
     </div>
   );
 }
@@ -737,22 +740,44 @@ function DefaultSourceSelector({
   );
 }
 
-function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner: boolean }) {
+function Web3TipContractSection({ guildId, canManage }: { guildId: string; canManage: boolean }) {
   const [contractAddress, setContractAddress] = useState<string | null>(null);
+  const [tipNotifyChannelId, setTipNotifyChannelId] = useState<string | null>(null);
+  const [notifyDraftChannelId, setNotifyDraftChannelId] = useState<string>("");
+  const [channels, setChannels] = useState<Array<{ id: string; name: string }>>([]);
   const [tipLoading, setTipLoading] = useState(true);
   const [creating, setCreating] = useState(false);
+  const [savingNotify, setSavingNotify] = useState(false);
   const { hasWallet, getProviderAndSigner } = useEmbeddedWallet();
 
   useEffect(() => {
     api.get(`/api/web3/guild/${guildId}/contract`)
-      .then(({ data }: { data: { contractAddress: string | null } }) => setContractAddress(data.contractAddress))
+      .then(({ data }: { data: { contractAddress: string | null; tipNotifyChannelId?: string | null } }) => {
+        setContractAddress(data.contractAddress);
+        const notifyChannelId = data.tipNotifyChannelId ?? null;
+        setTipNotifyChannelId(notifyChannelId);
+        setNotifyDraftChannelId(notifyChannelId ?? "");
+      })
       .catch(() => {})
       .finally(() => setTipLoading(false));
   }, [guildId]);
 
+  useEffect(() => {
+    if (!contractAddress || !canManage) return;
+    api.get(`/api/guild/${guildId}/channels`)
+      .then(({ data }) => {
+        const source = Array.isArray(data) ? data : (data?.channels ?? []);
+        const normalized = (source as any[])
+          .filter((ch) => ch?.id && ch?.name)
+          .map((ch) => ({ id: String(ch.id), name: String(ch.name) }));
+        setChannels(normalized);
+      })
+      .catch(() => {});
+  }, [guildId, contractAddress, canManage]);
+
   const handleCreate = async () => {
-    if (!isOwner) {
-      toast.error("Only the server owner can create a tip contract");
+    if (!canManage) {
+      toast.error("You need Manage Server permission to create a tip contract");
       return;
     }
 
@@ -800,6 +825,27 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
     }
   };
 
+  const handleSaveTipNotify = async () => {
+    if (!contractAddress) return;
+    if (!canManage) {
+      toast.error("You need Manage Server permission to configure tip notifications");
+      return;
+    }
+
+    setSavingNotify(true);
+    try {
+      const channelId = notifyDraftChannelId.trim() || null;
+      const { data } = await api.patch(`/api/web3/guild/${guildId}/tip-notify`, { channelId });
+      setTipNotifyChannelId(data?.tipNotifyChannelId ?? null);
+      setNotifyDraftChannelId(data?.tipNotifyChannelId ?? "");
+      toast.success(channelId ? "Tip notification channel updated" : "Tip notifications disabled");
+    } catch (err: any) {
+      toast.error(err?.response?.data?.error ?? "Failed to update tip notification channel");
+    } finally {
+      setSavingNotify(false);
+    }
+  };
+
   if (tipLoading) return null;
 
   return (
@@ -831,7 +877,7 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
               Members can tip this server using STT on Somnia Network.
             </p>
           </div>
-        ) : isOwner ? (
+        ) : canManage ? (
           <div className="space-y-3">
             <p className="text-xs text-muted-foreground">
               Create a tip contract to allow members to send STT tips to this server.
@@ -846,8 +892,45 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
           </div>
         ) : (
           <p className="text-xs text-muted-foreground">
-            No tip contract for this server. Only the server owner can create one.
+            No tip contract for this server. You need Manage Server permission to create one.
           </p>
+        )}
+
+        {contractAddress && (
+          <div className="mt-4 rounded-xl border border-white/[0.08] bg-white/[0.03] p-4 space-y-3">
+            <p className="text-xs font-semibold text-white/80">Tip Notification Channel</p>
+            <p className="text-[11px] text-white/50">
+              Send embed notifications when a tip is received (includes timestamp, message, and tx hash).
+            </p>
+
+            {canManage ? (
+              <>
+                <select
+                  value={notifyDraftChannelId}
+                  onChange={(e) => setNotifyDraftChannelId(e.target.value)}
+                  className="w-full rounded-lg border border-white/[0.1] bg-white/[0.05] px-3 py-2 text-xs text-white outline-none focus:border-purple-500/50 transition"
+                >
+                  <option value="">Disable notifications</option>
+                  {channels.map((ch) => (
+                    <option key={ch.id} value={ch.id} className="bg-[#1a1a1e] text-white">
+                      #{ch.name}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  onClick={handleSaveTipNotify}
+                  disabled={savingNotify}
+                  className="rounded-lg bg-indigo-500/20 border border-indigo-500/30 px-4 py-2 text-xs font-semibold text-indigo-300 hover:bg-indigo-500/30 disabled:opacity-40 transition-all"
+                >
+                  {savingNotify ? "Saving..." : "Save Notification Channel"}
+                </button>
+              </>
+            ) : (
+              <p className="text-xs text-muted-foreground">
+                Current channel: {tipNotifyChannelId ? `<#${tipNotifyChannelId}>` : "Disabled"}
+              </p>
+            )}
+          </div>
         )}
       </div>
     </section>

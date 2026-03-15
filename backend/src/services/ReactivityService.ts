@@ -7,6 +7,7 @@ import {
   decodeEventLog,
 } from "viem";
 import { SDK } from "@somnia-chain/reactivity";
+import { EmbedBuilder } from "discord.js";
 
 // ─── Somnia Testnet Chain Definition ───
 
@@ -234,6 +235,49 @@ export class ReactivityService {
         txHash,
         contractAddress,
       });
+    }
+
+    if (guildId) {
+      void this.sendTipNotification(guildId, args, txHash);
+    }
+  }
+
+  private async sendTipNotification(
+    guildId: string,
+    args: { sender: string; amount: bigint; message: string; timestamp: bigint },
+    txHash: string
+  ) {
+    try {
+      const guildWeb3 = await this.client.db.GuildWeb3.get(guildId);
+      const channelId = guildWeb3?.tipNotifyChannelId;
+      if (!channelId) return;
+
+      const guild = this.client.guilds.cache.get(guildId);
+      if (!guild) return;
+
+      const channel = await guild.channels.fetch(channelId).catch(() => null);
+      if (!channel || !channel.isTextBased() || !("send" in channel)) return;
+
+      const timestampMs = Number(args.timestamp) * 1000;
+      const embed = new EmbedBuilder()
+        .setColor(0x8b5cf6)
+        .setTitle("New Tip Received")
+        .addFields(
+          { name: "Amount", value: `${(Number(args.amount) / 1e18).toFixed(4)} STT`, inline: true },
+          { name: "Sender", value: `\`${args.sender}\``, inline: true },
+          { name: "Timestamp", value: `<t:${Math.floor(timestampMs / 1000)}:F>`, inline: false },
+          { name: "Message", value: args.message?.trim() ? args.message.trim() : "-", inline: false },
+          {
+            name: "Transaction",
+            value: txHash ? `[${txHash}](https://somnia.w3us.site/tx/${txHash})` : "-",
+            inline: false,
+          }
+        )
+        .setTimestamp(new Date(timestampMs));
+
+      await channel.send({ embeds: [embed] });
+    } catch (err: any) {
+      this.client.logger.warn("ReactivityService", `Failed to send tip notify embed: ${err?.message ?? err}`);
     }
   }
 
