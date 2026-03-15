@@ -196,7 +196,7 @@ export class ReactivityService {
             data: eventData,
           });
           if (decoded.eventName === "TipReceived") {
-            this.handleTipEvent(decoded.args, address, data);
+            await this.handleTipEvent(decoded.args, address, data);
             return;
           }
         } catch {
@@ -212,20 +212,30 @@ export class ReactivityService {
    * TipReceived: Log + push real-time to frontend via Socket.IO.
    * No database save — tip history is read directly from on-chain.
    */
-  private handleTipEvent(
+  private async handleTipEvent(
     args: { sender: string; amount: bigint; message: string; timestamp: bigint },
     contractAddress: string,
     rawData: any
   ) {
     const amountSTT = Number(args.amount) / 1e18;
-    const txHash = rawData?.result?.transactionHash ?? "";
+    const txHash =
+      rawData?.result?.transactionHash ??
+      rawData?.result?.txHash ??
+      rawData?.result?.transaction?.hash ??
+      rawData?.transactionHash ??
+      rawData?.txHash ??
+      "";
     this.client.logger.info(
       "ReactivityService",
       `TipReceived: ${amountSTT.toFixed(4)} STT from ${args.sender} to contract ${contractAddress}${args.message ? ` — "${args.message}"` : ""}`
     );
 
-    // Push real-time tip event to frontend via Socket.IO
     const guildId = this.contractToGuild.get(contractAddress);
+    if (guildId) {
+      await this.persistTipEvent(guildId, args, txHash);
+    }
+
+    // Push real-time tip event to frontend via Socket.IO
     if (guildId && this.client.dashboardEmit) {
       this.client.dashboardEmit(guildId, "tipReceived", {
         sender: args.sender,
@@ -239,6 +249,44 @@ export class ReactivityService {
 
     if (guildId) {
       void this.sendTipNotification(guildId, args, txHash);
+    }
+  }
+
+  private async persistTipEvent(
+    guildId: string,
+    args: { sender: string; amount: bigint; message: string; timestamp: bigint },
+    txHash: string
+  ) {
+    const existing = await this.client.db.Web3Tips.all();
+    const guildTips = existing
+      .filter((t) => t.value?.guildId === guildId)
+      .map((t) => t.value)
+      .filter((v): v is NonNullable<typeof v> => !!v);
+
+    if (txHash && guildTips.some((t) => t.txHash === txHash)) {
+      return;
+    }
+
+    const timestampMs = Number(args.timestamp) * 1000;
+    const tipId = txHash || `tip-${guildId}-${timestampMs}-${randomBytes(4).toString("hex")}`;
+    await this.client.db.Web3Tips.set(tipId, {
+      id: tipId,
+      guildId,
+      senderWallet: args.sender,
+      amount: args.amount.toString(),
+      txHash,
+      timestamp: timestampMs,
+      message: args.message ?? "",
+    });
+
+    const refreshed = await this.client.db.Web3Tips.all();
+    const toTrim = refreshed
+      .filter((t) => t.value?.guildId === guildId)
+      .sort((a, b) => (b.value?.timestamp ?? 0) - (a.value?.timestamp ?? 0))
+      .slice(10);
+
+    for (const old of toTrim) {
+      await this.client.db.Web3Tips.delete(old.id);
     }
   }
 
