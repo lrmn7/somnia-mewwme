@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { usePrivy, useLogout, useWallets, useCreateWallet, useOAuthTokens } from "@privy-io/react-auth";
 import type { DiscordUser } from "@/types/player";
 import { api } from "@/lib/api";
-import { PRIVY_APP_ID, BACKEND_URL } from "@/lib/config";
+import { PRIVY_APP_ID } from "@/lib/config";
 
 interface AuthContextValue {
   user: DiscordUser | null;
@@ -71,6 +71,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
   const { createWallet } = useCreateWallet();
 
   const sessionCreating = useRef(false);
+  const sessionAttempted = useRef(false);
   const walletSynced = useRef(false);
   const walletCreating = useRef(false);
 
@@ -100,58 +101,46 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
       });
   }, []);
 
-  // 2. After Privy authenticates, create backend session
-  //    Waits for Discord OAuth token; falls back to Discord OAuth redirect if token doesn't arrive
+  // 2. After Privy authenticates, create backend session once.
+  //    Use Discord OAuth token when available; otherwise use Privy Discord identity directly.
   useEffect(() => {
     if (!ready || !backendChecked) return;
     if (status === "authenticated") return;
 
     if (!authenticated) {
+      sessionAttempted.current = false;
       setStatus("unauthenticated");
       return;
     }
 
-    if (!privyUser?.discord || sessionCreating.current) return;
+    if (!privyUser?.discord || sessionCreating.current || sessionAttempted.current) return;
 
     const discord = privyUser.discord;
 
-    // If we have the Discord OAuth token from Privy, create session with it
-    if (discordToken) {
-      sessionCreating.current = true;
-      api
-        .post<{ ok: boolean; user: DiscordUser; hasGuilds?: boolean }>("/auth/privy-session", {
-          accessToken: discordToken,
-          discordId: discord.subject,
-          username: discord.username ?? "unknown",
-          avatar: null,
-          globalName: discord.username,
-        })
-        .then(({ data }) => {
-          if (data.ok && data.user) {
-            setUser(data.user);
-            setStatus("authenticated");
-            navigate("/servers", { replace: true });
-          }
-        })
-        .catch(() => {
-          // Session creation failed → fallback to Discord OAuth
-          window.location.href = `${BACKEND_URL}/auth/discord`;
-        })
-        .finally(() => {
-          sessionCreating.current = false;
-        });
-      return;
-    }
-
-    // No Discord token yet — wait up to 2s for Privy to deliver it,
-    // then fallback to full Discord OAuth redirect for guild list
-    const timer = setTimeout(() => {
-      if (!sessionCreating.current) {
-        window.location.href = `${BACKEND_URL}/auth/discord`;
-      }
-    }, 2000);
-
-    return () => clearTimeout(timer);
+    sessionAttempted.current = true;
+    sessionCreating.current = true;
+    api
+      .post<{ ok: boolean; user: DiscordUser; hasGuilds?: boolean }>("/auth/privy-session", {
+        accessToken: discordToken ?? undefined,
+        discordId: discord.subject,
+        username: discord.username ?? "unknown",
+        avatar: null,
+        globalName: discord.username,
+      })
+      .then(({ data }) => {
+        if (data.ok && data.user) {
+          setUser(data.user);
+          setStatus("authenticated");
+          navigate("/servers", { replace: true });
+        }
+      })
+      .catch(() => {
+        setUser(null);
+        setStatus("unauthenticated");
+      })
+      .finally(() => {
+        sessionCreating.current = false;
+      });
   }, [ready, backendChecked, authenticated, privyUser, status, navigate, discordToken]);
 
   // 3. Ensure embedded wallet exists after Privy login
