@@ -209,7 +209,7 @@ features:
     enable: true
     commands:
       enable: true
-      prefix: "me" # The prefix you want
+      prefix: "mew" # The prefix you want
 
   AUTOFIX_LAVALINK: # Fix the Lavalink server when the current is down
     enable: false
@@ -221,7 +221,7 @@ features:
     enable: true # Enable or disable the REST API (true to enable, false to disable)
     auth: "mewwme" # Auth token for internal WebSocket & API communication
     port: 4302 # Default port — overridden by RESTAPI_PORT in .env if set
-    whitelist: [] # List of domains or IPs allowed to access the REST API (example: ["meww.me"]). Uses req.hostname — use plain hostnames, not full URLs.
+    whitelist: ["mewwme.fun", "somnia-mewwme.pages.dev"] # List of domains or IPs allowed to access the REST API (example: ["meww.me"]). Uses req.hostname — use plain hostnames, not full URLs.
     SessionSecret: "141225c30fd85e8692744bc935df81d54cff0bd3b3c97e36890a2c8b13329af4f52a5de3b17b4d96133c9669fa51c5d2bb2cf54d0b98fea1143b20ffbf322a03" # Overridden by SESSION_SECRET in .env
     DiscordClientId: "928711702596423740" # Overridden by DISCORD_CLIENT_ID in .env
     DiscordClientSecret: "FKDkI2wONNaNPZggYA_9G289Sv-ZGG03" # Overridden by DISCORD_CLIENT_SECRET in .env

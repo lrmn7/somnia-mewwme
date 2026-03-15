@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import { useEmbeddedWallet } from "@/hooks/useEmbeddedWallet";
 import clsx from "clsx";
 import {
   FiCommand, FiGlobe, FiVolume2, FiSliders, FiHeadphones,
@@ -740,6 +741,7 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
   const [contractAddress, setContractAddress] = useState<string | null>(null);
   const [tipLoading, setTipLoading] = useState(true);
   const [creating, setCreating] = useState(false);
+  const { hasWallet, getProviderAndSigner } = useEmbeddedWallet();
 
   useEffect(() => {
     api.get(`/api/web3/guild/${guildId}/contract`)
@@ -751,6 +753,11 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
   const handleCreate = async () => {
     if (!isOwner) {
       toast.error("Only the server owner can create a tip contract");
+      return;
+    }
+
+    if (!hasWallet) {
+      toast.error("No embedded wallet available. Please wait for wallet to initialize or refresh the page.");
       return;
     }
 
@@ -766,8 +773,7 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
       }
 
       // Get Privy embedded wallet provider
-      const { getEmbeddedProviderAndSigner } = await import("@/lib/privyHelper");
-      const { signer, address: ownerAddress } = await getEmbeddedProviderAndSigner();
+      const { signer, address: ownerAddress } = await getProviderAndSigner();
       const factory = new Contract(web3Contracts.tipFactory, TIP_FACTORY_ABI, signer);
 
       toast.info("Creating tip contract on Somnia Network...");
@@ -800,7 +806,7 @@ function Web3TipContractSection({ guildId, isOwner }: { guildId: string; isOwner
     <section className="space-y-4">
       <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white/30">
         <span className="w-0.5 h-4 rounded-full bg-purple-500" />
-        Web3 Tip Contract
+        Tip Guild Contract
       </h2>
 
       <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 space-y-3">
