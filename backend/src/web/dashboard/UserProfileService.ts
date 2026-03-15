@@ -1,12 +1,5 @@
 import type { Manager } from "../../manager.js";
 
-/**
- * Creates a user-profile service backed by the bot's main database
- * (`client.db.UserProfile`).
- *
- * Previously this stored profiles in data/user-profiles.json.
- * The DB uses userId as the key.
- */
 export function createUserProfileService(client: Manager) {
   type Identity = {
     username?: string;
@@ -16,11 +9,6 @@ export function createUserProfileService(client: Manager) {
   };
 
   return {
-    /**
-     * Records (or updates) a login event for the given user.
-     * Creates a new profile on the first login.
-     * Returns the updated profile.
-     */
     async recordLogin(userId: string, identity?: Identity) {
       const existing = await client.db.UserProfile.get(userId);
       const now = Date.now();
@@ -50,7 +38,6 @@ export function createUserProfileService(client: Manager) {
       return profile;
     },
 
-    /** Returns the stored profile for a user, or undefined if not found. */
     async getProfile(userId: string) {
       return client.db.UserProfile.get(userId);
     },
