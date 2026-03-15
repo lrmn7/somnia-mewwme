@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "24/7 mode is now **Enabled**"
+247_off: "24/7 mode is now **Disabled**"
+247_already: "24/7 mode is already **%{mode}**"
+247_arg_error: "Invalid 24/7 mode. Please use %{text}"
+247_no_in_voice: "You are not in a voice channel!"
+
+
+### Set Language command! ###
+provide_lang: "**Invalid Language. Please use** `%{languages}`"
+lang_set: "**Language has been set to** `%{language}`"
+lang_change: "**Language has been changed to** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "Please provide a valid Prefix!"
+prefix_length: "**Prefix can not be longer than 10 Characters**"
+prefix_set: "**Prefix has been set to** `%{prefix}`"
+prefix_change: "**Prefix has been changed to** `%{prefix}`"
+
+### Control command!
+control_set: "**Player control mode has been set to %{toggle}**"
+control_arg_error: "Invalid argument. Please use %{text}"
+control_already: "Song Notifications are already **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Invalid! Please use %{text}"
+setup_enable: "**Oops! Music System already exists.**"
+setup_topic: "♪ Those who wish to sing always find a song. ♪"
+setup_msg: "*`Succesfully Setup Music System in`* %{channel}\n```Note: Do not delete any message(s) I've created in order for me to work properly.```"
+setup_null: "*`Successfully delete setup channel!`*"
+setup_deleted: "*`Successfully delete setup channel!`*"
+setup_null_inguild: "**Music System not found in this server! Ready to delete data**"
+setup_queuemsg: "**Join a voice channel and play songs using name or URL in here!**"
+setup_playembed_author: "No Song Is Currently Playing"
+
+### Themes command!
+error_themes: "Invalid... Please try again."
+succes_themes: "**Succesfully changed theme to %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "Notes: This link will expire in %{expired}."
+lastfm_login_title: "Last.fm Login"
+lastfm_login_desc: "Would you like to grant authorization to your [Last.fm](https://www.last.fm/user/eleremen) account?\nIf yes, please click the button below to start the authorization process."
+lastfm_not_login_desc: "You are not logged in to Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm Logout"
+lastfm_logout_desc: "You have successfully logout from Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm Feature is disabled."
+lastfm_feature_disabled_desc: "The Last.fm feature is currently disabled. Please contact the administrator for more information."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "No notification found for the YouTube channel **%{ytchannel}**."
+notify_youtube_removed: "You have removed the notification for the YouTube channel **%{ytchannel}**."
+notify_youtube_disabled: "Notify Youtube feature is currently disabled. Contact the staff for more information."
+notify_youtube_already: "Notifications for the YouTube channel %{ytchannel} are already set up."
+notify_youtube_invalid_channel: "There was an error in specifying a valid text channel. Please check!"
+notify_youtube_set: "Notify Youtube has been set for **%{ytchannel}** in %{channelid}."
+notify_youtube_404: |
+  The provided YouTube channel ID could not be found. 
+  To find the channel ID, go to the YouTube channel page and check the URL.
+  The channel ID is the string of letters and numbers after `/channel/` (for example: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   You have reached the limit of %{limit} notifications.
+   By upgrading to [premium](%{premium}), you can set up to %{limitpremium} notifications.
+
+notify_youtube_limit_reached_premium: |
+   You have reached the limit of %{limit} notifications.
+   This is the maximum allowed. Consider deleting some notifications to make room for new ones.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "No notification found for the Twitch username **%{twitchusername}**."
+notify_twitch_removed: "You have removed the notification for the Twitch username **%{twitchusername}**."
+notify_twitch_disabled: "Notify Twitch feature is currently disabled. Contact the staff for more information."
+notify_twitch_already: "You have already set up notifications for the Twitch channel %{twitchusername}."
+notify_twitch_invalid_channel: "There was an error in specifying a valid text channel. Please check!"
+notify_twitch_set: "Notify Twitch has been set for **%{twitchusername}** in %{channelid}."
+notify_twitch_error: "An unexpected error occurred while processing the Twitch notification for **{twitchusername}** in channel **{channelid}**. Please try again or contact support if the issue persists."
+notify_twitch_limit_reached_non_premium: |
+   You have reached the limit of %{limit} notifications.
+   By upgrading to [premium](%{premium}), you can set up to %{limitpremium} notifications.
+
+notify_twitch_limit_reached_premium: |
+   You have reached the limit of %{limit} notifications.
+   This is the maximum allowed. Consider deleting some notifications to make room for new ones.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Temp Voice feature has been %{status}."
+tempvoice_disabled: "Temp Voice has been disabled."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Invalid... only %{text}."
+status_voice_channel_true: "Status Voice Channel has been set to **%{type}**."
+status_voice_channel_false: "Status Voice Channel has been set to **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "This command can only be executed on the Server!"
+no_data_patreon: "Patreon data not found (Database Error)"
+no_data_patreon_title: "Not Found"
+no_data_patreon_desc: |
+  If you have already subscribed, make sure your Discord account is linked to Patreon!
+no_data_patreon_footer: "Patreon sync may take a moment, please check again shortly"
+no_patreon_guild_membership: |
+  hello, your patreon plan is **user tier**.
+  please upgrade to **server tier** to unlock premium server access.
+patreon_guild_membership_full_quota: |
+  you have used all of your server quota!
+  **status:** %{status} servers used.
+
+  solution:
+  1. upgrade your tier on patreon.
+  2. or disable premium on your old server.
+patreon_guild_membership_already_before: "You have already activated premium on this server before!"
+patreon_guild_membership_already: "**ALREADY PREMIUM** because it is sponsored by someone else.\nSave your quota for other servers!"
+patreon_guild_membership_claim_title: "Activation Confirmation"
+patreon_guild_membership_claim_desc: |
+  are you sure you want to activate **premium server** for:
+  **%{guildName}**
+
+  this action will use **1 server quota**.
+  remaining quota: **%{status}**
+patreon_guild_membership_claim_success: |
+  success! **%{guildName}** is now a **premium server**.
+
+  **sponsor:** %{user}
+  **remaining quota:** %{status}
+  thank you for supporting us on patreon!
+patreon_guild_membership_claim_success_title: "💎 Premium Activated!"
+patreon_guild_membership_claim_cancel: "Premium activation canceled."
+patreon_guild_membership_claim_norespon: "Activation was automatically canceled due to no response."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Server Redeemed (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **sponsor user:** %{sponsorTag} %{sponsorId}
+  **target server:** %{guildName} %{guildId}
+  **quota status:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "You cannot revoke this premium server because you did not register it."
+patreon_guild_unclaim_title: "Premium Revocation Confirmation"
+patreon_guild_unclaim_desc: |
+  Are you sure you want to **CANCEL** the Premium status of the **%{guildName}** server?
+  **Effects:** Premium features will be disabled on this server.
+  Your Server Quota will be restored (+1). 
+  Current remaining quota: **%{status}**
+patreon_guild_unclaim_success_title: "Premium Revoked"
+patreon_guild_unclaim_success: |
+  Premium status for **%{guildName}** has been successfully revoked.
+  **Quota Restored:** 1 Server
+  **New Remaining Quota:** %{status}
+patreon_guild_unclaim_cancel: "Premium revocation process canceled."
+patreon_guild_unclaim_norespon: "⏱️ Timeout. Process canceled."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Unclaimed Servers (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **User:** %{sponsorTag} %{sponsorId}
+  **Server:** %{guildName}} %{guildId}
+  **Quota Restored:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **User:** %{userTag} (%{userId})
+  **Server:** %{guildName} (%{guildId})
+  **Quota:** %{quota}
+  **Expires:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Action: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "Transaction ID not found or already claimed."
+kofi_linked_success_title: "Payment Linked Successfully!"
+kofi_linked_success_desc: "Now you can use `/premium claim <kofi>` without an TxID."
+kofi_no_data_title: "No Data Found!"
+kofi_no_data_desc: |
+  If you have already paid but have not connected your Discord account to Kofi
+  use: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "No quota, but you are a premium user."
+kofi_full_server_quota_title: "Quota Full!"
+kofi_full_server_quota_desc: "You have used **%{quota}** server slots."
+kofi_server_already_claim_desc: "**Already Active!**\nYou have already activated Premium on this server before."
+kofi_server_already_active_desc: " **Already Premium!**\nThis server has already been activated as premium by another user."
+kofi_guild_membership_claim_success: |
+  Premium has been successfully activated!
+  **Quota Usage:** %{quota}
+  **Expires In:** %{expires}
+kofi_guild_membership_claim_footer: "Thank you for your support!"
+kofi_action_title: "🏗️ Ko-fi Action: %{type}"
+kofi_action_description: "**User:** %{userTag} (`%{userId}`)\n**Server:** %{guildName} (`%{guildId}`)\n**Action:** %{action}\n**Quota:** %{quota}"
+kofi_action_activation: "Server Activated"
+kofi_action_manual_link: "Manual Payment Linked"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium Revoked"
+kofi_guild_unclaim_success_desc: |
+  Premium status for **%{guildName}** has been successfully revoked.
+  **Quota Restored:** 1 Server
+kofi_guild_not_owned_by_user: "You cannot revoke this premium server because you did not register it."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Unclaimed Servers %{platform}"
+premium_unclaim_log_desc: |
+  **User:** %{userTag} %{userId}
+  **Server:** %{guildName}} %{guildId}
+  **Quota Restored:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "The DJ Role system has been **Disabled**."
+dj_role_missing_role: "You need to provide a role to use the `set` action."
+dj_role_set: |
+  The DJ Role has been set to %{role}.
+  Status: **Enabled**
+  **Affected Commands:**
+  %{commands}

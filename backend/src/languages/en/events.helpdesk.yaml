@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "The helpdesk has been disabled"
+invalid_channel_helpdesk: "The provided channel is invalid"
+channel_viewable_helpdesk: "The provided channel is not visible to me"
+setup_helpdesk_succes: "The helpdesk has been set up to %{channel} successfully."
+
+embed1_title: "Welcome to %{bot} support server!"
+embed1_desc: "**%{bot} Where those who wish to sing always find a song ♪\nJoin the melody in your Discord server today!**"
+embed1_footer: "Thank you for choosing %{bot} as your personal Music Bot!"
+
+embed2_title: "%{bot} Help desk"
+embed2_desc: |
+  **%{button1} What is %{bot}?
+
+  %{button2} How to invite %{bot} Music Bot?
+
+  %{button3} How to use %{bot} Music Bot?
+
+  %{button4} How to enable the 24/7 feature?
+
+  %{button5} %{bot} is not responding/offline.
+
+  %{button6} %{bot} audio quality sounds laggy.
+
+  %{button7} How to set up the request channel songs?
+
+  %{button8} %{bot} keeps saying it's missing permissions.
+
+  %{button9} %{bot} disconnects from the voice channel on its own.
+
+  %{button10} How do I get/activate Premium and what perks do I receive?**
+
+embed2_field1_name: "Website"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Type"
+embed2_field2_value: "**Music Bot**"
+embed2_field3_name: "Get Premium"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Those who wish to sing always find a song ♪"
+helpdesk1_desc: |
+  **%{bot} is a Discord bot that revolutionizes the way you experience music on Discord, offering the cleanest user interface, high-quality audio, and a wide range of music-related features.**
+
+  **Why %{bot}?**
+  - **Regular Updates**: %{bot} is constantly updated, ensuring you always get the best of the latest features and fixes.
+  - **Comprehensive Features**: %{bot} simple music system allows for smooth playback from multiple sources.
+  - **Dedicated support community**: We're a relatively new bot on Discord, and we'd love for you to join us! Ensuring that the bot runs smoothly is our priority, which is why we need your help with feedback and suggestions. If you have any questions, feel free to open a support ticket.
+
+  **Useful Links**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **Need Support?**
+  - Submit a ticket for additional assistance
+
+  **What are you waiting for? Invite %{bot} to your Discord server today and enjoy an unparalleled, limitless music experience!**
+  **[Click here to invite](%{invite})**
+
+helpdesk2_title: "Adding %{bot} to your server"
+helpdesk2_desc: |
+  **You can invite %{bot} using this [link](%{invite}).** 
+    Choose the server you want to add it to and click **Authorize**
+
+  > Do note that if you want to disable `Administrator` permissions for %{bot}, it may affect its functionality. While you'll still be able to access basic music features, some functionalities may not work properly.
+
+helpdesk3_title: "How to use %{bot} Music Bot?"
+helpdesk3_desc: |
+  Join a voice or a stage channel then type /play <name song/url's> in a text channel.
+  You can interact directly using the control buttons for stop, loop etc.
+  Type / (or /help) and select %{bot}'s icon to get a list of all available commands.
+
+helpdesk4_title: "How to enable the 24/7 feature?"
+helpdesk4_desc: |
+  Join a voice or a stage channel then type `/247 <enable/disable>` in a text channel.
+
+  **Note:** *This feature can be utilized if you have the `manage server` permission, and it's ensured beforehand that the bot is currently playing music.*
+
+helpdesk5_title: "%{bot} is not responding/offline"
+helpdesk5_desc: |
+  You're trying to use a command but it keeps failing? Well, it's probably not able to answer, but follow the steps below to fix this.
+
+  **%{bot} now uses slash commands!**
+  Make sure you're using slash commands as Discord now requires all bots to use them.
+  Get started by typing `/play` and `/help`
+
+  **%{bot} still doesn't seem to answer?**
+  The only remaining scenario in that situation is a problem either on Discord's or our side. Verify that %{bot} is not offline in your server. If it's offline, your best call would be to wait up to 5 minutes and see if %{bot} comes back online. If it's online, has all the required permissions, you should definitely get in contact with one of our support members.
+
+helpdesk6_title: "%{bot} audio quality sounds laggy"
+helpdesk6_desc: |
+  No one likes laggy music, but that sometimes happens when listening to music bots on Discord. Here are some possible solutions to help you fix that.
+
+  **What should I do?**
+  First of all you should check your internet connection. Discord displays your last and average ping in the bottom left corner, just click on "Voice Connected" and verify that your ping is behaving stable (if the red graph is stuttering a lot that means it's not stable!) and the last as well as the average ping is below 250 milliseconds. If both of these indicators show that your connection is bad you should try and check your WiFi/LAN. Restarting your router could also clean up some problems.
+
+  **You're on a 5ms ping and you can download GTA 5 in 2 minutes?**
+  So your internet connection seems not to be the problem. In 95% of the cases where %{bot} is lagging Discord is having temporary issues with their voice servers. They normally just restart them at some point but you could force a switch to a different server in your region.[Try switching your server region](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3) in order to get a new and fresh Discord voice server.
+  If you're still having the same issue feel free to type /report report your issue.
+
+helpdesk7_title: "How to set up the request channel songs?"
+helpdesk7_desc: |
+  **How do I create a request channel?**
+  Make sure %{bot} is granted `manage server` permission then type /setup with the `create` option then the bot will automatically create a special channel for song requests.
+
+  ```Note: Do not delete any message(s) %{bot} created in order for me to work properly.```
+
+  **How do I delete a request channel?**
+  As before only in the options you can select `delete`.
+
+helpdesk8_title: "%{bot} keeps saying it's missing permissions."
+helpdesk8_desc: |
+  When trying to run certain commands, %{bot} may lack certain permissions. In such cases, %{bot} will refuse to run the command until these issues are resolved. It's important to note that these permissions are not optional; %{bot} requires them to perform the command.
+
+  If you believe the bot has the necessary permissions, make sure to check the channel's role overrides. These overrides can modify role permissions in specific channels.
+
+  If you are still unable to determine why %{bot} does not have the required permissions, consider giving %{bot} the Administrator permission. This should resolve any Discord permission issues.
+
+helpdesk9_title: "Mewwme disconnects from the voice channel on its own"
+helpdesk9_desc: |
+  In very uncommon cases, even with the 24/7 mode enabled, Mewwme may disconnect from the voice channel without someone using /stop or Discord's Disconnect button. Some of the most common causes and a potential fix are listed below.
+
+  **24/7 mode is not enabled.**
+  By default, Mewwme disconnects from the voice channel when it's empty in 3 minutes.
+
+  **Fix:** Refer to "4. How to enable the 24/7 feature?" in the first help embed to enable the 24/7 mode.
+
+  **Missing permissions.**
+  Whenever Discord asks us to reconnect to a voice channel, either due to server restarts or an API outage, we double-check the bot permissions to make sure it can join and speak in the channel. If something is missing, you'll have to use /play again to invite the bot to a different channel or the same one after adding the required permissions.
+
+  **Fix:** Make sure to use the /play commands to add the bot to the voice channel instead of moving it from a different one. By doing that, you'll ensure that the bot has all the required permissions to reconnect when needed.
+
+  **Server Region issues.**
+  In certain cases, some voice regions may experience network and stability issues that could prevent the bot from joining the voice channel.
+
+  **Fix:** Switch to another voice region using the voice channel settings (choose the one closest to your country).
+
+  **Something else went wrong.**
+  If you've tried all of the above fixes and the issue persists, please type `report` or open ticket in support https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "How do I get/activate Premium and what perks do I receive?"
+helpdesk10_desc: |
+  **How to redeem my Premium perks?**
+
+  to activate your premium membership perks, please follow these steps:
+  1. **link your discord account first**
+    - before purchasing, make sure your discord account is connected to the platform you are using (patreon or ko-fi).
+    - this is required so the system can detect your payment automatically.
+  2. **purchase your membership**
+  - after linking your discord, complete the membership payment based on the plan you want.
+  3. **wait for synchronization**
+    - once your payment is successful, please wait a few minutes for the system to sync your membership.
+  4. **claim premium in your server**
+    - go to the discord server you want to upgrade, then use this command:
+      `/premium claim`
+      choose the correct platform option (patreon or ko-fi) when prompted.
+      make sure you run the command inside the server you want to activate premium for.
+      once claimed, premium will be activated instantly.
+
+  By following the above steps, you'll be able to activate and enjoy all the Premium benefits offered. If you encounter any issues or have further questions, feel free to reach out to our support team.
+
+helpdesk10_footer: "Thank you for being a part of our journey!, we hope you'll have a good time here."

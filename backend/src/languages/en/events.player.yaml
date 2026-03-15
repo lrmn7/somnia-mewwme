@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "NOW PLAYING"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Author"
+track_requested_by: "Requested by"
+track_duration: "Duration"
+no_same_voice: "You are not in the same voice channel as me!"
+filter_already: "**%{name} filter is already enabled**"
+filter_reset_on: "**Filter has been Reset**"
+filter_reset_already: "**Filter has already been Reset**"
+no_player_filter: "**I can't apply a filter!**"
+filter_menu_on: "**Filter %{name} on!**"
+
+player_get_exception: "Uh-oh! Looks like there's a hiccup with the track. Want me to give it another shot?"
+player_track_error: "The track had an issue, Can you please try it once more?"
+player_track_stuck: "I'm so sad :(, the track got stuck. Maybe a retry will cheer us up?"
+queue_end_desc: "All songs are done! Need more beats?\nUse **/play** to keep the party going!"
+
+leave_pause: "Considering that you all left me alone :( The player has been paused."
+leave_resume: "Considering that someone has joined me, the player has been resumed."
+
+player_end: "The channel has been empty for almost 15 minutes, so I decided to leave because I don't like being alone"
+
+### Last FM Scrobble ###
+expired_login_session: "Your Last.fm session has expired or is invalid.\nPlease re-authenticate to continue using the scrobble feature."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Those who wish to sing always find a song ♪"
+milestone_track_desc: |
+  ## OH Hey
+  You've listened to **%{total}** tracks! Is your playlist endless, or are you just that musically obsessed?
+

@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Please provide a valid Playlist ID!"
+pl_add_match: "Please provide a valid song name or URL!"
+pl_add_playlist: "Searched **%{title}** `%{duration}` • (**%{track} Songs**) • %{user}"
+pl_add_track: "Searched **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Searched **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "You are not the **Playlist Owner**!"
+pl_add_limit_track: "You can not add more than **%{limit} Songs**"
+pl_add_added: "Added **%{count} Songs** to `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Songs**) • Created: `[%{create} ago]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Page • %{page}/%{pages} | Playlists • %{songs}"
+pl_all_view_notnumber: "Please provide a valid page number!"
+pl_all_view_page_notfound: "There are only **%{page} Pages**!"
+
+### pl-create commands ###
+pl_create_invalid: "Please provide a valid Playlist ID!"
+pl_create_toolong: "Playlist Name can not be longer than **16 Characters**"
+pl_create_des_toolong: "Playlist Description can not be longer than **1000 Characters**"
+pl_create_limit_playlist: "You can not create more than **%{limit} Playlists**"
+create_created_title: "Successfully Created New Playlist!"
+pl_create_created_footer: "Type /pl editor to edit your playlist!"
+pl_create_created: |
+  **Playlist Name** 
+  `%{playlist}`
+
+  **Playlist ID** 
+  `%{id}`
+
+  **Description** 
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Please provide a valid Playlist ID!"
+delete_notfound: "Please provide a valid Playlist ID!"
+pl_delete_owner: "You are not the **Playlist Owner**"
+pl_delete_confirm: "Do you want to delete `%{playlist_id}`"
+pl_delete_deleted: "Playlist `%{name}` has been successfully **Deleted**"
+pl_delete_no: "Cancelled **Deletion** Playlist!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Please provide a valid number!"
+pl_detail_notfound: "Please provide a valid Playlist ID!"
+pl_detail_private: "Playlist is **Private**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Playlist: %{name}"
+pl_detail_embed_footer: "Page • %{page}/%{pages} | Songs • %{songs} | Total Duration • %{duration}"
+pl_detail_notnumber: "Please provide a valid page number!"
+pl_detail_page_notfound: "There are only **%{page} Pages**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Enter your **New Playlist ID** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Enter your **New Playlist Name**"
+pl_edit_playlist_des_label: "Enter your **New Playlist Description**"
+pl_edit_playlist_private_label: "Enter your **New Playlist Visibility** `[public/private]`"
+pl_edit_success: "Successfully edited playlist\nNew Playlist ID: `%{playlistId}`"
+pl_edit_arg: "Please provide a valid Playlist ID!"
+pl_edit_notfound: "Please provide a valid Playlist ID!"
+pl_edit_playlist_owner: "You are not the **Playlist Owner**!"
+pl_edit_invalid_id: "Please enter a valid and non existing Playlist ID!"
+pl_edit_invalid_mode: "Invalid Visibility mode. Please use **public** or **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "New Playlist ID"
+ineraction_edit_playlist_name_label: "New Playlist Name"
+ineraction_edit_playlist_des_label: "New Playlist Description"
+ineraction_edit_playlist_private_label: "New Playlist Visibility"
+ineraction_edit_playlist_id_placeholder: "Enter your New Playlist ID! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Enter your New Playlist Name!"
+ineraction_edit_playlist_des_placeholder: "Enter your New Playlist Description!"
+ineraction_edit_playlist_private_placeholder: "Enter your New Playlist Visibility! [public/private]"
+ineraction_edit_success: "Successfully edited playlist\nNew Playlist ID: `%{playlistId}`"
+ineraction_edit_playlist_error: "Something went wrong. Please try again!"
+ineraction_edit_notfound: "Please provide a valid Playlist ID!"
+ineraction_edit_playlist_owner: "You are not the **Playlist Owner**"
+ineraction_edit_invalid_id: "Please enter a valid and non existing Playlist ID!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Playlist **%{name}** added to the queue ♪"
+pl_import_imported_footer: "Enjoy %{tracks} songs • %{duration} • of music bliss!"
+pl_import_invalid: "Please provide a valid Playlist ID!"
+pl_import_private: "Playlist is **Private**"
+pl_import_voice: "You need to be in a voice channel to use this command!"
+pl_import_empty: "Playlist is **Empty**"
+
+### pl-info commands! ###
+pl_info_owner: "Owner"
+pl_info_id: "ID"
+pl_info_des: "Description"
+pl_info_no_des: "No description is provided!"
+pl_info_private: "Visibility"
+pl_public: "Public"
+pl_private: "Private"
+pl_info_total: "Total Songs"
+pl_info_created: "Created"
+pl_info_invalid: "Please provide a valid Playlist ID!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Please provide a valid Playlist ID!"
+pl_remove_number_invalid: "Please provide a valid number!"
+pl_remove_notfound: "Please provide a valid Playlist ID!"
+pl_remove_owner: "You are not the **Playlist Owner**"
+pl_remove_song_notfound: "Song not found!"
+pl_remove_removed: "Removed **%{position} Number** song from `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Please provide a valid Playlist ID!"
+pl_savequeue_notfound: "Please provide a valid Playlist ID!"
+pl_savequeue_owner: "You are not the **Playlist Owner**!"
+pl_savequeue_no_tracks: "No song is currently playing!"
+pl_savequeue_no_new_saved: "Song already exists in `%{name}`"
+pl_savequeue_saved: "Saved **%{tracks} Songs** to `%{name}`"
+
+pl_error_no_node: "No Lavalink server was found. Please try again after **5 Minutes**"

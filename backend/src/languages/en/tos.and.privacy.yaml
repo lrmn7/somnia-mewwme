@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Privacy Policy of %{bot}"
+privacy_label: Privacy Policy
+privacy_desc: |
+  **User Agreement**
+  Using [%{bot}](%{serversupport}) ("bot") on the server requires the collection of certain user data. The data collected includes but is not limited to the user's Discord ID, Discord username, and server roles. Using the Bot is considered acceptance of these policy terms.
+
+  **Data Access**
+  Access to data is only allowed for bot developers and hosting services and only within the scope necessary for bot development, testing, and feature implementation. Data is not sold, given to, or shared with any third party, except as required by law or the Terms of Service agreement. You can view your data upon request from [developer](%{developer}).
+
+  **Data Storage**
+  Data is stored in the [MYSQL](https://www.mysql.com/) database. The database is secured to prevent external access. However, no guarantees are provided, and the Bot owner is not responsible for unintentional or malicious data breaches. If there is unauthorized Data access, the server staff will notify users through the Support Server.
+
+  **User Rights**
+  At any time, you have the right to request to view your Discord account data. You have the right to request the deletion of relevant Data. To do this, users must submit a request through the Support Server.
+
+  **Questions**
+  If you have questions or concerns about what data may be stored from your account, please contact [staff](%{serversupport}). For more information, check the Discord Terms of Service.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Terms of Service of %{bot}"
+tos_label: "Terms Of Service"
+termsofservice_desc: |
+  **Usage Agreement**
+  By inviting [%{bot}](%{serversupport}) ("bot") and using its features, you agree to the Terms of Service and Privacy Policy of the bot.
+
+  You acknowledge that you can use the bot freely on any Discord Server you share it with. You can invite it to any Server that you have "Manage Server" rights, and this privilege may get revoked if you are subject to breaking the terms of service or privacy policy of this bot or the Terms of Service, Privacy Policy, or Community Guidelines of Discord Inc.
+
+  Through inviting, the bot may collect specific data as described in its Privacy Policy. This data's intended usage is for the bot's core functionalities, such as executing commands.
+
+  **Affiliation**
+  The bot is not affiliated with, supported, or made by Discord Inc. Any direct connection to Discord or any of its Trademark objects is purely coincidental. We do not claim copyright ownership of Discord's assets, trademarks, or other intellectual property.
+
+  **Underage users**
+  The bot is not permitted for minors under the age of 13 or under the legal consent of their country. This complies with the Discord Terms of Service. No information will be knowingly stored from an underage user. If it is found out that a user is underage, we will take all necessary actions to delete the stored data.
+
+  **Liability**
+  The bot's developers and owner may not be made liable for individuals breaking these Terms at any given time. The right to update these terms is reserved at our discretion, giving a 1-Week (7 days) period to opt out of these terms. A user may opt-out by removing the bot from any server where the user has the right to remove the bot.

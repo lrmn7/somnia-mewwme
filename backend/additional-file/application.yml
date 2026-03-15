@@ -1,0 +1,192 @@
+lavalink:
+    plugins:
+        - dependency: com.github.topi314.lavasrc:lavasrc-plugin:4.8.1
+          repository: https://maven.lavalink.dev/releases
+          snapshot: false
+        - dependency: com.github.topi314.lavasearch:lavasearch-plugin:1.0.0
+          repository: https://maven.lavalink.dev/releases
+          snapshot: false
+        - dependency: com.github.topi314.sponsorblock:sponsorblock-plugin:3.0.1
+          repository: https://maven.lavalink.dev/releases
+          snapshot: false
+        - dependency: com.dunctebot:skybot-lavalink-plugin:1.7.0
+          repository: https://maven.lavalink.dev/releases
+          snapshot: false
+        - dependency: me.duncte123:java-lyrics-plugin:1.6.4
+          repository: https://maven.lavalink.dev/releases
+          snapshot: false
+        - dependency: dev.lavalink.youtube:youtube-plugin:1.18.0
+          snapshot: false
+        - dependency: me.rohank05:lavalink-filter-plugin:0.0.4
+          repository: https://jitpack.io
+          snapshot: false
+        - dependency: net.esmbot:lava-xm-plugin:0.2.5
+          repository: https://repo.projectlounge.pw/maven/releases
+          snapshot: false
+    pluginsDir: ./plugins
+    server:
+        bufferDurationMs: 400
+        filters:
+            channelMix: true
+            distortion: true
+            equalizer: true
+            karaoke: true
+            lowPass: true
+            rotation: true
+            timescale: true
+            tremolo: true
+            vibrato: true
+            volume: true
+        frameBufferDurationMs: 5000
+        gc-warnings: true
+        opusEncodingQuality: 10
+        password: youshallnotpass
+        playerUpdateInterval: 5
+        resamplingQuality: HIGH
+        soundcloudSearchEnabled: true
+        sources:
+            bandcamp: true
+            http: true
+            local: false
+            mixer: true
+            nico: true
+            soundcloud: true
+            twitch: true
+            vimeo: true
+            youtube: false
+        trackStuckThresholdMs: 10000
+        useSeekGhosting: true
+        youtubePlaylistLoadLimit: 6
+        youtubeSearchEnabled: true
+logging:
+    file:
+        path: ./logs/
+    level:
+        lavalink: INFO
+        root: INFO
+    logback:
+        rollingpolicy:
+            max-file-size: 1GB
+            max-history: 30
+    request:
+        enabled: true
+        includeClientInfo: true
+        includeHeaders: false
+        includePayload: true
+        includeQueryString: true
+        maxPayloadLength: 10000
+metrics:
+    prometheus:
+        enabled: false
+        endpoint: /metrics
+plugins:
+    dunctebot:
+        sources:
+            clypit: true
+            getyarn: true
+            mixcloud: true
+            ocremix: true
+            pornhub: true
+            reddit: true
+            soundgasm: true
+            tiktok: true
+            tts: true
+        ttsLanguage: en-US
+    lavasrc:
+        applemusic:
+            albumLoadLimit: 6
+            countryCode: US
+            mediaAPIToken: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IldlYlBsYXlLaWQifQ.eyJpc3MiOiJBTVBXZWJQbGF5IiwiaWF0IjoxNzcyMDYzMTU2LCJleHAiOjE3NzkzMjA3NTYsInJvb3RfaHR0cHNfb3JpZ2luIjpbImFwcGxlLmNvbSJdfQ._dAMwhTgOuEwjx4koR3SR8RXfNU0XRosOrglVesNh5ujz8qK2FWaGSjq53s1YtO9bx67xPNljntmEw9xOCbeOw
+            playlistLoadLimit: 6
+        deezer:
+            arl: f16177e9edaafba544f294873c012d0d75eac044862b673397db19db526aca09f9481b5adec632d59fb81276aa45161f45b6de7e7b01f1b6f27a9ed7af29678769895f36244e864a38f6e12c04f67c79ef15451c6bdff0b14828e78bda721770
+            formats:
+                - FLAC
+                - MP3_320
+                - MP3_256
+                - MP3_128
+                - MP3_64
+                - AAC_64
+            masterDecryptionKey: g4el58wc0zvf9na1
+        flowerytts:
+            audioFormat: mp3
+            silence: 0
+            speed: 1
+            translate: false
+            voice: default voice
+        providers:
+            - ytsearch:"%ISRC%"
+            - ytsearch:%QUERY%
+            - ytmsearch:"%ISRC%"
+            - ytmsearch:%QUERY%
+            - scsearch:%QUERY%
+            - spsearch:%QUERY%
+            - sprec:%QUERY%
+            - amsearch:%QUERY%
+            - dzisrc:%ISRC%
+            - dzrec:%QUERY%
+            - dzsearch:%QUERY%
+            - tdsearch:%QUERY%
+        sources:
+            applemusic: true
+            deezer: true
+            flowerytts: true
+            spotify: true
+            tidal: true
+            yandexmusic: false
+            youtube: true
+        spotify:
+            albumLoadLimit: 6
+            clientId: 4a944cf19e7547769c354fa896364a67
+            clientSecret: 1c651813613846bdb439e947283b411f
+            countryCode: US
+            customTokenEndpoint: http://161.97.145.777:2888/clienttoken
+            localFiles: false
+            playlistLoadLimit: 6
+            preferAnonymousToken: false
+            resolveArtistsInSearch: true
+        tidal:
+            countryCode: US
+            searchLimit: 6
+            token: eyJraWQiOiJ2OU1GbFhqWSIsImFsZyI6IkVTMjU2In0.eyJ0eXBlIjoibzJfYWNjZXNzIiwidWlkIjoyMDUzMTg0NzAsInNjb3BlIjoid191c3Igcl91c3IiLCJnVmVyIjowLCJzVmVyIjowLCJjaWQiOjgwNDksImN1ayI6ImNmNzk1MWIxLWVhYzQtNGExMi04ODE0LTE4YTc5OGE1MTg2NSIsImNjIjoiU0ciLCJhdCI6IklOVEVSTkFMIiwiZXhwIjoxNzczMDMxNzQzLCJzaWQiOiIzNTBlMjQ1Yy04NDMyLTQzZTEtYjNjYy03MWViZDhjNWYxMjMiLCJpc3MiOiJodHRwczovL2F1dGgudGlkYWwuY29tL3YxIn0.lEvwv72KtzcnwLTB-kMw3f5jAwOSrpbrMhdNWzX8xyTniLoCw9z9Qf3mSV4SJO35Qi6plAeUrWcJl39O3p0wsw
+        youtube:
+            countryCode: US
+    xm:
+        amigaMixer: false
+        ampFactor: 1
+        fixSampleLoop: false
+        fx9Bug: false
+        interpolation: 1
+        vblank: false
+    youtube:
+        allowDirectPlaylistIds: true
+        allowDirectVideoIds: true
+        allowSearch: true
+        clients:
+            - MUSIC
+            - WEB
+            - MWEB
+            - WEBEMBEDDED
+            - ANDROID_MUSIC
+            - ANDROID_VR
+            - TV
+            - TVHTML5_SIMPLY
+            - IOS
+        enabled: true
+        oauth:
+            enabled: true
+            refreshToken: 1//03JnhBaj7HZrACgYIARAAGAMSNwF-L9IrAlNYx49D7tDcUzoRCka4gmLtQ-IihmdzKHn5BUaP5G-RfXljMtQuQ2jXktlcxI3QqbQ
+            skipInitialization: true
+        pot:
+            token: MngIt-aAnc1pIAiLkoAA6fbtcz9JwjBgnA0UqkPbiJI8sg8l34z_V4ndFkSogvvwBdP-jqONyoCX3cHFEZwVlHoE1ZGNuv9LvJLqaBEp5uP5qAI_tw9-gI60GrI1dVW95249cFkCLx8eAmsj3KBSpJZU5ZF3acrHc2U=
+            visitorData: CgtvNEhFNGVydFBRdyi5q6zMBjIKCgJJRBIEGgAgJGLfAgrcAjE1LllUPVB3Nkp5ZWJzMkNUQXJiNFR1bldGWEFPVU1KMDZNVTczU3ZGOHlxWDR5QUQ1TXhuWk5WTWZ1V3NOQkR3RURzNFFROVIwQXR4Zm14cWRRY3ZEaXBxUUVGRmt5eGhGdHB2N0tfMmw1TVlPS2dLMzF4NWhQN0QzT2VMQU4wTHpmb1NCTnk0ZDQ5WkxxeUNjTm53em9WTWEzSTBkV01SUjl5ZS1pTTY3dUpyWkdCT2hDSXE4MHZFSFpYQ1U1RUFWVnJiaXdOMm53WlVEcjlWeDFVR2RIa0xtbzA5X2d2RnQ0eXdzblFhX0w0MkRRR3ZXX2JqLXROTWVIYnNEOXQxWDFKTlJldDRQVVMzSzMxd3lZYVpibXoyX3hLd0ptdm80Z1NaMG1USXBMT1Q0aS0yTmhCaW9iQjJiTDg1Qy1tZTR2djdZRzB0NVRXM3p6SHk2Q0ZUMXdqVlEyQQ%3D%3D
+        remoteCipher:
+            url: https://cipher.kikkia.dev/
+sentry:
+    dsn: ""
+    environment: ""
+server:
+    address: 0.0.0.0
+    http2:
+        enabled: true
+    port: 2333

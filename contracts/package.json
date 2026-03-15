@@ -1,0 +1,28 @@
+{
+  "name": "mewwme-contracts",
+  "version": "1.0.0",
+  "description": "Mewwme smart contracts on Somnia Network",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy:treasury": "npx hardhat run scripts/PlatformTreasury.js --network somnia-testnet",
+    "deploy:premium": "npx hardhat run scripts/PremiumSubscription.js --network somnia-testnet",
+    "deploy:factory": "npx hardhat run scripts/TipFactory.js --network somnia-testnet",
+    "deploy:all": "npm run deploy:treasury && npm run deploy:premium && npm run deploy:factory",
+    "verify:all": "node scripts/verify-all.js",
+    "test": "npx hardhat test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.3.0",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.14.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.24.1"
+  }
+}

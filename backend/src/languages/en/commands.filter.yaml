@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:_sing:1292709072591650856> **Filter %{name} on!** 
+  <:_blank:1292727587944140831><:_sparkles:1292723255291154505> **I hope you like the sound of this one!**
+filter_already: "Huh? The %{name} VST is already on... I can't do anything here."
+filter_number: "That's not a number I can input into the EQ..."
+filter_greater: "It's gotta be a number greater than **0**!"
+filter_less: "Woah! Too much! Maybe less than **10** is better..."
+
+### Bassboost command!
+bassboost_set: "**Bassboost has been set to %{amount}dB**"
+bassboost_limit: "Please use a number between **-10** and **10**"
+
+### Equalizer command!
+eq_author: "Equalizer"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  There are **10 Bands** that can be set from **-10** to **10**.
+  You don't have to input all of them, just the ones you want to change.
+  So if you wanna skip one, you can just leave it as a **0**.
+eq_field_title: "Example:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Reset Equalizer • %{prefix}eq reset"
+eq_on: "EQ's been set to **%{bands}**!"
+eq_number: "Please provide a valid number!"
+eq_greater: "Number must be greater than **-10**"
+eq_than: "Number must be lesser than **10**"
+
+### Pitch command!
+pitch_on: "Alright, Pitch is now **%{amount}**!"
+
+### Rate command!
+rate_on:  "Alright! Rate is now **%{amount}x**!"
+
+### Speed command!
+speed_on: "Sure thing, changing speed to **%{amount}x**!"
+
+### Reset command!
+reset_on: "**Resetting** all VSTs! Back to the original sound!"
+reset_already:  "VSTs are **already off**, did you forget?"
+
+# Invalid Number
+number_invalid: "That's not a number I can work with... Try again with a valid number."

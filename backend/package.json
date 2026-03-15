@@ -1,0 +1,143 @@
+{
+  "name": "mewwme",
+  "version": "10.3.1",
+  "description": "Those who wish to sing always find a song ♪",
+  "exports": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "mewwme": {
+    "autofix": {
+      "version": "2.2.1",
+      "codename": "Somnia"
+    },
+    "codename": "Mewwme",
+    "email": "mailto:support@meww.me",
+    "website": "https://meww.me/"
+  },
+  "scripts": {
+    "build": "tsc --build --verbose",
+    "build:full": "npm run build:prettier && npm run build && npm run build:data",
+    "start": "node --no-deprecation ./dist/index.js",
+    "start:shard": "node --no-deprecation ./dist/shard/index.js",
+    "dev": "npx nodemon ./src/index.ts",
+    "build:prettier": "npx prettier -w ./src",
+    "build:data": "node ./scripts/copyData.js",
+    "start:prod": "npm run build && npm run build:data && npm run start",
+    "start:dev": "npm run build:prettier && npm run build && npm run build:data && npm run start",
+    "start:shards": "npm run build && npm run build:data && npm run start:shard",
+    "remove:slash": "node ./scripts/clearSlash.js",
+    "build:github": "node ./scripts/build.js build:github",
+    "build:zip": "node ./scripts/build.js build",
+    "build:clean": "node ./scripts/build.js clean",
+    "getCampignId": "node ./scripts/getCampignId.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrmn7/mewwme.git"
+  },
+  "keywords": [
+    "discordbot"
+  ],
+  "author": "lrmn7",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lrmn7/mewwme/issues"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.database.json"
+    ],
+    "execMap": {
+      "ts": "tsx"
+    }
+  },
+  "homepage": "https://github.com/lrmn7/mewwme#readme",
+  "dependencies": {
+    "@fastify/cookie": "^9.4.0",
+    "@fastify/cors": "^9.0.1",
+    "@fastify/session": "^10.9.0",
+    "@fastify/websocket": "^10.0.1",
+    "@google/generative-ai": "^0.24.1",
+    "@hammerhq/localization": "^2.2.0",
+    "@napi-rs/canvas": "^0.1.55",
+    "@sapphire/ratelimits": "^2.4.9",
+    "@somnia-chain/reactivity": "^0.1.10",
+    "@top-gg/sdk": "^3.1.6",
+    "axios": "^1.6.8",
+    "bufferutil": "^4.0.8",
+    "chalk": "^5.3.0",
+    "common-tags": "^1.8.2",
+    "cors": "^2.8.5",
+    "discord-gamecord": "^4.4.0",
+    "discord.js": "^14.16.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-ws": "^5.0.2",
+    "fastify": "^4.26.2",
+    "fs-extra": "^11.2.0",
+    "googleapis": "^144.0.0",
+    "humanize-duration": "^3.32.1",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.1.0",
+    "md5": "^2.3.0",
+    "mewcard": "^1.8.2",
+    "mewwme-transcripts": "^3.2.1",
+    "mewwme.quick.db": "^9.7.0",
+    "moment": "^2.30.1",
+    "mongoose": "^8.6.1",
+    "mstg-kit": "^1.0.0",
+    "mysql2": "^3.11.0",
+    "mysqldump": "^3.2.0",
+    "node-cron": "^3.0.3",
+    "node-html-parser": "^6.1.13",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "pg": "^8.12.0",
+    "pidusage": "^3.0.2",
+    "pretty-ms": "^9.1.0",
+    "recursive-readdir": "^2.2.3",
+    "rss-parser": "^3.13.0",
+    "socket.io": "^4.8.3",
+    "undici": "^6.19.8",
+    "viem": "^2.37.13",
+    "voucher-code-generator": "^1.3.0",
+    "winston": "^3.14.2",
+    "winston-daily-rotate-file": "^5.0.0",
+    "write-file-atomic": "^5.0.1",
+    "ws": "^8.16.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/chillout": "^5.0.6",
+    "@types/common-tags": "^1.8.4",
+    "@types/fs-extra": "^11.0.4",
+    "@types/js-yaml": "^4.0.9",
+    "@types/lodash": "^4.17.0",
+    "@types/markdown-it": "^13.0.7",
+    "@types/node": "^20.11.30",
+    "@types/node-cron": "^3.0.11",
+    "@types/node-fetch": "^2.6.11",
+    "@types/pidusage": "^2.0.5",
+    "@types/recursive-readdir": "^2.2.4",
+    "@types/voucher-code-generator": "^1.1.3",
+    "copy-dir": "^1.3.0",
+    "dir-archiver": "^2.1.0",
+    "fastify-tsconfig": "^3.0.0",
+    "fs-extra": "^11.2.0",
+    "nodemon": "^3.1.4",
+    "plsargs": "^0.1.6",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "undici-types": "^6.19.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "marked@<4.0.10": ">=4.0.10",
+      "undici@<5.26.2": ">=5.26.2"
+    }
+  }
+}

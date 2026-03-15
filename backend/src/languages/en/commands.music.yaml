@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Check my picks for you!~"
+search_desc: "### HEY! Found results for your request"
+search_end_desc2: "### OMG! %{user}, you didn't select a song in time\n**Give it another go!**"
+search_footer: "%{countSong} tracks found"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` enjoy it ♥"
+
+search_active: "You're already searching something! Wait for the last search to end before starting a new one."
+search_no_result: "No results found for your search :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` enjoy it ♥"
+no_songs_playing: "No song is currently playing!"
+
+### Autoplay command!
+autoplay_off: "Autoplay is now **Disabled**"
+autoplay_on: "Autoplay is now **Enabled**"
+autoplay_no_songs_playing: "No songs are playing!"
+
+### ClearQueue command!
+clearqueue_msg: "Queue has been **Cleared**"
+
+### Forward command!
+forward_msg: "**%{user} Forwarded %{title} to** `%{duration}`"
+forward_beyond: "Song is about to end. You can not Forward beyond it!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Next To Play ♪"
+playnext_queue_empty: "The queue is empty. Please add some songs first"
+playnext_notfound: "Song not found!"
+
+# Execute when invalid
+no_node: "**No Lavalink server was found. Please try again after 5 Minutes**"
+
+### Join command!
+join_msg: "The player has been successfully created and joined %{channel}"
+join_already: "I am already in %{channel}"
+join_no_in_voice: "You are not in a voice channel!"
+join_no_same_voice: "You are not in the same voice channel as me!"
+
+### Loop command!
+loop_current: "Now Looping %{title}"
+loop_all: "**Has been looping QUEUE mode**"
+unloop_all: "**Looping mode has been DISABLED**"
+loop_invalid: "Invalid Loop mode. Please use **Disabled**"
+loop_already: "Loop mode is already **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Please provide a valid **Song Name**"
+lyrics_title: "Lyrics for **%{song}**"
+lyrics_notfound: "**Could not find the lyrics for this song!**"
+lyrics_toolong: "**Lyrics too long maks 4048 characters allowed!**"
+lyrics_disable: " **Lyrics is currently disabled!**"
+lyrics_noquery: "**Please provide a valid **Song Name**"
+lyrics_error: "**Error: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "NOW PLAYING"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Author"
+nowplaying_total_duration_title: "Duration"
+nowplaying_request_title: "Requested By"
+
+### Pause command!
+pause_msg: "**The track %{title} is currently paused!"
+
+### Play command!
+play_no_same_voice: "You are not in the same voice channel as me!"
+play_no_in_voice: "You are not in a voice channel!"
+play_arg: "Please provide a valid song name or URL!"
+play_emoji: "**Oops! This is emoji, You can not play songs using emoji**"
+play_match: "**Oops! Sorry, Song not found! Please try again**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## That was easy!
+  ### Your %{title} was added to the queue
+
+play_queue_max: |
+  OMG!>,.,< The queue is too long. Max %{limitqueue} songs.
+  Upgrade to [**premium**](%{premium}) for unlimited queue access!
+
+play_playlist_max: |
+  OMG!>,.,< The playlist is too long. Max %{limitqueue} songs.
+  Upgrade to [**premium**](%{premium}) for unlimited playlist access!
+
+### Previous command!
+previous_notfound: |
+  **No Previous song found in the queue! 
+  Why not /play more tracks and keep the music going?**
+previous_msg: |
+  **Back to the previous song! 
+  Now playing %{title}**
+
+### Queue command!
+queue_number_invalid: "Please provide a valid number!"
+queue_title: "Queue playing..."
+queue_description: "**%{title}**\n\n**Rest of Queue %{rest}**"
+queue_footer: "Page • %{page}/%{pages} | Songs • %{queue_lang} | Total Duration • %{duration}"
+queue_notnumber: "Please provide a valid page number!"
+queue_page_notfound: "There are only **%{page} Pages**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Please provide a valid number!"
+removetrack_already: "**I cannot Remove a song that is already playing**"
+removetrack_notfound: "**Sorry %{user}, Song not found!**"
+removetrack_desc: "**Removed %{title} from the Queue!**"
+
+### Replay command!
+replay_msg: "**%{user} Hits Replay on %{title}**"
+replay_not_seekable: "The track **%{title}** cannot be replayed."
+
+### Resume command!
+resume_msg: "**Playback Resumed %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} Rewinded %{title} to** `%{duration}`"
+rewind_beyond: "Song just started. You can not Rewind beyond it!"
+
+### Seek command!
+seek_beyond: "You can not Seek beyond the song duration!"
+seek_invalid: "Invalid Seek duration. Please use a valid timestamp. Example: **1:30**"
+seek_msg: "**Seeked %{title} to** `%{duration}`"
+seek_not_seekable: "The track **%{title}** cannot be rewound or fast-forwarded."
+
+### Skip command!
+skip_notfound: |
+  **No song was found to Skip to! Seems like there's nothing to skip to. 
+  Let's /play keep the music going by adding more tracks!**
+skip_msg: "**%{title} Has been Skipped**"
+skip_number_invalid: "Please provide a valid number!"
+
+### Stop command!
+stop_msg: "**%{title} Has been stopped**"
+
+### Shuffle command!
+shuffle_title: "Shuffles the Queue"
+
+### Volume command!
+volume_number_invalid: "Please provide a valid number!"
+volume_invalid: "Invalid Volume. Please use a number between **1** and **100**"
+volume_msg: "**Volume set to %{volume}%, Enjoy %{user}**"
+volume_max: "**Volume is already at max 100%**"
+
+### play source commands
+url_no_allowed: "Please use the song name/artist name (url no allowed)"
+play_arg_source: "Please provide a valid song name/artists!"
+
+## Temporarily disabled commands
+youtube_disabled: "YouTube support is temporarily unavailable"
+autoplay_disabled: "Autoplay is temporarily disabled."

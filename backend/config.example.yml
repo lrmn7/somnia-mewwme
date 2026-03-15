@@ -1,0 +1,593 @@
+# Version 10.5.0
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://mewwme.fun/support
+#     Community Resources: https://mewwme.fun/howtosupport
+#
+
+bot:
+  TOKEN: ${TOKEN}
+  EMBED_COLOR_MAIN: "#F4E0C7"
+  EMBED_COLOR_SECOND: "#2F3136"
+  OWNER_ID: "176144329046360064"
+  ADMIN: ["176144329046360064"]
+  DEFAULT_VOLUME: 80 # Must not over 100 or bot crash
+  LANGUAGE: "en" # You can set it to en or custom with your languages
+  DEBUG_MODE: false
+  SHARDING_SYSTEM:
+    shardsPerClusters: 1
+    totalClusters: 1
+  # set presence activity settings for bot
+  BOT_ACTIVITY1: "your heart 💖"
+  BOT_ACTIVITY2: "your dream 🌙"
+  BOT_ACTIVITY3: "your life 🍀"
+  BOT_ACTIVITY_TYPE: 4 # 0 = PLAYING, 1 = STREAMING, 2 = LISTENING, 3 = WATCHING, 4 = CUSTOM. 5 = COMPETING
+  STREAM_URL: "https://www.youtube.com/watch?v=F-wbcMyeq4A" # set stream url activity, support youtube, twitch only
+  BOT_STATUS: "invisible" # online, idle, dnd, invisible
+  CUSTOM_STATUS: "♪ Those who wish to sing always find a song." # set custom status if type is 4
+
+
+# Images for menu help
+  IMAGES_URL_HELPMENU: "https://mewassets.vercel.app/mewwme/assets/menu/mehelp.png"
+  IMAGES_URL_COMMAND: "https://mewassets.vercel.app/bot/mews/standard.gif"
+  IMAGES_URL_ABOUT: "https://mewassets.vercel.app/mewwme/assets/menu/mehelp.png"
+  IMAGES_URL_REQUEST_MUSIC: "https://mewassets.vercel.app/mewwme/assets/menu/mereq.png"
+  MYSTATS_CARD: "https://mewassets.vercel.app/mewwme/assets/menu/mystats.png"
+  TOPSTATS_CARD: "https://mewassets.vercel.app/mewwme/assets/menu/topstats.png"
+
+  # button link
+  SERVER_SUPPORT_URL: "https://discord.gg/rBRzcjExDY"
+  TEAM_NAME: "Made By Tragic"
+  PREMIUM_URL: "https://mewwme.fun/premium"
+  WEBSITE_URL: "https://mewwme.fun"
+  COMMANDS_URL: "https://mewwme.fun/commands"
+  TERMS_URL: "https://mewwme.fun/termsofservice"
+  PRIVACY_URL: "https://mewwme.fun/privacy"
+
+lavalink:
+  APPLE_TOKEN: "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IldlYlBsYXlLaWQifQ.eyJpc3MiOiJBTVBXZWJQbGF5IiwiaWF0IjoxNzcwODcxODY3LCJleHAiOjE3NzgxMjk0NjcsInJvb3RfaHR0cHNfb3JpZ2luIjpbImFwcGxlLmNvbSJdfQ.XQrh_J4o8liZFxSuQ8-oO6Yv4UeLBNAXBqaf2_fRUS6yOMPK5A9QMcUehNgQjODaG9977qloHIiQokHqUxet6A"
+  SPOTIFY:
+    # Your Spotify ID and Secret, you can get it from here: https://developer.spotify.com
+    enable: true
+    id: "d38bfbcb7344449ead42f45cb2879abe"
+    secret: "eea376cd4cdc484eabda84467802f219"
+
+  # You can add more Lavalink servers!
+  NODES:
+    - host: "lavalink1.meww.me"
+      port: 2333
+      name: "NY"
+      auth: "mewwme"
+      secure: false
+      driver: "lavalink/v4"
+
+# System premium by role official bot
+PremiumRole:
+  Enable: false
+  GuildID: "1181958754758033489"
+  RoleID: "1466071727229370442"
+
+# System premium by patreon
+Patreon:
+  Enable: false
+  GuildID: "1088032923443277824"
+  RoleID: "1244137336267079770"
+  PatreonAccessToken: "QIMZE4KeDimZqtCqtWVummSzOE9ls4sNqiWpl0euu-Q"
+  PatreonCampignId: "10793997"
+  PatreonLogChannelID: "1156234627925684284"
+  PatreonClaimLogChannelID: "1156234627925684284"
+  PatreonUnClaimLogChannelID: "1156234627925684284"
+  PatreonExpiredLogChannelID: "1156234627925684284"
+  PatreonPriceUser: 2 # $2.00
+  PatreonServerTiers:
+    - price: 3  # $3.00
+      quota: 1  # Get 1 Server
+    - price: 7  # $5.00
+      quota: 3  # Get 3 Server
+    - price: 10 # $7.00
+      quota: 5 # Get 5 Server
+
+# System premium by kofi
+KoFi:
+  Enable: false
+  VerificationToken: "9b5b2faa-2959-4868-af5c-efdd3bcc339f"
+  GuildID: "1181958754758033489"
+  RoleID: "1466071727229370442"
+  KofiLogChannelID: "1257256108339499009"
+  KofiExpiredLogChannelID: "1257256108339499009"
+  KofiDonationChannelID: "1257256108339499009"
+  KofiClaimLogChannelID: "1257256108339499009"
+  KofiUnClaimLogChannelID: "1257256108339499009"
+  KofiPriceUser: 2
+  KofiServerTiers:
+    - price: 3
+      quota: 1 
+    - price: 7
+      quota: 3 
+    - price: 10
+      quota: 5
+
+# Web3 integration — Somnia Network + USDC
+Web3:
+  Enable: true
+  ChainId: 50312 # Somnia Network chain ID
+  PremiumSubscriptionContract: "0x2F1ed80e74F0ec501277282CcB64ffa05CFEAC89" # Deploy via Remix and paste address here
+  TipFactoryContract: "0x9733D33e2b409FCbee926e26401810Ad2b4b8043" # Deploy via Remix and paste address here
+  PricePerMonth: 2 # $5 in USDC per month
+  ReactivitySecret: "mewwme_web3_s9Kx2mP7vL4qR8nJ3wF6hT1y" # Secret header for Somnia Reactivity webhooks
+  LogChannelID: "1482701221948293252" # Discord channel ID for Web3 logs
+
+utilities:
+  TicketSystem:
+    Enable: false
+    TranscriptTicketExporter: "https://mewwme.fun/chat-exporter"
+  CatAndQuotes:
+    Enable: false
+    ApiKey: "3d7EcSIoH1cd0aBW4dbgdIfEV3ke0oJkYpkGJ06D"  # APIKEY FROM https://api-ninjas.com/
+    CatChannelId: "1145427254340489216"
+    QuoteChannelId: "1144018480618819714"
+  NotifyYoutube:
+    Enable: false
+    Schedule: "*/10 * * * *" # Running Youtube Notification Schedule check (10minutes)
+    GlobalChannelID: "1156234739137646703"
+    ApiKey: "AIzaSyC6t6xtnnO3J-5rzw9dKncTmNOQcquewKQ"
+    ApiKey1: "AIzaSyDxIsf-8nFSuQ7tZC2BJEPQ7XIMZW88prk"
+    ApiKey2: "AIzaSyD26B-cXMVRmOU8zfID6vMbxXrrbDfkZUw"
+    ApiKey3: "AIzaSyA930pB6zLff5go5CDkmNcTJ90cXIgvwH4"
+    ApiKey4: "AIzaSyAmi9qXQAxylGymIfVRLhv3fw0D0ssPC3g"
+    ApiKey5: "AIzaSyCsrfNbkIkRkA1dBFbtsyr_F0qLtrWoUZg"
+    LimitPremium: 15
+    LimitNonPremium: 2
+  NotifyTwitch:
+    Enable: false
+    Schedule: "*/10 * * * *" # Running Twitch Notification Schedule check (10minutes)
+    GlobalChannelID: "1142428373981872178"
+    ClientId: "xi8jpn6xu2citc1gwrhvg8qkfqx01f"
+    ClientSecret: "k294z8h2ogexqrh93okeh9cf32idmy"
+    LimitPremium: 15
+    LimitNonPremium: 3
+
+logchannel:
+  UpdateChannelId: "1482701221948293252"
+  RedeemChannelID: "1482701221948293252"
+  RemoveChannelID: "1482701221948293252"
+  GenerateCodeChannelID: "1482701221948293252"
+  RatingChannelID: "1482701221948293252"
+  BugReportChannelID: "1482701221948293252"
+  SuggestionChannelID: "1482701221948293252"
+  ErrorChannelID: "419815588198875158"
+  GuildJoinChannelID: "1482701221948293252"
+  GuildLeaveChannelID: "1482701221948293252"
+  CleanUpDatabase25DaysChannelID: "1482701221948293252"
+  PremiumExpireChannelID: "1482701221948293252"
+
+features:
+  PLAY_COMMAND_ENGINE: ["youtube_music", "youtube", "spotify", "soundcloud"] # play commands engine
+  SEARCH_COMMAND_ENGINE: ["youtube_music", "youtube", "spotify", "soundcloud"] # Search commands engine
+  AUTOCOMPLETE_SEARCH: ["twice", "blackpink", "vvup"] # Default search suggestion for auto complete, leave it empty will use default
+  MAX_QUEUE: 50 # max queue for member 
+  LIMIT_TRACK: 50 # The number of tracks you want to limit (playlist features)
+  LIMIT_PLAYLIST: 20 # The number of playlist you want to limit (playlist features)
+  DELETE_MSG_TIMEOUT: 3000
+  LEAVE_TIMEOUT: 90000 # The number of leave time you want
+  SEARCH_TIMEOUT: 30000 #timeout collector search command
+  AUTO_RESUME: false
+  AUTOPLAY_SUPPORT: true
+  YOUTUBE_LINK: true
+  YOUTUBE_MUSIC_LINK: true
+  HIDE_LINK: false # Enable this to hide the source link
+  REPLACE_LINK: false # Enable this to replace the source link with support server link
+  CONVERT_LINK: 
+    Enable: false # # Enable this to convert the source link (e.g., from Spotify to Apple) and search/play with the set source, e.g., Apple
+    Engine: "spsearch" # The source you want to convert to (e.g., dzsearch, amsearch, scsearch, spsearch. tdsearch)
+  # set ui player settings for track start 
+  FilterMenu: true
+  ButtonLabel: true
+  MusicCard:
+    # available themes1 - themes20 or mewwme, mewwme1, miko, kobokanaeru, vestiazeta, yui, cute
+    Enable: true
+    Themes: "mewwme"
+
+  DATABASE:
+    driver: "json" # mongodb, mysql, json, postgres
+    config: { path: "./mewwme.database.json" }
+    ClearCache: "*/60 * * * * *" #clear cache for 1minutes
+    # Database backup only works if you are using the MySQL driver
+    MYSQLBACKUP:
+      Enable: false
+      Schedule: "0 0 * * *"
+      Timezone: "Asia/Jakarta"
+      ChannelId: "1156234673966563338"
+
+  MESSAGE_CONTENT:
+    enable: true
+    commands:
+      enable: true
+      prefix: "me" # The prefix you want
+
+  AUTOFIX_LAVALINK: # Fix the Lavalink server when the current is down
+    enable: false
+    retryCount: 5
+    retryTimeout: 1000
+    defaultSearchEngine: "soundcloud" #youtube, youtube_music, spotify or soundcloud
+
+  RestAPI: # Configuration for the REST API server
+    enable: true # Enable or disable the REST API (true to enable, false to disable)
+    auth: "mewwme" # Auth token for internal WebSocket & API communication
+    port: 4302 # Default port — overridden by RESTAPI_PORT in .env if set
+    whitelist: [] # List of domains or IPs allowed to access the REST API (example: ["meww.me"]). Uses req.hostname — use plain hostnames, not full URLs.
+    SessionSecret: "141225c30fd85e8692744bc935df81d54cff0bd3b3c97e36890a2c8b13329af4f52a5de3b17b4d96133c9669fa51c5d2bb2cf54d0b98fea1143b20ffbf322a03" # Overridden by SESSION_SECRET in .env
+    DiscordClientId: "928711702596423740" # Overridden by DISCORD_CLIENT_ID in .env
+    DiscordClientSecret: "FKDkI2wONNaNPZggYA_9G289Sv-ZGG03" # Overridden by DISCORD_CLIENT_SECRET in .env
+    DiscordRedirectUri: "https://api.mewwme.fun/auth/discord/callback" # Must match Discord Developer Portal OAuth2 redirect URL
+    DashboardUrl: "https://mewwme.fun" # Overridden by FRONTEND_URL in .env
+
+  WebServer:
+    enable: true
+    Port: 4301
+    BaseUrl: "https://ws.mewwme.fun" # The base URL your bot is running on (e.g., http://localhost:3000)
+    TOPGG_VOTELOGS:
+      Enable: true
+      TopGgWebhookSecret: "whs_d73765192939c432bdf3bf7310c9e3fa2b2af9874dcb9204077a08dbc278aa07"
+      LogVoteChannelID: "1482701221948293252"
+      WebhookURL: "https://discord.com/api/webhooks/1434103742353117205/U5zpUGi3uY5h4lPVTlgC9UifqS8aln1Kh16jY1eD9gCCXzpciRZ38JHOMIbTt_7rydld"
+      TopGgToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdCI6IjgyMDk5MDE5NjgwNjAzNzUwNCIsImlkIjoiNTEwOTU0MDY2MTIyNTYzNTg0IiwiaWF0IjoxNzczNTc2MTE2fQ.3aaYFjmb2I1OTY1DVwXtPCKaxGTzomIRyMTN7z_N8L0"
+    LAST_FM_SCROBBLED:
+      Enable: true
+      ApiKey: "8cd60e0fb26f332a3e0dc5d255523db5"
+      Secret: "daed5071e07cd5c665c363b3b9436f04"
+      Callback: "https://ws.mewwme.fun/lastfm"
+      scheduleScrobble: 60000 # Update Schedule Scrobble
+      ExpiredLink: 30000 # Update Expired Button Link Login
+      RedirectOnSuccess: "https://mewwme.fun/lastfm"
+      RedirectOnError: "https://mewwme.fun/lastfm-error"
+
+# WELCOMER LOGS MEMBER JOIN & LEAVE
+WELCOMER_EVENTS:
+  Enable: false
+  WELCOMER_GUILD_ID: "1088032923443277824"
+  WELCOME_CHANNEL_ID: "1091287764252753981"
+  LEAVE_CHANNEL_ID: "1091212076246110248"
+  SUBTITLE: "Those who wish to sing always find a song"
+  GREETINGS:
+    welcome: [ "Hi", "Hallo", "Heyho", "Hola" ]
+    bye: [ "Adiós", "Bye", "Tysm" ]
+  COLOR_GREETINGS: "#ffffff"
+  COLOR_USERNAME: "#f4e0c7"
+  COLOR_SUBTITLE: "#f4e0c7"
+
+# i set canvas images size 1920px X 480px
+IMAGES_WELCOMER:
+  IMAGES1: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome1.png"
+  IMAGES2: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome2.png"
+  IMAGES3: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome3.png"
+  IMAGES4: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome4.png"
+  IMAGES5: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome5.png"
+  IMAGES6: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome6.png"
+  IMAGES7: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome7.png"
+  IMAGES8: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome8.png"
+  IMAGES9: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome9.png"
+  IMAGES10: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome10.png"
+  IMAGES11: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome11.png"
+  IMAGES12: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome12.png"
+  IMAGES13: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome13.png"
+  IMAGES14: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome14.png"
+  IMAGES15: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome15.png"
+  IMAGES16: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome16.png"
+  IMAGES17: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome17.png"
+  IMAGES18: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome18.png"
+  IMAGES19: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome19.png"
+  IMAGES20: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome20.png"
+  IMAGES21: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome21.png"
+  IMAGES22: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome22.png"
+  IMAGES23: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome23.png"
+  IMAGES24: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome24.png"
+  IMAGES25: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome25.png"
+  IMAGES26: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome26.png"
+  IMAGES27: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome27.png"
+  IMAGES28: "https://mewassets.vercel.app/mewwme/assets/welcome/welcome28.png"
+
+HELPDESK:
+  Enable: false
+  WEBSITE_URL: "https://mewwme.fun"
+  SERVER_SUPPORT_URL: "https://discord.gg/rBRzcjExDY"
+  PREMIUM_URL: "https://mewwme.fun/howtosupport"
+  HELPDESK_LOGS_CHANNEL_ID: "1131700642117865624"
+  EMOJI1: "<:_1_:1292725463994859540>"
+  EMOJI2: "<:_2_:1292725478762872864>"
+  EMOJI3: "<:_3_:1292725492587167794>"
+  EMOJI4: "<:_4_:1292725507858759690>"
+  EMOJI5: "<:_5_:1292725523709169736>"
+  EMOJI6: "<:_6_:1292725538502213673>"
+  EMOJI7: "<:_7_:1292725552028975226>"
+  EMOJI8: "<:_8_:1292725564523675690>"
+  EMOJI9: "<:_9_:1292725581531840522>"
+  EMOJI10: "<:_10_:1292725596463431771>"
+  BUTTON_HELPDESK10:
+    NAME1: "Invite"
+    NAME2: "Vote"
+    NAME3: "Patreon"
+    URL1: "https://mewwme.fun/invite"
+    URL2: "https://mewwme.fun/topgg"
+    URL3: "https://mewwme.fun/howtosupport"
+
+HELPER_SETUP:
+  Enable: false
+  SERVER_SUPPORT_URL: "https://discord.gg/rBRzcjExDY"
+  NAME1: "View Rules"
+  NAME2: "Select Roles"
+  NAME3: "Support Us"
+  EMOJI1: "<:pen:1291612573267132477>"
+  EMOJI2: "<:owner:1291611771618197595>"
+  EMOJI3: "<:heart:1291612786849222748>"
+  VIEW_RULES:
+    ROLE_ID: "1144316412677070899"
+    ROLE_NAME: "Accept"
+    NAME1: "Discord Terms & Service"
+    NAME2: "Discord Community Guildlines"
+    NAME3: "Mewwme's Website"
+    NAME4: "Mewwme's Terms & Service"
+    NAME5: "Mewwme's Privacy Policy"
+    URL1: "https://discord.com/terms"
+    URL2: "https://discord.com/guidelines"
+    URL3: "https://mewwme.fun"
+    URL4: "https://mewwme.fun/termsofservice"
+    URL5: "https://mewwme.fun/privacy"
+  SELECT_ROLES:
+    NAME1: "MewsMates"
+    NAME2: "MewsDevs"
+    NAME3: "MewsBoys"
+    NAME4: "MewsGirls"
+    ID1: "1114887476163653683"
+    ID2: "1144016897399070831"
+    ID3: "1144315421294592213"
+    ID4: "1144316014813773885"
+  SUPPORT_US:
+    NAME1: "Invite Me"
+    NAME2: "Vote Me"
+    NAME3: "Patreon Page"
+    URL1: "https://mewwme.fun/invite"
+    URL2: "https://mewwme.fun/topgg"
+    URL3: "https://mewwme.fun/howtosupport"
+
+# Emoji config for discord message content in select menu
+# https://discord.gg/mewwme join the discord server if you want to use existing emoji
+MENU_HELP_EMOJI:
+  E_HOME: "<:_home:1292720004684316733>"
+  E_INFO: "<:_info:1292722373543464990>"
+  E_MUSIC: "<:_musics:1292720227485880321>"
+  E_FILTER: "<:_filter:1292721537723531274>"
+  E_PLAYLIST: "<:_playlist:1292720719565819904>"
+  E_SETTING: "<:_setting:1292720068089872455>"
+  E_GAMES: "<:_pingpong:1292732066768617565>"
+  E_ADMIN: "<:_admin:1292721483335995403>"
+  E_ALLCMD: "<:_allcmd:1292720350957797399>"
+  E_SUPPORT: "<:_question:1292722918610178078>"
+  E_WEBSITE: "<:_web:1292708749777174538>"
+  E_PREMIUM: "<:_prem:1292709117839933512>"
+  E_ALLCATEGORIES: "<:_sparkles:1292723255291154505>"
+
+PLAYER_SOURCENAME:
+  UNKNOWN: "<:_un:1292709252393074698> Unknown"
+  HTTP: "<:_antena:1292716636486504478> Direct Stream"
+  YOUTUBE: "<:_yt:1292712351702847570> Youtube Music"
+  YOUTUBE_MUSIC: "<:_yt:1292712351702847570> Youtube Music"
+  SOUNDCLOUD: "<:_sc:1292712162858500159> Soundcloud"
+  SPOTIFY: "<:_sp:1268922568308559873> Spotify"
+  DEEZER: "<:_dz:1292712240742400083> Deezer"
+  TWITCH: "<:_tw:1292712290151432212> Twitch"
+  APPLE_MUSIC: "<:_am:1292712060756693013> Apple Music"
+  TIDAL: "<:_td:1310002193515937802> Tidal"
+
+SEARCH_COMMANDS_EMOJI:
+  UNKNOWN: "<:_un:1292709252393074698>"
+  YOUTUBE: "<:_yt:1292712351702847570>"
+  YOUTUBE_MUSIC: "<:_yt:1292712351702847570>"
+  SOUNDCLOUD: "<:_sc:1292712162858500159>"
+  SPOTIFY: "<:_sp:1268922568308559873>"
+  DEEZER: "<:_dz:1292712240742400083>"
+  TWITCH: "<:_tw:1292712290151432212>>"
+  APPLE_MUSIC: "<:_am:1292712060756693013>"
+  TIDAL: "<:_td:1310002193515937802>"
+
+TRACKS_EMOJI:
+  Author: "<:_sing:1292709072591650856>"
+  Volume: "<:_vol:1292716191806132224>"
+  Autoplay: "<:_autoplay:1292714002270654483>"
+  Timers: "<:_timers:1292716417573064734>"
+
+# You can custom your emoji here!
+emojis:
+  PLAYER:
+    PLAY: "<:_play:1292714118020599838>"
+    PAUSE: "<:_pause:1292715698573017190>"
+    LOOP: "<:_loop:1292721659773587467>"
+    SHUFFLE: "<:_shuffle:1292714277588697179>"
+    STOP: "<:_stop:1292714184835993600>"
+    SKIP: "<:_skip:1292713542058901544>"
+    PREVIOUS: "<:_previous:1292713461788311624>"
+    VOLDOWN: "<:_voldown:1292713355919884291>"
+    VOLUP: "<:_volup:1292713328891793448>"
+    QUEUE: "<:_queue:1292713951615783035>"
+    RESUME: "<:_pause:1292715698573017190>"
+    AUTOPLAY: "<:_autoplay:1292714002270654483>"
+  GLOBAL:
+    ARROW_NEXT: "<:_next:1292715023810035804>"
+    ARROW_PREVIOUS: "<:_back:1292714982072647790>"
+    BLANK: "<:_blank:1292727587944140831>"
+
+SELECT_MENU_FILTER:
+  placeholder: "Mewwme's filter effects ♪"
+  emoji_reset: "<:_loop:1292721659773587467>"
+  emoji_filter: "<:_prem:1292709117839933512>"
+  emoji_free: "<:_sing:1292709072591650856>"
+
+# permission check commands, "Owner", "Admin", "Manager", "Member", "Voter", or "UserPremiumCode", "GuildPremiumCode", "PatreonUser", "PatreonGuild", "KofiUser", "KofiGuild", "Premium"
+# Please check README.md
+COMMANDS_ACCESS:
+  ADMIN: # for admin = only set Owner or Admin
+    BlackList: ["Admin"]
+    Helpdesk: ["Admin"]
+    Helper: ["Owner"]
+    Maintenance: ["Admin"]
+    ModLogSetup: ["Owner"]
+    ModLogToggle: ["Owner"]
+    PremiumCode: ["Admin"]
+    PremiumReedem: ["Admin"]
+    PremiumRemove: ["Admin"]
+    TicketSetup: ["Owner"]
+    Update: ["Admin"]
+
+  FILTER:
+    ThreeD: ["Voter"]
+    Bass: ["Premium"]
+    Bassboost: ["Voter"]
+    China: ["Voter"]
+    Chipmunk: ["Voter"]
+    Darthvader: ["Voter"]
+    Daycore: ["Voter"]
+    Doubletime: ["Voter"]
+    Earrape: ["Premium"]
+    Equalizer: ["Voter"]
+    Karaoke: ["Member"]
+    Nightcore: ["Voter"]
+    Party: ["Voter"]
+    Pitch: ["Voter"]
+    Pop: ["Member"]
+    Rate: ["Voter"]
+    Reset: ["Member"]
+    Slowmotion: ["Voter"]
+    Soft: ["Voter"]
+    Speed: ["Voter"]
+    Superbass: ["Voter"]
+    Television: ["Member"]
+    Treblebass: ["Voter"]
+    Tremolo: ["Member"]
+    Vaporwave: ["Voter"]
+    Vibrate: ["Voter"]
+    Vibrato: ["Member"]
+    
+  GAMES:
+    TwoZeroFourEight: ["Member"]
+    Connect4: ["Member"]
+    FindEmoji: ["Member"]
+    Flood: ["Member"]
+    GameStats: ["Member"]
+    Hangman: ["Member"]
+    MatchPairs: ["Member"]
+    Minesweeper: ["Member"]
+    TicTacToe: ["Member"]
+    Trivia: ["Member"]
+    Wordle: ["Member"]
+    WouldYouRather: ["Member"]
+
+  INFO:
+    About: ["Member"]
+    Help: ["Member"]
+    Info: ["Member"]
+    PrivacyPolicy: ["Member"]
+    MyStats: ["Member"]
+    TopStats: ["Member"]
+    Rating: ["Member"]
+    Report: ["Member"]
+    Suggestions: ["Member"]
+    StatisticUser: ["Member"]
+    TermsOfServices: ["Member"]
+
+  MUSIC:
+    Autoplay: ["Premium"]
+    ClearQueue: ["Member"]
+    ForceJoin: ["Member"]
+    Forward: ["Member"]
+    Join: ["Member"]
+    Loop: ["Voter"]
+    Lyrics: ["Voter"]
+    NowPlaying: ["Member"]
+    Pause: ["Member"]
+    Play: ["Member"]
+    PlayNext: ["Member"]
+    Previous: ["Voter"]
+    Queue: ["Member"]
+    Remove: ["Voter"]
+    Replay: ["Voter"]
+    Resume: ["Member"]
+    Rewind: ["Voter"]
+    Search: ["Member"]
+    Seek: ["Voter"]
+    Shuffle: ["Member"]
+    Skip: ["Member"]
+    SkipTo: ["Voter"]
+    Stop: ["Member"]
+    Volume: ["Voter"]
+
+  PLAYLIST:
+    Add: ["Member"]
+    All: ["Member"]
+    Create: ["Member"]
+    Delete: ["Member"]
+    Detail: ["Member"]
+    Editor: ["Voter"]
+    Import: ["Voter"]
+    Info: ["Member"]
+    Remove: ["Member"]
+    SaveQueue: ["Member"]
+
+  SETTINGS:
+    TwentyFourSeven: ["Manager", "Voter"]
+    ControlMode: ["Manager", "Voter"]
+    Language: ["Owner"]
+    LastFm: ["Member"]
+    DjRole: ["Manager"]
+    Prefix: ["Manager"]
+    Setup: ["Manager", "Voter"]
+    Themes: ["Voter"]
+    TempVoiceChannel: ["Manager"]
+    NotifyTwitch: ["Manager", "Voter"]
+    NotifyYoutube: ["Manager", "Voter"]
+    StatusVoiceChannel: ["Manager"]
+    PremiumClaim: ["Member"]
+    PremiumUnClaim: ["Member"]
+
+# Dashboard / Web Player access control.
+# Same permission values as COMMANDS_ACCESS: "Owner", "Admin", "Manager", "Member", "Voter",
+# "Premium", "PatreonUser", "PatreonGuild", "KofiUser", "KofiGuild", "PremiumRole"
+# When set to ["Member"], everyone can access the feature (no premium required).
+# When set to ["Voter"], the user must have voted on Top.gg (premium users always bypass).
+# When set to ["Premium"], only premium users/guilds (or owner/admin) can access it.
+DefaultSourceDashboard:
+  soundcloud: ["Member"]
+  apple_music: ["Member"]
+  spotify: ["Member"]
+  youtube: ["Premium"]
+  youtube_music: ["Premium"]
+  deezer: ["Member"]
+  tidal: ["Member"]
+
+DASHBOARD_ACCESS:
+  Filters: ["Premium"]
+  TwentyFourSeven: ["Premium"]
+  Autoplay: ["Premium"]
+  LastFm: ["Voter"]
+  SongRequest: ["Premium"]
+  Language: ["Member"]
+  StatusVoiceChannel: ["Member"]
+  Prefix: ["Member"]
+  DjRole: ["Premium"]
+  ControlButton: ["Premium"]
+  Playlist: ["Premium"]
+  AiChat: ["Premium"]
+
+GeminiAiChat:
+  Enable: true
+  ApiKeys:
+    - "AIzaSyBBH7vXJhZqqr0jvNvjZKbKfuL_n1D0vCs"
+    - "AIzaSyA-8P8M32dNQ5Hkns9PvQaOulm16e_O0QU"
+  Models:
+    - "gemini-2.5-flash"
+    - "gemini-2.0-flash"

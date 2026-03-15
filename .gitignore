@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# Environment variables (secrets)
+.env
+.env.local
+.env.production
+
+# Backend
+backend/logs/
+backend/config.yml
+backend/mewwme.database.json
+
+# Contracts (Hardhat)
+contracts/cache/
+contracts/artifacts/
+contracts/typechain-types/
+
+# Logs
+*.log
+*.log.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code
+.claude/

@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ Autoplay is now **Enabled**"
+autoplay_off: "Hmmm~~ Autoplay is now **Disabled**"
+autoplay_no_song: "No songs are playing!"
+
+### Loop command!
+loop_current: "Now the current song will play on loop. Enjoy the repetition!"
+loop_all: "The queue is now set to loop. Let the music play on repeat!"
+unloop_all: "Looping mode has been turned off. Enjoy the variety of tracks!"
+
+### Pause command!
+pause_msg: "Music is paused. Take a break and enjoy the silence."
+
+### Resume command!
+resume_msg: "Music is back on! Let's continue the groove ♪"
+
+previous_notfound: "Sorry, can't go back any further. No previous track found :("
+previous_msg: "Well, I guess we're rewinding! Previous track incoming <3"
+
+### Queue command!
+queue_title: "Queue playing..."
+queue_description: "**%{title} **\n\n**Rest of Queue %{list_song}**"
+queue_footer: "Page • %{page}/%{pages} | Songs • %{queue_lang} | Total Duration • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Guess what I did? I shuffled the queue for you!"
+
+### Skip command!
+skip_msg: "I skipped the track. Hope you don't mind :p"
+skip_notfound: "Oops! Looks like there's no track to skip to! Keep grooving with the current track ♪"
+
+### Stop command!
+stop_msg: "Music playback has been stopped. Hope you had a great time grooving!"
+
+### Volume command!
+voldown_msg: "Volume has been decreased %{volume}%. Enjoy the mellower vibes!"
+volume_invalid: "Invalid Volume. Available range is **1** and **100**"
+volup_msg: "Volume has been increased %{volume}%. Pump up the jam!"
+volume_max: "I can't turn my volume passed 100%"
+volume_min: "Ohno~~ already at min volume!"

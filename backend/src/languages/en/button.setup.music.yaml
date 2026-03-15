@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Music playback has been stopped. Hope you had a great time grooving!"
+skip_notfound: "Oops. Looks like there's no track to skip to!"
+skip_msg: "I skipped the track. Hope you don't mind :p"
+previous_msg: "Well, I guess we're rewinding! Previous track incoming <3"
+previous_notfound: "Sorry, can't go back any further. No previous track found :("
+resume_msg: "Music is back on! Let's continue the groove ♪"
+pause_msg: "Music is paused. Take a break and enjoy the silence."
+loop_current: "Now the current song will play on loop. Enjoy the repetition!"
+loop_all: "The queue is now set to loop. Let the music play on repeat!"
+unloop_all: "Looping mode has been turned off. Enjoy the variety of tracks!"
+
+### Need to join voice & same voice to use command!
+no_player: "You tap a button and it does nothing. Maybe you should play something first!"
+no_same_voice: "You tap a button and it flashes red. You're not in the same voice channel as me!"
+no_in_voice: "All the buttons have no reaction to you. You're not in a voice channel!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "NOW PLAYING"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Requested by %{request}"
+setup_footer: "Tracks Left • %{totalsong} | Total Duration • %{duration}"
+setup_queuemsg: "**Join a voice channel and play songs using name or URL in here!**"
+setup_playembed_author: "No song is currently playing!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Added **%{title}** • %{request}"
+play_playlist: "Added **%{title}** • (**%{songs} Tracks**) • %{request}"
+play_result: "Added **%{title}** • %{request}"
+play_emoji: "I'm not sure how to play that... It's not a track or a playlist."
+setup_content: "**Hey! My deck's ready for your music! Just throw something here!**"

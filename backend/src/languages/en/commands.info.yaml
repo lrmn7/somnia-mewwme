@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _     
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )    
+# | \  / | _____      ____      ___ __ ___   ___|/ ___ 
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#                                                      
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**Where those who wish to sing always find a song ♪\nJoin the melody in your Discord server today!**"
+about_desc2: |
+  ・Bot prefix for this server is `%{prefix}`
+  ・Change prefix with `%{prefix} prefix <new prefix>`
+  ・Play a track by link or search term `%{prefix} play`
+  Visit our **[website](%{website})** or use the `%{prefix} help` command for more commands.
+about_desc3: |
+  **Heads up!**
+  I preferably require `Administrator` permissions, but...
+  Even if you don't give me those permissions, I can still work, but I might not be able to do everything I'm capable of. Just saying!
+  
+  **Help and Support**
+  Join our **[support server](%{serversupport})** if you need help, want to get information about updates and issues or want to engage with the community!
+
+### Help command!
+finder_invalid: "Invalid Command"
+finder_example: "I can't help you find that! Look for an *actual* command!"
+finder_name: "**Command:**"
+finder_des: " **Description:**"
+finder_usage: "**Usage:**"
+finder_access: "**Accessible by:**"
+finder_aliases: "**Aliases:**"
+finder_slash: "**Slash:**"
+finder_des_no: "Couldn't find a description, sorry about that..."
+finder_usage_no: "I’m not sure how to use this command."
+finder_aliases_prefix: "[Prefix only]"
+finder_aliases_no: "You can't use this command with an alias."
+finder_slash_enable: "Enabled"
+finder_slash_disable: "Disabled"
+command_not_found: "Unknown command"
+select_menu: "Enjoy music with me!"
+help_timeout: "Help Menu timed out try using **`%{prefix}help`** or **`/help`** again."
+homepage_title: "Where those who wish to sing always find a song ♪\nJoin the melody in your Discord server today!"
+homepage_desc: |
+  <:_blank:1292727587944140831><:_247:1292731694608285757> **Music 24/7**
+  <:_blank:1292727587944140831><:_sp:1268922568308559873> **Spotify Connect**
+  <:_blank:1292727587944140831><:_audio:1268962358198407190> **High-Quality Audio**
+  <:_blank:1292727587944140831><:_lastfm:1268923138394292224> **Scrobbled with Last.fm**
+  <:_blank:1292727587944140831><:_pingpong:1292732066768617565> **Play & Compete in Mini Games**
+  <:_blank:1292727587944140831><:_music:1268960759828713623> **Spotify, Apple Music, Deezer & More...**
+
+  <a:_ask:1292730018845167667> **Do you want to upgrade to the [Premium](%{premium}) plan?**
+### Rating bot commands! ###
+rating_desc: "Thank you %{user} for rating stars for our Discord music bot!"
+rating_succes: "Thank you for your rating!\nYour rating has been successfully submitted."
+rating_failure: "Failed to send the report. Please try again later."
+
+### Report command #####
+report_provide_desc: "Oops! Invalid commands. Please provide your description"
+report_failure: "Failed to send the report. Please try again later."
+report_success: "Thank you for your report.\nThe report has been successfully submitted for resolution."
+
+### Suggestions command #####
+suggestions_provide_desc: "Oops! Invalid commands.please provide your description"
+suggestions_failure: "Failed to send the suggestion. Please try again later."
+suggestions_success: "Thank you for your suggestion!\nYour suggestion has been successfully submitted."
+
+### MyStats command ####
+mystats_error: "There was an error generating your statistics. Please try again later."
+
+### TopStats command ####
+topstats_error: "There was an error generating your statistics. Please try again later."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **Status Result:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 User Identity"
+patreon_logs_user_identity_value: |
+  **Name:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **Email:** %{email}
+
+patreon_logs_details_title: "Patreon Details"
+patreon_logs_details_value: |
+  **Pledge:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **Status:** `%{status}`
+patreon_logs_date_title: "📅 Date"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "User Identity"
+kofi_logs_user_identity_value: "**Name:** %{fullName}\n**Email:** ||%{email}||\n**Public:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord Identity"
+kofi_logs_discord_identity_value: "**User:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "Payment Details"
+kofi_logs_payment_details_value: "**Amount:** %{currency} %{amount}\n**Tier:** **%{tierName}**\n**Type:** %{type}"
+kofi_logs_sub_status_title: "Subscription Status"
+kofi_logs_sub_status_value: "**Is Sub:** %{isSub}\n**First Pay:** %{isFirst}"
+kofi_logs_message_title: "Message / Reason"
+kofi_logs_tech_title: "Technical / Transaction IDs"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**Msg ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Token:** ||%{token}||"
+kofi_logs_view_details: "View Details"
+
