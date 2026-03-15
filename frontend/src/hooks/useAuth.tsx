@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import { usePrivy, useLogout, useWallets, useCreateWallet } from "@privy-io/react-auth";
+import { usePrivy, useLogout, useWallets, useCreateWallet, useOAuthTokens } from "@privy-io/react-auth";
 import type { DiscordUser } from "@/types/player";
 import { api } from "@/lib/api";
 import { PRIVY_APP_ID } from "@/lib/config";
@@ -72,6 +72,21 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
   const sessionCreating = useRef(false);
   const walletSynced = useRef(false);
   const walletCreating = useRef(false);
+  const discordTokenRef = useRef<string | null>(null);
+
+  // Capture Discord OAuth access token when Privy grants it
+  try {
+    useOAuthTokens({
+      onOAuthTokenGrant: (params: any) => {
+        const token = params?.oauthTokens?.accessToken ?? params?.oAuthToken ?? null;
+        if (token) {
+          discordTokenRef.current = token;
+        }
+      },
+    });
+  } catch {
+    // useOAuthTokens not available in this Privy version, ignore
+  }
 
   // 1. On mount: check if backend session already exists
   useEffect(() => {
@@ -110,6 +125,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
       const discord = privyUser.discord;
       api
         .post<{ ok: boolean; user: DiscordUser }>("/auth/privy-session", {
+          accessToken: discordTokenRef.current ?? undefined,
           discordId: discord.subject,
           username: discord.username ?? "unknown",
           avatar: null,
