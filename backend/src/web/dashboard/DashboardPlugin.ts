@@ -366,6 +366,18 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     try {
       let userGuilds = req.session.guilds ?? [];
 
+      // Prefer Discord OAuth guild list when access token exists but guild cache is empty.
+      // This enables Privy single-login flow to populate inviteable servers without re-login.
+      if (userGuilds.length === 0 && req.session.accessToken) {
+        try {
+          userGuilds = await discordOAuth.fetchUserGuilds(req.session.accessToken);
+          req.session.guilds = userGuilds;
+          await req.session.save();
+        } catch {
+          // Token may be missing guilds scope; fallback to mutual-guild resolution below.
+        }
+      }
+
       // Lazy-resolve guild membership for Privy sessions that skipped guild check
       if (userGuilds.length === 0 && req.session.user) {
         try {

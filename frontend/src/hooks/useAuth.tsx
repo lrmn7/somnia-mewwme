@@ -72,6 +72,8 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
 
   const sessionCreating = useRef(false);
   const sessionAttempted = useRef(false);
+  const tokenSyncing = useRef(false);
+  const tokenSynced = useRef(false);
   const walletSynced = useRef(false);
   const walletCreating = useRef(false);
 
@@ -109,6 +111,7 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
 
     if (!authenticated) {
       sessionAttempted.current = false;
+      tokenSynced.current = false;
       setStatus("unauthenticated");
       return;
     }
@@ -131,10 +134,12 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
         if (data.ok && data.user) {
           setUser(data.user);
           setStatus("authenticated");
+          tokenSynced.current = Boolean(discordToken);
           navigate("/servers", { replace: true });
         }
       })
       .catch(() => {
+        sessionAttempted.current = false;
         setUser(null);
         setStatus("unauthenticated");
       })
@@ -142,6 +147,28 @@ function PrivyAuthProvider({ children }: { children: ReactNode }) {
         sessionCreating.current = false;
       });
   }, [ready, backendChecked, authenticated, privyUser, status, navigate, discordToken]);
+
+  // 2b. If session was created before OAuth token arrived, upgrade it once
+  // so backend can fetch full guild list (including servers without the bot).
+  useEffect(() => {
+    if (status !== "authenticated") return;
+    if (!discordToken || !privyUser?.discord) return;
+    if (tokenSynced.current || tokenSyncing.current) return;
+
+    tokenSyncing.current = true;
+    api
+      .post<{ ok: boolean }>("/auth/privy-session", {
+        accessToken: discordToken,
+        discordId: privyUser.discord.subject,
+        username: privyUser.discord.username ?? "unknown",
+        avatar: null,
+        globalName: privyUser.discord.username,
+      })
+      .finally(() => {
+        tokenSynced.current = true;
+        tokenSyncing.current = false;
+      });
+  }, [status, discordToken, privyUser]);
 
   // 3. Ensure embedded wallet exists after Privy login
   useEffect(() => {
