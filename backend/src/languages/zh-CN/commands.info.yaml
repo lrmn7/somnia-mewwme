@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**愿歌者永远找到属于自己的歌 ♪\n今天就在你的 Discord 服务器中加入这段旋律吧！**"
+about_desc2: |
+  ・此服务器的机器人前缀为 `%{prefix}`
+  ・使用 `%{prefix} prefix <新前缀>` 更改前缀
+  ・通过链接或搜索词播放曲目 `%{prefix} play`
+  访问我们的**[网站](%{website})**或使用 `%{prefix} help` 命令查看更多命令。
+about_desc3: |
+  **请注意！**
+  我最好拥有 `Administrator` 权限，不过...
+  即使你不给我这些权限，我仍然可以工作，但可能无法发挥全部功能。仅供参考！
+
+  **帮助与支持**
+  如果你需要帮助、想获取更新和问题信息或想与社区互动，请加入我们的**[支持服务器](%{serversupport})**！
+
+### Help command!
+finder_invalid: "无效的命令"
+finder_example: "我帮不了你找到那个！请寻找一个*真正的*命令！"
+finder_name: "**命令：**"
+finder_des: " **描述：**"
+finder_usage: "**用法：**"
+finder_access: "**可访问者：**"
+finder_aliases: "**别名：**"
+finder_slash: "**斜杠命令：**"
+finder_des_no: "找不到描述，抱歉..."
+finder_usage_no: "我不确定如何使用这个命令。"
+finder_aliases_prefix: "[仅前缀]"
+finder_aliases_no: "你不能使用别名来执行这个命令。"
+finder_slash_enable: "已启用"
+finder_slash_disable: "已禁用"
+command_not_found: "未知命令"
+select_menu: "和我一起享受音乐吧！"
+help_timeout: "帮助菜单已超时，请再次使用 **`%{prefix}help`** 或 **`/help`**。"
+homepage_title: "愿歌者永远找到属于自己的歌 ♪\n今天就在你的 Discord 服务器中加入这段旋律吧！"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **全天候音乐**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify 连接**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **高品质音频**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Last.fm 记录**
+  <:blank:1291123023679586324><:games:1311125732117843978> **畅玩迷你游戏并竞争**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify、Apple Music、Deezer 等更多...**
+
+  <a:ask:1291123964080558121> **你想升级到 [Premium](%{premium}) 方案吗？**
+### Rating bot commands! ###
+rating_desc: "感谢 %{user} 为我们的 Discord 音乐机器人评分！"
+rating_succes: "感谢你的评分！\n你的评分已成功提交。"
+rating_failure: "发送评分失败。请稍后再试。"
+
+### Report command #####
+report_provide_desc: "糟糕！无效的命令。请提供你的描述"
+report_failure: "发送报告失败。请稍后再试。"
+report_success: "感谢你的报告。\n报告已成功提交以进行处理。"
+
+### Suggestions command #####
+suggestions_provide_desc: "糟糕！无效的命令。请提供你的描述"
+suggestions_failure: "发送建议失败。请稍后再试。"
+suggestions_success: "感谢你的建议！\n你的建议已成功提交。"
+
+### MyStats command ####
+mystats_error: "生成你的统计数据时出错。请稍后再试。"
+
+### TopStats command ####
+topstats_error: "生成你的统计数据时出错。请稍后再试。"
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **状态结果：**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 用户身份"
+patreon_logs_user_identity_value: |
+  **名称：** %{fullName}
+  **Discord：** <@%{discordId}> (`%{discordId}`)
+  **邮箱：** %{email}
+
+patreon_logs_details_title: "Patreon 详情"
+patreon_logs_details_value: |
+  **赞助金额：** $%{pledge}
+  **Patreon ID：** `%{patreonId}`
+  **状态：** `%{status}`
+patreon_logs_date_title: "📅 日期"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "用户身份"
+kofi_logs_user_identity_value: "**名称：** %{fullName}\n**邮箱：** ||%{email}||\n**公开：** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord 身份"
+kofi_logs_discord_identity_value: "**用户：** %{discordUser}\n**ID：** %{discordId}"
+kofi_logs_payment_details_title: "支付详情"
+kofi_logs_payment_details_value: "**金额：** %{currency} %{amount}\n**等级：** **%{tierName}**\n**类型：** %{type}"
+kofi_logs_sub_status_title: "订阅状态"
+kofi_logs_sub_status_value: "**是否订阅：** %{isSub}\n**首次支付：** %{isFirst}"
+kofi_logs_message_title: "消息/原因"
+kofi_logs_tech_title: "技术/交易 ID"
+kofi_logs_tech_value: "**Ko-fi Tx ID：** %{kofiTxId}\n**消息 ID：** %{msgId}\n**链接：** [%{viewDetails}](%{url})\n**Token：** ||%{token}||"
+kofi_logs_view_details: "查看详情"
+

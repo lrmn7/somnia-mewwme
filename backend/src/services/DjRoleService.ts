@@ -26,8 +26,8 @@ export class DjRoleService {
     if (!guildId || !message.member) return true;
     const djData = await client.db.DjRole.get(guildId);
     if (!djData || djData.enable === false) return true;
-    const isOwner = userId === String(client.owner);
-    const isAdmin = client.config.bot.ADMIN.map(String).includes(userId);
+    const isOwner = userId === client.owner;
+    const isAdmin = client.config.bot.ADMIN.includes(userId);
     const member = message.member as GuildMember;
     const isNotManager = !member.permissions.has(PermissionsBitField.Flags.ManageGuild);
     const hasDjRole = djData.roleid ? member.roles.cache.has(djData.roleid) : false;

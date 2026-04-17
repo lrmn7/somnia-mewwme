@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_add_match: "אנא ספקו שם שיר או קישור חוקי!"
+pl_add_playlist: "נמצא **%{title}** `%{duration}` • (**%{track} שירים**) • %{user}"
+pl_add_track: "נמצא **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "נמצא **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "אתה לא **בעל רשימת ההשמעה**!"
+pl_add_limit_track: "לא ניתן להוסיף יותר מ-**%{limit} שירים**"
+pl_add_added: "נוספו **%{count} שירים** ל-`%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} שירים**) • נוצר: `[לפני %{create}]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "עמוד • %{page}/%{pages} | רשימות השמעה • %{songs}"
+pl_all_view_notnumber: "אנא הזינו מספר עמוד חוקי!"
+pl_all_view_page_notfound: "יש רק **%{page} עמודים**!"
+
+### pl-create commands ###
+pl_create_invalid: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_create_toolong: "שם רשימת ההשמעה לא יכול להיות ארוך מ-**16 תווים**"
+pl_create_des_toolong: "תיאור רשימת ההשמעה לא יכול להיות ארוך מ-**1000 תווים**"
+pl_create_limit_playlist: "לא ניתן ליצור יותר מ-**%{limit} רשימות השמעה**"
+create_created_title: "רשימת השמעה חדשה נוצרה בהצלחה!"
+pl_create_created_footer: "הקלידו /pl editor כדי לערוך את רשימת ההשמעה שלכם!"
+pl_create_created: |
+  **שם רשימת ההשמעה**
+  `%{playlist}`
+
+  **מזהה רשימת ההשמעה**
+  `%{id}`
+
+  **תיאור**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "אנא ספקו מזהה רשימת השמעה חוקי!"
+delete_notfound: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_delete_owner: "אתה לא **בעל רשימת ההשמעה**"
+pl_delete_confirm: "האם ברצונך למחוק את `%{playlist_id}`"
+pl_delete_deleted: "רשימת ההשמעה `%{name}` **נמחקה** בהצלחה"
+pl_delete_no: "**מחיקת** רשימת ההשמעה בוטלה!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "אנא הזינו מספר חוקי!"
+pl_detail_notfound: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_detail_private: "רשימת ההשמעה **פרטית**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "רשימת השמעה: %{name}"
+pl_detail_embed_footer: "עמוד • %{page}/%{pages} | שירים • %{songs} | משך כולל • %{duration}"
+pl_detail_notnumber: "אנא הזינו מספר עמוד חוקי!"
+pl_detail_page_notfound: "יש רק **%{page} עמודים**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "הזינו **מזהה רשימת השמעה חדש** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "הזינו **שם רשימת השמעה חדש**"
+pl_edit_playlist_des_label: "הזינו **תיאור רשימת השמעה חדש**"
+pl_edit_playlist_private_label: "הזינו **נראות רשימת השמעה חדשה** `[public/private]`"
+pl_edit_success: "רשימת ההשמעה נערכה בהצלחה\nמזהה רשימת השמעה חדש: `%{playlistId}`"
+pl_edit_arg: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_edit_notfound: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_edit_playlist_owner: "אתה לא **בעל רשימת ההשמעה**!"
+pl_edit_invalid_id: "אנא הזינו מזהה רשימת השמעה חוקי שאינו קיים!"
+pl_edit_invalid_mode: "מצב נראות לא חוקי. אנא השתמשו ב-**public** או **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "מזהה רשימת השמעה חדש"
+ineraction_edit_playlist_name_label: "שם רשימת השמעה חדש"
+ineraction_edit_playlist_des_label: "תיאור רשימת השמעה חדש"
+ineraction_edit_playlist_private_label: "נראות רשימת השמעה חדשה"
+ineraction_edit_playlist_id_placeholder: "הזינו מזהה רשימת השמעה חדש! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "הזינו שם רשימת השמעה חדש!"
+ineraction_edit_playlist_des_placeholder: "הזינו תיאור רשימת השמעה חדש!"
+ineraction_edit_playlist_private_placeholder: "הזינו נראות רשימת השמעה חדשה! [public/private]"
+ineraction_edit_success: "רשימת ההשמעה נערכה בהצלחה\nמזהה רשימת השמעה חדש: `%{playlistId}`"
+ineraction_edit_playlist_error: "משהו השתבש. אנא נסו שוב!"
+ineraction_edit_notfound: "אנא ספקו מזהה רשימת השמעה חוקי!"
+ineraction_edit_playlist_owner: "אתה לא **בעל רשימת ההשמעה**"
+ineraction_edit_invalid_id: "אנא הזינו מזהה רשימת השמעה חוקי שאינו קיים!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### רשימת ההשמעה **%{name}** נוספה לתור ♪"
+pl_import_imported_footer: "תהנו מ-%{tracks} שירים • %{duration} • של מוזיקה מענגת!"
+pl_import_invalid: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_import_private: "רשימת ההשמעה **פרטית**"
+pl_import_voice: "צריך להיות בערוץ קולי כדי להשתמש בפקודה זו!"
+pl_import_empty: "רשימת ההשמעה **ריקה**"
+
+### pl-info commands! ###
+pl_info_owner: "בעלים"
+pl_info_id: "מזהה"
+pl_info_des: "תיאור"
+pl_info_no_des: "לא סופק תיאור!"
+pl_info_private: "נראות"
+pl_public: "ציבורי"
+pl_private: "פרטי"
+pl_info_total: "סך השירים"
+pl_info_created: "נוצר"
+pl_info_invalid: "אנא ספקו מזהה רשימת השמעה חוקי!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_remove_number_invalid: "אנא הזינו מספר חוקי!"
+pl_remove_notfound: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_remove_owner: "אתה לא **בעל רשימת ההשמעה**"
+pl_remove_song_notfound: "השיר לא נמצא!"
+pl_remove_removed: "הוסר שיר מספר **%{position}** מ-`%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_savequeue_notfound: "אנא ספקו מזהה רשימת השמעה חוקי!"
+pl_savequeue_owner: "אתה לא **בעל רשימת ההשמעה**!"
+pl_savequeue_no_tracks: "אין שיר מתנגן כרגע!"
+pl_savequeue_no_new_saved: "השיר כבר קיים ב-`%{name}`"
+pl_savequeue_saved: "נשמרו **%{tracks} שירים** ב-`%{name}`"
+
+pl_error_no_node: "לא נמצא שרת Lavalink. אנא נסו שוב לאחר **5 דקות**"

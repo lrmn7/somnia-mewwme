@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Відтворення музики зупинено. Сподіваюся, вам було весело!"
+skip_notfound: "Ой. Здається, немає треку для пропуску!"
+skip_msg: "Я пропустив трек. Сподіваюся, ви не проти :p"
+previous_msg: "Що ж, здається, ми перемотуємо назад! Попередній трек уже на підході <3"
+previous_notfound: "Вибачте, не можу повернутися далі. Попередній трек не знайдено :("
+resume_msg: "Музика знову грає! Продовжуємо кайфувати ♪"
+pause_msg: "Музику поставлено на паузу. Відпочиньте та насолодіться тишею."
+loop_current: "Тепер поточна пісня буде грати по колу. Насолоджуйтесь повторенням!"
+loop_all: "Чергу тепер встановлено на повтор. Нехай музика грає по колу!"
+unloop_all: "Режим повтору вимкнено. Насолоджуйтесь різноманітністю треків!"
+
+### Need to join voice & same voice to use command!
+no_player: "Ви натиснули кнопку, але нічого не сталося. Можливо, спочатку варто щось увімкнути!"
+no_same_voice: "Ви натиснули кнопку і вона спалахнула червоним. Ви не в тому ж голосовому каналі, що і я!"
+no_in_voice: "Усі кнопки не реагують на вас. Ви не в голосовому каналі!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "ЗАРАЗ ГРАЄ"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Запитав %{request}"
+setup_footer: "Треків залишилось • %{totalsong} | Загальна тривалість • %{duration}"
+setup_queuemsg: "**Приєднайтесь до голосового каналу та відтворюйте пісні за назвою або URL тут!**"
+setup_playembed_author: "Наразі жодна пісня не грає!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Додано **%{title}** • %{request}"
+play_playlist: "Додано **%{title}** • (**%{songs} Треків**) • %{request}"
+play_result: "Додано **%{title}** • %{request}"
+play_emoji: "Я не впевнений, як це відтворити... Це не трек і не плейлист."
+setup_content: "**Гей! Мій пульт готовий до вашої музики! Просто закиньте щось сюди!**"

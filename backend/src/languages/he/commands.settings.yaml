@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "מצב 24/7 כעת **מופעל**"
+247_off: "מצב 24/7 כעת **מושבת**"
+247_already: "מצב 24/7 כבר **%{mode}**"
+247_arg_error: "מצב 24/7 לא חוקי. אנא השתמש ב-%{text}"
+247_no_in_voice: "אתה לא בערוץ קולי!"
+
+
+### Set Language command! ###
+provide_lang: "**שפה לא חוקית. אנא השתמש ב-** `%{languages}`"
+lang_set: "**השפה הוגדרה ל-** `%{language}`"
+lang_change: "**השפה שונתה ל-** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "אנא ספקו קידומת חוקית!"
+prefix_length: "**הקידומת לא יכולה להיות ארוכה מ-10 תווים**"
+prefix_set: "**הקידומת הוגדרה ל-** `%{prefix}`"
+prefix_change: "**הקידומת שונתה ל-** `%{prefix}`"
+
+### Control command!
+control_set: "**מצב שליטת הנגן הוגדר ל-%{toggle}**"
+control_arg_error: "ארגומנט לא חוקי. אנא השתמש ב-%{text}"
+control_already: "התראות שירים כבר **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "לא חוקי! אנא השתמש ב-%{text}"
+setup_enable: "**אופס! מערכת המוזיקה כבר קיימת.**"
+setup_topic: "♪ מי שרוצה לשיר תמיד מוצא שיר. ♪"
+setup_msg: "*`מערכת המוזיקה הוגדרה בהצלחה ב-`* %{channel}\n```הערה: אל תמחקו הודעות שיצרתי כדי שאוכל לפעול כראוי.```"
+setup_null: "*`ערוץ ההגדרה נמחק בהצלחה!`*"
+setup_deleted: "*`ערוץ ההגדרה נמחק בהצלחה!`*"
+setup_null_inguild: "**מערכת מוזיקה לא נמצאה בשרת זה! מוכן למחיקת נתונים**"
+setup_queuemsg: "**הצטרפו לערוץ קולי והפעילו שירים באמצעות שם או קישור כאן!**"
+setup_playembed_author: "אין שיר מתנגן כרגע"
+
+### Themes command!
+error_themes: "לא חוקי... אנא נסו שוב."
+succes_themes: "**העיצוב שונה בהצלחה ל-%{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "הערה: קישור זה יפוג בעוד %{expired}."
+lastfm_login_title: "התחברות ל-Last.fm"
+lastfm_login_desc: "האם ברצונכם לתת הרשאה לחשבון ה-[Last.fm](https://www.last.fm/user/eleremen) שלכם?\nאם כן, אנא לחצו על הכפתור למטה כדי להתחיל את תהליך ההרשאה."
+lastfm_not_login_desc: "אינכם מחוברים ל-Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "התנתקות מ-Last.fm"
+lastfm_logout_desc: "התנתקתם בהצלחה מ-Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "תכונת Last.fm מושבתת."
+lastfm_feature_disabled_desc: "תכונת Last.fm מושבתת כרגע. אנא פנו למנהל לקבלת מידע נוסף."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "לא נמצאה התראה עבור ערוץ YouTube **%{ytchannel}**."
+notify_youtube_removed: "הסרתם את ההתראה עבור ערוץ YouTube **%{ytchannel}**."
+notify_youtube_disabled: "תכונת התראות YouTube מושבתת כרגע. פנו לצוות לקבלת מידע נוסף."
+notify_youtube_already: "התראות עבור ערוץ YouTube %{ytchannel} כבר מוגדרות."
+notify_youtube_invalid_channel: "אירעה שגיאה בציון ערוץ טקסט חוקי. אנא בדקו!"
+notify_youtube_set: "התראת YouTube הוגדרה עבור **%{ytchannel}** ב-%{channelid}."
+notify_youtube_404: |
+  מזהה ערוץ YouTube שסופק לא נמצא.
+  כדי למצוא את מזהה הערוץ, עברו לדף ערוץ YouTube ובדקו את הקישור.
+  מזהה הערוץ הוא מחרוזת האותיות והמספרים אחרי `/channel/` (לדוגמה: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   הגעתם למגבלה של %{limit} התראות.
+   על ידי שדרוג ל[פרימיום](%{premium}), תוכלו להגדיר עד %{limitpremium} התראות.
+
+notify_youtube_limit_reached_premium: |
+   הגעתם למגבלה של %{limit} התראות.
+   זו המגבלה המקסימלית. שקלו למחוק כמה התראות כדי לפנות מקום לחדשות.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "לא נמצאה התראה עבור שם המשתמש בטוויץ' **%{twitchusername}**."
+notify_twitch_removed: "הסרתם את ההתראה עבור שם המשתמש בטוויץ' **%{twitchusername}**."
+notify_twitch_disabled: "תכונת התראות טוויץ' מושבתת כרגע. פנו לצוות לקבלת מידע נוסף."
+notify_twitch_already: "כבר הגדרתם התראות עבור ערוץ הטוויץ' %{twitchusername}."
+notify_twitch_invalid_channel: "אירעה שגיאה בציון ערוץ טקסט חוקי. אנא בדקו!"
+notify_twitch_set: "התראת טוויץ' הוגדרה עבור **%{twitchusername}** ב-%{channelid}."
+notify_twitch_error: "אירעה שגיאה בלתי צפויה בעיבוד התראת טוויץ' עבור **{twitchusername}** בערוץ **{channelid}**. אנא נסו שוב או פנו לתמיכה אם הבעיה נמשכת."
+notify_twitch_limit_reached_non_premium: |
+   הגעתם למגבלה של %{limit} התראות.
+   על ידי שדרוג ל[פרימיום](%{premium}), תוכלו להגדיר עד %{limitpremium} התראות.
+
+notify_twitch_limit_reached_premium: |
+   הגעתם למגבלה של %{limit} התראות.
+   זו המגבלה המקסימלית. שקלו למחוק כמה התראות כדי לפנות מקום לחדשות.
+
+### Temp Voice Feature command!
+tempvoice_setup: "תכונת הערוץ הקולי הזמני %{status}."
+tempvoice_disabled: "ערוץ קולי זמני הושבת."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "לא חוקי... רק %{text}."
+status_voice_channel_true: "סטטוס ערוץ קולי הוגדר ל-**%{type}**."
+status_voice_channel_false: "סטטוס ערוץ קולי הוגדר ל-**%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "פקודה זו ניתנת לביצוע רק בשרת!"
+no_data_patreon: "נתוני Patreon לא נמצאו (שגיאת מסד נתונים)"
+no_data_patreon_title: "לא נמצא"
+no_data_patreon_desc: |
+  אם כבר נרשמתם, ודאו שחשבון הדיסקורד שלכם מקושר ל-Patreon!
+no_data_patreon_footer: "סנכרון Patreon עשוי לקחת רגע, אנא בדקו שוב בקרוב"
+no_patreon_guild_membership: |
+  שלום, תוכנית ה-patreon שלך היא **דרגת משתמש**.
+  אנא שדרגו ל**דרגת שרת** כדי לפתוח גישה לשרת פרימיום.
+patreon_guild_membership_full_quota: |
+  השתמשתם בכל מכסת השרתים שלכם!
+  **סטטוס:** %{status} שרתים בשימוש.
+
+  פתרון:
+  1. שדרגו את הדרגה שלכם ב-patreon.
+  2. או השביתו פרימיום בשרת הישן שלכם.
+patreon_guild_membership_already_before: "כבר הפעלתם פרימיום בשרת זה בעבר!"
+patreon_guild_membership_already: "**כבר פרימיום** כי הוא ממומן על ידי מישהו אחר.\nשמרו את המכסה שלכם לשרתים אחרים!"
+patreon_guild_membership_claim_title: "אישור הפעלה"
+patreon_guild_membership_claim_desc: |
+  האם אתם בטוחים שברצונכם להפעיל **שרת פרימיום** עבור:
+  **%{guildName}**
+
+  פעולה זו תשתמש ב-**מכסת שרת אחד**.
+  מכסה נותרת: **%{status}**
+patreon_guild_membership_claim_success: |
+  הצלחה! **%{guildName}** הוא כעת **שרת פרימיום**.
+
+  **ממן:** %{user}
+  **מכסה נותרת:** %{status}
+  תודה שאתם תומכים בנו ב-patreon!
+patreon_guild_membership_claim_success_title: "💎 פרימיום הופעל!"
+patreon_guild_membership_claim_cancel: "הפעלת הפרימיום בוטלה."
+patreon_guild_membership_claim_norespon: "ההפעלה בוטלה אוטומטית בגלל חוסר תגובה."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 שרת מומש (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **משתמש ממן:** %{sponsorTag} %{sponsorId}
+  **שרת יעד:** %{guildName} %{guildId}
+  **סטטוס מכסה:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "לא ניתן לבטל את השרת הפרימיום הזה כי לא אתם רשמתם אותו."
+patreon_guild_unclaim_title: "אישור ביטול פרימיום"
+patreon_guild_unclaim_desc: |
+  האם אתם בטוחים שברצונכם **לבטל** את סטטוס הפרימיום של שרת **%{guildName}**?
+  **השפעות:** תכונות פרימיום יושבתו בשרת זה.
+  מכסת השרת שלכם תשוחזר (+1).
+  מכסה נותרת כרגע: **%{status}**
+patreon_guild_unclaim_success_title: "פרימיום בוטל"
+patreon_guild_unclaim_success: |
+  סטטוס הפרימיום של **%{guildName}** בוטל בהצלחה.
+  **מכסה שוחזרה:** שרת אחד
+  **מכסה נותרת חדשה:** %{status}
+patreon_guild_unclaim_cancel: "תהליך ביטול הפרימיום בוטל."
+patreon_guild_unclaim_norespon: "⏱️ פג זמן. התהליך בוטל."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "שרתים שבוטלו (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **משתמש:** %{sponsorTag} %{sponsorId}
+  **שרת:** %{guildName}} %{guildId}
+  **מכסה שוחזרה:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **משתמש:** %{userTag} (%{userId})
+  **שרת:** %{guildName} (%{guildId})
+  **מכסה:** %{quota}
+  **תפוגה:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} פעולה: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "מזהה עסקה לא נמצא או כבר מומש."
+kofi_linked_success_title: "התשלום קושר בהצלחה!"
+kofi_linked_success_desc: "כעת תוכלו להשתמש ב-`/premium claim <kofi>` ללא מזהה עסקה."
+kofi_no_data_title: "לא נמצאו נתונים!"
+kofi_no_data_desc: |
+  אם כבר שילמתם אך לא חיברתם את חשבון הדיסקורד שלכם ל-Kofi
+  השתמשו ב-: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "אין מכסה, אבל אתם משתמשי פרימיום."
+kofi_full_server_quota_title: "המכסה מלאה!"
+kofi_full_server_quota_desc: "השתמשתם ב-**%{quota}** משבצות שרת."
+kofi_server_already_claim_desc: "**כבר פעיל!**\nכבר הפעלתם פרימיום בשרת זה בעבר."
+kofi_server_already_active_desc: " **כבר פרימיום!**\nשרת זה כבר הופעל כפרימיום על ידי משתמש אחר."
+kofi_guild_membership_claim_success: |
+  הפרימיום הופעל בהצלחה!
+  **שימוש במכסה:** %{quota}
+  **תפוגה בעוד:** %{expires}
+kofi_guild_membership_claim_footer: "תודה על התמיכה שלכם!"
+kofi_action_title: "🏗️ פעולת Ko-fi: %{type}"
+kofi_action_description: "**משתמש:** %{userTag} (`%{userId}`)\n**שרת:** %{guildName} (`%{guildId}`)\n**פעולה:** %{action}\n**מכסה:** %{quota}"
+kofi_action_activation: "שרת הופעל"
+kofi_action_manual_link: "תשלום ידני קושר"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "פרימיום בוטל"
+kofi_guild_unclaim_success_desc: |
+  סטטוס הפרימיום של **%{guildName}** בוטל בהצלחה.
+  **מכסה שוחזרה:** שרת אחד
+kofi_guild_not_owned_by_user: "לא ניתן לבטל את השרת הפרימיום הזה כי לא אתם רשמתם אותו."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "שרתים שבוטלו %{platform}"
+premium_unclaim_log_desc: |
+  **משתמש:** %{userTag} %{userId}
+  **שרת:** %{guildName}} %{guildId}
+  **מכסה שוחזרה:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "מערכת תפקיד ה-DJ **הושבתה**."
+dj_role_missing_role: "עליכם לספק תפקיד כדי להשתמש בפעולת `set`."
+dj_role_set: |
+  תפקיד ה-DJ הוגדר ל-%{role}.
+  סטטוס: **מופעל**
+  **פקודות מושפעות:**
+  %{commands}

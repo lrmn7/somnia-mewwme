@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "%{bot} Gizlilik Politikasi"
+privacy_label: Gizlilik Politikasi
+privacy_desc: |
+  **Kullanici Sozlesmesi**
+  Sunucuda [%{bot}](%{serversupport}) ("bot") kullanimii, belirli kullanici verilerinin toplanmasini gerektirir. Toplanan veriler, kullanicinin Discord ID'si, Discord kullanici adi ve sunucu rolleri dahil ancak bunlarla sinirli degilddir. Botu kullanmak, bu politika sartlarinin kabullu sayilir.
+
+  **Veri Erisimi**
+  Verilere erisim yalnizca bot gelistiricileri ve barindirma hizmetleri tarafindan ve yalnizca bot gelistirme, test ve ozellik uygulamasi icin gerekli kapsam dahilinde izin verilir. Veriler, yasa veya Hizmet Sartlari sozlesmesi gerektirmedikce ucuncu taraflara satilmaz, verilmez veya paylasilmaz. Verilerinizi [gelistirici](%{developer}) uzerinden talep ederek goruntuleyebilirsiniz.
+
+  **Veri Depolama**
+  Veriler [MYSQL](https://www.mysql.com/) veritabaninda saklanir. Veritabani, dis erisimi onlemek icin guvenlik altina alinmistar. Ancak hicbir garanti verilmez ve Bot sahibi kasitsiz veya kotuyuye niyet edilen veri ihlallerinden sorumlu degildir. Yetkisiz Veri erisimi olmasi durumunda, sunucu yetkilileri kullanicilari Destek Sunucusu araciligiyla bilgilendirecektir.
+
+  **Kullanici Haklari**
+  Istediginiz zaman Discord hesap verilerinizi goruntuleme talebinde bulunma hakkiniz vardir. Ilgili Verilerin silinmesini talep etme hakkiniz vardir. Bunu yapmak icin kullanicilar Destek Sunucusu araciligiyla bir talep gondermelidir.
+
+  **Sorular**
+  Hesabinizdan hangi verilerin depolanabilecegi hakkinda sorulariniz veya endiseleriniz varsa, lutfen [yetkili](%{serversupport}) ile iletisime gecin. Daha fazla bilgi icin Discord Hizmet Sartlarini kontrol edin.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "%{bot} Hizmet Sartlari"
+tos_label: "Hizmet Sartlari"
+termsofservice_desc: |
+  **Kullanim Sozlesmesi**
+  [%{bot}](%{serversupport}) ("bot") davet ederek ve ozelliklerini kullanarak, botun Hizmet Sartlari ve Gizlilik Politikasini kabul etmis olursunuz.
+
+  Botu, paylanstginiz herhangi bir Discord Sunucusunda serbestce kullanabileceginizi kabul edersiniz. "Sunucu Yonetimi" haklarina sahip oldugunuz herhangi bir Sunucuya davet edebilirsiniz ve bu botun hizmet sartlari veya gizlilik politikasini ya da Discord Inc.'in Hizmet Sartlari, Gizlilik Politikasi veya Topluluk Yonergelerini ihlal etmeniz durumunda bu ayricalik iptal edilebilir.
+
+  Davet yoluyla bot, Gizlilik Politikasinda belirtildigi gibi belirli verileri toplayabilir. Bu verilerin amacalanan kullanimi, komutlari yurtume gibi botun temel islevleri icindir.
+
+  **Baglilik**
+  Bot, Discord Inc. ile bagli degildir, desteklenmez veya onlar tarafindan yapilmamistir. Discord ile veya Ticari Marka nesnelerinden herhangi biriyle dogrudan bir baglanti tamamen tesadufidir. Discord'un varliklar, ticari markalar veya diger fikri mulkiyet uzerinde telif hakki sahipligi iddia etmiyoruz.
+
+  **Yas siniri altindaki kullanicilar**
+  Bot, 13 yasindan kucukler veya ulkelerinin yasal rizasi altindaki kucukler icin izin verilmemektedir. Bu, Discord Hizmet Sartlarina uygundur. Reist olmayan bir kullanicidan bilerek hicbir bilgi saklanmayacaktir. Bir kullanicinin yas siniri altinda olgudu tespit edilirse, saklanan verileri silmek icin gerekli tum islemler yapilacaktir.
+
+  **Sorumluluk**
+  Botun gelistiricileri ve sahibi, herhangi bir zamanda bu Sartlari ihlal eden bireylerden sorumlu tutulamaz. Bu sartlari guncelleme hakki tarafimizca saklidir ve bu sartlardan vazgecmek icin 1 Haftalik (7 gun) bir sure taninir. Bir kullanici, botu kaldirma yetkisine sahip oldugu herhangi bir sunucudan botu kaldirarak vazgecebilir.

@@ -1,13 +1,11 @@
 export interface Web3Subscription {
-  id: string;
-  discordUserId: string;
-  walletAddress: string;
-  tier: "basic" | "plus" | "pro";
-  quota: number;
-  months: number;
-  amount: string;
+  userId: string;
   txHash: string;
-  timestamp: number;
-  expiresAt: number;
-  isActive: boolean;
+  walletAddress: string;
+  tier: string;
+  quotaValue: number;
+  amount: string;
+  startTime: number;
+  expiredAt: number;
+  status: "active" | "expired";
 }

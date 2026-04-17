@@ -1,0 +1,91 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+## Helper setup ##
+setup_helper_content: |
+  ## %{guild} Topluluuna Hos Geldiniz!
+  *Discord'da yeniyseniz, dogru yere geldiniz! Bu kanal sunucuda yolunuzu bulmaniza yardimci olmak icin ozel olarak hazirlanmistir.*
+  ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+  %{bot}, temiz bir arayuz, yuksek kaliteli ses ve cesitli muzik ozellikleriyle muzik deneyiminizi gelistiren bir Discord botudur.
+
+  Bu Discord sunucusu %{guild} Toplulugu'nun kalbinde takilmak icin mukemmel bir yer.
+  Sohbet edin, muzik onerileri paylasin ve %{bots} botunun sundugu tum ozellikleri kesfedin!
+
+  Arkadaslarinizi sunucuya davet etmek mi istiyorsunuz? Onlara su baglantiya gonderin: %{serversupport}
+
+disable_helper: "Yardimci devre disi birakildi"
+invalid_channel_helper: "Belirtilen kanal gecersiz"
+channel_viewable_helper: "Belirtilen kanal benim tarafimdan gorunur degil"
+setup_helper_succes: "Yardimci basariyla %{channel} kanalina kuruldu."
+
+## RULES Events ##
+rules_title: "%{guild} Toplulugu Sunucu Kurallari!"
+rules_desc: |
+  - **Saygilii olun**
+    Her zaman Discord [Hizmet Sartlari](https://discord.com/terms) ve [Yonergelere](https://discord.com/guidelines) uyun.
+  - **Yardim Kurallari**
+    Yardim isterken, hatalar hakkinda mumkun oldugunca fazla ayriinti saglaydiginizdari emin olun.
+  - **Nefret Soylemi veya Taciz Yok**
+    Bireylere veya gruplara yonelik nefret soylemi veya taciz iceren konusmalar yasaktir.
+  - **Trolluk veya Provokasyon Yok**
+    Herhangi bir sekilde catismalari bozmaya veya provoke etmeye yonelik eylemler yasaktir.
+  - **Fikri Mulkiyete Saygi Gosterin**
+    Telif haklari, ticari markalar ve patentler dahil ancak bunlarla sinirli olmamak uzere fikri mulkiyet haklarina saygi gosterin.
+  - **Uyari Olmadan Spoiler Vermeyin**
+    Tum uyeler tarafindan henuz tuketilmemis icerikler hakkinda konusurken, hayal kirikligi yaratmamak icin spoiler uyarilari verin.
+  - **Uygun Kanallari Kullanin**
+    Belirli konular icin ilgili kanallari kullanin, ilgisiz kanallarda konu disi tartismalardan kacinin.
+  - **Asiri Buyuk Harf veya Spam Yok**
+    Buyuk harflerin asiri kullanimindan veya hizli bir sekilde tekrarlanan mesajlar gondermekten kacinin.
+  - **Ses Kanallarini Temiz Tutun**
+    Ses kanallarini kullaniyorsaniz, rahatsiz edici gurultu olmadigrindan emin olun ve kibarca konusun.
+  - **Yetkisiz Botlar veya Otomasyon Yok**
+    Sunucuda yalnizca moderatorler tarafindan yetkilendirilen botlarin calismarina izin verilir.
+  - **Ihlalleri Bildirin**
+    Kural ihlallerine tanik olursaniz, bir moderator veya yoneticiye bildirin.
+  - **Eglencenize Bakin!**
+    En onemlisi, tum uyelere saygi gostererek ve olumlu bir ortam saglayarak bu sunucuda vaktinizin tadini cikarin.
+
+  Katildiginiz icin tesekkurler, burada iyi vakit gecirmenizi umuyoruz.
+
+### SUPPORT US BUTTON ###
+support_us_title: "%{bot}'u Nasil Desteklersiniz"
+support_us_desc: "%{bot}'a oy vererek, %{bot}'u sunucunuza davet ederek veya premium uyeligi alarak beni destekleyebilirsiniz."
+support_us_footer: "%{bot}'u desteklemeyi dusundugunuz icin tesekkurler! Gercekten minnettarim."
+
+## ROLES EVENTS ##
+role_title: "Asagidaki listeden rol ekleyebilir veya kaldiirabilirsiniz."
+role_added: "**[Basarili]** %{rolename} Rolu basariyla eklendi!"
+role_removed: "**[Kaldirildi]** %{rolename} Rolu kaldirildi."
+role_rules_added: "%{user} umariz tum kurallara uyarsiniz, artik tum sunucuya erisiniz var"
+role_rules_already: "%{user} kurallari zaten kabul etmistiniz"
+role_desc: "Sadece insan oldugunuzdan ve bot olmadiginizdan emin olmak istiyoruz. Lutfen hizli bir dogrulama gorevi tamamlayarak kimliginizi onaylamamiza yardimci olun."
+
+### Top gg vote logs event
+vote_desc: |
+  %{voteuser} **[Top.gg](%{voteurl})** uzerinden %{votebot} icin oy verdi
+  Desteginizi gosterdiginiz icin tesekkurler! Harika bir gun gecirmenizi dileriz!
+vote_footer: "Toplam Oy %{count}, Hayal gucunuzde kalin!"
+
+### Top gg vote logs reminder event
+reminder_label_name: "Oy Hatirlatmasi"
+reminder_label_emoji: "⏰"
+reminder_title: "Oy Hatirlatmasi"
+reminder_desc: "Zamani geldi! **[Top.gg](%{voteurl})** uzerinden tekrar oy verebilirsiniz."
+reminder_set_content: "Hatirlatma ayarlandi! 12 saat sonra tekrar oy vermenizi hatiratacagim"
+reminder_cancel_content: "Hatirlatma iptal edildi. Tekrar oy vermeniz icin hatirlatilmayacaksiniz"
+reminder_no_vote_warning: "Hatirlatma ayarlamadan once oy vermelisiniz"
+
+### Welcomer events!
+welcome_desc: "%{guildname} sunucusuna hos geldin %{member}, Hayal gucunde kal!"
+leave_desc: "Bizimle birlikte oldugun icin tesekkurler! Gule gule %{member}"

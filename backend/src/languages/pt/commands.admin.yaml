@@ -1,0 +1,33 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "Nao consegui encontrar esse Servidor..."
+blacklist_guild_already: "Parece que %{id} ja esta na lista negra, entao nao posso fazer nada."
+blacklist_guild_add: "Sayonara, %{id}! Adicionei a lista negra. Acho que nao era pra ser..."
+blacklist_guild_not_exist: "Voce disse que estava procurando %{id}? Nao consegui encontrar nas minhas rotas de turne..."
+blacklist_guild_delete: "Bem-vindo de volta, %{id}! Posso fazer turne la novamente, nao estao mais na lista negra."
+
+### Blacklist User
+blacklist_user_bot_owner: "Opa! Nao posso colocar meu proprio criador na lista negra! Voce esta tentando me colocar em apuros?"
+blacklist_user_not_found: "Nao consegui encontrar esse fa..."
+blacklist_user_already: "Parece que %{id} ja esta na lista negra, entao nao posso fazer nada."
+blacklist_user_add: "Ate mais, %{id}! Triste ter que adicionar um fa a lista negra, mas acho que e pro melhor..."
+blacklist_user_not_exist: "%{id}? Quem e esse? Nao consegui encontrar no meu fa-clube..."
+blacklist_user_delete: "Incrivel! %{id} foi reintegrado como fa! Mal posso esperar para ve-lo no proximo show!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "Nao sei que tipo de manutencao e essa, mas voce deveria usar %{text} em vez disso"
+maintenance_true: "Certo! Agora estou ouvindo so voce!"
+maintenance_false: "Voltei a ouvir todo mundo agora!"

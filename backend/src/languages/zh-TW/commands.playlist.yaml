@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "請提供有效的播放清單 ID！"
+pl_add_match: "請提供有效的歌曲名稱或網址！"
+pl_add_playlist: "已搜尋 **%{title}** `%{duration}` • (**%{track} 首歌曲**) • %{user}"
+pl_add_track: "已搜尋 **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "已搜尋 **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "你不是**播放清單擁有者**！"
+pl_add_limit_track: "你無法新增超過 **%{limit} 首歌曲**"
+pl_add_added: "已新增 **%{count} 首歌曲**至 `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} 首歌曲**) • 建立時間：`[%{create} 前]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "頁面 • %{page}/%{pages} | 播放清單 • %{songs}"
+pl_all_view_notnumber: "請提供有效的頁碼！"
+pl_all_view_page_notfound: "只有 **%{page} 頁**！"
+
+### pl-create commands ###
+pl_create_invalid: "請提供有效的播放清單 ID！"
+pl_create_toolong: "播放清單名稱不能超過 **16 個字元**"
+pl_create_des_toolong: "播放清單描述不能超過 **1000 個字元**"
+pl_create_limit_playlist: "你無法建立超過 **%{limit} 個播放清單**"
+create_created_title: "成功建立新的播放清單！"
+pl_create_created_footer: "輸入 /pl editor 來編輯你的播放清單！"
+pl_create_created: |
+  **播放清單名稱**
+  `%{playlist}`
+
+  **播放清單 ID**
+  `%{id}`
+
+  **描述**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "請提供有效的播放清單 ID！"
+delete_notfound: "請提供有效的播放清單 ID！"
+pl_delete_owner: "你不是**播放清單擁有者**"
+pl_delete_confirm: "你確定要刪除 `%{playlist_id}` 嗎"
+pl_delete_deleted: "播放清單 `%{name}` 已成功**刪除**"
+pl_delete_no: "已取消播放清單**刪除**！"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "請提供有效的數字！"
+pl_detail_notfound: "請提供有效的播放清單 ID！"
+pl_detail_private: "播放清單為**私人**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "播放清單：%{name}"
+pl_detail_embed_footer: "頁面 • %{page}/%{pages} | 歌曲 • %{songs} | 總時長 • %{duration}"
+pl_detail_notnumber: "請提供有效的頁碼！"
+pl_detail_page_notfound: "只有 **%{page} 頁**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "輸入你的**新播放清單 ID** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "輸入你的**新播放清單名稱**"
+pl_edit_playlist_des_label: "輸入你的**新播放清單描述**"
+pl_edit_playlist_private_label: "輸入你的**新播放清單可見性** `[public/private]`"
+pl_edit_success: "成功編輯播放清單\n新播放清單 ID：`%{playlistId}`"
+pl_edit_arg: "請提供有效的播放清單 ID！"
+pl_edit_notfound: "請提供有效的播放清單 ID！"
+pl_edit_playlist_owner: "你不是**播放清單擁有者**！"
+pl_edit_invalid_id: "請輸入有效且不存在的播放清單 ID！"
+pl_edit_invalid_mode: "無效的可見性模式。請使用 **public** 或 **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "新播放清單 ID"
+ineraction_edit_playlist_name_label: "新播放清單名稱"
+ineraction_edit_playlist_des_label: "新播放清單描述"
+ineraction_edit_playlist_private_label: "新播放清單可見性"
+ineraction_edit_playlist_id_placeholder: "輸入你的新播放清單 ID！[a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "輸入你的新播放清單名稱！"
+ineraction_edit_playlist_des_placeholder: "輸入你的新播放清單描述！"
+ineraction_edit_playlist_private_placeholder: "輸入你的新播放清單可見性！[public/private]"
+ineraction_edit_success: "成功編輯播放清單\n新播放清單 ID：`%{playlistId}`"
+ineraction_edit_playlist_error: "發生了一些問題。請再試一次！"
+ineraction_edit_notfound: "請提供有效的播放清單 ID！"
+ineraction_edit_playlist_owner: "你不是**播放清單擁有者**"
+ineraction_edit_invalid_id: "請輸入有效且不存在的播放清單 ID！"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### 播放清單 **%{name}** 已加入播放佇列 ♪"
+pl_import_imported_footer: "享受 %{tracks} 首歌曲 • %{duration} • 的音樂時光吧！"
+pl_import_invalid: "請提供有效的播放清單 ID！"
+pl_import_private: "播放清單為**私人**"
+pl_import_voice: "你需要在語音頻道中才能使用此指令！"
+pl_import_empty: "播放清單為**空**"
+
+### pl-info commands! ###
+pl_info_owner: "擁有者"
+pl_info_id: "ID"
+pl_info_des: "描述"
+pl_info_no_des: "未提供描述！"
+pl_info_private: "可見性"
+pl_public: "公開"
+pl_private: "私人"
+pl_info_total: "總歌曲數"
+pl_info_created: "建立時間"
+pl_info_invalid: "請提供有效的播放清單 ID！"
+
+### pl-remove commands! ###
+pl_remove_invalid: "請提供有效的播放清單 ID！"
+pl_remove_number_invalid: "請提供有效的數字！"
+pl_remove_notfound: "請提供有效的播放清單 ID！"
+pl_remove_owner: "你不是**播放清單擁有者**"
+pl_remove_song_notfound: "找不到歌曲！"
+pl_remove_removed: "已從 `%{name}` 中移除第 **%{position} 號**歌曲"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "請提供有效的播放清單 ID！"
+pl_savequeue_notfound: "請提供有效的播放清單 ID！"
+pl_savequeue_owner: "你不是**播放清單擁有者**！"
+pl_savequeue_no_tracks: "目前沒有正在播放的歌曲！"
+pl_savequeue_no_new_saved: "歌曲已存在於 `%{name}` 中"
+pl_savequeue_saved: "已儲存 **%{tracks} 首歌曲**至 `%{name}`"
+
+pl_error_no_node: "找不到 Lavalink 伺服器。請在 **5 分鐘**後再試"

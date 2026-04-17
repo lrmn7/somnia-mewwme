@@ -31,27 +31,25 @@ export class SocketBridge {
         this.botWs.subscribe(guildId, handler);
         this.subscriptions.set(socket.id, { guildId, handler });
         socket.emit("subscribed", { guildId });
-
-        // Emit current player state immediately (if available) so UI doesn't
-        // remain empty until the next realtime event arrives.
         try {
           const { data } = await this.botApi.get(`/players/${guildId}`);
-          this.io.to(room).emit("playerCreate", data);
-        } catch {
-          /* ignore: no active player or permission error */
+          socket.emit("playerCreate", data);
+        } catch (err: any) {
+          if (err?.response?.status !== 400) {
+            console.warn(`[SocketBridge] Failed to fetch initial state for guild ${guildId}:`, err.message || err);
+          }
         }
       });
-
-      // Let clients explicitly request an authoritative state snapshot.
-      // Used on visibility-change or as a fallback when REST is unavailable.
       socket.on("requestState", async () => {
         const sub = this.subscriptions.get(socket.id);
         if (!sub) return;
         try {
           const { data } = await this.botApi.get(`/players/${sub.guildId}`);
           socket.emit("playerState", { ...data, _guild: sub.guildId });
-        } catch {
-          /* no active player or error — ignore */
+        } catch (err: any) {
+          if (err?.response?.status !== 400) {
+            console.warn(`[SocketBridge] Failed to fetch state for requestState:`, err.message || err);
+          }
         }
       });
 

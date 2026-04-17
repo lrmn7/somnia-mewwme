@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Jupí~~ Automatické přehrávání je nyní **Zapnuto**"
+autoplay_off: "Hmmm~~ Automatické přehrávání je nyní **Vypnuto**"
+autoplay_no_song: "Nepřehrává se žádná skladba!"
+
+### Loop command!
+loop_current: "Aktuální skladba se nyní bude přehrávat ve smyčce. Užijte si opakování!"
+loop_all: "Fronta je nyní nastavena na smyčku. Nechte hudbu hrát dokola!"
+unloop_all: "Režim smyčky byl vypnut. Užijte si různorodost skladeb!"
+
+### Pause command!
+pause_msg: "Hudba je pozastavena. Dejte si pauzu a užijte si ticho."
+
+### Resume command!
+resume_msg: "Hudba je zpět! Pokračujeme v groovu ♪"
+
+previous_notfound: "Omlouvám se, nemůžu se vrátit dál. Žádná předchozí skladba nebyla nalezena :("
+previous_msg: "No, asi se vracíme! Předchozí skladba přichází <3"
+
+### Queue command!
+queue_title: "Přehrávání fronty..."
+queue_description: "**%{title} **\n\n**Zbytek fronty %{list_song}**"
+queue_footer: "Stránka • %{page}/%{pages} | Skladby • %{queue_lang} | Celková délka • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Hádejte, co jsem udělal? Zamíchal jsem frontu za vás!"
+
+### Skip command!
+skip_msg: "Přeskočil jsem skladbu. Doufám, že vám to nevadí :p"
+skip_notfound: "Jejda! Vypadá to, že není žádná skladba k přeskočení! Pokračujte v groovu s aktuální skladbou ♪"
+
+### Stop command!
+stop_msg: "Přehrávání hudby bylo zastaveno. Doufám, že jste si to užili!"
+
+### Volume command!
+voldown_msg: "Hlasitost byla snížena na %{volume}%. Užijte si klidnější atmosféru!"
+volume_invalid: "Neplatná hlasitost. Dostupný rozsah je **1** až **100**"
+volup_msg: "Hlasitost byla zvýšena na %{volume}%. Přidejte na síle!"
+volume_max: "Nemůžu zvýšit hlasitost přes 100%"
+volume_min: "Ohno~~ už na minimální hlasitosti!"

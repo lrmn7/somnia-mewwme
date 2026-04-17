@@ -1,0 +1,91 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+## Helper setup ##
+setup_helper_content: |
+  ## Vítejte v komunitě %{guild}!
+  *Pokud jste na Discordu noví, přišli jste na správné místo! Tento kanál je věnován tomu, aby vám pomohl se zorientovat na serveru.*
+  ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+  %{bot} je Discord bot, který vylepšuje váš hudební zážitek s čistým rozhraním, vysoce kvalitním zvukem a různými hudebními funkcemi.
+
+  Tento Discord server je perfektní místo pro trávení času v srdci komunity %{guild}.
+  Užijte si chaty, sdílejte hudební doporučení a prozkoumejte všechny funkce, které bot %{bots} nabízí!
+
+  Chcete pozvat své přátele na server? Pošlete jim tento odkaz: %{serversupport}
+
+disable_helper: "Pomocník byl vypnut"
+invalid_channel_helper: "Zadaný kanál je neplatný"
+channel_viewable_helper: "Zadaný kanál pro mě není viditelný"
+setup_helper_succes: "Pomocník byl úspěšně nastaven v %{channel}."
+
+## RULES Events ##
+rules_title: "Pravidla serveru pro komunitu %{guild}!"
+rules_desc: |
+  - **Buďte ohleduplní**
+    Vždy dodržujte [Podmínky služby](https://discord.com/terms) a [Pokyny](https://discord.com/guidelines) Discordu.
+  - **Kód nápovědy**
+    Když žádáte o pomoc, uveďte co nejvíce podrobností včetně chyb.
+  - **Žádné nenávistné projevy nebo obtěžování**
+    Žádné konverzace obsahující nenávistné projevy nebo obtěžování vůči jednotlivcům nebo skupinám.
+  - **Žádné trollení nebo provokování**
+    Žádné akce určené k narušení nebo vyvolání konfliktů jakýmkoli způsobem.
+  - **Respektujte duševní vlastnictví**
+    Respektujte práva duševního vlastnictví, včetně autorských práv, ochranných známek a patentů.
+  - **Žádné spoilery bez varování**
+    Pokud diskutujete o obsahu, který ještě nebyl všemi členy zhlédnut, uveďte varování před spoilery, abyste předešli zklamání.
+  - **Používejte příslušné kanály**
+    Používejte relevantní kanály pro konkrétní témata, vyhněte se diskusím mimo téma v nesouvisejících kanálech.
+  - **Žádné nadměrné používání velkých písmen nebo spamování**
+    Vyhněte se nadměrnému používání velkých písmen nebo rychlému odesílání opakovaných zpráv.
+  - **Udržujte hlasové kanály čisté**
+    Pokud používáte hlasové kanály, zajistěte, aby nedocházelo k rušivému hluku, a mluvte slušně.
+  - **Žádní neautorizovaní boti nebo automatizace**
+    Na serveru smějí fungovat pouze boti autorizovaní moderátory.
+  - **Hlaste porušení pravidel**
+    Pokud jste svědkem porušení pravidel, nahlaste to moderátorovi nebo administrátorovi.
+  - **Bavte se!**
+    Nejdůležitější je, abyste si na tomto serveru užívali čas, respektovali všechny členy a udržovali pozitivní prostředí.
+
+  Děkujeme za připojení, doufáme, že se tu budete dobře bavit.
+
+### SUPPORT US BUTTON ###
+support_us_title: "Jak podpořit %{bot}"
+support_us_desc: "Můžete mě podpořit hlasováním pro %{bot}, pozváním %{bot} na svůj server nebo připojením se k prémiovému členství."
+support_us_footer: "Děkujeme, že zvažujete podporu %{bot}! Opravdu si toho vážím."
+
+## ROLES EVENTS ##
+role_title: "Můžete přidat nebo odebrat role ze seznamu níže."
+role_added: "**[Úspěch]** Role %{rolename} byla úspěšně přidána!"
+role_removed: "**[Odebráno]** Role %{rolename} byla odebrána."
+role_rules_added: "%{user} doufáme, že budete dodržovat všechna pravidla, nyní máte přístup k celému serveru"
+role_rules_already: "%{user} pravidla jste již přijali"
+role_desc: "Chceme se jen ujistit, že jste člověk a ne bot. Pomozte nám prosím potvrdit vaši pravost dokončením rychlého ověřovacího úkolu."
+
+### Top gg vote logs event
+vote_desc: |
+  %{voteuser} hlasoval pro %{votebot} na **[Top.gg](%{voteurl})**
+  Děkujeme za projevenou podporu! Doufáme, že budete mít skvělý den!
+vote_footer: "Celkem hlasů %{count}, Zůstaňte ve své fantazii!"
+
+### Top gg vote logs reminder event
+reminder_label_name: "Připomenutí hlasování"
+reminder_label_emoji: "⏰"
+reminder_title: "Připomenutí hlasování"
+reminder_desc: "Je čas! Nyní můžete znovu hlasovat na **[Top.gg](%{voteurl})**."
+reminder_set_content: "Připomenutí nastaveno! Připomenu vám hlasování znovu za 12 hodin"
+reminder_cancel_content: "Připomenutí zrušeno. Nebudete upozorněni na opětovné hlasování"
+reminder_no_vote_warning: "Musíte nejprve hlasovat, než nastavíte připomenutí"
+
+### Welcomer events!
+welcome_desc: "Vítejte na serveru %{guildname} %{member}, Zůstaňte ve své fantazii!"
+leave_desc: "Děkujeme, že jste byli s námi! Sbohem %{member}"

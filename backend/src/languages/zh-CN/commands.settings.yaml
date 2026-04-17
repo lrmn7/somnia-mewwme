@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "24/7 模式已**启用**"
+247_off: "24/7 模式已**禁用**"
+247_already: "24/7 模式已经是 **%{mode}**"
+247_arg_error: "无效的 24/7 模式。请使用 %{text}"
+247_no_in_voice: "你不在语音频道中！"
+
+
+### Set Language command! ###
+provide_lang: "**无效的语言。请使用** `%{languages}`"
+lang_set: "**语言已设置为** `%{language}`"
+lang_change: "**语言已更改为** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "请提供一个有效的前缀！"
+prefix_length: "**前缀不能超过 10 个字符**"
+prefix_set: "**前缀已设置为** `%{prefix}`"
+prefix_change: "**前缀已更改为** `%{prefix}`"
+
+### Control command!
+control_set: "**播放器控制模式已设置为 %{toggle}**"
+control_arg_error: "无效的参数。请使用 %{text}"
+control_already: "歌曲通知已经是 **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "无效！请使用 %{text}"
+setup_enable: "**糟糕！音乐系统已存在。**"
+setup_topic: "♪ 愿歌者永远找到属于自己的歌。♪"
+setup_msg: "*`已成功在`* %{channel} *`设置音乐系统`*\n```注意：请勿删除我创建的任何消息，以确保我能正常工作。```"
+setup_null: "*`已成功删除设置频道！`*"
+setup_deleted: "*`已成功删除设置频道！`*"
+setup_null_inguild: "**此服务器中未找到音乐系统！准备删除数据**"
+setup_queuemsg: "**加入语音频道，在这里使用歌曲名称或链接播放歌曲！**"
+setup_playembed_author: "当前没有歌曲在播放"
+
+### Themes command!
+error_themes: "无效... 请重试。"
+succes_themes: "**已成功将主题更改为 %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "注意：此链接将在 %{expired} 后过期。"
+lastfm_login_title: "Last.fm 登录"
+lastfm_login_desc: "你是否愿意授权你的 [Last.fm](https://www.last.fm/user/eleremen) 账户？\n如果是，请点击下方按钮开始授权流程。"
+lastfm_not_login_desc: "你尚未登录 Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm 登出"
+lastfm_logout_desc: "你已成功登出 Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm 功能已禁用。"
+lastfm_feature_disabled_desc: "Last.fm 功能目前已禁用。请联系管理员了解更多信息。"
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "未找到 YouTube 频道 **%{ytchannel}** 的通知。"
+notify_youtube_removed: "你已移除 YouTube 频道 **%{ytchannel}** 的通知。"
+notify_youtube_disabled: "YouTube 通知功能目前已禁用。请联系工作人员了解更多信息。"
+notify_youtube_already: "YouTube 频道 %{ytchannel} 的通知已经设置好了。"
+notify_youtube_invalid_channel: "指定有效的文字频道时出错。请检查！"
+notify_youtube_set: "YouTube 通知已为 **%{ytchannel}** 设置在 %{channelid} 中。"
+notify_youtube_404: |
+  未找到提供的 YouTube 频道 ID。
+  要找到频道 ID，请前往 YouTube 频道页面并查看网址。
+  频道 ID 是 `/channel/` 后面的字母和数字字符串（例如：`UC_x5XG1OV2P6uZZ5FSM9Ttw`）。
+notify_youtube_limit_reached_non_premium: |
+   你已达到 %{limit} 个通知的限制。
+   升级到 [premium](%{premium}) 后，你可以设置最多 %{limitpremium} 个通知。
+
+notify_youtube_limit_reached_premium: |
+   你已达到 %{limit} 个通知的限制。
+   这是允许的最大数量。请考虑删除一些通知以腾出空间。
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "未找到 Twitch 用户 **%{twitchusername}** 的通知。"
+notify_twitch_removed: "你已移除 Twitch 用户 **%{twitchusername}** 的通知。"
+notify_twitch_disabled: "Twitch 通知功能目前已禁用。请联系工作人员了解更多信息。"
+notify_twitch_already: "你已经为 Twitch 频道 %{twitchusername} 设置了通知。"
+notify_twitch_invalid_channel: "指定有效的文字频道时出错。请检查！"
+notify_twitch_set: "Twitch 通知已为 **%{twitchusername}** 设置在 %{channelid} 中。"
+notify_twitch_error: "处理 **{twitchusername}** 在频道 **{channelid}** 的 Twitch 通知时发生意外错误。请重试，如果问题持续，请联系支持。"
+notify_twitch_limit_reached_non_premium: |
+   你已达到 %{limit} 个通知的限制。
+   升级到 [premium](%{premium}) 后，你可以设置最多 %{limitpremium} 个通知。
+
+notify_twitch_limit_reached_premium: |
+   你已达到 %{limit} 个通知的限制。
+   这是允许的最大数量。请考虑删除一些通知以腾出空间。
+
+### Temp Voice Feature command!
+tempvoice_setup: "临时语音功能已 %{status}。"
+tempvoice_disabled: "临时语音已禁用。"
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "无效... 只能 %{text}。"
+status_voice_channel_true: "语音频道状态已设置为 **%{type}**。"
+status_voice_channel_false: "语音频道状态已设置为 **%{type}**。"
+
+
+### Patreon Claim command!
+not_in_guild: "此命令只能在服务器中执行！"
+no_data_patreon: "未找到 Patreon 数据（数据库错误）"
+no_data_patreon_title: "未找到"
+no_data_patreon_desc: |
+  如果你已经订阅，请确保你的 Discord 账户已关联到 Patreon！
+no_data_patreon_footer: "Patreon 同步可能需要一些时间，请稍后再检查"
+no_patreon_guild_membership: |
+  你好，你的 patreon 方案是**用户等级**。
+  请升级到**服务器等级**以解锁高级服务器访问权限。
+patreon_guild_membership_full_quota: |
+  你已使用完所有服务器配额！
+  **状态：** %{status} 个服务器已使用。
+
+  解决方案：
+  1. 在 patreon 上升级你的等级。
+  2. 或在旧服务器上禁用 premium。
+patreon_guild_membership_already_before: "你之前已经在此服务器上激活了 premium！"
+patreon_guild_membership_already: "**已是 PREMIUM** 因为它由其他人赞助。\n将你的配额留给其他服务器！"
+patreon_guild_membership_claim_title: "激活确认"
+patreon_guild_membership_claim_desc: |
+  你确定要为以下服务器激活 **premium 服务器**：
+  **%{guildName}**
+
+  此操作将使用 **1 个服务器配额**。
+  剩余配额：**%{status}**
+patreon_guild_membership_claim_success: |
+  成功！**%{guildName}** 现已成为 **premium 服务器**。
+
+  **赞助者：** %{user}
+  **剩余配额：** %{status}
+  感谢你在 patreon 上支持我们！
+patreon_guild_membership_claim_success_title: "💎 Premium 已激活！"
+patreon_guild_membership_claim_cancel: "Premium 激活已取消。"
+patreon_guild_membership_claim_norespon: "由于无响应，激活已自动取消。"
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 服务器已兑换（Patreon）"
+patreon_guild_membership_claim_logs_desc: |
+  **赞助用户：** %{sponsorTag} %{sponsorId}
+  **目标服务器：** %{guildName} %{guildId}
+  **配额状态：** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "你无法撤销此 premium 服务器，因为不是你注册的。"
+patreon_guild_unclaim_title: "Premium 撤销确认"
+patreon_guild_unclaim_desc: |
+  你确定要**取消** **%{guildName}** 服务器的 Premium 状态吗？
+  **影响：** 此服务器的 Premium 功能将被禁用。
+  你的服务器配额将被恢复（+1）。
+  当前剩余配额：**%{status}**
+patreon_guild_unclaim_success_title: "Premium 已撤销"
+patreon_guild_unclaim_success: |
+  **%{guildName}** 的 Premium 状态已成功撤销。
+  **已恢复配额：** 1 个服务器
+  **新剩余配额：** %{status}
+patreon_guild_unclaim_cancel: "Premium 撤销流程已取消。"
+patreon_guild_unclaim_norespon: "⏱️ 超时。流程已取消。"
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "已撤销的服务器（Patreon）"
+patreon_guild_unclaim_logs_desc: |
+  **用户：** %{sponsorTag} %{sponsorId}
+  **服务器：** %{guildName}} %{guildId}
+  **已恢复配额：** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **用户：** %{userTag} (%{userId})
+  **服务器：** %{guildName} (%{guildId})
+  **配额：** %{quota}
+  **过期时间：** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} 操作：%{action}"
+
+### Kofi Claim command!
+no_data_kofi: "未找到交易 ID 或已被领取。"
+kofi_linked_success_title: "支付关联成功！"
+kofi_linked_success_desc: "现在你可以使用 `/premium claim <kofi>` 而无需 TxID。"
+kofi_no_data_title: "未找到数据！"
+kofi_no_data_desc: |
+  如果你已经付款但尚未将 Discord 账户连接到 Kofi
+  请使用：`/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "没有配额，但你是 premium 用户。"
+kofi_full_server_quota_title: "配额已满！"
+kofi_full_server_quota_desc: "你已使用 **%{quota}** 个服务器名额。"
+kofi_server_already_claim_desc: "**已激活！**\n你之前已经在此服务器上激活了 Premium。"
+kofi_server_already_active_desc: " **已是 Premium！**\n此服务器已由其他用户激活为 premium。"
+kofi_guild_membership_claim_success: |
+  Premium 已成功激活！
+  **配额使用：** %{quota}
+  **过期时间：** %{expires}
+kofi_guild_membership_claim_footer: "感谢你的支持！"
+kofi_action_title: "🏗️ Ko-fi 操作：%{type}"
+kofi_action_description: "**用户：** %{userTag} (`%{userId}`)\n**服务器：** %{guildName} (`%{guildId}`)\n**操作：** %{action}\n**配额：** %{quota}"
+kofi_action_activation: "服务器已激活"
+kofi_action_manual_link: "手动关联支付"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium 已撤销"
+kofi_guild_unclaim_success_desc: |
+  **%{guildName}** 的 Premium 状态已成功撤销。
+  **已恢复配额：** 1 个服务器
+kofi_guild_not_owned_by_user: "你无法撤销此 premium 服务器，因为不是你注册的。"
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "已撤销的服务器 %{platform}"
+premium_unclaim_log_desc: |
+  **用户：** %{userTag} %{userId}
+  **服务器：** %{guildName}} %{guildId}
+  **已恢复配额：** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "DJ 身份组系统已**禁用**。"
+dj_role_missing_role: "你需要提供一个身份组来使用 `set` 操作。"
+dj_role_set: |
+  DJ 身份组已设置为 %{role}。
+  状态：**已启用**
+  **受影响的命令：**
+  %{commands}

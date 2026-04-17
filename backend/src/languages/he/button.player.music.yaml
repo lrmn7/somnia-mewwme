@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "יאיי~~ השמעה אוטומטית כעת **מופעלת**"
+autoplay_off: "הממ~~ השמעה אוטומטית כעת **מושבתת**"
+autoplay_no_song: "אין שירים מתנגנים כרגע!"
+
+### Loop command!
+loop_current: "כעת השיר הנוכחי יתנגן בלופ. תהנו מהחזרה!"
+loop_all: "התור מוגדר כעת על לופ. תנו למוזיקה לנגן שוב ושוב!"
+unloop_all: "מצב הלופ כובה. תהנו ממגוון השירים!"
+
+### Pause command!
+pause_msg: "המוזיקה הושהתה. קחו הפסקה ותהנו מהשקט."
+
+### Resume command!
+resume_msg: "המוזיקה חזרה! בואו נמשיך עם הקצב ♪"
+
+previous_notfound: "מצטער, אי אפשר לחזור יותר אחורה. לא נמצא שיר קודם :("
+previous_msg: "ובכן, נראה שאנחנו חוזרים אחורה! השיר הקודם בדרך <3"
+
+### Queue command!
+queue_title: "התור מתנגן..."
+queue_description: "**%{title} **\n\n**שאר התור %{list_song}**"
+queue_footer: "עמוד • %{page}/%{pages} | שירים • %{queue_lang} | משך כולל • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "נחשו מה עשיתי? ערבבתי את התור בשבילכם!"
+
+### Skip command!
+skip_msg: "דילגתי על השיר. מקווה שלא אכפת לכם :p"
+skip_notfound: "אופס! נראה שאין שיר לדלג אליו! המשיכו ליהנות מהשיר הנוכחי ♪"
+
+### Stop command!
+stop_msg: "השמעת המוזיקה הופסקה. מקווה שנהניתם מהקצב!"
+
+### Volume command!
+voldown_msg: "העוצמה הופחתה ב-%{volume}%. תהנו מהאווירה השקטה יותר!"
+volume_invalid: "עוצמה לא חוקית. הטווח הזמין הוא בין **1** ל-**100**"
+volup_msg: "העוצמה הוגברה ב-%{volume}%. תגבירו את הקצב!"
+volume_max: "אני לא יכול להעלות את העוצמה מעבר ל-100%"
+volume_min: "אוי לא~~ כבר בעוצמה המינימלית!"

@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Polityka prywatności %{bot}"
+privacy_label: Polityka prywatności
+privacy_desc: |
+  **Umowa użytkownika**
+  Korzystanie z [%{bot}](%{serversupport}) ("bot") na serwerze wymaga zbierania pewnych danych użytkownika. Zbierane dane obejmują, ale nie ograniczają się do ID Discorda użytkownika, nazwy użytkownika Discord i ról na serwerze. Korzystanie z Bota jest uznawane za akceptację warunków niniejszej polityki.
+
+  **Dostęp do danych**
+  Dostęp do danych jest dozwolony wyłącznie dla deweloperów bota i usług hostingowych i tylko w zakresie niezbędnym do rozwoju bota, testowania i implementacji funkcji. Dane nie są sprzedawane, przekazywane ani udostępniane żadnym stronom trzecim, z wyjątkiem przypadków wymaganych przez prawo lub umowę Warunków korzystania z usługi. Możesz zobaczyć swoje dane na żądanie od [dewelopera](%{developer}).
+
+  **Przechowywanie danych**
+  Dane są przechowywane w bazie danych [MYSQL](https://www.mysql.com/). Baza danych jest zabezpieczona przed dostępem z zewnątrz. Jednak nie udzielamy żadnych gwarancji, a właściciel Bota nie ponosi odpowiedzialności za niezamierzone lub złośliwe naruszenia danych. W przypadku nieautoryzowanego dostępu do danych personel serwera powiadomi użytkowników za pośrednictwem serwera wsparcia.
+
+  **Prawa użytkownika**
+  W każdej chwili masz prawo zażądać wglądu w dane swojego konta Discord. Masz prawo zażądać usunięcia odpowiednich danych. W tym celu użytkownicy muszą złożyć wniosek za pośrednictwem serwera wsparcia.
+
+  **Pytania**
+  Jeśli masz pytania lub obawy dotyczące tego, jakie dane mogą być przechowywane z twojego konta, skontaktuj się z [personelem](%{serversupport}). Aby uzyskać więcej informacji, sprawdź Warunki korzystania z usługi Discord.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Warunki korzystania z usługi %{bot}"
+tos_label: "Warunki korzystania z usługi"
+termsofservice_desc: |
+  **Umowa dotycząca użytkowania**
+  Zapraszając [%{bot}](%{serversupport}) ("bot") i korzystając z jego funkcji, zgadzasz się na Warunki korzystania z usługi i Politykę prywatności bota.
+
+  Potwierdzasz, że możesz swobodnie korzystać z bota na każdym serwerze Discord, na którym go udostępniasz. Możesz zaprosić go na każdy serwer, na którym masz uprawnienia "Zarządzanie serwerem", a ten przywilej może zostać cofnięty, jeśli naruszysz warunki korzystania z usługi lub politykę prywatności tego bota lub Warunki korzystania z usługi, Politykę prywatności lub Wytyczne społeczności Discord Inc.
+
+  Poprzez zaproszenie bot może zbierać określone dane opisane w jego Polityce prywatności. Zamierzone wykorzystanie tych danych dotyczy podstawowych funkcjonalności bota, takich jak wykonywanie komend.
+
+  **Powiązania**
+  Bot nie jest powiązany z Discord Inc., nie jest przez nią wspierany ani tworzony. Jakiekolwiek bezpośrednie powiązanie z Discordem lub jakimikolwiek jego znakami towarowymi jest czysto przypadkowe. Nie rościmy sobie praw autorskich do zasobów, znaków towarowych ani innej własności intelektualnej Discorda.
+
+  **Niepełnoletni użytkownicy**
+  Bot nie jest dozwolony dla osób niepełnoletnich poniżej 13 roku życia lub poniżej wieku zgody prawnej w ich kraju. Jest to zgodne z Warunkami korzystania z usługi Discord. Żadne informacje nie będą świadomie przechowywane od niepełnoletniego użytkownika. Jeśli okaże się, że użytkownik jest niepełnoletni, podejmiemy wszelkie niezbędne działania w celu usunięcia przechowywanych danych.
+
+  **Odpowiedzialność**
+  Deweloperzy i właściciel bota nie mogą ponosić odpowiedzialności za osoby naruszające niniejsze Warunki w dowolnym momencie. Prawo do aktualizacji niniejszych warunków jest zastrzeżone według naszego uznania, z 1-tygodniowym (7 dni) okresem na rezygnację z tych warunków. Użytkownik może zrezygnować, usuwając bota z dowolnego serwera, na którym ma prawo usunąć bota.

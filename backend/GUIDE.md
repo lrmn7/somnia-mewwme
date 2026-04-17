@@ -524,7 +524,6 @@ features:
 | `PremiumRole` | Premium role detection via guild role |
 | `Patreon` | Patreon integration (access token, campaign ID, tier pricing) |
 | `KoFi` | Ko-fi webhook integration (verification token, tier pricing) |
-| `utilities.TicketSystem` | Ticket system enable/disable and transcript URL |
 | `utilities.NotifyYoutube` | YouTube notification scheduling and API keys |
 | `utilities.NotifyTwitch` | Twitch notification scheduling and API keys |
 | `logchannel` | Channel IDs for various bot log outputs |

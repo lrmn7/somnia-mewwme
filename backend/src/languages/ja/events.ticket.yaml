@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "チケット作成の理由を入力してください"
+ticket_already_open: "既にオープンなチケットがあります。"
+ticket_already_closed: "ユーザー%{id}のチケットデータが見つからないか、チケットは既にクローズされています"
+ticket_close_user: "このチケットをクローズする権限がありません。"
+ticket_delete_user: "このチケットを削除する権限がありません。"
+ticket_deleting_action: "チケットを削除中..."
+ticket_closed_label: "🔒 クローズ済み"
+ticket_delete_label: "🗑️ 削除"
+ticket_create: "チケットが作成されました。%{channel}に移動してください"
+ticket_create_title: "スタッフの応答をお待ちください"
+ticket_create_desc: |
+  チケットを作成していただきありがとうございます。スタッフの応答をお待ちください。
+  `注意: このチケットにはバックアップがありません。重要な情報は必ずご自身でバックアップしてください`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 クローズ済みチケット"
+ticket_closed_desc: "チケットが正常にクローズされました！"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "チケットがクローズされました。"
+ticket_closed_dm_desc: |
+  あなたが開いたチケットがクローズされました。トランスクリプトは下のリンクからご覧いただけます。
+  問題が発生したり、ご質問がある場合は、新しいチケットを開いてください。お手伝いいたします！
+
+

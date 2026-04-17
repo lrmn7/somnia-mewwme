@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "ลองดูที่ฉันเลือกให้คุณ!~"
+search_desc: "### เฮ้! พบผลลัพธ์สำหรับคำขอของคุณ"
+search_end_desc2: "### โอ้! %{user} คุณไม่ได้เลือกเพลงทันเวลา\n**ลองอีกครั้ง!**"
+search_footer: "พบ %{countSong} เพลง"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` สนุกกับมันนะ ♥"
+
+search_active: "คุณกำลังค้นหาอยู่แล้ว! รอให้การค้นหาก่อนหน้าเสร็จก่อนเริ่มค้นหาใหม่"
+search_no_result: "ไม่พบผลลัพธ์สำหรับการค้นหาของคุณ :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` สนุกกับมันนะ ♥"
+no_songs_playing: "ไม่มีเพลงที่กำลังเล่นอยู่!"
+
+### Autoplay command!
+autoplay_off: "เล่นอัตโนมัติถูก**ปิดใช้งาน**แล้ว"
+autoplay_on: "เล่นอัตโนมัติถูก**เปิดใช้งาน**แล้ว"
+autoplay_no_songs_playing: "ไม่มีเพลงที่กำลังเล่นอยู่!"
+
+### ClearQueue command!
+clearqueue_msg: "คิวถูก**ล้าง**แล้ว"
+
+### Forward command!
+forward_msg: "**%{user} เลื่อนไปข้างหน้า %{title} ไปที่** `%{duration}`"
+forward_beyond: "เพลงกำลังจะจบ คุณไม่สามารถเลื่อนไปข้างหน้าเกินได้!"
+
+### PlayNext command!
+playnext_desc: "### %{name} เพลงถัดไปที่จะเล่น ♪"
+playnext_queue_empty: "คิวว่างเปล่า กรุณาเพิ่มเพลงก่อน"
+playnext_notfound: "ไม่พบเพลง!"
+
+# Execute when invalid
+no_node: "**ไม่พบเซิร์ฟเวอร์ Lavalink กรุณาลองอีกครั้งหลังจาก 5 นาที**"
+
+### Join command!
+join_msg: "เครื่องเล่นถูกสร้างสำเร็จและเข้าร่วม %{channel} แล้ว"
+join_already: "ฉันอยู่ใน %{channel} อยู่แล้ว"
+join_no_in_voice: "คุณไม่ได้อยู่ในห้องเสียง!"
+join_no_same_voice: "คุณไม่ได้อยู่ในห้องเสียงเดียวกับฉัน!"
+
+### Loop command!
+loop_current: "กำลังเล่นซ้ำ %{title}"
+loop_all: "**เปิดโหมดเล่นซ้ำคิวแล้ว**"
+unloop_all: "**โหมดเล่นซ้ำถูกปิดแล้ว**"
+loop_invalid: "โหมดเล่นซ้ำไม่ถูกต้อง กรุณาใช้ **Disabled**"
+loop_already: "โหมดเล่นซ้ำเป็น **%{mode}** อยู่แล้ว"
+
+### Lyrics command!
+provide_lyrics: "กรุณาระบุ**ชื่อเพลง**ที่ถูกต้อง"
+lyrics_title: "เนื้อเพลงสำหรับ **%{song}**"
+lyrics_notfound: "**ไม่พบเนื้อเพลงสำหรับเพลงนี้!**"
+lyrics_toolong: "**เนื้อเพลงยาวเกินไป อนุญาตสูงสุด 4048 ตัวอักษร!**"
+lyrics_disable: " **เนื้อเพลงถูกปิดใช้งานอยู่ในขณะนี้!**"
+lyrics_noquery: "**กรุณาระบุ**ชื่อเพลง**ที่ถูกต้อง"
+lyrics_error: "**ข้อผิดพลาด: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "กำลังเล่น"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "ศิลปิน"
+nowplaying_total_duration_title: "ระยะเวลา"
+nowplaying_request_title: "ขอโดย"
+
+### Pause command!
+pause_msg: "**เพลง %{title} ถูกหยุดชั่วคราวอยู่!"
+
+### Play command!
+play_no_same_voice: "คุณไม่ได้อยู่ในห้องเสียงเดียวกับฉัน!"
+play_no_in_voice: "คุณไม่ได้อยู่ในห้องเสียง!"
+play_arg: "กรุณาระบุชื่อเพลงหรือ URL ที่ถูกต้อง!"
+play_emoji: "**อุ๊ปส์! นี่คืออิโมจิ คุณไม่สามารถเล่นเพลงด้วยอิโมจิได้**"
+play_match: "**อุ๊ปส์! ขอโทษ ไม่พบเพลง! กรุณาลองอีกครั้ง**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## ง่ายมาก!
+  ### %{title} ของคุณถูกเพิ่มเข้าคิวแล้ว
+
+play_queue_max: |
+  โอ้โห!>,.,< คิวยาวเกินไป สูงสุด %{limitqueue} เพลง
+  อัปเกรดเป็น [**Premium**](%{premium}) เพื่อเข้าถึงคิวไม่จำกัด!
+
+play_playlist_max: |
+  โอ้โห!>,.,< เพลย์ลิสต์ยาวเกินไป สูงสุด %{limitqueue} เพลง
+  อัปเกรดเป็น [**Premium**](%{premium}) เพื่อเข้าถึงเพลย์ลิสต์ไม่จำกัด!
+
+### Previous command!
+previous_notfound: |
+  **ไม่พบเพลงก่อนหน้าในคิว!
+  ลอง /play เพิ่มเพลงเพื่อให้เพลงเล่นต่อไป?**
+previous_msg: |
+  **กลับไปเพลงก่อนหน้า!
+  กำลังเล่น %{title}**
+
+### Queue command!
+queue_number_invalid: "กรุณาระบุตัวเลขที่ถูกต้อง!"
+queue_title: "คิวกำลังเล่น..."
+queue_description: "**%{title}**\n\n**คิวที่เหลือ %{rest}**"
+queue_footer: "หน้า • %{page}/%{pages} | เพลง • %{queue_lang} | ระยะเวลาทั้งหมด • %{duration}"
+queue_notnumber: "กรุณาระบุหมายเลขหน้าที่ถูกต้อง!"
+queue_page_notfound: "มีเพียง **%{page} หน้า** เท่านั้น"
+
+### RemoveTrack command!
+removetrack_number_invalid: " กรุณาระบุตัวเลขที่ถูกต้อง!"
+removetrack_already: "**ฉันไม่สามารถลบเพลงที่กำลังเล่นอยู่ได้**"
+removetrack_notfound: "**ขอโทษ %{user} ไม่พบเพลง!**"
+removetrack_desc: "**ลบ %{title} ออกจากคิวแล้ว!**"
+
+### Replay command!
+replay_msg: "**%{user} เล่นซ้ำ %{title}**"
+replay_not_seekable: "เพลง **%{title}** ไม่สามารถเล่นซ้ำได้"
+
+### Resume command!
+resume_msg: "**เล่นต่อ %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} กรอกลับ %{title} ไปที่** `%{duration}`"
+rewind_beyond: "เพลงเพิ่งเริ่ม คุณไม่สามารถกรอกลับเกินได้!"
+
+### Seek command!
+seek_beyond: "คุณไม่สามารถข้ามไปเกินระยะเวลาของเพลงได้!"
+seek_invalid: "ระยะเวลาการข้ามไม่ถูกต้อง กรุณาใช้เวลาที่ถูกต้อง ตัวอย่าง: **1:30**"
+seek_msg: "**ข้ามไปที่ %{title} ตำแหน่ง** `%{duration}`"
+seek_not_seekable: "เพลง **%{title}** ไม่สามารถกรอกลับหรือเลื่อนไปข้างหน้าได้"
+
+### Skip command!
+skip_notfound: |
+  **ไม่พบเพลงให้ข้าม! ดูเหมือนจะไม่มีอะไรให้ข้ามไป
+  มา /play เพิ่มเพลงเพื่อให้เพลงเล่นต่อไป!**
+skip_msg: "**%{title} ถูกข้ามแล้ว**"
+skip_number_invalid: "กรุณาระบุตัวเลขที่ถูกต้อง!"
+
+### Stop command!
+stop_msg: "**%{title} ถูกหยุดแล้ว**"
+
+### Shuffle command!
+shuffle_title: "สุ่มคิว"
+
+### Volume command!
+volume_number_invalid: "กรุณาระบุตัวเลขที่ถูกต้อง!"
+volume_invalid: "ระดับเสียงไม่ถูกต้อง กรุณาใช้ตัวเลขระหว่าง **1** ถึง **100**"
+volume_msg: "**ตั้งระดับเสียงเป็น %{volume}% สนุกกับมันนะ %{user}**"
+volume_max: "**ระดับเสียงอยู่ที่สูงสุด 100% อยู่แล้ว**"
+
+### play source commands
+url_no_allowed: "กรุณาใช้ชื่อเพลง/ชื่อศิลปิน (ไม่อนุญาตให้ใช้ URL)"
+play_arg_source: "กรุณาระบุชื่อเพลง/ศิลปินที่ถูกต้อง!"
+
+## Temporarily disabled commands
+youtube_disabled: "การรองรับ YouTube ไม่พร้อมใช้งานชั่วคราว"
+autoplay_disabled: "เล่นอัตโนมัติถูกปิดใช้งานชั่วคราว"

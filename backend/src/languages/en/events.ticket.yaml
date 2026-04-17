@@ -11,20 +11,6 @@
 #
 
 ### Ticket Events ###
-setup_ticket_succes: "The ticket has been set up to %{channel} successfully."
-channel_viewable: "The provided channel is not visible to me"
-category_viewable: "The provided category is not visible to me"
-invalid_open_category: "The provided category is invalid"
-invalid_close_category: "The provided category is invalid"
-invalid_category: "The provided category is invalid"
-missing_permission: "The bot is missing manage-channels permissions to create a ticket channel"
-disable_ticket_system: "Ticket system is disabled in the config"
-invalid_channel_category: "The provided channel or category is invalid"
-ticket_setup_timeout: "Ticket setup timed out. Please try again."
-ticket_setup_invalid_url_thumbnail: "Invalid URL for thumbnail"
-ticket_setup_invalid_url_image: "Invalid URL for image"
-ticket_setup_modal_error: "An error occurred while processing the modal. Please try again."
-ticket_already_setup: "Ticket setup already exists for this server. You cannot set up another."
 ticket_reason: "Provide the reason for creating a ticket"
 ticket_already_open: "You already have an open ticket."
 ticket_already_closed: "Ticket data for user %{id} not found or Ticket already closed"
@@ -44,21 +30,7 @@ ticket_closed_title: "🔒 Closed Ticket"
 ticket_closed_desc: "The ticket has been closed successfully!"
 
 ### Closed Ticket DM User ###
-label_name_one: "View Transcript"
-label_name_two: "Download Transcript"
 ticket_closed_dm_title: "The ticket has been closed."
 ticket_closed_dm_desc: |
   A ticket you opened was just closed. Your transcript can be found at the link below.
   If you encounter any issues or have further questions, feel free to open a new ticket. We're here to help!
-
-### Ticket Setup Label Modal ###
-ticket_setup_label_embed_title: "Embed Title"
-ticket_setup_placeholder_embed_title: "Enter embed title"
-ticket_setup_label_embed_description: "Embed Description"
-ticket_setup_placeholder_embed_description: "Enter embed description"
-ticket_setup_label_embed_thumbnail_url: "Thumbnail URL"
-ticket_setup_placeholder_embed_thumbnail_url: "Enter thumbnail URL"
-ticket_setup_label_embed_image_url: "Image URL"
-ticket_setup_placeholder_embed_image_url: "Enter image URL"
-ticket_setup_label_embed_footer: "Footer Text"
-ticket_setup_placeholder_embed_footer: "Enter footer text"

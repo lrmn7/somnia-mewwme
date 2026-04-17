@@ -7,5 +7,6 @@ export const links = {
   developer: 'https://hi-lrmn.is-a.dev',
   docs: 'https://docs.meww.me',
   github: 'https://github.com/mewwme',
-  email: "mailto:support@meww.me"
+  email: "mailto:support@meww.me",
+  documentation: 'https://docs.meww.me',
 }

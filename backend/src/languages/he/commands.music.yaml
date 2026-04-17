@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "בדקו את הבחירות שלי עבורכם!~"
+search_desc: "### היי! מצאתי תוצאות לבקשה שלכם"
+search_end_desc2: "### אוי! %{user}, לא בחרת שיר בזמן\n**נסה שוב!**"
+search_footer: "%{countSong} שירים נמצאו"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` תהנו ♥"
+
+search_active: "אתה כבר מחפש משהו! חכה שהחיפוש הקודם יסתיים לפני שתתחיל חדש."
+search_no_result: "לא נמצאו תוצאות לחיפוש שלך :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` תהנו ♥"
+no_songs_playing: "אין שיר מתנגן כרגע!"
+
+### Autoplay command!
+autoplay_off: "השמעה אוטומטית כעת **מושבתת**"
+autoplay_on: "השמעה אוטומטית כעת **מופעלת**"
+autoplay_no_songs_playing: "אין שירים מתנגנים כרגע!"
+
+### ClearQueue command!
+clearqueue_msg: "התור **נוקה**"
+
+### Forward command!
+forward_msg: "**%{user} הריץ קדימה את %{title} ל-** `%{duration}`"
+forward_beyond: "השיר עומד להסתיים. לא ניתן להריץ קדימה מעבר לכך!"
+
+### PlayNext command!
+playnext_desc: "### %{name} הבא בתור ♪"
+playnext_queue_empty: "התור ריק. אנא הוסיפו שירים תחילה"
+playnext_notfound: "השיר לא נמצא!"
+
+# Execute when invalid
+no_node: "**לא נמצא שרת Lavalink. אנא נסו שוב לאחר 5 דקות**"
+
+### Join command!
+join_msg: "הנגן נוצר בהצלחה והצטרף ל-%{channel}"
+join_already: "אני כבר ב-%{channel}"
+join_no_in_voice: "אתה לא בערוץ קולי!"
+join_no_same_voice: "אתה לא באותו ערוץ קולי כמוני!"
+
+### Loop command!
+loop_current: "כעת בלופ %{title}"
+loop_all: "**הוגדר על מצב לופ של התור**"
+unloop_all: "**מצב הלופ הושבת**"
+loop_invalid: "מצב לופ לא חוקי. אנא השתמש ב-**Disabled**"
+loop_already: "מצב הלופ כבר **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "אנא ספקו **שם שיר** חוקי"
+lyrics_title: "מילים ל-**%{song}**"
+lyrics_notfound: "**לא ניתן למצוא את המילים לשיר הזה!**"
+lyrics_toolong: "**המילים ארוכות מדי, מותר עד 4048 תווים!**"
+lyrics_disable: " **המילים מושבתות כרגע!**"
+lyrics_noquery: "**אנא ספקו **שם שיר** חוקי"
+lyrics_error: "**שגיאה: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "מתנגן כעת"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "אמן"
+nowplaying_total_duration_title: "משך"
+nowplaying_request_title: "הוזמן על ידי"
+
+### Pause command!
+pause_msg: "**השיר %{title} מושהה כרגע!"
+
+### Play command!
+play_no_same_voice: "אתה לא באותו ערוץ קולי כמוני!"
+play_no_in_voice: "אתה לא בערוץ קולי!"
+play_arg: "אנא ספקו שם שיר או קישור חוקי!"
+play_emoji: "**אופס! זה אימוג'י, לא ניתן להפעיל שירים באמצעות אימוג'י**"
+play_match: "**אופס! מצטער, השיר לא נמצא! אנא נסו שוב**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## זה היה קל!
+  ### ה-%{title} שלכם נוסף לתור
+
+play_queue_max: |
+  אוי!>,.,< התור ארוך מדי. מקסימום %{limitqueue} שירים.
+  שדרגו ל[**פרימיום**](%{premium}) לגישה בלתי מוגבלת לתור!
+
+play_playlist_max: |
+  אוי!>,.,< רשימת ההשמעה ארוכה מדי. מקסימום %{limitqueue} שירים.
+  שדרגו ל[**פרימיום**](%{premium}) לגישה בלתי מוגבלת לרשימות השמעה!
+
+### Previous command!
+previous_notfound: |
+  **לא נמצא שיר קודם בתור!
+  למה לא /play עוד שירים ולהמשיך עם המוזיקה?**
+previous_msg: |
+  **חזרה לשיר הקודם!
+  מנגן כעת %{title}**
+
+### Queue command!
+queue_number_invalid: "אנא הזינו מספר חוקי!"
+queue_title: "התור מתנגן..."
+queue_description: "**%{title}**\n\n**שאר התור %{rest}**"
+queue_footer: "עמוד • %{page}/%{pages} | שירים • %{queue_lang} | משך כולל • %{duration}"
+queue_notnumber: "אנא הזינו מספר עמוד חוקי!"
+queue_page_notfound: "יש רק **%{page} עמודים**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " אנא הזינו מספר חוקי!"
+removetrack_already: "**אני לא יכול להסיר שיר שכבר מתנגן**"
+removetrack_notfound: "**מצטער %{user}, השיר לא נמצא!**"
+removetrack_desc: "**הוסר %{title} מהתור!**"
+
+### Replay command!
+replay_msg: "**%{user} הפעיל מחדש את %{title}**"
+replay_not_seekable: "לא ניתן להפעיל מחדש את השיר **%{title}**."
+
+### Resume command!
+resume_msg: "**ההשמעה חודשה %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} הריץ אחורה את %{title} ל-** `%{duration}`"
+rewind_beyond: "השיר רק התחיל. לא ניתן להריץ אחורה מעבר לכך!"
+
+### Seek command!
+seek_beyond: "לא ניתן לדלג מעבר למשך השיר!"
+seek_invalid: "משך דילוג לא חוקי. אנא השתמשו בחותמת זמן חוקית. דוגמה: **1:30**"
+seek_msg: "**דילגו ב-%{title} ל-** `%{duration}`"
+seek_not_seekable: "לא ניתן להריץ אחורה או קדימה את השיר **%{title}**."
+
+### Skip command!
+skip_notfound: |
+  **לא נמצא שיר לדלג אליו! נראה שאין לאן לדלג.
+  בואו /play נמשיך עם המוזיקה על ידי הוספת עוד שירים!**
+skip_msg: "**דולג על %{title}**"
+skip_number_invalid: "אנא הזינו מספר חוקי!"
+
+### Stop command!
+stop_msg: "**%{title} הופסק**"
+
+### Shuffle command!
+shuffle_title: "ערבוב התור"
+
+### Volume command!
+volume_number_invalid: "אנא הזינו מספר חוקי!"
+volume_invalid: "עוצמה לא חוקית. אנא השתמשו במספר בין **1** ל-**100**"
+volume_msg: "**העוצמה הוגדרה ל-%{volume}%, תהנו %{user}**"
+volume_max: "**העוצמה כבר במקסימום 100%**"
+
+### play source commands
+url_no_allowed: "אנא השתמשו בשם השיר/שם האמן (קישורים אסורים)"
+play_arg_source: "אנא ספקו שם שיר/אמנים חוקי!"
+
+## Temporarily disabled commands
+youtube_disabled: "תמיכת YouTube אינה זמינה זמנית"
+autoplay_disabled: "השמעה אוטומטית מושבתת זמנית."

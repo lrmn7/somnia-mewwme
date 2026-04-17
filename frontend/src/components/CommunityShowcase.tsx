@@ -21,9 +21,15 @@ const CommunityShowcase = () => {
               <span className="text-xs font-semibold text-purple-400 tracking-wide uppercase">Powered by Somnia Network</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">
-              Support Your Favorite Server
-            </h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl sm:text-4xl font-bold mb-4 text-foreground"
+        >
+          Support Your{" "}<span className="text-mewwme">Favorite Server</span>
+        </motion.h2>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto leading-relaxed">
               More than just a music bot. Send tips with STT tokens on Somnia Network
               and support the communities you love. Every tip is recorded on-chain,

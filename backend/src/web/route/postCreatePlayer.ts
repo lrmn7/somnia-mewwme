@@ -20,7 +20,6 @@ async function resolveTextChannelId(
   guild: Guild,
   excludeId?: string
 ): Promise<string> {
-  // Prefer system channel (Discord's default announcement channel)
   const systemId = guild.systemChannelId;
   if (systemId && systemId !== excludeId) {
     const ch = (await client.channels.fetch(systemId).catch(() => undefined)) as
@@ -34,7 +33,6 @@ async function resolveTextChannelId(
       return systemId;
     }
   }
-  // Walk guild channels and find first writable text channel that isn't excluded
   const channels = await guild.channels.fetch().catch(() => undefined);
   if (channels) {
     for (const [, ch] of channels) {
@@ -47,8 +45,6 @@ async function resolveTextChannelId(
         return ch.id;
       }
     }
-    // No non-excluded channel found — fall back to the excluded one rather
-    // than returning an empty string (embed will be suppressed but harmless).
     for (const [, ch] of channels) {
       if (
         ch &&
@@ -75,13 +71,6 @@ export class PostCreatePlayer {
     const data = req.body as Record<string, string>;
     const validBody = await this.checker(data, req, res);
     if (!validBody) return;
-    // Resolve a real text channel so trackStart can send the Now Playing embed.
-    // When connecting via the dashboard there is no Discord interaction to infer
-    // a channel from, so we find the best available one for the guild.
-    //
-    // We EXCLUDE the guild's music-setup channel (if any) so the resolved textId
-    // never matches data.channel in trackStart.ts — preventing the embed-suppress
-    // guard from firing on dashboard-created players.
     const setupData = await this.client.db.setup.get(this.guild!.id).catch(() => null);
     const textId = await resolveTextChannelId(
       this.client,

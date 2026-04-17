@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **%{name} Filtresi acik!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **Umarim bu sesin tadini cikarirsin!**
+filter_already: "Ha? %{name} VST'si zaten acik... Burada yapabilecegim bir sey yok."
+filter_number: "Bu EQ'ya girebilecegim bir sayi degil..."
+filter_greater: "**0**'dan buyuk bir sayi olmali!"
+filter_less: "Vay canina! Cok fazla! Belki **10**'dan az daha iyi olur..."
+
+### Bassboost command!
+bassboost_set: "**Bassboost %{amount}dB olarak ayarlandi**"
+bassboost_limit: "Lutfen **-10** ile **10** arasinda bir sayi kullanin"
+
+### Equalizer command!
+eq_author: "Ekolayzer"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  **-10** ile **10** arasinda ayarlanabilen **10 Bant** vardir.
+  Hepsini girmek zorunda degilsiniz, sadece degistirmek istediklerinizi girin.
+  Birini atlamak istiyorsaniz **0** olarak birakin.
+eq_field_title: "Ornek:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Ekolayzer Sifirla • %{prefix}eq reset"
+eq_on: "EQ **%{bands}** olarak ayarlandi!"
+eq_number: "Lutfen gecerli bir sayi girin!"
+eq_greater: "Sayi **-10**'dan buyuk olmali"
+eq_than: "Sayi **10**'dan kucuk olmali"
+
+### Pitch command!
+pitch_on: "Tamam, Perde artik **%{amount}**!"
+
+### Rate command!
+rate_on:  "Tamam! Oran artik **%{amount}x**!"
+
+### Speed command!
+speed_on: "Tabii ki, hiz **%{amount}x** olarak degistiriliyor!"
+
+### Reset command!
+reset_on: "Tum VST'ler **sifirlaniyor**! Orijinal sese geri donuluyor!"
+reset_already:  "VST'ler **zaten kapali**, unuttun mu?"
+
+# Invalid Number
+number_invalid: "Bu calisabilecegim bir sayi degil... Gecerli bir sayi ile tekrar deneyin."

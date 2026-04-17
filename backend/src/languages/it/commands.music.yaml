@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Guarda le mie scelte per te!~"
+search_desc: "### EHI! Trovati risultati per la tua richiesta"
+search_end_desc2: "### OMG! %{user}, non hai selezionato una canzone in tempo\n**Riprova!**"
+search_footer: "%{countSong} brani trovati"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` buon ascolto ♥"
+
+search_active: "Stai gia' cercando qualcosa! Attendi che l'ultima ricerca finisca prima di iniziarne una nuova."
+search_no_result: "Nessun risultato trovato per la tua ricerca :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` buon ascolto ♥"
+no_songs_playing: "Nessun brano in riproduzione al momento!"
+
+### Autoplay command!
+autoplay_off: "La riproduzione automatica e' ora **Disattivata**"
+autoplay_on: "La riproduzione automatica e' ora **Attivata**"
+autoplay_no_songs_playing: "Nessuna canzone in riproduzione!"
+
+### ClearQueue command!
+clearqueue_msg: "La coda e' stata **Svuotata**"
+
+### Forward command!
+forward_msg: "**%{user} ha avanzato %{title} a** `%{duration}`"
+forward_beyond: "Il brano sta per finire. Non puoi avanzare oltre!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Prossimo in riproduzione ♪"
+playnext_queue_empty: "La coda e' vuota. Per favore aggiungi prima qualche brano"
+playnext_notfound: "Brano non trovato!"
+
+# Execute when invalid
+no_node: "**Nessun server Lavalink trovato. Per favore riprova tra 5 minuti**"
+
+### Join command!
+join_msg: "Il player e' stato creato con successo e si e' unito a %{channel}"
+join_already: "Sono gia' in %{channel}"
+join_no_in_voice: "Non sei in un canale vocale!"
+join_no_same_voice: "Non sei nello stesso canale vocale in cui sono io!"
+
+### Loop command!
+loop_current: "Ora in loop %{title}"
+loop_all: "**La coda e' ora in modalita' LOOP**"
+unloop_all: "**La modalita' loop e' stata DISATTIVATA**"
+loop_invalid: "Modalita' loop non valida. Per favore usa **Disabled**"
+loop_already: "La modalita' loop e' gia' **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Per favore fornisci un **Nome brano** valido"
+lyrics_title: "Testo di **%{song}**"
+lyrics_notfound: "**Impossibile trovare il testo per questo brano!**"
+lyrics_toolong: "**Testo troppo lungo, massimo 4048 caratteri consentiti!**"
+lyrics_disable: " **Il testo e' attualmente disabilitato!**"
+lyrics_noquery: "**Per favore fornisci un **Nome brano** valido"
+lyrics_error: "**Errore: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "IN RIPRODUZIONE"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Autore"
+nowplaying_total_duration_title: "Durata"
+nowplaying_request_title: "Richiesto da"
+
+### Pause command!
+pause_msg: "**Il brano %{title} e' attualmente in pausa!"
+
+### Play command!
+play_no_same_voice: "Non sei nello stesso canale vocale in cui sono io!"
+play_no_in_voice: "Non sei in un canale vocale!"
+play_arg: "Per favore fornisci un nome brano o URL valido!"
+play_emoji: "**Ops! Questa e' un'emoji, non puoi riprodurre brani usando emoji**"
+play_match: "**Ops! Spiacente, brano non trovato! Per favore riprova**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## Facilissimo!
+  ### La tua %{title} e' stata aggiunta alla coda
+
+play_queue_max: |
+  OMG!>,.,< La coda e' troppo lunga. Massimo %{limitqueue} brani.
+  Passa a [**premium**](%{premium}) per accesso illimitato alla coda!
+
+play_playlist_max: |
+  OMG!>,.,< La playlist e' troppo lunga. Massimo %{limitqueue} brani.
+  Passa a [**premium**](%{premium}) per accesso illimitato alla playlist!
+
+### Previous command!
+previous_notfound: |
+  **Nessun brano precedente trovato nella coda!
+  Perche' non usi /play per aggiungere altri brani e continuare la musica?**
+previous_msg: |
+  **Torniamo al brano precedente!
+  Ora in riproduzione %{title}**
+
+### Queue command!
+queue_number_invalid: "Per favore fornisci un numero valido!"
+queue_title: "Coda in riproduzione..."
+queue_description: "**%{title}**\n\n**Resto della coda %{rest}**"
+queue_footer: "Pagina • %{page}/%{pages} | Brani • %{queue_lang} | Durata totale • %{duration}"
+queue_notnumber: "Per favore fornisci un numero di pagina valido!"
+queue_page_notfound: "Ci sono solo **%{page} Pagine**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Per favore fornisci un numero valido!"
+removetrack_already: "**Non posso rimuovere un brano che e' gia' in riproduzione**"
+removetrack_notfound: "**Spiacente %{user}, brano non trovato!**"
+removetrack_desc: "**Rimosso %{title} dalla coda!**"
+
+### Replay command!
+replay_msg: "**%{user} ha riavviato %{title}**"
+replay_not_seekable: "Il brano **%{title}** non puo' essere riavviato."
+
+### Resume command!
+resume_msg: "**Riproduzione ripresa %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} ha riavvolto %{title} a** `%{duration}`"
+rewind_beyond: "Il brano e' appena iniziato. Non puoi riavvolgere oltre!"
+
+### Seek command!
+seek_beyond: "Non puoi spostarti oltre la durata del brano!"
+seek_invalid: "Durata di spostamento non valida. Per favore usa un timestamp valido. Esempio: **1:30**"
+seek_msg: "**Spostato %{title} a** `%{duration}`"
+seek_not_seekable: "Il brano **%{title}** non puo' essere riavvolto o mandato avanti."
+
+### Skip command!
+skip_notfound: |
+  **Nessun brano trovato da saltare! Sembra che non ci sia nulla da saltare.
+  Usa /play per continuare la musica aggiungendo altri brani!**
+skip_msg: "**%{title} e' stato saltato**"
+skip_number_invalid: "Per favore fornisci un numero valido!"
+
+### Stop command!
+stop_msg: "**%{title} e' stato fermato**"
+
+### Shuffle command!
+shuffle_title: "Mescola la coda"
+
+### Volume command!
+volume_number_invalid: "Per favore fornisci un numero valido!"
+volume_invalid: "Volume non valido. Per favore usa un numero tra **1** e **100**"
+volume_msg: "**Volume impostato a %{volume}%, Buon ascolto %{user}**"
+volume_max: "**Il volume e' gia' al massimo 100%**"
+
+### play source commands
+url_no_allowed: "Per favore usa il nome del brano/artista (URL non consentiti)"
+play_arg_source: "Per favore fornisci un nome brano/artista valido!"
+
+## Temporarily disabled commands
+youtube_disabled: "Il supporto YouTube e' temporaneamente non disponibile"
+autoplay_disabled: "La riproduzione automatica e' temporaneamente disabilitata."

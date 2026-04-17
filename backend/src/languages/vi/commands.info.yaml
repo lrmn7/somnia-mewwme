@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**Nơi những ai muốn hát luôn tìm thấy bài hát ♪\nTham gia giai điệu trong máy chủ Discord của bạn ngay hôm nay!**"
+about_desc2: |
+  ・Tiền tố bot cho máy chủ này là `%{prefix}`
+  ・Thay đổi tiền tố bằng `%{prefix} prefix <tiền tố mới>`
+  ・Phát bài hát bằng liên kết hoặc từ khóa tìm kiếm `%{prefix} play`
+  Truy cập **[website](%{website})** của chúng tôi hoặc sử dụng lệnh `%{prefix} help` để xem thêm các lệnh.
+about_desc3: |
+  **Lưu ý!**
+  Tôi ưu tiên cần quyền `Administrator`, nhưng...
+  Ngay cả khi bạn không cấp quyền đó, tôi vẫn hoạt động được, nhưng có thể không làm được mọi thứ tôi có khả năng. Chỉ nói vậy thôi!
+
+  **Trợ giúp và Hỗ trợ**
+  Tham gia **[máy chủ hỗ trợ](%{serversupport})** của chúng tôi nếu bạn cần giúp đỡ, muốn nhận thông tin về cập nhật và sự cố hoặc muốn tham gia cộng đồng!
+
+### Help command!
+finder_invalid: "Lệnh không hợp lệ"
+finder_example: "Tôi không thể giúp bạn tìm cái đó! Hãy tìm một lệnh *thực sự*!"
+finder_name: "**Lệnh:**"
+finder_des: " **Mô tả:**"
+finder_usage: "**Cách dùng:**"
+finder_access: "**Có thể truy cập bởi:**"
+finder_aliases: "**Bí danh:**"
+finder_slash: "**Slash:**"
+finder_des_no: "Không tìm thấy mô tả, xin lỗi về điều đó..."
+finder_usage_no: "Tôi không chắc cách sử dụng lệnh này."
+finder_aliases_prefix: "[Chỉ tiền tố]"
+finder_aliases_no: "Bạn không thể sử dụng lệnh này với bí danh."
+finder_slash_enable: "Đã bật"
+finder_slash_disable: "Đã tắt"
+command_not_found: "Lệnh không xác định"
+select_menu: "Thưởng thức âm nhạc cùng tôi!"
+help_timeout: "Menu Trợ giúp đã hết thời gian, hãy thử sử dụng **`%{prefix}help`** hoặc **`/help`** lần nữa."
+homepage_title: "Nơi những ai muốn hát luôn tìm thấy bài hát ♪\nTham gia giai điệu trong máy chủ Discord của bạn ngay hôm nay!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **Nhạc 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Kết nối Spotify**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **Âm thanh chất lượng cao**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Scrobble với Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **Chơi & Thi đấu Mini Game**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer & Nhiều hơn nữa...**
+
+  <a:ask:1291123964080558121> **Bạn có muốn nâng cấp lên gói [Premium](%{premium}) không?**
+### Rating bot commands! ###
+rating_desc: "Cảm ơn %{user} đã đánh giá sao cho bot nhạc Discord của chúng tôi!"
+rating_succes: "Cảm ơn bạn đã đánh giá!\nĐánh giá của bạn đã được gửi thành công."
+rating_failure: "Gửi báo cáo thất bại. Vui lòng thử lại sau."
+
+### Report command #####
+report_provide_desc: "Ối! Lệnh không hợp lệ. Vui lòng cung cấp mô tả của bạn"
+report_failure: "Gửi báo cáo thất bại. Vui lòng thử lại sau."
+report_success: "Cảm ơn bạn đã báo cáo.\nBáo cáo đã được gửi thành công để xử lý."
+
+### Suggestions command #####
+suggestions_provide_desc: "Ối! Lệnh không hợp lệ. Vui lòng cung cấp mô tả của bạn"
+suggestions_failure: "Gửi đề xuất thất bại. Vui lòng thử lại sau."
+suggestions_success: "Cảm ơn bạn đã đề xuất!\nĐề xuất của bạn đã được gửi thành công."
+
+### MyStats command ####
+mystats_error: "Đã xảy ra lỗi khi tạo thống kê của bạn. Vui lòng thử lại sau."
+
+### TopStats command ####
+topstats_error: "Đã xảy ra lỗi khi tạo thống kê của bạn. Vui lòng thử lại sau."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **Kết quả trạng thái:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 Danh tính người dùng"
+patreon_logs_user_identity_value: |
+  **Tên:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **Email:** %{email}
+
+patreon_logs_details_title: "Chi tiết Patreon"
+patreon_logs_details_value: |
+  **Cam kết:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **Trạng thái:** `%{status}`
+patreon_logs_date_title: "📅 Ngày"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "Danh tính người dùng"
+kofi_logs_user_identity_value: "**Tên:** %{fullName}\n**Email:** ||%{email}||\n**Công khai:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Danh tính Discord"
+kofi_logs_discord_identity_value: "**Người dùng:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "Chi tiết thanh toán"
+kofi_logs_payment_details_value: "**Số tiền:** %{currency} %{amount}\n**Hạng:** **%{tierName}**\n**Loại:** %{type}"
+kofi_logs_sub_status_title: "Trạng thái đăng ký"
+kofi_logs_sub_status_value: "**Là đăng ký:** %{isSub}\n**Thanh toán đầu tiên:** %{isFirst}"
+kofi_logs_message_title: "Tin nhắn / Lý do"
+kofi_logs_tech_title: "Kỹ thuật / ID giao dịch"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**Msg ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Token:** ||%{token}||"
+kofi_logs_view_details: "Xem chi tiết"
+

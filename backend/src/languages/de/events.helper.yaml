@@ -1,0 +1,91 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+## Helper setup ##
+setup_helper_content: |
+  ## Willkommen in der %{guild} Community!
+  *Wenn du neu auf Discord bist, dann bist du hier genau richtig! Dieser Kanal ist dafuer da, dir bei der Navigation auf dem Server zu helfen.*
+  ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+  %{bot} ist ein Discord-Bot, der dein Musikerlebnis mit einer uebersichtlichen Oberflaeche, hochwertiger Audiowiedergabe und einer Vielzahl von Musikfunktionen verbessert.
+
+  Dieser Discord-Server ist der perfekte Ort, um im Herzen der %{guild} Community abzuhaengen.
+  Geniesse Chats, teile Musikempfehlungen und entdecke alle Funktionen, die der %{bots}-Bot bietet!
+
+  Moechtest du deine Freunde zum Server einladen? Sende ihnen diesen Link: %{serversupport}
+
+disable_helper: "Der Helfer wurde deaktiviert"
+invalid_channel_helper: "Der angegebene Kanal ist ungueltig"
+channel_viewable_helper: "Der angegebene Kanal ist fuer mich nicht sichtbar"
+setup_helper_succes: "Der Helfer wurde erfolgreich in %{channel} eingerichtet."
+
+## RULES Events ##
+rules_title: "Serverregeln fuer die %{guild} Community!"
+rules_desc: |
+  - **Sei respektvoll**
+    Befolge immer die Discord [Nutzungsbedingungen](https://discord.com/terms) und [Richtlinien](https://discord.com/guidelines).
+  - **Hilfecode**
+    Wenn du um Hilfe bittest, stelle sicher, dass du so viele Details wie moeglich mit Fehlermeldungen angibst.
+  - **Keine Hassrede oder Belaestigung**
+    Keine Gespraeche, die Hassrede oder Belaestigung gegenueber Einzelpersonen oder Gruppen enthalten.
+  - **Kein Trolling oder Flammen**
+    Keine Aktionen, die darauf abzielen, Stoerungen zu verursachen oder Konflikte in irgendeiner Weise zu provozieren.
+  - **Geistiges Eigentum respektieren**
+    Respektiere die Rechte an geistigem Eigentum, einschliesslich, aber nicht beschraenkt auf Urheberrechte, Marken und Patente.
+  - **Keine Spoiler ohne Warnung**
+    Wenn du ueber Inhalte diskutierst, die noch nicht von allen Mitgliedern konsumiert wurden, gib Spoiler-Warnungen, um Enttaeuschungen zu vermeiden.
+  - **Verwende die richtigen Kanaele**
+    Verwende relevante Kanaele fuer bestimmte Themen, vermeide Off-Topic-Diskussionen in nicht verwandten Kanaelen.
+  - **Keine uebertriebene Grossschreibung oder Spam**
+    Vermeide uebertriebene Verwendung von Grossbuchstaben oder das schnelle Senden wiederholter Nachrichten.
+  - **Halte Sprachkanaele frei**
+    Wenn du Sprachkanaele verwendest, stelle sicher, dass keine stoerenden Geraesche vorhanden sind und sprich hoeflich.
+  - **Keine unautorisierten Bots oder Automatisierung**
+    Nur von Moderatoren autorisierte Bots duerfen auf dem Server betrieben werden.
+  - **Verstoesse melden**
+    Wenn du Regelverstoesse beobachtest, melde sie einem Moderator oder Admin.
+  - **Viel Spass!**
+    Am wichtigsten ist, geniesse deine Zeit auf diesem Server, indem du alle Mitglieder respektierst und eine positive Atmosphaere aufrechterhaltst.
+
+  Danke fuers Beitreten, wir hoffen, du wirst eine gute Zeit hier haben.
+
+### SUPPORT US BUTTON ###
+support_us_title: "Wie du %{bot} unterstuetzen kannst"
+support_us_desc: "Du kannst mich unterstuetzen, indem du fuer %{bot} abstimmst, %{bot} auf deinen Server einlaedst oder der Premium-Mitgliedschaft beitrittst."
+support_us_footer: "Danke, dass du in Erwaegung ziehst, %{bot} zu unterstuetzen! Ich schaetze es sehr."
+
+## ROLES EVENTS ##
+role_title: "Du kannst Rollen aus der folgenden Liste hinzufuegen oder entfernen."
+role_added: "**[Erfolg]** Die Rolle %{rolename} wurde erfolgreich hinzugefuegt!"
+role_removed: "**[Entfernt]** Die Rolle %{rolename} wurde entfernt."
+role_rules_added: "%{user} wir hoffen, du wirst alle Regeln befolgen, jetzt hast du Zugang zum gesamten Server"
+role_rules_already: "%{user} du hast die Regeln bereits akzeptiert"
+role_desc: "Wir moechten nur sicherstellen, dass du ein Mensch und kein Bot bist. Bitte hilf uns, deine Authentizitaet zu bestaetigen, indem du eine kurze Verifizierungsaufgabe erledigst."
+
+### Top gg vote logs event
+vote_desc: |
+  %{voteuser} hat fuer %{votebot} auf **[Top.gg](%{voteurl})** gestimmt
+  Danke fuer deine Unterstuetzung! Wir hoffen, du hast einen tollen Tag!
+vote_footer: "Gesamtstimmen %{count}, Bleib in deiner Fantasie!"
+
+### Top gg vote logs reminder event
+reminder_label_name: "Abstimmungserinnerung"
+reminder_label_emoji: "⏰"
+reminder_title: "Abstimmungserinnerung"
+reminder_desc: "Es ist soweit! Du kannst jetzt erneut auf **[Top.gg](%{voteurl})** abstimmen."
+reminder_set_content: "Erinnerung gesetzt! Ich werde dich in 12 Stunden daran erinnern, erneut abzustimmen"
+reminder_cancel_content: "Erinnerung abgebrochen. Du wirst nicht mehr ans Abstimmen erinnert"
+reminder_no_vote_warning: "Du musst zuerst abstimmen, bevor du eine Erinnerung setzen kannst"
+
+### Welcomer events!
+welcome_desc: "Willkommen bei %{guildname} %{member}, Bleib in deiner Fantasie!"
+leave_desc: "Danke, dass du bei uns warst! Auf Wiedersehen %{member}"

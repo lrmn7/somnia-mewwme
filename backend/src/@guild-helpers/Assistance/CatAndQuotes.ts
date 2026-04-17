@@ -62,7 +62,6 @@ export class CatAndQuotes {
           const attachment = await getRandomCatAttachmentBuilder();
           const quoteInfo = await getQuoteFromAPI();
 
-          // Kirim gambar kucing jika tersedia
           if (attachment) {
             const catEmbed = new EmbedBuilder()
               .setColor(this.client.color_main)
@@ -78,7 +77,6 @@ export class CatAndQuotes {
             });
           }
 
-          // Kirim kutipan jika tersedia
           if (quoteInfo) {
             const { quote, author, category } = quoteInfo;
 

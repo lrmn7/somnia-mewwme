@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "مُفعّل"
+disable: "مُعطّل"
+
+# maintenance
+maintenance_title: "صيانة"
+maintenance_desc: |
+  %{bot} يخضع حالياً للصيانة. يرجى المحاولة مرة أخرى لاحقاً.
+  لمزيد من المعلومات، يرجى الانضمام إلى [خادم الدعم](%{serversupport}). شكراً!
+
+# Getting error!
+unexpected_error: "حدث خطأ ما. يرجى المحاولة مرة أخرى لاحقاً!"
+
+### Rate limit!
+ratelimit: "أنت تقوم بالإجراءات بسرعة كبيرة. يرجى الانتظار **%{time} ثوانٍ**"
+
+# No permission!
+no_perms: "ليس لديّ صلاحية **%{perm}**!\nيرجى منحي صلاحية **%{perm}** لتنفيذ هذا الأمر."
+
+no_manage_guild_perms: "هذا الأمر يتطلب صلاحية **%{perm}**!\nليس لديك صلاحية لتنفيذ هذا الأمر!"
+
+no_admin_perms: "هذا الأمر يتطلب صلاحية **%{perm}**!\nليس لديك صلاحية لتنفيذ هذا الأمر!"
+
+# No permission!
+no_perms_channel: "ليس لديّ صلاحية **%{perm}** في %{channel} لتنفيذ هذا الأمر!"
+
+# Execute when invalid
+no_node: "**لم يتم العثور على خادم Lavalink. يرجى المحاولة مرة أخرى بعد 5 دقائق**"
+
+# Client owner!
+owner_only: "هذا الأمر يمكن تنفيذه فقط من قِبل **مالك** البوت"
+
+# Need to join voice & same voice to use command!
+no_player: "لا توجد أغنية قيد التشغيل حالياً!"
+no_same_voice: "أنت لست في نفس القناة الصوتية معي!"
+no_in_voice: "أنت لست في قناة صوتية!"
+
+# Blacklist User
+blacklist_user: "يبدو أنك محظور! غير مسموح لك باستخدام الأوامر.\nيرجى التواصل مع **[المطور](%{serversupport})** إذا كنت تعتقد أن هذا خطأ."
+
+# Blacklist Guild
+blacklist_guild: "هذا الخادم محظور! غير مسموح لك باستخدام الأوامر في هذا الخادم.\nيرجى التواصل مع **[المطور](%{serversupport})** إذا كنت تعتقد أن هذا خطأ."
+
+### DjRole No Permission ###
+not_dj_role: "يجب أن يكون لديك دور %{role} لاستخدام هذا الأمر."
+
+### No Premium Event!
+no_premium_button: "احصل على Premium"
+no_premium_author: "لا توجد خطة Premium"
+no_premium_desc: "عفواً! يبدو أنه ليس لديك خطة premium بعد.\nهذه الميزة غير متاحة بدونها."
+
+# Top.gg error
+topgg_error_author: "خطأ في التصويت على Top.gg"
+topgg_error_desc: "حدث خطأ أثناء التحقق من تصويتك على top.gg، ربما بسبب توقف Top.gg. يرجى المحاولة مرة أخرى بعد 5-10 دقائق.\nإذا استمرت هذه المشكلة، يرجى التواصل مع [خادم الدعم](%{serversupport}) لمزيد من المساعدة."
+
+# Top.gg unvote
+topgg_unvote_button: "صوّت لفتح القفل"
+premium_button: "الترقية إلى premium"
+topgg_unvote_author: "التصويت مطلوب"
+topgg_unvote_desc: "تحتاج للتصويت للوصول إلى هذا الأمر! إنه سريع ومجاني.\nبدلاً من ذلك، احصل على premium من [صفحة Premium](%{premium}) لتخطي هذه الرسالة وفتح ميزات إضافية."
+
+### Mention Desc ###
+mention_content: "بادئتي لهذا الخادم `%{prefix}`\nيمكنك الإشارة إليّ لاستخدام الأوامر أيضاً أو اكتب </help:1294325423957741598> لعرض أوامر السلاش الخاصة بي ♡"

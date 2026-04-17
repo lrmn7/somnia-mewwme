@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "قدّم سبب إنشاء التذكرة"
+ticket_already_open: "لديك تذكرة مفتوحة بالفعل."
+ticket_already_closed: "لم يتم العثور على بيانات التذكرة للمستخدم %{id} أو التذكرة مُغلقة بالفعل"
+ticket_close_user: "غير مسموح لك بإغلاق التذكرة."
+ticket_delete_user: "غير مسموح لك بحذف التذكرة."
+ticket_deleting_action: "جارٍ حذف التذاكر..."
+ticket_closed_label: "🔒 مُغلقة"
+ticket_delete_label: "🗑️ حذف"
+ticket_create: "تم إنشاء التذكرة. اذهب إلى %{channel}"
+ticket_create_title: "انتظر رد فريق العمل"
+ticket_create_desc: |
+  شكراً لإنشاء تذكرتك. يرجى الانتظار حتى يستجيب فريق العمل.
+  `ملاحظة: هذه التذكرة ليس لها نسخة احتياطية. يرجى التأكد من حفظ أي معلومات مهمة بنفسك`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 تذكرة مُغلقة"
+ticket_closed_desc: "تم إغلاق التذكرة بنجاح!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "تم إغلاق التذكرة."
+ticket_closed_dm_desc: |
+  تم إغلاق تذكرة فتحتها للتو. يمكنك العثور على نص التذكرة في الرابط أدناه.
+  إذا واجهت أي مشاكل أو لديك أسئلة إضافية، لا تتردد في فتح تذكرة جديدة. نحن هنا للمساعدة!
+
+

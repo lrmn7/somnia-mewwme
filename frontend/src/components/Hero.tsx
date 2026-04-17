@@ -17,19 +17,24 @@ const Hero = () => {
   return (
     <section className="relative z-10 pt-24 sm:pt-32 pb-16 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground leading-tight"
+          className="mb-5 sm:mb-6"
         >
-          Your favorite{" "}
-          <span className="text-mewwme underline-mewwme">
-            Music Bot
-          </span>
-          <br />
-          on Discord
-        </motion.h1>
+          <div className="flex items-end justify-center gap-2 sm:gap-3 leading-none">
+            <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground/85 tracking-wide">
+              Discover
+            </span>
+            <span className="text-5xl sm:text-6xl md:text-7xl font-black text-mewwme underline-mewwme tracking-tight">
+              Mewwme
+            </span>
+          </div>
+          <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-foreground leading-[1.05]">
+            Music for Your Discord Server
+          </h1>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

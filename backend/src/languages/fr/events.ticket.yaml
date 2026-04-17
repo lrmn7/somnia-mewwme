@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Indiquez la raison de la creation du ticket"
+ticket_already_open: "Vous avez deja un ticket ouvert."
+ticket_already_closed: "Les donnees du ticket pour l'utilisateur %{id} sont introuvables ou le ticket est deja ferme"
+ticket_close_user: "Vous n'etes pas autorise a fermer le ticket."
+ticket_delete_user: "Vous n'etes pas autorise a supprimer le ticket."
+ticket_deleting_action: "Suppression des tickets..."
+ticket_closed_label: "🔒 Ferme"
+ticket_delete_label: "🗑️ Supprimer"
+ticket_create: "Le ticket a ete cree. Rendez-vous sur %{channel}"
+ticket_create_title: "En attente de la reponse du personnel"
+ticket_create_desc: |
+  Merci d'avoir cree votre ticket. Veuillez attendre la reponse du personnel.
+  `NOTE: Ce ticket n'a pas de sauvegarde. Veuillez vous assurer de sauvegarder vous-meme toute information importante`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Ticket ferme"
+ticket_closed_desc: "Le ticket a ete ferme avec succes !"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Le ticket a ete ferme."
+ticket_closed_dm_desc: |
+  Un ticket que vous avez ouvert vient d'etre ferme. Votre transcription est disponible au lien ci-dessous.
+  Si vous rencontrez des problemes ou avez d'autres questions, n'hesitez pas a ouvrir un nouveau ticket. Nous sommes la pour vous aider !
+
+

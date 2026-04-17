@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Podaj powód utworzenia zgłoszenia"
+ticket_already_open: "Masz już otwarte zgłoszenie."
+ticket_already_closed: "Dane zgłoszenia dla użytkownika %{id} nie zostały znalezione lub zgłoszenie jest już zamknięte"
+ticket_close_user: "Nie masz uprawnień do zamknięcia tego zgłoszenia."
+ticket_delete_user: "Nie masz uprawnień do usunięcia tego zgłoszenia."
+ticket_deleting_action: "Usuwanie zgłoszeń..."
+ticket_closed_label: "🔒 Zamknięte"
+ticket_delete_label: "🗑️ Usuń"
+ticket_create: "Zgłoszenie zostało utworzone. Przejdź do %{channel}"
+ticket_create_title: "Poczekaj na odpowiedź personelu"
+ticket_create_desc: |
+  Dziękujemy za utworzenie zgłoszenia. Proszę poczekaj na odpowiedź personelu.
+  `UWAGA: To zgłoszenie nie ma kopii zapasowej. Upewnij się, że samodzielnie tworzysz kopię zapasową ważnych informacji`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Zamknięte zgłoszenie"
+ticket_closed_desc: "Zgłoszenie zostało pomyślnie zamknięte!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Zgłoszenie zostało zamknięte."
+ticket_closed_dm_desc: |
+  Zgłoszenie, które otworzyłeś, zostało właśnie zamknięte. Twój transkrypt jest dostępny pod poniższym linkiem.
+  Jeśli napotkasz jakiekolwiek problemy lub masz dalsze pytania, śmiało otwórz nowe zgłoszenie. Jesteśmy tu, aby pomóc!
+
+

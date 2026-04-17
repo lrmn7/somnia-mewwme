@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**歌いたい人はいつでも歌を見つけられる ♪\n今日からあなたのDiscordサーバーでメロディーに参加しましょう！**"
+about_desc2: |
+  ・このサーバーのBotプレフィックスは `%{prefix}` です
+  ・プレフィックスの変更は `%{prefix} prefix <新しいプレフィックス>` で
+  ・リンクまたは検索語で曲を再生 `%{prefix} play`
+  詳しいコマンドは**[ウェブサイト](%{website})**をご覧いただくか、`%{prefix} help` コマンドをお使いください。
+about_desc3: |
+  **ご注意！**
+  できれば`Administrator`権限をいただけると助かりますが...
+  その権限がなくても動作しますが、すべての機能を利用できない場合があります。ご了承ください！
+
+  **ヘルプとサポート**
+  ヘルプが必要な場合、アップデートや問題に関する情報を得たい場合、またはコミュニティに参加したい場合は、**[サポートサーバー](%{serversupport})**にご参加ください！
+
+### Help command!
+finder_invalid: "無効なコマンド"
+finder_example: "それは見つけられません！*実際の*コマンドを探してください！"
+finder_name: "**コマンド:**"
+finder_des: " **説明:**"
+finder_usage: "**使い方:**"
+finder_access: "**アクセス権:**"
+finder_aliases: "**エイリアス:**"
+finder_slash: "**スラッシュ:**"
+finder_des_no: "説明が見つかりませんでした。申し訳ありません..."
+finder_usage_no: "このコマンドの使い方がわかりません。"
+finder_aliases_prefix: "[プレフィックスのみ]"
+finder_aliases_no: "このコマンドにエイリアスは使用できません。"
+finder_slash_enable: "有効"
+finder_slash_disable: "無効"
+command_not_found: "不明なコマンド"
+select_menu: "一緒に音楽を楽しみましょう！"
+help_timeout: "ヘルプメニューがタイムアウトしました。**`%{prefix}help`** または **`/help`** をもう一度お試しください。"
+homepage_title: "歌いたい人はいつでも歌を見つけられる ♪\n今日からあなたのDiscordサーバーでメロディーに参加しましょう！"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **24時間年中無休の音楽**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify連携**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **高音質オーディオ**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Last.fmでスクロブル**
+  <:blank:1291123023679586324><:games:1311125732117843978> **ミニゲームで遊んで競おう**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify、Apple Music、Deezerなど...**
+
+  <a:ask:1291123964080558121> **[プレミアム](%{premium})プランにアップグレードしませんか？**
+### Rating bot commands! ###
+rating_desc: "Discord音楽ボットに星を評価してくれた%{user}さん、ありがとうございます！"
+rating_succes: "評価ありがとうございます！\n評価が正常に送信されました。"
+rating_failure: "レポートの送信に失敗しました。後でもう一度お試しください。"
+
+### Report command #####
+report_provide_desc: "おっと！無効なコマンドです。説明を入力してください"
+report_failure: "レポートの送信に失敗しました。後でもう一度お試しください。"
+report_success: "レポートありがとうございます。\nレポートは解決のために正常に送信されました。"
+
+### Suggestions command #####
+suggestions_provide_desc: "おっと！無効なコマンドです。説明を入力してください"
+suggestions_failure: "提案の送信に失敗しました。後でもう一度お試しください。"
+suggestions_success: "提案ありがとうございます！\n提案が正常に送信されました。"
+
+### MyStats command ####
+mystats_error: "統計情報の生成中にエラーが発生しました。後でもう一度お試しください。"
+
+### TopStats command ####
+topstats_error: "統計情報の生成中にエラーが発生しました。後でもう一度お試しください。"
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **ステータス結果:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 ユーザー情報"
+patreon_logs_user_identity_value: |
+  **名前:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **メール:** %{email}
+
+patreon_logs_details_title: "Patreon詳細"
+patreon_logs_details_value: |
+  **支援額:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **ステータス:** `%{status}`
+patreon_logs_date_title: "📅 日付"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "ユーザー情報"
+kofi_logs_user_identity_value: "**名前:** %{fullName}\n**メール:** ||%{email}||\n**公開:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord情報"
+kofi_logs_discord_identity_value: "**ユーザー:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "支払い詳細"
+kofi_logs_payment_details_value: "**金額:** %{currency} %{amount}\n**ティア:** **%{tierName}**\n**タイプ:** %{type}"
+kofi_logs_sub_status_title: "サブスクリプション状況"
+kofi_logs_sub_status_value: "**サブスク:** %{isSub}\n**初回支払い:** %{isFirst}"
+kofi_logs_message_title: "メッセージ / 理由"
+kofi_logs_tech_title: "技術情報 / トランザクションID"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**メッセージ ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**トークン:** ||%{token}||"
+kofi_logs_view_details: "詳細を見る"
+

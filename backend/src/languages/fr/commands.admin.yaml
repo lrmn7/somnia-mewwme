@@ -1,0 +1,34 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "Je n'ai pas pu trouver ce serveur..."
+blacklist_guild_already: "Il semble que %{id} soit deja sur la liste noire, je ne peux rien faire."
+blacklist_guild_add: "Sayonara, %{id} ! Je l'ai ajoute a la liste noire. Je suppose que ce n'etait pas fait pour durer..."
+blacklist_guild_not_exist: "Vous cherchiez %{id} ? Je ne l'ai pas trouve dans mes itineraires de tournee..."
+blacklist_guild_delete: "Bon retour, %{id} ! Je peux y retourner en tournee, ils ne sont plus sur la liste noire."
+
+### Blacklist User
+blacklist_user_bot_owner: "Woah ! Je ne peux pas mettre mon propre createur sur la liste noire ! Vous essayez de m'attirer des ennuis ?"
+blacklist_user_not_found: "Je n'ai pas pu trouver ce fan..."
+blacklist_user_already: "Il semble que %{id} soit deja sur la liste noire, je ne peux rien faire."
+blacklist_user_add: "A plus, %{id} ! C'est triste de devoir ajouter un fan a la liste noire, mais je suppose que c'est pour le mieux..."
+blacklist_user_not_exist: "%{id} ? Qui est-ce ? Je ne l'ai pas trouve dans mon fan club..."
+blacklist_user_delete: "Super ! %{id} a ete reinstalle en tant que fan ! J'ai hate de le voir au prochain concert !"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "Je ne sais pas quel type de maintenance c'est, mais vous devriez absolument utiliser %{text} a la place"
+maintenance_true: "C'est parti ! Je n'ecoute plus que vous maintenant !"
+maintenance_false: "Je recommence a ecouter tout le monde maintenant !"
+

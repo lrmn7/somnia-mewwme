@@ -26,8 +26,6 @@ export class PlayerRoute {
     fastify.get("/:guildId/queue", (req, res) => getQueueStatus(this.client, req, res));
     fastify.get("/:guildId/current", (req, res) => getCurrentTrackStatus(this.client, req, res));
     fastify.get("/:guildId/member/:userId", (req, res) => getMemberStatus(this.client, req, res));
-    // Voice-status check: does not require an active player — used by
-    // the dashboard to decide whether to show the Connect button.
     fastify.get("/:guildId/voice/:userId", (req, res) => getVoiceStatus(this.client, req, res));
   }
 }

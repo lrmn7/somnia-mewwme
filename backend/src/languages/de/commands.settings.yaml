@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "24/7-Modus ist jetzt **Aktiviert**"
+247_off: "24/7-Modus ist jetzt **Deaktiviert**"
+247_already: "24/7-Modus ist bereits **%{mode}**"
+247_arg_error: "Ungueltiger 24/7-Modus. Bitte verwende %{text}"
+247_no_in_voice: "Du bist in keinem Sprachkanal!"
+
+
+### Set Language command! ###
+provide_lang: "**Ungueltige Sprache. Bitte verwende** `%{languages}`"
+lang_set: "**Sprache wurde auf** `%{language}` **gesetzt**"
+lang_change: "**Sprache wurde auf** `%{language}` **geaendert**"
+
+### Prefix command! ###
+prefix_arg: "Bitte gib einen gueltigen Praefix an!"
+prefix_length: "**Praefix darf nicht laenger als 10 Zeichen sein**"
+prefix_set: "**Praefix wurde auf** `%{prefix}` **gesetzt**"
+prefix_change: "**Praefix wurde auf** `%{prefix}` **geaendert**"
+
+### Control command!
+control_set: "**Player-Steuerungsmodus wurde auf %{toggle} gesetzt**"
+control_arg_error: "Ungueltiges Argument. Bitte verwende %{text}"
+control_already: "Song-Benachrichtigungen sind bereits **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Ungueltig! Bitte verwende %{text}"
+setup_enable: "**Hoppla! Musiksystem existiert bereits.**"
+setup_topic: "♪ Wer singen will, findet immer ein Lied. ♪"
+setup_msg: "*`Musiksystem erfolgreich eingerichtet in`* %{channel}\n```Hinweis: Loesche keine Nachricht(en), die ich erstellt habe, damit ich ordnungsgemaess funktionieren kann.```"
+setup_null: "*`Setup-Kanal erfolgreich geloescht!`*"
+setup_deleted: "*`Setup-Kanal erfolgreich geloescht!`*"
+setup_null_inguild: "**Musiksystem auf diesem Server nicht gefunden! Bereit Daten zu loeschen**"
+setup_queuemsg: "**Tritt einem Sprachkanal bei und spiele Songs per Name oder URL hier ab!**"
+setup_playembed_author: "Es wird gerade kein Song abgespielt"
+
+### Themes command!
+error_themes: "Ungueltig... Bitte versuche es erneut."
+succes_themes: "**Theme erfolgreich auf %{themes} geaendert**"
+
+### Last FM Login command!
+lastfm_login_footer: "Hinweis: Dieser Link laeuft in %{expired} ab."
+lastfm_login_title: "Last.fm-Anmeldung"
+lastfm_login_desc: "Moechtest du deinem [Last.fm](https://www.last.fm/user/eleremen)-Konto die Autorisierung erteilen?\nWenn ja, klicke bitte auf den Button unten, um den Autorisierungsprozess zu starten."
+lastfm_not_login_desc: "Du bist nicht bei Last.fm angemeldet"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm-Abmeldung"
+lastfm_logout_desc: "Du hast dich erfolgreich von Last.fm abgemeldet"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm-Funktion ist deaktiviert."
+lastfm_feature_disabled_desc: "Die Last.fm-Funktion ist derzeit deaktiviert. Bitte kontaktiere den Administrator fuer weitere Informationen."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "Keine Benachrichtigung fuer den YouTube-Kanal **%{ytchannel}** gefunden."
+notify_youtube_removed: "Du hast die Benachrichtigung fuer den YouTube-Kanal **%{ytchannel}** entfernt."
+notify_youtube_disabled: "Die YouTube-Benachrichtigungsfunktion ist derzeit deaktiviert. Kontaktiere das Team fuer weitere Informationen."
+notify_youtube_already: "Benachrichtigungen fuer den YouTube-Kanal %{ytchannel} sind bereits eingerichtet."
+notify_youtube_invalid_channel: "Beim Angeben eines gueltigen Textkanals ist ein Fehler aufgetreten. Bitte ueberpruefen!"
+notify_youtube_set: "YouTube-Benachrichtigung wurde fuer **%{ytchannel}** in %{channelid} eingerichtet."
+notify_youtube_404: |
+  Die angegebene YouTube-Kanal-ID konnte nicht gefunden werden.
+  Um die Kanal-ID zu finden, gehe zur YouTube-Kanalseite und pruefe die URL.
+  Die Kanal-ID ist die Zeichenfolge aus Buchstaben und Zahlen nach `/channel/` (zum Beispiel: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   Du hast das Limit von %{limit} Benachrichtigungen erreicht.
+   Durch ein Upgrade auf [Premium](%{premium}) kannst du bis zu %{limitpremium} Benachrichtigungen einrichten.
+
+notify_youtube_limit_reached_premium: |
+   Du hast das Limit von %{limit} Benachrichtigungen erreicht.
+   Dies ist das maximal Erlaubte. Erwaege einige Benachrichtigungen zu loeschen, um Platz fuer neue zu schaffen.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Keine Benachrichtigung fuer den Twitch-Benutzernamen **%{twitchusername}** gefunden."
+notify_twitch_removed: "Du hast die Benachrichtigung fuer den Twitch-Benutzernamen **%{twitchusername}** entfernt."
+notify_twitch_disabled: "Die Twitch-Benachrichtigungsfunktion ist derzeit deaktiviert. Kontaktiere das Team fuer weitere Informationen."
+notify_twitch_already: "Du hast bereits Benachrichtigungen fuer den Twitch-Kanal %{twitchusername} eingerichtet."
+notify_twitch_invalid_channel: "Beim Angeben eines gueltigen Textkanals ist ein Fehler aufgetreten. Bitte ueberpruefen!"
+notify_twitch_set: "Twitch-Benachrichtigung wurde fuer **%{twitchusername}** in %{channelid} eingerichtet."
+notify_twitch_error: "Ein unerwarteter Fehler ist bei der Verarbeitung der Twitch-Benachrichtigung fuer **{twitchusername}** im Kanal **{channelid}** aufgetreten. Bitte versuche es erneut oder kontaktiere den Support, falls das Problem weiterhin besteht."
+notify_twitch_limit_reached_non_premium: |
+   Du hast das Limit von %{limit} Benachrichtigungen erreicht.
+   Durch ein Upgrade auf [Premium](%{premium}) kannst du bis zu %{limitpremium} Benachrichtigungen einrichten.
+
+notify_twitch_limit_reached_premium: |
+   Du hast das Limit von %{limit} Benachrichtigungen erreicht.
+   Dies ist das maximal Erlaubte. Erwaege einige Benachrichtigungen zu loeschen, um Platz fuer neue zu schaffen.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Temporaere Sprachkanal-Funktion wurde %{status}."
+tempvoice_disabled: "Temporaere Sprachkanaele wurden deaktiviert."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Ungueltig... nur %{text}."
+status_voice_channel_true: "Sprachkanal-Status wurde auf **%{type}** gesetzt."
+status_voice_channel_false: "Sprachkanal-Status wurde auf **%{type}** gesetzt."
+
+
+### Patreon Claim command!
+not_in_guild: "Dieser Befehl kann nur auf dem Server ausgefuehrt werden!"
+no_data_patreon: "Patreon-Daten nicht gefunden (Datenbankfehler)"
+no_data_patreon_title: "Nicht gefunden"
+no_data_patreon_desc: |
+  Wenn du bereits abonniert hast, stelle sicher, dass dein Discord-Konto mit Patreon verknuepft ist!
+no_data_patreon_footer: "Die Patreon-Synchronisierung kann einen Moment dauern, bitte schaue kurz spaeter nochmal nach"
+no_patreon_guild_membership: |
+  Hallo, dein Patreon-Plan ist **Benutzer-Stufe**.
+  Bitte upgrade auf **Server-Stufe**, um Premium-Serverzugang freizuschalten.
+patreon_guild_membership_full_quota: |
+  Du hast dein gesamtes Server-Kontingent aufgebraucht!
+  **Status:** %{status} Server verwendet.
+
+  Loesung:
+  1. Upgrade deine Stufe auf Patreon.
+  2. Oder deaktiviere Premium auf deinem alten Server.
+patreon_guild_membership_already_before: "Du hast Premium auf diesem Server bereits zuvor aktiviert!"
+patreon_guild_membership_already: "**BEREITS PREMIUM**, weil es von jemand anderem gesponsert wird.\nSpare dein Kontingent fuer andere Server!"
+patreon_guild_membership_claim_title: "Aktivierungsbestaetigung"
+patreon_guild_membership_claim_desc: |
+  Bist du sicher, dass du **Premium-Server** aktivieren moechtest fuer:
+  **%{guildName}**
+
+  Diese Aktion verbraucht **1 Server-Kontingent**.
+  Verbleibendes Kontingent: **%{status}**
+patreon_guild_membership_claim_success: |
+  Erfolg! **%{guildName}** ist jetzt ein **Premium-Server**.
+
+  **Sponsor:** %{user}
+  **Verbleibendes Kontingent:** %{status}
+  Danke fuer deine Unterstuetzung auf Patreon!
+patreon_guild_membership_claim_success_title: "💎 Premium aktiviert!"
+patreon_guild_membership_claim_cancel: "Premium-Aktivierung abgebrochen."
+patreon_guild_membership_claim_norespon: "Aktivierung wurde automatisch abgebrochen, da keine Antwort erfolgte."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Server eingeloest (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **Sponsor-Benutzer:** %{sponsorTag} %{sponsorId}
+  **Ziel-Server:** %{guildName} %{guildId}
+  **Kontingent-Status:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Du kannst diesen Premium-Server nicht widerrufen, weil du ihn nicht registriert hast."
+patreon_guild_unclaim_title: "Bestaetigung des Premium-Widerrufs"
+patreon_guild_unclaim_desc: |
+  Bist du sicher, dass du den Premium-Status des Servers **%{guildName}** **ABBRECHEN** moechtest?
+  **Auswirkungen:** Premium-Funktionen werden auf diesem Server deaktiviert.
+  Dein Server-Kontingent wird wiederhergestellt (+1).
+  Aktuell verbleibendes Kontingent: **%{status}**
+patreon_guild_unclaim_success_title: "Premium widerrufen"
+patreon_guild_unclaim_success: |
+  Der Premium-Status fuer **%{guildName}** wurde erfolgreich widerrufen.
+  **Kontingent wiederhergestellt:** 1 Server
+  **Neues verbleibendes Kontingent:** %{status}
+patreon_guild_unclaim_cancel: "Premium-Widerrufsprozess abgebrochen."
+patreon_guild_unclaim_norespon: "⏱️ Zeitueberschreitung. Vorgang abgebrochen."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Abgemeldete Server (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Benutzer:** %{sponsorTag} %{sponsorId}
+  **Server:** %{guildName}} %{guildId}
+  **Kontingent wiederhergestellt:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Benutzer:** %{userTag} (%{userId})
+  **Server:** %{guildName} (%{guildId})
+  **Kontingent:** %{quota}
+  **Laeuft ab:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Aktion: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "Transaktions-ID nicht gefunden oder bereits eingeloest."
+kofi_linked_success_title: "Zahlung erfolgreich verknuepft!"
+kofi_linked_success_desc: "Jetzt kannst du `/premium claim <kofi>` ohne TxID verwenden."
+kofi_no_data_title: "Keine Daten gefunden!"
+kofi_no_data_desc: |
+  Wenn du bereits bezahlt hast, aber dein Discord-Konto nicht mit Ko-fi verbunden hast,
+  verwende: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Kein Kontingent, aber du bist ein Premium-Benutzer."
+kofi_full_server_quota_title: "Kontingent voll!"
+kofi_full_server_quota_desc: "Du hast **%{quota}** Server-Plaetze verwendet."
+kofi_server_already_claim_desc: "**Bereits aktiv!**\nDu hast Premium auf diesem Server bereits zuvor aktiviert."
+kofi_server_already_active_desc: " **Bereits Premium!**\nDieser Server wurde bereits von einem anderen Benutzer als Premium aktiviert."
+kofi_guild_membership_claim_success: |
+  Premium wurde erfolgreich aktiviert!
+  **Kontingentverbrauch:** %{quota}
+  **Laeuft ab in:** %{expires}
+kofi_guild_membership_claim_footer: "Danke fuer deine Unterstuetzung!"
+kofi_action_title: "🏗️ Ko-fi Aktion: %{type}"
+kofi_action_description: "**Benutzer:** %{userTag} (`%{userId}`)\n**Server:** %{guildName} (`%{guildId}`)\n**Aktion:** %{action}\n**Kontingent:** %{quota}"
+kofi_action_activation: "Server aktiviert"
+kofi_action_manual_link: "Manuelle Zahlung verknuepft"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium widerrufen"
+kofi_guild_unclaim_success_desc: |
+  Der Premium-Status fuer **%{guildName}** wurde erfolgreich widerrufen.
+  **Kontingent wiederhergestellt:** 1 Server
+kofi_guild_not_owned_by_user: "Du kannst diesen Premium-Server nicht widerrufen, weil du ihn nicht registriert hast."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Abgemeldete Server %{platform}"
+premium_unclaim_log_desc: |
+  **Benutzer:** %{userTag} %{userId}
+  **Server:** %{guildName}} %{guildId}
+  **Kontingent wiederhergestellt:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "Das DJ-Rollen-System wurde **Deaktiviert**."
+dj_role_missing_role: "Du musst eine Rolle angeben, um die `set`-Aktion zu verwenden."
+dj_role_set: |
+  Die DJ-Rolle wurde auf %{role} gesetzt.
+  Status: **Aktiviert**
+  **Betroffene Befehle:**
+  %{commands}

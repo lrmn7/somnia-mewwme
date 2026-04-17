@@ -13,17 +13,40 @@ export default class {
       (tag, msg) => client.logger.warn(tag, msg)
     );
 
-    let guilds = client.guilds.cache.size;
-    let members = client.guilds.cache.reduce((a, b) => a + b.memberCount, 0);
-    let channels = client.channels.cache.size;
+    // Cache for total metrics across all clusters
+    let totalGuilds = client.guilds.cache.size;
+    let totalMembers = client.guilds.cache.reduce((a, b) => a + b.memberCount, 0);
+    let totalChannels = client.channels.cache.size;
 
-    const activities = [
-      `${client.config.bot.BOT_ACTIVITY1}` || `with ${guilds} servers!`,
-      `${client.config.bot.BOT_ACTIVITY2}` || `with ${members} users!`,
-      `${client.config.bot.BOT_ACTIVITY3}` || `with ${channels} channels!`,
-    ];
+    // Fetch total metrics from primary process (updates every 15s)
+    const updateTotalMetrics = async () => {
+      if (client.clusterManager) {
+        try {
+          const res = await client.clusterManager.sendMaster("metrics_all");
+          const r = res.response as any;
+          if (r && r.totalGuilds != null) {
+            totalGuilds = r.totalGuilds;
+            totalMembers = r.totalUsers ?? totalMembers;
+            totalChannels = r.perCluster?.reduce((s: number, c: any) => s + (c.channels ?? 0), 0) ?? totalChannels;
+          }
+        } catch { /* fall back to local cache */ }
+      } else {
+        totalGuilds = client.guilds.cache.size;
+        totalMembers = client.guilds.cache.reduce((a, b) => a + b.memberCount, 0);
+        totalChannels = client.channels.cache.size;
+      }
+    };
+
+    await updateTotalMetrics();
+    setInterval(updateTotalMetrics, 15_000);
 
     setInterval(() => {
+      const activities = [
+        client.config.bot.BOT_ACTIVITY1 || `with ${totalGuilds.toLocaleString()} servers!`,
+        client.config.bot.BOT_ACTIVITY2 || `with ${totalMembers.toLocaleString()} users!`,
+        client.config.bot.BOT_ACTIVITY3 || `with ${totalChannels.toLocaleString()} channels!`,
+      ];
+
       const randomActivity = activities[Math.floor(Math.random() * activities.length)];
       const activityObj: {
         name: string;

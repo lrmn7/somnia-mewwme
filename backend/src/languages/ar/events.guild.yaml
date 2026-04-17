@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 انضم إلى خادم!"
+leave_title: "📥 غادر خادم!"
+guild_name: "الاسم"
+guild_id: "المعرّف"
+guild_owner: "المالك"
+guild_member_count: "عدد الأعضاء"
+guild_creation_date: "تاريخ الإنشاء"
+guild_join_date: "تاريخ الانضمام"
+current_server_count: "عدد الخوادم الحالي"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "يا إلهي! مرحباً يا جماعة ✧(≖◡≖) ♡"
+join_msg_desc: |
+  ### شكراً لدعوتي للتسكع معكم (*≧▽≦)
+  ### يمكنك الإشارة إليّ لاستخدام الأوامر أيضاً! اكتب </help:1088430405033656341> لعرض أوامر السلاش الخاصة بي ♡

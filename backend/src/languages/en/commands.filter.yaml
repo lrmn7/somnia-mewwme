@@ -12,8 +12,8 @@
 
 ### All filter command!
 filter_on: |
-  <:_sing:1292709072591650856> **Filter %{name} on!** 
-  <:_blank:1292727587944140831><:_sparkles:1292723255291154505> **I hope you like the sound of this one!**
+  <:singing:1291127658448424990> **Filter %{name} on!** 
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **I hope you like the sound of this one!**
 filter_already: "Huh? The %{name} VST is already on... I can't do anything here."
 filter_number: "That's not a number I can input into the EQ..."
 filter_greater: "It's gotta be a number greater than **0**!"

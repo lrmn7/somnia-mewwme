@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Подивіться, що я підібрав для вас!~"
+search_desc: "### ГЕЙ! Знайдено результати для вашого запиту"
+search_end_desc2: "### ОЙ! %{user}, ви не обрали пісню вчасно\n**Спробуйте ще раз!**"
+search_footer: "Знайдено %{countSong} треків"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` насолоджуйтесь ♥"
+
+search_active: "Ви вже шукаєте щось! Дочекайтесь завершення останнього пошуку, перш ніж починати новий."
+search_no_result: "За вашим запитом нічого не знайдено :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` насолоджуйтесь ♥"
+no_songs_playing: "Наразі жодна пісня не грає!"
+
+### Autoplay command!
+autoplay_off: "Автовідтворення тепер **Вимкнено**"
+autoplay_on: "Автовідтворення тепер **Увімкнено**"
+autoplay_no_songs_playing: "Жодна пісня не відтворюється!"
+
+### ClearQueue command!
+clearqueue_msg: "Чергу **очищено**"
+
+### Forward command!
+forward_msg: "**%{user} перемотав %{title} до** `%{duration}`"
+forward_beyond: "Пісня скоро закінчиться. Ви не можете перемотати далі!"
+
+### PlayNext command!
+playnext_desc: "### %{name} наступний у черзі ♪"
+playnext_queue_empty: "Черга порожня. Будь ласка, спочатку додайте пісні"
+playnext_notfound: "Пісню не знайдено!"
+
+# Execute when invalid
+no_node: "**Сервер Lavalink не знайдено. Будь ласка, спробуйте через 5 хвилин**"
+
+### Join command!
+join_msg: "Програвач успішно створено та підключено до %{channel}"
+join_already: "Я вже в %{channel}"
+join_no_in_voice: "Ви не в голосовому каналі!"
+join_no_same_voice: "Ви не в тому ж голосовому каналі, що і я!"
+
+### Loop command!
+loop_current: "Тепер зациклено %{title}"
+loop_all: "**Увімкнено режим зациклення ЧЕРГИ**"
+unloop_all: "**Режим зациклення ВИМКНЕНО**"
+loop_invalid: "Недійсний режим зациклення. Будь ласка, використовуйте **Disabled**"
+loop_already: "Режим зациклення вже **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Будь ласка, вкажіть дійсну **назву пісні**"
+lyrics_title: "Текст для **%{song}**"
+lyrics_notfound: "**Не вдалося знайти текст для цієї пісні!**"
+lyrics_toolong: "**Текст занадто довгий, максимум 4048 символів!**"
+lyrics_disable: " **Текст пісень наразі вимкнено!**"
+lyrics_noquery: "**Будь ласка, вкажіть дійсну **назву пісні**"
+lyrics_error: "**Помилка: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "ЗАРАЗ ГРАЄ"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Виконавець"
+nowplaying_total_duration_title: "Тривалість"
+nowplaying_request_title: "Запитав"
+
+### Pause command!
+pause_msg: "**Трек %{title} наразі на паузі!"
+
+### Play command!
+play_no_same_voice: "Ви не в тому ж голосовому каналі, що і я!"
+play_no_in_voice: "Ви не в голосовому каналі!"
+play_arg: "Будь ласка, вкажіть дійсну назву пісні або URL!"
+play_emoji: "**Ой! Це емодзі, ви не можете відтворювати пісні за допомогою емодзі**"
+play_match: "**Ой! Вибачте, пісню не знайдено! Будь ласка, спробуйте ще раз**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## Це було легко!
+  ### Ваш %{title} додано до черги
+
+play_queue_max: |
+  ОЙ!>,.,< Черга занадто довга. Максимум %{limitqueue} пісень.
+  Оновіть до [**premium**](%{premium}) для необмеженого доступу до черги!
+
+play_playlist_max: |
+  ОЙ!>,.,< Плейлист занадто довгий. Максимум %{limitqueue} пісень.
+  Оновіть до [**premium**](%{premium}) для необмеженого доступу до плейлисту!
+
+### Previous command!
+previous_notfound: |
+  **У черзі немає попередньої пісні!
+  Чому б не /play додати ще треків та продовжити слухати музику?**
+previous_msg: |
+  **Повернення до попередньої пісні!
+  Зараз грає %{title}**
+
+### Queue command!
+queue_number_invalid: "Будь ласка, введіть дійсне число!"
+queue_title: "Черга відтворення..."
+queue_description: "**%{title}**\n\n**Решта черги %{rest}**"
+queue_footer: "Сторінка • %{page}/%{pages} | Пісні • %{queue_lang} | Загальна тривалість • %{duration}"
+queue_notnumber: "Будь ласка, введіть дійсний номер сторінки!"
+queue_page_notfound: "Усього лише **%{page} сторінок**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Будь ласка, введіть дійсне число!"
+removetrack_already: "**Я не можу видалити пісню, яка вже грає**"
+removetrack_notfound: "**Вибачте %{user}, пісню не знайдено!**"
+removetrack_desc: "**Видалено %{title} з черги!**"
+
+### Replay command!
+replay_msg: "**%{user} натиснув повтор на %{title}**"
+replay_not_seekable: "Трек **%{title}** неможливо відтворити повторно."
+
+### Resume command!
+resume_msg: "**Відтворення відновлено %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} перемотав %{title} назад до** `%{duration}`"
+rewind_beyond: "Пісня щойно почалася. Ви не можете перемотати далі назад!"
+
+### Seek command!
+seek_beyond: "Ви не можете перемотати далі тривалості пісні!"
+seek_invalid: "Недійсна тривалість перемотки. Будь ласка, використовуйте дійсну мітку часу. Приклад: **1:30**"
+seek_msg: "**Перемотано %{title} до** `%{duration}`"
+seek_not_seekable: "Трек **%{title}** неможливо перемотати назад або вперед."
+
+### Skip command!
+skip_notfound: |
+  **Не знайдено пісню для пропуску! Здається, нічого пропускати.
+  Давайте /play продовжимо слухати музику, додавши ще треків!**
+skip_msg: "**%{title} пропущено**"
+skip_number_invalid: "Будь ласка, введіть дійсне число!"
+
+### Stop command!
+stop_msg: "**%{title} зупинено**"
+
+### Shuffle command!
+shuffle_title: "Перемішує чергу"
+
+### Volume command!
+volume_number_invalid: "Будь ласка, введіть дійсне число!"
+volume_invalid: "Недійсна гучність. Будь ласка, використовуйте число від **1** до **100**"
+volume_msg: "**Гучність встановлено на %{volume}%, насолоджуйтесь %{user}**"
+volume_max: "**Гучність вже на максимумі 100%**"
+
+### play source commands
+url_no_allowed: "Будь ласка, використовуйте назву пісні/виконавця (URL не дозволено)"
+play_arg_source: "Будь ласка, вкажіть дійсну назву пісні/виконавця!"
+
+## Temporarily disabled commands
+youtube_disabled: "Підтримка YouTube тимчасово недоступна"
+autoplay_disabled: "Автовідтворення тимчасово вимкнено."

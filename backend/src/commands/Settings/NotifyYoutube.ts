@@ -153,7 +153,7 @@ export default class implements Command {
         return;
       }
 
-      const guildData = await client.db.preGuild.get(String(handler.guild?.id));
+      const guildData = await client.db.PremiumGuildLegacy.get(String(handler.guild?.id));
       const notificationLimit = Number(
         guildData?.isPremium
           ? client.config.utilities.NotifyYoutube.LimitPremium

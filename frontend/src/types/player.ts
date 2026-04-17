@@ -4,6 +4,7 @@ export type Requester =
       username: string;
       globalName: string | null;
       defaultAvatarURL: string | null;
+      avatarURL?: string | null;
     }
   | string
   | null;
@@ -42,12 +43,8 @@ export type PlayerState = {
   queue: Track[];
   volume?: number;
   updatedAt?: number;
-  /**
-   * Monotonic sequence number from the server.
-   * Used to reject stale playerState events that arrive out of order.
-   * FIX: prevents dashboard desynchronization on rapid track transitions.
-   */
   seq?: number;
+  trackKey?: number;
 };
 
 export type BotGuild = {
@@ -66,6 +63,7 @@ export type DiscordUser = {
   discriminator: string;
   avatar: string | null;
   global_name?: string | null;
+  isAdmin?: boolean;
 };
 
 export type SearchTrack = {
@@ -153,7 +151,6 @@ export type GuildSettings = {
   isPremium?: boolean;
   isOwner?: boolean;
   isAdmin?: boolean;
-  isGuildOwner?: boolean;
   hasManageGuild?: boolean;
   has247Access?: boolean;
   requirement247?: string;
@@ -274,6 +271,45 @@ export type UserTopArtist = {
   count: number;
   artworkUrl?: string | null;
   artistUrl?: string | null;
+};
+
+// Web3 types
+export type WalletBinding = {
+  walletAddress: string;
+  boundAt: string;
+};
+
+export type GuildContract = {
+  guildId: string;
+  contractAddress: string;
+  factoryAddress: string;
+  creatorDiscordId: string;
+  creatorWallet: string;
+  createdAt: number;
+};
+
+export type Web3PremiumStatus = {
+  active: boolean;
+  plan?: string;
+  walletAddress?: string;
+  expiresAt?: number;
+};
+
+export type CommunityGuild = {
+  guildId: string;
+  guildName: string;
+  guildIcon: string | null;
+  contractAddress: string;
+  memberCount?: number;
+};
+
+export type TipEntry = {
+  senderAddress: string;
+  senderDiscordId?: string | null;
+  amount: string;
+  message: string;
+  txHash: string;
+  timestamp: number;
 };
 
 export type UserStats = {

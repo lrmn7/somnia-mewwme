@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "מתנגן כעת"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "אמן"
+track_requested_by: "הוזמן על ידי"
+track_duration: "משך"
+no_same_voice: "אתה לא באותו ערוץ קולי כמוני!"
+filter_already: "**פילטר %{name} כבר מופעל**"
+filter_reset_on: "**הפילטר אופס**"
+filter_reset_already: "**הפילטר כבר אופס**"
+no_player_filter: "**אני לא יכול להחיל פילטר!**"
+filter_menu_on: "**פילטר %{name} מופעל!**"
+
+player_get_exception: "אוי אוי! נראה שיש תקלה עם השיר. רוצים שאנסה שוב?"
+player_track_error: "היתה בעיה עם השיר, תוכלו לנסות שוב?"
+player_track_stuck: "אני כל כך עצוב :(, השיר נתקע. אולי ניסיון חוזר ישמח אותנו?"
+queue_end_desc: "כל השירים הסתיימו! צריכים עוד קצבים?\nהשתמשו ב-**/play** כדי להמשיך את המסיבה!"
+
+leave_pause: "בהתחשב בכך שכולכם עזבתם אותי לבד :( הנגן הושהה."
+leave_resume: "בהתחשב בכך שמישהו הצטרף אלי, הנגן חודש."
+
+player_end: "הערוץ היה ריק כמעט 15 דקות, אז החלטתי לעזוב כי אני לא אוהב להיות לבד"
+
+### Last FM Scrobble ###
+expired_login_session: "הפגישה שלכם ב-Last.fm פגה או אינה חוקית.\nאנא התחברו מחדש כדי להמשיך להשתמש בתכונת הסקרובל."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • מי שרוצה לשיר תמיד מוצא שיר ♪"
+milestone_track_desc: |
+  ## אוי היי
+  האזנתם ל-**%{total}** שירים! האם רשימת ההשמעה שלכם אינסופית, או שאתם פשוט כל כך אובססיביים למוזיקה?
+

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "अभी बज रहा है"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "कलाकार"
+track_requested_by: "द्वारा अनुरोधित"
+track_duration: "अवधि"
+no_same_voice: "आप मेरे जैसे वॉइस चैनल में नहीं हैं!"
+filter_already: "**%{name} फ़िल्टर पहले से सक्षम है**"
+filter_reset_on: "**फ़िल्टर रीसेट कर दिया गया है**"
+filter_reset_already: "**फ़िल्टर पहले से रीसेट हो चुका है**"
+no_player_filter: "**मैं फ़िल्टर लागू नहीं कर सकता!**"
+filter_menu_on: "**फ़िल्टर %{name} चालू!**"
+
+player_get_exception: "अरे! लगता है ट्रैक में कोई समस्या है। क्या आप चाहते हैं कि मैं फिर से प्रयास करूँ?"
+player_track_error: "ट्रैक में समस्या आई, क्या आप कृपया एक बार और प्रयास कर सकते हैं?"
+player_track_stuck: "मैं बहुत दुखी हूँ :(, ट्रैक अटक गया। शायद फिर से प्रयास करने से हम खुश हो जाएँ?"
+queue_end_desc: "सभी गाने पूरे हो गए! और बीट्स चाहिए?\nपार्टी जारी रखने के लिए **/play** का उपयोग करें!"
+
+leave_pause: "चूँकि आप सबने मुझे अकेला छोड़ दिया :( प्लेयर रोक दिया गया है।"
+leave_resume: "चूँकि कोई मेरे साथ शामिल हुआ है, प्लेयर फिर से शुरू कर दिया गया है।"
+
+player_end: "चैनल लगभग 15 मिनट से खाली है, इसलिए मैंने छोड़ने का फ़ैसला किया क्योंकि मुझे अकेला रहना पसंद नहीं"
+
+### Last FM Scrobble ###
+expired_login_session: "आपका Last.fm सत्र समाप्त हो गया है या अमान्य है।\nस्क्रोबल सुविधा का उपयोग जारी रखने के लिए कृपया पुनः प्रमाणित करें।"
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • जो गाना चाहते हैं उन्हें हमेशा एक गीत मिलता है ♪"
+milestone_track_desc: |
+  ## अरे नमस्ते
+  आपने **%{total}** ट्रैक सुने हैं! क्या आपकी प्लेलिस्ट अंतहीन है, या आप बस इतने संगीत प्रेमी हैं?
+

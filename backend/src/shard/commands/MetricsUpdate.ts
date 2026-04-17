@@ -1,5 +1,5 @@
 import { ClusterCommand, WorkerMessage, WorkerResponse } from "../../@types/Cluster.js";
-import { ClusterManager, ClusterMetrics } from "../ClusterManager.js";
+import { ClusterManager, ClusterMetrics, ShardInfo } from "../ClusterManager.js";
 import { Worker } from "node:cluster";
 
 export default class MetricsUpdate implements ClusterCommand {
@@ -13,26 +13,25 @@ export default class MetricsUpdate implements ClusterCommand {
     try {
       const guilds = (message.args?.guilds as number) ?? 0;
       const channels = (message.args?.channels as number) ?? 0;
+      const users = (message.args?.users as number) ?? 0;
+      const memoryUsage = (message.args?.memoryUsage as number) ?? 0;
+      const streams = (message.args?.streams as number) ?? 0;
+      const shards = (message.args?.shards as ShardInfo[]) ?? [];
       const clusterId = manager.getClusterId(worker);
-
-      manager.log(
-        "INFO",
-        `Received metrics from Cluster ${clusterId}: ${guilds} guilds, ${channels} channels`
-      );
 
       const metrics: ClusterMetrics = {
         clusterId,
         guilds,
         channels,
+        users,
+        memoryUsage,
+        streams,
+        shards,
         updatedAt: Date.now(),
+        status: "healthy",
       };
 
       manager.workerMetrics.set(clusterId, metrics);
-
-      manager.log(
-        "INFO",
-        `Stored metrics - Total clusters with data: ${manager.workerMetrics.size}`
-      );
 
       return { response: { success: true } };
     } catch (err) {

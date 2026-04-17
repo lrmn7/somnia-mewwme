@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "あなたへのおすすめをチェック！~"
+search_desc: "### おっ！リクエストの検索結果が見つかりました"
+search_end_desc2: "### あらら！%{user}さん、時間内に曲を選択しませんでした\n**もう一度お試しください！**"
+search_footer: "%{countSong}曲見つかりました"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` お楽しみください ♥"
+
+search_active: "既に検索中です！新しい検索を始める前に、前の検索が終わるまでお待ちください。"
+search_no_result: "検索結果が見つかりませんでした :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` お楽しみください ♥"
+no_songs_playing: "現在再生中の曲はありません！"
+
+### Autoplay command!
+autoplay_off: "自動再生が**無効**になりました"
+autoplay_on: "自動再生が**有効**になりました"
+autoplay_no_songs_playing: "再生中の曲がありません！"
+
+### ClearQueue command!
+clearqueue_msg: "キューが**クリア**されました"
+
+### Forward command!
+forward_msg: "**%{user}が%{title}を**`%{duration}`**に早送りしました**"
+forward_beyond: "曲がもうすぐ終わります。これ以上早送りできません！"
+
+### PlayNext command!
+playnext_desc: "### %{name} 次に再生 ♪"
+playnext_queue_empty: "キューが空です。まず曲を追加してください"
+playnext_notfound: "曲が見つかりません！"
+
+# Execute when invalid
+no_node: "**Lavalinkサーバーが見つかりませんでした。5分後にもう一度お試しください**"
+
+### Join command!
+join_msg: "プレイヤーが正常に作成され、%{channel}に参加しました"
+join_already: "既に%{channel}にいます"
+join_no_in_voice: "ボイスチャンネルに参加していません！"
+join_no_same_voice: "私と同じボイスチャンネルにいません！"
+
+### Loop command!
+loop_current: "%{title}をループ再生中"
+loop_all: "**キューのループモードが有効になりました**"
+unloop_all: "**ループモードが無効になりました**"
+loop_invalid: "無効なループモードです。**Disabled**を使用してください"
+loop_already: "ループモードは既に**%{mode}**です"
+
+### Lyrics command!
+provide_lyrics: "有効な**曲名**を入力してください"
+lyrics_title: "**%{song}**の歌詞"
+lyrics_notfound: "**この曲の歌詞が見つかりませんでした！**"
+lyrics_toolong: "**歌詞が長すぎます。最大4048文字までです！**"
+lyrics_disable: " **歌詞機能は現在無効です！**"
+lyrics_noquery: "**有効な**曲名**を入力してください**"
+lyrics_error: "**エラー: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "再生中"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "アーティスト"
+nowplaying_total_duration_title: "再生時間"
+nowplaying_request_title: "リクエスト者"
+
+### Pause command!
+pause_msg: "**曲 %{title} が一時停止されました！"
+
+### Play command!
+play_no_same_voice: "私と同じボイスチャンネルにいません！"
+play_no_in_voice: "ボイスチャンネルに参加していません！"
+play_arg: "有効な曲名またはURLを入力してください！"
+play_emoji: "**おっと！これは絵文字です。絵文字で曲を再生することはできません**"
+play_match: "**おっと！申し訳ありません、曲が見つかりませんでした！もう一度お試しください**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## 簡単でしたね！
+  ### %{title} がキューに追加されました
+
+play_queue_max: |
+  わあ！>,.,< キューが長すぎます。最大%{limitqueue}曲です。
+  [**プレミアム**](%{premium})にアップグレードして無制限のキューアクセスを！
+
+play_playlist_max: |
+  わあ！>,.,< プレイリストが長すぎます。最大%{limitqueue}曲です。
+  [**プレミアム**](%{premium})にアップグレードして無制限のプレイリストアクセスを！
+
+### Previous command!
+previous_notfound: |
+  **キューに前の曲が見つかりません！
+  /playでもっと曲を追加して音楽を続けませんか？**
+previous_msg: |
+  **前の曲に戻りました！
+  再生中: %{title}**
+
+### Queue command!
+queue_number_invalid: "有効な数値を入力してください！"
+queue_title: "キュー再生中..."
+queue_description: "**%{title}**\n\n**残りのキュー %{rest}**"
+queue_footer: "ページ • %{page}/%{pages} | 曲数 • %{queue_lang} | 合計時間 • %{duration}"
+queue_notnumber: "有効なページ番号を入力してください！"
+queue_page_notfound: "**%{page}ページ**しかありません"
+
+### RemoveTrack command!
+removetrack_number_invalid: " 有効な数値を入力してください！"
+removetrack_already: "**既に再生中の曲は削除できません**"
+removetrack_notfound: "**申し訳ありません %{user}さん、曲が見つかりません！**"
+removetrack_desc: "**%{title}をキューから削除しました！**"
+
+### Replay command!
+replay_msg: "**%{user}が%{title}をリプレイしました**"
+replay_not_seekable: "曲**%{title}**はリプレイできません。"
+
+### Resume command!
+resume_msg: "**再生を再開しました %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user}が%{title}を**`%{duration}`**に巻き戻しました**"
+rewind_beyond: "曲が始まったばかりです。これ以上巻き戻せません！"
+
+### Seek command!
+seek_beyond: "曲の再生時間を超えてシークすることはできません！"
+seek_invalid: "無効なシーク時間です。有効なタイムスタンプを使用してください。例: **1:30**"
+seek_msg: "**%{title}を**`%{duration}`**にシークしました**"
+seek_not_seekable: "曲**%{title}**は巻き戻しや早送りができません。"
+
+### Skip command!
+skip_notfound: |
+  **スキップする曲が見つかりません！スキップ先がないようです。
+  /playでもっと曲を追加して音楽を続けましょう！**
+skip_msg: "**%{title}がスキップされました**"
+skip_number_invalid: "有効な数値を入力してください！"
+
+### Stop command!
+stop_msg: "**%{title}が停止されました**"
+
+### Shuffle command!
+shuffle_title: "キューをシャッフル"
+
+### Volume command!
+volume_number_invalid: "有効な数値を入力してください！"
+volume_invalid: "無効な音量です。**1**から**100**の間の数値を使用してください"
+volume_msg: "**音量が%{volume}%に設定されました。%{user}さん、お楽しみください**"
+volume_max: "**音量は既に最大の100%です**"
+
+### play source commands
+url_no_allowed: "曲名/アーティスト名を使用してください（URLは使用できません）"
+play_arg_source: "有効な曲名/アーティスト名を入力してください！"
+
+## Temporarily disabled commands
+youtube_disabled: "YouTubeサポートは一時的に利用できません"
+autoplay_disabled: "自動再生は一時的に無効化されています。"

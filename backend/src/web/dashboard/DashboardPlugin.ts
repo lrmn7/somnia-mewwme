@@ -1,4 +1,4 @@
-﻿import type { FastifyPluginAsync, FastifyRequest, FastifyReply } from "fastify";
+import type { FastifyPluginAsync, FastifyRequest, FastifyReply } from "fastify";
 import fastifyCookie from "@fastify/cookie";
 import fastifySession from "@fastify/session";
 import fastifyCors from "@fastify/cors";
@@ -14,27 +14,67 @@ import { SocketBridge } from "./SocketBridge.js";
 import { createSpotifyTopChartService } from "../../services/SpotifyTopChartService.js";
 import { createAiChatService } from "./AiChatService.js";
 import { createAiChatHistoryDb } from "./AiChatHistoryDb.js";
-import { buildDashboardUserPerm, hasFeatureAccess, getDashboardAccessConfig } from "../route/resolveDashboardAccess.js";
 import {
-  connectWallet,
-  disconnectWallet,
-  getWalletStatus,
-  getGuildTipContract,
-  registerGuildTipContract,
-  getGuildTips,
-  getGuildTipNotify,
-  setGuildTipNotify,
-  getCommunityServers,
-  getCommunityServerDetail,
-  getUserSubscriptions,
-  verifyAndClaimSubscription,
+  buildDashboardUserPerm,
+  hasFeatureAccess,
+  getDashboardAccessConfig,
+} from "../route/resolveDashboardAccess.js";
+import {
+  postPremiumUserLegacy,
+  postPremiumGuildLegacy,
+  getPremiumLegacy,
+  deletePremiumLegacy,
+  getMaintenance,
+  postMaintenance,
+  getBlacklist,
+  postBlacklist,
+  deleteBlacklist,
+} from "../route/adminLegacyPremium.js";
+import {
+  getTicketConfig,
+  postTicketToggle,
+  getTicketGuildData,
+  postTicketSetup,
+  deleteTicketSetup,
+  getTicketHistory,
+  postCloseTicket,
+  postDeleteTicket,
+  putTicketSetup,
+  deleteAllTicketData,
+  postHelpdeskSend,
+  postHelperSend,
+  getHelpdeskConfig,
+  deleteHelpdeskDeploy,
+  getHelperConfig,
+  deleteHelperDeploy,
+} from "../route/adminHelpdesk.js";
+import {
+  getPremiumUserStatus,
+} from "../route/premiumClaim.js";
+import {
+  getWalletNonce,
+  postWalletBind,
+  getWalletBinding,
+  deleteWalletUnbind,
+} from "../route/wallet.js";
+import {
+  getCommunityGuilds,
+  getCommunityGuildDetail,
+  postCommunityTip,
+} from "../route/community.js";
+import { getCommunityGuildHistory } from "../route/community.js";
+import {
+  postGuildContract,
+  getGuildContract,
+  getGuildOwnerWallet,
+} from "../route/guildContract.js";
+import {
+  postWeb3PremiumActivate,
   getWeb3PremiumStatus,
-  activateGuildPremium,
-  deactivateGuildPremium,
-  getGuildWeb3Overview,
-  getAdminPlatformStats,
-  getCommunityServerInvite,
-} from "../route/web3Routes.js";
+  postWeb3PremiumClaim,
+  postWeb3PremiumUnclaim,
+} from "../route/web3Premium.js";
+import { normalizeTrackMetadata, buildLyricsQueries } from "../../utilities/NormalizeTrackMetadata.js";
 
 declare module "@fastify/session" {
   interface FastifySessionObject {
@@ -51,11 +91,9 @@ declare module "@fastify/session" {
       id: string;
       name: string;
       icon: string | null;
-      permissions?: string;
-      permissions_new?: string;
+      permissions: string;
       owner: boolean;
     }>;
-    guildsFetchRetryAt?: number;
     oauthState?: string;
   }
 }
@@ -68,6 +106,13 @@ async function requireAuth(req: FastifyRequest, reply: FastifyReply): Promise<vo
 
 const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify, opts) => {
   const { client } = opts;
+  const normalizeOrigin = (value: string): string => {
+    try {
+      return new URL(value).origin;
+    } catch {
+      return value.replace(/\/+$/, "");
+    }
+  };
 
   function proxyError(err: unknown, reply: FastifyReply, fallback: string): void {
     const e = err as any;
@@ -106,6 +151,14 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
   const REDIRECT_URI =
     client.config.features.RestAPI?.DiscordRedirectUri ||
     `http://localhost:${port}/auth/discord/callback`;
+  const frontendUrlObj = (() => {
+    try {
+      return new URL(FRONTEND_URL);
+    } catch {
+      client.logger.warn("DashboardPlugin", `Invalid FRONTEND_URL config: ${FRONTEND_URL}`);
+      return null;
+    }
+  })();
 
   const discordOAuth = createDiscordOAuth({
     clientId: CLIENT_ID,
@@ -114,16 +167,14 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     botToken: client.config.bot.TOKEN,
   });
 
-  const apiHostname = new URL(FRONTEND_URL).hostname;
+  const apiHostname = frontendUrlObj?.hostname ?? "localhost";
   const botApi = axios.create({
     baseURL: `http://127.0.0.1:${port}/v1`,
     headers: { Authorization: apiToken, Host: apiHostname },
     timeout: 15_000,
   });
 
-  // AI Chat artwork: try free APIs first (Deezer, iTunes), fallback to bot search (Spotify)
   const aiSearchFn = async (query: string): Promise<{ thumbnail: string | null } | null> => {
-    // 1. Deezer (free, no key)
     try {
       const { data } = await axios.get("https://api.deezer.com/search", {
         params: { q: query, limit: 1 },
@@ -132,21 +183,22 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
       const track = data?.data?.[0];
       const thumb = track?.album?.cover_big || track?.album?.cover_medium || track?.album?.cover;
       if (thumb) return { thumbnail: thumb };
-    } catch { /* continue */ }
+    } catch {
+      /* continue */
+    }
 
-    // 2. iTunes / Apple Music (free, no key)
     try {
       const { data } = await axios.get("https://itunes.apple.com/search", {
         params: { term: query, media: "music", limit: 1 },
         timeout: 4_000,
       });
       const result = data?.results?.[0];
-      // Replace 100x100 with 600x600 for better quality
       const thumb = result?.artworkUrl100?.replace("100x100", "600x600") || result?.artworkUrl60;
       if (thumb) return { thumbnail: thumb };
-    } catch { /* continue */ }
+    } catch {
+      /* continue */
+    }
 
-    // 3. Bot search API (Spotify — may have rate limits)
     try {
       const { data } = await botApi.get("/search", {
         params: { identifier: query, source: "spotify" },
@@ -154,7 +206,9 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
       });
       const track = data?.tracks?.[0];
       if (track?.thumbnail) return { thumbnail: track.thumbnail };
-    } catch { /* continue */ }
+    } catch {
+      /* continue */
+    }
 
     return null;
   };
@@ -166,13 +220,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
   };
 
   const isProd = process.env["NODE_ENV"] === "production";
-  const frontendHostname = (() => {
-    try {
-      return new URL(FRONTEND_URL).hostname;
-    } catch {
-      return "";
-    }
-  })();
+  const frontendHostname = frontendUrlObj?.hostname ?? "";
   const isCrossSite =
     frontendHostname !== "localhost" && frontendHostname !== "127.0.0.1" && isProd;
 
@@ -181,20 +229,24 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     `isProd=${isProd} | crossSite=${isCrossSite} | NODE_ENV=${process.env["NODE_ENV"] ?? "unset"} | FRONTEND_URL=${FRONTEND_URL} | REDIRECT_URI=${REDIRECT_URI}`
   );
 
-  const allowedOrigins = new Set<string>([FRONTEND_URL]);
+  const allowedOrigins = new Set<string>([normalizeOrigin(FRONTEND_URL)]);
   if (!isProd) {
     allowedOrigins.add("http://localhost:3000");
     allowedOrigins.add("http://localhost:3001");
   }
+  const isOriginAllowed = (origin?: string): boolean => {
+    if (!origin) return true;
+    return allowedOrigins.has(normalizeOrigin(origin));
+  };
 
   fastify.register(fastifyCors, {
     origin: (origin, cb) => {
-      if (!origin || allowedOrigins.has(origin)) return cb(null, true);
+      if (isOriginAllowed(origin)) return cb(null, true);
       // client.logger.warn("DashboardPlugin", `CORS rejected origin: ${origin}`);
       cb(new Error("CORS: Not allowed"), false);
     },
     credentials: true,
-    methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   });
 
@@ -215,8 +267,32 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
 
   fastify.addHook("onReady", async () => {
     const io = new SocketIOServer(fastify.server, {
-      cors: { origin: FRONTEND_URL, credentials: true },
+      cors: {
+        origin: (origin, cb) => cb(null, isOriginAllowed(origin)),
+        credentials: true,
+      },
+      pingInterval: 10_000,
+      pingTimeout: 8_000,
+      transports: ["polling", "websocket"],
+      allowUpgrades: true,
     });
+
+    type UpgradeListener = (...args: any[]) => void;
+    const listeners = [...fastify.server.listeners("upgrade")] as UpgradeListener[];
+    if (listeners.length > 1) {
+      fastify.server.removeAllListeners("upgrade");
+      const socketIoListener = listeners.pop() as UpgradeListener;
+      const nonSocketIoListeners = listeners;
+
+      fastify.server.on("upgrade", (...args: any[]) => {
+        const reqUrl = String(args[0]?.url ?? "");
+        if (reqUrl.startsWith("/socket.io")) {
+          socketIoListener(...args);
+          return;
+        }
+        for (const fn of nonSocketIoListeners) fn(...args);
+      });
+    }
 
     client.dashboardEmit = (guildId, event, data) => io.to(`guild:${guildId}`).emit(event, data);
 
@@ -261,7 +337,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
         req.session.user = user;
         req.session.accessToken = accessToken;
         req.session.guilds = guilds;
-        await UserProfileService.recordLogin(user.id, user);
+        await UserProfileService.recordLogin(user.id);
         await req.session.save();
         return reply.redirect(`${FRONTEND_URL}/servers`);
       } catch (err) {
@@ -275,7 +351,9 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     if (!req.session.user) {
       return reply.code(401).send({ error: "Not authenticated." });
     }
-    return req.session.user;
+    const userId = req.session.user.id;
+    const isAdmin = client.config.bot.ADMIN.includes(userId) || client.config.bot.OWNER_ID === userId;
+    return { ...req.session.user, isAdmin };
   });
 
   fastify.get("/auth/debug", async (req, reply) => {
@@ -301,117 +379,6 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     };
   });
 
-  // Privy-based login: frontend sends Discord user info from Privy user object
-  // Accepts either { accessToken } (Discord OAuth token) or { discordId, username, avatar }
-  // Returns immediately after user validation; guild list is resolved lazily on /api/guilds
-  fastify.post<{ Body: { accessToken?: string; discordId?: string; username?: string; avatar?: string | null; globalName?: string | null } }>(
-    "/auth/privy-session",
-    async (req, reply) => {
-      const { accessToken, discordId, username, avatar, globalName } = req.body ?? {};
-
-      try {
-        let user: import("./DiscordOAuth.js").DiscordUser | undefined;
-        let guilds = [...(req.session.guilds ?? [])];
-
-        // Path A: Trust Privy identity first to avoid repeated Discord API calls.
-        if (discordId && username) {
-          user = {
-            id: discordId,
-            username,
-            discriminator: "0",
-            avatar: avatar ?? null,
-            global_name: globalName ?? null,
-          };
-
-          // Reuse previously persisted identity to keep avatar/display name stable
-          // across backend restarts even when Discord APIs are rate-limited.
-          const savedProfile = await UserProfileService.getProfile(discordId).catch(() => undefined);
-          if (savedProfile) {
-            user = {
-              ...user,
-              username: savedProfile.username || user.username,
-              discriminator: savedProfile.discriminator || user.discriminator,
-              avatar: savedProfile.avatar ?? user.avatar,
-              global_name: savedProfile.global_name ?? user.global_name,
-            };
-          }
-
-          // If OAuth access token is available, prefer /users/@me to hydrate latest identity.
-          if (accessToken && typeof accessToken === "string") {
-            try {
-              const oauthUser = await discordOAuth.fetchUser(accessToken);
-              user = {
-                ...user,
-                username: oauthUser.username || user.username,
-                discriminator: oauthUser.discriminator || user.discriminator,
-                avatar: oauthUser.avatar ?? user.avatar,
-                global_name: oauthUser.global_name ?? user.global_name,
-              };
-            } catch {
-              // keep fallback identity
-            }
-          }
-
-          // Enrich avatar/display name from Discord when possible.
-          // If this fails (network/rate limit), keep Privy identity fallback.
-          try {
-            const discordUser = await discordOAuth.fetchUserById(discordId);
-            user = {
-              ...user,
-              username: discordUser.username || user.username,
-              discriminator: discordUser.discriminator || user.discriminator,
-              avatar: discordUser.avatar ?? user.avatar,
-              global_name: discordUser.global_name ?? user.global_name,
-            };
-          } catch {
-            // keep fallback user from Privy payload
-          }
-        }
-
-        // Path B: Fallback to Discord /users/@me when identity is missing.
-        if (!user && accessToken && typeof accessToken === "string") {
-          try {
-            user = await discordOAuth.fetchUser(accessToken);
-          } catch {
-            client.logger.warn("DashboardPlugin", "Privy Discord token rejected and no Privy identity payload.");
-          }
-        }
-
-        // Try to hydrate guild list when token exists and cache is empty.
-        // Never fail session creation if Discord API is rate-limited.
-        if (accessToken && typeof accessToken === "string" && guilds.length === 0) {
-          try {
-            guilds = await discordOAuth.fetchUserGuilds(accessToken);
-          } catch (err) {
-            const e = err as any;
-            const retryAfter = Number(e?.response?.data?.retry_after);
-            if (Number.isFinite(retryAfter) && retryAfter > 0) {
-              req.session.guildsFetchRetryAt = Date.now() + retryAfter;
-            }
-          }
-        }
-
-        if (!user) {
-          return reply.code(400).send({ error: "Missing accessToken or discordId+username." });
-        }
-
-        req.session.user = user;
-        if (accessToken && typeof accessToken === "string") {
-          req.session.accessToken = accessToken;
-        }
-        req.session.guilds = guilds;
-        if (guilds.length > 0) req.session.guildsFetchRetryAt = undefined;
-        client.logger.info("DashboardPlugin", `Privy session created: userId=${user.id} username=${user.username} guilds=${guilds.length}`);
-        await UserProfileService.recordLogin(user.id, user);
-        await req.session.save();
-        return { ok: true, user, hasGuilds: guilds.length > 0 };
-      } catch (err) {
-        client.logger.error("DashboardPlugin", `Privy session error: ${err}`);
-        return reply.code(500).send({ error: "Failed to create session." });
-      }
-    }
-  );
-
   fastify.post("/auth/logout", async (req, reply) => {
     req.session.destroy();
     return { ok: true };
@@ -419,74 +386,19 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
 
   fastify.get("/api/guilds", { preHandler: requireAuth }, async (req, reply) => {
     try {
-      let userGuilds = req.session.guilds ?? [];
-      const now = Date.now();
-      const guildsRetryAt = req.session.guildsFetchRetryAt ?? 0;
-
-      // Prefer Discord OAuth guild list when access token exists but guild cache is empty.
-      // This enables Privy single-login flow to populate inviteable servers without re-login.
-      if (userGuilds.length === 0 && req.session.accessToken && now >= guildsRetryAt) {
-        try {
-          userGuilds = await discordOAuth.fetchUserGuilds(req.session.accessToken);
-          req.session.guilds = userGuilds;
-          req.session.guildsFetchRetryAt = undefined;
-          await req.session.save();
-        } catch (err) {
-          const e = err as any;
-          const retryAfter = Number(e?.response?.data?.retry_after);
-          req.session.guildsFetchRetryAt =
-            Date.now() + (Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60_000);
-          await req.session.save();
-          // Token may be missing guilds scope or currently rate-limited; fallback below.
-        }
-      }
-
-      // Lazy-resolve guild membership for Privy sessions that skipped guild check
-      if (userGuilds.length === 0 && req.session.user) {
-        try {
-          const userId = req.session.user.id;
-          const memberGuilds: typeof userGuilds = [];
-          const checks = Array.from(client.guilds.cache.values()).map(async (guild) => {
-            try {
-              const member = await guild.members.fetch(userId);
-              if (member) {
-                memberGuilds.push({
-                  id: guild.id,
-                  name: guild.name,
-                  icon: guild.icon,
-                  permissions: member.permissions.bitfield.toString(),
-                  owner: guild.ownerId === userId,
-                });
-              }
-            } catch {
-              // User not in this guild, skip
-            }
-          });
-          await Promise.allSettled(checks);
-          userGuilds = memberGuilds;
-          // Cache in session for subsequent requests
-          req.session.guilds = userGuilds;
-          await req.session.save();
-        } catch {
-          client.logger.warn("DashboardPlugin", "Lazy guild resolve failed");
-        }
-      }
+      const userGuilds = req.session.guilds ?? [];
 
       const botGuildIds = new Set(client.guilds.cache.keys());
+
       const MANAGE_GUILD = BigInt(0x20);
 
       return userGuilds
         .filter((g) => {
           if (botGuildIds.has(g.id)) return true;
-          if (g.owner) return true;
-          const permissionBits =
-            (g as { permissions?: string; permissions_new?: string }).permissions ??
-            (g as { permissions?: string; permissions_new?: string }).permissions_new;
-          if (!permissionBits) return true;
           try {
-            return (BigInt(permissionBits) & MANAGE_GUILD) !== BigInt(0);
+            return (BigInt(g.permissions ?? "0") & MANAGE_GUILD) !== BigInt(0);
           } catch {
-            return true;
+            return false;
           }
         })
         .map((g) => ({
@@ -556,6 +468,38 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
         return data;
       } catch (err) {
         proxyError(err, reply, "Failed to check voice status.");
+      }
+    }
+  );
+
+  // Daftar semua member di Voice Channel bot (untuk Listening Party)
+  fastify.get<{ Params: { guildId: string } }>(
+    "/api/guilds/:guildId/voice-members",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      try {
+        const guild = client.guilds.cache.get(req.params.guildId);
+        if (!guild) return reply.code(404).send({ error: "Guild not found." });
+
+        const player = client.mewslink?.players.get(req.params.guildId);
+        const botVoiceChannelId = guild.members.me?.voice.channelId ?? player?.voiceId;
+        if (!botVoiceChannelId) return reply.send({ members: [] });
+
+        const channel = guild.channels.cache.get(botVoiceChannelId);
+        if (!channel || !channel.isVoiceBased()) return reply.send({ members: [] });
+
+        const members = channel.members
+          .filter((m) => !m.user.bot)
+          .map((m) => ({
+            userId: m.id,
+            username: m.user.username,
+            globalName: m.user.globalName ?? null,
+            avatarURL: m.user.displayAvatarURL({ size: 64 }),
+          }));
+
+        return reply.send({ members });
+      } catch (err) {
+        proxyError(err, reply, "Failed to fetch voice members.");
       }
     }
   );
@@ -662,7 +606,6 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     }
   );
 
-
   fastify.post<{ Body: { message?: string; guildId?: string } }>(
     "/api/ai-chat",
     { preHandler: requireAuth },
@@ -670,12 +613,15 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
       const { message, guildId } = req.body ?? {};
       if (!message?.trim()) return reply.code(400).send({ error: "message is required." });
       if (!client.config.GeminiAiChat?.Enable) {
-        return reply.code(503).send({ error: "Oops! I’m napping… AI Chat is unavailable for now 😴" });
+        return reply
+          .code(503)
+          .send({ error: "Oops! I’m napping… AI Chat is unavailable for now 😴" });
       }
 
       const userId = req.session.user!.id;
       const dashCfg = getDashboardAccessConfig(client);
-      const aiChatAccess = (dashCfg as any).AiChat ?? (client.config.DASHBOARD_ACCESS as any)?.AiChat ?? ["Member"];
+      const aiChatAccess = (dashCfg as any).AiChat ??
+        (client.config.DASHBOARD_ACCESS as any)?.AiChat ?? ["Member"];
       const perm = await buildDashboardUserPerm(client, userId, guildId);
       if (!hasFeatureAccess(aiChatAccess, perm)) {
         const requiredLevel = Array.isArray(aiChatAccess) ? aiChatAccess[0] : "Premium";
@@ -689,7 +635,10 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
           errorMsg = "To use AI Chat, please vote for the bot first! It's quick and free";
           actionUrl = `https://top.gg/bot/${client.user?.id}/vote`;
           actionLabel = "Vote Now";
-        } else if (requiredLevel === "Premium") {
+        } else if (
+          requiredLevel === "Premium" ||
+          requiredLevel === "Web3Premium"
+        ) {
           errorMsg = "AI Chat is a premium feature. Upgrade to premium to unlock it!";
           actionUrl = "/premium";
           actionLabel = "Get Premium";
@@ -720,35 +669,27 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     }
   );
 
-  fastify.get(
-    "/api/ai-chat/history",
-    { preHandler: requireAuth },
-    async (req, reply) => {
-      const userId = req.session.user!.id;
-      try {
-        const messages = await getAiChatHistoryDb().getHistory(userId, 20);
-        return { messages };
-      } catch (err) {
-        client.logger.error("AiChatHistory", `Failed to load history: ${err}`);
-        return reply.code(500).send({ error: "Failed to load chat history." });
-      }
+  fastify.get("/api/ai-chat/history", { preHandler: requireAuth }, async (req, reply) => {
+    const userId = req.session.user!.id;
+    try {
+      const messages = await getAiChatHistoryDb().getHistory(userId, 20);
+      return { messages };
+    } catch (err) {
+      client.logger.error("AiChatHistory", `Failed to load history: ${err}`);
+      return reply.code(500).send({ error: "Failed to load chat history." });
     }
-  );
+  });
 
-  fastify.post(
-    "/api/ai-chat/clear",
-    { preHandler: requireAuth },
-    async (req, reply) => {
-      const userId = req.session.user!.id;
-      try {
-        await getAiChatHistoryDb().clearHistory(userId);
-        return { success: true };
-      } catch (err) {
-        client.logger.error("AiChatClear", `Failed to clear history: ${err}`);
-        return reply.code(500).send({ error: "Failed to clear chat history." });
-      }
+  fastify.post("/api/ai-chat/clear", { preHandler: requireAuth }, async (req, reply) => {
+    const userId = req.session.user!.id;
+    try {
+      await getAiChatHistoryDb().clearHistory(userId);
+      return { success: true };
+    } catch (err) {
+      client.logger.error("AiChatClear", `Failed to clear history: ${err}`);
+      return reply.code(500).send({ error: "Failed to clear chat history." });
     }
-  );
+  });
 
   fastify.get("/api/stats", { preHandler: requireAuth }, async (req, reply) => {
     const userId = req.session.user!.id;
@@ -786,6 +727,15 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
       return data;
     } catch (err) {
       proxyError(err, reply, "Failed to fetch global stats.");
+    }
+  });
+
+  fastify.get("/api/system-status", async (_req, reply) => {
+    try {
+      const { data } = await botApi.get("/system-status");
+      return data;
+    } catch (err) {
+      proxyError(err, reply, "Failed to fetch system status.");
     }
   });
 
@@ -955,10 +905,12 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
         );
         return data;
       } catch (err) {
-        proxyError(err, reply, "Failed to play track.");
+        proxyError(err, reply, "Failed to play playlist track.");
       }
     }
   );
+
+
 
   fastify.get<{ Params: { guildId: string } }>(
     "/api/guild/:guildId/settings",
@@ -1247,6 +1199,116 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     }
   );
 
+
+  fastify.get(
+    "/api/premium/status",
+    { preHandler: requireAuth },
+    async (req, reply) => getPremiumUserStatus(client, req, reply)
+  );
+
+  // ── Web3 Wallet Routes ──
+  fastify.get(
+    "/api/wallet/nonce",
+    { preHandler: requireAuth },
+    async (req, reply) => getWalletNonce(client, req, reply)
+  );
+
+  fastify.post(
+    "/api/wallet/bind",
+    { preHandler: requireAuth },
+    async (req, reply) => postWalletBind(client, req, reply)
+  );
+
+  fastify.get(
+    "/api/wallet/binding",
+    { preHandler: requireAuth },
+    async (req, reply) => getWalletBinding(client, req, reply)
+  );
+
+  fastify.delete(
+    "/api/wallet/unbind",
+    { preHandler: requireAuth },
+    async (req, reply) => deleteWalletUnbind(client, req, reply)
+  );
+
+  // ── Community Routes ──
+  fastify.get(
+    "/api/community/guilds",
+    async (req, reply) => getCommunityGuilds(client, req, reply)
+  );
+
+  fastify.get(
+    "/api/community/guild/:guildId",
+    async (req, reply) => getCommunityGuildDetail(client, req, reply)
+  );
+
+  fastify.post(
+    "/api/community/guild/:guildId/tip",
+    { preHandler: requireAuth },
+    async (req, reply) => postCommunityTip(client, req, reply)
+  );
+
+  fastify.get(
+    "/api/community/guild/:guildId/history",
+    async (req, reply) => getCommunityGuildHistory(client, req, reply)
+  );
+
+  // ── Guild Contract Routes ──
+  fastify.get(
+    "/api/guild/:guildId/owner-wallet",
+    { preHandler: requireAuth },
+    async (req, reply) => getGuildOwnerWallet(client, req, reply)
+  );
+
+  fastify.post(
+    "/api/guild/:guildId/contract",
+    { preHandler: requireAuth },
+    async (req, reply) => postGuildContract(client, req, reply)
+  );
+
+  fastify.get(
+    "/api/guild/:guildId/contract",
+    { preHandler: requireAuth },
+    async (req, reply) => getGuildContract(client, req, reply)
+  );
+
+  // ── Web3 Premium Routes ──
+  fastify.post(
+    "/api/premium/web3/activate",
+    { preHandler: requireAuth },
+    async (req, reply) => postWeb3PremiumActivate(client, req, reply)
+  );
+
+  fastify.get(
+    "/api/premium/web3/status",
+    { preHandler: requireAuth },
+    async (req, reply) => getWeb3PremiumStatus(client, req, reply)
+  );
+
+  fastify.post(
+    "/api/premium/web3/claim",
+    { preHandler: requireAuth },
+    async (req, reply) => postWeb3PremiumClaim(client, req, reply)
+  );
+
+  fastify.post(
+    "/api/premium/web3/unclaim",
+    { preHandler: requireAuth },
+    async (req, reply) => postWeb3PremiumUnclaim(client, req, reply)
+  );
+
+  // ── Somnia Config Route ──
+  fastify.get("/api/somnia/config", async (req, reply) => {
+    const somniaConfig = client.config.Somnia;
+    return reply.send({
+      chainId: somniaConfig?.ChainId || 50312,
+      rpcUrl: somniaConfig?.RpcUrl || "https://dream-rpc.somnia.network",
+      explorerUrl: somniaConfig?.ExplorerUrl || "https://shannon-explorer.somnia.network",
+      currencySymbol: somniaConfig?.CurrencySymbol || "STT",
+      tipJarFactoryAddress: somniaConfig?.TipJarFactoryAddress || "",
+    });
+  });
+
   fastify.get("/api/liked", { preHandler: requireAuth }, async (req, reply) => {
     return LikedSongsService.get(req.session.user!.id);
   });
@@ -1317,7 +1379,6 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
     }
   });
 
-  // ── Genre / Tag Charts (Last.fm chart.getTopTags + tag.getTopTracks) ──────
   let topTagsCache: { data: unknown[]; expiresAt: number } | null = null;
   const tagTracksCache = new Map<string, { data: unknown[]; expiresAt: number }>();
 
@@ -1371,7 +1432,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
           limit: "30",
         });
         const { data } = await axios.get(`https://ws.audioscrobbler.com/2.0/?${params}`, {
-          timeout: 8_000,
+          timeout: 15_000,
         });
         const rawTracks = data?.tracks?.track || [];
 
@@ -1384,12 +1445,11 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
             searchQuery: `${t.artist.name} - ${t.name}`,
           }));
 
-        // Fetch album art: iTunes → Deezer fallback (both free, no key)
         if (tracks.length > 0) {
           const itunesSearch = async (term: string): Promise<string | null> => {
             const res = await axios.get("https://itunes.apple.com/search", {
               params: { term, media: "music", limit: 1 },
-              timeout: 5_000,
+              timeout: 10_000,
             });
             const art = res.data?.results?.[0]?.artworkUrl100;
             return art ? art.replace("100x100", "600x600") : null;
@@ -1397,7 +1457,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
           const deezerSearch = async (term: string): Promise<string | null> => {
             const res = await axios.get("https://api.deezer.com/search", {
               params: { q: term, limit: 1 },
-              timeout: 5_000,
+              timeout: 10_000,
             });
             return res.data?.data?.[0]?.album?.cover_big ?? null;
           };
@@ -1468,7 +1528,7 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
           ...extra,
         });
         return axios
-          .get(`${lfmBase}?${params}`, { timeout: 8_000 })
+          .get(`${lfmBase}?${params}`, { timeout: 15_000 })
           .then((r) => r.data)
           .catch(() => null);
       };
@@ -1620,13 +1680,37 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
 
         const durationSec = Math.round(song.duration / 1000);
 
-        const { data: results } = await axios.get<LrclibRecord[]>("https://lrclib.net/api/search", {
-          params: { track_name: song.title, artist_name: song.author },
-          headers: { "User-Agent": "mewwme-dashboard/1.0 (https://meww.me)" },
-          timeout: 8_000,
-        });
+        // Normalize YouTube metadata for better lrclib matching
+        const normalized = normalizeTrackMetadata(
+          song.title ?? "",
+          song.author ?? "",
+          (song as any).source ?? ""
+        );
+        const queries = buildLyricsQueries(
+          normalized.artist,
+          normalized.trackName,
+          song.title ?? ""
+        );
 
-        if (!Array.isArray(results) || results.length === 0) {
+        // Try each query variant until we get results
+        let results: LrclibRecord[] = [];
+        for (const q of queries) {
+          try {
+            const { data } = await axios.get<LrclibRecord[]>("https://lrclib.net/api/search", {
+              params: { track_name: q.track_name, artist_name: q.artist_name || undefined },
+              headers: { "User-Agent": "mewwme-dashboard/1.0 (https://meww.me)" },
+              timeout: 15_000,
+            });
+            if (Array.isArray(data) && data.length > 0) {
+              results = data;
+              break;
+            }
+          } catch {
+            // try next query variant
+          }
+        }
+
+        if (results.length === 0) {
           return reply.code(404).send({ error: "No lyrics found for this track." });
         }
 
@@ -1924,39 +2008,231 @@ const dashboardPlugin: FastifyPluginAsync<{ client: Manager }> = async (fastify,
       }
     }
   );
+  fastify.post(
+    "/api/admin/premium/user",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postPremiumUserLegacy(client, req, reply);
+    }
+  );
 
-  // ─── Web3 Routes ───
-  // Wallet management (session-authenticated)
-  fastify.get("/api/wallet", { preHandler: requireAuth }, (req, reply) => getWalletStatus(client, req, reply));
-  fastify.post("/api/wallet/connect", { preHandler: requireAuth }, (req, reply) => connectWallet(client, req, reply));
-  fastify.post("/api/wallet/disconnect", { preHandler: requireAuth }, (req, reply) => disconnectWallet(client, req, reply));
+  fastify.post(
+    "/api/admin/premium/guild",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postPremiumGuildLegacy(client, req, reply);
+    }
+  );
 
-  // Web3 subscriptions (session-authenticated)
-  fastify.get("/api/web3/subscriptions", { preHandler: requireAuth }, (req, reply) => getUserSubscriptions(client, req, reply));
+  fastify.get(
+    "/api/admin/premium",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.query = { ...(req.query as any), userId: req.session.user!.id };
+      return getPremiumLegacy(client, req, reply);
+    }
+  );
 
-  // Guild tip contract management (session-authenticated)
-  fastify.get("/api/web3/guild/:guildId/contract", (req, reply) => getGuildTipContract(client, req, reply));
-  fastify.post("/api/web3/guild/contract", { preHandler: requireAuth }, (req, reply) => registerGuildTipContract(client, req, reply));
-  fastify.get("/api/web3/guild/:guildId/tip-notify", (req, reply) => getGuildTipNotify(client, req, reply));
-  fastify.patch("/api/web3/guild/:guildId/tip-notify", { preHandler: requireAuth }, (req, reply) => setGuildTipNotify(client, req, reply));
-  fastify.get("/api/web3/guild/:guildId/tips", (req, reply) => getGuildTips(client, req, reply));
+  fastify.delete(
+    "/api/admin/premium",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return deletePremiumLegacy(client, req, reply);
+    }
+  );
 
-  // Community pages (public)
-  fastify.get("/api/community/servers", (req, reply) => getCommunityServers(client, req, reply));
-  fastify.get("/api/community/servers/:guildId/invite", (req, reply) => getCommunityServerInvite(client, req, reply));
-  fastify.get("/api/community/servers/:guildId", (req, reply) => getCommunityServerDetail(client, req, reply));
+  fastify.get(
+    "/api/admin/maintenance",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.query = { ...(req.query as any), userId: req.session.user!.id };
+      return getMaintenance(client, req, reply);
+    }
+  );
 
-  // Web3 verify & claim (session-authenticated)
-  fastify.post("/api/web3/verify-subscription", { preHandler: requireAuth }, (req, reply) => verifyAndClaimSubscription(client, req, reply));
+  fastify.post(
+    "/api/admin/maintenance",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postMaintenance(client, req, reply);
+    }
+  );
 
-  // Web3 Premium Guild Activation
-  fastify.get("/api/web3/premium-status", { preHandler: requireAuth }, (req, reply) => getWeb3PremiumStatus(client, req, reply));
-  fastify.post("/api/web3/guild/activate", { preHandler: requireAuth }, (req, reply) => activateGuildPremium(client, req, reply));
-  fastify.post("/api/web3/guild/deactivate", { preHandler: requireAuth }, (req, reply) => deactivateGuildPremium(client, req, reply));
-  fastify.get("/api/web3/guild/:guildId/overview", { preHandler: requireAuth }, (req, reply) => getGuildWeb3Overview(client, req, reply));
+  fastify.get(
+    "/api/admin/blacklist",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.query = { ...(req.query as any), userId: req.session.user!.id };
+      return getBlacklist(client, req, reply);
+    }
+  );
 
-  // Admin platform stats (session-authenticated, admin-only check inside handler)
-  fastify.get("/api/admin/platform-stats", { preHandler: requireAuth }, (req, reply) => getAdminPlatformStats(client, req, reply));
+  fastify.post(
+    "/api/admin/blacklist",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postBlacklist(client, req, reply);
+    }
+  );
+
+  fastify.delete(
+    "/api/admin/blacklist",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return deleteBlacklist(client, req, reply);
+    }
+  );
+
+
+  fastify.get(
+    "/api/admin/ticket/config",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.query = { ...(req.query as any), userId: req.session.user!.id };
+      return getTicketConfig(client, req, reply);
+    }
+  );
+
+  fastify.post(
+    "/api/admin/ticket/toggle",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postTicketToggle(client, req, reply);
+    }
+  );
+
+  fastify.get(
+    "/api/admin/ticket/guild-data",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.query = { ...(req.query as any), userId: req.session.user!.id };
+      return getTicketGuildData(client, req, reply);
+    }
+  );
+
+  fastify.post(
+    "/api/admin/ticket/setup",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postTicketSetup(client, req, reply);
+    }
+  );
+
+  fastify.delete(
+    "/api/admin/ticket/setup",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return deleteTicketSetup(client, req, reply);
+    }
+  );
+
+  fastify.get(
+    "/api/admin/ticket/history",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.query = { ...(req.query as any), userId: req.session.user!.id };
+      return getTicketHistory(client, req, reply);
+    }
+  );
+
+  fastify.post(
+    "/api/admin/ticket/close",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postCloseTicket(client, req, reply);
+    }
+  );
+
+  fastify.post(
+    "/api/admin/ticket/delete",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postDeleteTicket(client, req, reply);
+    }
+  );
+
+  fastify.put(
+    "/api/admin/ticket/setup",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return putTicketSetup(client, req, reply);
+    }
+  );
+
+  fastify.delete(
+    "/api/admin/ticket/all",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return deleteAllTicketData(client, req, reply);
+    }
+  );
+
+  fastify.post(
+    "/api/admin/helpdesk/send",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postHelpdeskSend(client, req, reply);
+    }
+  );
+
+  fastify.post(
+    "/api/admin/helper/send",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return postHelperSend(client, req, reply);
+    }
+  );
+
+  fastify.get(
+    "/api/admin/helpdesk/config",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.query = { ...(req.query as any), userId: req.session.user!.id };
+      return getHelpdeskConfig(client, req, reply);
+    }
+  );
+
+  fastify.delete(
+    "/api/admin/helpdesk/deploy",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return deleteHelpdeskDeploy(client, req, reply);
+    }
+  );
+
+  fastify.get(
+    "/api/admin/helper/config",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.query = { ...(req.query as any), userId: req.session.user!.id };
+      return getHelperConfig(client, req, reply);
+    }
+  );
+
+  fastify.delete(
+    "/api/admin/helper/deploy",
+    { preHandler: requireAuth },
+    async (req, reply) => {
+      req.body = { ...(req.body as any), userId: req.session.user!.id };
+      return deleteHelperDeploy(client, req, reply);
+    }
+  );
 
   client.logger.info("DashboardPlugin", "Dashboard routes registered (port " + port + ")");
 };

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "PRÁVĚ HRAJE"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Autor"
+track_requested_by: "Vyžádal"
+track_duration: "Délka"
+no_same_voice: "Nejste ve stejném hlasovém kanálu jako já!"
+filter_already: "**Filtr %{name} je již povolen**"
+filter_reset_on: "**Filtr byl resetován**"
+filter_reset_already: "**Filtr již byl resetován**"
+no_player_filter: "**Nemohu použít filtr!**"
+filter_menu_on: "**Filtr %{name} zapnut!**"
+
+player_get_exception: "Jejda! Vypadá to, že je problém se skladbou. Mám to zkusit znovu?"
+player_track_error: "Skladba měla problém, můžete to prosím zkusit ještě jednou?"
+player_track_stuck: "Je mi smutno :(, skladba se zasekla. Možná nám opakování zvedne náladu?"
+queue_end_desc: "Všechny skladby jsou přehrány! Potřebujete další beaty?\nPoužijte **/play** a pokračujte v párty!"
+
+leave_pause: "Vzhledem k tomu, že jste mě tu nechali samotného :( Přehrávač byl pozastaven."
+leave_resume: "Vzhledem k tomu, že se ke mně někdo připojil, přehrávač byl obnoven."
+
+player_end: "Kanál byl téměř 15 minut prázdný, takže jsem se rozhodl odejít, protože nemám rád, když jsem sám"
+
+### Last FM Scrobble ###
+expired_login_session: "Vaše relace Last.fm vypršela nebo je neplatná.\nProsím znovu se ověřte, abyste mohli pokračovat v používání funkce scrobble."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Ti, kdo chtějí zpívat, vždy najdou písničku ♪"
+milestone_track_desc: |
+  ## JÉ, ahoj
+  Poslechli jste si **%{total}** skladeb! Je váš playlist nekonečný, nebo jste prostě tak hudebně posedlí?
+

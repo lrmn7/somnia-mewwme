@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "Etkin"
+disable: "Devre Disi"
+
+# maintenance
+maintenance_title: "Bakim"
+maintenance_desc: |
+  %{bot} su anda bakim altindadir. Lutfen daha sonra tekrar deneyin.
+  Daha fazla bilgi icin lutfen [destek sunucumuza](%{serversupport}) katilbin. Tesekkurler!
+
+# Getting error!
+unexpected_error: "Bir seyler yanlis gitti. Lutfen daha sonra tekrar deneyin!"
+
+### Rate limit!
+ratelimit: "Cok hizli islem yapiyorsunuz. Lutfen **%{time} Saniye** bekleyin"
+
+# No permission!
+no_perms: "**%{perm}** iznim yok!\nBu komutu calistirmak icin lutfen bana **%{perm}** izni verin."
+
+no_manage_guild_perms: "Bu komut **%{perm}** izni gerektirir!\nBu komutu calistirma izniniz yok!"
+
+no_admin_perms: "Bu komut **%{perm}** izni gerektirir!\nBu komutu calistirma izniniz yok!"
+
+# No permission!
+no_perms_channel: "Bu komutu calistirmak icin %{channel} kanalinda **%{perm}** iznim yok!"
+
+# Execute when invalid
+no_node: "**Lavalink sunucusu bulunamadi. Lutfen 5 Dakika sonra tekrar deneyin**"
+
+# Client owner!
+owner_only: "Bu komut yalnizca bot **Sahibi** tarafindan calistirilabilir"
+
+# Need to join voice & same voice to use command!
+no_player: "Su anda calanan sarki yok!"
+no_same_voice: "Benimle ayni ses kanalinda degilsiniz!"
+no_in_voice: "Bir ses kanalinda degilsiniz!"
+
+# Blacklist User
+blacklist_user: "Gorunuse gore kara listedesiniz! Komut kullanma izniniz yok.\nBunun bir hata oldugunu dusunuyorsaniz lutfen **[gelistirici](%{serversupport})** ile iletisime gecin."
+
+# Blacklist Guild
+blacklist_guild: "Bu sunucu kara listede! Bu sunucuda komut kullanma izniniz yok.\nBunun bir hata oldugunu dusunuyorsaniz lutfen **[gelistirici](%{serversupport})** ile iletisime gecin."
+
+### DjRole No Permission ###
+not_dj_role: "Bu komutu kullanmak icin %{role} rolune sahip olmalisiniz."
+
+### No Premium Event!
+no_premium_button: "Premium Al"
+no_premium_author: "Premium Plan Yok"
+no_premium_desc: "Hay aksi! Gorunuse gore henuz bir premium planiniz yok. \nBu ozellige plan olmadan erisilemez."
+
+# Top.gg error
+topgg_error_author: "Top.gg Oy Hatasi"
+topgg_error_desc: "Top.gg'de oyunuzu dogrularken bir hata olustu, muhtemelen Top.gg'nin cevrimdisi olmasindan kaynaklaniyor. Lutfen 5-10 dakika icinde tekrar deneyin.\nBu sorun devam ederse, daha fazla yardim icin lutfen [destek sunucumuz](%{serversupport}) ile iletisime gecin."
+
+# Top.gg unvote
+topgg_unvote_button: "Kilidini acmak icin oy ver"
+premium_button: "Premium'a yukselt"
+topgg_unvote_author: "Oy Gerekli"
+topgg_unvote_desc: "Bu komuta erismek icin Oy vermeniz gerekiyor! Hizli ve ucretsiz.\nAlternatif olarak, bu mesaji atlamak ve ekstra ozelliklerin kilidini acmak icin [Premium Sayfamiz](%{premium}) uzerinden premium alin."
+
+### Mention Desc ###
+mention_content: "bu sunucu icin oneim `%{prefix}`\nkomutlari kullanmak icin beni etiketleyebilir veya slash komutlarimi gormek icin </help:1294325423957741598> yazabilirsiniz ♡"

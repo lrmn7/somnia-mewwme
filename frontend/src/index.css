@@ -274,3 +274,8 @@ html.lenis, html.lenis body {
   height: 4px;
   border-radius: 9999px;
 }
+
+.footer-watermark-bottom-fade {
+  mask-image: linear-gradient(to bottom, black 0%, black 68%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 68%, transparent 100%);
+}

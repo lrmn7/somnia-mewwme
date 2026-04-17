@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ La riproduzione automatica e' ora **Attivata**"
+autoplay_off: "Hmmm~~ La riproduzione automatica e' ora **Disattivata**"
+autoplay_no_song: "Nessuna canzone in riproduzione!"
+
+### Loop command!
+loop_current: "Ora la canzone corrente verra' riprodotta in loop. Goditi la ripetizione!"
+loop_all: "La coda e' ora impostata in loop. Lascia che la musica si ripeta!"
+unloop_all: "La modalita' loop e' stata disattivata. Goditi la varieta' dei brani!"
+
+### Pause command!
+pause_msg: "Musica in pausa. Prenditi una pausa e goditi il silenzio."
+
+### Resume command!
+resume_msg: "La musica e' tornata! Continuiamo a ballare ♪"
+
+previous_notfound: "Spiacente, non posso tornare piu' indietro. Nessun brano precedente trovato :("
+previous_msg: "Bene, facciamo un passo indietro! Brano precedente in arrivo <3"
+
+### Queue command!
+queue_title: "Coda in riproduzione..."
+queue_description: "**%{title} **\n\n**Resto della coda %{list_song}**"
+queue_footer: "Pagina • %{page}/%{pages} | Brani • %{queue_lang} | Durata totale • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Indovina cosa ho fatto? Ho mescolato la coda per te!"
+
+### Skip command!
+skip_msg: "Ho saltato il brano. Spero non ti dispiaccia :p"
+skip_notfound: "Ops! Sembra che non ci sia nessun brano da saltare! Continua a ballare con il brano attuale ♪"
+
+### Stop command!
+stop_msg: "La riproduzione musicale e' stata fermata. Spero ti sia divertito a ballare!"
+
+### Volume command!
+voldown_msg: "Il volume e' stato diminuito del %{volume}%. Goditi le vibrazioni piu' morbide!"
+volume_invalid: "Volume non valido. L'intervallo disponibile e' tra **1** e **100**"
+volup_msg: "Il volume e' stato aumentato del %{volume}%. Alza il ritmo!"
+volume_max: "Non posso alzare il volume oltre il 100%"
+volume_min: "Ohno~~ gia' al volume minimo!"

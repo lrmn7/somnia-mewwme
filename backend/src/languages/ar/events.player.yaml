@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "يعمل الآن"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "الفنان"
+track_requested_by: "طُلب بواسطة"
+track_duration: "المدة"
+no_same_voice: "أنت لست في نفس القناة الصوتية معي!"
+filter_already: "**فلتر %{name} مُفعّل بالفعل**"
+filter_reset_on: "**تمت إعادة تعيين الفلتر**"
+filter_reset_already: "**الفلتر مُعاد تعيينه بالفعل**"
+no_player_filter: "**لا أستطيع تطبيق فلتر!**"
+filter_menu_on: "**فلتر %{name} مُفعّل!**"
+
+player_get_exception: "أوه لا! يبدو أن هناك مشكلة في المقطع. هل تريدني أن أحاول مرة أخرى؟"
+player_track_error: "حدثت مشكلة في المقطع، هل يمكنك المحاولة مرة أخرى؟"
+player_track_stuck: "أنا حزين :(، المقطع علق. ربما إعادة المحاولة ستبهجنا؟"
+queue_end_desc: "انتهت جميع الأغاني! هل تحتاج المزيد من الإيقاعات?\nاستخدم **/play** لمواصلة الحفلة!"
+
+leave_pause: "بما أنكم تركتموني وحيداً :( تم إيقاف المشغل مؤقتاً."
+leave_resume: "بما أن شخصاً ما انضم إليّ، تم استئناف المشغل."
+
+player_end: "كانت القناة فارغة لمدة 15 دقيقة تقريباً، لذا قررت المغادرة لأنني لا أحب أن أكون وحيداً"
+
+### Last FM Scrobble ###
+expired_login_session: "انتهت صلاحية جلسة Last.fm الخاصة بك أو أنها غير صالحة.\nيرجى إعادة المصادقة لمواصلة استخدام ميزة التسجيل."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • حيث يجد من يرغب في الغناء دائماً أغنية ♪"
+milestone_track_desc: |
+  ## أوه مرحباً
+  لقد استمعت إلى **%{total}** مقطع! هل قائمة تشغيلك لا نهائية، أم أنك مهووس بالموسيقى فقط؟
+

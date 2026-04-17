@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 Bir Sunucuya Katildi!"
+leave_title: "📥 Bir Sunucudan Ayrildi!"
+guild_name: "Ad"
+guild_id: "ID"
+guild_owner: "Sahip"
+guild_member_count: "Uye sayisi"
+guild_creation_date: "Olusturulma tarihi"
+guild_join_date: "Katilma tarihi"
+current_server_count: "Mevcut sunucu sayisi"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "AY! Selam herkese ✧(≧◡≦) ♡"
+join_msg_desc: |
+  ### Beni aranizda takil icin davet ettiginiz icin tesekkurler (*≧▽≦)
+  ### komutlari kullanmak icin beni etiketleyebilirsiniz! Slash komutlarimi gormek icin </help:1088430405033656341> yazin ♡

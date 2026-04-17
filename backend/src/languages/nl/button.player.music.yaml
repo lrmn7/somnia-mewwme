@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ Autoplay is nu **Ingeschakeld**"
+autoplay_off: "Hmmm~~ Autoplay is nu **Uitgeschakeld**"
+autoplay_no_song: "Er worden geen nummers afgespeeld!"
+
+### Loop command!
+loop_current: "Het huidige nummer wordt nu herhaald. Geniet van de herhaling!"
+loop_all: "De wachtrij staat nu op herhalen. Laat de muziek op repeat spelen!"
+unloop_all: "Herhaalmodus is uitgeschakeld. Geniet van de afwisseling!"
+
+### Pause command!
+pause_msg: "Muziek is gepauzeerd. Neem een pauze en geniet van de stilte."
+
+### Resume command!
+resume_msg: "Muziek is weer aan! Laten we verdergaan met de groove ♪"
+
+previous_notfound: "Sorry, kan niet verder terug. Geen vorig nummer gevonden :("
+previous_msg: "Oké, we spoelen terug! Vorig nummer komt eraan <3"
+
+### Queue command!
+queue_title: "Wachtrij wordt afgespeeld..."
+queue_description: "**%{title} **\n\n**Rest van de wachtrij %{list_song}**"
+queue_footer: "Pagina • %{page}/%{pages} | Nummers • %{queue_lang} | Totale duur • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Raad eens wat ik heb gedaan? Ik heb de wachtrij voor je geschud!"
+
+### Skip command!
+skip_msg: "Ik heb het nummer overgeslagen. Ik hoop dat je het niet erg vindt :p"
+skip_notfound: "Oeps! Het lijkt erop dat er geen nummer is om naar over te slaan! Blijf genieten van het huidige nummer ♪"
+
+### Stop command!
+stop_msg: "Het afspelen van muziek is gestopt. Hopelijk heb je genoten!"
+
+### Volume command!
+voldown_msg: "Volume is verlaagd met %{volume}%. Geniet van de zachtere vibes!"
+volume_invalid: "Ongeldig volume. Beschikbaar bereik is **1** tot **100**"
+volup_msg: "Volume is verhoogd met %{volume}%. Zet hem lekker hard!"
+volume_max: "Ik kan mijn volume niet hoger zetten dan 100%"
+volume_min: "Ohno~~ al op minimaal volume!"

@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "Le mode 24/7 est maintenant **Active**"
+247_off: "Le mode 24/7 est maintenant **Desactive**"
+247_already: "Le mode 24/7 est deja **%{mode}**"
+247_arg_error: "Mode 24/7 invalide. Veuillez utiliser %{text}"
+247_no_in_voice: "Vous n'etes pas dans un salon vocal !"
+
+
+### Set Language command! ###
+provide_lang: "**Langue invalide. Veuillez utiliser** `%{languages}`"
+lang_set: "**La langue a ete definie sur** `%{language}`"
+lang_change: "**La langue a ete changee en** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "Veuillez fournir un prefixe valide !"
+prefix_length: "**Le prefixe ne peut pas depasser 10 caracteres**"
+prefix_set: "**Le prefixe a ete defini sur** `%{prefix}`"
+prefix_change: "**Le prefixe a ete change en** `%{prefix}`"
+
+### Control command!
+control_set: "**Le mode de controle du lecteur a ete defini sur %{toggle}**"
+control_arg_error: "Argument invalide. Veuillez utiliser %{text}"
+control_already: "Les notifications de chansons sont deja **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Invalide ! Veuillez utiliser %{text}"
+setup_enable: "**Oups ! Le systeme musical existe deja.**"
+setup_topic: "♪ Ceux qui souhaitent chanter trouvent toujours une chanson. ♪"
+setup_msg: "*`Systeme musical configure avec succes dans`* %{channel}\n```Note : Ne supprimez aucun message que j'ai cree afin que je puisse fonctionner correctement.```"
+setup_null: "*`Salon de configuration supprime avec succes !`*"
+setup_deleted: "*`Salon de configuration supprime avec succes !`*"
+setup_null_inguild: "**Systeme musical introuvable sur ce serveur ! Pret a supprimer les donnees**"
+setup_queuemsg: "**Rejoignez un salon vocal et jouez des chansons en utilisant le nom ou l'URL ici !**"
+setup_playembed_author: "Aucune chanson en cours de lecture"
+
+### Themes command!
+error_themes: "Invalide... Veuillez reessayer."
+succes_themes: "**Theme change avec succes en %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "Note : Ce lien expirera dans %{expired}."
+lastfm_login_title: "Connexion Last.fm"
+lastfm_login_desc: "Souhaitez-vous autoriser l'acces a votre compte [Last.fm](https://www.last.fm/user/eleremen) ?\nSi oui, veuillez cliquer sur le bouton ci-dessous pour demarrer le processus d'autorisation."
+lastfm_not_login_desc: "Vous n'etes pas connecte a Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Deconnexion Last.fm"
+lastfm_logout_desc: "Vous vous etes deconnecte de Last.fm avec succes"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "La fonctionnalite Last.fm est desactivee."
+lastfm_feature_disabled_desc: "La fonctionnalite Last.fm est actuellement desactivee. Veuillez contacter l'administrateur pour plus d'informations."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "Aucune notification trouvee pour la chaine YouTube **%{ytchannel}**."
+notify_youtube_removed: "Vous avez supprime la notification pour la chaine YouTube **%{ytchannel}**."
+notify_youtube_disabled: "La fonctionnalite de notification YouTube est actuellement desactivee. Contactez l'equipe pour plus d'informations."
+notify_youtube_already: "Les notifications pour la chaine YouTube %{ytchannel} sont deja configurees."
+notify_youtube_invalid_channel: "Une erreur est survenue lors de la specification d'un salon textuel valide. Veuillez verifier !"
+notify_youtube_set: "La notification YouTube a ete configuree pour **%{ytchannel}** dans %{channelid}."
+notify_youtube_404: |
+  L'ID de la chaine YouTube fourni est introuvable.
+  Pour trouver l'ID de la chaine, allez sur la page de la chaine YouTube et verifiez l'URL.
+  L'ID de la chaine est la chaine de lettres et de chiffres apres `/channel/` (par exemple : `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   Vous avez atteint la limite de %{limit} notifications.
+   En passant au [premium](%{premium}), vous pouvez configurer jusqu'a %{limitpremium} notifications.
+
+notify_youtube_limit_reached_premium: |
+   Vous avez atteint la limite de %{limit} notifications.
+   C'est le maximum autorise. Envisagez de supprimer certaines notifications pour faire de la place pour de nouvelles.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Aucune notification trouvee pour le nom d'utilisateur Twitch **%{twitchusername}**."
+notify_twitch_removed: "Vous avez supprime la notification pour le nom d'utilisateur Twitch **%{twitchusername}**."
+notify_twitch_disabled: "La fonctionnalite de notification Twitch est actuellement desactivee. Contactez l'equipe pour plus d'informations."
+notify_twitch_already: "Vous avez deja configure les notifications pour la chaine Twitch %{twitchusername}."
+notify_twitch_invalid_channel: "Une erreur est survenue lors de la specification d'un salon textuel valide. Veuillez verifier !"
+notify_twitch_set: "La notification Twitch a ete configuree pour **%{twitchusername}** dans %{channelid}."
+notify_twitch_error: "Une erreur inattendue est survenue lors du traitement de la notification Twitch pour **{twitchusername}** dans le salon **{channelid}**. Veuillez reessayer ou contacter le support si le probleme persiste."
+notify_twitch_limit_reached_non_premium: |
+   Vous avez atteint la limite de %{limit} notifications.
+   En passant au [premium](%{premium}), vous pouvez configurer jusqu'a %{limitpremium} notifications.
+
+notify_twitch_limit_reached_premium: |
+   Vous avez atteint la limite de %{limit} notifications.
+   C'est le maximum autorise. Envisagez de supprimer certaines notifications pour faire de la place pour de nouvelles.
+
+### Temp Voice Feature command!
+tempvoice_setup: "La fonctionnalite Salon vocal temporaire a ete %{status}."
+tempvoice_disabled: "Le salon vocal temporaire a ete desactive."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Invalide... seulement %{text}."
+status_voice_channel_true: "Le statut du salon vocal a ete defini sur **%{type}**."
+status_voice_channel_false: "Le statut du salon vocal a ete defini sur **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "Cette commande ne peut etre executee que sur le serveur !"
+no_data_patreon: "Donnees Patreon introuvables (Erreur de base de donnees)"
+no_data_patreon_title: "Introuvable"
+no_data_patreon_desc: |
+  Si vous etes deja abonne, assurez-vous que votre compte Discord est lie a Patreon !
+no_data_patreon_footer: "La synchronisation Patreon peut prendre un moment, veuillez reverifier sous peu"
+no_patreon_guild_membership: |
+  bonjour, votre plan patreon est **palier utilisateur**.
+  veuillez passer au **palier serveur** pour debloquer l'acces premium au serveur.
+patreon_guild_membership_full_quota: |
+  vous avez utilise tout votre quota de serveurs !
+  **statut :** %{status} serveurs utilises.
+
+  solution :
+  1. ameliorez votre palier sur patreon.
+  2. ou desactivez le premium sur votre ancien serveur.
+patreon_guild_membership_already_before: "Vous avez deja active le premium sur ce serveur auparavant !"
+patreon_guild_membership_already: "**DEJA PREMIUM** car il est sponsorise par quelqu'un d'autre.\nGardez votre quota pour d'autres serveurs !"
+patreon_guild_membership_claim_title: "Confirmation d'activation"
+patreon_guild_membership_claim_desc: |
+  etes-vous sur de vouloir activer le **serveur premium** pour :
+  **%{guildName}**
+
+  cette action utilisera **1 quota de serveur**.
+  quota restant : **%{status}**
+patreon_guild_membership_claim_success: |
+  succes ! **%{guildName}** est maintenant un **serveur premium**.
+
+  **sponsor :** %{user}
+  **quota restant :** %{status}
+  merci de nous soutenir sur patreon !
+patreon_guild_membership_claim_success_title: "💎 Premium active !"
+patreon_guild_membership_claim_cancel: "Activation premium annulee."
+patreon_guild_membership_claim_norespon: "L'activation a ete automatiquement annulee en raison de l'absence de reponse."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Serveur echange (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **utilisateur sponsor :** %{sponsorTag} %{sponsorId}
+  **serveur cible :** %{guildName} %{guildId}
+  **statut du quota :** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Vous ne pouvez pas revoquer ce serveur premium car vous ne l'avez pas enregistre."
+patreon_guild_unclaim_title: "Confirmation de revocation du Premium"
+patreon_guild_unclaim_desc: |
+  Etes-vous sur de vouloir **ANNULER** le statut Premium du serveur **%{guildName}** ?
+  **Effets :** Les fonctionnalites Premium seront desactivees sur ce serveur.
+  Votre quota de serveurs sera restaure (+1).
+  Quota restant actuel : **%{status}**
+patreon_guild_unclaim_success_title: "Premium revoque"
+patreon_guild_unclaim_success: |
+  Le statut Premium pour **%{guildName}** a ete revoque avec succes.
+  **Quota restaure :** 1 serveur
+  **Nouveau quota restant :** %{status}
+patreon_guild_unclaim_cancel: "Processus de revocation du premium annule."
+patreon_guild_unclaim_norespon: "⏱️ Delai expire. Processus annule."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Serveurs non reclames (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Utilisateur :** %{sponsorTag} %{sponsorId}
+  **Serveur :** %{guildName}} %{guildId}
+  **Quota restaure :** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Utilisateur :** %{userTag} (%{userId})
+  **Serveur :** %{guildName} (%{guildId})
+  **Quota :** %{quota}
+  **Expiration :** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Action : %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "ID de transaction introuvable ou deja reclame."
+kofi_linked_success_title: "Paiement lie avec succes !"
+kofi_linked_success_desc: "Vous pouvez maintenant utiliser `/premium claim <kofi>` sans TxID."
+kofi_no_data_title: "Aucune donnee trouvee !"
+kofi_no_data_desc: |
+  Si vous avez deja paye mais n'avez pas connecte votre compte Discord a Kofi
+  utilisez : `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Pas de quota, mais vous etes un utilisateur premium."
+kofi_full_server_quota_title: "Quota plein !"
+kofi_full_server_quota_desc: "Vous avez utilise **%{quota}** emplacements de serveur."
+kofi_server_already_claim_desc: "**Deja actif !**\nVous avez deja active le Premium sur ce serveur auparavant."
+kofi_server_already_active_desc: " **Deja Premium !**\nCe serveur a deja ete active en premium par un autre utilisateur."
+kofi_guild_membership_claim_success: |
+  Le Premium a ete active avec succes !
+  **Utilisation du quota :** %{quota}
+  **Expire dans :** %{expires}
+kofi_guild_membership_claim_footer: "Merci pour votre soutien !"
+kofi_action_title: "🏗️ Action Ko-fi : %{type}"
+kofi_action_description: "**Utilisateur :** %{userTag} (`%{userId}`)\n**Serveur :** %{guildName} (`%{guildId}`)\n**Action :** %{action}\n**Quota :** %{quota}"
+kofi_action_activation: "Serveur active"
+kofi_action_manual_link: "Paiement lie manuellement"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium revoque"
+kofi_guild_unclaim_success_desc: |
+  Le statut Premium pour **%{guildName}** a ete revoque avec succes.
+  **Quota restaure :** 1 serveur
+kofi_guild_not_owned_by_user: "Vous ne pouvez pas revoquer ce serveur premium car vous ne l'avez pas enregistre."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Serveurs non reclames %{platform}"
+premium_unclaim_log_desc: |
+  **Utilisateur :** %{userTag} %{userId}
+  **Serveur :** %{guildName}} %{guildId}
+  **Quota restaure :** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "Le systeme de role DJ a ete **desactive**."
+dj_role_missing_role: "Vous devez fournir un role pour utiliser l'action `set`."
+dj_role_set: |
+  Le role DJ a ete defini sur %{role}.
+  Statut : **Active**
+  **Commandes affectees :**
+  %{commands}

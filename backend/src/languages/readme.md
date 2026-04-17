@@ -6,6 +6,7 @@ SOURCE:
 languages/en
 
 TARGET LANGUAGES AND FOLDERS:
+
 - Indonesian → languages/id
 - Korean → languages/ko
 - German → languages/de
@@ -53,6 +54,7 @@ CRITICAL RULES (MUST FOLLOW STRICTLY):
 FILE GENERATION RULES:
 
 For every file found in `languages/en`:
+
 - Create the exact same filename in each target language folder.
 - Example:
 
@@ -79,23 +81,23 @@ Example:
 Original (languages/en/music.yml):
 
 play:
-  success: "Playing {song}"
-  error: "No results found"
-  join: "You must join a voice channel first"
+success: "Playing {song}"
+error: "No results found"
+join: "You must join a voice channel first"
 
 Indonesian (languages/id/music.yml):
 
 play:
-  success: "Memutar {song}"
-  error: "Tidak ada hasil yang ditemukan"
-  join: "Kamu harus bergabung ke voice channel terlebih dahulu"
+success: "Memutar {song}"
+error: "Tidak ada hasil yang ditemukan"
+join: "Kamu harus bergabung ke voice channel terlebih dahulu"
 
 German (languages/de/music.yml):
 
 play:
-  success: "Spiele {song}"
-  error: "Keine Ergebnisse gefunden"
-  join: "Du musst zuerst einem Sprachkanal beitreten"
+success: "Spiele {song}"
+error: "Keine Ergebnisse gefunden"
+join: "Du musst zuerst einem Sprachkanal beitreten"
 
 IMPORTANT:
 

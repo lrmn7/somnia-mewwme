@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
-import type { Track } from "@/types/player";
+import type { Track, Requester } from "@/types/player";
 import {
   DndContext,
   closestCenter,
@@ -27,6 +27,16 @@ function fmtMs(ms: number): string {
 
 function isLive(lengthMs: number | undefined | null): boolean {
   return !lengthMs || lengthMs <= 0 || lengthMs >= 86400000;
+}
+
+// Helper: dapatkan info requester dari track
+function getRequesterInfo(requester: Requester): { name: string; avatarURL: string | null } | null {
+  if (!requester) return null;
+  if (typeof requester === "string") return { name: requester, avatarURL: null };
+  return {
+    name: requester.globalName || requester.username,
+    avatarURL: requester.avatarURL || requester.defaultAvatarURL || null,
+  };
 }
 
 interface Props {
@@ -214,10 +224,31 @@ export default function Queue({ current, queue, onSkipTo, onRemove, onReorder }:
               </div>
             )}
 
-            {/* Title + Artist */}
+            {/* Title + Artist + Requester */}
             <div className="flex-1 min-w-0">
               <p className="truncate text-[13px] font-bold text-green-300 leading-snug">{current.title}</p>
-              <p className="truncate text-[11px] font-medium text-green-400/60 mt-0.5">{current.author ?? "Unknown artist"}</p>
+              <div className="flex items-center gap-1.5 mt-0.5">
+                <p className="truncate text-[11px] font-medium text-green-400/60">{current.author ?? "Unknown artist"}</p>
+                {(() => {
+                  const req = getRequesterInfo(current.requester);
+                  if (!req) return null;
+                  return (
+                    <>
+                      <span className="text-green-400/20 text-[10px]">·</span>
+                      <span className="inline-flex items-center gap-1 shrink-0">
+                        {req.avatarURL ? (
+                          <img src={req.avatarURL} alt="" className="h-3.5 w-3.5 rounded-full object-cover" />
+                        ) : (
+                          <span className="h-3.5 w-3.5 rounded-full bg-green-500/15 flex items-center justify-center text-[7px] font-bold text-green-400/50">
+                            {req.name.charAt(0).toUpperCase()}
+                          </span>
+                        )}
+                        <span className="text-[10px] text-green-400/40 truncate max-w-[60px]">{req.name}</span>
+                      </span>
+                    </>
+                  );
+                })()}
+              </div>
             </div>
 
             {/* Duration / Live + Now Playing badge */}
@@ -264,9 +295,28 @@ export default function Queue({ current, queue, onSkipTo, onRemove, onReorder }:
               </div>
             </div>
 
-            <p className="truncate text-sm font-medium text-green-400/60">
-              {current.author ?? "Unknown"}
-            </p>
+            {/* Artist + Requester */}
+            <div className="min-w-0">
+              <p className="truncate text-sm font-medium text-green-400/60">
+                {current.author ?? "Unknown"}
+              </p>
+              {(() => {
+                const req = getRequesterInfo(current.requester);
+                if (!req) return null;
+                return (
+                  <div className="flex items-center gap-1 mt-0.5">
+                    {req.avatarURL ? (
+                      <img src={req.avatarURL} alt="" className="h-3.5 w-3.5 rounded-full object-cover shrink-0" />
+                    ) : (
+                      <span className="h-3.5 w-3.5 rounded-full bg-green-500/15 flex items-center justify-center text-[7px] font-bold text-green-400/40 shrink-0">
+                        {req.name.charAt(0).toUpperCase()}
+                      </span>
+                    )}
+                    <span className="text-[10px] text-green-400/30 truncate">by {req.name}</span>
+                  </div>
+                );
+              })()}
+            </div>
 
             <p className="text-center text-xs tabular-nums font-semibold text-green-400/70 select-none">
               {isLive(current.length) ? (
@@ -294,7 +344,7 @@ export default function Queue({ current, queue, onSkipTo, onRemove, onReorder }:
           <svg className="h-10 w-10 text-white/10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
           </svg>
-          <p className="text-xs text-white/40">Queue is empty, search to add more tracks.</p>
+          <p className="text-xs text-white/40">Queue is empty! search to add more tracks.</p>
         </div>
       ) : (
         <DndContext
@@ -487,6 +537,25 @@ function QueueRowContent({
                 fmtMs(track.length ?? 0)
               )}
             </span>
+            {(() => {
+              const req = getRequesterInfo(track.requester);
+              if (!req) return null;
+              return (
+                <>
+                  <span className="text-white/15 text-[10px]">·</span>
+                  <span className="inline-flex items-center gap-1 shrink-0">
+                    {req.avatarURL ? (
+                      <img src={req.avatarURL} alt="" className="h-3.5 w-3.5 rounded-full object-cover" />
+                    ) : (
+                      <span className="h-3.5 w-3.5 rounded-full bg-white/10 flex items-center justify-center text-[7px] font-bold text-white/50">
+                        {req.name.charAt(0).toUpperCase()}
+                      </span>
+                    )}
+                    <span className="text-[10px] text-white/30 truncate max-w-[60px]">{req.name}</span>
+                  </span>
+                </>
+              );
+            })()}
           </div>
         </div>
 
@@ -536,10 +605,28 @@ function QueueRowContent({
           </div>
         </div>
 
-        {/* Artist */}
-        <p className="truncate text-sm font-medium text-white/40">
-          {track.author ?? "Unknown"}
-        </p>
+        {/* Artist + Requested By */}
+        <div className="min-w-0">
+          <p className="truncate text-sm font-medium text-white/40">
+            {track.author ?? "Unknown"}
+          </p>
+          {(() => {
+            const req = getRequesterInfo(track.requester);
+            if (!req) return null;
+            return (
+              <div className="flex items-center gap-1 mt-0.5">
+                {req.avatarURL ? (
+                  <img src={req.avatarURL} alt="" className="h-3.5 w-3.5 rounded-full object-cover shrink-0" />
+                ) : (
+                  <span className="h-3.5 w-3.5 rounded-full bg-white/10 flex items-center justify-center text-[7px] font-bold text-white/40 shrink-0">
+                    {req.name.charAt(0).toUpperCase()}
+                  </span>
+                )}
+                <span className="text-[10px] text-white/25 truncate">by {req.name}</span>
+              </div>
+            );
+          })()}
+        </div>
 
         {/* Duration */}
         <p className="text-center text-xs tabular-nums font-semibold text-white/30 select-none">
@@ -613,7 +700,7 @@ function ActionButtons({
         type="button"
         onClick={onRemove}
         disabled={isActing}
-        title="Remove from queue"
+        title="Remove"
         className="inline-flex items-center justify-center rounded-lg p-2 bg-red-500/10 border border-red-500/30 text-red-400 hover:bg-red-500/20 hover:border-red-500/60 disabled:opacity-40 disabled:cursor-not-allowed transition-all active:scale-95"
       >
         {isRemoving ? (
@@ -720,7 +807,7 @@ function MobileMenu({
             <svg className="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
-            Remove from queue
+            Remove
           </button>
         </div>,
         document.body

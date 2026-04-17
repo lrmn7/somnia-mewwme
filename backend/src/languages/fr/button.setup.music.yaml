@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "La lecture de la musique a ete arretee. J'espere que vous avez passe un bon moment !"
+skip_notfound: "Oups. Il semble qu'il n'y ait aucun morceau a passer !"
+skip_msg: "J'ai passe le morceau. J'espere que ca ne vous derange pas :p"
+previous_msg: "Eh bien, on rembobine ! Morceau precedent en approche <3"
+previous_notfound: "Desole, impossible de revenir en arriere. Aucun morceau precedent trouve :("
+resume_msg: "La musique est de retour ! Continuons a groover ♪"
+pause_msg: "La musique est en pause. Faites une pause et profitez du silence."
+loop_current: "La chanson actuelle sera maintenant jouee en boucle. Profitez de la repetition !"
+loop_all: "La file d'attente est maintenant en boucle. Laissez la musique tourner en boucle !"
+unloop_all: "Le mode boucle a ete desactive. Profitez de la variete des morceaux !"
+
+### Need to join voice & same voice to use command!
+no_player: "Vous appuyez sur un bouton et rien ne se passe. Peut-etre devriez-vous d'abord jouer quelque chose !"
+no_same_voice: "Vous appuyez sur un bouton et il clignote en rouge. Vous n'etes pas dans le meme salon vocal que moi !"
+no_in_voice: "Tous les boutons ne reagissent pas. Vous n'etes pas dans un salon vocal !"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "EN COURS DE LECTURE"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Demande par %{request}"
+setup_footer: "Morceaux restants • %{totalsong} | Duree totale • %{duration}"
+setup_queuemsg: "**Rejoignez un salon vocal et jouez des chansons en utilisant le nom ou l'URL ici !**"
+setup_playembed_author: "Aucune chanson en cours de lecture !"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Ajout de **%{title}** • %{request}"
+play_playlist: "Ajout de **%{title}** • (**%{songs} Morceaux**) • %{request}"
+play_result: "Ajout de **%{title}** • %{request}"
+play_emoji: "Je ne suis pas sur de comment jouer ca... Ce n'est ni un morceau ni une playlist."
+setup_content: "**He ! Ma platine est prete pour votre musique ! Envoyez quelque chose ici !**"

@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "Zapnuto"
+disable: "Vypnuto"
+
+# maintenance
+maintenance_title: "Údržba"
+maintenance_desc: |
+  %{bot} momentálně prochází údržbou. Zkuste to prosím znovu později.
+  Pro další informace se prosím připojte k našemu [serveru podpory](%{serversupport}). Děkujeme!
+
+# Getting error!
+unexpected_error: "Něco se pokazilo. Zkuste to prosím znovu později!"
+
+### Rate limit!
+ratelimit: "Provádíte akce příliš rychle. Prosím počkejte **%{time} sekund**"
+
+# No permission!
+no_perms: "Nemám oprávnění **%{perm}**!\nProsím udělte mi oprávnění **%{perm}** pro provedení tohoto příkazu."
+
+no_manage_guild_perms: "Tento příkaz vyžaduje oprávnění **%{perm}**!\nNemáte oprávnění k provedení tohoto příkazu!"
+
+no_admin_perms: "Tento příkaz vyžaduje oprávnění **%{perm}**!\nNemáte oprávnění k provedení tohoto příkazu!"
+
+# No permission!
+no_perms_channel: "Nemám oprávnění **%{perm}** v %{channel} pro provedení tohoto příkazu!"
+
+# Execute when invalid
+no_node: "**Nebyl nalezen žádný Lavalink server. Zkuste to prosím znovu za 5 minut**"
+
+# Client owner!
+owner_only: "Tento příkaz může provést pouze **vlastník** bota"
+
+# Need to join voice & same voice to use command!
+no_player: "Momentálně se nepřehrává žádná skladba!"
+no_same_voice: "Nejste ve stejném hlasovém kanálu jako já!"
+no_in_voice: "Nejste v hlasovém kanálu!"
+
+# Blacklist User
+blacklist_user: "Vypadá to, že jste na černé listině! Nemáte povoleno používat příkazy.\nProsím kontaktujte **[vývojáře](%{serversupport})**, pokud si myslíte, že jde o chybu."
+
+# Blacklist Guild
+blacklist_guild: "Tento server je na černé listině! Na tomto serveru nemáte povoleno používat příkazy.\nProsím kontaktujte **[vývojáře](%{serversupport})**, pokud si myslíte, že jde o chybu."
+
+### DjRole No Permission ###
+not_dj_role: "Pro použití tohoto příkazu musíte mít roli %{role}."
+
+### No Premium Event!
+no_premium_button: "Získat Premium"
+no_premium_author: "Žádný plán Premium"
+no_premium_desc: "Jejda! Vypadá to, že ještě nemáte prémiový plán. \nBez něj není tato funkce přístupná."
+
+# Top.gg error
+topgg_error_author: "Chyba hlasování Top.gg"
+topgg_error_desc: "Při ověřování vašeho hlasu na top.gg došlo k chybě, pravděpodobně kvůli výpadku Top.gg. Zkuste to prosím znovu za 5-10 minut.\nPokud problém přetrvává, kontaktujte prosím náš [server podpory](%{serversupport}) pro další pomoc."
+
+# Top.gg unvote
+topgg_unvote_button: "Hlasujte pro odemčení"
+premium_button: "Upgradovat na premium"
+topgg_unvote_author: "Vyžadováno hlasování"
+topgg_unvote_desc: "Pro přístup k tomuto příkazu musíte hlasovat! Je to rychlé a zdarma.\nAlternativně si pořiďte premium na naší [stránce Premium](%{premium}), abyste přeskočili tuto zprávu a odemkli extra funkce."
+
+### Mention Desc ###
+mention_content: "můj prefix pro tento server `%{prefix}`\nmůžete mě zmínit pro použití příkazů nebo zadejte </help:1294325423957741598> pro zobrazení mých slash příkazů ♡"

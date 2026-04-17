@@ -1,14 +1,6 @@
 import { Manager } from "../../manager.js";
 import Fastify from "fastify";
 
-/**
- * GET /v1/user/:userId/stats
- *
- * Returns the user's music statistics from the bot database:
- * - totalSongsPlayed
- * - topTracks (top 10)
- * - topArtists (top 10)
- */
 export async function getUserStats(
   client: Manager,
   req: Fastify.FastifyRequest,

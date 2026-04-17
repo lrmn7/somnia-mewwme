@@ -12,6 +12,11 @@ export function useSocket(guildId: string) {
 
     const s = io(BACKEND_URL, {
       withCredentials: true,
+      transports: ["polling", "websocket"],
+      upgrade: true,
+      reconnection: true,
+      reconnectionAttempts: 5,
+      reconnectionDelay: 2_000,
     });
     socketRef.current = s;
     setSocket(s);
@@ -25,6 +30,11 @@ export function useSocket(guildId: string) {
 
     s.on("connect_error", (err) => {
       console.error("[Socket] connect error:", err.message);
+    });
+
+    s.io.on("reconnect", () => {
+      s.emit("subscribe", guildId);
+      s.emit("requestState");
     });
 
     return () => {

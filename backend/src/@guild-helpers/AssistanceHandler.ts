@@ -19,8 +19,6 @@ export class AssistanceHandler {
     if (client.config.WELCOMER_EVENTS.Enable ?? false) {
       new WelcomerEvents(client);
     }
-    if (client.config.utilities.TicketSystem.Enable ?? false) {
-      new TicketHandler(client);
-    }
+    new TicketHandler(client);
   }
 }

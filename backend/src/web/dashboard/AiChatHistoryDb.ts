@@ -27,7 +27,7 @@ export function createAiChatHistoryDb(db: QuickDatabasePlus<AiChatHistory>) {
       createdAt: Date.now(),
     };
 
-    const existing = await db.get(userId) as AiChatHistory | null;
+    const existing = (await db.get(userId)) as AiChatHistory | null;
     if (existing) {
       existing.messages.push(entry);
       // Prune if over limit
@@ -41,7 +41,7 @@ export function createAiChatHistoryDb(db: QuickDatabasePlus<AiChatHistory>) {
   }
 
   async function getHistory(userId: string, limit: number = 20): Promise<ChatHistoryDisplay[]> {
-    const data = await db.get(userId) as AiChatHistory | null;
+    const data = (await db.get(userId)) as AiChatHistory | null;
     if (!data?.messages?.length) return [];
 
     return data.messages.slice(-limit).map((msg, i) => ({
@@ -53,8 +53,11 @@ export function createAiChatHistoryDb(db: QuickDatabasePlus<AiChatHistory>) {
     }));
   }
 
-  async function getContext(userId: string, limit: number = 12): Promise<{ role: "user" | "assistant"; content: string }[]> {
-    const data = await db.get(userId) as AiChatHistory | null;
+  async function getContext(
+    userId: string,
+    limit: number = 12
+  ): Promise<{ role: "user" | "assistant"; content: string }[]> {
+    const data = (await db.get(userId)) as AiChatHistory | null;
     if (!data?.messages?.length) return [];
 
     return data.messages.slice(-limit).map((msg) => ({
@@ -69,4 +72,3 @@ export function createAiChatHistoryDb(db: QuickDatabasePlus<AiChatHistory>) {
 
   return { saveMessage, getHistory, getContext, clearHistory };
 }
-

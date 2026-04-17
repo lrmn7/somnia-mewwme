@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Datenschutzrichtlinie von %{bot}"
+privacy_label: Datenschutzrichtlinie
+privacy_desc: |
+  **Benutzervereinbarung**
+  Die Nutzung von [%{bot}](%{serversupport}) ("Bot") auf dem Server erfordert die Erfassung bestimmter Benutzerdaten. Die erfassten Daten umfassen unter anderem die Discord-ID des Benutzers, den Discord-Benutzernamen und die Serverrollen. Die Nutzung des Bots gilt als Akzeptanz dieser Richtlinienbedingungen.
+
+  **Datenzugriff**
+  Der Zugriff auf Daten ist nur fuer Bot-Entwickler und Hosting-Dienste erlaubt und nur im Rahmen, der fuer Bot-Entwicklung, Tests und Funktionsimplementierung erforderlich ist. Daten werden nicht verkauft, weitergegeben oder mit Dritten geteilt, ausser wenn dies gesetzlich oder durch die Nutzungsbedingungen erforderlich ist. Du kannst deine Daten auf Anfrage beim [Entwickler](%{developer}) einsehen.
+
+  **Datenspeicherung**
+  Daten werden in der [MYSQL](https://www.mysql.com/)-Datenbank gespeichert. Die Datenbank ist gegen externen Zugriff gesichert. Es werden jedoch keine Garantien gegeben, und der Bot-Besitzer ist nicht verantwortlich fuer unbeabsichtigte oder boswillige Datenverletzungen. Im Falle eines unbefugten Datenzugriffs wird das Serverteam die Benutzer ueber den Support-Server benachrichtigen.
+
+  **Benutzerrechte**
+  Du hast jederzeit das Recht, die Einsicht deiner Discord-Kontodaten anzufordern. Du hast das Recht, die Loeschung relevanter Daten zu beantragen. Dazu muessen Benutzer eine Anfrage ueber den Support-Server einreichen.
+
+  **Fragen**
+  Wenn du Fragen oder Bedenken hast, welche Daten von deinem Konto gespeichert werden koennten, kontaktiere bitte das [Team](%{serversupport}). Weitere Informationen findest du in den Discord-Nutzungsbedingungen.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Nutzungsbedingungen von %{bot}"
+tos_label: "Nutzungsbedingungen"
+termsofservice_desc: |
+  **Nutzungsvereinbarung**
+  Durch das Einladen von [%{bot}](%{serversupport}) ("Bot") und die Nutzung seiner Funktionen stimmst du den Nutzungsbedingungen und der Datenschutzrichtlinie des Bots zu.
+
+  Du erkennst an, dass du den Bot frei auf jedem Discord-Server verwenden kannst, auf dem du ihn teilst. Du kannst ihn auf jeden Server einladen, auf dem du die Berechtigung "Server verwalten" hast. Dieses Privileg kann widerrufen werden, wenn du gegen die Nutzungsbedingungen oder Datenschutzrichtlinie dieses Bots oder die Nutzungsbedingungen, Datenschutzrichtlinie oder Community-Richtlinien von Discord Inc. verstoesst.
+
+  Durch das Einladen kann der Bot bestimmte Daten wie in seiner Datenschutzrichtlinie beschrieben erfassen. Die beabsichtigte Verwendung dieser Daten dient den Kernfunktionen des Bots, wie dem Ausfuehren von Befehlen.
+
+  **Zugehoerigkeit**
+  Der Bot ist nicht mit Discord Inc. verbunden, wird nicht von Discord Inc. unterstuetzt und wird nicht von Discord Inc. hergestellt. Jede direkte Verbindung zu Discord oder seinen Markenobjekten ist rein zufaellig. Wir beanspruchen kein Urheberrecht an den Vermoegenswerten, Marken oder anderem geistigen Eigentum von Discord.
+
+  **Minderjaehrige Benutzer**
+  Der Bot ist fuer Minderjaehrige unter 13 Jahren oder unter dem gesetzlichen Einwilligungsalter ihres Landes nicht zugelassen. Dies entspricht den Discord-Nutzungsbedingungen. Es werden wissentlich keine Informationen von minderjaehrigen Benutzern gespeichert. Sollte festgestellt werden, dass ein Benutzer minderjaehrig ist, werden wir alle erforderlichen Massnahmen ergreifen, um die gespeicherten Daten zu loeschen.
+
+  **Haftung**
+  Die Entwickler und Besitzer des Bots koennen zu keinem Zeitpunkt fuer Personen haftbar gemacht werden, die gegen diese Bedingungen verstossen. Das Recht, diese Bedingungen zu aktualisieren, ist nach unserem Ermessen vorbehalten, wobei eine Frist von 1 Woche (7 Tagen) eingeraeumt wird, um diesen Bedingungen zu widersprechen. Ein Benutzer kann widersprechen, indem er den Bot von jedem Server entfernt, auf dem der Benutzer das Recht hat, den Bot zu entfernen.

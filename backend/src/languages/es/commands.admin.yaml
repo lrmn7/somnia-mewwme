@@ -1,0 +1,34 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "No pude encontrar ese Servidor..."
+blacklist_guild_already: "Parece que %{id} ya est\u00e1 en la lista negra, as\u00ed que no puedo hacer nada."
+blacklist_guild_add: "\u00a1Sayonara, %{id}! Los agregu\u00e9 a la lista negra. Supongo que no estaba destinado a ser..."
+blacklist_guild_not_exist: "\u00bfDijiste que buscabas a %{id}? No pude encontrarlos en mis rutas de gira..."
+blacklist_guild_delete: "\u00a1Bienvenido de vuelta, %{id}! Puedo ir de gira all\u00ed de nuevo, ya no est\u00e1n en la lista negra."
+
+### Blacklist User
+blacklist_user_bot_owner: "\u00a1Woah! \u00a1No puedo poner en lista negra a mi propio creador! \u00bfEst\u00e1s tratando de meterme en problemas?"
+blacklist_user_not_found: "No pude encontrar a ese fan..."
+blacklist_user_already: "Parece que %{id} ya est\u00e1 en la lista negra, as\u00ed que no puedo hacer nada."
+blacklist_user_add: "\u00a1Nos vemos, %{id}! Es triste tener que agregar a un fan a la lista negra, pero supongo que es lo mejor..."
+blacklist_user_not_exist: "\u00bf%{id}? \u00bfQui\u00e9n es? No pude encontrarlos en mi club de fans..."
+blacklist_user_delete: "\u00a1Genial! \u00a1%{id} ha sido reinstalado como fan! \u00a1No puedo esperar a verlos en el pr\u00f3ximo concierto!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "No estoy seguro de qu\u00e9 tipo de mantenimiento es este, pero definitivamente deber\u00edas usar %{text} en su lugar"
+maintenance_true: "\u00a1De acuerdo! \u00a1Ahora solo te escucho a ti!"
+maintenance_false: "\u00a1He vuelto a escuchar a todos!"
+

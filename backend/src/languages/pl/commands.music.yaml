@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Sprawdź moje propozycje dla ciebie!~"
+search_desc: "### HEJ! Znalazłem wyniki dla twojego zapytania"
+search_end_desc2: "### OJE! %{user}, nie wybrałeś utworu na czas\n**Spróbuj ponownie!**"
+search_footer: "Znaleziono %{countSong} utworów"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` ciesz się ♥"
+
+search_active: "Już coś wyszukujesz! Poczekaj, aż poprzednie wyszukiwanie się zakończy, zanim rozpoczniesz nowe."
+search_no_result: "Nie znaleziono wyników dla twojego wyszukiwania :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` ciesz się ♥"
+no_songs_playing: "Żaden utwór nie jest obecnie odtwarzany!"
+
+### Autoplay command!
+autoplay_off: "Autoodtwarzanie jest teraz **Wyłączone**"
+autoplay_on: "Autoodtwarzanie jest teraz **Włączone**"
+autoplay_no_songs_playing: "Żadne utwory nie są odtwarzane!"
+
+### ClearQueue command!
+clearqueue_msg: "Kolejka została **wyczyszczona**"
+
+### Forward command!
+forward_msg: "**%{user} przewinął %{title} do** `%{duration}`"
+forward_beyond: "Utwór zaraz się skończy. Nie możesz przewinąć dalej!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Następny do odtworzenia ♪"
+playnext_queue_empty: "Kolejka jest pusta. Proszę najpierw dodaj jakieś utwory"
+playnext_notfound: "Nie znaleziono utworu!"
+
+# Execute when invalid
+no_node: "**Nie znaleziono serwera Lavalink. Spróbuj ponownie po 5 minutach**"
+
+### Join command!
+join_msg: "Odtwarzacz został pomyślnie utworzony i dołączył do %{channel}"
+join_already: "Jestem już na %{channel}"
+join_no_in_voice: "Nie jesteś na kanale głosowym!"
+join_no_same_voice: "Nie jesteś na tym samym kanale głosowym co ja!"
+
+### Loop command!
+loop_current: "Teraz odtwarzam w pętli %{title}"
+loop_all: "**Włączono tryb pętli KOLEJKI**"
+unloop_all: "**Tryb pętli został WYŁĄCZONY**"
+loop_invalid: "Nieprawidłowy tryb pętli. Proszę użyj **Disabled**"
+loop_already: "Tryb pętli jest już ustawiony na **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Proszę podaj prawidłową **nazwę utworu**"
+lyrics_title: "Tekst piosenki **%{song}**"
+lyrics_notfound: "**Nie można znaleźć tekstu tej piosenki!**"
+lyrics_toolong: "**Tekst piosenki jest za długi, maksymalnie 4048 znaków!**"
+lyrics_disable: " **Teksty piosenek są obecnie wyłączone!**"
+lyrics_noquery: "**Proszę podaj prawidłową **nazwę utworu**"
+lyrics_error: "**Błąd: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "TERAZ ODTWARZANE"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Autor"
+nowplaying_total_duration_title: "Czas trwania"
+nowplaying_request_title: "Zamówione przez"
+
+### Pause command!
+pause_msg: "**Utwór %{title} jest obecnie wstrzymany!"
+
+### Play command!
+play_no_same_voice: "Nie jesteś na tym samym kanale głosowym co ja!"
+play_no_in_voice: "Nie jesteś na kanale głosowym!"
+play_arg: "Proszę podaj prawidłową nazwę utworu lub URL!"
+play_emoji: "**Ups! To jest emoji, nie możesz odtwarzać utworów za pomocą emoji**"
+play_match: "**Ups! Przepraszam, nie znaleziono utworu! Spróbuj ponownie**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## To było łatwe!
+  ### Twoja playlista %{title} została dodana do kolejki
+
+play_queue_max: |
+  OJE!>,.,< Kolejka jest za długa. Maksymalnie %{limitqueue} utworów.
+  Ulepsz do [**premium**](%{premium}), aby uzyskać nieograniczony dostęp do kolejki!
+
+play_playlist_max: |
+  OJE!>,.,< Playlista jest za długa. Maksymalnie %{limitqueue} utworów.
+  Ulepsz do [**premium**](%{premium}), aby uzyskać nieograniczony dostęp do playlist!
+
+### Previous command!
+previous_notfound: |
+  **Nie znaleziono poprzedniego utworu w kolejce!
+  Może użyj /play, aby dodać więcej utworów i nie przerywać muzyki?**
+previous_msg: |
+  **Powrót do poprzedniego utworu!
+  Teraz odtwarzam %{title}**
+
+### Queue command!
+queue_number_invalid: "Proszę podaj prawidłową liczbę!"
+queue_title: "Odtwarzanie kolejki..."
+queue_description: "**%{title}**\n\n**Reszta kolejki %{rest}**"
+queue_footer: "Strona • %{page}/%{pages} | Utwory • %{queue_lang} | Łączny czas • %{duration}"
+queue_notnumber: "Proszę podaj prawidłowy numer strony!"
+queue_page_notfound: "Jest tylko **%{page} stron**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Proszę podaj prawidłową liczbę!"
+removetrack_already: "**Nie mogę usunąć utworu, który jest już odtwarzany**"
+removetrack_notfound: "**Przepraszam %{user}, nie znaleziono utworu!**"
+removetrack_desc: "**Usunięto %{title} z kolejki!**"
+
+### Replay command!
+replay_msg: "**%{user} ponownie odtwarza %{title}**"
+replay_not_seekable: "Utwór **%{title}** nie może zostać ponownie odtworzony."
+
+### Resume command!
+resume_msg: "**Wznowiono odtwarzanie %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} przewinął %{title} do** `%{duration}`"
+rewind_beyond: "Utwór dopiero się rozpoczął. Nie możesz przewinąć dalej wstecz!"
+
+### Seek command!
+seek_beyond: "Nie możesz przewinąć poza czas trwania utworu!"
+seek_invalid: "Nieprawidłowy czas przewijania. Proszę użyj prawidłowego znacznika czasu. Przykład: **1:30**"
+seek_msg: "**Przewinięto %{title} do** `%{duration}`"
+seek_not_seekable: "Utwór **%{title}** nie może być przewijany do przodu ani do tyłu."
+
+### Skip command!
+skip_notfound: |
+  **Nie znaleziono utworu do pominięcia! Wygląda na to, że nie ma nic do pominięcia.
+  Użyj /play, aby dodać więcej utworów i kontynuować muzykę!**
+skip_msg: "**%{title} został pominięty**"
+skip_number_invalid: "Proszę podaj prawidłową liczbę!"
+
+### Stop command!
+stop_msg: "**%{title} został zatrzymany**"
+
+### Shuffle command!
+shuffle_title: "Przetasowanie kolejki"
+
+### Volume command!
+volume_number_invalid: "Proszę podaj prawidłową liczbę!"
+volume_invalid: "Nieprawidłowa głośność. Proszę użyj liczby od **1** do **100**"
+volume_msg: "**Głośność ustawiona na %{volume}%, ciesz się %{user}**"
+volume_max: "**Głośność jest już na maksimum 100%**"
+
+### play source commands
+url_no_allowed: "Proszę użyj nazwy utworu/artysty (URL niedozwolony)"
+play_arg_source: "Proszę podaj prawidłową nazwę utworu/artysty!"
+
+## Temporarily disabled commands
+youtube_disabled: "Obsługa YouTube jest tymczasowo niedostępna"
+autoplay_disabled: "Autoodtwarzanie jest tymczasowo wyłączone."

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "การเล่นเพลงถูกหยุดแล้ว หวังว่าคุณจะสนุกกับเพลง!"
+skip_notfound: "อุ๊ปส์ ดูเหมือนไม่มีเพลงให้ข้ามไป!"
+skip_msg: "ฉันข้ามเพลงแล้ว หวังว่าคุณจะไม่ว่านะ :p"
+previous_msg: "เอาล่ะ ดูเหมือนเราจะย้อนกลับ! เพลงก่อนหน้ากำลังมา <3"
+previous_notfound: "ขอโทษ ย้อนกลับไปไม่ได้อีกแล้ว ไม่พบเพลงก่อนหน้า :("
+resume_msg: "เพลงกลับมาแล้ว! มาฟังเพลงกันต่อเลย ♪"
+pause_msg: "เพลงถูกหยุดชั่วคราวแล้ว พักผ่อนและเพลิดเพลินกับความเงียบสักครู่"
+loop_current: "ตอนนี้เพลงปัจจุบันจะเล่นวนซ้ำ สนุกกับการฟังซ้ำได้เลย!"
+loop_all: "คิวถูกตั้งค่าให้เล่นวนซ้ำแล้ว ปล่อยให้เพลงเล่นซ้ำได้เลย!"
+unloop_all: "โหมดเล่นวนซ้ำถูกปิดแล้ว สนุกกับเพลงหลากหลายได้เลย!"
+
+### Need to join voice & same voice to use command!
+no_player: "คุณกดปุ่มแล้วไม่มีอะไรเกิดขึ้น บางทีคุณควรเล่นอะไรสักอย่างก่อน!"
+no_same_voice: "คุณกดปุ่มแล้วมันกะพริบสีแดง คุณไม่ได้อยู่ในห้องเสียงเดียวกับฉัน!"
+no_in_voice: "ปุ่มทั้งหมดไม่ตอบสนองต่อคุณ คุณไม่ได้อยู่ในห้องเสียง!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "กำลังเล่น"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** ขอโดย %{request}"
+setup_footer: "เพลงที่เหลือ • %{totalsong} | ระยะเวลาทั้งหมด • %{duration}"
+setup_queuemsg: "**เข้าร่วมห้องเสียงและเล่นเพลงโดยใช้ชื่อหรือ URL ที่นี่!**"
+setup_playembed_author: "ไม่มีเพลงที่กำลังเล่นอยู่!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "เพิ่ม **%{title}** • %{request}"
+play_playlist: "เพิ่ม **%{title}** • (**%{songs} เพลง**) • %{request}"
+play_result: "เพิ่ม **%{title}** • %{request}"
+play_emoji: "ฉันไม่แน่ใจว่าจะเล่นสิ่งนั้นได้อย่างไร... มันไม่ใช่เพลงหรือเพลย์ลิสต์"
+setup_content: "**เฮ้! เครื่องเล่นของฉันพร้อมสำหรับเพลงของคุณแล้ว! โยนอะไรมาได้เลย!**"

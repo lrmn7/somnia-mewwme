@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**Waar zij die willen zingen altijd een lied vinden ♪\nSluit je vandaag aan bij de melodie op je Discord-server!**"
+about_desc2: |
+  ・Bot-prefix voor deze server is `%{prefix}`
+  ・Wijzig prefix met `%{prefix} prefix <nieuw prefix>`
+  ・Speel een nummer af via link of zoekterm `%{prefix} play`
+  Bezoek onze **[website](%{website})** of gebruik het `%{prefix} help` commando voor meer commando's.
+about_desc3: |
+  **Let op!**
+  Ik heb bij voorkeur `Administrator`-rechten nodig, maar...
+  Zelfs als je me die rechten niet geeft, kan ik nog steeds werken, maar ik kan mogelijk niet alles doen waartoe ik in staat ben. Gewoon even ter info!
+
+  **Hulp en ondersteuning**
+  Word lid van onze **[ondersteuningsserver](%{serversupport})** als je hulp nodig hebt, informatie wilt over updates en problemen, of als je deel wilt uitmaken van de community!
+
+### Help command!
+finder_invalid: "Ongeldig commando"
+finder_example: "Ik kan je niet helpen dat te vinden! Zoek naar een *echt* commando!"
+finder_name: "**Commando:**"
+finder_des: " **Beschrijving:**"
+finder_usage: "**Gebruik:**"
+finder_access: "**Toegankelijk voor:**"
+finder_aliases: "**Aliassen:**"
+finder_slash: "**Slash:**"
+finder_des_no: "Kon geen beschrijving vinden, sorry daarvoor..."
+finder_usage_no: "Ik weet niet hoe ik dit commando moet gebruiken."
+finder_aliases_prefix: "[Alleen prefix]"
+finder_aliases_no: "Je kunt dit commando niet gebruiken met een alias."
+finder_slash_enable: "Ingeschakeld"
+finder_slash_disable: "Uitgeschakeld"
+command_not_found: "Onbekend commando"
+select_menu: "Geniet van muziek met mij!"
+help_timeout: "Helpmenu is verlopen, probeer **`%{prefix}help`** of **`/help`** opnieuw."
+homepage_title: "Waar zij die willen zingen altijd een lied vinden ♪\nSluit je vandaag aan bij de melodie op je Discord-server!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **Muziek 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify Connect**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **Hoogwaardige audio**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Scrobbled met Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **Speel en strijd in minigames**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer en meer...**
+
+  <a:ask:1291123964080558121> **Wil je upgraden naar het [Premium](%{premium})-abonnement?**
+### Rating bot commands! ###
+rating_desc: "Bedankt %{user} voor het geven van sterren aan onze Discord-muziekbot!"
+rating_succes: "Bedankt voor je beoordeling!\nJe beoordeling is succesvol ingediend."
+rating_failure: "Het verzenden van het rapport is mislukt. Probeer het later opnieuw."
+
+### Report command #####
+report_provide_desc: "Oeps! Ongeldige commando's. Geef alsjeblieft je beschrijving op"
+report_failure: "Het verzenden van het rapport is mislukt. Probeer het later opnieuw."
+report_success: "Bedankt voor je melding.\nDe melding is succesvol ingediend ter oplossing."
+
+### Suggestions command #####
+suggestions_provide_desc: "Oeps! Ongeldige commando's. Geef alsjeblieft je beschrijving op"
+suggestions_failure: "Het verzenden van de suggestie is mislukt. Probeer het later opnieuw."
+suggestions_success: "Bedankt voor je suggestie!\nJe suggestie is succesvol ingediend."
+
+### MyStats command ####
+mystats_error: "Er is een fout opgetreden bij het genereren van je statistieken. Probeer het later opnieuw."
+
+### TopStats command ####
+topstats_error: "Er is een fout opgetreden bij het genereren van je statistieken. Probeer het later opnieuw."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **Statusresultaat:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 Gebruikersidentiteit"
+patreon_logs_user_identity_value: |
+  **Naam:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **E-mail:** %{email}
+
+patreon_logs_details_title: "Patreon-details"
+patreon_logs_details_value: |
+  **Pledge:** $%{pledge}
+  **Patreon-ID:** `%{patreonId}`
+  **Status:** `%{status}`
+patreon_logs_date_title: "📅 Datum"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "Gebruikersidentiteit"
+kofi_logs_user_identity_value: "**Naam:** %{fullName}\n**E-mail:** ||%{email}||\n**Openbaar:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord-identiteit"
+kofi_logs_discord_identity_value: "**Gebruiker:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "Betalingsgegevens"
+kofi_logs_payment_details_value: "**Bedrag:** %{currency} %{amount}\n**Niveau:** **%{tierName}**\n**Type:** %{type}"
+kofi_logs_sub_status_title: "Abonnementsstatus"
+kofi_logs_sub_status_value: "**Is abonnement:** %{isSub}\n**Eerste betaling:** %{isFirst}"
+kofi_logs_message_title: "Bericht / Reden"
+kofi_logs_tech_title: "Technisch / Transactie-ID's"
+kofi_logs_tech_value: "**Ko-fi Tx-ID:** %{kofiTxId}\n**Bericht-ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Token:** ||%{token}||"
+kofi_logs_view_details: "Details bekijken"
+

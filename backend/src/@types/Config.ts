@@ -1,11 +1,25 @@
 import { MewslinkNodeOptions } from "../mewslink/main.js";
 import { ClusterManagerOptions } from "../shard/ClusterManager.js";
+export interface SomniaConfig {
+  Enable: boolean;
+  ChainId: number;
+  RpcUrl: string;
+  WssUrl: string;
+  ExplorerUrl: string;
+  CurrencySymbol: string;
+  TreasuryAddress: string;
+  PremiumAddress: string;
+  TipJarFactoryAddress: string;
+}
+
 export interface Config {
   bot: Bot;
   lavalink: Lavalink;
   features: Features;
   utilities: Utilities;
   logchannel: LogChannel;
+  PremiumRole: PremiumRole;
+  Somnia: SomniaConfig;
   emojis: Emojis;
   HELPDESK: HELPDESK;
   HELPER_SETUP: HELPER_SETUP;
@@ -29,6 +43,20 @@ export interface GeminiAiChat {
   Models: string[];
 }
 
+export interface PremiumRole {
+  Enable: boolean;
+  GuildID: string;
+  RoleID: string;
+  PatreonAccessToken: string;
+  PatreonCampignId: string;
+  PatreonLogChannelID: string;
+  PatreonPriceUser: number;
+  PatreonServerTiers: {
+    price: number;
+    quota: number;
+  }[];
+}
+
 export interface LogChannel {
   UpdateChannelId: string;
   GuildJoinChannelID: string;
@@ -49,12 +77,6 @@ export interface Utilities {
   NotifyTwitch: NotifyTwitch;
   NotifyYoutube: NotifyYoutube;
   LyricsGenius: LyricsGenius;
-  TicketSystem: TicketSystem;
-}
-
-export interface TicketSystem {
-  Enable: boolean;
-  TranscriptTicketExporter: string;
 }
 
 export interface LyricsGenius {
@@ -281,7 +303,6 @@ export interface SUPPORT_US {
 export interface MENU_HELP_EMOJI {
   E_HOME: string;
   E_SETTING: string;
-  E_ADMIN: string;
   E_INFO: string;
   E_PLAYLIST: string;
   E_FILTER: string;
@@ -419,6 +440,7 @@ export interface Spotify {
   enable: boolean;
   id: string;
   secret: string;
+  clients?: { id: string; secret: string }[];
 }
 
 export interface CONVERT_LINK {
@@ -529,7 +551,6 @@ export interface DASHBOARD_ACCESS {
 
 export interface COMMANDS_ACCESS {
   INFO: INFO;
-  ADMIN: ADMIN;
   FILTER: FILTER;
   MUSIC: MUSIC;
   PLAYLIST: PLAYLIST;
@@ -550,16 +571,6 @@ export interface GAMES {
   Trivia: string[];
   Wordle: string[];
   WouldYouRather: string[];
-}
-
-export interface ADMIN {
-  BlackList: string[];
-  Helpdesk: string[];
-  Helper: string[];
-  Maintenance: string[];
-  ModLogToggle: string[];
-  ModLogSetup: string[];
-  TicketSetup: string[];
 }
 
 export interface FILTER {
@@ -676,4 +687,6 @@ export interface SETTINGS {
   NotifyTwitch: string[];
   NotifyYoutube: string[];
   StatusVoiceChannel: string[];
+  PremiumClaim: string[];
+  PremiumUnClaim: string[];
 }

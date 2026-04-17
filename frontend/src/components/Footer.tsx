@@ -8,22 +8,44 @@ const Footer = () => {
       { name: 'Home', href: '/' },
       { name: 'Premium', href: '/premium' },
       { name: 'Commands', href: '/commands' },
+      { name: 'Meet The Team', href: '/team' },
     ],
     Support: [
       { name: 'Invite App', href: links.botInvite },
       { name: 'Support Server', href: links.supportServer },
       { name: 'Vote on Top.gg', href: links.topgg},
+      { name: 'System Status', href: '/systemstatus'},
     ],
     Legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/termsofservice' },
       { name: 'Refund Policy', href: '/refundpolicy' },
+      { name: 'Documentation', href: links.documentation },
     ],
   };
 
   return (
-    <footer className="glass-card relative z-10 border-t border-white/5 bg-card py-12 px-4 sm:px-6">
-      <div className="max-w-6xl mx-auto">
+    <footer className="glass-card relative z-10 overflow-hidden border-t border-white/5 bg-card py-12 px-4 sm:px-6">
+      {/* Watermark text behind footer content */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 hidden items-center justify-center xl:flex"
+      >
+        <span
+          className="footer-watermark-bottom-fade select-none text-[18vw] font-black tracking-[0.2em] sm:text-[14vw]"
+          style={{ color: "#FF69B4", opacity: 0.2 }}
+        >
+          MEWWME
+        </span>
+      </div>
+
+      {/* Bottom gradient fade so footer blends smoothly into page background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-96 bg-gradient-to-b from-transparent via-black/60 to-[#0e141a]"
+      />
+
+      <div className="relative z-[2] max-w-6xl mx-auto">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 mb-12">
           <div className="lg:col-span-2">
             <div className="mb-4 flex items-center gap-3">

@@ -13,7 +13,8 @@ type Action =
   | { type: "PLAYER_DESTROY" }
   | { type: "PLAYER_STATE_UPDATE"; payload: Partial<PlayerState> }
   | { type: "MEMBER_UPDATE"; payload: boolean }
-  | { type: "SKIP_OPTIMISTIC" };
+  | { type: "SKIP_OPTIMISTIC" }
+  | { type: "QUEUE_UPDATE"; payload: { queue: Track[] } };
 
 function reducer(
   state: PlayerState | null,
@@ -52,7 +53,7 @@ function reducer(
     }
     case "TRACK_START":
       return state
-        ? { ...state, current: action.payload, pause: false, position: 0 }
+        ? { ...state, current: action.payload, pause: false, position: 0, trackKey: (state.trackKey ?? 0) + 1 }
         : null;
     case "PLAYER_UPDATE":
       return state ? { ...state, position: action.payload.position } : null;
@@ -61,7 +62,7 @@ function reducer(
     case "PLAYER_RESUME":
       return state ? { ...state, pause: false } : null;
     case "PLAYER_END":
-      return state ? { ...state, current: null, position: 0 } : null;
+      return state ? { ...state, current: null, position: 0, trackKey: (state.trackKey ?? 0) + 1 } : null;
     case "PLAYER_DESTROY":
       return null;
     case "MEMBER_UPDATE":
@@ -75,6 +76,8 @@ function reducer(
         return null;
       }
       return { ...state, ...action.payload };
+    case "QUEUE_UPDATE":
+      return state ? { ...state, queue: action.payload.queue } : null;
     default:
       return state;
   }
@@ -89,14 +92,6 @@ export function usePlayer(
     !!guildId && guildId !== "null" && guildId !== "undefined";
   const [state, dispatch] = useReducer(reducer, null);
   const lastUpdatedAt = useRef<number>(0);
-  /**
-   * FIX: Monotonic sequence number from the server.
-   * Used to reject stale playerState events that arrive out of order
-   * during rapid track transitions. When seq is present in an event,
-   * we only accept it if seq > lastSeq (strict greater-than).
-   * Falls back to updatedAt timestamp comparison when seq is absent
-   * (e.g. REST API responses, legacy payloads).
-   */
   const lastSeq = useRef<number>(0);
   const bcRef = useRef<BroadcastChannel | null>(null);
   useEffect(() => {
@@ -110,7 +105,6 @@ export function usePlayer(
         const incoming = ev.data.state as PlayerState;
         const incomingSeq = incoming.seq ?? 0;
         const ts = incoming.updatedAt ?? 0;
-        // FIX: Use seq for ordering when available, fall back to timestamp.
         const accept = incomingSeq > 0
           ? incomingSeq > lastSeq.current
           : ts >= lastUpdatedAt.current;
@@ -140,13 +134,8 @@ export function usePlayer(
       const { data } = await api.get<PlayerState>(
         `/api/player/${guildId}`
       );
-      // REST responses may lack seq; use updatedAt as fallback.
       const incomingSeq = data.seq ?? 0;
       const ts = data.updatedAt ?? Date.now();
-      // FIX: Accept REST data if it has a higher seq, or if no seq and
-      // updatedAt is at least as recent. REST is always authoritative
-      // because it reads live player state, so we also reset lastSeq
-      // to avoid blocking future socket events after a REST refresh.
       if (incomingSeq > 0 ? incomingSeq >= lastSeq.current : ts >= lastUpdatedAt.current) {
         lastUpdatedAt.current = ts;
         if (incomingSeq > 0) lastSeq.current = incomingSeq;
@@ -202,10 +191,6 @@ export function usePlayer(
       void _guild;
       const incomingSeq = (patch as PlayerState).seq ?? 0;
       const ts = (patch as PlayerState).updatedAt ?? Date.now();
-      // FIX: Use monotonic seq from the server when present.
-      // Strict greater-than (>) ensures that if two events share the same seq
-      // only the first one through is accepted, and stale events with a lower
-      // seq are always rejected. Falls back to timestamp when seq is absent.
       const accept = incomingSeq > 0
         ? incomingSeq > lastSeq.current
         : ts >= lastUpdatedAt.current;
@@ -226,6 +211,11 @@ export function usePlayer(
         dispatch({ type: "MEMBER_UPDATE", payload: false });
       }
     };
+    const onQueueUpdate = (msg: { queue?: Track[] }) => {
+      if (msg.queue) {
+        dispatch({ type: "QUEUE_UPDATE", payload: { queue: msg.queue } });
+      }
+    };
 
     socket.on("connect", onConnect);
     socket.on("trackStart", onTrackStart);
@@ -238,6 +228,7 @@ export function usePlayer(
     socket.on("playerState", onStateUpdate);
     socket.on("memberJoin", onMemberJoin);
     socket.on("memberLeave", onMemberLeave);
+    socket.on("queueUpdate", onQueueUpdate);
 
     return () => {
       socket.off("connect", onConnect);
@@ -251,39 +242,73 @@ export function usePlayer(
       socket.off("playerState", onStateUpdate);
       socket.off("memberJoin", onMemberJoin);
       socket.off("memberLeave", onMemberLeave);
+      socket.off("queueUpdate", onQueueUpdate);
     };
   }, [socket, fetchState, userId, broadcastState]);
 
   useEffect(() => {
     if (!socket) return;
-    let pollTimer: ReturnType<typeof setInterval> | null = null;
+    let disconnectPollTimer: ReturnType<typeof setInterval> | null = null;
+    let connectedSyncTimer: ReturnType<typeof setInterval> | null = null;
 
-    const startPolling = () => {
-      stopPolling();
-      pollTimer = setInterval(() => {
+    const startDisconnectPolling = () => {
+      stopDisconnectPolling();
+      disconnectPollTimer = setInterval(() => {
         if (document.visibilityState === "visible") fetchState();
       }, 5_000);
     };
-    const stopPolling = () => {
-      if (pollTimer) {
-        clearInterval(pollTimer);
-        pollTimer = null;
+    const stopDisconnectPolling = () => {
+      if (disconnectPollTimer) {
+        clearInterval(disconnectPollTimer);
+        disconnectPollTimer = null;
+      }
+    };
+    const startConnectedSync = () => {
+      stopConnectedSync();
+      connectedSyncTimer = setInterval(() => {
+        if (document.visibilityState === "visible") fetchState();
+      }, 15_000);
+    };
+    const stopConnectedSync = () => {
+      if (connectedSyncTimer) {
+        clearInterval(connectedSyncTimer);
+        connectedSyncTimer = null;
       }
     };
 
-    const onSockConnect = () => stopPolling();
-    const onSockDisconnect = () => startPolling();
+    const onSockConnect = () => {
+      stopDisconnectPolling();
+      startConnectedSync();
+    };
+    const onSockDisconnect = () => {
+      stopConnectedSync();
+      startDisconnectPolling();
+    };
 
     socket.on("connect", onSockConnect);
     socket.on("disconnect", onSockDisconnect);
-    if (!socket.connected) startPolling();
+
+    if (socket.connected) {
+      startConnectedSync();
+    } else {
+      startDisconnectPolling();
+    }
 
     return () => {
-      stopPolling();
+      stopDisconnectPolling();
+      stopConnectedSync();
       socket.off("connect", onSockConnect);
       socket.off("disconnect", onSockDisconnect);
     };
   }, [socket, fetchState]);
+
+  useEffect(() => {
+    if (!state?.current || !validGuild) return;
+    const duration = state.current.length;
+    if (duration > 0 && duration < 86400000 && state.position > duration + 5000) {
+      fetchState();
+    }
+  }, [state?.position, state?.current, validGuild, fetchState]);
 
   const guardedPatch = useCallback(
     (body: Record<string, unknown>) => {

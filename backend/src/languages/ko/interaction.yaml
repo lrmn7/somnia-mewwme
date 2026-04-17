@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "활성화"
+disable: "비활성화"
+
+# maintenance
+maintenance_title: "유지보수"
+maintenance_desc: |
+  %{bot}이(가) 현재 유지보수 중입니다. 나중에 다시 시도해주세요.
+  자세한 내용은 저희 [지원 서버](%{serversupport})에 참여해주세요. 감사합니다!
+
+# Getting error!
+unexpected_error: "문제가 발생했습니다. 나중에 다시 시도해주세요!"
+
+### Rate limit!
+ratelimit: "작업을 너무 빠르게 수행하고 있습니다. **%{time}초** 동안 기다려주세요"
+
+# No permission!
+no_perms: "**%{perm}** 권한이 없습니다!\n이 명령어를 실행하려면 **%{perm}** 권한을 부여해주세요."
+
+no_manage_guild_perms: "이 명령어는 **%{perm}** 권한이 필요합니다!\n이 명령어를 실행할 권한이 없습니다!"
+
+no_admin_perms: "이 명령어는 **%{perm}** 권한이 필요합니다!\n이 명령어를 실행할 권한이 없습니다!"
+
+# No permission!
+no_perms_channel: "%{channel}에서 이 명령어를 실행할 **%{perm}** 권한이 없습니다!"
+
+# Execute when invalid
+no_node: "**Lavalink 서버를 찾을 수 없습니다. 5분 후에 다시 시도해주세요**"
+
+# Client owner!
+owner_only: "이 명령어는 봇 **소유자**만 실행할 수 있습니다"
+
+# Need to join voice & same voice to use command!
+no_player: "현재 재생 중인 노래가 없습니다!"
+no_same_voice: "저와 같은 음성 채널에 있지 않습니다!"
+no_in_voice: "음성 채널에 접속해 있지 않습니다!"
+
+# Blacklist User
+blacklist_user: "블랙리스트에 등록되어 있습니다! 명령어를 사용할 수 없습니다.\n오류라고 생각되시면 **[개발자](%{serversupport})**에게 문의해주세요."
+
+# Blacklist Guild
+blacklist_guild: "이 서버는 블랙리스트에 등록되어 있습니다! 이 서버에서 명령어를 사용할 수 없습니다.\n오류라고 생각되시면 **[개발자](%{serversupport})**에게 문의해주세요."
+
+### DjRole No Permission ###
+not_dj_role: "이 명령어를 사용하려면 %{role} 역할이 필요합니다."
+
+### No Premium Event!
+no_premium_button: "프리미엄 받기"
+no_premium_author: "프리미엄 플랜 없음"
+no_premium_desc: "이런! 아직 프리미엄 플랜이 없는 것 같습니다.\n이 기능은 프리미엄 없이 사용할 수 없습니다."
+
+# Top.gg error
+topgg_error_author: "Top.gg 투표 오류"
+topgg_error_desc: "Top.gg에서 투표를 확인하는 중 오류가 발생했습니다. Top.gg가 다운되었을 수 있습니다. 5-10분 후에 다시 시도해주세요.\n이 문제가 지속되면 저희 [지원 서버](%{serversupport})에 문의해주세요."
+
+# Top.gg unvote
+topgg_unvote_button: "투표하여 잠금 해제"
+premium_button: "프리미엄으로 업그레이드"
+topgg_unvote_author: "투표 필요"
+topgg_unvote_desc: "이 명령어를 사용하려면 투표가 필요합니다! 빠르고 무료입니다.\n또는 [프리미엄 페이지](%{premium})에서 프리미엄을 구매하여 이 메시지를 건너뛰고 추가 기능을 잠금 해제하세요."
+
+### Mention Desc ###
+mention_content: "이 서버의 접두사는 `%{prefix}`입니다\n저를 멘션하여 명령어를 사용할 수도 있고, </help:1294325423957741598>을 입력하여 슬래시 명령어를 확인할 수 있습니다 ♡"

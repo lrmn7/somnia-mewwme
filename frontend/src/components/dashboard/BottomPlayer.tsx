@@ -126,6 +126,7 @@ export default function BottomPlayer({
             onSeek={onSeek}
             compact
             trackUri={track?.uri}
+            trackKey={playerState?.trackKey}
           />
         </div>
       </div>
@@ -185,6 +186,7 @@ export default function BottomPlayer({
               paused={paused}
               onSeek={onSeek}
               trackUri={track?.uri}
+              trackKey={playerState?.trackKey}
             />
           </div>
         </div>

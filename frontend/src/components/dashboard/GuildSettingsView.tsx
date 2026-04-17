@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { useEmbeddedWallet } from "@/hooks/useEmbeddedWallet";
 import clsx from "clsx";
 import {
   FiCommand, FiGlobe, FiVolume2, FiSliders, FiHeadphones,
@@ -9,6 +8,31 @@ import {
 import { toast } from "sonner";
 import { api } from "@/lib/api";
 import type { GuildSettings } from "@/types/player";
+
+const localeNames: Record<string, string> = {
+  ar: "Arabic",
+  cs: "Czech",
+  de: "German",
+  en: "English",
+  es: "Spanish",
+  fr: "French",
+  he: "Hebrew",
+  hi: "Hindi",
+  id: "Indonesian",
+  it: "Italian",
+  ja: "Japanese",
+  ko: "Korean",
+  nl: "Dutch",
+  pl: "Polish",
+  pt: "Portuguese",
+  ru: "Russian",
+  th: "Thai",
+  tr: "Turkish",
+  uk: "Ukrainian",
+  vi: "Vietnamese",
+  "zh-CN": "Chinese (Simplified)",
+  "zh-TW": "Chinese (Traditional)",
+};
 
 interface Props {
   guildId: string;
@@ -215,6 +239,20 @@ export default function GuildSettingsView({ guildId }: Props) {
               setSettings={setSettings}
             />
           </div>
+
+          {/* Language */}
+          <div className="relative rounded-2xl md:col-span-2">
+            <AccessGate settings={settings} field="Language" hasAccess={settings.hasLanguageAccess !== false} requirement={settings.requirementLanguage} />
+            <LanguageCard
+              languageDraft={languageDraft}
+              locales={locales}
+              saving={saving}
+              onSelect={(loc) => {
+                setLanguageDraft(loc);
+                patchField("language", loc);
+              }}
+            />
+          </div>
         </div>
       </section>
 
@@ -285,36 +323,8 @@ export default function GuildSettingsView({ guildId }: Props) {
               )}
             </SettingCard>
           </div>
-
-          {/* Language */}
-          <div className="relative overflow-hidden rounded-2xl transition-transform duration-300 ease-out hover:scale-[1.01]">
-            <AccessGate settings={settings} field="Language" hasAccess={settings.hasLanguageAccess !== false} requirement={settings.requirementLanguage} />
-            <SettingCard title="Language" description="Bot response language" icon={<FiGlobe className="h-5 w-5" />}>
-              <div className="flex items-center gap-2">
-                <select
-                  value={languageDraft}
-                  onChange={(e) => {
-                    setLanguageDraft(e.target.value);
-                    patchField("language", e.target.value);
-                  }}
-                  disabled={saving === "language"}
-                  className="rounded-lg border border-white/[0.1] bg-white/[0.05] px-3 py-1.5 text-sm text-white outline-none focus:border-purple-500/50 transition appearance-none cursor-pointer"
-                >
-                  {locales.map((loc) => (
-                    <option key={loc} value={loc} className="bg-[#1a1a1e] text-white">{loc}</option>
-                  ))}
-                </select>
-              </div>
-            </SettingCard>
-          </div>
         </div>
       </section>
-
-      {/* Web3 Tip Contract */}
-      <Web3TipContractSection
-        guildId={guildId}
-        canManage={settings.hasManageGuild === true || settings.isOwner === true || settings.isAdmin === true}
-      />
     </div>
   );
 }
@@ -417,6 +427,111 @@ function ToggleSwitch({
         checked ? "translate-x-6" : "translate-x-1",
       )} />
     </button>
+  );
+}
+
+function LanguageCard({
+  languageDraft,
+  locales,
+  saving,
+  onSelect,
+}: {
+  languageDraft: string;
+  locales: string[];
+  saving: string | null;
+  onSelect: (loc: string) => void;
+}) {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  return (
+    <div className="group rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 flex flex-col gap-4 transition-all duration-300 ease-out hover:bg-white/[0.04] hover:border-white/[0.12]">
+      {/* Header row */}
+      <div className="flex items-center gap-3">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/[0.06] text-white/60 transition-colors duration-300 group-hover:bg-white/[0.1] group-hover:text-white/80">
+          <FiGlobe className="h-5 w-5" />
+        </span>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-sm font-bold text-white">Language</h3>
+          <p className="text-[11px] text-white/40 mt-0.5">Bot response language for this server</p>
+        </div>
+        {saving === "language" && (
+          <span className="text-xs text-purple-300 animate-pulse">Saving...</span>
+        )}
+      </div>
+
+      {/* Language dropdown */}
+      <div ref={containerRef} className="relative">
+        <p className="text-xs font-semibold text-white/30 mb-1.5">Selected Language</p>
+        <button
+          type="button"
+          onClick={() => setDropdownOpen((o) => !o)}
+          disabled={saving === "language"}
+          className={clsx(
+            "flex w-full items-center gap-2 rounded-xl border border-white/[0.1] bg-white/[0.04] px-3 py-2 text-left transition focus:outline-none focus:border-purple-500/50",
+            saving === "language"
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:border-white/[0.2] hover:bg-white/[0.06] cursor-pointer"
+          )}
+        >
+          <div className="flex flex-1 items-center gap-1.5 min-h-[28px]">
+            {languageDraft ? (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-500/40 bg-purple-500/15 px-2.5 py-1 text-xs font-semibold text-purple-300">
+                {localeNames[languageDraft] ?? languageDraft}
+              </span>
+            ) : (
+              <span className="text-sm text-white/30">Select a language...</span>
+            )}
+          </div>
+          {dropdownOpen ? (
+            <FiChevronUp className="h-4 w-4 text-white/40 shrink-0" />
+          ) : (
+            <FiChevronDown className="h-4 w-4 text-white/40 shrink-0" />
+          )}
+        </button>
+
+        {dropdownOpen && (
+          <div className="absolute z-30 mt-1 w-full max-h-[210px] overflow-y-auto rounded-xl border border-white/[0.1] bg-[#1a1a1e] shadow-2xl scrollbar-none">
+            {locales.length === 0 ? (
+              <div className="px-3 py-3 text-xs text-white/30 text-center">No languages available</div>
+            ) : (
+              locales.map((loc) => {
+                const isSelected = loc === languageDraft;
+                return (
+                  <button
+                    key={loc}
+                    type="button"
+                    onClick={() => {
+                      onSelect(loc);
+                      setDropdownOpen(false);
+                    }}
+                    className={clsx(
+                      "flex w-full items-center justify-between px-3 py-2.5 text-sm text-left transition-colors",
+                      isSelected
+                        ? "bg-purple-500/10 text-purple-300 border-l-2 border-purple-500"
+                        : "text-white/80 hover:bg-white/[0.06] border-l-2 border-transparent",
+                    )}
+                  >
+                    <span className="font-medium">{localeNames[loc] ?? loc}</span>
+                    {isSelected && <FiCheck className="h-4 w-4 text-purple-400 shrink-0" />}
+                  </button>
+                );
+              })
+            )}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -737,202 +852,5 @@ function DefaultSourceSelector({
         </>
       )}
     </div>
-  );
-}
-
-function Web3TipContractSection({ guildId, canManage }: { guildId: string; canManage: boolean }) {
-  const [contractAddress, setContractAddress] = useState<string | null>(null);
-  const [tipNotifyChannelId, setTipNotifyChannelId] = useState<string | null>(null);
-  const [notifyDraftChannelId, setNotifyDraftChannelId] = useState<string>("");
-  const [channels, setChannels] = useState<Array<{ id: string; name: string }>>([]);
-  const [tipLoading, setTipLoading] = useState(true);
-  const [creating, setCreating] = useState(false);
-  const [savingNotify, setSavingNotify] = useState(false);
-  const { hasWallet, getProviderAndSigner } = useEmbeddedWallet();
-
-  useEffect(() => {
-    api.get(`/api/web3/guild/${guildId}/contract`)
-      .then(({ data }: { data: { contractAddress: string | null; tipNotifyChannelId?: string | null } }) => {
-        setContractAddress(data.contractAddress);
-        const notifyChannelId = data.tipNotifyChannelId ?? null;
-        setTipNotifyChannelId(notifyChannelId);
-        setNotifyDraftChannelId(notifyChannelId ?? "");
-      })
-      .catch(() => {})
-      .finally(() => setTipLoading(false));
-  }, [guildId]);
-
-  useEffect(() => {
-    if (!contractAddress || !canManage) return;
-    api.get(`/api/guild/${guildId}/channels`)
-      .then(({ data }) => {
-        const source = Array.isArray(data) ? data : (data?.channels ?? []);
-        const normalized = (source as any[])
-          .filter((ch) => ch?.id && ch?.name)
-          .map((ch) => ({ id: String(ch.id), name: String(ch.name) }));
-        setChannels(normalized);
-      })
-      .catch(() => {});
-  }, [guildId, contractAddress, canManage]);
-
-  const handleCreate = async () => {
-    if (!canManage) {
-      toast.error("You need Manage Server permission to create a tip contract");
-      return;
-    }
-
-    if (!hasWallet) {
-      toast.error("No embedded wallet available. Please wait for wallet to initialize or refresh the page.");
-      return;
-    }
-
-    setCreating(true);
-    try {
-      const { Contract } = await import("ethers");
-      const { TIP_FACTORY_ABI, contracts: web3Contracts } = await import("@/lib/web3");
-
-      if (!web3Contracts.tipFactory) {
-        toast.error("Tip factory contract not deployed yet");
-        setCreating(false);
-        return;
-      }
-
-      // Get Privy embedded wallet provider
-      const { signer, address: ownerAddress } = await getProviderAndSigner();
-      const factory = new Contract(web3Contracts.tipFactory, TIP_FACTORY_ABI, signer);
-
-      toast.info("Creating tip contract on Somnia Network...");
-      const tx = await factory.createGuildTip(guildId, ownerAddress);
-      await tx.wait();
-
-      const newContractAddress = await factory.getGuildContract(guildId);
-
-      await api.post("/api/web3/guild/contract", {
-        guildId,
-        contractAddress: newContractAddress,
-      });
-
-      setContractAddress(newContractAddress);
-      toast.success("Tip contract created!");
-    } catch (err: any) {
-      if (err?.code === "ACTION_REJECTED" || err?.code === 4001) {
-        toast.error("Transaction rejected");
-      } else {
-        toast.error(err?.message?.slice(0, 100) ?? "Failed to create contract");
-      }
-    } finally {
-      setCreating(false);
-    }
-  };
-
-  const handleSaveTipNotify = async () => {
-    if (!contractAddress) return;
-    if (!canManage) {
-      toast.error("You need Manage Server permission to configure tip notifications");
-      return;
-    }
-
-    setSavingNotify(true);
-    try {
-      const channelId = notifyDraftChannelId.trim() || null;
-      const { data } = await api.patch(`/api/web3/guild/${guildId}/tip-notify`, { channelId });
-      setTipNotifyChannelId(data?.tipNotifyChannelId ?? null);
-      setNotifyDraftChannelId(data?.tipNotifyChannelId ?? "");
-      toast.success(channelId ? "Tip notification channel updated" : "Tip notifications disabled");
-    } catch (err: any) {
-      toast.error(err?.response?.data?.error ?? "Failed to update tip notification channel");
-    } finally {
-      setSavingNotify(false);
-    }
-  };
-
-  if (tipLoading) return null;
-
-  return (
-    <section className="space-y-4">
-      <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white/30">
-        <span className="w-0.5 h-4 rounded-full bg-purple-500" />
-        Tip Guild Contract
-      </h2>
-
-      <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 space-y-3">
-        {contractAddress ? (
-          <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-purple-400" />
-              <span className="text-xs font-semibold text-purple-400">Tip Contract Active</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-xs text-muted-foreground">Contract:</span>
-              <a
-                href={`https://shannon-explorer.somnia.network/address/${contractAddress}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono text-purple-400 hover:text-purple-300 underline"
-              >
-                {contractAddress.slice(0, 10)}...{contractAddress.slice(-8)}
-              </a>
-            </div>
-            <p className="text-[11px] text-muted-foreground/70">
-              Members can tip this server using STT on Somnia Network.
-            </p>
-          </div>
-        ) : canManage ? (
-          <div className="space-y-3">
-            <p className="text-xs text-muted-foreground">
-              Create a tip contract to allow members to send STT tips to this server.
-            </p>
-            <button
-              onClick={handleCreate}
-              disabled={creating}
-              className="rounded-lg bg-purple-500/20 border border-purple-500/30 px-4 py-2 text-xs font-semibold text-purple-300 hover:bg-purple-500/30 disabled:opacity-40 transition-all"
-            >
-              {creating ? "Creating..." : "Create Tip Contract"}
-            </button>
-          </div>
-        ) : (
-          <p className="text-xs text-muted-foreground">
-            No tip contract for this server. You need Manage Server permission to create one.
-          </p>
-        )}
-
-        {contractAddress && (
-          <div className="mt-4 rounded-xl border border-white/[0.08] bg-white/[0.03] p-4 space-y-3">
-            <p className="text-xs font-semibold text-white/80">Tip Notification Channel</p>
-            <p className="text-[11px] text-white/50">
-              Send embed notifications when a tip is received (includes timestamp, message, and tx hash).
-            </p>
-
-            {canManage ? (
-              <>
-                <select
-                  value={notifyDraftChannelId}
-                  onChange={(e) => setNotifyDraftChannelId(e.target.value)}
-                  className="w-full rounded-lg border border-white/[0.1] bg-white/[0.05] px-3 py-2 text-xs text-white outline-none focus:border-purple-500/50 transition"
-                >
-                  <option value="">Disable notifications</option>
-                  {channels.map((ch) => (
-                    <option key={ch.id} value={ch.id} className="bg-[#1a1a1e] text-white">
-                      #{ch.name}
-                    </option>
-                  ))}
-                </select>
-                <button
-                  onClick={handleSaveTipNotify}
-                  disabled={savingNotify}
-                  className="rounded-lg bg-indigo-500/20 border border-indigo-500/30 px-4 py-2 text-xs font-semibold text-indigo-300 hover:bg-indigo-500/30 disabled:opacity-40 transition-all"
-                >
-                  {savingNotify ? "Saving..." : "Save Notification Channel"}
-                </button>
-              </>
-            ) : (
-              <p className="text-xs text-muted-foreground">
-                Current channel: {tipNotifyChannelId ? `<#${tipNotifyChannelId}>` : "Disabled"}
-              </p>
-            )}
-          </div>
-        )}
-      </div>
-    </section>
   );
 }

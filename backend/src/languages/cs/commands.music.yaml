@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Podívejte se na mé tipy pro vás!~"
+search_desc: "### HEJ! Nalezeny výsledky pro váš požadavek"
+search_end_desc2: "### JÉ! %{user}, nevybrali jste skladbu včas\n**Zkuste to znovu!**"
+search_footer: "%{countSong} nalezených skladeb"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` užijte si to ♥"
+
+search_active: "Už něco hledáte! Počkejte, až skončí poslední hledání, než začnete nové."
+search_no_result: "Pro váš dotaz nebyly nalezeny žádné výsledky :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` užijte si to ♥"
+no_songs_playing: "Momentálně se nepřehrává žádná skladba!"
+
+### Autoplay command!
+autoplay_off: "Automatické přehrávání je nyní **Vypnuto**"
+autoplay_on: "Automatické přehrávání je nyní **Zapnuto**"
+autoplay_no_songs_playing: "Nepřehrává se žádná skladba!"
+
+### ClearQueue command!
+clearqueue_msg: "Fronta byla **vymazána**"
+
+### Forward command!
+forward_msg: "**%{user} přetočil %{title} na** `%{duration}`"
+forward_beyond: "Skladba brzy skončí. Nemůžete ji přetočit dál!"
+
+### PlayNext command!
+playnext_desc: "### %{name} jako další ♪"
+playnext_queue_empty: "Fronta je prázdná. Prosím nejdříve přidejte nějaké skladby"
+playnext_notfound: "Skladba nebyla nalezena!"
+
+# Execute when invalid
+no_node: "**Nebyl nalezen žádný Lavalink server. Zkuste to prosím znovu za 5 minut**"
+
+### Join command!
+join_msg: "Přehrávač byl úspěšně vytvořen a připojen k %{channel}"
+join_already: "Již jsem v %{channel}"
+join_no_in_voice: "Nejste v hlasovém kanálu!"
+join_no_same_voice: "Nejste ve stejném hlasovém kanálu jako já!"
+
+### Loop command!
+loop_current: "Nyní se opakuje %{title}"
+loop_all: "**Byl zapnut režim opakování FRONTY**"
+unloop_all: "**Režim opakování byl VYPNUT**"
+loop_invalid: "Neplatný režim opakování. Prosím použijte **Disabled**"
+loop_already: "Režim opakování je již **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Prosím zadejte platný **název skladby**"
+lyrics_title: "Text pro **%{song}**"
+lyrics_notfound: "**Text pro tuto skladbu nebyl nalezen!**"
+lyrics_toolong: "**Text je příliš dlouhý, maximálně 4048 znaků povoleno!**"
+lyrics_disable: " **Texty jsou momentálně vypnuty!**"
+lyrics_noquery: "**Prosím zadejte platný **název skladby**"
+lyrics_error: "**Chyba: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "PRÁVĚ HRAJE"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Autor"
+nowplaying_total_duration_title: "Délka"
+nowplaying_request_title: "Vyžádal"
+
+### Pause command!
+pause_msg: "**Skladba %{title} je momentálně pozastavena!"
+
+### Play command!
+play_no_same_voice: "Nejste ve stejném hlasovém kanálu jako já!"
+play_no_in_voice: "Nejste v hlasovém kanálu!"
+play_arg: "Prosím zadejte platný název skladby nebo URL!"
+play_emoji: "**Jejda! Toto je emoji, nemůžete přehrávat skladby pomocí emoji**"
+play_match: "**Jejda! Omlouváme se, skladba nebyla nalezena! Zkuste to prosím znovu**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## To bylo snadné!
+  ### Váš %{title} byl přidán do fronty
+
+play_queue_max: |
+  JÉ!>,.,< Fronta je příliš dlouhá. Maximálně %{limitqueue} skladeb.
+  Upgradujte na [**premium**](%{premium}) pro neomezený přístup k frontě!
+
+play_playlist_max: |
+  JÉ!>,.,< Playlist je příliš dlouhý. Maximálně %{limitqueue} skladeb.
+  Upgradujte na [**premium**](%{premium}) pro neomezený přístup k playlistu!
+
+### Previous command!
+previous_notfound: |
+  **Ve frontě nebyla nalezena žádná předchozí skladba!
+  Co takhle /play přidat další skladby a nechat hudbu hrát?**
+previous_msg: |
+  **Zpět k předchozí skladbě!
+  Nyní hraje %{title}**
+
+### Queue command!
+queue_number_invalid: "Prosím zadejte platné číslo!"
+queue_title: "Přehrávání fronty..."
+queue_description: "**%{title}**\n\n**Zbytek fronty %{rest}**"
+queue_footer: "Stránka • %{page}/%{pages} | Skladby • %{queue_lang} | Celková délka • %{duration}"
+queue_notnumber: "Prosím zadejte platné číslo stránky!"
+queue_page_notfound: "Existuje pouze **%{page} stránek**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Prosím zadejte platné číslo!"
+removetrack_already: "**Nemohu odebrat skladbu, která se právě přehrává**"
+removetrack_notfound: "**Omlouváme se %{user}, skladba nebyla nalezena!**"
+removetrack_desc: "**Odebráno %{title} z fronty!**"
+
+### Replay command!
+replay_msg: "**%{user} přehrává znovu %{title}**"
+replay_not_seekable: "Skladbu **%{title}** nelze přehrát znovu."
+
+### Resume command!
+resume_msg: "**Přehrávání obnoveno %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} přetočil %{title} na** `%{duration}`"
+rewind_beyond: "Skladba právě začala. Nemůžete ji přetočit zpět!"
+
+### Seek command!
+seek_beyond: "Nemůžete přeskočit za délku skladby!"
+seek_invalid: "Neplatná délka přeskoku. Prosím použijte platný časový údaj. Příklad: **1:30**"
+seek_msg: "**Přeskočeno %{title} na** `%{duration}`"
+seek_not_seekable: "Skladbu **%{title}** nelze přetáčet vpřed ani vzad."
+
+### Skip command!
+skip_notfound: |
+  **Nebyla nalezena žádná skladba k přeskočení! Vypadá to, že není co přeskočit.
+  Pojďme /play přidat další skladby a nechat hudbu hrát!**
+skip_msg: "**%{title} byl přeskočen**"
+skip_number_invalid: "Prosím zadejte platné číslo!"
+
+### Stop command!
+stop_msg: "**%{title} byl zastaven**"
+
+### Shuffle command!
+shuffle_title: "Zamíchat frontu"
+
+### Volume command!
+volume_number_invalid: "Prosím zadejte platné číslo!"
+volume_invalid: "Neplatná hlasitost. Prosím použijte číslo mezi **1** a **100**"
+volume_msg: "**Hlasitost nastavena na %{volume}%, užijte si to %{user}**"
+volume_max: "**Hlasitost je již na maximu 100%**"
+
+### play source commands
+url_no_allowed: "Prosím použijte název skladby/interpreta (URL není povoleno)"
+play_arg_source: "Prosím zadejte platný název skladby/interpreta!"
+
+## Temporarily disabled commands
+youtube_disabled: "Podpora YouTube je dočasně nedostupná"
+autoplay_disabled: "Automatické přehrávání je dočasně vypnuto."

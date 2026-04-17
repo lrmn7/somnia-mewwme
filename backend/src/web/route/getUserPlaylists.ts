@@ -1,11 +1,6 @@
 import { Manager } from "../../manager.js";
 import Fastify from "fastify";
 
-/**
- * GET /v1/playlists/:userId
- *
- * Returns all playlists owned by a user.
- */
 export async function getUserPlaylists(
   client: Manager,
   req: Fastify.FastifyRequest,

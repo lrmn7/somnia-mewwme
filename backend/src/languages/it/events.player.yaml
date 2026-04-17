@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "IN RIPRODUZIONE"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Autore"
+track_requested_by: "Richiesto da"
+track_duration: "Durata"
+no_same_voice: "Non sei nello stesso canale vocale in cui sono io!"
+filter_already: "**Il filtro %{name} e' gia' abilitato**"
+filter_reset_on: "**Il filtro e' stato resettato**"
+filter_reset_already: "**Il filtro e' gia' stato resettato**"
+no_player_filter: "**Non posso applicare un filtro!**"
+filter_menu_on: "**Filtro %{name} attivato!**"
+
+player_get_exception: "Oh-oh! Sembra ci sia un intoppo con il brano. Vuoi che riprovi?"
+player_track_error: "Il brano ha avuto un problema. Puoi riprovare per favore?"
+player_track_stuck: "Sono cosi' triste :(, il brano si e' bloccato. Forse un nuovo tentativo ci tirera' su di morale?"
+queue_end_desc: "Tutti i brani sono finiti! Vuoi altri ritmi?\nUsa **/play** per continuare la festa!"
+
+leave_pause: "Visto che mi avete lasciato da solo :( Il player e' stato messo in pausa."
+leave_resume: "Visto che qualcuno si e' unito a me, il player e' stato ripreso."
+
+player_end: "Il canale e' rimasto vuoto per quasi 15 minuti, quindi ho deciso di andarmene perche' non mi piace stare da solo"
+
+### Last FM Scrobble ###
+expired_login_session: "La tua sessione Last.fm e' scaduta o non e' valida.\nPer favore autenticati di nuovo per continuare a usare la funzione di scrobbling."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Chi desidera cantare trova sempre una canzone ♪"
+milestone_track_desc: |
+  ## OH Ehi
+  Hai ascoltato **%{total}** brani! La tua playlist e' infinita o sei semplicemente cosi' ossessionato dalla musica?
+

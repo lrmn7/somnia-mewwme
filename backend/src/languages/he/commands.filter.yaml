@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **פילטר %{name} מופעל!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **אני מקווה שתאהבו את הצליל הזה!**
+filter_already: "מה? ה-VST של %{name} כבר מופעל... אין לי מה לעשות כאן."
+filter_number: "זה לא מספר שאני יכול להכניס לאקולייזר..."
+filter_greater: "זה חייב להיות מספר גדול מ-**0**!"
+filter_less: "וואו! יותר מדי! אולי פחות מ-**10** עדיף..."
+
+### Bassboost command!
+bassboost_set: "**באסבוסט הוגדר ל-%{amount}dB**"
+bassboost_limit: "אנא השתמש במספר בין **-10** ל-**10**"
+
+### Equalizer command!
+eq_author: "אקולייזר"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  יש **10 פסים** שניתן להגדיר מ-**-10** עד **10**.
+  לא חייבים להזין את כולם, רק את אלה שרוצים לשנות.
+  אז אם רוצים לדלג על אחד, פשוט השאירו אותו כ-**0**.
+eq_field_title: "דוגמה:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "איפוס אקולייזר • %{prefix}eq reset"
+eq_on: "האקולייזר הוגדר ל-**%{bands}**!"
+eq_number: "אנא הזינו מספר חוקי!"
+eq_greater: "המספר חייב להיות גדול מ-**-10**"
+eq_than: "המספר חייב להיות קטן מ-**10**"
+
+### Pitch command!
+pitch_on: "בסדר, הגובה כעת **%{amount}**!"
+
+### Rate command!
+rate_on:  "בסדר! הקצב כעת **%{amount}x**!"
+
+### Speed command!
+speed_on: "בטח, משנה מהירות ל-**%{amount}x**!"
+
+### Reset command!
+reset_on: "**מאפס** את כל ה-VSTs! חזרה לצליל המקורי!"
+reset_already:  "ה-VSTs כבר **כבויים**, שכחת?"
+
+# Invalid Number
+number_invalid: "זה לא מספר שאני יכול לעבוד איתו... נסה שוב עם מספר חוקי."

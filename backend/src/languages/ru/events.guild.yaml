@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 Присоединился к серверу!"
+leave_title: "📥 Покинул сервер!"
+guild_name: "Название"
+guild_id: "ID"
+guild_owner: "Владелец"
+guild_member_count: "Количество участников"
+guild_creation_date: "Дата создания"
+guild_join_date: "Дата присоединения"
+current_server_count: "Текущее количество серверов"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "ОГО! Привет всем ✧(≧◡≦) ♡"
+join_msg_desc: |
+  ### Спасибо, что пригласили меня к вам (*≧▽≦)
+  ### вы можете упомянуть меня для использования команд! Введите </help:1088430405033656341>, чтобы посмотреть мои слэш-команды ♡

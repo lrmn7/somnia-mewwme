@@ -5,154 +5,114 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { LinkWrapper } from '@/components/link-wrapper';
-import { links } from '@/config/links';
 
 const faqs = [
   {
     question: 'What is Mewwme?',
     answer: (
       <>
-        Mewwme is a Discord music bot with Web3 integration on the Somnia Network.
-        It offers high-quality audio playback, a clean user interface, and allows
-        communities to receive tips using native STT tokens all recorded on-chain.
+        A Discord music bot on the <strong>Somnia Testnet</strong>. You bind
+        your wallet, buy premium with STT tokens, tip servers on-chain, and
+        browse guilds on the community page. Login with Discord, bind a wallet,
+        and you&apos;re set. Need STT? Grab some from the faucet at
+        testnet.somnia.network.
       </>
     ),
   },
   {
-    question: 'How do I add Mewwme to my server?',
-    answer: (
-      <>
-        You can add Mewwme to your server by clicking{' '}
-        <LinkWrapper href={links.botInvite}>here</LinkWrapper>.<br />
-        <em>
-          NOTE: Mewwme requires <code>Administrator</code> permission to function
-          properly. Without it, some features may not work correctly.
-        </em>
-      </>
-    ),
-  },
-  {
-    question: 'How does the tipping system work?',
+    question: 'How does wallet binding work?',
     answer: (
       <div className="space-y-3 text-muted-foreground">
         <p>
-          Each server can deploy its own tip contract on the Somnia Network.
-          Anyone can send STT tokens as tips to support the server. Here&apos;s how it works:
+          Go to <strong>/profile</strong>, connect MetaMask or OKX Wallet on
+          Somnia Testnet, and sign a verification message. That links your
+          wallet to your Discord account. No tokens moved, no approvals.
         </p>
-        <ul className="ml-5 list-disc space-y-1">
-          <li>Server owners deploy a tip contract from the Dashboard.</li>
-          <li>Users send tips with native STT tokens no ERC-20 approval needed.</li>
-          <li>All tips are recorded on-chain, transparent and verifiable.</li>
-          <li>New tips appear in real-time via Somnia Reactivity.</li>
-          <li>Server owners can claim accumulated tips from the Dashboard.</li>
-        </ul>
-        <p className="text-sm">
-          You can also tip servers you discover on the{' '}
-          <LinkWrapper href="/community" className="text-mewwme font-semibold hover:underline">Community</LinkWrapper> page
-        no need to be a member.
+        <p>
+          One wallet per account. You can change it on the same page, but
+          there is a <strong>7-day cooldown</strong> between changes.
         </p>
       </div>
     ),
   },
   {
-    question: 'How to get Premium?',
+    question: 'How does Premium work?',
     answer: (
       <div className="space-y-4 text-muted-foreground">
         <p>
-          Subscribe with native STT on the Somnia Network.
-          Visit the <LinkWrapper href="/premium" className="text-mewwme font-semibold hover:underline">Premium page</LinkWrapper> to
-          choose your tier:
+          Pay with STT on-chain. Each plan gives you server slots for{' '}
+          <strong>30 days</strong>. Plans stack, so buying two adds up.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div className="rounded-xl border border-gray-800 bg-gray-800/20 p-4 text-center">
-            <p className="font-bold text-mewwme mb-1">Guild Basic</p>
-            <p className="text-lg font-bold text-foreground">2 STT<span className="text-xs text-muted-foreground">/mo</span></p>
-            <p className="text-xs mt-1">1 server</p>
+          <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
+            <p className="font-bold text-pink-400 mb-1">Guild Basic</p>
+            <p className="text-lg font-bold text-white">3 STT</p>
+            <p className="text-xs text-white/40">1 server</p>
           </div>
-          <div className="rounded-xl border border-gray-800 bg-gray-800/20 p-4 text-center">
-            <p className="font-bold text-mewwme mb-1">Guild Plus</p>
-            <p className="text-lg font-bold text-foreground">3 STT<span className="text-xs text-muted-foreground">/mo</span></p>
-            <p className="text-xs mt-1">3 servers</p>
+          <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
+            <p className="font-bold text-pink-400 mb-1">Guild Plus</p>
+            <p className="text-lg font-bold text-white">7 STT</p>
+            <p className="text-xs text-white/40">3 servers</p>
           </div>
-          <div className="rounded-xl border border-gray-800 bg-gray-800/20 p-4 text-center">
-            <p className="font-bold text-mewwme mb-1">Guild Pro</p>
-            <p className="text-lg font-bold text-foreground">5 STT<span className="text-xs text-muted-foreground">/mo</span></p>
-            <p className="text-xs mt-1">5 servers</p>
+          <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
+            <p className="font-bold text-pink-400 mb-1">Guild Pro</p>
+            <p className="text-lg font-bold text-white">10 STT</p>
+            <p className="text-xs text-white/40">5 servers</p>
           </div>
         </div>
-        <p className="text-sm">
-          Payment is in native STT (no token approval needed). Your subscription quota stacks
-          if you purchase multiple plans.
-        </p>
-        <LinkWrapper
-          href="/premium"
-          className="text-xs font-bold py-2 px-4 bg-mewwme text-white rounded-lg hover:opacity-80 transition-all inline-block"
-        >
-          Go to Premium Page
-        </LinkWrapper>
       </div>
     ),
   },
   {
-    question: 'How do I set up my wallet?',
+    question: 'How do I activate Premium on my server?',
+    answer: (
+      <div className="space-y-3 text-muted-foreground">
+        <ol className="ml-5 list-decimal space-y-2">
+          <li>Bind your wallet on <strong>/profile</strong>.</li>
+          <li>Go to <strong>/premium</strong>, pick a plan, pay on-chain.</li>
+          <li>
+            In your Discord server, run{' '}
+            <code className="rounded bg-white/[0.06] px-1.5 py-0.5 text-pink-400 font-bold text-xs">
+              /premium claim
+            </code>
+          </li>
+        </ol>
+        <p className="text-xs italic">
+          To move it, run{' '}
+          <code className="rounded bg-white/[0.06] px-1.5 py-0.5 text-pink-400 font-bold text-xs">
+            /premium unclaim
+          </code>{' '}
+          first, then claim on the new server.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: 'How does tipping work?',
     answer: (
       <div className="space-y-3 text-muted-foreground">
         <p>
-          Mewwme uses Privy for wallet management you don&apos;t need to install
-          MetaMask or any browser extension.
+          Guild owners can deploy a <strong>tip jar contract</strong> from the
+          dashboard. Once deployed, anyone can send STT to it from the{' '}
+          <strong>/community</strong> page with an optional message (max 120
+          characters).
         </p>
-        <ul className="ml-5 list-disc space-y-1">
-          <li>Login with your Discord account.</li>
-          <li>Privy automatically creates an embedded wallet for you.</li>
-          <li>Your wallet works on the Somnia Network for tips and premium subscriptions.</li>
-          <li>You can view your wallet address in your Profile page.</li>
-        </ul>
-      </div>
-    ),
-  },
-  {
-    question: 'Can I transfer premium to another server?',
-    answer: (
-      <div className="space-y-4 text-muted-foreground">
         <p>
-          Yes, you can transfer premium to another server:
-        </p>
-        <ul className="ml-5 list-disc space-y-1">
-          <li>
-            Go to your <strong>Profile &rarr; Activated</strong> tab and click{' '}
-            <strong>Deactivate</strong> on the current server.
-          </li>
-          <li>
-            Select the new server from the dropdown and click{' '}
-            <strong>Activate</strong>. Your remaining duration continues automatically.
-          </li>
-        </ul>
-        <p className="text-sm italic">
-          If you encounter issues, contact our staff in the{' '}
-          <LinkWrapper href={links.supportServer}>Support Server</LinkWrapper>.
+          The guild owner claims tips from the dashboard. A{' '}
+          <strong>1.5% fee</strong> is taken on claim. Everything is on-chain.
         </p>
       </div>
     ),
   },
   {
-    question: 'What is Somnia Network?',
+    question: 'What is the Community page?',
     answer: (
-      <div className="space-y-3 text-muted-foreground">
-        <p>
-          Somnia is a high-performance EVM blockchain with sub-second block times.
-          Mewwme uses Somnia for:
-        </p>
-        <ul className="ml-5 list-disc space-y-1">
-          <li><strong>Premium subscriptions</strong> pay with native STT tokens.</li>
-          <li><strong>Tip contracts</strong> each server has its own on-chain tip jar.</li>
-          <li><strong>Reactivity</strong> native WebSocket pub/sub for real-time on-chain events.</li>
-        </ul>
-        <p className="text-sm">
-          All transactions are verifiable on{' '}
-          <LinkWrapper href="https://shannon-explorer.somnia.network">Shannon Explorer</LinkWrapper>.
-        </p>
-      </div>
+      <>
+        The <strong>/community</strong> page lists all guilds with a tip jar.
+        Search by name, sort by popularity or newest, and see donation counts.
+        Premium guilds have a blue checkmark. Click any guild to tip or view
+        details.
+      </>
     ),
   },
 ]

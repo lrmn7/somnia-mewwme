@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "SIMDI CALINIYOR"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Sanatci"
+track_requested_by: "Isteyen"
+track_duration: "Sure"
+no_same_voice: "Benimle ayni ses kanalinda degilsiniz!"
+filter_already: "**%{name} filtresi zaten etkin**"
+filter_reset_on: "**Filtre Sifirlandi**"
+filter_reset_already: "**Filtre zaten Sifirlanmis**"
+no_player_filter: "**Filtre uygulayamiyorum!**"
+filter_menu_on: "**%{name} Filtresi acik!**"
+
+player_get_exception: "Hay aksi! Parcada bir sorun var gibi gorunuyor. Tekrar denememi ister misin?"
+player_track_error: "Parcada bir sorun olustu, lutfen tekrar dener misiniz?"
+player_track_stuck: "Cok uzgunum :(, parca takildi. Belki tekrar denemek bizi neselendirir?"
+queue_end_desc: "Tum sarkilar bitti! Daha fazla ritim mi istiyorsun?\nPartinin devam etmesi icin **/play** kullan!"
+
+leave_pause: "Hepiniz beni yalniz biraktiginiz icin :( Oynatici duraklatildi."
+leave_resume: "Birileri bana katildigi icin oynatici devam ettirildi."
+
+player_end: "Kanal neredeyse 15 dakikadir bos, bu yuzden ayrilmaya karar verdim cunku yalniz kalmaktan hoslanmiyorum"
+
+### Last FM Scrobble ###
+expired_login_session: "Last.fm oturumunuz suresi doldu veya gecersiz.\nScrobble ozelligini kullanmaya devam etmek icin lutfen tekrar kimlik dogrulamasi yapin."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Sarki soylemek isteyenler her zaman bir sarki bulur ♪"
+milestone_track_desc: |
+  ## AH Selam
+  **%{total}** parca dinledin! Oynatma listen sonsuz mu, yoksa gercekten muzige bu kadar mi duskusun?
+

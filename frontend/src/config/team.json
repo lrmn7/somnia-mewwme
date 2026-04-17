@@ -1,0 +1,47 @@
+[
+  {
+    "name": "L RMN",
+    "categories": ["Developers"],
+    "badge": "Founder",
+    "id": 1,
+    "description": "Lead Developer",
+    "imageUrl": "/team/developer/lrmn.jpg",
+    "websiteUrl": "https://lrmn.link/"
+  },
+  {
+    "name": "Linkimorii",
+    "categories": ["Artworks"],
+    "badge": null,
+    "id": 4,
+    "description": "Freelancer Illustrator",
+    "imageUrl": "/team/artwork/linkimori.png",
+    "websiteUrl": "https://linkimorii.id/"
+  },
+  {
+    "name": "Weiss Owl",
+    "categories": ["Contributors"],
+    "badge": null,
+    "id": 5,
+    "description": "Contributors",
+    "imageUrl": "/team/contributors/WeissOwl.webp",
+    "websiteUrl": "https://alfari.id/"
+  },
+  {
+    "name": "MRFRIPS",
+    "categories": ["Beta Testers"],
+    "badge": null,
+    "id": 7,
+    "description": "Beta Tester",
+    "imageUrl": "/team/beta-testers/mrfrips.gif",
+    "websiteUrl": null
+  },
+  {
+    "name": "KORIVASH",
+    "categories": ["Beta Testers"],
+    "badge": null,
+    "id": 16,
+    "description": "Beta Tester",
+    "imageUrl": "/team/developer/korivash.webp",
+    "websiteUrl": "https://www.korivash.com/"
+  }
+]

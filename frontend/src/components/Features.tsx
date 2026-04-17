@@ -65,7 +65,7 @@ const FeatureCard = ({ feature, index }: { feature: typeof features[0]; index: n
       <div className={`flex flex-col ${isLeft ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 items-center`}>
         {/* Text content */}
         <div className="flex-1 space-y-4">
-          <h3 className="text-2xl sm:text-3xl font-bold text-mewwme">{feature.title}</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-foreground">{feature.title}</h3>
           <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
           <div className="flex flex-wrap gap-2 pt-2">
             {feature.tags.map((tag, i) => (

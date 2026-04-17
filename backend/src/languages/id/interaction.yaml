@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "Diaktifkan"
+disable: "Dinonaktifkan"
+
+# maintenance
+maintenance_title: "Pemeliharaan"
+maintenance_desc: |
+  %{bot} sedang dalam pemeliharaan. Silakan coba lagi nanti.
+  Untuk informasi lebih lanjut, silakan bergabung ke [server dukungan](%{serversupport}) kami. Terima kasih!
+
+# Getting error!
+unexpected_error: "Terjadi kesalahan. Silakan coba lagi nanti!"
+
+### Rate limit!
+ratelimit: "Kamu melakukan tindakan terlalu cepat. Silakan tunggu **%{time} Detik**"
+
+# No permission!
+no_perms: "Aku tidak memiliki izin **%{perm}**!\nSilakan berikan izin **%{perm}** kepadaku untuk menjalankan perintah ini."
+
+no_manage_guild_perms: "Perintah ini membutuhkan izin **%{perm}**!\nkamu tidak memiliki izin untuk menjalankan perintah ini!"
+
+no_admin_perms: "Perintah ini membutuhkan izin **%{perm}**!\nkamu tidak memiliki izin untuk menjalankan perintah ini!"
+
+# No permission!
+no_perms_channel: "Aku tidak memiliki izin **%{perm}** di %{channel} untuk menjalankan perintah ini!"
+
+# Execute when invalid
+no_node: "**Tidak ada server Lavalink yang ditemukan. Silakan coba lagi setelah 5 Menit**"
+
+# Client owner!
+owner_only: "Perintah ini hanya bisa dijalankan oleh **Pemilik** bot"
+
+# Need to join voice & same voice to use command!
+no_player: "Tidak ada lagu yang sedang diputar!"
+no_same_voice: "Kamu tidak berada di voice channel yang sama denganku!"
+no_in_voice: "Kamu tidak berada di voice channel!"
+
+# Blacklist User
+blacklist_user: "Sepertinya kamu di-blacklist! Kamu tidak diizinkan menggunakan perintah.\nSilakan hubungi **[developer](%{serversupport})** jika kamu merasa ini adalah kesalahan."
+
+# Blacklist Guild
+blacklist_guild: "Server ini di-blacklist! Kamu tidak diizinkan menggunakan perintah di server ini.\nSilakan hubungi **[developer](%{serversupport})** jika kamu merasa ini adalah kesalahan."
+
+### DjRole No Permission ###
+not_dj_role: "Kamu harus memiliki role %{role} untuk menggunakan perintah ini."
+
+### No Premium Event!
+no_premium_button: "Dapatkan Premium"
+no_premium_author: "Tidak Ada Paket Premium"
+no_premium_desc: "Ups! Sepertinya kamu belum memiliki paket premium.\nFitur ini tidak dapat diakses tanpa paket tersebut."
+
+# Top.gg error
+topgg_error_author: "Error Vote Top.gg"
+topgg_error_desc: "Terjadi kesalahan saat memverifikasi vote-mu di top.gg, kemungkinan karena Top.gg sedang down. Silakan coba lagi dalam 5-10 menit.\nJika masalah ini berlanjut, silakan hubungi [server dukungan](%{serversupport}) kami untuk bantuan lebih lanjut."
+
+# Top.gg unvote
+topgg_unvote_button: "Vote untuk membuka"
+premium_button: "Upgrade ke premium"
+topgg_unvote_author: "Vote Diperlukan"
+topgg_unvote_desc: "Kamu perlu Vote untuk mengakses perintah ini! Cepat dan gratis.\nAlternatifnya, dapatkan premium di [Halaman Premium](%{premium}) kami untuk melewati pesan ini dan membuka fitur ekstra."
+
+### Mention Desc ###
+mention_content: "prefix-ku untuk server ini `%{prefix}`\nkamu bisa mention aku untuk menggunakan perintah juga atau ketik </help:1294325423957741598> untuk melihat slash commands-ku ♡"

@@ -5,7 +5,7 @@ import { api } from "@/lib/api";
 import { DISCORD_CLIENT_ID } from "@/lib/config";
 import type { BotGuild } from "@/types/player";
 import Navbar from "@/components/Navbar";
-import BackgroundGlow from "@/components/BackgroundGlow";
+
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 
@@ -57,14 +57,6 @@ export default function Dashboard() {
   }, [status, navigate, fetchGuilds]);
 
   useEffect(() => {
-    const refreshGuilds = () => {
-      fetchGuilds();
-    };
-    window.addEventListener("mewwme:guilds-refresh", refreshGuilds);
-    return () => window.removeEventListener("mewwme:guilds-refresh", refreshGuilds);
-  }, [fetchGuilds]);
-
-  useEffect(() => {
     const invited = searchParams.get("invited");
     if (!invited || status !== "authenticated") return;
 
@@ -77,19 +69,16 @@ export default function Dashboard() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams, status]);
 
-  const lowerSearch = search.toLowerCase();
   const withBot = guilds.filter(
-    (g) => g.hasBot && g.name.toLowerCase().includes(lowerSearch)
+    (g) => g.hasBot && g.name.toLowerCase().includes(search.toLowerCase())
   );
   const withoutBot = guilds.filter(
-    (g) => !g.hasBot && g.name.toLowerCase().includes(lowerSearch)
+    (g) => !g.hasBot && g.name.toLowerCase().includes(search.toLowerCase())
   );
-  const hasAnyWithBot = guilds.some((g) => g.hasBot);
-  const hasAnyWithoutBot = guilds.some((g) => !g.hasBot);
 
   if (status === "loading" || (status === "authenticated" && loading)) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen flex flex-col relative text-foreground items-center justify-center">
         <div className="text-center">
           <div className="w-12 h-12 border-4 border-pink-500/30 border-t-pink-500 rounded-full animate-spin mx-auto mb-4" />
           <p className="text-muted-foreground">Loading servers...</p>
@@ -99,11 +88,11 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-background relative">
-      <BackgroundGlow />
+    <div className="min-h-screen flex flex-col relative text-foreground">
       <Navbar />
 
-      <main className="relative z-10 max-w-6xl mx-auto px-4 pt-32 pb-16">
+      <main className="flex-1">
+        <section className="relative z-10 max-w-6xl mx-auto px-4 pt-32 pb-16">
         <div className="text-center mb-6">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Your Servers</h1>
           <p className="text-muted-foreground text-sm sm:text-base">
@@ -112,30 +101,28 @@ export default function Dashboard() {
         </div>
 
         {/* Search */}
-        {guilds.length > 0 && (
-          <div className="relative mx-auto mb-10 max-w-xl">
-            <svg
-              className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
-              />
-            </svg>
-            <input
-              type="text"
-              placeholder="Search servers..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-xl border border-white/10 bg-white/5 py-3 pl-11 pr-4 text-sm text-foreground placeholder-muted-foreground backdrop-blur-sm transition focus:border-pink-500/50 focus:outline-none focus:ring-1 focus:ring-pink-500/30"
+        <div className="relative mx-auto mb-10 max-w-xl">
+          <svg
+            className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
             />
-          </div>
-        )}
+          </svg>
+          <input
+            type="text"
+            placeholder="Search servers..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full rounded-xl border border-white/10 bg-white/5 py-3 pl-11 pr-4 text-sm text-foreground placeholder-muted-foreground backdrop-blur-sm transition focus:border-pink-500/50 focus:outline-none focus:ring-1 focus:ring-pink-500/30"
+          />
+        </div>
 
         {error && (
           <div className="glass-card rounded-xl p-4 mb-8 border-red-500/20 text-red-400 text-sm text-center">
@@ -144,17 +131,16 @@ export default function Dashboard() {
         )}
 
         {/* Servers with bot */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="mb-10"
-        >
-          <h2 className="text-lg font-semibold text-foreground mb-4">
-            Servers with Mewwme
-          </h2>
-          {withBot.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {withBot.length > 0 && (
+          <MotionDiv
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            <h2 className="text-lg font-semibold text-foreground mb-4">
+              Servers with Mewwme
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
               {withBot.map((guild) => (
                 <ServerCard
                   key={guild.id}
@@ -165,52 +151,50 @@ export default function Dashboard() {
                 />
               ))}
             </div>
-          ) : (
-            <div className="text-center py-8">
-              <p className="text-muted-foreground">
-                {search && hasAnyWithBot
-                  ? "No servers match your search."
-                  : "No servers currently have Mewwme."}
-              </p>
-            </div>
-          )}
-        </MotionDiv>
+          </MotionDiv>
+        )}
 
-        {/* Servers without bot — invite section */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          <h2 className="text-lg font-semibold text-muted-foreground mb-1">
-            Add Mewwme to a Server
-          </h2>
-          <p className="text-sm text-muted-foreground/60 mb-4">
-            Servers where you have permission to add bots
-          </p>
-          {withoutBot.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {withoutBot.map((guild) => (
-                <ServerCard
-                  key={guild.id}
-                  guild={guild}
-                  hasBot={false}
-                  onAction={() => {
-                    window.location.href = getInviteUrl(guild.id);
-                  }}
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-8">
-              <p className="text-muted-foreground">
-                {search && hasAnyWithoutBot
-                  ? "No servers match your search."
-                  : "No available servers to invite Mewwme right now."}
-              </p>
+        {guilds.filter((g) => g.hasBot).length > 0 &&
+          withBot.length === 0 &&
+          search && (
+            <div className="text-center py-8 mb-10">
+              <p className="text-muted-foreground">No servers match your search.</p>
             </div>
           )}
-        </MotionDiv>
+
+        {/* Servers without bot */}
+        {(withoutBot.length > 0 || guilds.some((g) => !g.hasBot)) && (
+          <MotionDiv
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <h2 className="text-lg font-semibold text-muted-foreground mb-1">
+              Add Mewwme to a Server
+            </h2>
+            <p className="text-sm text-muted-foreground/60 mb-4">
+              Servers where you have permission to add bots
+            </p>
+            {withoutBot.length === 0 && search ? (
+              <div className="text-center py-8">
+                <p className="text-muted-foreground">No servers match your search.</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {withoutBot.map((guild) => (
+                  <ServerCard
+                    key={guild.id}
+                    guild={guild}
+                    hasBot={false}
+                    onAction={() => {
+                      window.location.href = getInviteUrl(guild.id);
+                    }}
+                  />
+                ))}
+              </div>
+            )}
+          </MotionDiv>
+        )}
 
         {guilds.length === 0 && !loading && !error && (
           <div className="text-center py-20">
@@ -222,6 +206,7 @@ export default function Dashboard() {
             </p>
           </div>
         )}
+        </section>
       </main>
       <Footer />
     </div>

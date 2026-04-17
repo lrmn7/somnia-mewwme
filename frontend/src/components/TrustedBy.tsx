@@ -82,18 +82,8 @@ const TrustedBy = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl sm:text-4xl font-bold mb-4 text-foreground"
         >
-          Loved by Over <span className="text-mewwme">10,000+</span>{" "}
-          Communities
+          Discord Communities with{" "}<span className="text-mewwme">Mewwme</span>
         </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-muted-foreground"
-        >
-          Fueling the vibe in servers, study groups, and global communities
-        </motion.p>
       </div>
 
       <div className="max-w-full sm:max-w-[85%] lg:max-w-[70%] mx-auto">

@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**Там, де ті, хто хоче співати, завжди знаходять пісню ♪\nПриєднуйтесь до мелодії на вашому сервері Discord сьогодні!**"
+about_desc2: |
+  ・Префікс бота для цього сервера: `%{prefix}`
+  ・Змінити префікс: `%{prefix} prefix <новий префікс>`
+  ・Відтворити трек за посиланням або пошуковим запитом: `%{prefix} play`
+  Відвідайте наш **[вебсайт](%{website})** або скористайтесь командою `%{prefix} help` для інших команд.
+about_desc3: |
+  **Зверніть увагу!**
+  Мені бажано мати дозвіл `Administrator`, але...
+  Навіть якщо ви не надасте мені цей дозвіл, я все одно працюватиму, але можливо не зможу виконати все, на що здатний. Просто кажу!
+
+  **Допомога та підтримка**
+  Приєднуйтесь до нашого **[сервера підтримки](%{serversupport})**, якщо вам потрібна допомога, хочете отримати інформацію про оновлення та проблеми, або хочете спілкуватися зі спільнотою!
+
+### Help command!
+finder_invalid: "Недійсна команда"
+finder_example: "Я не можу вам допомогти це знайти! Шукайте *справжню* команду!"
+finder_name: "**Команда:**"
+finder_des: " **Опис:**"
+finder_usage: "**Використання:**"
+finder_access: "**Доступ:**"
+finder_aliases: "**Псевдоніми:**"
+finder_slash: "**Слеш:**"
+finder_des_no: "Не вдалося знайти опис, вибачте..."
+finder_usage_no: "Я не впевнений, як використовувати цю команду."
+finder_aliases_prefix: "[Лише префікс]"
+finder_aliases_no: "Ви не можете використовувати цю команду з псевдонімом."
+finder_slash_enable: "Увімкнено"
+finder_slash_disable: "Вимкнено"
+command_not_found: "Невідома команда"
+select_menu: "Насолоджуйтесь музикою зі мною!"
+help_timeout: "Час меню допомоги вичерпано, спробуйте використати **`%{prefix}help`** або **`/help`** знову."
+homepage_title: "Там, де ті, хто хоче співати, завжди знаходять пісню ♪\nПриєднуйтесь до мелодії на вашому сервері Discord сьогодні!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **Музика 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify Connect**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **Високоякісне аудіо**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Скроблінг з Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **Грайте та змагайтеся в міні-іграх**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer та інші...**
+
+  <a:ask:1291123964080558121> **Бажаєте перейти на план [Premium](%{premium})?**
+### Rating bot commands! ###
+rating_desc: "Дякуємо %{user} за оцінку зірками нашого музичного бота Discord!"
+rating_succes: "Дякуємо за вашу оцінку!\nВашу оцінку успішно надіслано."
+rating_failure: "Не вдалося надіслати звіт. Будь ласка, спробуйте пізніше."
+
+### Report command #####
+report_provide_desc: "Ой! Недійсні команди. Будь ласка, надайте опис"
+report_failure: "Не вдалося надіслати звіт. Будь ласка, спробуйте пізніше."
+report_success: "Дякуємо за ваш звіт.\nЗвіт успішно надіслано для розгляду."
+
+### Suggestions command #####
+suggestions_provide_desc: "Ой! Недійсні команди. Будь ласка, надайте опис"
+suggestions_failure: "Не вдалося надіслати пропозицію. Будь ласка, спробуйте пізніше."
+suggestions_success: "Дякуємо за вашу пропозицію!\nВашу пропозицію успішно надіслано."
+
+### MyStats command ####
+mystats_error: "Сталася помилка при генерації вашої статистики. Будь ласка, спробуйте пізніше."
+
+### TopStats command ####
+topstats_error: "Сталася помилка при генерації вашої статистики. Будь ласка, спробуйте пізніше."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **Результат статусу:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 Особистість користувача"
+patreon_logs_user_identity_value: |
+  **Ім'я:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **Email:** %{email}
+
+patreon_logs_details_title: "Деталі Patreon"
+patreon_logs_details_value: |
+  **Внесок:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **Статус:** `%{status}`
+patreon_logs_date_title: "📅 Дата"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "Особистість користувача"
+kofi_logs_user_identity_value: "**Ім'я:** %{fullName}\n**Email:** ||%{email}||\n**Публічний:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Особистість Discord"
+kofi_logs_discord_identity_value: "**Користувач:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "Деталі оплати"
+kofi_logs_payment_details_value: "**Сума:** %{currency} %{amount}\n**Рівень:** **%{tierName}**\n**Тип:** %{type}"
+kofi_logs_sub_status_title: "Статус підписки"
+kofi_logs_sub_status_value: "**Підписка:** %{isSub}\n**Перший платіж:** %{isFirst}"
+kofi_logs_message_title: "Повідомлення / Причина"
+kofi_logs_tech_title: "Технічні / ID транзакцій"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**Msg ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Токен:** ||%{token}||"
+kofi_logs_view_details: "Переглянути деталі"
+

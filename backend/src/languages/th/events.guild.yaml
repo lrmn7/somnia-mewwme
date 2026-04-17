@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 เข้าร่วมกิลด์แล้ว!"
+leave_title: "📥 ออกจากกิลด์แล้ว!"
+guild_name: "ชื่อ"
+guild_id: "ID"
+guild_owner: "เจ้าของ"
+guild_member_count: "จำนวนสมาชิก"
+guild_creation_date: "วันที่สร้าง"
+guild_join_date: "วันที่เข้าร่วม"
+current_server_count: "จำนวนเซิร์ฟเวอร์ปัจจุบัน"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "OMG! Hii guys ✧(≧◡≦) ♡"
+join_msg_desc: |
+  ### ขอบคุณที่เชิญฉันมาอยู่กับพวกคุณ (*≧▽≦)
+  ### คุณสามารถเมนชั่นฉันเพื่อใช้คำสั่งได้ด้วย! พิมพ์ </help:1088430405033656341> เพื่อดูคำสั่ง slash ของฉัน ♡

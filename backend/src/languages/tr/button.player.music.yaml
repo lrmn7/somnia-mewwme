@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yayyy~~ Otomatik oynatma artik **Etkin**"
+autoplay_off: "Hmmm~~ Otomatik oynatma artik **Devre Disi**"
+autoplay_no_song: "Calanan sarki yok!"
+
+### Loop command!
+loop_current: "Mevcut sarki artik dongude calacak. Tekrarin tadini cikar!"
+loop_all: "Sira artik donguye ayarlandi. Muzik tekrar tekrar calsin!"
+unloop_all: "Dongu modu kapatildi. Farkli parcalarin tadini cikar!"
+
+### Pause command!
+pause_msg: "Muzik duraklatildi. Bir mola ver ve sessizligin tadini cikar."
+
+### Resume command!
+resume_msg: "Muzik geri geldi! Ritme devam edelim ♪"
+
+previous_notfound: "Uzgunum, daha geriye gidemiyorum. Onceki parca bulunamadi :("
+previous_msg: "Tamam, geri sariyoruz! Onceki parca geliyor <3"
+
+### Queue command!
+queue_title: "Sira caliniyor..."
+queue_description: "**%{title} **\n\n**Siranin Devami %{list_song}**"
+queue_footer: "Sayfa • %{page}/%{pages} | Sarkilar • %{queue_lang} | Toplam Sure • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Ne yaptigimi tahmin et? Sirayi senin icin karistirdim!"
+
+### Skip command!
+skip_msg: "Parcayi atladim. Umarim aldirmamissindir :p"
+skip_notfound: "Hay aksi! Atlayacak parca yok! Mevcut parcayla devam et ♪"
+
+### Stop command!
+stop_msg: "Muzik oynatma durduruldu. Umarim harika vakit gecirmissindir!"
+
+### Volume command!
+voldown_msg: "Ses seviyesi %{volume}% azaltildi. Daha sakin havanin tadini cikar!"
+volume_invalid: "Gecersiz Ses Seviyesi. Mevcut aralik **1** ile **100** arasindadir"
+volup_msg: "Ses seviyesi %{volume}% artirildi. Muzigi son ses ac!"
+volume_max: "Ses seviyesini 100%'in uzerine cikaramam"
+volume_min: "Eyvah~~ zaten en dusuk ses seviyesinde!"

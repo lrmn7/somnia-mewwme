@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "Centrum pomocy zostało wyłączone"
+invalid_channel_helpdesk: "Podany kanał jest nieprawidłowy"
+channel_viewable_helpdesk: "Podany kanał nie jest dla mnie widoczny"
+setup_helpdesk_succes: "Centrum pomocy zostało pomyślnie skonfigurowane w %{channel}."
+
+embed1_title: "Witaj na serwerze wsparcia %{bot}!"
+embed1_desc: "**%{bot} Tam, gdzie ci, którzy chcą śpiewać, zawsze znajdą piosenkę ♪\nDołącz do melodii na swoim serwerze Discord już dziś!**"
+embed1_footer: "Dziękujemy za wybranie %{bot} jako swojego osobistego bota muzycznego!"
+
+embed2_title: "Centrum pomocy %{bot}"
+embed2_desc: |
+  **%{button1} Czym jest %{bot}?
+
+  %{button2} Jak zaprosić bota muzycznego %{bot}?
+
+  %{button3} Jak używać bota muzycznego %{bot}?
+
+  %{button4} Jak włączyć funkcję 24/7?
+
+  %{button5} %{bot} nie odpowiada/jest offline.
+
+  %{button6} Jakość dźwięku %{bot} jest opóźniona.
+
+  %{button7} Jak skonfigurować kanał żądań utworów?
+
+  %{button8} %{bot} ciągle mówi, że brakuje mu uprawnień.
+
+  %{button9} %{bot} sam rozłącza się z kanału głosowego.
+
+  %{button10} Jak uzyskać/aktywować Premium i jakie korzyści otrzymuję?**
+
+embed2_field1_name: "Strona internetowa"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Typ"
+embed2_field2_value: "**Bot muzyczny**"
+embed2_field3_name: "Kup Premium"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Ci, którzy chcą śpiewać, zawsze znajdą piosenkę ♪"
+helpdesk1_desc: |
+  **%{bot} to bot Discord, który rewolucjonizuje sposób, w jaki doświadczasz muzyki na Discordzie, oferując najczystszy interfejs użytkownika, wysoką jakość dźwięku i szeroki zakres funkcji muzycznych.**
+
+  **Dlaczego %{bot}?**
+  - **Regularne aktualizacje**: %{bot} jest stale aktualizowany, zapewniając ci zawsze najlepsze najnowsze funkcje i poprawki.
+  - **Kompleksowe funkcje**: Prosty system muzyczny %{bot} umożliwia płynne odtwarzanie z wielu źródeł.
+  - **Oddana społeczność wsparcia**: Jesteśmy stosunkowo nowym botem na Discordzie i chcielibyśmy, abyś do nas dołączył! Zapewnienie płynnego działania bota jest naszym priorytetem, dlatego potrzebujemy twojej pomocy z opiniami i sugestiami. Jeśli masz jakiekolwiek pytania, śmiało otwórz zgłoszenie wsparcia.
+
+  **Przydatne linki**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **Potrzebujesz wsparcia?**
+  - Złóż zgłoszenie, aby uzyskać dodatkową pomoc
+
+  **Na co czekasz? Zaproś %{bot} na swój serwer Discord już dziś i ciesz się niezrównanym, nieograniczonym doświadczeniem muzycznym!**
+  **[Kliknij tutaj, aby zaprosić](%{invite})**
+
+helpdesk2_title: "Dodawanie %{bot} do twojego serwera"
+helpdesk2_desc: |
+  **Możesz zaprosić %{bot} używając tego [linku](%{invite}).**
+    Wybierz serwer, do którego chcesz go dodać i kliknij **Autoryzuj**
+
+  > Pamiętaj, że jeśli chcesz wyłączyć uprawnienia `Administrator` dla %{bot}, może to wpłynąć na jego funkcjonalność. Chociaż nadal będziesz mógł korzystać z podstawowych funkcji muzycznych, niektóre funkcjonalności mogą nie działać prawidłowo.
+
+helpdesk3_title: "Jak używać bota muzycznego %{bot}?"
+helpdesk3_desc: |
+  Dołącz do kanału głosowego lub kanału scenicznego, a następnie wpisz /play <nazwa utworu/URL> na kanale tekstowym.
+  Możesz bezpośrednio korzystać z przycisków sterowania, aby zatrzymać, zapętlić itp.
+  Wpisz / (lub /help) i wybierz ikonę %{bot}, aby uzyskać listę wszystkich dostępnych komend.
+
+helpdesk4_title: "Jak włączyć funkcję 24/7?"
+helpdesk4_desc: |
+  Dołącz do kanału głosowego lub kanału scenicznego, a następnie wpisz `/247 <enable/disable>` na kanale tekstowym.
+
+  **Uwaga:** *Tę funkcję można wykorzystać, jeśli masz uprawnienie `manage server`, i upewniono się wcześniej, że bot aktualnie odtwarza muzykę.*
+
+helpdesk5_title: "%{bot} nie odpowiada/jest offline"
+helpdesk5_desc: |
+  Próbujesz użyć komendy, ale ciągle nie działa? Cóż, prawdopodobnie nie jest w stanie odpowiedzieć, ale wykonaj poniższe kroki, aby to naprawić.
+
+  **%{bot} teraz używa komend slash!**
+  Upewnij się, że używasz komend slash, ponieważ Discord wymaga teraz, aby wszystkie boty ich używały.
+  Zacznij od wpisania `/play` i `/help`
+
+  **%{bot} nadal nie odpowiada?**
+  Jedynym pozostałym scenariuszem w tej sytuacji jest problem po stronie Discorda lub naszej. Sprawdź, czy %{bot} nie jest offline na twoim serwerze. Jeśli jest offline, najlepiej poczekaj do 5 minut i zobacz, czy %{bot} wróci online. Jeśli jest online, ma wszystkie wymagane uprawnienia, powinieneś zdecydowanie skontaktować się z jednym z naszych członków wsparcia.
+
+helpdesk6_title: "Jakość dźwięku %{bot} jest opóźniona"
+helpdesk6_desc: |
+  Nikt nie lubi opóźnionej muzyki, ale to się czasem zdarza podczas słuchania botów muzycznych na Discordzie. Oto kilka możliwych rozwiązań, które pomogą ci to naprawić.
+
+  **Co powinienem zrobić?**
+  Przede wszystkim sprawdź swoje połączenie internetowe. Discord wyświetla twój ostatni i średni ping w lewym dolnym rogu, po prostu kliknij na "Voice Connected" i sprawdź, czy twój ping jest stabilny (jeśli czerwony wykres się bardzo trzęsie, to znaczy, że nie jest stabilny!) a ostatni oraz średni ping jest poniżej 250 milisekund. Jeśli oba te wskaźniki pokazują, że twoje połączenie jest słabe, powinieneś sprawdzić swoje WiFi/LAN. Restart routera może również rozwiązać niektóre problemy.
+
+  **Masz ping 5ms i możesz pobrać GTA 5 w 2 minuty?**
+  Więc twoje połączenie internetowe nie jest problemem. W 95% przypadków, gdy %{bot} laguje, Discord ma tymczasowe problemy ze swoimi serwerami głosowymi. Normalnie po prostu je restartują w pewnym momencie, ale możesz wymusić przełączenie na inny serwer w twoim regionie.[Spróbuj zmienić region serwera](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3), aby uzyskać nowy i świeży serwer głosowy Discorda.
+  Jeśli nadal masz ten sam problem, możesz wpisać /report, aby zgłosić swój problem.
+
+helpdesk7_title: "Jak skonfigurować kanał żądań utworów?"
+helpdesk7_desc: |
+  **Jak utworzyć kanał żądań?**
+  Upewnij się, że %{bot} ma uprawnienie `manage server`, a następnie wpisz /setup z opcją `create`, a bot automatycznie utworzy specjalny kanał do żądań utworów.
+
+  ```Uwaga: Nie usuwaj żadnych wiadomości utworzonych przez %{bot}, aby mógł poprawnie działać.```
+
+  **Jak usunąć kanał żądań?**
+  Tak jak wcześniej, tylko w opcjach możesz wybrać `delete`.
+
+helpdesk8_title: "%{bot} ciągle mówi, że brakuje mu uprawnień."
+helpdesk8_desc: |
+  Podczas próby uruchomienia niektórych komend %{bot} może nie mieć pewnych uprawnień. W takich przypadkach %{bot} odmówi wykonania komendy, dopóki te problemy nie zostaną rozwiązane. Ważne jest, aby pamiętać, że te uprawnienia nie są opcjonalne; %{bot} potrzebuje ich do wykonania komendy.
+
+  Jeśli uważasz, że bot ma wymagane uprawnienia, upewnij się, że sprawdziłeś nadpisania ról kanału. Te nadpisania mogą modyfikować uprawnienia ról w określonych kanałach.
+
+  Jeśli nadal nie możesz ustalić, dlaczego %{bot} nie ma wymaganych uprawnień, rozważ nadanie %{bot} uprawnienia Administrator. To powinno rozwiązać wszelkie problemy z uprawnieniami Discorda.
+
+helpdesk9_title: "Mewwme rozłącza się z kanału głosowego sam"
+helpdesk9_desc: |
+  W bardzo rzadkich przypadkach, nawet z włączonym trybem 24/7, Mewwme może się rozłączyć z kanału głosowego bez użycia /stop lub przycisku Rozłącz w Discordzie. Poniżej wymieniono najczęstsze przyczyny i potencjalne rozwiązania.
+
+  **Tryb 24/7 nie jest włączony.**
+  Domyślnie Mewwme rozłącza się z kanału głosowego, gdy jest pusty przez 3 minuty.
+
+  **Rozwiązanie:** Zapoznaj się z "4. Jak włączyć funkcję 24/7?" w pierwszym osadzeniu pomocy, aby włączyć tryb 24/7.
+
+  **Brakujące uprawnienia.**
+  Za każdym razem, gdy Discord prosi nas o ponowne połączenie z kanałem głosowym, czy to z powodu restartów serwera, czy awarii API, ponownie sprawdzamy uprawnienia bota, aby upewnić się, że może dołączyć i mówić na kanale. Jeśli czegoś brakuje, będziesz musiał użyć /play ponownie, aby zaprosić bota na inny kanał lub ten sam po dodaniu wymaganych uprawnień.
+
+  **Rozwiązanie:** Upewnij się, że używasz komend /play, aby dodać bota do kanału głosowego, zamiast przenosić go z innego. W ten sposób zapewnisz, że bot ma wszystkie wymagane uprawnienia do ponownego połączenia w razie potrzeby.
+
+  **Problemy z regionem serwera.**
+  W niektórych przypadkach niektóre regiony głosowe mogą mieć problemy z siecią i stabilnością, które mogą uniemożliwić botowi dołączenie do kanału głosowego.
+
+  **Rozwiązanie:** Przełącz się na inny region głosowy za pomocą ustawień kanału głosowego (wybierz najbliższy do twojego kraju).
+
+  **Coś innego poszło nie tak.**
+  Jeśli wypróbowałeś wszystkie powyższe rozwiązania i problem nadal występuje, wpisz `report` lub otwórz zgłoszenie na serwerze wsparcia https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "Jak uzyskać/aktywować Premium i jakie korzyści otrzymuję?"
+helpdesk10_desc: |
+  **Jak aktywować korzyści Premium?**
+
+  aby aktywować korzyści z członkostwa premium, wykonaj następujące kroki:
+  1. **najpierw połącz swoje konto discord**
+    - przed zakupem upewnij się, że twoje konto discord jest połączone z platformą, z której korzystasz (patreon lub ko-fi).
+    - jest to wymagane, aby system mógł automatycznie wykryć twoją płatność.
+  2. **kup członkostwo**
+  - po połączeniu discorda, dokonaj płatności za członkostwo zgodnie z wybranym planem.
+  3. **poczekaj na synchronizację**
+    - po pomyślnej płatności poczekaj kilka minut na synchronizację członkostwa.
+  4. **aktywuj premium na swoim serwerze**
+    - przejdź na serwer discord, który chcesz ulepszyć, a następnie użyj tej komendy:
+      `/premium claim`
+      wybierz odpowiednią opcję platformy (patreon lub ko-fi) po wyświetleniu monitu.
+      upewnij się, że uruchamiasz komendę na serwerze, na którym chcesz aktywować premium.
+      po aktywacji premium zostanie włączone natychmiast.
+
+  Wykonując powyższe kroki, będziesz mógł aktywować i cieszyć się wszystkimi korzyściami Premium. Jeśli napotkasz jakiekolwiek problemy lub masz dalsze pytania, skontaktuj się z naszym zespołem wsparcia.
+
+helpdesk10_footer: "Dziękujemy, że jesteś częścią naszej podróży! Mamy nadzieję, że będziesz się tu dobrze bawić."

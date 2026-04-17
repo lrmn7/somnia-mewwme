@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "Chế độ 24/7 đã được **Bật**"
+247_off: "Chế độ 24/7 đã được **Tắt**"
+247_already: "Chế độ 24/7 đã là **%{mode}** rồi"
+247_arg_error: "Chế độ 24/7 không hợp lệ. Vui lòng sử dụng %{text}"
+247_no_in_voice: "Bạn không ở trong kênh thoại!"
+
+
+### Set Language command! ###
+provide_lang: "**Ngôn ngữ không hợp lệ. Vui lòng sử dụng** `%{languages}`"
+lang_set: "**Ngôn ngữ đã được đặt thành** `%{language}`"
+lang_change: "**Ngôn ngữ đã được thay đổi thành** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "Vui lòng cung cấp tiền tố hợp lệ!"
+prefix_length: "**Tiền tố không thể dài hơn 10 ký tự**"
+prefix_set: "**Tiền tố đã được đặt thành** `%{prefix}`"
+prefix_change: "**Tiền tố đã được thay đổi thành** `%{prefix}`"
+
+### Control command!
+control_set: "**Chế độ điều khiển trình phát đã được đặt thành %{toggle}**"
+control_arg_error: "Đối số không hợp lệ. Vui lòng sử dụng %{text}"
+control_already: "Thông báo bài hát đã là **%{mode}** rồi"
+
+### Setup Music Req command! ###
+setup_arg_error: "Không hợp lệ! Vui lòng sử dụng %{text}"
+setup_enable: "**Ối! Hệ thống nhạc đã tồn tại.**"
+setup_topic: "♪ Những ai muốn hát luôn tìm thấy bài hát. ♪"
+setup_msg: "*`Đã thiết lập thành công Hệ thống nhạc tại`* %{channel}\n```Lưu ý: Không xóa bất kỳ tin nhắn nào tôi đã tạo để tôi hoạt động đúng cách.```"
+setup_null: "*`Đã xóa thành công kênh thiết lập!`*"
+setup_deleted: "*`Đã xóa thành công kênh thiết lập!`*"
+setup_null_inguild: "**Không tìm thấy Hệ thống nhạc trong máy chủ này! Sẵn sàng xóa dữ liệu**"
+setup_queuemsg: "**Tham gia kênh thoại và phát nhạc bằng tên hoặc URL tại đây!**"
+setup_playembed_author: "Không có bài hát nào đang phát"
+
+### Themes command!
+error_themes: "Không hợp lệ... Vui lòng thử lại."
+succes_themes: "**Đã thay đổi giao diện thành %{themes} thành công**"
+
+### Last FM Login command!
+lastfm_login_footer: "Lưu ý: Liên kết này sẽ hết hạn sau %{expired}."
+lastfm_login_title: "Đăng nhập Last.fm"
+lastfm_login_desc: "Bạn có muốn cấp quyền truy cập tài khoản [Last.fm](https://www.last.fm/user/eleremen) của bạn không?\nNếu có, vui lòng nhấn nút bên dưới để bắt đầu quá trình ủy quyền."
+lastfm_not_login_desc: "Bạn chưa đăng nhập vào Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Đăng xuất Last.fm"
+lastfm_logout_desc: "Bạn đã đăng xuất thành công khỏi Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Tính năng Last.fm đã bị tắt."
+lastfm_feature_disabled_desc: "Tính năng Last.fm hiện đang bị tắt. Vui lòng liên hệ quản trị viên để biết thêm thông tin."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "Không tìm thấy thông báo cho kênh YouTube **%{ytchannel}**."
+notify_youtube_removed: "Bạn đã xóa thông báo cho kênh YouTube **%{ytchannel}**."
+notify_youtube_disabled: "Tính năng thông báo Youtube hiện đang bị tắt. Liên hệ nhân viên để biết thêm thông tin."
+notify_youtube_already: "Thông báo cho kênh YouTube %{ytchannel} đã được thiết lập rồi."
+notify_youtube_invalid_channel: "Đã xảy ra lỗi khi chỉ định kênh văn bản hợp lệ. Vui lòng kiểm tra!"
+notify_youtube_set: "Thông báo Youtube đã được đặt cho **%{ytchannel}** trong %{channelid}."
+notify_youtube_404: |
+  Không tìm thấy ID kênh YouTube được cung cấp.
+  Để tìm ID kênh, hãy truy cập trang kênh YouTube và kiểm tra URL.
+  ID kênh là chuỗi chữ cái và số sau `/channel/` (ví dụ: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   Bạn đã đạt giới hạn %{limit} thông báo.
+   Bằng cách nâng cấp lên [premium](%{premium}), bạn có thể thiết lập tối đa %{limitpremium} thông báo.
+
+notify_youtube_limit_reached_premium: |
+   Bạn đã đạt giới hạn %{limit} thông báo.
+   Đây là mức tối đa cho phép. Hãy xem xét xóa một số thông báo để nhường chỗ cho thông báo mới.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Không tìm thấy thông báo cho tên người dùng Twitch **%{twitchusername}**."
+notify_twitch_removed: "Bạn đã xóa thông báo cho tên người dùng Twitch **%{twitchusername}**."
+notify_twitch_disabled: "Tính năng thông báo Twitch hiện đang bị tắt. Liên hệ nhân viên để biết thêm thông tin."
+notify_twitch_already: "Bạn đã thiết lập thông báo cho kênh Twitch %{twitchusername} rồi."
+notify_twitch_invalid_channel: "Đã xảy ra lỗi khi chỉ định kênh văn bản hợp lệ. Vui lòng kiểm tra!"
+notify_twitch_set: "Thông báo Twitch đã được đặt cho **%{twitchusername}** trong %{channelid}."
+notify_twitch_error: "Đã xảy ra lỗi không mong muốn khi xử lý thông báo Twitch cho **{twitchusername}** trong kênh **{channelid}**. Vui lòng thử lại hoặc liên hệ hỗ trợ nếu sự cố vẫn tiếp diễn."
+notify_twitch_limit_reached_non_premium: |
+   Bạn đã đạt giới hạn %{limit} thông báo.
+   Bằng cách nâng cấp lên [premium](%{premium}), bạn có thể thiết lập tối đa %{limitpremium} thông báo.
+
+notify_twitch_limit_reached_premium: |
+   Bạn đã đạt giới hạn %{limit} thông báo.
+   Đây là mức tối đa cho phép. Hãy xem xét xóa một số thông báo để nhường chỗ cho thông báo mới.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Tính năng Kênh thoại tạm đã được %{status}."
+tempvoice_disabled: "Kênh thoại tạm đã bị tắt."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Không hợp lệ... chỉ %{text}."
+status_voice_channel_true: "Trạng thái kênh thoại đã được đặt thành **%{type}**."
+status_voice_channel_false: "Trạng thái kênh thoại đã được đặt thành **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "Lệnh này chỉ có thể thực thi trên Máy chủ!"
+no_data_patreon: "Không tìm thấy dữ liệu Patreon (Lỗi cơ sở dữ liệu)"
+no_data_patreon_title: "Không tìm thấy"
+no_data_patreon_desc: |
+  Nếu bạn đã đăng ký, hãy đảm bảo tài khoản Discord của bạn đã được liên kết với Patreon!
+no_data_patreon_footer: "Đồng bộ Patreon có thể mất một chút thời gian, vui lòng kiểm tra lại sau"
+no_patreon_guild_membership: |
+  xin chào, gói patreon của bạn là **hạng người dùng**.
+  vui lòng nâng cấp lên **hạng máy chủ** để mở khóa quyền truy cập premium máy chủ.
+patreon_guild_membership_full_quota: |
+  bạn đã sử dụng hết hạn ngạch máy chủ!
+  **trạng thái:** %{status} máy chủ đã sử dụng.
+
+  giải pháp:
+  1. nâng cấp hạng trên patreon.
+  2. hoặc tắt premium trên máy chủ cũ.
+patreon_guild_membership_already_before: "Bạn đã kích hoạt premium trên máy chủ này trước đó rồi!"
+patreon_guild_membership_already: "**ĐÃ LÀ PREMIUM** vì được tài trợ bởi người khác.\nHãy tiết kiệm hạn ngạch cho các máy chủ khác!"
+patreon_guild_membership_claim_title: "Xác nhận kích hoạt"
+patreon_guild_membership_claim_desc: |
+  bạn có chắc muốn kích hoạt **premium máy chủ** cho:
+  **%{guildName}**
+
+  hành động này sẽ sử dụng **1 hạn ngạch máy chủ**.
+  hạn ngạch còn lại: **%{status}**
+patreon_guild_membership_claim_success: |
+  thành công! **%{guildName}** hiện là **máy chủ premium**.
+
+  **nhà tài trợ:** %{user}
+  **hạn ngạch còn lại:** %{status}
+  cảm ơn bạn đã hỗ trợ chúng tôi trên patreon!
+patreon_guild_membership_claim_success_title: "💎 Premium đã kích hoạt!"
+patreon_guild_membership_claim_cancel: "Đã hủy kích hoạt premium."
+patreon_guild_membership_claim_norespon: "Kích hoạt đã tự động hủy do không có phản hồi."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Máy chủ đã kích hoạt (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **người dùng tài trợ:** %{sponsorTag} %{sponsorId}
+  **máy chủ đích:** %{guildName} %{guildId}
+  **trạng thái hạn ngạch:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Bạn không thể thu hồi máy chủ premium này vì bạn không phải người đăng ký."
+patreon_guild_unclaim_title: "Xác nhận thu hồi Premium"
+patreon_guild_unclaim_desc: |
+  Bạn có chắc muốn **HỦY** trạng thái Premium của máy chủ **%{guildName}** không?
+  **Hậu quả:** Các tính năng Premium sẽ bị tắt trên máy chủ này.
+  Hạn ngạch máy chủ của bạn sẽ được khôi phục (+1).
+  Hạn ngạch còn lại hiện tại: **%{status}**
+patreon_guild_unclaim_success_title: "Premium đã thu hồi"
+patreon_guild_unclaim_success: |
+  Trạng thái Premium cho **%{guildName}** đã được thu hồi thành công.
+  **Hạn ngạch khôi phục:** 1 Máy chủ
+  **Hạn ngạch còn lại mới:** %{status}
+patreon_guild_unclaim_cancel: "Đã hủy quá trình thu hồi premium."
+patreon_guild_unclaim_norespon: "⏱️ Hết thời gian. Quá trình đã bị hủy."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Máy chủ đã thu hồi (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Người dùng:** %{sponsorTag} %{sponsorId}
+  **Máy chủ:** %{guildName}} %{guildId}
+  **Hạn ngạch khôi phục:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Người dùng:** %{userTag} (%{userId})
+  **Máy chủ:** %{guildName} (%{guildId})
+  **Hạn ngạch:** %{quota}
+  **Hết hạn:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Hành động: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "Không tìm thấy ID giao dịch hoặc đã được nhận."
+kofi_linked_success_title: "Liên kết thanh toán thành công!"
+kofi_linked_success_desc: "Bây giờ bạn có thể sử dụng `/premium claim <kofi>` mà không cần TxID."
+kofi_no_data_title: "Không tìm thấy dữ liệu!"
+kofi_no_data_desc: |
+  Nếu bạn đã thanh toán nhưng chưa kết nối tài khoản Discord với Kofi
+  sử dụng: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Không có hạn ngạch, nhưng bạn là người dùng premium."
+kofi_full_server_quota_title: "Hạn ngạch đầy!"
+kofi_full_server_quota_desc: "Bạn đã sử dụng **%{quota}** vị trí máy chủ."
+kofi_server_already_claim_desc: "**Đã kích hoạt!**\nBạn đã kích hoạt Premium trên máy chủ này trước đó rồi."
+kofi_server_already_active_desc: " **Đã là Premium!**\nMáy chủ này đã được kích hoạt premium bởi người dùng khác."
+kofi_guild_membership_claim_success: |
+  Premium đã được kích hoạt thành công!
+  **Sử dụng hạn ngạch:** %{quota}
+  **Hết hạn sau:** %{expires}
+kofi_guild_membership_claim_footer: "Cảm ơn bạn đã hỗ trợ!"
+kofi_action_title: "🏗️ Ko-fi Hành động: %{type}"
+kofi_action_description: "**Người dùng:** %{userTag} (`%{userId}`)\n**Máy chủ:** %{guildName} (`%{guildId}`)\n**Hành động:** %{action}\n**Hạn ngạch:** %{quota}"
+kofi_action_activation: "Kích hoạt máy chủ"
+kofi_action_manual_link: "Liên kết thanh toán thủ công"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium đã thu hồi"
+kofi_guild_unclaim_success_desc: |
+  Trạng thái Premium cho **%{guildName}** đã được thu hồi thành công.
+  **Hạn ngạch khôi phục:** 1 Máy chủ
+kofi_guild_not_owned_by_user: "Bạn không thể thu hồi máy chủ premium này vì bạn không phải người đăng ký."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Máy chủ đã thu hồi %{platform}"
+premium_unclaim_log_desc: |
+  **Người dùng:** %{userTag} %{userId}
+  **Máy chủ:** %{guildName}} %{guildId}
+  **Hạn ngạch khôi phục:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "Hệ thống Vai trò DJ đã được **Tắt**."
+dj_role_missing_role: "Bạn cần cung cấp một vai trò để sử dụng hành động `set`."
+dj_role_set: |
+  Vai trò DJ đã được đặt thành %{role}.
+  Trạng thái: **Đã bật**
+  **Các lệnh bị ảnh hưởng:**
+  %{commands}

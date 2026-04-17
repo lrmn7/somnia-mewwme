@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**Kde ti, kdo chtějí zpívat, vždy najdou písničku ♪\nPřipojte se k melodii na svém Discord serveru ještě dnes!**"
+about_desc2: |
+  ・Prefix bota pro tento server je `%{prefix}`
+  ・Změňte prefix pomocí `%{prefix} prefix <nový prefix>`
+  ・Přehrajte skladbu pomocí odkazu nebo hledaného výrazu `%{prefix} play`
+  Navštivte naše **[webové stránky](%{website})** nebo použijte příkaz `%{prefix} help` pro více příkazů.
+about_desc3: |
+  **Upozornění!**
+  Ideálně potřebuji oprávnění `Administrator`, ale...
+  I když mi tato oprávnění neudělíte, stále mohu fungovat, ale nemusím být schopen udělat vše, čeho jsem schopen. Jen říkám!
+
+  **Nápověda a podpora**
+  Připojte se k našemu **[serveru podpory](%{serversupport})**, pokud potřebujete pomoc, chcete získat informace o aktualizacích a problémech nebo se chcete zapojit do komunity!
+
+### Help command!
+finder_invalid: "Neplatný příkaz"
+finder_example: "S tímhle vám nemůžu pomoct! Hledejte *skutečný* příkaz!"
+finder_name: "**Příkaz:**"
+finder_des: " **Popis:**"
+finder_usage: "**Použití:**"
+finder_access: "**Přístupné pro:**"
+finder_aliases: "**Aliasy:**"
+finder_slash: "**Slash:**"
+finder_des_no: "Nemohl jsem najít popis, omlouvám se..."
+finder_usage_no: "Nejsem si jistý, jak tento příkaz použít."
+finder_aliases_prefix: "[Pouze prefix]"
+finder_aliases_no: "Tento příkaz nemůžete použít s aliasem."
+finder_slash_enable: "Zapnuto"
+finder_slash_disable: "Vypnuto"
+command_not_found: "Neznámý příkaz"
+select_menu: "Užijte si hudbu se mnou!"
+help_timeout: "Menu nápovědy vypršelo, zkuste znovu použít **`%{prefix}help`** nebo **`/help`**."
+homepage_title: "Kde ti, kdo chtějí zpívat, vždy najdou písničku ♪\nPřipojte se k melodii na svém Discord serveru ještě dnes!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **Hudba 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify Connect**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **Vysoce kvalitní zvuk**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Scrobblováno s Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **Hrajte a soutěžte v mini hrách**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer a další...**
+
+  <a:ask:1291123964080558121> **Chcete upgradovat na plán [Premium](%{premium})?**
+### Rating bot commands! ###
+rating_desc: "Děkujeme %{user} za ohodnocení hvězdičkami pro našeho Discord hudebního bota!"
+rating_succes: "Děkujeme za vaše hodnocení!\nVaše hodnocení bylo úspěšně odesláno."
+rating_failure: "Odeslání hodnocení se nezdařilo. Zkuste to prosím znovu později."
+
+### Report command #####
+report_provide_desc: "Jejda! Neplatné příkazy. Prosím uveďte svůj popis"
+report_failure: "Odeslání hlášení se nezdařilo. Zkuste to prosím znovu později."
+report_success: "Děkujeme za vaše hlášení.\nHlášení bylo úspěšně odesláno k vyřešení."
+
+### Suggestions command #####
+suggestions_provide_desc: "Jejda! Neplatné příkazy. Prosím uveďte svůj popis"
+suggestions_failure: "Odeslání návrhu se nezdařilo. Zkuste to prosím znovu později."
+suggestions_success: "Děkujeme za váš návrh!\nVáš návrh byl úspěšně odeslán."
+
+### MyStats command ####
+mystats_error: "Při generování vašich statistik došlo k chybě. Zkuste to prosím znovu později."
+
+### TopStats command ####
+topstats_error: "Při generování vašich statistik došlo k chybě. Zkuste to prosím znovu později."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **Výsledek stavu:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 Identita uživatele"
+patreon_logs_user_identity_value: |
+  **Jméno:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **E-mail:** %{email}
+
+patreon_logs_details_title: "Podrobnosti Patreonu"
+patreon_logs_details_value: |
+  **Příspěvek:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **Stav:** `%{status}`
+patreon_logs_date_title: "📅 Datum"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "Identita uživatele"
+kofi_logs_user_identity_value: "**Jméno:** %{fullName}\n**E-mail:** ||%{email}||\n**Veřejné:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord identita"
+kofi_logs_discord_identity_value: "**Uživatel:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "Podrobnosti platby"
+kofi_logs_payment_details_value: "**Částka:** %{currency} %{amount}\n**Úroveň:** **%{tierName}**\n**Typ:** %{type}"
+kofi_logs_sub_status_title: "Stav předplatného"
+kofi_logs_sub_status_value: "**Je předplatné:** %{isSub}\n**První platba:** %{isFirst}"
+kofi_logs_message_title: "Zpráva / Důvod"
+kofi_logs_tech_title: "Technické / ID transakcí"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**Msg ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Token:** ||%{token}||"
+kofi_logs_view_details: "Zobrazit podrobnosti"
+

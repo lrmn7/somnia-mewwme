@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **Filtr %{name} zapnut!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **Doufám, že se vám tenhle zvuk líbí!**
+filter_already: "Cože? VST %{name} je už zapnutý... Nemůžu s tím nic dělat."
+filter_number: "To není číslo, které mohu zadat do EQ..."
+filter_greater: "Musí to být číslo větší než **0**!"
+filter_less: "Páni! Příliš! Možná méně než **10** je lepší..."
+
+### Bassboost command!
+bassboost_set: "**Bassboost byl nastaven na %{amount}dB**"
+bassboost_limit: "Prosím použijte číslo mezi **-10** a **10**"
+
+### Equalizer command!
+eq_author: "Ekvalizér"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  Existuje **10 pásem**, která lze nastavit od **-10** do **10**.
+  Nemusíte zadávat všechna, pouze ta, která chcete změnit.
+  Pokud tedy chcete jedno přeskočit, můžete ho jednoduše nechat na **0**.
+eq_field_title: "Příklad:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Resetovat ekvalizér • %{prefix}eq reset"
+eq_on: "EQ byl nastaven na **%{bands}**!"
+eq_number: "Prosím zadejte platné číslo!"
+eq_greater: "Číslo musí být větší než **-10**"
+eq_than: "Číslo musí být menší než **10**"
+
+### Pitch command!
+pitch_on: "V pořádku, výška tónu je nyní **%{amount}**!"
+
+### Rate command!
+rate_on:  "V pořádku! Rychlost je nyní **%{amount}x**!"
+
+### Speed command!
+speed_on: "Jasně, měním rychlost na **%{amount}x**!"
+
+### Reset command!
+reset_on: "**Resetuji** všechny VST! Zpět k původnímu zvuku!"
+reset_already:  "VST jsou **již vypnuté**, zapomněli jste?"
+
+# Invalid Number
+number_invalid: "To není číslo, se kterým mohu pracovat... Zkuste to znovu s platným číslem."

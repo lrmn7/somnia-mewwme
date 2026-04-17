@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Politica de Privacidade do %{bot}"
+privacy_label: Politica de Privacidade
+privacy_desc: |
+  **Acordo do Usuario**
+  Usar o [%{bot}](%{serversupport}) ("bot") no servidor requer a coleta de certos dados do usuario. Os dados coletados incluem, mas nao se limitam a, o ID do Discord do usuario, nome de usuario do Discord e cargos do servidor. Usar o Bot e considerado aceitacao destes termos da politica.
+
+  **Acesso aos Dados**
+  O acesso aos dados e permitido apenas para desenvolvedores do bot e servicos de hospedagem e somente dentro do escopo necessario para desenvolvimento, testes e implementacao de recursos do bot. Os dados nao sao vendidos, cedidos ou compartilhados com terceiros, exceto conforme exigido por lei ou pelo acordo dos Termos de Servico. Voce pode visualizar seus dados mediante solicitacao ao [desenvolvedor](%{developer}).
+
+  **Armazenamento de Dados**
+  Os dados sao armazenados no banco de dados [MYSQL](https://www.mysql.com/). O banco de dados e protegido para prevenir acesso externo. No entanto, nenhuma garantia e fornecida, e o proprietario do Bot nao e responsavel por violacoes de dados nao intencionais ou maliciosas. Se houver acesso nao autorizado aos Dados, a equipe do servidor notificara os usuarios atraves do Servidor de Suporte.
+
+  **Direitos do Usuario**
+  A qualquer momento, voce tem o direito de solicitar a visualizacao dos dados da sua conta Discord. Voce tem o direito de solicitar a exclusao dos Dados relevantes. Para isso, os usuarios devem enviar uma solicitacao atraves do Servidor de Suporte.
+
+  **Perguntas**
+  Se voce tem perguntas ou preocupacoes sobre quais dados podem ser armazenados da sua conta, entre em contato com a [equipe](%{serversupport}). Para mais informacoes, consulte os Termos de Servico do Discord.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Termos de Servico do %{bot}"
+tos_label: "Termos de Servico"
+termsofservice_desc: |
+  **Acordo de Uso**
+  Ao convidar o [%{bot}](%{serversupport}) ("bot") e usar seus recursos, voce concorda com os Termos de Servico e a Politica de Privacidade do bot.
+
+  Voce reconhece que pode usar o bot livremente em qualquer Servidor Discord que voce o compartilhe. Voce pode convida-lo para qualquer Servidor no qual tenha direitos de "Gerenciar Servidor", e este privilegio pode ser revogado se voce estiver sujeito a violacao dos termos de servico ou politica de privacidade deste bot ou dos Termos de Servico, Politica de Privacidade ou Diretrizes da Comunidade da Discord Inc.
+
+  Atraves do convite, o bot pode coletar dados especificos conforme descrito em sua Politica de Privacidade. O uso pretendido desses dados e para as funcionalidades principais do bot, como a execucao de comandos.
+
+  **Afiliacao**
+  O bot nao e afiliado, apoiado ou feito pela Discord Inc. Qualquer conexao direta com o Discord ou qualquer um de seus objetos de Marca Registrada e puramente coincidencia. Nos nao reivindicamos propriedade de direitos autorais sobre os ativos, marcas registradas ou outra propriedade intelectual do Discord.
+
+  **Usuarios menores de idade**
+  O bot nao e permitido para menores de 13 anos ou abaixo da idade de consentimento legal de seu pais. Isso esta em conformidade com os Termos de Servico do Discord. Nenhuma informacao sera armazenada conscientemente de um usuario menor de idade. Se for descoberto que um usuario e menor de idade, tomaremos todas as acoes necessarias para excluir os dados armazenados.
+
+  **Responsabilidade**
+  Os desenvolvedores e proprietario do bot nao podem ser responsabilizados por individuos que violem estes Termos a qualquer momento. O direito de atualizar estes termos e reservado a nosso criterio, concedendo um periodo de 1 Semana (7 dias) para desistencia destes termos. Um usuario pode desistir removendo o bot de qualquer servidor onde o usuario tenha o direito de remover o bot.

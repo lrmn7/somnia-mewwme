@@ -32,7 +32,6 @@ import { GlobalMsg } from "./structures/CommandHandler.js";
 import { MewslinkPlayer } from "./mewslink/main.js";
 import { TopggService } from "./services/TopggService.js";
 import { AssistanceHandler } from "./@guild-helpers/AssistanceHandler.js";
-import { ModLogHandler } from "./@guild-helpers/ModLogHandler.js";
 import { StatisticsHandler } from "./@guild-helpers/StatisticsHandler.js";
 import { Localization } from "./structures/Localization.js";
 import { ClusterManager } from "./shard/ClusterManager.js";
@@ -65,7 +64,6 @@ export class Manager extends Client {
   public i18n: Localization;
   public prefix: string;
   public isDatabaseConnected: boolean;
-  public reactivityService: any;
   public lavalinkList: LavalinkDataType[];
   public lavalinkUsing: LavalinkUsingDataType[];
   public lavalinkUsed: LavalinkUsingDataType[];
@@ -85,12 +83,6 @@ export class Manager extends Client {
   public leaveDelay: Collection<string, NodeJS.Timeout>;
   public nowPlaying: Collection<string, { interval: NodeJS.Timeout; msg: GlobalMsg }>;
   public wsl: Collection<string, { send: (data: Record<string, unknown>) => void }>;
-  /**
-   * Direct Socket.io emit shortcut set by DashboardPlugin once the server is
-   * ready.  Bypasses the client.wsl → BotWsService chain so voice-state events
-   * reach the dashboard immediately without depending on the internal WS
-   * handshake being complete.
-   */
   public dashboardEmit?: (guildId: string, event: string, data: Record<string, unknown>) => void;
   public UpdateMusic!: (player: MewslinkPlayer) => Promise<void | Message<true>>;
   public UpdateQueueMsg!: (player: MewslinkPlayer) => Promise<void | Message<true>>;
@@ -121,7 +113,6 @@ export class Manager extends Client {
             GatewayIntentBits.GuildMessages,
             GatewayIntentBits.MessageContent,
             GatewayIntentBits.GuildMembers,
-            GatewayIntentBits.GuildEmojisAndStickers,
             GatewayIntentBits.GuildMessageTyping,
             GatewayIntentBits.DirectMessages,
             GatewayIntentBits.DirectMessageTyping,
@@ -137,7 +128,6 @@ export class Manager extends Client {
             GatewayIntentBits.GuildVoiceStates,
             GatewayIntentBits.GuildMessages,
             GatewayIntentBits.GuildMembers,
-            GatewayIntentBits.GuildEmojisAndStickers,
             GatewayIntentBits.GuildMessageTyping,
             GatewayIntentBits.DirectMessages,
             GatewayIntentBits.DirectMessageTyping,
@@ -251,8 +241,6 @@ export class Manager extends Client {
     this.logger.info("ClientManager", `Codename: ${this.manifest.metadata.bot.codename}`);
     this.logger.info("ClientManager", `Autofix Version: ${this.manifest.metadata.autofix.version}`);
 
-    // Display brand identity
-    // printBrandBanner is called in ready event after full startup
 
     if (this.config.features.HIDE_LINK && this.config.features.REPLACE_LINK) {
       this.logger.warn(
@@ -291,7 +279,6 @@ export class Manager extends Client {
       new WebServer(this);
     }
     new StatisticsHandler(this);
-    new ModLogHandler(this);
     new AssistanceHandler(this);
     new DeployService(this);
     new initHandler(this);

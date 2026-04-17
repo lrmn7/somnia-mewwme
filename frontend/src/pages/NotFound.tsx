@@ -3,7 +3,7 @@ import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Home, ArrowLeft, Music } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import BackgroundGlow from "@/components/BackgroundGlow";
+
 import Footer from "@/components/Footer";
 
 const floatingNotes = [
@@ -51,7 +51,6 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative text-foreground overflow-hidden">
-      <BackgroundGlow />
       <Navbar />
 
       {/* Floating music notes */}

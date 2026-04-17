@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 Đã tham gia Guild!"
+leave_title: "📥 Đã rời Guild!"
+guild_name: "Tên"
+guild_id: "ID"
+guild_owner: "Chủ sở hữu"
+guild_member_count: "Số thành viên"
+guild_creation_date: "Ngày tạo"
+guild_join_date: "Ngày tham gia"
+current_server_count: "Số máy chủ hiện tại"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "OMG! Chào mọi người ✧(≖◡≖) ♡"
+join_msg_desc: |
+  ### Cảm ơn đã mời tôi đến chơi với mọi người (*≧▽≦)
+  ### bạn có thể ping tôi để sử dụng lệnh nhé! Gõ </help:1088430405033656341> để xem các lệnh slash của tôi ♡

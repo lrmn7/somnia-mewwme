@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **Filter %{name} aktif!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **Semoga kamu suka suaranya!**
+filter_already: "Hah? VST %{name} sudah aktif... Aku tidak bisa melakukan apa-apa di sini."
+filter_number: "Itu bukan angka yang bisa aku masukkan ke EQ..."
+filter_greater: "Harus angka yang lebih besar dari **0**!"
+filter_less: "Woah! Terlalu besar! Mungkin kurang dari **10** lebih baik..."
+
+### Bassboost command!
+bassboost_set: "**Bassboost telah diatur ke %{amount}dB**"
+bassboost_limit: "Silakan gunakan angka antara **-10** dan **10**"
+
+### Equalizer command!
+eq_author: "Equalizer"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  Ada **10 Band** yang bisa diatur dari **-10** hingga **10**.
+  Kamu tidak perlu memasukkan semuanya, cukup yang ingin kamu ubah.
+  Jadi kalau mau melewati satu, cukup biarkan sebagai **0**.
+eq_field_title: "Contoh:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Reset Equalizer • %{prefix}eq reset"
+eq_on: "EQ telah diatur ke **%{bands}**!"
+eq_number: "Silakan masukkan angka yang valid!"
+eq_greater: "Angka harus lebih besar dari **-10**"
+eq_than: "Angka harus lebih kecil dari **10**"
+
+### Pitch command!
+pitch_on: "Baik, Pitch sekarang **%{amount}**!"
+
+### Rate command!
+rate_on:  "Baik! Rate sekarang **%{amount}x**!"
+
+### Speed command!
+speed_on: "Siap, mengubah kecepatan ke **%{amount}x**!"
+
+### Reset command!
+reset_on: "**Mereset** semua VST! Kembali ke suara asli!"
+reset_already:  "VST sudah **nonaktif**, kamu lupa?"
+
+# Invalid Number
+number_invalid: "Itu bukan angka yang bisa aku kerjakan... Coba lagi dengan angka yang valid."

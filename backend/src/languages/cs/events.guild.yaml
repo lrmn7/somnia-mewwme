@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 Připojení k serveru!"
+leave_title: "📥 Opuštění serveru!"
+guild_name: "Název"
+guild_id: "ID"
+guild_owner: "Vlastník"
+guild_member_count: "Počet členů"
+guild_creation_date: "Datum vytvoření"
+guild_join_date: "Datum připojení"
+current_server_count: "Aktuální počet serverů"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "JÉ! Ahoj všichni ✧(≧◡≦) ♡"
+join_msg_desc: |
+  ### Děkuji, že jste mě pozvali, abych se tu s vámi bavil (*≧▽≦)
+  ### můžete mě zmínit pro použití příkazů! Zadejte </help:1088430405033656341> pro zobrazení mých slash příkazů ♡

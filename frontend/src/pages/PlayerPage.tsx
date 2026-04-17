@@ -25,8 +25,12 @@ import GuildStatsView from "@/components/dashboard/GuildStatsView";
 import GuildSettingsView from "@/components/dashboard/GuildSettingsView";
 import PlaylistsView from "@/components/dashboard/PlaylistsView";
 
+import ContractCreation from "@/components/dashboard/ContractCreation";
+
 import RadioView from "@/components/dashboard/RadioView";
 import AiChatView from "@/components/dashboard/AiChatView";
+import ListeningParty from "@/components/dashboard/ListeningParty";
+import type { VoiceMember } from "@/components/dashboard/ListeningParty";
 
 import { motion } from "framer-motion";
 
@@ -52,7 +56,8 @@ export default function PlayerPage() {
   const [guildSourceAccess, setGuildSourceAccess] = useState<
     Record<string, { hasAccess: boolean; requirement: string }> | undefined
   >(undefined);
-  const [guildPremium, setGuildPremium] = useState(false);
+  const [guildIsPremium, setGuildIsPremium] = useState(false);
+  const [voiceMembers, setVoiceMembers] = useState<VoiceMember[]>([]);
 
   const hasPlayer = !!state;
   const userId = user?.id;
@@ -84,7 +89,7 @@ export default function PlayerPage() {
       .then(({ data }) => {
         if (data.defaultSource) setGuildDefaultSource(data.defaultSource);
         if (data.sourceAccess) setGuildSourceAccess(data.sourceAccess);
-        if (data.isPremium != null) setGuildPremium(data.isPremium === true);
+        if (typeof data.isPremium === "boolean") setGuildIsPremium(data.isPremium);
       })
       .catch(() => {});
   }, [guildId, status]);
@@ -110,15 +115,48 @@ export default function PlayerPage() {
     return () => clearInterval(id);
   }, [status, refreshVoice, hasPlayer]);
 
+  // Fetch daftar member di Voice Channel bot saat ada player aktif
+  useEffect(() => {
+    if (!guildId || status !== "authenticated" || !hasPlayer) {
+      setVoiceMembers([]);
+      return;
+    }
+    api
+      .get<{ members: VoiceMember[] }>(`/api/guilds/${guildId}/voice-members`)
+      .then(({ data }) => setVoiceMembers(data.members ?? []))
+      .catch(() => setVoiceMembers([]));
+  }, [guildId, status, hasPlayer]);
+
   useEffect(() => {
     if (!socket) return;
     const onPlayerCreate = () => setInVoice(true);
-    const onPlayerDestroy = () => refreshVoice();
-    const onMemberJoin = (msg: { userId?: string }) => {
+    const onPlayerDestroy = () => {
+      refreshVoice();
+      setVoiceMembers([]);
+    };
+    const onMemberJoin = (msg: { userId?: string; username?: string; globalName?: string | null; avatarURL?: string | null; bot?: boolean }) => {
       if (userId && msg.userId === userId) setInVoice(true);
+      // Update daftar voice member untuk Listening Party (skip bot)
+      if (msg.userId && !msg.bot) {
+        setVoiceMembers((prev) => {
+          if (prev.some((m) => m.userId === msg.userId)) return prev;
+          return [
+            ...prev,
+            {
+              userId: msg.userId!,
+              username: msg.username ?? msg.userId!,
+              globalName: msg.globalName ?? null,
+              avatarURL: msg.avatarURL ?? null,
+            },
+          ];
+        });
+      }
     };
     const onMemberLeave = (msg: { userId?: string }) => {
       if (userId && msg.userId === userId) setInVoice(false);
+      if (msg.userId) {
+        setVoiceMembers((prev) => prev.filter((m) => m.userId !== msg.userId));
+      }
     };
 
     socket.on("playerCreate", onPlayerCreate);
@@ -271,7 +309,15 @@ export default function PlayerPage() {
       case "guild-stats":
         return <GuildStatsView guildId={guildId || ""} />;
       case "settings":
-        return <GuildSettingsView guildId={guildId || ""} />;
+        return (
+          <div className="flex flex-col gap-6">
+            <GuildSettingsView guildId={guildId || ""} />
+            <div className="px-4 sm:px-6 space-y-4">
+              <h2 className="text-lg font-bold text-white">Web3 Settings</h2>
+              <ContractCreation guildId={guildId || ""} />
+            </div>
+          </div>
+        );
       case "playlists":
         return <PlaylistsView guildId={guildId || ""} onPlayStarted={() => setActiveView("player")} />;
       case "radio":
@@ -389,6 +435,9 @@ export default function PlayerPage() {
                           {state.queue.length} {state.queue.length === 1 ? "track" : "tracks"}
                         </span>
                       )}
+                      <div className="ml-auto">
+                        <ListeningParty members={voiceMembers} />
+                      </div>
                     </div>
                     <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] overflow-hidden backdrop-blur-sm flex flex-col sm:max-h-[60vh]">
                       <Queue
@@ -409,7 +458,7 @@ export default function PlayerPage() {
   };
 
   return (
-    <div className="flex flex-col h-screen overflow-hidden text-white bg-background">
+    <div className="flex flex-col min-h-screen text-white">
       {thumb && (
         <div
           className="pointer-events-none fixed inset-0 z-0 opacity-15 transition-all duration-1000"
@@ -434,7 +483,7 @@ export default function PlayerPage() {
         guildName={guildInfo?.name}
         guildIcon={guildIconUrl}
         connected={connected}
-        isPremium={state?.isPremium === true || guildPremium}
+        isPremium={state?.isPremium === true || guildIsPremium}
       />
       <header className="fixed top-3 left-3 right-3 sm:left-auto z-30 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-end gap-2 px-4 py-2.5 rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-md">
         {/* Row 1 on mobile: searchbar full width; inline on desktop */}
@@ -510,7 +559,7 @@ export default function PlayerPage() {
           )}
         </div>
       </header>
-      <main className="relative z-10 flex-1 overflow-y-auto scrollbar-none pt-24 sm:pt-20 md:pl-16 lg:pl-60 flex flex-col">
+      <main className="relative z-10 flex-1 pt-24 sm:pt-20 md:pl-16 lg:pl-60 flex flex-col">
         <MotionDiv
           key={activeView}
           initial={{ opacity: 0, y: 10 }}

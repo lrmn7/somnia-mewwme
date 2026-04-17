@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Cek pilihanku untukmu!~"
+search_desc: "### HEI! Ditemukan hasil untuk permintaanmu"
+search_end_desc2: "### YA AMPUN! %{user}, kamu tidak memilih lagu tepat waktu\n**Coba lagi!**"
+search_footer: "%{countSong} lagu ditemukan"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` selamat menikmati ♥"
+
+search_active: "Kamu sudah sedang mencari sesuatu! Tunggu pencarian terakhir selesai sebelum memulai yang baru."
+search_no_result: "Tidak ada hasil ditemukan untuk pencarianmu :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` selamat menikmati ♥"
+no_songs_playing: "Tidak ada lagu yang sedang diputar!"
+
+### Autoplay command!
+autoplay_off: "Autoplay sekarang **Dinonaktifkan**"
+autoplay_on: "Autoplay sekarang **Diaktifkan**"
+autoplay_no_songs_playing: "Tidak ada lagu yang sedang diputar!"
+
+### ClearQueue command!
+clearqueue_msg: "Antrean telah **Dibersihkan**"
+
+### Forward command!
+forward_msg: "**%{user} Memajukan %{title} ke** `%{duration}`"
+forward_beyond: "Lagu akan segera berakhir. Kamu tidak bisa memajukan melewati batasnya!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Selanjutnya Diputar ♪"
+playnext_queue_empty: "Antrean kosong. Silakan tambahkan beberapa lagu terlebih dahulu"
+playnext_notfound: "Lagu tidak ditemukan!"
+
+# Execute when invalid
+no_node: "**Tidak ada server Lavalink yang ditemukan. Silakan coba lagi setelah 5 Menit**"
+
+### Join command!
+join_msg: "Player telah berhasil dibuat dan bergabung ke %{channel}"
+join_already: "Aku sudah berada di %{channel}"
+join_no_in_voice: "Kamu tidak berada di voice channel!"
+join_no_same_voice: "Kamu tidak berada di voice channel yang sama denganku!"
+
+### Loop command!
+loop_current: "Sekarang Mengulang %{title}"
+loop_all: "**Telah mengaktifkan mode ulang ANTREAN**"
+unloop_all: "**Mode pengulangan telah DINONAKTIFKAN**"
+loop_invalid: "Mode Loop tidak valid. Silakan gunakan **Disabled**"
+loop_already: "Mode Loop sudah **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Silakan masukkan **Nama Lagu** yang valid"
+lyrics_title: "Lirik untuk **%{song}**"
+lyrics_notfound: "**Tidak bisa menemukan lirik untuk lagu ini!**"
+lyrics_toolong: "**Lirik terlalu panjang, maksimal 4048 karakter!**"
+lyrics_disable: " **Lirik saat ini dinonaktifkan!**"
+lyrics_noquery: "**Silakan masukkan **Nama Lagu** yang valid"
+lyrics_error: "**Error: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "SEDANG DIPUTAR"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Artis"
+nowplaying_total_duration_title: "Durasi"
+nowplaying_request_title: "Diminta Oleh"
+
+### Pause command!
+pause_msg: "**Lagu %{title} sedang dijeda!"
+
+### Play command!
+play_no_same_voice: "Kamu tidak berada di voice channel yang sama denganku!"
+play_no_in_voice: "Kamu tidak berada di voice channel!"
+play_arg: "Silakan masukkan nama lagu atau URL yang valid!"
+play_emoji: "**Ups! Ini adalah emoji, Kamu tidak bisa memutar lagu menggunakan emoji**"
+play_match: "**Ups! Maaf, Lagu tidak ditemukan! Silakan coba lagi**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## Itu mudah!
+  ### %{title} milikmu telah ditambahkan ke antrean
+
+play_queue_max: |
+  YA AMPUN!>,.,< Antrean terlalu panjang. Maksimal %{limitqueue} lagu.
+  Upgrade ke [**premium**](%{premium}) untuk akses antrean tanpa batas!
+
+play_playlist_max: |
+  YA AMPUN!>,.,< Playlist terlalu panjang. Maksimal %{limitqueue} lagu.
+  Upgrade ke [**premium**](%{premium}) untuk akses playlist tanpa batas!
+
+### Previous command!
+previous_notfound: |
+  **Tidak ada lagu sebelumnya ditemukan di antrean!
+  Bagaimana kalau /play lebih banyak lagu dan lanjutkan musiknya?**
+previous_msg: |
+  **Kembali ke lagu sebelumnya!
+  Sekarang memutar %{title}**
+
+### Queue command!
+queue_number_invalid: "Silakan masukkan angka yang valid!"
+queue_title: "Antrean sedang diputar..."
+queue_description: "**%{title}**\n\n**Sisa Antrean %{rest}**"
+queue_footer: "Halaman • %{page}/%{pages} | Lagu • %{queue_lang} | Total Durasi • %{duration}"
+queue_notnumber: "Silakan masukkan nomor halaman yang valid!"
+queue_page_notfound: "Hanya ada **%{page} Halaman**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Silakan masukkan angka yang valid!"
+removetrack_already: "**Aku tidak bisa menghapus lagu yang sedang diputar**"
+removetrack_notfound: "**Maaf %{user}, Lagu tidak ditemukan!**"
+removetrack_desc: "**Menghapus %{title} dari Antrean!**"
+
+### Replay command!
+replay_msg: "**%{user} Memutar Ulang %{title}**"
+replay_not_seekable: "Lagu **%{title}** tidak bisa diputar ulang."
+
+### Resume command!
+resume_msg: "**Pemutaran Dilanjutkan %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} Memundurkan %{title} ke** `%{duration}`"
+rewind_beyond: "Lagu baru saja dimulai. Kamu tidak bisa memundurkan melewati batasnya!"
+
+### Seek command!
+seek_beyond: "Kamu tidak bisa seek melewati durasi lagu!"
+seek_invalid: "Durasi Seek tidak valid. Silakan gunakan timestamp yang valid. Contoh: **1:30**"
+seek_msg: "**Seek %{title} ke** `%{duration}`"
+seek_not_seekable: "Lagu **%{title}** tidak bisa dimundurkan atau dimajukan."
+
+### Skip command!
+skip_notfound: |
+  **Tidak ada lagu yang ditemukan untuk dilewati! Sepertinya tidak ada yang bisa dilewati.
+  Ayo /play tetap lanjutkan musiknya dengan menambahkan lebih banyak lagu!**
+skip_msg: "**%{title} Telah Dilewati**"
+skip_number_invalid: "Silakan masukkan angka yang valid!"
+
+### Stop command!
+stop_msg: "**%{title} Telah Dihentikan**"
+
+### Shuffle command!
+shuffle_title: "Mengacak Antrean"
+
+### Volume command!
+volume_number_invalid: "Silakan masukkan angka yang valid!"
+volume_invalid: "Volume tidak valid. Silakan gunakan angka antara **1** dan **100**"
+volume_msg: "**Volume diatur ke %{volume}%, Nikmati %{user}**"
+volume_max: "**Volume sudah di maksimal 100%**"
+
+### play source commands
+url_no_allowed: "Silakan gunakan nama lagu/nama artis (url tidak diperbolehkan)"
+play_arg_source: "Silakan masukkan nama lagu/artis yang valid!"
+
+## Temporarily disabled commands
+youtube_disabled: "Dukungan YouTube untuk sementara tidak tersedia"
+autoplay_disabled: "Autoplay untuk sementara dinonaktifkan."

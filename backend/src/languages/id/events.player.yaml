@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "SEDANG DIPUTAR"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Artis"
+track_requested_by: "Diminta oleh"
+track_duration: "Durasi"
+no_same_voice: "Kamu tidak berada di voice channel yang sama denganku!"
+filter_already: "**Filter %{name} sudah diaktifkan**"
+filter_reset_on: "**Filter telah Direset**"
+filter_reset_already: "**Filter sudah Direset**"
+no_player_filter: "**Aku tidak bisa menerapkan filter!**"
+filter_menu_on: "**Filter %{name} aktif!**"
+
+player_get_exception: "Aduh! Sepertinya ada masalah dengan lagunya. Mau aku coba lagi?"
+player_track_error: "Lagunya mengalami masalah, Bisakah kamu mencobanya sekali lagi?"
+player_track_stuck: "Aku sangat sedih :(, lagunya tersangkut. Mungkin coba ulang bisa mencerahkan kita?"
+queue_end_desc: "Semua lagu sudah selesai! Butuh lebih banyak irama?\nGunakan **/play** untuk melanjutkan pestanya!"
+
+leave_pause: "Mengingat kalian semua meninggalkanku sendirian :( Player telah dijeda."
+leave_resume: "Mengingat seseorang telah bergabung, player telah dilanjutkan."
+
+player_end: "Channel sudah kosong hampir 15 menit, jadi aku memutuskan untuk pergi karena aku tidak suka sendirian"
+
+### Last FM Scrobble ###
+expired_login_session: "Sesi Last.fm-mu telah kedaluwarsa atau tidak valid.\nSilakan autentikasi ulang untuk terus menggunakan fitur scrobble."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Mereka yang ingin bernyanyi selalu menemukan lagu ♪"
+milestone_track_desc: |
+  ## OH Hei
+  Kamu telah mendengarkan **%{total}** lagu! Apakah playlistmu tak berujung, atau kamu memang terobsesi musik?
+

@@ -2,7 +2,7 @@ import { Manager } from "../manager.js";
 import { ConfigDataService } from "../services/ConfigDataService.js";
 import { ClusterManager } from "./ClusterManager.js";
 
-export function bootBot(clusterManager?: ClusterManager) {
+export function bootBot(clusterManager?: ClusterManager): Manager {
   const configData = new ConfigDataService().data;
   const mewwme = new Manager(
     configData,
@@ -21,4 +21,6 @@ export function bootBot(clusterManager?: ClusterManager) {
     });
 
   mewwme.start();
+
+  return mewwme;
 }

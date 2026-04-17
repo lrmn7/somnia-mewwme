@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "유효한 재생목록 ID를 입력해주세요!"
+pl_add_match: "유효한 노래 이름 또는 URL을 입력해주세요!"
+pl_add_playlist: "검색됨 **%{title}** `%{duration}` • (**%{track}곡**) • %{user}"
+pl_add_track: "검색됨 **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "검색됨 **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "**재생목록 소유자**가 아닙니다!"
+pl_add_limit_track: "**%{limit}곡** 이상 추가할 수 없습니다"
+pl_add_added: "**%{count}곡**이 `%{playlist}`에 추가되었습니다"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks}곡**) • 생성일: `[%{create} 전]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "페이지 • %{page}/%{pages} | 재생목록 • %{songs}"
+pl_all_view_notnumber: "유효한 페이지 번호를 입력해주세요!"
+pl_all_view_page_notfound: "**%{page}페이지**만 있습니다!"
+
+### pl-create commands ###
+pl_create_invalid: "유효한 재생목록 ID를 입력해주세요!"
+pl_create_toolong: "재생목록 이름은 **16자**를 초과할 수 없습니다"
+pl_create_des_toolong: "재생목록 설명은 **1000자**를 초과할 수 없습니다"
+pl_create_limit_playlist: "**%{limit}개** 이상의 재생목록을 만들 수 없습니다"
+create_created_title: "새 재생목록이 성공적으로 생성되었습니다!"
+pl_create_created_footer: "/pl editor를 입력하여 재생목록을 편집하세요!"
+pl_create_created: |
+  **재생목록 이름**
+  `%{playlist}`
+
+  **재생목록 ID**
+  `%{id}`
+
+  **설명**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "유효한 재생목록 ID를 입력해주세요!"
+delete_notfound: "유효한 재생목록 ID를 입력해주세요!"
+pl_delete_owner: "**재생목록 소유자**가 아닙니다"
+pl_delete_confirm: "`%{playlist_id}`을(를) 삭제하시겠습니까?"
+pl_delete_deleted: "재생목록 `%{name}`이(가) 성공적으로 **삭제**되었습니다"
+pl_delete_no: "재생목록 **삭제**가 취소되었습니다!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "유효한 숫자를 입력해주세요!"
+pl_detail_notfound: "유효한 재생목록 ID를 입력해주세요!"
+pl_detail_private: "재생목록이 **비공개**입니다"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "재생목록: %{name}"
+pl_detail_embed_footer: "페이지 • %{page}/%{pages} | 노래 • %{songs} | 총 재생시간 • %{duration}"
+pl_detail_notnumber: "유효한 페이지 번호를 입력해주세요!"
+pl_detail_page_notfound: "**%{page}페이지**만 있습니다"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "**새 재생목록 ID**를 입력하세요 `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "**새 재생목록 이름**을 입력하세요"
+pl_edit_playlist_des_label: "**새 재생목록 설명**을 입력하세요"
+pl_edit_playlist_private_label: "**새 재생목록 공개 설정**을 입력하세요 `[public/private]`"
+pl_edit_success: "재생목록이 성공적으로 편집되었습니다\n새 재생목록 ID: `%{playlistId}`"
+pl_edit_arg: "유효한 재생목록 ID를 입력해주세요!"
+pl_edit_notfound: "유효한 재생목록 ID를 입력해주세요!"
+pl_edit_playlist_owner: "**재생목록 소유자**가 아닙니다!"
+pl_edit_invalid_id: "유효하고 중복되지 않는 재생목록 ID를 입력해주세요!"
+pl_edit_invalid_mode: "잘못된 공개 설정 모드입니다. **public** 또는 **private**를 사용해주세요"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "새 재생목록 ID"
+ineraction_edit_playlist_name_label: "새 재생목록 이름"
+ineraction_edit_playlist_des_label: "새 재생목록 설명"
+ineraction_edit_playlist_private_label: "새 재생목록 공개 설정"
+ineraction_edit_playlist_id_placeholder: "새 재생목록 ID를 입력하세요! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "새 재생목록 이름을 입력하세요!"
+ineraction_edit_playlist_des_placeholder: "새 재생목록 설명을 입력하세요!"
+ineraction_edit_playlist_private_placeholder: "새 재생목록 공개 설정을 입력하세요! [public/private]"
+ineraction_edit_success: "재생목록이 성공적으로 편집되었습니다\n새 재생목록 ID: `%{playlistId}`"
+ineraction_edit_playlist_error: "문제가 발생했습니다. 다시 시도해주세요!"
+ineraction_edit_notfound: "유효한 재생목록 ID를 입력해주세요!"
+ineraction_edit_playlist_owner: "**재생목록 소유자**가 아닙니다"
+ineraction_edit_invalid_id: "유효하고 중복되지 않는 재생목록 ID를 입력해주세요!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### 재생목록 **%{name}**이(가) 대기열에 추가되었습니다 ♪"
+pl_import_imported_footer: "%{tracks}곡 • %{duration} • 의 음악을 즐기세요!"
+pl_import_invalid: "유효한 재생목록 ID를 입력해주세요!"
+pl_import_private: "재생목록이 **비공개**입니다"
+pl_import_voice: "이 명령어를 사용하려면 음성 채널에 접속해야 합니다!"
+pl_import_empty: "재생목록이 **비어 있습니다**"
+
+### pl-info commands! ###
+pl_info_owner: "소유자"
+pl_info_id: "ID"
+pl_info_des: "설명"
+pl_info_no_des: "설명이 없습니다!"
+pl_info_private: "공개 설정"
+pl_public: "공개"
+pl_private: "비공개"
+pl_info_total: "총 노래 수"
+pl_info_created: "생성일"
+pl_info_invalid: "유효한 재생목록 ID를 입력해주세요!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "유효한 재생목록 ID를 입력해주세요!"
+pl_remove_number_invalid: "유효한 숫자를 입력해주세요!"
+pl_remove_notfound: "유효한 재생목록 ID를 입력해주세요!"
+pl_remove_owner: "**재생목록 소유자**가 아닙니다"
+pl_remove_song_notfound: "노래를 찾을 수 없습니다!"
+pl_remove_removed: "`%{name}`에서 **%{position}번** 노래가 제거되었습니다"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "유효한 재생목록 ID를 입력해주세요!"
+pl_savequeue_notfound: "유효한 재생목록 ID를 입력해주세요!"
+pl_savequeue_owner: "**재생목록 소유자**가 아닙니다!"
+pl_savequeue_no_tracks: "현재 재생 중인 노래가 없습니다!"
+pl_savequeue_no_new_saved: "`%{name}`에 이미 존재하는 노래입니다"
+pl_savequeue_saved: "**%{tracks}곡**이 `%{name}`에 저장되었습니다"
+
+pl_error_no_node: "Lavalink 서버를 찾을 수 없습니다. **5분** 후에 다시 시도해주세요"

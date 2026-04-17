@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "मेरी आपके लिए पसंद देखें!~"
+search_desc: "### अरे! आपके अनुरोध के लिए परिणाम मिले"
+search_end_desc2: "### अरे! %{user}, आपने समय पर कोई गाना नहीं चुना\n**फिर से प्रयास करें!**"
+search_footer: "%{countSong} ट्रैक मिले"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` आनंद लें ♥"
+
+search_active: "आप पहले से कुछ खोज रहे हैं! नई खोज शुरू करने से पहले पिछली खोज समाप्त होने दें।"
+search_no_result: "आपकी खोज के लिए कोई परिणाम नहीं मिला :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` आनंद लें ♥"
+no_songs_playing: "वर्तमान में कोई गाना नहीं बज रहा!"
+
+### Autoplay command!
+autoplay_off: "ऑटोप्ले अब **अक्षम** है"
+autoplay_on: "ऑटोप्ले अब **सक्षम** है"
+autoplay_no_songs_playing: "कोई गाना नहीं बज रहा!"
+
+### ClearQueue command!
+clearqueue_msg: "कतार **साफ़** कर दी गई है"
+
+### Forward command!
+forward_msg: "**%{user} ने %{title} को** `%{duration}` **पर फॉरवर्ड किया**"
+forward_beyond: "गाना समाप्त होने वाला है। आप इसके आगे फॉरवर्ड नहीं कर सकते!"
+
+### PlayNext command!
+playnext_desc: "### %{name} अगला बजेगा ♪"
+playnext_queue_empty: "कतार खाली है। कृपया पहले कुछ गाने जोड़ें"
+playnext_notfound: "गाना नहीं मिला!"
+
+# Execute when invalid
+no_node: "**कोई Lavalink सर्वर नहीं मिला। कृपया 5 मिनट बाद पुनः प्रयास करें**"
+
+### Join command!
+join_msg: "प्लेयर सफलतापूर्वक बनाया गया और %{channel} में शामिल हुआ"
+join_already: "मैं पहले से %{channel} में हूँ"
+join_no_in_voice: "आप किसी वॉइस चैनल में नहीं हैं!"
+join_no_same_voice: "आप मेरे जैसे वॉइस चैनल में नहीं हैं!"
+
+### Loop command!
+loop_current: "अब %{title} लूप पर है"
+loop_all: "**कतार लूप मोड चालू किया गया है**"
+unloop_all: "**लूपिंग मोड अक्षम किया गया है**"
+loop_invalid: "अमान्य लूप मोड। कृपया **Disabled** का उपयोग करें"
+loop_already: "लूप मोड पहले से **%{mode}** है"
+
+### Lyrics command!
+provide_lyrics: "कृपया एक मान्य **गाने का नाम** दें"
+lyrics_title: "**%{song}** के बोल"
+lyrics_notfound: "**इस गाने के बोल नहीं मिल सके!**"
+lyrics_toolong: "**बोल बहुत लंबे हैं, अधिकतम 4048 अक्षर अनुमत हैं!**"
+lyrics_disable: " **बोल वर्तमान में अक्षम हैं!**"
+lyrics_noquery: "**कृपया एक मान्य **गाने का नाम** दें"
+lyrics_error: "**त्रुटि: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "अभी बज रहा है"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "कलाकार"
+nowplaying_total_duration_title: "अवधि"
+nowplaying_request_title: "द्वारा अनुरोधित"
+
+### Pause command!
+pause_msg: "**ट्रैक %{title} वर्तमान में रुका हुआ है!"
+
+### Play command!
+play_no_same_voice: "आप मेरे जैसे वॉइस चैनल में नहीं हैं!"
+play_no_in_voice: "आप किसी वॉइस चैनल में नहीं हैं!"
+play_arg: "कृपया एक मान्य गाने का नाम या URL दें!"
+play_emoji: "**उफ़! यह इमोजी है, आप इमोजी से गाने नहीं बजा सकते**"
+play_match: "**उफ़! माफ़ करें, गाना नहीं मिला! कृपया फिर से प्रयास करें**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## बहुत आसान था!
+  ### आपकी %{title} कतार में जोड़ दी गई है
+
+play_queue_max: |
+  अरे!>,.,< कतार बहुत लंबी है। अधिकतम %{limitqueue} गाने।
+  असीमित कतार एक्सेस के लिए [**प्रीमियम**](%{premium}) में अपग्रेड करें!
+
+play_playlist_max: |
+  अरे!>,.,< प्लेलिस्ट बहुत लंबी है। अधिकतम %{limitqueue} गाने।
+  असीमित प्लेलिस्ट एक्सेस के लिए [**प्रीमियम**](%{premium}) में अपग्रेड करें!
+
+### Previous command!
+previous_notfound: |
+  **कतार में कोई पिछला गाना नहीं मिला!
+  और ट्रैक /play करके संगीत जारी क्यों नहीं रखते?**
+previous_msg: |
+  **पिछले गाने पर वापस!
+  अब बज रहा है %{title}**
+
+### Queue command!
+queue_number_invalid: "कृपया एक मान्य संख्या दें!"
+queue_title: "कतार बज रही है..."
+queue_description: "**%{title}**\n\n**बाकी कतार %{rest}**"
+queue_footer: "पेज • %{page}/%{pages} | गाने • %{queue_lang} | कुल अवधि • %{duration}"
+queue_notnumber: "कृपया एक मान्य पेज संख्या दें!"
+queue_page_notfound: "केवल **%{page} पेज** हैं"
+
+### RemoveTrack command!
+removetrack_number_invalid: " कृपया एक मान्य संख्या दें!"
+removetrack_already: "**मैं पहले से बज रहे गाने को नहीं हटा सकता**"
+removetrack_notfound: "**माफ़ करें %{user}, गाना नहीं मिला!**"
+removetrack_desc: "**%{title} को कतार से हटा दिया गया!**"
+
+### Replay command!
+replay_msg: "**%{user} ने %{title} रिप्ले किया**"
+replay_not_seekable: "ट्रैक **%{title}** को रिप्ले नहीं किया जा सकता।"
+
+### Resume command!
+resume_msg: "**प्लेबैक फिर से शुरू %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} ने %{title} को** `%{duration}` **पर रिवाइंड किया**"
+rewind_beyond: "गाना अभी शुरू हुआ है। आप इससे आगे रिवाइंड नहीं कर सकते!"
+
+### Seek command!
+seek_beyond: "आप गाने की अवधि से आगे सीक नहीं कर सकते!"
+seek_invalid: "अमान्य सीक अवधि। कृपया एक मान्य टाइमस्टैम्प का उपयोग करें। उदाहरण: **1:30**"
+seek_msg: "**%{title} को** `%{duration}` **पर सीक किया गया**"
+seek_not_seekable: "ट्रैक **%{title}** को रिवाइंड या फ़ास्ट-फ़ॉरवर्ड नहीं किया जा सकता।"
+
+### Skip command!
+skip_notfound: |
+  **स्किप करने के लिए कोई गाना नहीं मिला! लगता है स्किप करने के लिए कुछ नहीं है।
+  और ट्रैक जोड़कर संगीत जारी रखते हैं /play!**
+skip_msg: "**%{title} स्किप कर दिया गया है**"
+skip_number_invalid: "कृपया एक मान्य संख्या दें!"
+
+### Stop command!
+stop_msg: "**%{title} बंद कर दिया गया है**"
+
+### Shuffle command!
+shuffle_title: "कतार शफ़ल करता है"
+
+### Volume command!
+volume_number_invalid: "कृपया एक मान्य संख्या दें!"
+volume_invalid: "अमान्य वॉल्यूम। कृपया **1** और **100** के बीच की संख्या का उपयोग करें"
+volume_msg: "**वॉल्यूम %{volume}% पर सेट किया गया, आनंद लें %{user}**"
+volume_max: "**वॉल्यूम पहले से अधिकतम 100% पर है**"
+
+### play source commands
+url_no_allowed: "कृपया गाने का नाम/कलाकार का नाम उपयोग करें (url की अनुमति नहीं)"
+play_arg_source: "कृपया एक मान्य गाने का नाम/कलाकार दें!"
+
+## Temporarily disabled commands
+youtube_disabled: "YouTube सपोर्ट अस्थायी रूप से अनुपलब्ध है"
+autoplay_disabled: "ऑटोप्ले अस्थायी रूप से अक्षम है।"

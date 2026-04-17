@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "De helpdesk is uitgeschakeld"
+invalid_channel_helpdesk: "Het opgegeven kanaal is ongeldig"
+channel_viewable_helpdesk: "Het opgegeven kanaal is niet zichtbaar voor mij"
+setup_helpdesk_succes: "De helpdesk is succesvol ingesteld in %{channel}."
+
+embed1_title: "Welkom bij de ondersteuningsserver van %{bot}!"
+embed1_desc: "**%{bot} Waar zij die willen zingen altijd een lied vinden ♪\nSluit je vandaag aan bij de melodie op je Discord-server!**"
+embed1_footer: "Bedankt dat je %{bot} hebt gekozen als je persoonlijke muziekbot!"
+
+embed2_title: "%{bot} Helpdesk"
+embed2_desc: |
+  **%{button1} Wat is %{bot}?
+
+  %{button2} Hoe nodig je de %{bot} muziekbot uit?
+
+  %{button3} Hoe gebruik je de %{bot} muziekbot?
+
+  %{button4} Hoe schakel je de 24/7-functie in?
+
+  %{button5} %{bot} reageert niet/is offline.
+
+  %{button6} De geluidskwaliteit van %{bot} klinkt haperend.
+
+  %{button7} Hoe stel je het verzoeknummerkanaal in?
+
+  %{button8} %{bot} blijft zeggen dat er rechten ontbreken.
+
+  %{button9} %{bot} verbreekt zelf de verbinding met het spraakkanaal.
+
+  %{button10} Hoe krijg/activeer ik Premium en welke voordelen krijg ik?**
+
+embed2_field1_name: "Website"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Type"
+embed2_field2_value: "**Muziekbot**"
+embed2_field3_name: "Premium verkrijgen"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Waar zij die willen zingen altijd een lied vinden ♪"
+helpdesk1_desc: |
+  **%{bot} is een Discord-bot die de manier waarop je muziek beleeft op Discord revolutioneert, met de schoonste gebruikersinterface, hoogwaardige audio en een breed scala aan muziekgerelateerde functies.**
+
+  **Waarom %{bot}?**
+  - **Regelmatige updates**: %{bot} wordt constant bijgewerkt, zodat je altijd de beste en nieuwste functies en fixes krijgt.
+  - **Uitgebreide functies**: Het eenvoudige muzieksysteem van %{bot} zorgt voor soepele weergave vanuit meerdere bronnen.
+  - **Toegewijde ondersteuningscommunity**: We zijn een relatief nieuwe bot op Discord en we zouden het geweldig vinden als je je bij ons aansluit! Ervoor zorgen dat de bot soepel draait is onze prioriteit, daarom hebben we je hulp nodig met feedback en suggesties. Als je vragen hebt, open dan gerust een ondersteuningsticket.
+
+  **Nuttige links**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **Hulp nodig?**
+  - Dien een ticket in voor extra hulp
+
+  **Waar wacht je nog op? Nodig %{bot} vandaag uit op je Discord-server en geniet van een ongeevenaarde, grenzeloze muziekervaring!**
+  **[Klik hier om uit te nodigen](%{invite})**
+
+helpdesk2_title: "%{bot} toevoegen aan je server"
+helpdesk2_desc: |
+  **Je kunt %{bot} uitnodigen via deze [link](%{invite}).**
+    Kies de server waaraan je het wilt toevoegen en klik op **Autoriseren**
+
+  > Let op: als je de `Administrator`-rechten voor %{bot} uitschakelt, kan dit de functionaliteit beinvloeden. Je kunt nog steeds de basismuziekfuncties gebruiken, maar sommige functies werken mogelijk niet goed.
+
+helpdesk3_title: "Hoe gebruik je de %{bot} muziekbot?"
+helpdesk3_desc: |
+  Ga naar een spraak- of podiumkanaal en typ /play <naam nummer/url> in een tekstkanaal.
+  Je kunt direct de bedieningsknoppen gebruiken voor stoppen, herhalen enz.
+  Typ / (of /help) en selecteer het pictogram van %{bot} voor een lijst van alle beschikbare commando's.
+
+helpdesk4_title: "Hoe schakel je de 24/7-functie in?"
+helpdesk4_desc: |
+  Ga naar een spraak- of podiumkanaal en typ `/247 <enable/disable>` in een tekstkanaal.
+
+  **Opmerking:** *Deze functie kan worden gebruikt als je de `server beheren`-rechten hebt, en het is vooraf verzekerd dat de bot momenteel muziek afspeelt.*
+
+helpdesk5_title: "%{bot} reageert niet/is offline"
+helpdesk5_desc: |
+  Je probeert een commando te gebruiken maar het blijft mislukken? Het is waarschijnlijk niet in staat om te antwoorden, maar volg de onderstaande stappen om dit op te lossen.
+
+  **%{bot} gebruikt nu slash-commando's!**
+  Zorg ervoor dat je slash-commando's gebruikt, aangezien Discord nu vereist dat alle bots deze gebruiken.
+  Begin met `/play` en `/help`
+
+  **Reageert %{bot} nog steeds niet?**
+  Het enige overgebleven scenario in die situatie is een probleem aan de kant van Discord of van ons. Controleer of %{bot} niet offline is op je server. Als het offline is, is het beste om tot 5 minuten te wachten en te kijken of %{bot} weer online komt. Als het online is en alle benodigde rechten heeft, neem dan zeker contact op met een van onze ondersteuningsmedewerkers.
+
+helpdesk6_title: "De geluidskwaliteit van %{bot} klinkt haperend"
+helpdesk6_desc: |
+  Niemand houdt van haperende muziek, maar dat gebeurt soms bij het luisteren naar muziekbots op Discord. Hier zijn enkele mogelijke oplossingen om je te helpen dit op te lossen.
+
+  **Wat moet ik doen?**
+  Controleer eerst je internetverbinding. Discord toont je laatste en gemiddelde ping linksonder, klik gewoon op "Spraak verbonden" en controleer of je ping stabiel is (als de rode grafiek veel hapert, is het niet stabiel!) en de laatste en gemiddelde ping onder de 250 milliseconden is. Als beide indicatoren laten zien dat je verbinding slecht is, controleer dan je WiFi/LAN. Het herstarten van je router kan ook problemen oplossen.
+
+  **Je hebt een ping van 5ms en kun GTA 5 downloaden in 2 minuten?**
+  Dan lijkt je internetverbinding niet het probleem te zijn. In 95% van de gevallen waarin %{bot} hapert, heeft Discord tijdelijke problemen met hun spraakservers. Ze herstarten ze normaal gesproken op een gegeven moment, maar je kunt een overschakeling naar een andere server in je regio forceren. [Probeer je serverregio te wijzigen](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3) om een nieuwe en frisse Discord-spraakserver te krijgen.
+  Als je nog steeds hetzelfde probleem hebt, typ dan /report om je probleem te melden.
+
+helpdesk7_title: "Hoe stel je het verzoeknummerkanaal in?"
+helpdesk7_desc: |
+  **Hoe maak ik een verzoekkanaal aan?**
+  Zorg ervoor dat %{bot} de `server beheren`-rechten heeft en typ vervolgens /setup met de optie `create`, waarna de bot automatisch een speciaal kanaal voor nummerverzoeken aanmaakt.
+
+  ```Opmerking: Verwijder geen berichten die %{bot} heeft aangemaakt, zodat ik goed kan functioneren.```
+
+  **Hoe verwijder ik een verzoekkanaal?**
+  Net als hiervoor, alleen kun je in de opties `delete` selecteren.
+
+helpdesk8_title: "%{bot} blijft zeggen dat er rechten ontbreken."
+helpdesk8_desc: |
+  Bij het uitvoeren van bepaalde commando's kan %{bot} bepaalde rechten missen. In dergelijke gevallen weigert %{bot} het commando uit te voeren totdat deze problemen zijn opgelost. Het is belangrijk op te merken dat deze rechten niet optioneel zijn; %{bot} heeft ze nodig om het commando uit te voeren.
+
+  Als je denkt dat de bot de benodigde rechten heeft, controleer dan de roloverrides van het kanaal. Deze overrides kunnen rolrechten in specifieke kanalen wijzigen.
+
+  Als je nog steeds niet kunt bepalen waarom %{bot} niet over de vereiste rechten beschikt, overweeg dan om %{bot} de Administrator-rechten te geven. Dit zou alle Discord-rechtenproblemen moeten oplossen.
+
+helpdesk9_title: "Mewwme verbreekt zelf de verbinding met het spraakkanaal"
+helpdesk9_desc: |
+  In zeer zeldzame gevallen kan Mewwme, zelfs met de 24/7-modus ingeschakeld, de verbinding met het spraakkanaal verbreken zonder dat iemand /stop of de Discord-knop Verbinding verbreken gebruikt. Enkele van de meest voorkomende oorzaken en een mogelijke oplossing staan hieronder vermeld.
+
+  **24/7-modus is niet ingeschakeld.**
+  Standaard verbreekt Mewwme de verbinding met het spraakkanaal wanneer het 3 minuten leeg is.
+
+  **Oplossing:** Raadpleeg "4. Hoe schakel je de 24/7-functie in?" in de eerste help-embed om de 24/7-modus in te schakelen.
+
+  **Ontbrekende rechten.**
+  Wanneer Discord ons vraagt om opnieuw verbinding te maken met een spraakkanaal, hetzij door serverherstarts of een API-storing, controleren we de botrechten opnieuw om er zeker van te zijn dat het kan toetreden en spreken in het kanaal. Als er iets ontbreekt, moet je /play opnieuw gebruiken om de bot uit te nodigen in een ander kanaal of hetzelfde kanaal nadat je de vereiste rechten hebt toegevoegd.
+
+  **Oplossing:** Zorg ervoor dat je de /play-commando's gebruikt om de bot aan het spraakkanaal toe te voegen in plaats van het vanuit een ander kanaal te verplaatsen. Door dat te doen, zorg je ervoor dat de bot alle vereiste rechten heeft om opnieuw verbinding te maken wanneer nodig.
+
+  **Serverregioproblemen.**
+  In bepaalde gevallen kunnen sommige spraakregios netwerk- en stabiliteitsproblemen ondervinden die de bot kunnen verhinderen om het spraakkanaal te betreden.
+
+  **Oplossing:** Schakel over naar een andere spraakregion via de spraakkanalinstellingen (kies de regio die het dichtst bij je land ligt).
+
+  **Er is iets anders misgegaan.**
+  Als je alle bovenstaande oplossingen hebt geprobeerd en het probleem blijft bestaan, typ dan `report` of open een ticket bij ondersteuning https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "Hoe krijg/activeer ik Premium en welke voordelen krijg ik?"
+helpdesk10_desc: |
+  **Hoe wissel ik mijn Premium-voordelen in?**
+
+  om je premium-lidmaatschapsvoordelen te activeren, volg je deze stappen:
+  1. **koppel eerst je discord-account**
+    - zorg ervoor dat je discord-account is verbonden met het platform dat je gebruikt (patreon of ko-fi) voordat je een aankoop doet.
+    - dit is vereist zodat het systeem je betaling automatisch kan detecteren.
+  2. **koop je lidmaatschap**
+  - na het koppelen van je discord, voltooi je de lidmaatschapsbetaling op basis van het gewenste abonnement.
+  3. **wacht op synchronisatie**
+    - zodra je betaling is gelukt, wacht dan een paar minuten totdat het systeem je lidmaatschap synchroniseert.
+  4. **claim premium op je server**
+    - ga naar de discord-server die je wilt upgraden en gebruik dit commando:
+      `/premium claim`
+      kies de juiste platformoptie (patreon of ko-fi) wanneer daarom wordt gevraagd.
+      zorg ervoor dat je het commando uitvoert in de server waarvoor je premium wilt activeren.
+      eenmaal geclaimd, wordt premium direct geactiveerd.
+
+  Door de bovenstaande stappen te volgen, kun je alle Premium-voordelen activeren en ervan genieten. Als je problemen tegenkomt of verdere vragen hebt, neem dan gerust contact op met ons ondersteuningsteam.
+
+helpdesk10_footer: "Bedankt dat je deel uitmaakt van onze reis!, we hopen dat je hier een goede tijd zult hebben."

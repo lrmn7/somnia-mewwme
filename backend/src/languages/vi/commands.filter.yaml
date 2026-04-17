@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **Bộ lọc %{name} đã bật!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **Hy vọng bạn thích âm thanh này!**
+filter_already: "Hả? VST %{name} đã bật rồi... Tôi không thể làm gì ở đây."
+filter_number: "Đó không phải là con số tôi có thể nhập vào EQ..."
+filter_greater: "Phải là con số lớn hơn **0**!"
+filter_less: "Ôi! Quá nhiều! Có lẽ nhỏ hơn **10** thì tốt hơn..."
+
+### Bassboost command!
+bassboost_set: "**Bassboost đã được đặt thành %{amount}dB**"
+bassboost_limit: "Vui lòng sử dụng số từ **-10** đến **10**"
+
+### Equalizer command!
+eq_author: "Bộ cân bằng"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  Có **10 Dải tần** có thể đặt từ **-10** đến **10**.
+  Bạn không cần nhập tất cả, chỉ những dải bạn muốn thay đổi.
+  Nếu bạn muốn bỏ qua một dải, bạn có thể để nó là **0**.
+eq_field_title: "Ví dụ:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Đặt lại bộ cân bằng • %{prefix}eq reset"
+eq_on: "EQ đã được đặt thành **%{bands}**!"
+eq_number: "Vui lòng cung cấp một số hợp lệ!"
+eq_greater: "Số phải lớn hơn **-10**"
+eq_than: "Số phải nhỏ hơn **10**"
+
+### Pitch command!
+pitch_on: "Được rồi, Pitch hiện tại là **%{amount}**!"
+
+### Rate command!
+rate_on:  "Được rồi! Rate hiện tại là **%{amount}x**!"
+
+### Speed command!
+speed_on: "Chắc chắn rồi, đang thay đổi tốc độ thành **%{amount}x**!"
+
+### Reset command!
+reset_on: "**Đang đặt lại** tất cả VST! Trở về âm thanh gốc!"
+reset_already:  "VST đã **tắt rồi**, bạn quên à?"
+
+# Invalid Number
+number_invalid: "Đó không phải là con số tôi có thể xử lý... Thử lại với một số hợp lệ."

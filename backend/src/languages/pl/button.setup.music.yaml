@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Odtwarzanie muzyki zostało zatrzymane. Mam nadzieję, że świetnie się bawiłeś!"
+skip_notfound: "Ups. Wygląda na to, że nie ma utworu do pominięcia!"
+skip_msg: "Pominąłem utwór. Mam nadzieję, że nie masz nic przeciwko :p"
+previous_msg: "No cóż, chyba cofamy się! Poprzedni utwór nadchodzi <3"
+previous_notfound: "Przepraszam, nie mogę cofnąć się dalej. Nie znaleziono poprzedniego utworu :("
+resume_msg: "Muzyka wraca! Kontynuujmy zabawę ♪"
+pause_msg: "Muzyka jest wstrzymana. Zrób sobie przerwę i ciesz się ciszą."
+loop_current: "Teraz bieżący utwór będzie odtwarzany w pętli. Ciesz się powtórkami!"
+loop_all: "Kolejka jest teraz ustawiona na pętlę. Niech muzyka gra w kółko!"
+unloop_all: "Tryb pętli został wyłączony. Ciesz się różnorodnością utworów!"
+
+### Need to join voice & same voice to use command!
+no_player: "Naciskasz przycisk, ale nic się nie dzieje. Może najpierw powinieneś coś odtworzyć!"
+no_same_voice: "Naciskasz przycisk i miga na czerwono. Nie jesteś na tym samym kanale głosowym co ja!"
+no_in_voice: "Żaden przycisk na ciebie nie reaguje. Nie jesteś na kanale głosowym!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "TERAZ ODTWARZANE"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Zamówione przez %{request}"
+setup_footer: "Pozostało utworów • %{totalsong} | Łączny czas • %{duration}"
+setup_queuemsg: "**Dołącz do kanału głosowego i odtwarzaj utwory używając nazwy lub URL tutaj!**"
+setup_playembed_author: "Żaden utwór nie jest obecnie odtwarzany!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Dodano **%{title}** • %{request}"
+play_playlist: "Dodano **%{title}** • (**%{songs} Utworów**) • %{request}"
+play_result: "Dodano **%{title}** • %{request}"
+play_emoji: "Nie wiem jak to odtworzyć... To nie jest utwór ani playlista."
+setup_content: "**Hej! Mój deck jest gotowy na twoją muzykę! Po prostu wrzuć coś tutaj!**"

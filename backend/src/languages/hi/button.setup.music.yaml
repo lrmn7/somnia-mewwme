@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "संगीत प्लेबैक रोक दिया गया है। उम्मीद है आपने ताल का आनंद लिया!"
+skip_notfound: "उफ़। लगता है स्किप करने के लिए कोई ट्रैक नहीं है!"
+skip_msg: "मैंने ट्रैक स्किप कर दिया। उम्मीद है आपको बुरा नहीं लगा :p"
+previous_msg: "चलो, लगता है हम रिवाइंड कर रहे हैं! पिछला ट्रैक आ रहा है <3"
+previous_notfound: "माफ़ करें, और पीछे नहीं जा सकता। कोई पिछला ट्रैक नहीं मिला :("
+resume_msg: "संगीत वापस चालू है! चलिए ताल जारी रखते हैं ♪"
+pause_msg: "संगीत रोक दिया गया है। आराम करें और शांति का आनंद लें।"
+loop_current: "अब वर्तमान गाना लूप पर बजेगा। दोहराव का आनंद लें!"
+loop_all: "कतार अब लूप पर सेट है। संगीत को दोहराव पर बजने दें!"
+unloop_all: "लूपिंग मोड बंद कर दिया गया है। विभिन्न ट्रैक्स का आनंद लें!"
+
+### Need to join voice & same voice to use command!
+no_player: "आपने एक बटन दबाया और कुछ नहीं हुआ। शायद आपको पहले कुछ बजाना चाहिए!"
+no_same_voice: "आपने एक बटन दबाया और वह लाल चमका। आप मेरे जैसे वॉइस चैनल में नहीं हैं!"
+no_in_voice: "सभी बटन आपके लिए कोई प्रतिक्रिया नहीं दे रहे। आप किसी वॉइस चैनल में नहीं हैं!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "अभी बज रहा है"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** %{request} द्वारा अनुरोधित"
+setup_footer: "बचे ट्रैक • %{totalsong} | कुल अवधि • %{duration}"
+setup_queuemsg: "**एक वॉइस चैनल में शामिल हों और यहाँ नाम या URL का उपयोग करके गाने बजाएँ!**"
+setup_playembed_author: "वर्तमान में कोई गाना नहीं बज रहा!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "जोड़ा गया **%{title}** • %{request}"
+play_playlist: "जोड़ा गया **%{title}** • (**%{songs} ट्रैक**) • %{request}"
+play_result: "जोड़ा गया **%{title}** • %{request}"
+play_emoji: "मुझे समझ नहीं आ रहा कि इसे कैसे बजाऊँ... यह कोई ट्रैक या प्लेलिस्ट नहीं है।"
+setup_content: "**अरे! मेरा डेक आपके संगीत के लिए तैयार है! बस कुछ यहाँ डालें!**"

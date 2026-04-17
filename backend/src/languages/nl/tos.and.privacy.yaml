@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Privacybeleid van %{bot}"
+privacy_label: Privacybeleid
+privacy_desc: |
+  **Gebruikersovereenkomst**
+  Het gebruik van [%{bot}](%{serversupport}) ("bot") op de server vereist het verzamelen van bepaalde gebruikersgegevens. De verzamelde gegevens omvatten, maar zijn niet beperkt tot, het Discord-ID van de gebruiker, de Discord-gebruikersnaam en serverrollen. Het gebruik van de bot wordt beschouwd als acceptatie van deze beleidsvoorwaarden.
+
+  **Toegang tot gegevens**
+  Toegang tot gegevens is alleen toegestaan voor botontwikkelaars en hostingdiensten en alleen binnen de reikwijdte die nodig is voor botontwikkeling, testen en functie-implementatie. Gegevens worden niet verkocht, gegeven aan of gedeeld met derden, behalve zoals vereist door de wet of de servicevoorwaarden. Je kunt je gegevens op verzoek inzien bij de [ontwikkelaar](%{developer}).
+
+  **Gegevensopslag**
+  Gegevens worden opgeslagen in de [MYSQL](https://www.mysql.com/)-database. De database is beveiligd om externe toegang te voorkomen. Er worden echter geen garanties gegeven en de boteigenaar is niet verantwoordelijk voor onbedoelde of kwaadwillige datalekken. Bij ongeautoriseerde gegevenstoegang zal het serverteam gebruikers op de hoogte stellen via de ondersteuningsserver.
+
+  **Rechten van gebruikers**
+  Je hebt te allen tijde het recht om inzage te vragen in je Discord-accountgegevens. Je hebt het recht om verwijdering van relevante gegevens aan te vragen. Hiervoor moeten gebruikers een verzoek indienen via de ondersteuningsserver.
+
+  **Vragen**
+  Als je vragen of zorgen hebt over welke gegevens van je account kunnen worden opgeslagen, neem dan contact op met het [team](%{serversupport}). Raadpleeg voor meer informatie de Discord-servicevoorwaarden.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Servicevoorwaarden van %{bot}"
+tos_label: "Servicevoorwaarden"
+termsofservice_desc: |
+  **Gebruiksovereenkomst**
+  Door [%{bot}](%{serversupport}) ("bot") uit te nodigen en de functies ervan te gebruiken, ga je akkoord met de servicevoorwaarden en het privacybeleid van de bot.
+
+  Je erkent dat je de bot vrij kunt gebruiken op elke Discord-server waarmee je deze deelt. Je kunt de bot uitnodigen op elke server waarop je "Server beheren"-rechten hebt, en dit privilege kan worden ingetrokken als je de servicevoorwaarden of het privacybeleid van deze bot of de servicevoorwaarden, het privacybeleid of de communityrichtlijnen van Discord Inc. schendt.
+
+  Door het uitnodigen kan de bot specifieke gegevens verzamelen zoals beschreven in het privacybeleid. Het beoogde gebruik van deze gegevens is voor de kernfunctionaliteiten van de bot, zoals het uitvoeren van commando's.
+
+  **Affiliatie**
+  De bot is niet gelieerd aan, ondersteund door of gemaakt door Discord Inc. Elke directe verbinding met Discord of een van haar handelsmerken is puur toevallig. Wij claimen geen auteursrechtelijk eigendom van de middelen, handelsmerken of ander intellectueel eigendom van Discord.
+
+  **Minderjarige gebruikers**
+  De bot is niet toegestaan voor minderjarigen onder de 13 jaar of onder de wettelijke toestemmingsleeftijd van hun land. Dit is in overeenstemming met de Discord-servicevoorwaarden. Er worden bewust geen gegevens opgeslagen van een minderjarige gebruiker. Als wordt ontdekt dat een gebruiker minderjarig is, zullen wij alle nodige maatregelen nemen om de opgeslagen gegevens te verwijderen.
+
+  **Aansprakelijkheid**
+  De ontwikkelaars en eigenaar van de bot kunnen op geen enkel moment aansprakelijk worden gesteld voor personen die deze voorwaarden overtreden. Het recht om deze voorwaarden bij te werken is voorbehouden aan ons oordeel, waarbij een periode van 1 week (7 dagen) wordt gegeven om af te zien van deze voorwaarden. Een gebruiker kan afzien door de bot te verwijderen van elke server waar de gebruiker het recht heeft om de bot te verwijderen.

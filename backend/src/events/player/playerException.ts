@@ -23,9 +23,10 @@ export default class {
     /////////// Update Music Status Channel //////////
 
     const fetch_channel = await client.channels.fetch(player.textId).catch(() => undefined);
-    const text_channel = fetch_channel as TextChannel | undefined;
+    if (!fetch_channel) return;
+    const text_channel = fetch_channel as TextChannel;
 
-    const guild = fetch_channel.guild;
+    const guild = text_channel.guild;
     let guildModel = await client.db.language.get(`${guild.id}`);
     if (!guildModel) {
       guildModel = await client.db.language.set(`${guild.id}`, client.config.bot.LANGUAGE);

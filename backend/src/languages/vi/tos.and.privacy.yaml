@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Chính sách bảo mật của %{bot}"
+privacy_label: Chính sách bảo mật
+privacy_desc: |
+  **Thỏa thuận người dùng**
+  Sử dụng [%{bot}](%{serversupport}) ("bot") trên máy chủ yêu cầu thu thập một số dữ liệu người dùng nhất định. Dữ liệu thu thập bao gồm nhưng không giới hạn ở Discord ID, tên người dùng Discord và vai trò máy chủ của người dùng. Việc sử dụng Bot được coi là chấp nhận các điều khoản chính sách này.
+
+  **Quyền truy cập dữ liệu**
+  Quyền truy cập dữ liệu chỉ được phép cho các nhà phát triển bot và dịch vụ lưu trữ và chỉ trong phạm vi cần thiết cho việc phát triển, kiểm thử và triển khai tính năng bot. Dữ liệu không được bán, cung cấp hoặc chia sẻ với bất kỳ bên thứ ba nào, trừ khi được yêu cầu bởi luật pháp hoặc thỏa thuận Điều khoản dịch vụ. Bạn có thể xem dữ liệu của mình theo yêu cầu từ [nhà phát triển](%{developer}).
+
+  **Lưu trữ dữ liệu**
+  Dữ liệu được lưu trữ trong cơ sở dữ liệu [MYSQL](https://www.mysql.com/). Cơ sở dữ liệu được bảo mật để ngăn truy cập từ bên ngoài. Tuy nhiên, không có bảo đảm nào được cung cấp và chủ sở hữu Bot không chịu trách nhiệm về việc vi phạm dữ liệu vô ý hoặc cố ý. Nếu có truy cập Dữ liệu trái phép, nhân viên máy chủ sẽ thông báo cho người dùng thông qua Máy chủ hỗ trợ.
+
+  **Quyền của người dùng**
+  Bất cứ lúc nào, bạn có quyền yêu cầu xem dữ liệu tài khoản Discord của mình. Bạn có quyền yêu cầu xóa Dữ liệu liên quan. Để thực hiện điều này, người dùng phải gửi yêu cầu thông qua Máy chủ hỗ trợ.
+
+  **Câu hỏi**
+  Nếu bạn có câu hỏi hoặc lo ngại về dữ liệu nào có thể được lưu trữ từ tài khoản của bạn, vui lòng liên hệ [nhân viên](%{serversupport}). Để biết thêm thông tin, hãy kiểm tra Điều khoản dịch vụ Discord.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Điều khoản dịch vụ của %{bot}"
+tos_label: "Điều khoản dịch vụ"
+termsofservice_desc: |
+  **Thỏa thuận sử dụng**
+  Bằng cách mời [%{bot}](%{serversupport}) ("bot") và sử dụng các tính năng của nó, bạn đồng ý với Điều khoản dịch vụ và Chính sách bảo mật của bot.
+
+  Bạn thừa nhận rằng bạn có thể sử dụng bot tự do trên bất kỳ Máy chủ Discord nào bạn chia sẻ. Bạn có thể mời bot vào bất kỳ Máy chủ nào bạn có quyền "Manage Server", và đặc quyền này có thể bị thu hồi nếu bạn vi phạm điều khoản dịch vụ hoặc chính sách bảo mật của bot này hoặc Điều khoản dịch vụ, Chính sách bảo mật hoặc Nguyên tắc cộng đồng của Discord Inc.
+
+  Thông qua việc mời, bot có thể thu thập dữ liệu cụ thể như được mô tả trong Chính sách bảo mật. Mục đích sử dụng dữ liệu này là cho các chức năng cốt lõi của bot, chẳng hạn như thực thi lệnh.
+
+  **Liên kết**
+  Bot không liên kết, không được hỗ trợ hoặc tạo bởi Discord Inc. Bất kỳ kết nối trực tiếp nào với Discord hoặc bất kỳ đối tượng Nhãn hiệu nào của họ hoàn toàn là trùng hợp ngẫu nhiên. Chúng tôi không tuyên bố quyền sở hữu bản quyền đối với tài sản, nhãn hiệu hoặc tài sản trí tuệ khác của Discord.
+
+  **Người dùng chưa đủ tuổi**
+  Bot không được phép sử dụng cho trẻ vị thành niên dưới 13 tuổi hoặc dưới tuổi đồng ý hợp pháp của quốc gia họ. Điều này tuân thủ Điều khoản dịch vụ Discord. Không có thông tin nào sẽ được cố tình lưu trữ từ người dùng chưa đủ tuổi. Nếu phát hiện người dùng chưa đủ tuổi, chúng tôi sẽ thực hiện tất cả các hành động cần thiết để xóa dữ liệu đã lưu trữ.
+
+  **Trách nhiệm**
+  Các nhà phát triển và chủ sở hữu bot không chịu trách nhiệm pháp lý đối với các cá nhân vi phạm các Điều khoản này tại bất kỳ thời điểm nào. Quyền cập nhật các điều khoản này được bảo lưu theo quyết định của chúng tôi, với thời gian 1 tuần (7 ngày) để từ chối các điều khoản này. Người dùng có thể từ chối bằng cách xóa bot khỏi bất kỳ máy chủ nào mà người dùng có quyền xóa bot.

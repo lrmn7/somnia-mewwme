@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Укажите причину создания тикета"
+ticket_already_open: "У вас уже есть открытый тикет."
+ticket_already_closed: "Данные тикета для пользователя %{id} не найдены или тикет уже закрыт"
+ticket_close_user: "У вас нет прав закрывать этот тикет."
+ticket_delete_user: "У вас нет прав удалять этот тикет."
+ticket_deleting_action: "Удаление тикетов..."
+ticket_closed_label: "🔒 Закрыт"
+ticket_delete_label: "🗑️ Удалить"
+ticket_create: "Тикет создан. Перейдите в %{channel}"
+ticket_create_title: "Ожидайте ответа персонала"
+ticket_create_desc: |
+  Спасибо за создание тикета. Пожалуйста, ожидайте ответа персонала.
+  `ПРИМЕЧАНИЕ: У этого тикета нет резервной копии. Убедитесь, что вы самостоятельно сохранили всю важную информацию`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Закрытый тикет"
+ticket_closed_desc: "Тикет был успешно закрыт!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Тикет был закрыт."
+ticket_closed_dm_desc: |
+  Открытый вами тикет был только что закрыт. Стенограмму можно найти по ссылке ниже.
+  Если у вас возникнут проблемы или вопросы, не стесняйтесь открыть новый тикет. Мы здесь, чтобы помочь!
+
+

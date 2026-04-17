@@ -1,36 +1,29 @@
-/**
- * Shared helper for resolving dashboard feature access based on
- * DASHBOARD_ACCESS config — mirrors the bot's COMMANDS_ACCESS / accessableby
- * logic so the owner can control which features require premium from config.yml.
- *
- * Supported access levels (same as Accessableby enum):
- *   "Member"            → everyone has access (no premium required)
- *   "Voter"             → user has voted on Top.gg
- *   "Premium"           → Web3 premium (user or guild)
- *   "Admin"             → bot admin only
- *   "Owner"             → bot owner only
- *   "Manager"           → Discord Manage Server permission
- */
-
 import { Manager } from "../../manager.js";
+import { computeWeb3Quota } from "./web3Premium.js";
 
 export interface DashboardUserPerm {
   /** Is the bot owner */
   isOwner: boolean;
   /** Is a bot admin */
   isAdmin: boolean;
-  /** Has an active premium subscription (Web3) */
+  /** Has an active premium subscription (any source) */
   isPremium: boolean;
   /** Has the Discord ManageGuild permission for the guild */
   hasManageGuild: boolean;
   /** Has voted on Top.gg */
   isVoter: boolean;
+  /** Premium via role */
+  isPremiumRole: boolean;
+  /** Legacy user premium */
+  isPremiumLegacyUser: boolean;
+  /** Legacy guild premium */
+  isPremiumLegacyGuild: boolean;
+  /** Web3 on-chain user premium */
+  isPremiumWeb3: boolean;
+  /** Web3 on-chain guild premium (claimed via quota) */
+  isPremiumWeb3Guild: boolean;
 }
 
-/**
- * Build the full permission object for a dashboard user in the context of a guild.
- * This queries all the same databases as the bot's interactionCreate handler.
- */
 export async function buildDashboardUserPerm(
   client: Manager,
   userId: string | undefined,
@@ -42,15 +35,71 @@ export async function buildDashboardUserPerm(
     isPremium: false,
     hasManageGuild: false,
     isVoter: false,
+    isPremiumRole: false,
+    isPremiumLegacyUser: false,
+    isPremiumLegacyGuild: false,
+    isPremiumWeb3: false,
+    isPremiumWeb3Guild: false,
   };
 
   try {
-    if (userId) {
-      // Owner / Admin bypass
-      perm.isOwner = userId === String(client.owner);
-      perm.isAdmin = !perm.isOwner && (client.config.bot.ADMIN?.map(String).includes(userId) ?? false);
+    if (guildId) {
+      const legacyGuild = await client.db.PremiumGuildLegacy.get(guildId);
+      if (legacyGuild?.isPremium) perm.isPremiumLegacyGuild = true;
 
-      // Voter check via Top.gg
+      // Check Web3 guild premium (claimed via quota)
+      try {
+        const allWeb3 = await client.db.Web3Premium.all();
+        const sponsorWeb3 = allWeb3.find((entry: any) => {
+          const data = entry.value || entry.data || entry;
+          return (
+            data.redeemedGuilds &&
+            Array.isArray(data.redeemedGuilds) &&
+            data.redeemedGuilds.includes(guildId) &&
+            data.expiresAt > Date.now()
+          );
+        });
+        if (sponsorWeb3) perm.isPremiumWeb3Guild = true;
+      } catch {
+        // Ignore Web3 guild check failures
+      }
+    }
+
+    if (userId) {
+      const legacyUser = await client.db.PremiumUserLegacy.get(userId);
+      if (legacyUser?.isPremium) perm.isPremiumLegacyUser = true;
+
+      // Check Web3 premium
+      try {
+        const web3Quota = await computeWeb3Quota(client, userId);
+        if (web3Quota > 0) {
+          perm.isPremiumWeb3 = true;
+        }
+      } catch {
+        // Ignore Web3 premium check failures
+      }
+
+      try {
+        if (client.config.PremiumRole?.Enable !== false) {
+          const premiumGuildId = client.config.PremiumRole?.GuildID;
+          const premiumRoleId = client.config.PremiumRole?.RoleID;
+          if (premiumGuildId && premiumRoleId) {
+            const supportGuild = await client.guilds.fetch(premiumGuildId).catch(() => null);
+            if (supportGuild) {
+              const supportMember = await supportGuild.members.fetch(userId).catch(() => null);
+              if (supportMember?.roles.cache.has(premiumRoleId)) {
+                perm.isPremiumRole = true;
+              }
+            }
+          }
+        }
+      } catch {
+        // Ignore role check failures
+      }
+
+      perm.isOwner = userId === client.owner;
+      perm.isAdmin = !perm.isOwner && (client.config.bot.ADMIN?.includes(userId) ?? false);
+
       try {
         if (client.topgg) {
           const { TopggServiceEnum } = await import("../../services/TopggService.js");
@@ -63,7 +112,6 @@ export async function buildDashboardUserPerm(
         // Ignore vote check failures
       }
 
-      // Manage Guild permission check
       if (guildId) {
         try {
           const guild = await client.guilds.fetch(guildId).catch(() => null);
@@ -83,37 +131,16 @@ export async function buildDashboardUserPerm(
     // On failure, default to no access
   }
 
-  // ── Web3 premium check ──
-  let isPremiumUser = false;
-  let isPremiumGuild = false;
-
-  if (userId) {
-    const userPremium = await client.db.premium.get(userId);
-    if (userPremium?.isPremium) {
-      if (userPremium.expiresAt === "lifetime" || (typeof userPremium.expiresAt === "number" && userPremium.expiresAt > Date.now())) {
-        isPremiumUser = true;
-      }
-    }
-  }
-
-  if (guildId) {
-    const guildPremium = await client.db.preGuild.get(guildId);
-    if (guildPremium?.isPremium) {
-      if (guildPremium.expiresAt === "lifetime" || (typeof guildPremium.expiresAt === "number" && guildPremium.expiresAt > Date.now())) {
-        isPremiumGuild = true;
-      }
-    }
-  }
-
-  // Compute combined isPremium
-  perm.isPremium = isPremiumUser || isPremiumGuild;
+  perm.isPremium =
+    perm.isPremiumRole ||
+    perm.isPremiumLegacyUser ||
+    perm.isPremiumLegacyGuild ||
+    perm.isPremiumWeb3Guild;
 
   return perm;
 }
 
 /**
- * Check if a user has access to a specific dashboard feature based on
- * the DASHBOARD_ACCESS config. This mirrors the bot's accessableby logic.
  *
  * @param accessLevels - The access level(s) from config, e.g. ["Premium"] or ["Member"]
  * @param perm - The resolved user permission object
@@ -123,44 +150,44 @@ export function hasFeatureAccess(
   accessLevels: string[] | undefined,
   perm: DashboardUserPerm
 ): boolean {
-  // If no config defined, default to premium-required (safe default)
   if (!accessLevels || accessLevels.length === 0)
     return perm.isOwner || perm.isAdmin || perm.isPremium;
 
-  // Owner and Admin ALWAYS have access regardless of config
   if (perm.isOwner || perm.isAdmin) return true;
 
-  // Check each access level — if ANY matches, access is granted
   for (const level of accessLevels) {
     switch (level) {
       case "Member":
-        // Everyone has access
         return true;
-
       case "Voter":
-        // Must have voted on Top.gg (or have premium — premium always includes voter perks)
         if (perm.isVoter || perm.isPremium) return true;
         break;
-
       case "Premium":
-        // Web3 premium
         if (perm.isPremium) return true;
         break;
-
+      case "Web3Premium":
+        if (perm.isPremiumWeb3 || perm.isPremiumWeb3Guild) return true;
+        break;
+      case "Web3Guild":
+        if (perm.isPremiumWeb3Guild) return true;
+        break;
+      case "PremiumRole":
+        if (perm.isPremiumRole) return true;
+        break;
+      case "Web3Premium":
+        if (perm.isPremiumWeb3 || perm.isPremiumWeb3Guild) return true;
+        break;
+      case "Web3Guild":
+        if (perm.isPremiumWeb3Guild) return true;
+        break;
       case "Manager":
         if (perm.hasManageGuild) return true;
         break;
-
       case "Admin":
-        // Already handled above (isAdmin always returns true)
         break;
-
       case "Owner":
-        // Already handled above (isOwner always returns true)
         break;
-
       default:
-        // Unknown level — treat as premium
         if (perm.isPremium) return true;
         break;
     }
@@ -169,14 +196,6 @@ export function hasFeatureAccess(
   return false;
 }
 
-/**
- * Quick helper to get the DASHBOARD_ACCESS config with safe defaults.
- *
- * IMPORTANT: ALL defaults are ["Premium"] (not "Member") so that if the
- * config section is missing or a key is absent, features are locked behind
- * premium — NOT open to everyone.  This prevents accidental public access
- * when the VPS config.yml does not include DASHBOARD_ACCESS.
- */
 let _dashAccessLoggedOnce = false;
 export function getDashboardAccessConfig(client: Manager) {
   // Safe default: everything requires Premium
@@ -193,6 +212,7 @@ export function getDashboardAccessConfig(client: Manager) {
     DjRole: ["Premium"] as string[],
     ControlButton: ["Premium"] as string[],
     Playlist: ["Premium"] as string[],
+    AiChat: ["Premium"] as string[],
   };
 
   const cfg = client.config.DASHBOARD_ACCESS;
@@ -216,9 +236,9 @@ export function getDashboardAccessConfig(client: Manager) {
     DjRole: cfg.DjRole ?? defaults.DjRole,
     ControlButton: cfg.ControlButton ?? defaults.ControlButton,
     Playlist: (cfg as any).Playlist ?? defaults.Playlist,
+    AiChat: cfg.AiChat ?? defaults.AiChat,
   };
 
-  // Log the resolved config once for debugging production issues
   if (!_dashAccessLoggedOnce) {
     _dashAccessLoggedOnce = true;
   }
@@ -226,8 +246,6 @@ export function getDashboardAccessConfig(client: Manager) {
   return resolved;
 }
 
-// ── Supported dashboard music sources ──────────────────────────────────────────
-// Maps source id to its search engine name used by Mewslink
 export const DASHBOARD_SOURCES: Record<string, string> = {
   soundcloud: "soundcloud",
   apple_music: "apple",
@@ -238,10 +256,6 @@ export const DASHBOARD_SOURCES: Record<string, string> = {
   tidal: "tidal",
 };
 
-/**
- * Get the DefaultSourceDashboard config with safe defaults.
- * Each source maps to the access level(s) required for a guild to select it.
- */
 export function getDefaultSourceDashboardConfig(client: Manager): Record<string, string[]> {
   const defaults: Record<string, string[]> = {
     soundcloud: ["Member"],
@@ -263,19 +277,11 @@ export function getDefaultSourceDashboardConfig(client: Manager): Record<string,
   return resolved;
 }
 
-/**
- * Build the source access map for a guild user, checking each source against
- * DefaultSourceDashboard config.
- *
- * Returns per-source { hasAccess, requirement } using the front-end source ids
- * (spotify, apple, soundcloud, deezer, tidal, youtube, youtube_music).
- */
 export function buildSourceAccessMap(
   client: Manager,
   perm: DashboardUserPerm
 ): Record<string, { hasAccess: boolean; requirement: string }> {
   const sourceCfg = getDefaultSourceDashboardConfig(client);
-  // Map config keys (e.g. "apple_music") to frontend ids (e.g. "apple")
   const FE_ID: Record<string, string> = {
     soundcloud: "soundcloud",
     apple_music: "apple",

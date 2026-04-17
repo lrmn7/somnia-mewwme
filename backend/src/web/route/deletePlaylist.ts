@@ -1,10 +1,6 @@
 import { Manager } from "../../manager.js";
 import Fastify from "fastify";
 
-/**
- * DELETE /v1/playlists/:id
- * Header: user-id (owner check)
- */
 export async function deletePlaylist(
   client: Manager,
   req: Fastify.FastifyRequest,

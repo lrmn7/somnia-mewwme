@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import type { GlobalStatsData } from "@/types/player";
 import Navbar from "@/components/Navbar";
-import BackgroundGlow from "@/components/BackgroundGlow";
+
 import Footer from "@/components/Footer";
 
 function formatListenTime(ms: number): string {
@@ -67,11 +67,11 @@ export default function GlobalStats() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen flex flex-col relative text-foreground">
       <Navbar />
-      <BackgroundGlow />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-20">
+      <main className="flex-1">
+        <section className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-20">
         <div className="text-center mb-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Global Stats</h1>
           <p className="text-muted-foreground text-sm sm:text-base">
@@ -220,7 +220,8 @@ export default function GlobalStats() {
             </div>
           </>
         ) : null}
-      </div>
+        </section>
+      </main>
       <Footer />
     </div>
   );

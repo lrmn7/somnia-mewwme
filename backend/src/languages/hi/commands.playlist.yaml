@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_add_match: "कृपया एक मान्य गाने का नाम या URL दें!"
+pl_add_playlist: "खोजा गया **%{title}** `%{duration}` • (**%{track} गाने**) • %{user}"
+pl_add_track: "खोजा गया **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "खोजा गया **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "आप **प्लेलिस्ट के मालिक** नहीं हैं!"
+pl_add_limit_track: "आप **%{limit} गानों** से अधिक नहीं जोड़ सकते"
+pl_add_added: "**%{count} गाने** `%{playlist}` में जोड़े गए"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} गाने**) • बनाया गया: `[%{create} पहले]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "पेज • %{page}/%{pages} | प्लेलिस्ट • %{songs}"
+pl_all_view_notnumber: "कृपया एक मान्य पेज संख्या दें!"
+pl_all_view_page_notfound: "केवल **%{page} पेज** हैं!"
+
+### pl-create commands ###
+pl_create_invalid: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_create_toolong: "प्लेलिस्ट का नाम **16 अक्षरों** से लंबा नहीं हो सकता"
+pl_create_des_toolong: "प्लेलिस्ट का विवरण **1000 अक्षरों** से लंबा नहीं हो सकता"
+pl_create_limit_playlist: "आप **%{limit} प्लेलिस्ट** से अधिक नहीं बना सकते"
+create_created_title: "नई प्लेलिस्ट सफलतापूर्वक बनाई गई!"
+pl_create_created_footer: "अपनी प्लेलिस्ट संपादित करने के लिए /pl editor टाइप करें!"
+pl_create_created: |
+  **प्लेलिस्ट नाम**
+  `%{playlist}`
+
+  **प्लेलिस्ट ID**
+  `%{id}`
+
+  **विवरण**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+delete_notfound: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_delete_owner: "आप **प्लेलिस्ट के मालिक** नहीं हैं"
+pl_delete_confirm: "क्या आप `%{playlist_id}` को हटाना चाहते हैं"
+pl_delete_deleted: "प्लेलिस्ट `%{name}` सफलतापूर्वक **हटा** दी गई है"
+pl_delete_no: "प्लेलिस्ट **हटाना** रद्द किया गया!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "कृपया एक मान्य संख्या दें!"
+pl_detail_notfound: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_detail_private: "प्लेलिस्ट **निजी** है"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "प्लेलिस्ट: %{name}"
+pl_detail_embed_footer: "पेज • %{page}/%{pages} | गाने • %{songs} | कुल अवधि • %{duration}"
+pl_detail_notnumber: "कृपया एक मान्य पेज संख्या दें!"
+pl_detail_page_notfound: "केवल **%{page} पेज** हैं"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "अपनी **नई प्लेलिस्ट ID** दर्ज करें `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "अपना **नया प्लेलिस्ट नाम** दर्ज करें"
+pl_edit_playlist_des_label: "अपना **नया प्लेलिस्ट विवरण** दर्ज करें"
+pl_edit_playlist_private_label: "अपनी **नई प्लेलिस्ट दृश्यता** दर्ज करें `[public/private]`"
+pl_edit_success: "प्लेलिस्ट सफलतापूर्वक संपादित की गई\nनई प्लेलिस्ट ID: `%{playlistId}`"
+pl_edit_arg: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_edit_notfound: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_edit_playlist_owner: "आप **प्लेलिस्ट के मालिक** नहीं हैं!"
+pl_edit_invalid_id: "कृपया एक मान्य और मौजूद न होने वाली प्लेलिस्ट ID दर्ज करें!"
+pl_edit_invalid_mode: "अमान्य दृश्यता मोड। कृपया **public** या **private** का उपयोग करें"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "नई प्लेलिस्ट ID"
+ineraction_edit_playlist_name_label: "नया प्लेलिस्ट नाम"
+ineraction_edit_playlist_des_label: "नया प्लेलिस्ट विवरण"
+ineraction_edit_playlist_private_label: "नई प्लेलिस्ट दृश्यता"
+ineraction_edit_playlist_id_placeholder: "अपनी नई प्लेलिस्ट ID दर्ज करें! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "अपना नया प्लेलिस्ट नाम दर्ज करें!"
+ineraction_edit_playlist_des_placeholder: "अपना नया प्लेलिस्ट विवरण दर्ज करें!"
+ineraction_edit_playlist_private_placeholder: "अपनी नई प्लेलिस्ट दृश्यता दर्ज करें! [public/private]"
+ineraction_edit_success: "प्लेलिस्ट सफलतापूर्वक संपादित की गई\nनई प्लेलिस्ट ID: `%{playlistId}`"
+ineraction_edit_playlist_error: "कुछ गलत हो गया। कृपया फिर से प्रयास करें!"
+ineraction_edit_notfound: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+ineraction_edit_playlist_owner: "आप **प्लेलिस्ट के मालिक** नहीं हैं"
+ineraction_edit_invalid_id: "कृपया एक मान्य और मौजूद न होने वाली प्लेलिस्ट ID दर्ज करें!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### प्लेलिस्ट **%{name}** कतार में जोड़ दी गई ♪"
+pl_import_imported_footer: "%{tracks} गाने • %{duration} • संगीत के आनंद का लुत्फ़ उठाएँ!"
+pl_import_invalid: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_import_private: "प्लेलिस्ट **निजी** है"
+pl_import_voice: "इस कमांड का उपयोग करने के लिए आपको एक वॉइस चैनल में होना चाहिए!"
+pl_import_empty: "प्लेलिस्ट **खाली** है"
+
+### pl-info commands! ###
+pl_info_owner: "मालिक"
+pl_info_id: "ID"
+pl_info_des: "विवरण"
+pl_info_no_des: "कोई विवरण प्रदान नहीं किया गया है!"
+pl_info_private: "दृश्यता"
+pl_public: "सार्वजनिक"
+pl_private: "निजी"
+pl_info_total: "कुल गाने"
+pl_info_created: "बनाया गया"
+pl_info_invalid: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_remove_number_invalid: "कृपया एक मान्य संख्या दें!"
+pl_remove_notfound: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_remove_owner: "आप **प्लेलिस्ट के मालिक** नहीं हैं"
+pl_remove_song_notfound: "गाना नहीं मिला!"
+pl_remove_removed: "`%{name}` से **%{position} नंबर** का गाना हटाया गया"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_savequeue_notfound: "कृपया एक मान्य प्लेलिस्ट ID दें!"
+pl_savequeue_owner: "आप **प्लेलिस्ट के मालिक** नहीं हैं!"
+pl_savequeue_no_tracks: "वर्तमान में कोई गाना नहीं बज रहा!"
+pl_savequeue_no_new_saved: "गाना पहले से `%{name}` में मौजूद है"
+pl_savequeue_saved: "**%{tracks} गाने** `%{name}` में सहेजे गए"
+
+pl_error_no_node: "कोई Lavalink सर्वर नहीं मिला। कृपया **5 मिनट** बाद पुनः प्रयास करें"

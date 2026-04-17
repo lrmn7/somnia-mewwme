@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Schau dir meine Auswahl fuer dich an!~"
+search_desc: "### HEY! Ergebnisse fuer deine Anfrage gefunden"
+search_end_desc2: "### OMG! %{user}, du hast nicht rechtzeitig einen Song ausgewaehlt\n**Versuch es nochmal!**"
+search_footer: "%{countSong} Tracks gefunden"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` viel Spass damit ♥"
+
+search_active: "Du suchst bereits etwas! Warte, bis die letzte Suche beendet ist, bevor du eine neue startest."
+search_no_result: "Keine Ergebnisse fuer deine Suche gefunden :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` viel Spass damit ♥"
+no_songs_playing: "Es wird gerade kein Song abgespielt!"
+
+### Autoplay command!
+autoplay_off: "Autoplay ist jetzt **Deaktiviert**"
+autoplay_on: "Autoplay ist jetzt **Aktiviert**"
+autoplay_no_songs_playing: "Es werden keine Songs abgespielt!"
+
+### ClearQueue command!
+clearqueue_msg: "Warteschlange wurde **Geleert**"
+
+### Forward command!
+forward_msg: "**%{user} hat %{title} vorgespult auf** `%{duration}`"
+forward_beyond: "Der Song endet gleich. Du kannst nicht darueber hinaus vorspulen!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Als naechstes abspielen ♪"
+playnext_queue_empty: "Die Warteschlange ist leer. Bitte fuege zuerst einige Songs hinzu"
+playnext_notfound: "Song nicht gefunden!"
+
+# Execute when invalid
+no_node: "**Kein Lavalink-Server gefunden. Bitte versuche es in 5 Minuten erneut**"
+
+### Join command!
+join_msg: "Der Player wurde erfolgreich erstellt und ist %{channel} beigetreten"
+join_already: "Ich bin bereits in %{channel}"
+join_no_in_voice: "Du bist in keinem Sprachkanal!"
+join_no_same_voice: "Du bist nicht im selben Sprachkanal wie ich!"
+
+### Loop command!
+loop_current: "Jetzt wird %{title} in Schleife abgespielt"
+loop_all: "**Warteschlangen-Schleifenmodus wurde aktiviert**"
+unloop_all: "**Schleifenmodus wurde DEAKTIVIERT**"
+loop_invalid: "Ungueltiger Schleifenmodus. Bitte verwende **Disabled**"
+loop_already: "Schleifenmodus ist bereits **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Bitte gib einen gueltigen **Songnamen** an"
+lyrics_title: "Songtext fuer **%{song}**"
+lyrics_notfound: "**Konnte den Songtext fuer diesen Song nicht finden!**"
+lyrics_toolong: "**Songtext zu lang, maximal 4048 Zeichen erlaubt!**"
+lyrics_disable: " **Songtexte sind derzeit deaktiviert!**"
+lyrics_noquery: "**Bitte gib einen gueltigen **Songnamen** an"
+lyrics_error: "**Fehler: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "WIRD GERADE ABGESPIELT"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Interpret"
+nowplaying_total_duration_title: "Dauer"
+nowplaying_request_title: "Angefragt von"
+
+### Pause command!
+pause_msg: "**Der Track %{title} ist derzeit pausiert!"
+
+### Play command!
+play_no_same_voice: "Du bist nicht im selben Sprachkanal wie ich!"
+play_no_in_voice: "Du bist in keinem Sprachkanal!"
+play_arg: "Bitte gib einen gueltigen Songnamen oder eine URL an!"
+play_emoji: "**Hoppla! Das ist ein Emoji, du kannst keine Songs mit Emojis abspielen**"
+play_match: "**Hoppla! Entschuldigung, Song nicht gefunden! Bitte versuche es erneut**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## Das war einfach!
+  ### Deine %{title} wurde zur Warteschlange hinzugefuegt
+
+play_queue_max: |
+  OMG!>,.,< Die Warteschlange ist zu lang. Maximal %{limitqueue} Songs.
+  Upgrade auf [**Premium**](%{premium}) fuer unbegrenzten Warteschlangen-Zugang!
+
+play_playlist_max: |
+  OMG!>,.,< Die Playlist ist zu lang. Maximal %{limitqueue} Songs.
+  Upgrade auf [**Premium**](%{premium}) fuer unbegrenzten Playlist-Zugang!
+
+### Previous command!
+previous_notfound: |
+  **Kein vorheriger Song in der Warteschlange gefunden!
+  Warum nicht /play mehr Tracks hinzufuegen und die Musik am Laufen halten?**
+previous_msg: |
+  **Zurueck zum vorherigen Song!
+  Jetzt wird %{title} abgespielt**
+
+### Queue command!
+queue_number_invalid: "Bitte gib eine gueltige Zahl ein!"
+queue_title: "Warteschlange wird abgespielt..."
+queue_description: "**%{title}**\n\n**Rest der Warteschlange %{rest}**"
+queue_footer: "Seite • %{page}/%{pages} | Songs • %{queue_lang} | Gesamtdauer • %{duration}"
+queue_notnumber: "Bitte gib eine gueltige Seitenzahl ein!"
+queue_page_notfound: "Es gibt nur **%{page} Seiten**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Bitte gib eine gueltige Zahl ein!"
+removetrack_already: "**Ich kann keinen Song entfernen, der gerade abgespielt wird**"
+removetrack_notfound: "**Entschuldigung %{user}, Song nicht gefunden!**"
+removetrack_desc: "**%{title} wurde aus der Warteschlange entfernt!**"
+
+### Replay command!
+replay_msg: "**%{user} spielt %{title} erneut ab**"
+replay_not_seekable: "Der Track **%{title}** kann nicht erneut abgespielt werden."
+
+### Resume command!
+resume_msg: "**Wiedergabe fortgesetzt %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} hat %{title} zurueckgespult auf** `%{duration}`"
+rewind_beyond: "Der Song hat gerade erst begonnen. Du kannst nicht weiter zurueckspulen!"
+
+### Seek command!
+seek_beyond: "Du kannst nicht ueber die Songdauer hinaus spulen!"
+seek_invalid: "Ungueltige Spuldauer. Bitte verwende einen gueltigen Zeitstempel. Beispiel: **1:30**"
+seek_msg: "**%{title} wurde auf** `%{duration}` gespult"
+seek_not_seekable: "Der Track **%{title}** kann nicht zurueck- oder vorgespult werden."
+
+### Skip command!
+skip_notfound: |
+  **Kein Song zum Ueberspringen gefunden! Es scheint nichts zum Ueberspringen da zu sein.
+  Lass uns /play die Musik am Laufen halten, indem wir mehr Tracks hinzufuegen!**
+skip_msg: "**%{title} wurde uebersprungen**"
+skip_number_invalid: "Bitte gib eine gueltige Zahl ein!"
+
+### Stop command!
+stop_msg: "**%{title} wurde gestoppt**"
+
+### Shuffle command!
+shuffle_title: "Mischt die Warteschlange"
+
+### Volume command!
+volume_number_invalid: "Bitte gib eine gueltige Zahl ein!"
+volume_invalid: "Ungueltige Lautstaerke. Bitte verwende eine Zahl zwischen **1** und **100**"
+volume_msg: "**Lautstaerke auf %{volume}% gesetzt, viel Spass %{user}**"
+volume_max: "**Lautstaerke ist bereits auf maximal 100%**"
+
+### play source commands
+url_no_allowed: "Bitte verwende den Songnamen/Kuenstlernamen (URL nicht erlaubt)"
+play_arg_source: "Bitte gib einen gueltigen Songnamen/Kuenstler an!"
+
+## Temporarily disabled commands
+youtube_disabled: "YouTube-Unterstuetzung ist voruebergehend nicht verfuegbar"
+autoplay_disabled: "Autoplay ist voruebergehend deaktiviert."

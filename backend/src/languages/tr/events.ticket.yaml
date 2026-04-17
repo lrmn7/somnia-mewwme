@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Bilet olusturma nedenini belirtin"
+ticket_already_open: "Zaten acik bir biletiniz var."
+ticket_already_closed: "%{id} kullanicisi icin bilet verisi bulunamadi veya Bilet zaten kapatilmis"
+ticket_close_user: "Bileti kapatma yetkiniz yok."
+ticket_delete_user: "Bileti silme yetkiniz yok."
+ticket_deleting_action: "Biletler siliniyor..."
+ticket_closed_label: "🔒 Kapatildi"
+ticket_delete_label: "🗑️ Sil"
+ticket_create: "Bilet olusturuldu. %{channel} kanalina gidin"
+ticket_create_title: "Yetkili yanitini bekleyin"
+ticket_create_desc: |
+  Biletinizi olusturdunuz icin tesekkurler. Lutfen yetkili yanitini bekleyin.
+  `NOT: Bu biletin yedegi yoktur. Lutfen onemli bilgileri kendiniz yedeklediginizden emin olun`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Kapatilan Bilet"
+ticket_closed_desc: "Bilet basariyla kapatildi!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Bilet kapatildi."
+ticket_closed_dm_desc: |
+  Actiginiz bir bilet kapatildi. Dokumunuz asagidaki baglanttida bulunabilir.
+  Herhangi bir sorunla karsilasirsiniz veya baska sorularniz varsa, yeni bir bilet acmaktan cekinmeyin. Yardimci olmak icin buradayiz!
+
+

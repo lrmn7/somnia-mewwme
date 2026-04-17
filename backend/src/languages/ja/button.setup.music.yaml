@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "音楽の再生が停止されました。楽しい時間を過ごせましたか？"
+skip_notfound: "おっと、スキップする曲がありません！"
+skip_msg: "曲をスキップしました。気にしないでね :p"
+previous_msg: "巻き戻しますね！前の曲をお届けします <3"
+previous_notfound: "申し訳ありません、これ以上戻れません。前の曲が見つかりません :("
+resume_msg: "音楽が再開されました！グルーヴを続けましょう ♪"
+pause_msg: "音楽が一時停止されました。少し休憩して静寂をお楽しみください。"
+loop_current: "現在の曲がループ再生されます。繰り返しをお楽しみください！"
+loop_all: "キューがループに設定されました。音楽をリピートでお楽しみください！"
+unloop_all: "ループモードがオフになりました。さまざまな曲をお楽しみください！"
+
+### Need to join voice & same voice to use command!
+no_player: "ボタンを押しても何も起きません。まず何か再生してみてください！"
+no_same_voice: "ボタンを押すと赤く光ります。私と同じボイスチャンネルにいません！"
+no_in_voice: "すべてのボタンが反応しません。ボイスチャンネルに参加していません！"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "再生中"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** リクエスト: %{request}"
+setup_footer: "残りの曲 • %{totalsong} | 合計時間 • %{duration}"
+setup_queuemsg: "**ボイスチャンネルに参加して、曲名やURLをここに入力して再生しましょう！**"
+setup_playembed_author: "現在再生中の曲はありません！"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "追加しました **%{title}** • %{request}"
+play_playlist: "追加しました **%{title}** • (**%{songs}曲**) • %{request}"
+play_result: "追加しました **%{title}** • %{request}"
+play_emoji: "それを再生する方法がわかりません...曲でもプレイリストでもないようです。"
+setup_content: "**やあ！デッキの準備はできてるよ！何か曲を入れてね！**"

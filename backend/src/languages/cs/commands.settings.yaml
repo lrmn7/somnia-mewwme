@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "Režim 24/7 je nyní **Zapnut**"
+247_off: "Režim 24/7 je nyní **Vypnut**"
+247_already: "Režim 24/7 je již **%{mode}**"
+247_arg_error: "Neplatný režim 24/7. Prosím použijte %{text}"
+247_no_in_voice: "Nejste v hlasovém kanálu!"
+
+
+### Set Language command! ###
+provide_lang: "**Neplatný jazyk. Prosím použijte** `%{languages}`"
+lang_set: "**Jazyk byl nastaven na** `%{language}`"
+lang_change: "**Jazyk byl změněn na** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "Prosím zadejte platný prefix!"
+prefix_length: "**Prefix nesmí být delší než 10 znaků**"
+prefix_set: "**Prefix byl nastaven na** `%{prefix}`"
+prefix_change: "**Prefix byl změněn na** `%{prefix}`"
+
+### Control command!
+control_set: "**Režim ovládání přehrávače byl nastaven na %{toggle}**"
+control_arg_error: "Neplatný argument. Prosím použijte %{text}"
+control_already: "Upozornění na skladby jsou již **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Neplatné! Prosím použijte %{text}"
+setup_enable: "**Jejda! Hudební systém již existuje.**"
+setup_topic: "♪ Ti, kdo chtějí zpívat, vždy najdou písničku. ♪"
+setup_msg: "*`Hudební systém úspěšně nastaven v`* %{channel}\n```Poznámka: Nemažte žádné zprávy, které jsem vytvořil, abych mohl správně fungovat.```"
+setup_null: "*`Kanál nastavení úspěšně smazán!`*"
+setup_deleted: "*`Kanál nastavení úspěšně smazán!`*"
+setup_null_inguild: "**Hudební systém nebyl na tomto serveru nalezen! Připraveno ke smazání dat**"
+setup_queuemsg: "**Připojte se k hlasovému kanálu a přehrávejte skladby pomocí názvu nebo URL zde!**"
+setup_playembed_author: "Momentálně se nepřehrává žádná skladba"
+
+### Themes command!
+error_themes: "Neplatné... Zkuste to prosím znovu."
+succes_themes: "**Téma úspěšně změněno na %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "Poznámka: Platnost tohoto odkazu vyprší za %{expired}."
+lastfm_login_title: "Přihlášení k Last.fm"
+lastfm_login_desc: "Chcete udělit autorizaci vašemu účtu [Last.fm](https://www.last.fm/user/eleremen)?\nPokud ano, klikněte prosím na tlačítko níže a zahajte autorizační proces."
+lastfm_not_login_desc: "Nejste přihlášeni k Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Odhlášení z Last.fm"
+lastfm_logout_desc: "Byli jste úspěšně odhlášeni z Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Funkce Last.fm je vypnuta."
+lastfm_feature_disabled_desc: "Funkce Last.fm je momentálně vypnuta. Pro více informací kontaktujte prosím administrátora."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "Nebylo nalezeno žádné upozornění pro YouTube kanál **%{ytchannel}**."
+notify_youtube_removed: "Odebrali jste upozornění pro YouTube kanál **%{ytchannel}**."
+notify_youtube_disabled: "Funkce upozornění na YouTube je momentálně vypnuta. Pro více informací kontaktujte tým."
+notify_youtube_already: "Upozornění pro YouTube kanál %{ytchannel} jsou již nastavena."
+notify_youtube_invalid_channel: "Při zadávání platného textového kanálu došlo k chybě. Prosím zkontrolujte!"
+notify_youtube_set: "Upozornění na YouTube bylo nastaveno pro **%{ytchannel}** v %{channelid}."
+notify_youtube_404: |
+  Zadané ID YouTube kanálu nebylo nalezeno.
+  Pro nalezení ID kanálu přejděte na stránku YouTube kanálu a zkontrolujte URL.
+  ID kanálu je řetězec písmen a číslic za `/channel/` (například: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   Dosáhli jste limitu %{limit} upozornění.
+   Upgradem na [premium](%{premium}) můžete nastavit až %{limitpremium} upozornění.
+
+notify_youtube_limit_reached_premium: |
+   Dosáhli jste limitu %{limit} upozornění.
+   Toto je maximální povolený počet. Zvažte smazání některých upozornění, abyste uvolnili místo pro nová.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Nebylo nalezeno žádné upozornění pro Twitch uživatelské jméno **%{twitchusername}**."
+notify_twitch_removed: "Odebrali jste upozornění pro Twitch uživatelské jméno **%{twitchusername}**."
+notify_twitch_disabled: "Funkce upozornění na Twitch je momentálně vypnuta. Pro více informací kontaktujte tým."
+notify_twitch_already: "Upozornění pro Twitch kanál %{twitchusername} jsou již nastavena."
+notify_twitch_invalid_channel: "Při zadávání platného textového kanálu došlo k chybě. Prosím zkontrolujte!"
+notify_twitch_set: "Upozornění na Twitch bylo nastaveno pro **%{twitchusername}** v %{channelid}."
+notify_twitch_error: "Při zpracování upozornění na Twitch pro **{twitchusername}** v kanálu **{channelid}** došlo k neočekávané chybě. Zkuste to prosím znovu nebo kontaktujte podporu, pokud problém přetrvává."
+notify_twitch_limit_reached_non_premium: |
+   Dosáhli jste limitu %{limit} upozornění.
+   Upgradem na [premium](%{premium}) můžete nastavit až %{limitpremium} upozornění.
+
+notify_twitch_limit_reached_premium: |
+   Dosáhli jste limitu %{limit} upozornění.
+   Toto je maximální povolený počet. Zvažte smazání některých upozornění, abyste uvolnili místo pro nová.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Funkce dočasného hlasového kanálu byla %{status}."
+tempvoice_disabled: "Dočasný hlasový kanál byl vypnut."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Neplatné... pouze %{text}."
+status_voice_channel_true: "Stav hlasového kanálu byl nastaven na **%{type}**."
+status_voice_channel_false: "Stav hlasového kanálu byl nastaven na **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "Tento příkaz lze provést pouze na serveru!"
+no_data_patreon: "Data Patreonu nebyla nalezena (chyba databáze)"
+no_data_patreon_title: "Nenalezeno"
+no_data_patreon_desc: |
+  Pokud jste se již přihlásili k odběru, ujistěte se, že váš Discord účet je propojen s Patreonem!
+no_data_patreon_footer: "Synchronizace Patreonu může chvíli trvat, zkontrolujte to prosím znovu za okamžik"
+no_patreon_guild_membership: |
+  ahoj, váš plán patreonu je **uživatelská úroveň**.
+  prosím upgradujte na **serverovou úroveň** pro odemčení přístupu k prémiovému serveru.
+patreon_guild_membership_full_quota: |
+  využili jste celou svou serverovou kvótu!
+  **stav:** %{status} serverů použito.
+
+  řešení:
+  1. upgradujte svou úroveň na patreonu.
+  2. nebo vypněte premium na svém starém serveru.
+patreon_guild_membership_already_before: "Premium jste na tomto serveru již dříve aktivovali!"
+patreon_guild_membership_already: "**JIŽ PREMIUM**, protože je sponzorováno někým jiným.\nUšetřete si kvótu pro jiné servery!"
+patreon_guild_membership_claim_title: "Potvrzení aktivace"
+patreon_guild_membership_claim_desc: |
+  jste si jistí, že chcete aktivovat **prémiový server** pro:
+  **%{guildName}**
+
+  tato akce spotřebuje **1 serverovou kvótu**.
+  zbývající kvóta: **%{status}**
+patreon_guild_membership_claim_success: |
+  úspěch! **%{guildName}** je nyní **prémiový server**.
+
+  **sponzor:** %{user}
+  **zbývající kvóta:** %{status}
+  děkujeme za podporu na patreonu!
+patreon_guild_membership_claim_success_title: "💎 Premium aktivováno!"
+patreon_guild_membership_claim_cancel: "Aktivace premium byla zrušena."
+patreon_guild_membership_claim_norespon: "Aktivace byla automaticky zrušena z důvodu žádné odpovědi."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Server uplatněn (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **sponzor:** %{sponsorTag} %{sponsorId}
+  **cílový server:** %{guildName} %{guildId}
+  **stav kvóty:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Nemůžete zrušit tento prémiový server, protože jste ho neregistrovali."
+patreon_guild_unclaim_title: "Potvrzení zrušení Premium"
+patreon_guild_unclaim_desc: |
+  Jste si jistí, že chcete **ZRUŠIT** prémiový stav serveru **%{guildName}**?
+  **Následky:** Prémiové funkce budou na tomto serveru vypnuty.
+  Vaše serverová kvóta bude obnovena (+1).
+  Aktuální zbývající kvóta: **%{status}**
+patreon_guild_unclaim_success_title: "Premium zrušeno"
+patreon_guild_unclaim_success: |
+  Prémiový stav pro **%{guildName}** byl úspěšně zrušen.
+  **Obnovená kvóta:** 1 server
+  **Nová zbývající kvóta:** %{status}
+patreon_guild_unclaim_cancel: "Proces zrušení premium byl zrušen."
+patreon_guild_unclaim_norespon: "⏱️ Časový limit. Proces zrušen."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Zrušené servery (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Uživatel:** %{sponsorTag} %{sponsorId}
+  **Server:** %{guildName}} %{guildId}
+  **Obnovená kvóta:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Uživatel:** %{userTag} (%{userId})
+  **Server:** %{guildName} (%{guildId})
+  **Kvóta:** %{quota}
+  **Vyprší:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Akce: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "ID transakce nebylo nalezeno nebo již bylo uplatněno."
+kofi_linked_success_title: "Platba úspěšně propojena!"
+kofi_linked_success_desc: "Nyní můžete použít `/premium claim <kofi>` bez TxID."
+kofi_no_data_title: "Žádná data nenalezena!"
+kofi_no_data_desc: |
+  Pokud jste již zaplatili, ale nepropojili svůj Discord účet s Ko-fi
+  použijte: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Žádná kvóta, ale jste prémiový uživatel."
+kofi_full_server_quota_title: "Kvóta plná!"
+kofi_full_server_quota_desc: "Využili jste **%{quota}** serverových slotů."
+kofi_server_already_claim_desc: "**Již aktivní!**\nPremium jste na tomto serveru již dříve aktivovali."
+kofi_server_already_active_desc: " **Již Premium!**\nTento server byl již aktivován jako prémiový jiným uživatelem."
+kofi_guild_membership_claim_success: |
+  Premium bylo úspěšně aktivováno!
+  **Využití kvóty:** %{quota}
+  **Vyprší za:** %{expires}
+kofi_guild_membership_claim_footer: "Děkujeme za vaši podporu!"
+kofi_action_title: "🏗️ Ko-fi Akce: %{type}"
+kofi_action_description: "**Uživatel:** %{userTag} (`%{userId}`)\n**Server:** %{guildName} (`%{guildId}`)\n**Akce:** %{action}\n**Kvóta:** %{quota}"
+kofi_action_activation: "Server aktivován"
+kofi_action_manual_link: "Manuální propojení platby"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium zrušeno"
+kofi_guild_unclaim_success_desc: |
+  Prémiový stav pro **%{guildName}** byl úspěšně zrušen.
+  **Obnovená kvóta:** 1 server
+kofi_guild_not_owned_by_user: "Nemůžete zrušit tento prémiový server, protože jste ho neregistrovali."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Zrušené servery %{platform}"
+premium_unclaim_log_desc: |
+  **Uživatel:** %{userTag} %{userId}
+  **Server:** %{guildName}} %{guildId}
+  **Obnovená kvóta:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "Systém DJ role byl **Vypnut**."
+dj_role_missing_role: "Pro použití akce `set` musíte zadat roli."
+dj_role_set: |
+  DJ role byla nastavena na %{role}.
+  Stav: **Zapnuto**
+  **Ovlivněné příkazy:**
+  %{commands}

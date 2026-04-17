@@ -1,0 +1,37 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "टिकट बनाने का कारण प्रदान करें"
+ticket_already_open: "आपका पहले से एक खुला टिकट है।"
+ticket_already_closed: "उपयोगकर्ता %{id} के लिए टिकट डेटा नहीं मिला या टिकट पहले से बंद है"
+ticket_close_user: "आपको टिकट बंद करने की अनुमति नहीं है।"
+ticket_delete_user: "आपको टिकट हटाने की अनुमति नहीं है।"
+ticket_deleting_action: "टिकट हटाए जा रहे हैं..."
+ticket_closed_label: "🔒 बंद"
+ticket_delete_label: "🗑️ हटाएँ"
+ticket_create: "टिकट बना दिया गया है। %{channel} पर जाएँ"
+ticket_create_title: "स्टाफ़ की प्रतिक्रिया की प्रतीक्षा करें"
+ticket_create_desc: |
+  टिकट बनाने के लिए धन्यवाद। कृपया स्टाफ़ की प्रतिक्रिया की प्रतीक्षा करें।
+  `नोट: इस टिकट का कोई बैकअप नहीं है। कृपया किसी भी महत्वपूर्ण जानकारी का स्वयं बैकअप लेना सुनिश्चित करें`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 बंद टिकट"
+ticket_closed_desc: "टिकट सफलतापूर्वक बंद कर दिया गया है!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "टिकट बंद कर दिया गया है।"
+ticket_closed_dm_desc: |
+  आपका खोला गया एक टिकट अभी बंद किया गया। आपका ट्रांसक्रिप्ट नीचे दिए गए लिंक पर मिल सकता है।
+  यदि आपको कोई समस्या आती है या और प्रश्न हैं, तो बेझिझक एक नया टिकट खोलें। हम मदद के लिए यहाँ हैं!
+

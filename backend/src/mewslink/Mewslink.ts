@@ -690,7 +690,7 @@ export class Mewslink extends EventEmitter {
       additionalDriver: [],
       retryTimeout: 3000,
       retryCount: 15,
-      voiceConnectionTimeout: 15000,
+      voiceConnectionTimeout: 30000,
       defaultSearchEngine: "spotify",
       defaultVolume: 100,
       searchFallback: {

@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Silakan masukkan ID Playlist yang valid!"
+pl_add_match: "Silakan masukkan nama lagu atau URL yang valid!"
+pl_add_playlist: "Dicari **%{title}** `%{duration}` • (**%{track} Lagu**) • %{user}"
+pl_add_track: "Dicari **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Dicari **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Kamu bukan **Pemilik Playlist**!"
+pl_add_limit_track: "Kamu tidak bisa menambahkan lebih dari **%{limit} Lagu**"
+pl_add_added: "Ditambahkan **%{count} Lagu** ke `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Lagu**) • Dibuat: `[%{create} yang lalu]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Halaman • %{page}/%{pages} | Playlist • %{songs}"
+pl_all_view_notnumber: "Silakan masukkan nomor halaman yang valid!"
+pl_all_view_page_notfound: "Hanya ada **%{page} Halaman**!"
+
+### pl-create commands ###
+pl_create_invalid: "Silakan masukkan ID Playlist yang valid!"
+pl_create_toolong: "Nama Playlist tidak boleh lebih dari **16 Karakter**"
+pl_create_des_toolong: "Deskripsi Playlist tidak boleh lebih dari **1000 Karakter**"
+pl_create_limit_playlist: "Kamu tidak bisa membuat lebih dari **%{limit} Playlist**"
+create_created_title: "Berhasil Membuat Playlist Baru!"
+pl_create_created_footer: "Ketik /pl editor untuk mengedit playlistmu!"
+pl_create_created: |
+  **Nama Playlist**
+  `%{playlist}`
+
+  **ID Playlist**
+  `%{id}`
+
+  **Deskripsi**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Silakan masukkan ID Playlist yang valid!"
+delete_notfound: "Silakan masukkan ID Playlist yang valid!"
+pl_delete_owner: "Kamu bukan **Pemilik Playlist**"
+pl_delete_confirm: "Apakah kamu ingin menghapus `%{playlist_id}`"
+pl_delete_deleted: "Playlist `%{name}` telah berhasil **Dihapus**"
+pl_delete_no: "Membatalkan **Penghapusan** Playlist!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Silakan masukkan angka yang valid!"
+pl_detail_notfound: "Silakan masukkan ID Playlist yang valid!"
+pl_detail_private: "Playlist bersifat **Privat**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Playlist: %{name}"
+pl_detail_embed_footer: "Halaman • %{page}/%{pages} | Lagu • %{songs} | Total Durasi • %{duration}"
+pl_detail_notnumber: "Silakan masukkan nomor halaman yang valid!"
+pl_detail_page_notfound: "Hanya ada **%{page} Halaman**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Masukkan **ID Playlist Baru**-mu `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Masukkan **Nama Playlist Baru**-mu"
+pl_edit_playlist_des_label: "Masukkan **Deskripsi Playlist Baru**-mu"
+pl_edit_playlist_private_label: "Masukkan **Visibilitas Playlist Baru**-mu `[public/private]`"
+pl_edit_success: "Berhasil mengedit playlist\nID Playlist Baru: `%{playlistId}`"
+pl_edit_arg: "Silakan masukkan ID Playlist yang valid!"
+pl_edit_notfound: "Silakan masukkan ID Playlist yang valid!"
+pl_edit_playlist_owner: "Kamu bukan **Pemilik Playlist**!"
+pl_edit_invalid_id: "Silakan masukkan ID Playlist yang valid dan belum ada!"
+pl_edit_invalid_mode: "Mode Visibilitas tidak valid. Silakan gunakan **public** atau **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "ID Playlist Baru"
+ineraction_edit_playlist_name_label: "Nama Playlist Baru"
+ineraction_edit_playlist_des_label: "Deskripsi Playlist Baru"
+ineraction_edit_playlist_private_label: "Visibilitas Playlist Baru"
+ineraction_edit_playlist_id_placeholder: "Masukkan ID Playlist Baru-mu! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Masukkan Nama Playlist Baru-mu!"
+ineraction_edit_playlist_des_placeholder: "Masukkan Deskripsi Playlist Baru-mu!"
+ineraction_edit_playlist_private_placeholder: "Masukkan Visibilitas Playlist Baru-mu! [public/private]"
+ineraction_edit_success: "Berhasil mengedit playlist\nID Playlist Baru: `%{playlistId}`"
+ineraction_edit_playlist_error: "Terjadi kesalahan. Silakan coba lagi!"
+ineraction_edit_notfound: "Silakan masukkan ID Playlist yang valid!"
+ineraction_edit_playlist_owner: "Kamu bukan **Pemilik Playlist**"
+ineraction_edit_invalid_id: "Silakan masukkan ID Playlist yang valid dan belum ada!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Playlist **%{name}** ditambahkan ke antrean ♪"
+pl_import_imported_footer: "Nikmati %{tracks} lagu • %{duration} • kebahagiaan musik!"
+pl_import_invalid: "Silakan masukkan ID Playlist yang valid!"
+pl_import_private: "Playlist bersifat **Privat**"
+pl_import_voice: "Kamu harus berada di voice channel untuk menggunakan perintah ini!"
+pl_import_empty: "Playlist **Kosong**"
+
+### pl-info commands! ###
+pl_info_owner: "Pemilik"
+pl_info_id: "ID"
+pl_info_des: "Deskripsi"
+pl_info_no_des: "Tidak ada deskripsi yang diberikan!"
+pl_info_private: "Visibilitas"
+pl_public: "Publik"
+pl_private: "Privat"
+pl_info_total: "Total Lagu"
+pl_info_created: "Dibuat"
+pl_info_invalid: "Silakan masukkan ID Playlist yang valid!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Silakan masukkan ID Playlist yang valid!"
+pl_remove_number_invalid: "Silakan masukkan angka yang valid!"
+pl_remove_notfound: "Silakan masukkan ID Playlist yang valid!"
+pl_remove_owner: "Kamu bukan **Pemilik Playlist**"
+pl_remove_song_notfound: "Lagu tidak ditemukan!"
+pl_remove_removed: "Menghapus lagu **Nomor %{position}** dari `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Silakan masukkan ID Playlist yang valid!"
+pl_savequeue_notfound: "Silakan masukkan ID Playlist yang valid!"
+pl_savequeue_owner: "Kamu bukan **Pemilik Playlist**!"
+pl_savequeue_no_tracks: "Tidak ada lagu yang sedang diputar!"
+pl_savequeue_no_new_saved: "Lagu sudah ada di `%{name}`"
+pl_savequeue_saved: "Menyimpan **%{tracks} Lagu** ke `%{name}`"
+
+pl_error_no_node: "Tidak ada server Lavalink yang ditemukan. Silakan coba lagi setelah **5 Menit**"

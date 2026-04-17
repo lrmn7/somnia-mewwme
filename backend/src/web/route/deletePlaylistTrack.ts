@@ -1,11 +1,6 @@
 import { Manager } from "../../manager.js";
 import Fastify from "fastify";
 
-/**
- * DELETE /v1/playlists/:id/tracks/:index
- * Header: user-id (owner check)
- * index is 0-based
- */
 export async function deletePlaylistTrack(
   client: Manager,
   req: Fastify.FastifyRequest,

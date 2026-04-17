@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "看看我為你挑選的吧！~"
+search_desc: "### 嘿！找到了你的搜尋結果"
+search_end_desc2: "### 天哪！%{user}，你沒有在時間內選擇歌曲\n**請再試一次！**"
+search_footer: "找到 %{countSong} 首曲目"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` 好好享受吧 ♥"
+
+search_active: "你已經在搜尋了！請等上一次搜尋結束後再開始新的搜尋。"
+search_no_result: "找不到你的搜尋結果 :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` 好好享受吧 ♥"
+no_songs_playing: "目前沒有正在播放的歌曲！"
+
+### Autoplay command!
+autoplay_off: "自動播放已**停用**"
+autoplay_on: "自動播放已**啟用**"
+autoplay_no_songs_playing: "目前沒有正在播放的歌曲！"
+
+### ClearQueue command!
+clearqueue_msg: "播放佇列已**清除**"
+
+### Forward command!
+forward_msg: "**%{user} 將 %{title} 快轉至** `%{duration}`"
+forward_beyond: "歌曲即將結束。你無法快轉超過歌曲長度！"
+
+### PlayNext command!
+playnext_desc: "### %{name} 下一首播放 ♪"
+playnext_queue_empty: "播放佇列為空。請先新增一些歌曲"
+playnext_notfound: "找不到歌曲！"
+
+# Execute when invalid
+no_node: "**找不到 Lavalink 伺服器。請在 5 分鐘後再試**"
+
+### Join command!
+join_msg: "播放器已成功建立並加入了 %{channel}"
+join_already: "我已經在 %{channel} 了"
+join_no_in_voice: "你不在語音頻道中！"
+join_no_same_voice: "你和我不在同一個語音頻道！"
+
+### Loop command!
+loop_current: "正在循環播放 %{title}"
+loop_all: "**已設為佇列循環模式**"
+unloop_all: "**循環模式已停用**"
+loop_invalid: "無效的循環模式。請使用 **Disabled**"
+loop_already: "循環模式已經是 **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "請提供有效的**歌曲名稱**"
+lyrics_title: "**%{song}** 的歌詞"
+lyrics_notfound: "**找不到這首歌的歌詞！**"
+lyrics_toolong: "**歌詞過長，最多允許 4048 個字元！**"
+lyrics_disable: " **歌詞功能目前已停用！**"
+lyrics_noquery: "**請提供有效的**歌曲名稱**"
+lyrics_error: "**錯誤：%{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "正在播放"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "作者"
+nowplaying_total_duration_title: "時長"
+nowplaying_request_title: "點播者"
+
+### Pause command!
+pause_msg: "**曲目 %{title} 目前已暫停！"
+
+### Play command!
+play_no_same_voice: "你和我不在同一個語音頻道！"
+play_no_in_voice: "你不在語音頻道中！"
+play_arg: "請提供有效的歌曲名稱或網址！"
+play_emoji: "**糟糕！這是表情符號，你無法使用表情符號來播放歌曲**"
+play_match: "**糟糕！抱歉，找不到歌曲！請再試一次**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## 輕鬆搞定！
+  ### 你的 %{title} 已加入播放佇列
+
+play_queue_max: |
+  天哪！>,.,< 播放佇列太長了。最多 %{limitqueue} 首歌曲。
+  升級到 [**進階版**](%{premium}) 即可享受無限佇列！
+
+play_playlist_max: |
+  天哪！>,.,< 播放清單太長了。最多 %{limitqueue} 首歌曲。
+  升級到 [**進階版**](%{premium}) 即可享受無限播放清單！
+
+### Previous command!
+previous_notfound: |
+  **佇列中找不到上一首歌曲！
+  何不 /play 更多曲目，讓音樂繼續播放？**
+previous_msg: |
+  **回到上一首歌曲！
+  正在播放 %{title}**
+
+### Queue command!
+queue_number_invalid: "請提供有效的數字！"
+queue_title: "播放佇列..."
+queue_description: "**%{title}**\n\n**其餘佇列 %{rest}**"
+queue_footer: "頁面 • %{page}/%{pages} | 歌曲 • %{queue_lang} | 總時長 • %{duration}"
+queue_notnumber: "請提供有效的頁碼！"
+queue_page_notfound: "只有 **%{page} 頁**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " 請提供有效的數字！"
+removetrack_already: "**我無法移除正在播放的歌曲**"
+removetrack_notfound: "**抱歉 %{user}，找不到歌曲！**"
+removetrack_desc: "**已從佇列中移除 %{title}！**"
+
+### Replay command!
+replay_msg: "**%{user} 重新播放了 %{title}**"
+replay_not_seekable: "曲目 **%{title}** 無法重新播放。"
+
+### Resume command!
+resume_msg: "**已恢復播放 %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} 將 %{title} 倒帶至** `%{duration}`"
+rewind_beyond: "歌曲剛開始。你無法倒帶超過起點！"
+
+### Seek command!
+seek_beyond: "你無法跳轉超過歌曲時長！"
+seek_invalid: "無效的跳轉時間。請使用有效的時間戳記。範例：**1:30**"
+seek_msg: "**已將 %{title} 跳轉至** `%{duration}`"
+seek_not_seekable: "曲目 **%{title}** 無法倒帶或快轉。"
+
+### Skip command!
+skip_notfound: |
+  **找不到可以跳過的歌曲！看起來沒有什麼可以跳過的。
+  讓我們 /play 繼續添加更多曲目來保持音樂播放！**
+skip_msg: "**%{title} 已被跳過**"
+skip_number_invalid: "請提供有效的數字！"
+
+### Stop command!
+stop_msg: "**%{title} 已停止播放**"
+
+### Shuffle command!
+shuffle_title: "隨機排列播放佇列"
+
+### Volume command!
+volume_number_invalid: "請提供有效的數字！"
+volume_invalid: "無效的音量。請使用 **1** 到 **100** 之間的數字"
+volume_msg: "**音量已設為 %{volume}%，好好享受吧 %{user}**"
+volume_max: "**音量已經是最大值 100%**"
+
+### play source commands
+url_no_allowed: "請使用歌曲名稱/歌手名稱（不允許使用網址）"
+play_arg_source: "請提供有效的歌曲名稱/歌手！"
+
+## Temporarily disabled commands
+youtube_disabled: "YouTube 支援暫時無法使用"
+autoplay_disabled: "自動播放功能暫時停用。"

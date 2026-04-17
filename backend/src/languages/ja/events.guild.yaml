@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 サーバーに参加しました！"
+leave_title: "📥 サーバーから退出しました！"
+guild_name: "名前"
+guild_id: "ID"
+guild_owner: "オーナー"
+guild_member_count: "メンバー数"
+guild_creation_date: "作成日"
+guild_join_date: "参加日"
+current_server_count: "現在のサーバー数"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "わあ！みんなこんにちは ✧(≧◡≦) ♡"
+join_msg_desc: |
+  ### 招待してくれてありがとうございます (*≧▽≦)
+  ### コマンドを使うにはメンションしてね！</help:1088430405033656341> でスラッシュコマンドを確認できるよ ♡

@@ -1,0 +1,34 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "Nemohl jsem najít tento server..."
+blacklist_guild_already: "Vypadá to, že %{id} je již na černé listině, takže nemůžu nic dělat."
+blacklist_guild_add: "Sbohem, %{id}! Přidal jsem je na černou listinu. Asi to nebylo osudové..."
+blacklist_guild_not_exist: "Říkali jste, že hledáte %{id}? Nemohl jsem je najít ve svých trasách..."
+blacklist_guild_delete: "Vítejte zpět, %{id}! Mohu tam zase jezdit na turné, už nejsou na černé listině."
+
+### Blacklist User
+blacklist_user_bot_owner: "Páni! Nemůžu dát na černou listinu svého vlastního tvůrce! Snažíte se mě dostat do problémů?"
+blacklist_user_not_found: "Nemohl jsem najít tohoto fanouška..."
+blacklist_user_already: "Vypadá to, že %{id} je již na černé listině, takže nemůžu nic dělat."
+blacklist_user_add: "Nashle, %{id}! Je mi líto, že musím přidat fanouška na černou listinu, ale asi je to tak nejlepší..."
+blacklist_user_not_exist: "%{id}? Kdo to je? Nemohl jsem je najít ve svém fanklubu..."
+blacklist_user_delete: "Skvělé! %{id} byl znovu přijat jako fanoušek! Nemůžu se dočkat, až je uvidím na dalším koncertě!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "Nejsem si jistý, o jakou údržbu jde, ale rozhodně byste měli použít %{text} místo toho"
+maintenance_true: "V pořádku! Teď poslouchám jen vás!"
+maintenance_false: "Zase poslouchám všechny!"
+

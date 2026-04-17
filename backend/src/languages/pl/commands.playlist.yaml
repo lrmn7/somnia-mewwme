@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Proszę podaj prawidłowe ID playlisty!"
+pl_add_match: "Proszę podaj prawidłową nazwę utworu lub URL!"
+pl_add_playlist: "Wyszukano **%{title}** `%{duration}` • (**%{track} Utworów**) • %{user}"
+pl_add_track: "Wyszukano **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Wyszukano **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Nie jesteś **właścicielem playlisty**!"
+pl_add_limit_track: "Nie możesz dodać więcej niż **%{limit} utworów**"
+pl_add_added: "Dodano **%{count} utworów** do `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Utworów**) • Utworzono: `[%{create} temu]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Strona • %{page}/%{pages} | Playlisty • %{songs}"
+pl_all_view_notnumber: "Proszę podaj prawidłowy numer strony!"
+pl_all_view_page_notfound: "Jest tylko **%{page} stron**!"
+
+### pl-create commands ###
+pl_create_invalid: "Proszę podaj prawidłowe ID playlisty!"
+pl_create_toolong: "Nazwa playlisty nie może być dłuższa niż **16 znaków**"
+pl_create_des_toolong: "Opis playlisty nie może być dłuższy niż **1000 znaków**"
+pl_create_limit_playlist: "Nie możesz utworzyć więcej niż **%{limit} playlist**"
+create_created_title: "Pomyślnie utworzono nową playlistę!"
+pl_create_created_footer: "Wpisz /pl editor, aby edytować swoją playlistę!"
+pl_create_created: |
+  **Nazwa playlisty**
+  `%{playlist}`
+
+  **ID playlisty**
+  `%{id}`
+
+  **Opis**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Proszę podaj prawidłowe ID playlisty!"
+delete_notfound: "Proszę podaj prawidłowe ID playlisty!"
+pl_delete_owner: "Nie jesteś **właścicielem playlisty**"
+pl_delete_confirm: "Czy chcesz usunąć `%{playlist_id}`"
+pl_delete_deleted: "Playlista `%{name}` została pomyślnie **usunięta**"
+pl_delete_no: "Anulowano **usuwanie** playlisty!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Proszę podaj prawidłową liczbę!"
+pl_detail_notfound: "Proszę podaj prawidłowe ID playlisty!"
+pl_detail_private: "Playlista jest **prywatna**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Playlista: %{name}"
+pl_detail_embed_footer: "Strona • %{page}/%{pages} | Utwory • %{songs} | Łączny czas • %{duration}"
+pl_detail_notnumber: "Proszę podaj prawidłowy numer strony!"
+pl_detail_page_notfound: "Jest tylko **%{page} stron**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Wprowadź swoje **nowe ID playlisty** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Wprowadź swoją **nową nazwę playlisty**"
+pl_edit_playlist_des_label: "Wprowadź swój **nowy opis playlisty**"
+pl_edit_playlist_private_label: "Wprowadź swoją **nową widoczność playlisty** `[public/private]`"
+pl_edit_success: "Pomyślnie edytowano playlistę\nNowe ID playlisty: `%{playlistId}`"
+pl_edit_arg: "Proszę podaj prawidłowe ID playlisty!"
+pl_edit_notfound: "Proszę podaj prawidłowe ID playlisty!"
+pl_edit_playlist_owner: "Nie jesteś **właścicielem playlisty**!"
+pl_edit_invalid_id: "Proszę podaj prawidłowe i nieistniejące ID playlisty!"
+pl_edit_invalid_mode: "Nieprawidłowy tryb widoczności. Proszę użyj **public** lub **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Nowe ID playlisty"
+ineraction_edit_playlist_name_label: "Nowa nazwa playlisty"
+ineraction_edit_playlist_des_label: "Nowy opis playlisty"
+ineraction_edit_playlist_private_label: "Nowa widoczność playlisty"
+ineraction_edit_playlist_id_placeholder: "Wprowadź swoje nowe ID playlisty! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Wprowadź swoją nową nazwę playlisty!"
+ineraction_edit_playlist_des_placeholder: "Wprowadź swój nowy opis playlisty!"
+ineraction_edit_playlist_private_placeholder: "Wprowadź swoją nową widoczność playlisty! [public/private]"
+ineraction_edit_success: "Pomyślnie edytowano playlistę\nNowe ID playlisty: `%{playlistId}`"
+ineraction_edit_playlist_error: "Coś poszło nie tak. Spróbuj ponownie!"
+ineraction_edit_notfound: "Proszę podaj prawidłowe ID playlisty!"
+ineraction_edit_playlist_owner: "Nie jesteś **właścicielem playlisty**"
+ineraction_edit_invalid_id: "Proszę podaj prawidłowe i nieistniejące ID playlisty!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Playlista **%{name}** dodana do kolejki ♪"
+pl_import_imported_footer: "Ciesz się %{tracks} utworami • %{duration} • muzycznej błogości!"
+pl_import_invalid: "Proszę podaj prawidłowe ID playlisty!"
+pl_import_private: "Playlista jest **prywatna**"
+pl_import_voice: "Musisz być na kanale głosowym, aby użyć tej komendy!"
+pl_import_empty: "Playlista jest **pusta**"
+
+### pl-info commands! ###
+pl_info_owner: "Właściciel"
+pl_info_id: "ID"
+pl_info_des: "Opis"
+pl_info_no_des: "Nie podano opisu!"
+pl_info_private: "Widoczność"
+pl_public: "Publiczna"
+pl_private: "Prywatna"
+pl_info_total: "Łączna liczba utworów"
+pl_info_created: "Utworzono"
+pl_info_invalid: "Proszę podaj prawidłowe ID playlisty!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Proszę podaj prawidłowe ID playlisty!"
+pl_remove_number_invalid: "Proszę podaj prawidłową liczbę!"
+pl_remove_notfound: "Proszę podaj prawidłowe ID playlisty!"
+pl_remove_owner: "Nie jesteś **właścicielem playlisty**"
+pl_remove_song_notfound: "Nie znaleziono utworu!"
+pl_remove_removed: "Usunięto utwór numer **%{position}** z `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Proszę podaj prawidłowe ID playlisty!"
+pl_savequeue_notfound: "Proszę podaj prawidłowe ID playlisty!"
+pl_savequeue_owner: "Nie jesteś **właścicielem playlisty**!"
+pl_savequeue_no_tracks: "Żaden utwór nie jest obecnie odtwarzany!"
+pl_savequeue_no_new_saved: "Utwór już istnieje w `%{name}`"
+pl_savequeue_saved: "Zapisano **%{tracks} utworów** do `%{name}`"
+
+pl_error_no_node: "Nie znaleziono serwera Lavalink. Spróbuj ponownie po **5 minutach**"

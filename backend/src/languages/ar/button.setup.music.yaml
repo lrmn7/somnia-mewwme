@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "تم إيقاف تشغيل الموسيقى. أتمنى أنك قضيت وقتاً ممتعاً!"
+skip_notfound: "عفواً. يبدو أنه لا يوجد مقطع للتخطي إليه!"
+skip_msg: "لقد تخطيت المقطع. أتمنى ألا تمانع :p"
+previous_msg: "حسناً، يبدو أننا نعود للخلف! المقطع السابق قادم <3"
+previous_notfound: "عذراً، لا يمكن الرجوع أكثر. لم يتم العثور على مقطع سابق :("
+resume_msg: "عادت الموسيقى! لنكمل الإيقاع ♪"
+pause_msg: "تم إيقاف الموسيقى مؤقتاً. خذ استراحة واستمتع بالهدوء."
+loop_current: "الآن ستتكرر الأغنية الحالية. استمتع بالتكرار!"
+loop_all: "تم ضبط قائمة الانتظار على التكرار. دع الموسيقى تعاد!"
+unloop_all: "تم إيقاف وضع التكرار. استمتع بتنوع المقاطع!"
+
+### Need to join voice & same voice to use command!
+no_player: "ضغطت على زر ولم يحدث شيء. ربما يجب عليك تشغيل شيء أولاً!"
+no_same_voice: "ضغطت على زر وأضاء باللون الأحمر. أنت لست في نفس القناة الصوتية معي!"
+no_in_voice: "جميع الأزرار لا تستجيب لك. أنت لست في قناة صوتية!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "يعمل الآن"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** طلبه %{request}"
+setup_footer: "المقاطع المتبقية • %{totalsong} | المدة الإجمالية • %{duration}"
+setup_queuemsg: "**انضم إلى قناة صوتية وشغّل الأغاني باستخدام الاسم أو الرابط هنا!**"
+setup_playembed_author: "لا توجد أغنية قيد التشغيل حالياً!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "تمت إضافة **%{title}** • %{request}"
+play_playlist: "تمت إضافة **%{title}** • (**%{songs} مقطع**) • %{request}"
+play_result: "تمت إضافة **%{title}** • %{request}"
+play_emoji: "لست متأكداً كيف أشغل هذا... إنه ليس مقطعاً أو قائمة تشغيل."
+setup_content: "**مرحباً! منصتي جاهزة لموسيقاك! فقط أرسل شيئاً هنا!**"

@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Bitte gib eine gueltige Playlist-ID an!"
+pl_add_match: "Bitte gib einen gueltigen Songnamen oder eine URL an!"
+pl_add_playlist: "Gesucht **%{title}** `%{duration}` • (**%{track} Songs**) • %{user}"
+pl_add_track: "Gesucht **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Gesucht **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Du bist nicht der **Playlist-Besitzer**!"
+pl_add_limit_track: "Du kannst nicht mehr als **%{limit} Songs** hinzufuegen"
+pl_add_added: "**%{count} Songs** zu `%{playlist}` hinzugefuegt"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Songs**) • Erstellt: `[vor %{create}]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Seite • %{page}/%{pages} | Playlists • %{songs}"
+pl_all_view_notnumber: "Bitte gib eine gueltige Seitenzahl ein!"
+pl_all_view_page_notfound: "Es gibt nur **%{page} Seiten**!"
+
+### pl-create commands ###
+pl_create_invalid: "Bitte gib eine gueltige Playlist-ID an!"
+pl_create_toolong: "Playlist-Name darf nicht laenger als **16 Zeichen** sein"
+pl_create_des_toolong: "Playlist-Beschreibung darf nicht laenger als **1000 Zeichen** sein"
+pl_create_limit_playlist: "Du kannst nicht mehr als **%{limit} Playlists** erstellen"
+create_created_title: "Neue Playlist erfolgreich erstellt!"
+pl_create_created_footer: "Tippe /pl editor um deine Playlist zu bearbeiten!"
+pl_create_created: |
+  **Playlist-Name**
+  `%{playlist}`
+
+  **Playlist-ID**
+  `%{id}`
+
+  **Beschreibung**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Bitte gib eine gueltige Playlist-ID an!"
+delete_notfound: "Bitte gib eine gueltige Playlist-ID an!"
+pl_delete_owner: "Du bist nicht der **Playlist-Besitzer**"
+pl_delete_confirm: "Moechtest du `%{playlist_id}` loeschen?"
+pl_delete_deleted: "Playlist `%{name}` wurde erfolgreich **Geloescht**"
+pl_delete_no: "**Loeschung** der Playlist abgebrochen!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Bitte gib eine gueltige Zahl ein!"
+pl_detail_notfound: "Bitte gib eine gueltige Playlist-ID an!"
+pl_detail_private: "Playlist ist **Privat**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Playlist: %{name}"
+pl_detail_embed_footer: "Seite • %{page}/%{pages} | Songs • %{songs} | Gesamtdauer • %{duration}"
+pl_detail_notnumber: "Bitte gib eine gueltige Seitenzahl ein!"
+pl_detail_page_notfound: "Es gibt nur **%{page} Seiten**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Gib deine **Neue Playlist-ID** ein `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Gib deinen **Neuen Playlist-Namen** ein"
+pl_edit_playlist_des_label: "Gib deine **Neue Playlist-Beschreibung** ein"
+pl_edit_playlist_private_label: "Gib deine **Neue Playlist-Sichtbarkeit** ein `[public/private]`"
+pl_edit_success: "Playlist erfolgreich bearbeitet\nNeue Playlist-ID: `%{playlistId}`"
+pl_edit_arg: "Bitte gib eine gueltige Playlist-ID an!"
+pl_edit_notfound: "Bitte gib eine gueltige Playlist-ID an!"
+pl_edit_playlist_owner: "Du bist nicht der **Playlist-Besitzer**!"
+pl_edit_invalid_id: "Bitte gib eine gueltige und nicht existierende Playlist-ID ein!"
+pl_edit_invalid_mode: "Ungueltiger Sichtbarkeitsmodus. Bitte verwende **public** oder **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Neue Playlist-ID"
+ineraction_edit_playlist_name_label: "Neuer Playlist-Name"
+ineraction_edit_playlist_des_label: "Neue Playlist-Beschreibung"
+ineraction_edit_playlist_private_label: "Neue Playlist-Sichtbarkeit"
+ineraction_edit_playlist_id_placeholder: "Gib deine Neue Playlist-ID ein! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Gib deinen Neuen Playlist-Namen ein!"
+ineraction_edit_playlist_des_placeholder: "Gib deine Neue Playlist-Beschreibung ein!"
+ineraction_edit_playlist_private_placeholder: "Gib deine Neue Playlist-Sichtbarkeit ein! [public/private]"
+ineraction_edit_success: "Playlist erfolgreich bearbeitet\nNeue Playlist-ID: `%{playlistId}`"
+ineraction_edit_playlist_error: "Etwas ist schiefgelaufen. Bitte versuche es erneut!"
+ineraction_edit_notfound: "Bitte gib eine gueltige Playlist-ID an!"
+ineraction_edit_playlist_owner: "Du bist nicht der **Playlist-Besitzer**"
+ineraction_edit_invalid_id: "Bitte gib eine gueltige und nicht existierende Playlist-ID ein!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Playlist **%{name}** zur Warteschlange hinzugefuegt ♪"
+pl_import_imported_footer: "Geniesse %{tracks} Songs • %{duration} • pures Musikvergnuegen!"
+pl_import_invalid: "Bitte gib eine gueltige Playlist-ID an!"
+pl_import_private: "Playlist ist **Privat**"
+pl_import_voice: "Du musst in einem Sprachkanal sein, um diesen Befehl zu verwenden!"
+pl_import_empty: "Playlist ist **Leer**"
+
+### pl-info commands! ###
+pl_info_owner: "Besitzer"
+pl_info_id: "ID"
+pl_info_des: "Beschreibung"
+pl_info_no_des: "Keine Beschreibung vorhanden!"
+pl_info_private: "Sichtbarkeit"
+pl_public: "Oeffentlich"
+pl_private: "Privat"
+pl_info_total: "Songs insgesamt"
+pl_info_created: "Erstellt"
+pl_info_invalid: "Bitte gib eine gueltige Playlist-ID an!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Bitte gib eine gueltige Playlist-ID an!"
+pl_remove_number_invalid: "Bitte gib eine gueltige Zahl ein!"
+pl_remove_notfound: "Bitte gib eine gueltige Playlist-ID an!"
+pl_remove_owner: "Du bist nicht der **Playlist-Besitzer**"
+pl_remove_song_notfound: "Song nicht gefunden!"
+pl_remove_removed: "Song Nummer **%{position}** aus `%{name}` entfernt"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Bitte gib eine gueltige Playlist-ID an!"
+pl_savequeue_notfound: "Bitte gib eine gueltige Playlist-ID an!"
+pl_savequeue_owner: "Du bist nicht der **Playlist-Besitzer**!"
+pl_savequeue_no_tracks: "Es wird gerade kein Song abgespielt!"
+pl_savequeue_no_new_saved: "Song existiert bereits in `%{name}`"
+pl_savequeue_saved: "**%{tracks} Songs** in `%{name}` gespeichert"
+
+pl_error_no_node: "Kein Lavalink-Server gefunden. Bitte versuche es in **5 Minuten** erneut"

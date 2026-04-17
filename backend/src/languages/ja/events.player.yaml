@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "再生中"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "アーティスト"
+track_requested_by: "リクエスト者"
+track_duration: "再生時間"
+no_same_voice: "私と同じボイスチャンネルにいません！"
+filter_already: "**%{name}フィルターは既に有効です**"
+filter_reset_on: "**フィルターがリセットされました**"
+filter_reset_already: "**フィルターは既にリセット済みです**"
+no_player_filter: "**フィルターを適用できません！**"
+filter_menu_on: "**フィルター %{name} オン！**"
+
+player_get_exception: "あらら！曲にトラブルが発生しました。もう一度試しましょうか？"
+player_track_error: "曲に問題がありました。もう一度お試しいただけますか？"
+player_track_stuck: "悲しい :(、曲が止まってしまいました。リトライすれば元気が出るかも？"
+queue_end_desc: "すべての曲が終了しました！もっとビートが必要ですか？\n**/play**を使ってパーティーを続けましょう！"
+
+leave_pause: "みんな私を一人にして出て行ったので :(、プレイヤーを一時停止しました。"
+leave_resume: "誰かが参加してくれたので、プレイヤーを再開しました。"
+
+player_end: "チャンネルが約15分間空だったので、一人が好きではないため退出しました"
+
+### Last FM Scrobble ###
+expired_login_session: "Last.fmのセッションが期限切れまたは無効です。\nスクロブル機能を引き続き使用するには、再認証してください。"
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • 歌いたい人はいつでも歌を見つけられる ♪"
+milestone_track_desc: |
+  ## おっ、こんにちは
+  **%{total}**曲聴きましたね！プレイリストが無限なの、それとも音楽にそんなにハマっているの？
+

@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ La reproducci\u00f3n autom\u00e1tica est\u00e1 ahora **Activada**"
+autoplay_off: "Hmmm~~ La reproducci\u00f3n autom\u00e1tica est\u00e1 ahora **Desactivada**"
+autoplay_no_song: "\u00a1No se est\u00e1 reproduciendo ninguna canci\u00f3n!"
+
+### Loop command!
+loop_current: "\u00a1Ahora la canci\u00f3n actual se reproducir\u00e1 en bucle. Disfruta la repetici\u00f3n!"
+loop_all: "\u00a1La cola est\u00e1 configurada en bucle. Que la m\u00fasica se repita!"
+unloop_all: "\u00a1El modo de bucle ha sido desactivado. Disfruta la variedad de canciones!"
+
+### Pause command!
+pause_msg: "La m\u00fasica est\u00e1 en pausa. T\u00f3mate un descanso y disfruta del silencio."
+
+### Resume command!
+resume_msg: "\u00a1La m\u00fasica ha vuelto! Sigamos con el ritmo \u266a"
+
+previous_notfound: "Lo siento, no puedo retroceder m\u00e1s. No se encontr\u00f3 una pista anterior :("
+previous_msg: "Bueno, \u00a1parece que estamos rebobinando! Viene la pista anterior <3"
+
+### Queue command!
+queue_title: "Reproduciendo cola..."
+queue_description: "**%{title} **\n\n**Resto de la Cola %{list_song}**"
+queue_footer: "P\u00e1gina \u2022 %{page}/%{pages} | Canciones \u2022 %{queue_lang} | Duraci\u00f3n Total \u2022 %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "\u00bfAdivina qu\u00e9 hice? \u00a1Mezlcl\u00e9 la cola por ti!"
+
+### Skip command!
+skip_msg: "\u00a1Salt\u00e9 la pista. Espero que no te importe :p"
+skip_notfound: "\u00a1Ups! \u00a1Parece que no hay pista a la que saltar! Sigue disfrutando con la pista actual \u266a"
+
+### Stop command!
+stop_msg: "\u00a1La reproducci\u00f3n de m\u00fasica se ha detenido. Espero que hayas disfrutado del ritmo!"
+
+### Volume command!
+voldown_msg: "\u00a1El volumen se ha reducido %{volume}%. Disfruta de las vibraciones m\u00e1s suaves!"
+volume_invalid: "Volumen inv\u00e1lido. El rango disponible es entre **1** y **100**"
+volup_msg: "\u00a1El volumen se ha aumentado %{volume}%. \u00a1Sube el ritmo!"
+volume_max: "No puedo subir el volumen m\u00e1s del 100%"
+volume_min: "Ohno~~ \u00a1ya est\u00e1 en el volumen m\u00ednimo!"

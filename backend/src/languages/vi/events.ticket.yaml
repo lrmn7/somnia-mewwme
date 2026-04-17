@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Cung cấp lý do tạo ticket"
+ticket_already_open: "Bạn đã có một ticket đang mở."
+ticket_already_closed: "Không tìm thấy dữ liệu ticket cho người dùng %{id} hoặc Ticket đã đóng"
+ticket_close_user: "Bạn không được phép đóng ticket."
+ticket_delete_user: "Bạn không được phép xóa ticket."
+ticket_deleting_action: "Đang xóa ticket..."
+ticket_closed_label: "🔒 Đã đóng"
+ticket_delete_label: "🗑️ Xóa"
+ticket_create: "Ticket đã được tạo. Đi đến %{channel}"
+ticket_create_title: "Chờ nhân viên phản hồi"
+ticket_create_desc: |
+  Cảm ơn bạn đã tạo ticket. Vui lòng chờ nhân viên phản hồi.
+  `LƯU Ý: Ticket này không có bản sao lưu. Vui lòng đảm bảo tự sao lưu mọi thông tin quan trọng`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Ticket đã đóng"
+ticket_closed_desc: "Ticket đã được đóng thành công!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Ticket đã được đóng."
+ticket_closed_dm_desc: |
+  Một ticket bạn đã mở vừa được đóng. Bản ghi của bạn có thể được tìm thấy tại liên kết bên dưới.
+  Nếu bạn gặp bất kỳ vấn đề nào hoặc có câu hỏi, hãy mở ticket mới. Chúng tôi luôn sẵn sàng giúp đỡ!
+
+

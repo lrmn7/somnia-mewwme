@@ -1,0 +1,37 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "ספקו את הסיבה ליצירת כרטיס"
+ticket_already_open: "כבר יש לכם כרטיס פתוח."
+ticket_already_closed: "נתוני כרטיס עבור משתמש %{id} לא נמצאו או שהכרטיס כבר סגור"
+ticket_close_user: "אינכם מורשים לסגור את הכרטיס."
+ticket_delete_user: "אינכם מורשים למחוק את הכרטיס."
+ticket_deleting_action: "מוחק כרטיסים..."
+ticket_closed_label: "🔒 סגור"
+ticket_delete_label: "🗑️ מחיקה"
+ticket_create: "הכרטיס נוצר. עברו ל-%{channel}"
+ticket_create_title: "המתינו לתגובת הצוות"
+ticket_create_desc: |
+  תודה שיצרתם כרטיס. אנא המתינו לתגובת הצוות.
+  `הערה: לכרטיס זה אין גיבוי. אנא ודאו לגבות מידע חשוב בעצמכם`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 כרטיס סגור"
+ticket_closed_desc: "הכרטיס נסגר בהצלחה!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "הכרטיס נסגר."
+ticket_closed_dm_desc: |
+  כרטיס שפתחתם נסגר זה עתה. התמלול שלכם זמין בקישור למטה.
+  אם נתקלתם בבעיות או שיש לכם שאלות נוספות, אל תהססו לפתוח כרטיס חדש. אנחנו כאן לעזור!
+

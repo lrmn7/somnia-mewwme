@@ -1,94 +1,409 @@
-import { SOMNIA_CHAIN_ID, PREMIUM_SUBSCRIPTION_CONTRACT, TIP_FACTORY_CONTRACT } from "@/lib/config";
+import { http, createConfig } from "wagmi";
+import type { Chain } from "viem";
+import { injected } from "wagmi/connectors";
 
-// Native token decimals (STT = 18 decimals)
-const STT_DECIMALS = 18;
-
-// Somnia network definition for Privy/wallet
-export const somniaChain = {
-  id: SOMNIA_CHAIN_ID,
-  name: "Somnia Network",
-  network: "somnia",
-  nativeCurrency: { name: "STT", symbol: "STT", decimals: 18 },
+// Somnia Testnet Chain Definition
+export const somniaTestnet: Chain = {
+  id: 50312,
+  name: "Somnia Testnet",
+  nativeCurrency: {
+    name: "Somnia Test Token",
+    symbol: "STT",
+    decimals: 18,
+  },
   rpcUrls: {
-    default: { http: ["https://dream-rpc.somnia.network"] },
-    public: { http: ["https://dream-rpc.somnia.network"] },
+    default: {
+      http: ["https://dream-rpc.somnia.network"],
+    },
   },
   blockExplorers: {
-    default: { name: "Somnia Explorer", url: "https://somnia.w3us.site" },
+    default: {
+      name: "Somnia Explorer",
+      url: "https://shannon-explorer.somnia.network",
+    },
   },
+  testnet: true,
 };
 
-// PremiumSubscription contract ABI (per-tier pricing, payable with native STT)
-export const PREMIUM_SUBSCRIPTION_ABI = [
-  "function subscribe(uint256 tierId) external payable",
-  "function tiers(uint256) external view returns (uint256 price, uint256 quota, bool active)",
-  "function getTier(uint256 tierId) external view returns (uint256 price, uint256 quota, bool active)",
-  "function tierCount() external view returns (uint256)",
-  "function setTier(uint256 tierId, uint256 price, uint256 quota, bool active) external",
-  "function admin() external view returns (address)",
-];
+// Wagmi config with injected connector (MetaMask, OKX, etc.)
+export const wagmiConfig = createConfig({
+  chains: [somniaTestnet],
+  connectors: [injected()],
+  transports: {
+    [somniaTestnet.id]: http("https://dream-rpc.somnia.network"),
+  },
+});
 
-// TipFactory contract ABI
-export const TIP_FACTORY_ABI = [
-  "function createGuildTip(string calldata guildId, address guildOwner) external returns (address)",
-  "function getGuildContract(string calldata guildId) external view returns (address)",
-  "function guildContracts(string) external view returns (address)",
-];
+// ════════════════════════════════════════════════════════════
+//  Contract Addresses — loaded from frontend .env
+// ════════════════════════════════════════════════════════════
 
-// GuildTip contract ABI (payable with native STT)
+export const PREMIUM_CONTRACT_ADDRESS = import.meta.env.VITE_PREMIUM_CONTRACT_ADDRESS || "";
+export const TIPJAR_FACTORY_ADDRESS = import.meta.env.VITE_TIPJAR_FACTORY_ADDRESS || "";
+export const TREASURY_CONTRACT_ADDRESS = import.meta.env.VITE_TREASURY_ADDRESS || "";
+
+// ════════════════════════════════════════════════════════════
+//  ABIs — separate per contract
+// ════════════════════════════════════════════════════════════
+
+// MewwmePremium ABI (for premium subscription on /premium page)
+export const PREMIUM_ABI = [
+  {
+    inputs: [
+      { internalType: "string", name: "_discordUserId", type: "string" },
+      { internalType: "string", name: "_plan", type: "string" },
+    ],
+    name: "purchasePremium",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "string", name: "_plan", type: "string" }],
+    name: "getPlanPrice",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_wallet", type: "address" }],
+    name: "isPremiumActive",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "premiumGuildBasicPrice",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "premiumGuildPlusPrice",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "premiumGuildProPrice",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, internalType: "address", name: "buyer", type: "address" },
+      { indexed: false, internalType: "string", name: "discordUserId", type: "string" },
+      { indexed: false, internalType: "string", name: "plan", type: "string" },
+      { indexed: false, internalType: "uint256", name: "amount", type: "uint256" },
+      { indexed: false, internalType: "uint256", name: "quota", type: "uint256" },
+      { indexed: false, internalType: "uint256", name: "expiresAt", type: "uint256" },
+      { indexed: false, internalType: "uint256", name: "timestamp", type: "uint256" },
+    ],
+    name: "PremiumPurchased",
+    type: "event",
+  },
+] as const;
+
+// MewwmeFactory ABI (for creating guild contracts in dashboard)
+export const FACTORY_ABI = [
+  {
+    inputs: [
+      { internalType: "string", name: "_guildId", type: "string" },
+      { internalType: "address", name: "_owner", type: "address" },
+    ],
+    name: "createGuild",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "string", name: "_guildId", type: "string" }],
+    name: "getGuild",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "treasury",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "admin",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "totalGuilds",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: false, internalType: "string", name: "guildId", type: "string" },
+      { indexed: false, internalType: "address", name: "guildAddress", type: "address" },
+      { indexed: true, internalType: "address", name: "owner", type: "address" },
+      { indexed: false, internalType: "uint256", name: "timestamp", type: "uint256" },
+    ],
+    name: "GuildCreated",
+    type: "event",
+  },
+] as const;
+
+// MewwmeGuildTip ABI (for donating and claiming in guild pages)
 export const GUILD_TIP_ABI = [
-  "function tip(string calldata message) external payable",
-  "function totalTips() external view returns (uint256)",
-  "function getBalance() external view returns (uint256)",
-  "function guildId() external view returns (string)",
-  "function owner() external view returns (address)",
-  "function claim() external",
-  "event TipReceived(string indexed guildId, address indexed sender, uint256 amount, string message, uint256 timestamp)",
-];
+  {
+    inputs: [{ internalType: "string", name: "message", type: "string" }],
+    name: "donate",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "claim",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getBalance",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "totalDonations",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, internalType: "address", name: "sender", type: "address" },
+      { indexed: false, internalType: "uint256", name: "amount", type: "uint256" },
+      { indexed: false, internalType: "uint256", name: "fee", type: "uint256" },
+      { indexed: false, internalType: "string", name: "message", type: "string" },
+      { indexed: false, internalType: "uint256", name: "timestamp", type: "uint256" },
+    ],
+    name: "Donated",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, internalType: "address", name: "owner", type: "address" },
+      { indexed: false, internalType: "uint256", name: "amount", type: "uint256" },
+      { indexed: false, internalType: "uint256", name: "timestamp", type: "uint256" },
+    ],
+    name: "Claimed",
+    type: "event",
+  },
+] as const;
 
-// Helper: format STT amount from wei to display
-export function formatSTT(amount: string | bigint | number | undefined | null): string {
-  if (amount === undefined || amount === null || amount === "") return "0";
-  let value: bigint;
-  if (typeof amount === "bigint") {
-    value = amount;
-  } else if (typeof amount === "number") {
-    value = BigInt(Math.floor(amount));
-  } else {
-    value = BigInt(amount);
-  }
-  const divisor = BigInt(10) ** BigInt(STT_DECIMALS);
-  const whole = value / divisor;
-  const fraction = value % divisor;
-  const fractionStr = fraction.toString().padStart(STT_DECIMALS, "0").slice(0, 4);
-  // Remove trailing zeros: 1.0000 → 1, 1.5000 → 1.5, 1.2500 → 1.25
-  const trimmed = fractionStr.replace(/0+$/, "");
-  return trimmed ? `${whole}.${trimmed}` : `${whole}`;
+// ════════════════════════════════════════════════════════════
+//  Admin ABIs — for contract owner/deployer management
+// ════════════════════════════════════════════════════════════
+
+// MewwmePremium Admin ABI (set prices, duration, treasury, admin)
+export const PREMIUM_ADMIN_ABI = [
+  {
+    inputs: [
+      { internalType: "string", name: "_plan", type: "string" },
+      { internalType: "uint256", name: "_price", type: "uint256" },
+    ],
+    name: "setPremiumPrice",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_duration", type: "uint256" }],
+    name: "setPremiumDuration",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_newTreasury", type: "address" }],
+    name: "setTreasury",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_newAdmin", type: "address" }],
+    name: "transferAdmin",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "admin",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "treasury",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "premiumDuration",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "premiumGuildBasicPrice",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "premiumGuildPlusPrice",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "premiumGuildProPrice",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+] as const;
+
+// MewwmeTreasury Admin ABI (withdraw, balance, admin transfer)
+export const TREASURY_ABI = [
+  {
+    inputs: [
+      { internalType: "address", name: "_to", type: "address" },
+      { internalType: "uint256", name: "_amount", type: "uint256" },
+    ],
+    name: "withdraw",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_to", type: "address" }],
+    name: "withdrawAll",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_newAdmin", type: "address" }],
+    name: "transferAdmin",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "admin",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "balance",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+] as const;
+
+// MewwmeFactory Admin ABI (set treasury, transfer admin)
+export const FACTORY_ADMIN_ABI = [
+  {
+    inputs: [{ internalType: "address", name: "_newTreasury", type: "address" }],
+    name: "setTreasury",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_newAdmin", type: "address" }],
+    name: "transferAdmin",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "admin",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "treasury",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "totalGuilds",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+] as const;
+
+// Premium plan pricing (in STT, matching contract defaults)
+export const PREMIUM_PLANS = {
+  guild_basic: { name: "Guild Basic", price: "3", priceWei: "3000000000000000000" },
+  guild_plus: { name: "Guild Plus", price: "7", priceWei: "7000000000000000000" },
+  guild_pro: { name: "Guild Pro", price: "10", priceWei: "10000000000000000000" },
+} as const;
+
+// Helper to get explorer tx URL
+export function getExplorerTxUrl(txHash: string): string {
+  return `${somniaTestnet.blockExplorers.default.url}/tx/${txHash}`;
 }
 
-// Helper: parse STT display amount to wei
-export function parseSTT(amount: number | string): bigint {
-  const str = typeof amount === "number" ? amount.toString() : amount;
-  const [whole, frac = ""] = str.split(".");
-  const paddedFrac = frac.padEnd(STT_DECIMALS, "0").slice(0, STT_DECIMALS);
-  return BigInt(whole + paddedFrac);
+// Helper to get explorer address URL
+export function getExplorerAddressUrl(address: string): string {
+  return `${somniaTestnet.blockExplorers.default.url}/address/${address}`;
 }
 
-// Contract addresses
-export const contracts = {
-  premiumSubscription: PREMIUM_SUBSCRIPTION_CONTRACT,
-  tipFactory: TIP_FACTORY_CONTRACT,
-};
-
-// Premium tiers (Web3 only — price in STT, tierId matches contract)
-export const premiumTiers = [
-  { id: "basic" as const, tierId: 1, label: "Guild Basic", price: 2, quota: 1 },
-  { id: "plus" as const, tierId: 2, label: "Guild Plus", price: 3, quota: 3 },
-  { id: "pro" as const, tierId: 3, label: "Guild Pro", price: 5, quota: 5 },
-];
-
-// Helper: shorten wallet address
-export function shortenAddress(address: string): string {
+// Helper to truncate address
+export function truncateAddress(address: string): string {
   if (!address) return "";
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
 }

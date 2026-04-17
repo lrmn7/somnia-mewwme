@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "TERAZ ODTWARZANE"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Autor"
+track_requested_by: "Zamówione przez"
+track_duration: "Czas trwania"
+no_same_voice: "Nie jesteś na tym samym kanale głosowym co ja!"
+filter_already: "**Filtr %{name} jest już włączony**"
+filter_reset_on: "**Filtr został zresetowany**"
+filter_reset_already: "**Filtr został już zresetowany**"
+no_player_filter: "**Nie mogę zastosować filtra!**"
+filter_menu_on: "**Filtr %{name} włączony!**"
+
+player_get_exception: "O nie! Wygląda na to, że jest problem z utworem. Chcesz, żebym spróbował ponownie?"
+player_track_error: "Utwór miał problem. Czy możesz spróbować jeszcze raz?"
+player_track_stuck: "Jestem smutny :(, utwór się zablokował. Może ponowna próba nas pocieszy?"
+queue_end_desc: "Wszystkie utwory zakończone! Potrzebujesz więcej muzyki?\nUżyj **/play**, aby kontynuować imprezę!"
+
+leave_pause: "Biorąc pod uwagę, że wszyscy mnie zostawiliście :( Odtwarzacz został wstrzymany."
+leave_resume: "Biorąc pod uwagę, że ktoś do mnie dołączył, odtwarzanie zostało wznowione."
+
+player_end: "Kanał był pusty przez prawie 15 minut, więc postanowiłem odejść, bo nie lubię być sam"
+
+### Last FM Scrobble ###
+expired_login_session: "Twoja sesja Last.fm wygasła lub jest nieprawidłowa.\nProszę ponownie się uwierzytelnij, aby kontynuować korzystanie z funkcji scrobblowania."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Ci, którzy chcą śpiewać, zawsze znajdą piosenkę ♪"
+milestone_track_desc: |
+  ## OH Hej
+  Posłuchałeś **%{total}** utworów! Czy twoja playlista jest nieskończona, czy po prostu jesteś tak muzycznie uzależniony?
+

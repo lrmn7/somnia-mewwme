@@ -24,7 +24,6 @@ export async function getStatus(
     return;
   }
 
-  // ── Premium & access flags (config-driven via DASHBOARD_ACCESS) ────────
   const headerUserId = req.headers["user-id"] as string | undefined;
   const perm = await buildDashboardUserPerm(client, headerUserId, guildId);
   const dashAccess = getDashboardAccessConfig(client);
@@ -94,6 +93,7 @@ export async function getStatus(
                 username: requester.username,
                 globalName: requester.globalName,
                 defaultAvatarURL: requester.defaultAvatarURL ?? null,
+                avatarURL: requester.displayAvatarURL({ size: 64 }),
               }
             : null,
         }
@@ -112,6 +112,7 @@ export async function getStatus(
               username: requesterQueue.username,
               globalName: requesterQueue.globalName,
               defaultAvatarURL: requesterQueue.defaultAvatarURL ?? null,
+              avatarURL: requesterQueue.displayAvatarURL({ size: 64 }),
             }
           : null,
       };

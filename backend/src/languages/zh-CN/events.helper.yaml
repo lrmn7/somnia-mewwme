@@ -1,0 +1,91 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+## Helper setup ##
+setup_helper_content: |
+  ## 欢迎来到 %{guild} 社区！
+  *如果你是 Discord 新手，那你来对地方了！此频道专门帮助你了解服务器的各项功能。*
+  ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+  %{bot} 是一款 Discord 机器人，以简洁的界面、高品质音频和丰富的音乐功能提升你的音乐体验。
+
+  这个 Discord 服务器是 %{guild} 社区核心的理想聚集地。
+  享受聊天、分享音乐推荐，并探索 %{bots} 机器人提供的所有功能！
+
+  想邀请你的朋友加入服务器？发送此链接给他们：%{serversupport}
+
+disable_helper: "助手已禁用"
+invalid_channel_helper: "提供的频道无效"
+channel_viewable_helper: "提供的频道对我不可见"
+setup_helper_succes: "助手已成功设置到 %{channel}。"
+
+## RULES Events ##
+rules_title: "%{guild} 社区服务器规则！"
+rules_desc: |
+  - **保持尊重**
+    始终遵守 Discord [服务条款](https://discord.com/terms) 和 [社区准则](https://discord.com/guidelines)。
+  - **求助规范**
+    当你寻求帮助时，请确保提供尽可能多的错误细节。
+  - **禁止仇恨言论或骚扰**
+    不允许包含对个人或群体的仇恨言论或骚扰行为的对话。
+  - **禁止恶意挑衅或攻击**
+    不允许任何旨在破坏或挑起冲突的行为。
+  - **尊重知识产权**
+    尊重知识产权，包括但不限于版权、商标和专利。
+  - **剧透需提前警告**
+    如果讨论并非所有成员都已了解的内容，请提供剧透警告以避免不快。
+  - **使用合适的频道**
+    在相关频道讨论特定话题，避免在无关频道进行离题讨论。
+  - **禁止过度使用大写字母或刷屏**
+    避免过度使用大写字母或快速连续发送重复消息。
+  - **保持语音频道整洁**
+    如果使用语音频道，请确保没有干扰性噪音并礼貌发言。
+  - **禁止未授权的机器人或自动化**
+    只有经版主授权的机器人才能在服务器上运行。
+  - **举报违规行为**
+    如果你目睹违规行为，请向版主或管理员举报。
+  - **享受乐趣！**
+    最重要的是，通过尊重所有成员并维护积极的环境来享受在此服务器上的时光。
+
+  感谢你的加入，希望你在这里度过愉快的时光。
+
+### SUPPORT US BUTTON ###
+support_us_title: "如何支持 %{bot}"
+support_us_desc: "你可以通过为 %{bot} 投票、邀请 %{bot} 到你的服务器或加入 premium 会员来支持我。"
+support_us_footer: "感谢你考虑支持 %{bot}！我非常感激。"
+
+## ROLES EVENTS ##
+role_title: "你可以从以下列表中添加或移除身份组。"
+role_added: "**[成功]** %{rolename} 身份组已成功添加！"
+role_removed: "**[已移除]** %{rolename} 身份组已被移除。"
+role_rules_added: "%{user} 希望你遵守所有规则，现在你可以访问整个服务器"
+role_rules_already: "%{user} 你已经接受了规则"
+role_desc: "我们只是想确认你是人类而不是机器人。请通过完成一个快速验证任务来帮助我们确认你的身份。"
+
+### Top gg vote logs event
+vote_desc: |
+  %{voteuser} 在 **[Top.gg](%{voteurl})** 上为 %{votebot} 投了票
+  感谢你的支持！祝你有美好的一天！
+vote_footer: "总票数 %{count}，保持你的想象力！"
+
+### Top gg vote logs reminder event
+reminder_label_name: "投票提醒"
+reminder_label_emoji: "⏰"
+reminder_title: "投票提醒"
+reminder_desc: "时间到了！你现在可以再次在 **[Top.gg](%{voteurl})** 上投票了。"
+reminder_set_content: "提醒已设置！我会在 12 小时后提醒你再次投票"
+reminder_cancel_content: "提醒已取消。你将不会收到再次投票的提醒"
+reminder_no_vote_warning: "你必须先投票才能设置提醒"
+
+### Welcomer events!
+welcome_desc: "欢迎来到 %{guildname} %{member}，保持你的想象力！"
+leave_desc: "感谢你的陪伴！再见 %{member}"

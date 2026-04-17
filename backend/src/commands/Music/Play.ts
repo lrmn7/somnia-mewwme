@@ -6,6 +6,7 @@ import {
 } from "discord.js";
 import { ConvertTime } from "../../utilities/ConvertTime.js";
 import { Manager } from "../../manager.js";
+import { computeWeb3Quota } from "../../web/route/web3Premium.js";
 import { Accessableby, Command } from "../../structures/Command.js";
 import { AutocompleteInteractionChoices, GlobalInteraction } from "../../@types/Interaction.js";
 import { CommandHandler } from "../../structures/CommandHandler.js";
@@ -41,17 +42,57 @@ export default class implements Command {
   public async execute(client: Manager, handler: CommandHandler) {
     await handler.deferReply();
 
-    const User = await client.db.premium.get(handler.user.id);
-    const Guild = await client.db.preGuild.get(String(handler.guild?.id));
-    const isPremiumUser = User && User.isPremium;
-    const isPremiumGuild = Guild && Guild.isPremium;
-    const isOwner = handler.user.id === String(client.owner);
-    const isAdmin = client.config.bot.ADMIN.map(String).includes(handler.user.id);
+    /////////////////////////////// Check Premium Role start ////////////////////////////////
+    const PremiumGuildID = client.config.PremiumRole.GuildID;
+    const PremiumRoleID = client.config.PremiumRole.RoleID;
+    const isPremiumRoleEnabled = client.config.PremiumRole.Enable !== false;
+    const supportGuild = isPremiumRoleEnabled
+      ? await client.guilds.fetch(PremiumGuildID).catch(() => null)
+      : null;
+    const supportMember = supportGuild
+      ? await supportGuild.members.fetch(String(handler.user?.id)).catch(() => null)
+      : null;
+    const isPremiumRole = supportMember ? supportMember.roles.cache.has(PremiumRoleID) : false;
+    /////////////////////////////// Check Premium Role end ////////////////////////////////
+    const User = await client.db.PremiumUserLegacy.get(handler.user.id);
+    const Guild = await client.db.PremiumGuildLegacy.get(String(handler.guild?.id));
+    const isPremiumUserCode = User && User.isPremium;
+    const isPremiumGuildCode = Guild && Guild.isPremium;
+    const isOwner = handler.user.id == client.owner;
+    const isAdmin = client.config.bot.ADMIN.includes(handler.user.id);
 
+    const isPremiumWeb3User = (await computeWeb3Quota(client, handler.user.id)) > 0;
+
+    let isPremiumWeb3Guild = false;
+    if (handler.guild?.id) {
+      const allWeb3 = await client.db.Web3Premium.all();
+      const sponsorWeb3 = allWeb3.find((entry: any) => {
+        const data = entry.data || entry.value || entry;
+        return (
+          data.redeemedGuilds &&
+          Array.isArray(data.redeemedGuilds) &&
+          data.redeemedGuilds.includes(handler.guild?.id) &&
+          data.expiresAt > Date.now()
+        );
+      });
+      if (sponsorWeb3) isPremiumWeb3Guild = true;
+    }
     const userPerm = {
       owner: isOwner,
       admin: isOwner || isAdmin,
-      Premium: isOwner || isAdmin || isPremiumUser || isPremiumGuild,
+      PremiumRole: isOwner || isAdmin || isPremiumRole,
+      PremiumUserCode: isOwner || isAdmin || isPremiumUserCode,
+      PremiumGuildCode: isOwner || isAdmin || isPremiumGuildCode,
+      PremiumWeb3User: isOwner || isAdmin || isPremiumWeb3User,
+      PremiumWeb3Guild: isOwner || isAdmin || isPremiumWeb3Guild,
+      Premium:
+        isOwner ||
+        isAdmin ||
+        isPremiumUserCode ||
+        isPremiumGuildCode ||
+        isPremiumRole ||
+        isPremiumWeb3User ||
+        isPremiumWeb3Guild,
     };
 
     let player = client.mewslink.players.get(handler.guild!.id);

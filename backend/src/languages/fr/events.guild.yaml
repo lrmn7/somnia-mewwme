@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 A rejoint un serveur !"
+leave_title: "📥 A quitte un serveur !"
+guild_name: "Nom"
+guild_id: "ID"
+guild_owner: "Proprietaire"
+guild_member_count: "Nombre de membres"
+guild_creation_date: "Date de creation"
+guild_join_date: "Date d'adhesion"
+current_server_count: "Nombre actuel de serveurs"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "OMG ! Salut tout le monde ✧(≖◡≖) ♡"
+join_msg_desc: |
+  ### Merci de m'avoir invite a trainer avec vous (*≧▽≦)
+  ### vous pouvez me mentionner pour utiliser les commandes aussi ! Tapez </help:1088430405033656341> pour voir mes commandes slash ♡

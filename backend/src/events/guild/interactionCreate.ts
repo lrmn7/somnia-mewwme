@@ -20,6 +20,7 @@ import {
 } from "discord.js";
 import chalk from "chalk";
 import { Manager } from "../../manager.js";
+import { computeWeb3Quota } from "../../web/route/web3Premium.js";
 import { GlobalInteraction, NoAutoInteraction } from "../../@types/Interaction.js";
 import {
   CheckPermissionResultInterface,
@@ -221,8 +222,8 @@ export default class {
     //////////////////////////////// DJ ROLE CHECK START ////////////////////////////////
     if (command.djRole) {
       const djData = await client.db.DjRole.get(interaction.guild.id);
-      const isOwner = interaction.user.id === String(client.owner);
-      const isAdmin = client.config.bot.ADMIN.map(String).includes(interaction.user.id);
+      const isOwner = interaction.user.id === client.owner;
+      const isAdmin = client.config.bot.ADMIN.includes(interaction.user.id);
 
       // Jika fitur DJ diaktifkan (enable: true)
       if (djData && djData.enable === true) {
@@ -247,17 +248,58 @@ export default class {
     }
     //////////////////////////////// DJ ROLE CHECK END ////////////////////////////////
 
-    const User = await client.db.premium.get(interaction.user.id);
-    const Guild = await client.db.preGuild.get(interaction.guild.id);
-    const isPremiumUser = User && User.isPremium;
-    const isPremiumGuild = Guild && Guild.isPremium;
-    const isOwner = interaction.user.id === String(client.owner);
-    const isAdmin = client.config.bot.ADMIN.map(String).includes(interaction.user.id);
+    /////////////////////////////// Check Premium Role start ////////////////////////////////
+    const PremiumGuildID = client.config.PremiumRole.GuildID;
+    const PremiumRoleID = client.config.PremiumRole.RoleID;
+    const isPremiumRoleEnabled = client.config.PremiumRole.Enable !== false;
+    const supportGuild = isPremiumRoleEnabled
+      ? await client.guilds.fetch(PremiumGuildID).catch(() => null)
+      : null;
+    const supportMember = supportGuild
+      ? await supportGuild.members.fetch(String(interaction.user?.id)).catch(() => null)
+      : null;
+    const isPremiumRole = supportMember ? supportMember.roles.cache.has(PremiumRoleID) : false;
+    /////////////////////////////// Check Premium Role end ////////////////////////////////
+    const User = await client.db.PremiumUserLegacy.get(interaction.user.id);
+    const Guild = await client.db.PremiumGuildLegacy.get(interaction.guild.id);
+    const isPremiumUserCode = User && User.isPremium;
+    const isPremiumGuildCode = Guild && Guild.isPremium;
+    const isOwner = interaction.user.id == client.owner;
+    const isAdmin = client.config.bot.ADMIN.includes(interaction.user.id);
+
+    const isPremiumWeb3User = (await computeWeb3Quota(client, interaction.user.id)) > 0;
+
+    let isPremiumWeb3Guild = false;
+    if (interaction.guild.id) {
+      const allWeb3 = await client.db.Web3Premium.all();
+      const sponsorWeb3 = allWeb3.find((entry: any) => {
+        const data = entry.data || entry.value || entry;
+        return (
+          data.redeemedGuilds &&
+          Array.isArray(data.redeemedGuilds) &&
+          data.redeemedGuilds.includes(interaction.guild.id) &&
+          data.expiresAt > Date.now()
+        );
+      });
+      if (sponsorWeb3) isPremiumWeb3Guild = true;
+    }
 
     const userPerm = {
       owner: isOwner,
       admin: isOwner || isAdmin,
-      Premium: isOwner || isAdmin || isPremiumUser || isPremiumGuild,
+      PremiumRole: isOwner || isAdmin || isPremiumRole,
+      PremiumUserCode: isOwner || isAdmin || isPremiumUserCode,
+      PremiumGuildCode: isOwner || isAdmin || isPremiumGuildCode,
+      PremiumWeb3User: isOwner || isAdmin || isPremiumWeb3User,
+      PremiumWeb3Guild: isOwner || isAdmin || isPremiumWeb3Guild,
+      Premium:
+        isOwner ||
+        isAdmin ||
+        isPremiumUserCode ||
+        isPremiumGuildCode ||
+        isPremiumRole ||
+        isPremiumWeb3User ||
+        isPremiumWeb3Guild,
     };
 
     const BlacklistUser = await client.db.BlacklistUser.get(interaction.user.id);
@@ -311,7 +353,13 @@ export default class {
     }
 
     const isMissingPremium =
-      command.accessableby.includes(Accessableby.Premium) && !userPerm.Premium;
+      (command.accessableby.includes(Accessableby.Web3User) && !userPerm.PremiumWeb3User) ||
+      (command.accessableby.includes(Accessableby.Web3Guild) && !userPerm.PremiumWeb3Guild) ||
+      (command.accessableby.includes(Accessableby.PremiumRole) && !userPerm.PremiumRole) ||
+      (command.accessableby.includes(Accessableby.Premium) && !userPerm.Premium) ||
+      (command.accessableby.includes(Accessableby.UserPremiumCode) && !userPerm.PremiumUserCode) ||
+      (command.accessableby.includes(Accessableby.GuildPremiumCode) &&
+        !userPerm.PremiumGuildCode);
     if (isMissingPremium) {
       const premiumButton = new ButtonBuilder()
         .setLabel(client.i18n.get(language, "interaction", "no_premium_button"))

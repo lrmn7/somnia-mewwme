@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "ĐANG PHÁT"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Tác giả"
+track_requested_by: "Yêu cầu bởi"
+track_duration: "Thời lượng"
+no_same_voice: "Bạn không ở cùng kênh thoại với tôi!"
+filter_already: "**Bộ lọc %{name} đã được bật rồi**"
+filter_reset_on: "**Bộ lọc đã được đặt lại**"
+filter_reset_already: "**Bộ lọc đã được đặt lại rồi**"
+no_player_filter: "**Tôi không thể áp dụng bộ lọc!**"
+filter_menu_on: "**Bộ lọc %{name} đã bật!**"
+
+player_get_exception: "Ối! Có vẻ bản nhạc gặp trục trặc. Bạn muốn tôi thử lại không?"
+player_track_error: "Bản nhạc gặp sự cố, Bạn có thể thử lại một lần nữa không?"
+player_track_stuck: "Tôi buồn quá :(, bản nhạc bị kẹt. Có lẽ thử lại sẽ vui hơn?"
+queue_end_desc: "Tất cả bài hát đã phát xong! Cần thêm nhạc?\nSử dụng **/play** để tiếp tục bữa tiệc!"
+
+leave_pause: "Vì mọi người đều rời đi để tôi một mình :( Trình phát đã được tạm dừng."
+leave_resume: "Vì có người đã tham gia cùng tôi, trình phát đã được tiếp tục."
+
+player_end: "Kênh đã trống gần 15 phút, nên tôi quyết định rời đi vì tôi không thích ở một mình"
+
+### Last FM Scrobble ###
+expired_login_session: "Phiên Last.fm của bạn đã hết hạn hoặc không hợp lệ.\nVui lòng xác thực lại để tiếp tục sử dụng tính năng scrobble."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Những ai muốn hát luôn tìm thấy bài hát ♪"
+milestone_track_desc: |
+  ## Ồ Này
+  Bạn đã nghe **%{total}** bài hát! Danh sách phát của bạn là vô tận, hay bạn chỉ quá đam mê âm nhạc?
+

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "正在播放"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "作者"
+track_requested_by: "點播者"
+track_duration: "時長"
+no_same_voice: "你和我不在同一個語音頻道！"
+filter_already: "**%{name} 濾鏡已經啟用了**"
+filter_reset_on: "**濾鏡已重設**"
+filter_reset_already: "**濾鏡已經重設過了**"
+no_player_filter: "**我無法套用濾鏡！**"
+filter_menu_on: "**濾鏡 %{name} 已開啟！**"
+
+player_get_exception: "糟糕！看起來這首曲目出了點問題。要我再試一次嗎？"
+player_track_error: "這首曲目有問題，你能再試一次嗎？"
+player_track_stuck: "我好難過 :(，這首曲目卡住了。也許重試一下能讓我們開心起來？"
+queue_end_desc: "所有歌曲都播完了！還想聽更多嗎？\n使用 **/play** 繼續播放吧！"
+
+leave_pause: "鑑於你們都離開了，留我一個人 :( 播放器已暫停。"
+leave_resume: "鑑於有人加入了，播放器已恢復播放。"
+
+player_end: "頻道已空置近 15 分鐘，所以我決定離開，因為我不喜歡獨處"
+
+### Last FM Scrobble ###
+expired_login_session: "你的 Last.fm 工作階段已過期或無效。\n請重新驗證以繼續使用記錄功能。"
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • 願意歌唱的人總能找到一首歌 ♪"
+milestone_track_desc: |
+  ## 嘿
+  你已經聽了 **%{total}** 首曲目！你的播放清單是無窮無盡的嗎，還是你就是這麼沉迷於音樂？
+

@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 Een server toegetreden!"
+leave_title: "📥 Een server verlaten!"
+guild_name: "Naam"
+guild_id: "ID"
+guild_owner: "Eigenaar"
+guild_member_count: "Aantal leden"
+guild_creation_date: "Aanmaakdatum"
+guild_join_date: "Toetredingsdatum"
+current_server_count: "Huidig aantal servers"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "OMG! Hii guys ✧(≧◡≦) ♡"
+join_msg_desc: |
+  ### Bedankt dat jullie me hebben uitgenodigd om hier rond te hangen (*≧▽≦)
+  ### je kunt me pingen om commando's te gebruiken! Typ </help:1088430405033656341> om mijn slash-commando's te bekijken ♡

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "음악 재생이 중지되었습니다. 즐거운 시간이었길 바랍니다!"
+skip_notfound: "이런. 건너뛸 트랙이 없습니다!"
+skip_msg: "트랙을 건너뛰었습니다. 괜찮으시죠? :p"
+previous_msg: "되감기 시작! 이전 트랙이 재생됩니다 <3"
+previous_notfound: "죄송합니다, 더 이상 뒤로 갈 수 없습니다. 이전 트랙을 찾을 수 없습니다 :("
+resume_msg: "음악이 다시 재생됩니다! 계속 즐겨봅시다 ♪"
+pause_msg: "음악이 일시정지되었습니다. 잠시 쉬면서 고요함을 즐기세요."
+loop_current: "현재 노래가 반복 재생됩니다. 반복을 즐겨보세요!"
+loop_all: "대기열이 반복 재생으로 설정되었습니다. 음악을 반복해서 즐기세요!"
+unloop_all: "반복 재생 모드가 해제되었습니다. 다양한 트랙을 즐겨보세요!"
+
+### Need to join voice & same voice to use command!
+no_player: "버튼을 눌렀지만 아무 반응이 없습니다. 먼저 무언가를 재생해보세요!"
+no_same_voice: "버튼을 눌렀지만 빨간색으로 깜빡입니다. 저와 같은 음성 채널에 있지 않습니다!"
+no_in_voice: "모든 버튼이 반응하지 않습니다. 음성 채널에 접속해 있지 않습니다!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "현재 재생 중"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** %{request}님이 요청"
+setup_footer: "남은 트랙 • %{totalsong} | 총 재생시간 • %{duration}"
+setup_queuemsg: "**음성 채널에 참여하고 여기에 노래 이름이나 URL을 입력하여 재생하세요!**"
+setup_playembed_author: "현재 재생 중인 노래가 없습니다!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "**%{title}** 추가됨 • %{request}"
+play_playlist: "**%{title}** 추가됨 • (**%{songs}곡**) • %{request}"
+play_result: "**%{title}** 추가됨 • %{request}"
+play_emoji: "재생 방법을 모르겠습니다... 트랙이나 재생목록이 아닙니다."
+setup_content: "**안녕! 음악 준비 완료! 여기에 무언가를 입력해보세요!**"

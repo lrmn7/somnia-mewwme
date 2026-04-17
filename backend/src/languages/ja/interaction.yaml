@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "有効"
+disable: "無効"
+
+# maintenance
+maintenance_title: "メンテナンス"
+maintenance_desc: |
+  %{bot}は現在メンテナンス中です。後ほどもう一度お試しください。
+  詳細については、[サポートサーバー](%{serversupport})にご参加ください。ありがとうございます！
+
+# Getting error!
+unexpected_error: "エラーが発生しました。後ほどもう一度お試しください！"
+
+### Rate limit!
+ratelimit: "操作が速すぎます。**%{time}秒**お待ちください"
+
+# No permission!
+no_perms: "**%{perm}**権限がありません！\nこのコマンドを実行するために**%{perm}**権限を付与してください。"
+
+no_manage_guild_perms: "このコマンドには**%{perm}**権限が必要です！\nこのコマンドを実行する権限がありません！"
+
+no_admin_perms: "このコマンドには**%{perm}**権限が必要です！\nこのコマンドを実行する権限がありません！"
+
+# No permission!
+no_perms_channel: "このコマンドを実行するために%{channel}の**%{perm}**権限がありません！"
+
+# Execute when invalid
+no_node: "**Lavalinkサーバーが見つかりませんでした。5分後にもう一度お試しください**"
+
+# Client owner!
+owner_only: "このコマンドはボットの**オーナー**のみ実行できます"
+
+# Need to join voice & same voice to use command!
+no_player: "現在再生中の曲はありません！"
+no_same_voice: "私と同じボイスチャンネルにいません！"
+no_in_voice: "ボイスチャンネルに参加していません！"
+
+# Blacklist User
+blacklist_user: "ブラックリストに登録されているようです！コマンドの使用は許可されていません。\nこれがエラーだと思われる場合は、**[開発者](%{serversupport})**にお問い合わせください。"
+
+# Blacklist Guild
+blacklist_guild: "このサーバーはブラックリストに登録されています！このサーバーでのコマンドの使用は許可されていません。\nこれがエラーだと思われる場合は、**[開発者](%{serversupport})**にお問い合わせください。"
+
+### DjRole No Permission ###
+not_dj_role: "このコマンドを使用するには%{role}ロールが必要です。"
+
+### No Premium Event!
+no_premium_button: "プレミアムを入手"
+no_premium_author: "プレミアムプランなし"
+no_premium_desc: "おっと！まだプレミアムプランをお持ちでないようです。\nこの機能はプレミアムなしではご利用いただけません。"
+
+# Top.gg error
+topgg_error_author: "Top.gg投票エラー"
+topgg_error_desc: "Top.ggでの投票確認中にエラーが発生しました。Top.ggがダウンしている可能性があります。5〜10分後にもう一度お試しください。\nこの問題が解決しない場合は、[サポートサーバー](%{serversupport})にお問い合わせください。"
+
+# Top.gg unvote
+topgg_unvote_button: "投票して解除"
+premium_button: "プレミアムにアップグレード"
+topgg_unvote_author: "投票が必要です"
+topgg_unvote_desc: "このコマンドにアクセスするには投票が必要です！すぐに無料でできます。\nまたは、[プレミアムページ](%{premium})でプレミアムを入手すると、このメッセージをスキップして追加機能を解除できます。"
+
+### Mention Desc ###
+mention_content: "このサーバーのプレフィックスは `%{prefix}` です\nメンションしてコマンドを使うか、</help:1294325423957741598> でスラッシュコマンドを確認できます ♡"

@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Fornisci il motivo per la creazione del ticket"
+ticket_already_open: "Hai gia' un ticket aperto."
+ticket_already_closed: "Dati del ticket per l'utente %{id} non trovati o ticket gia' chiuso"
+ticket_close_user: "Non sei autorizzato a chiudere il ticket."
+ticket_delete_user: "Non sei autorizzato a eliminare il ticket."
+ticket_deleting_action: "Eliminazione ticket in corso..."
+ticket_closed_label: "🔒 Chiuso"
+ticket_delete_label: "🗑️ Elimina"
+ticket_create: "Il ticket e' stato creato. Vai su %{channel}"
+ticket_create_title: "Attendi la risposta dello staff"
+ticket_create_desc: |
+  Grazie per aver creato il tuo ticket. Per favore attendi la risposta dello staff.
+  `NOTA: Questo ticket non ha backup. Assicurati di salvare personalmente qualsiasi informazione importante`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Ticket chiuso"
+ticket_closed_desc: "Il ticket e' stato chiuso con successo!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Il ticket e' stato chiuso."
+ticket_closed_dm_desc: |
+  Un ticket che hai aperto e' stato appena chiuso. La tua trascrizione e' disponibile al link qui sotto.
+  Se riscontri problemi o hai ulteriori domande, sentiti libero di aprire un nuovo ticket. Siamo qui per aiutarti!
+
+

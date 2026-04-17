@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Senin icin sectigim sonuclara bak!~"
+search_desc: "### HEY! Istegin icin sonuclar buldum"
+search_end_desc2: "### AY! %{user}, zamaninda bir sarki secemedin\n**Tekrar dene!**"
+search_footer: "%{countSong} parca bulundu"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` keyfini cikar ♥"
+
+search_active: "Zaten bir sey ariyorsun! Yeni bir arama baslatmadan once oncekinin bitmesini bekle."
+search_no_result: "Araman icin sonuc bulunamadi :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` keyfini cikar ♥"
+no_songs_playing: "Su anda calanan sarki yok!"
+
+### Autoplay command!
+autoplay_off: "Otomatik oynatma artik **Devre Disi**"
+autoplay_on: "Otomatik oynatma artik **Etkin**"
+autoplay_no_songs_playing: "Calanan sarki yok!"
+
+### ClearQueue command!
+clearqueue_msg: "Sira **Temizlendi**"
+
+### Forward command!
+forward_msg: "**%{user} %{title} parcasini** `%{duration}` **konumuna ileri sardi**"
+forward_beyond: "Sarki bitmek uzere. Daha ilerisine saramazsiniz!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Sirada Calinacak ♪"
+playnext_queue_empty: "Sira bos. Lutfen once bazi sarkilar ekleyin"
+playnext_notfound: "Sarki bulunamadi!"
+
+# Execute when invalid
+no_node: "**Lavalink sunucusu bulunamadi. Lutfen 5 Dakika sonra tekrar deneyin**"
+
+### Join command!
+join_msg: "Oynatici basariyla olusturuldu ve %{channel} kanalina katildi"
+join_already: "Zaten %{channel} kanalindayim"
+join_no_in_voice: "Bir ses kanalinda degilsiniz!"
+join_no_same_voice: "Benimle ayni ses kanalinda degilsiniz!"
+
+### Loop command!
+loop_current: "Simdi %{title} Dongude"
+loop_all: "**SIRA dongu moduna ayarlandi**"
+unloop_all: "**Dongu modu DEVRE DISI BIRAKILDI**"
+loop_invalid: "Gecersiz Dongu modu. Lutfen **Disabled** kullanin"
+loop_already: "Dongu modu zaten **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Lutfen gecerli bir **Sarki Adi** girin"
+lyrics_title: "**%{song}** icin Sarki Sozleri"
+lyrics_notfound: "**Bu sarki icin sarki sozleri bulunamadi!**"
+lyrics_toolong: "**Sarki sozleri cok uzun, maksimum 4048 karakter!**"
+lyrics_disable: " **Sarki sozleri su anda devre disi!**"
+lyrics_noquery: "**Lutfen gecerli bir **Sarki Adi** girin"
+lyrics_error: "**Hata: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "SIMDI CALINIYOR"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Sanatci"
+nowplaying_total_duration_title: "Sure"
+nowplaying_request_title: "Isteyen"
+
+### Pause command!
+pause_msg: "**%{title} parcasi su anda duraklatildi!"
+
+### Play command!
+play_no_same_voice: "Benimle ayni ses kanalinda degilsiniz!"
+play_no_in_voice: "Bir ses kanalinda degilsiniz!"
+play_arg: "Lutfen gecerli bir sarki adi veya URL girin!"
+play_emoji: "**Hay aksi! Bu bir emoji, emoji kullanarak sarki calatamazsiniz**"
+play_match: "**Hay aksi! Uzgunum, Sarki bulunamadi! Lutfen tekrar deneyin**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## Cok kolaydi!
+  ### %{title} oynatma listen siraya eklendi
+
+play_queue_max: |
+  AY!>,.,< Sira cok uzun. Maksimum %{limitqueue} sarki.
+  Sinirsiz sira erisimi icin [**premium**](%{premium}) planina yukseltin!
+
+play_playlist_max: |
+  AY!>,.,< Oynatma listesi cok uzun. Maksimum %{limitqueue} sarki.
+  Sinirsiz oynatma listesi erisimi icin [**premium**](%{premium}) planina yukseltin!
+
+### Previous command!
+previous_notfound: |
+  **Sirada onceki sarki bulunamadi!
+  Neden /play ile daha fazla parca ekleyip muzigi devam ettirmiyorsun?**
+previous_msg: |
+  **Onceki sarkiya geri donuldu!
+  Simdi caliniyor %{title}**
+
+### Queue command!
+queue_number_invalid: "Lutfen gecerli bir sayi girin!"
+queue_title: "Sira caliniyor..."
+queue_description: "**%{title}**\n\n**Siranin Devami %{rest}**"
+queue_footer: "Sayfa • %{page}/%{pages} | Sarkilar • %{queue_lang} | Toplam Sure • %{duration}"
+queue_notnumber: "Lutfen gecerli bir sayfa numarasi girin!"
+queue_page_notfound: "Sadece **%{page} Sayfa** var"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Lutfen gecerli bir sayi girin!"
+removetrack_already: "**Zaten calanan bir sarkiyi kaldiramam**"
+removetrack_notfound: "**Uzgunum %{user}, Sarki bulunamadi!**"
+removetrack_desc: "**%{title} Siradan Kaldirildi!**"
+
+### Replay command!
+replay_msg: "**%{user} %{title} Parcasini Tekrar Oynattiyor**"
+replay_not_seekable: "**%{title}** parcasi tekrar oynatilemiyor."
+
+### Resume command!
+resume_msg: "**Oynatma Devam Ediyor %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} %{title} parcasini** `%{duration}` **konumuna geri sardi**"
+rewind_beyond: "Sarki yeni basladi. Daha geriye saramazsiniz!"
+
+### Seek command!
+seek_beyond: "Sarki suresinin otesine atlayamazsiniz!"
+seek_invalid: "Gecersiz atlama suresi. Lutfen gecerli bir zaman damgasi kullanin. Ornek: **1:30**"
+seek_msg: "**%{title}** `%{duration}` **konumuna atildi**"
+seek_not_seekable: "**%{title}** parcasi geri veya ileri sarilamaz."
+
+### Skip command!
+skip_notfound: |
+  **Atlayacak sarki bulunamadi! Gorunuse gore atlayacak bir sey yok.
+  Hadi /play ile daha fazla parca ekleyerek muzigi devam ettirelim!**
+skip_msg: "**%{title} Atlandi**"
+skip_number_invalid: "Lutfen gecerli bir sayi girin!"
+
+### Stop command!
+stop_msg: "**%{title} Durduruldu**"
+
+### Shuffle command!
+shuffle_title: "Sirayi Karistir"
+
+### Volume command!
+volume_number_invalid: "Lutfen gecerli bir sayi girin!"
+volume_invalid: "Gecersiz Ses Seviyesi. Lutfen **1** ile **100** arasinda bir sayi kullanin"
+volume_msg: "**Ses seviyesi %{volume}% olarak ayarlandi, Keyfini cikar %{user}**"
+volume_max: "**Ses seviyesi zaten maksimum 100%'de**"
+
+### play source commands
+url_no_allowed: "Lutfen sarki adi/sanatci adi kullanin (url'ye izin verilmiyor)"
+play_arg_source: "Lutfen gecerli bir sarki adi/sanatci girin!"
+
+## Temporarily disabled commands
+youtube_disabled: "YouTube destegi gecici olarak kullanilamaz"
+autoplay_disabled: "Otomatik oynatma gecici olarak devre disi birakildi."

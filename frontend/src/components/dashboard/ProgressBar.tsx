@@ -7,6 +7,7 @@ interface Props {
   onSeek: (posMs: number) => void;
   compact?: boolean;
   trackUri?: string;
+  trackKey?: number;
 }
 
 function formatTime(ms: number) {
@@ -27,20 +28,23 @@ export default function ProgressBar({
   onSeek,
   compact,
   trackUri,
+  trackKey,
 }: Props) {
   const [displayPos, setDisplayPos] = useState(position);
   const [dragging, setDragging] = useState(false);
   const rafRef = useRef<number>(0);
   const lastTickRef = useRef(Date.now());
   const prevTrackRef = useRef(trackUri);
+  const prevKeyRef = useRef(trackKey);
 
   useEffect(() => {
-    if (trackUri !== prevTrackRef.current) {
+    if (trackKey !== prevKeyRef.current || trackUri !== prevTrackRef.current) {
       prevTrackRef.current = trackUri;
+      prevKeyRef.current = trackKey;
       setDisplayPos(0);
       lastTickRef.current = Date.now();
     }
-  }, [trackUri]);
+  }, [trackUri, trackKey]);
 
   useEffect(() => {
     if (!dragging) {
@@ -70,7 +74,7 @@ export default function ProgressBar({
 
     rafRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafRef.current);
-  }, [paused, dragging, duration, trackUri]);
+  }, [paused, dragging, duration, trackUri, trackKey]);
 
   const pct = duration > 0 ? Math.min((displayPos / duration) * 100, 100) : 0;
 

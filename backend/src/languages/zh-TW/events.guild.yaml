@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 加入了一個伺服器！"
+leave_title: "📥 離開了一個伺服器！"
+guild_name: "名稱"
+guild_id: "ID"
+guild_owner: "擁有者"
+guild_member_count: "成員數"
+guild_creation_date: "建立日期"
+guild_join_date: "加入日期"
+current_server_count: "目前伺服器數量"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "天哪！大家好 ✧(≖◡≖) ♡"
+join_msg_desc: |
+  ### 感謝你邀請我來和大家一起玩 (*≧▽≦)
+  ### 你也可以標記我來使用指令喔！輸入 </help:1088430405033656341> 查看我的斜線指令 ♡

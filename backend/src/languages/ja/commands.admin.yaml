@@ -1,0 +1,33 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "そのサーバーが見つかりませんでした..."
+blacklist_guild_already: "%{id}は既にブラックリストに登録されているため、何もできません。"
+blacklist_guild_add: "さようなら、%{id}！ブラックリストに追加しました。縁がなかったようですね..."
+blacklist_guild_not_exist: "%{id}をお探しですか？ツアールートに見つかりませんでした..."
+blacklist_guild_delete: "おかえりなさい、%{id}！またツアーに行けます。ブラックリストから解除されました。"
+
+### Blacklist User
+blacklist_user_bot_owner: "わっ！自分の作成者をブラックリストに登録することはできません！困らせようとしていますか？"
+blacklist_user_not_found: "そのファンが見つかりませんでした..."
+blacklist_user_already: "%{id}は既にブラックリストに登録されているため、何もできません。"
+blacklist_user_add: "じゃあね、%{id}！ファンをブラックリストに追加するのは悲しいですが、仕方ないですね..."
+blacklist_user_not_exist: "%{id}？誰ですか？ファンクラブに見つかりませんでした..."
+blacklist_user_delete: "素晴らしい！%{id}がファンとして復帰しました！次のコンサートで会えるのが楽しみです！"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "これがどんなメンテナンスかわかりませんが、代わりに%{text}を使用してください"
+maintenance_true: "了解！今はあなただけの声を聞いています！"
+maintenance_false: "みんなの声を聞く状態に戻りました！"

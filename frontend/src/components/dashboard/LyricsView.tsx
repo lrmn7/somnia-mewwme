@@ -4,6 +4,7 @@ import { api } from "@/lib/api";
 import type { PlayerState, Track, LoopMode, LyricsData, SyncedLine } from "@/types/player";
 
 const MotionDiv = motion.div as any;
+const MotionP = motion.p as any;
 
 function fmtMs(ms: number): string {
   const s = Math.floor(ms / 1000);
@@ -460,28 +461,50 @@ export default function LyricsView({
 
                   {!loading && lines.length > 0 && (
                     <div className="flex flex-col items-start gap-8 pb-40">
-                      {lines.map((line, i) => {
-                        if (i < currentLineIndex) return null;
+                      <AnimatePresence initial={false} mode="popLayout">
+                        {lines.map((line, i) => {
+                          const dist = i - currentLineIndex;
+                          // Show window: 1 previous + active + 4 next = 6 lines max
+                          if (dist < -1 || dist > 4) return null;
 
-                        const dist = i - currentLineIndex;
-                        const colourCls =
-                          dist === 0
-                            ? "text-white"
-                            : dist === 1
-                            ? "text-white/30"
-                            : dist === 2
-                            ? "text-white/20"
-                            : "text-white/10";
-                        return (
-                          <p
-                            key={i}
-                            ref={(el) => { lineRefs.current[i] = el; }}
-                            className={`text-4xl lg:text-5xl font-bold leading-tight transition-all duration-500 ease-in-out select-none ${colourCls}`}
-                          >
-                            {line}
-                          </p>
-                        );
-                      })}
+                          const isActive = dist === 0;
+                          const isPrev = dist === -1;
+                          const opacity =
+                            isActive ? 1
+                            : isPrev ? 0.2
+                            : dist === 1 ? 0.3
+                            : dist === 2 ? 0.2
+                            : 0.1;
+                          const scale = isActive ? 1 : 0.97;
+
+                          return (
+                            <MotionP
+                              key={`line-${i}`}
+                              layout
+                              initial={{ opacity: 0, y: isPrev ? -30 : 30, scale: 0.95 }}
+                              animate={{
+                                opacity,
+                                y: 0,
+                                scale,
+                                filter: isActive ? "blur(0px)" : "blur(0.5px)",
+                              }}
+                              exit={{ opacity: 0, y: isPrev ? -40 : 40, scale: 0.92, filter: "blur(2px)" }}
+                              transition={{
+                                layout: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
+                                opacity: { duration: 0.35, ease: "easeOut" },
+                                y: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
+                                scale: { duration: 0.3, ease: "easeOut" },
+                                filter: { duration: 0.3 },
+                              }}
+                              ref={(el: HTMLParagraphElement | null) => { lineRefs.current[i] = el; }}
+                              className={`text-4xl lg:text-5xl font-bold leading-tight select-none ${isActive ? "text-white" : "text-white"}`}
+                              style={{ willChange: "transform, opacity" }}
+                            >
+                              {line}
+                            </MotionP>
+                          );
+                        })}
+                      </AnimatePresence>
                     </div>
                   )}
                 </div>
@@ -529,29 +552,52 @@ export default function LyricsView({
 
                   {!loading && lines.length > 0 && (
                     <div className="flex flex-col items-start gap-8 pb-[50vh]">
-                      {lines.map((line, i) => {
-                        const isActive = i === currentLineIndex;
-                        const isPast = i < currentLineIndex;
-                        const dist = i - currentLineIndex;
-                        const colourCls = isActive
-                          ? "text-white"
-                          : isPast
-                          ? "text-white/15"
-                          : dist === 1
-                          ? "text-white/30"
-                          : dist === 2
-                          ? "text-white/20"
-                          : "text-white/10";
-                        return (
-                          <p
-                            key={i}
-                            ref={(el) => { lineRefs.current[i] = el; }}
-                            className={`text-4xl lg:text-5xl font-bold leading-tight transition-all duration-500 ease-in-out select-none ${colourCls}`}
-                          >
-                            {line}
-                          </p>
-                        );
-                      })}
+                      <AnimatePresence initial={false} mode="popLayout">
+                        {lines.map((line, i) => {
+                          const dist = i - currentLineIndex;
+                          // Show window: 1 previous + active + 4 next = 6 lines max
+                          if (dist < -1 || dist > 4) return null;
+
+                          const isActive = dist === 0;
+                          const isPrev = dist === -1;
+                          const opacity = isActive
+                            ? 1
+                            : isPrev
+                            ? 0.15
+                            : dist === 1
+                            ? 0.3
+                            : dist === 2
+                            ? 0.2
+                            : 0.1;
+                          const scale = isActive ? 1 : 0.97;
+                          return (
+                            <MotionP
+                              key={`manual-${i}`}
+                              layout
+                              initial={{ opacity: 0, y: isPrev ? -30 : 30, scale: 0.95 }}
+                              animate={{
+                                opacity,
+                                y: 0,
+                                scale,
+                                filter: isActive ? "blur(0px)" : "blur(0.5px)",
+                              }}
+                              exit={{ opacity: 0, y: isPrev ? -40 : 40, scale: 0.92, filter: "blur(2px)" }}
+                              transition={{
+                                layout: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
+                                opacity: { duration: 0.35, ease: "easeOut" },
+                                y: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
+                                scale: { duration: 0.3, ease: "easeOut" },
+                                filter: { duration: 0.3 },
+                              }}
+                              ref={(el: HTMLParagraphElement | null) => { lineRefs.current[i] = el; }}
+                              className={`text-4xl lg:text-5xl font-bold leading-tight select-none ${isActive ? "text-white" : "text-white"}`}
+                              style={{ willChange: "transform, opacity" }}
+                            >
+                              {line}
+                            </MotionP>
+                          );
+                        })}
+                      </AnimatePresence>
                     </div>
                   )}
 

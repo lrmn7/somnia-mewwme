@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "השמעת המוזיקה הופסקה. מקווה שנהניתם מהקצב!"
+skip_notfound: "אופס. נראה שאין שיר לדלג אליו!"
+skip_msg: "דילגתי על השיר. מקווה שלא אכפת לכם :p"
+previous_msg: "ובכן, נראה שאנחנו חוזרים אחורה! השיר הקודם בדרך <3"
+previous_notfound: "מצטער, אי אפשר לחזור יותר אחורה. לא נמצא שיר קודם :("
+resume_msg: "המוזיקה חזרה! בואו נמשיך עם הקצב ♪"
+pause_msg: "המוזיקה הושהתה. קחו הפסקה ותהנו מהשקט."
+loop_current: "כעת השיר הנוכחי יתנגן בלופ. תהנו מהחזרה!"
+loop_all: "התור מוגדר כעת על לופ. תנו למוזיקה לנגן שוב ושוב!"
+unloop_all: "מצב הלופ כובה. תהנו ממגוון השירים!"
+
+### Need to join voice & same voice to use command!
+no_player: "לחצת על כפתור ושום דבר לא קרה. אולי כדאי להפעיל משהו קודם!"
+no_same_voice: "לחצת על כפתור והוא הבהב באדום. אתה לא באותו ערוץ קולי כמוני!"
+no_in_voice: "כל הכפתורים לא מגיבים לך. אתה לא בערוץ קולי!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "מתנגן כעת"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** הוזמן על ידי %{request}"
+setup_footer: "שירים שנותרו • %{totalsong} | משך כולל • %{duration}"
+setup_queuemsg: "**הצטרפו לערוץ קולי והפעילו שירים באמצעות שם או קישור כאן!**"
+setup_playembed_author: "אין שיר מתנגן כרגע!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "נוסף **%{title}** • %{request}"
+play_playlist: "נוספה **%{title}** • (**%{songs} שירים**) • %{request}"
+play_result: "נוסף **%{title}** • %{request}"
+play_emoji: "אני לא בטוח איך לנגן את זה... זה לא שיר או רשימת השמעה."
+setup_content: "**היי! הדק שלי מוכן למוזיקה שלכם! פשוט שלחו משהו לכאן!**"

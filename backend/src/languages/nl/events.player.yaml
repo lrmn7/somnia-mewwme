@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "NU AAN HET AFSPELEN"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Artiest"
+track_requested_by: "Aangevraagd door"
+track_duration: "Duur"
+no_same_voice: "Je zit niet in hetzelfde spraakkanaal als ik!"
+filter_already: "**%{name} filter is al ingeschakeld**"
+filter_reset_on: "**Filter is gereset**"
+filter_reset_already: "**Filter is al gereset**"
+no_player_filter: "**Ik kan geen filter toepassen!**"
+filter_menu_on: "**Filter %{name} aan!**"
+
+player_get_exception: "Oh-oh! Het lijkt erop dat er een probleem is met het nummer. Zal ik het opnieuw proberen?"
+player_track_error: "Er was een probleem met het nummer. Kun je het nog een keer proberen?"
+player_track_stuck: "Ik ben zo verdrietig :(, het nummer is vastgelopen. Misschien vrolijkt een nieuwe poging ons op?"
+queue_end_desc: "Alle nummers zijn klaar! Meer muziek nodig?\nGebruik **/play** om het feest gaande te houden!"
+
+leave_pause: "Aangezien jullie me allemaal alleen hebben gelaten :( is de speler gepauzeerd."
+leave_resume: "Aangezien er iemand bij me is gekomen, is de speler hervat."
+
+player_end: "Het kanaal is bijna 15 minuten leeg geweest, dus ik besloot te vertrekken omdat ik niet graag alleen ben"
+
+### Last FM Scrobble ###
+expired_login_session: "Je Last.fm-sessie is verlopen of ongeldig.\nLog opnieuw in om de scrobble-functie te blijven gebruiken."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Waar zij die willen zingen altijd een lied vinden ♪"
+milestone_track_desc: |
+  ## OH Hé
+  Je hebt naar **%{total}** nummers geluisterd! Is je afspeellijst eindeloos, of ben je gewoon zo muzikaal geobsedeerd?
+

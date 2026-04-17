@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "Mode 24/7 sekarang **Diaktifkan**"
+247_off: "Mode 24/7 sekarang **Dinonaktifkan**"
+247_already: "Mode 24/7 sudah **%{mode}**"
+247_arg_error: "Mode 24/7 tidak valid. Silakan gunakan %{text}"
+247_no_in_voice: "Kamu tidak berada di voice channel!"
+
+
+### Set Language command! ###
+provide_lang: "**Bahasa Tidak Valid. Silakan gunakan** `%{languages}`"
+lang_set: "**Bahasa telah diatur ke** `%{language}`"
+lang_change: "**Bahasa telah diubah ke** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "Silakan masukkan Prefix yang valid!"
+prefix_length: "**Prefix tidak boleh lebih dari 10 Karakter**"
+prefix_set: "**Prefix telah diatur ke** `%{prefix}`"
+prefix_change: "**Prefix telah diubah ke** `%{prefix}`"
+
+### Control command!
+control_set: "**Mode kontrol player telah diatur ke %{toggle}**"
+control_arg_error: "Argumen tidak valid. Silakan gunakan %{text}"
+control_already: "Notifikasi Lagu sudah **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Tidak valid! Silakan gunakan %{text}"
+setup_enable: "**Ups! Sistem Musik sudah ada.**"
+setup_topic: "♪ Mereka yang ingin bernyanyi selalu menemukan lagu. ♪"
+setup_msg: "*`Berhasil Mengatur Sistem Musik di`* %{channel}\n```Catatan: Jangan hapus pesan apapun yang telah saya buat agar saya bisa bekerja dengan baik.```"
+setup_null: "*`Berhasil menghapus channel setup!`*"
+setup_deleted: "*`Berhasil menghapus channel setup!`*"
+setup_null_inguild: "**Sistem Musik tidak ditemukan di server ini! Siap menghapus data**"
+setup_queuemsg: "**Bergabunglah ke voice channel dan putar lagu menggunakan nama atau URL di sini!**"
+setup_playembed_author: "Tidak Ada Lagu Yang Sedang Diputar"
+
+### Themes command!
+error_themes: "Tidak valid... Silakan coba lagi."
+succes_themes: "**Berhasil mengubah tema ke %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "Catatan: Link ini akan kedaluwarsa dalam %{expired}."
+lastfm_login_title: "Last.fm Login"
+lastfm_login_desc: "Apakah kamu ingin memberikan otorisasi ke akun [Last.fm](https://www.last.fm/user/eleremen)-mu?\nJika ya, silakan klik tombol di bawah untuk memulai proses otorisasi."
+lastfm_not_login_desc: "Kamu belum login ke Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm Logout"
+lastfm_logout_desc: "Kamu telah berhasil logout dari Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Fitur Last.fm dinonaktifkan."
+lastfm_feature_disabled_desc: "Fitur Last.fm saat ini dinonaktifkan. Silakan hubungi administrator untuk informasi lebih lanjut."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "Tidak ada notifikasi yang ditemukan untuk channel YouTube **%{ytchannel}**."
+notify_youtube_removed: "Kamu telah menghapus notifikasi untuk channel YouTube **%{ytchannel}**."
+notify_youtube_disabled: "Fitur Notifikasi Youtube saat ini dinonaktifkan. Hubungi staf untuk informasi lebih lanjut."
+notify_youtube_already: "Notifikasi untuk channel YouTube %{ytchannel} sudah diatur."
+notify_youtube_invalid_channel: "Terjadi kesalahan dalam menentukan channel teks yang valid. Silakan periksa!"
+notify_youtube_set: "Notifikasi Youtube telah diatur untuk **%{ytchannel}** di %{channelid}."
+notify_youtube_404: |
+  ID channel YouTube yang diberikan tidak dapat ditemukan.
+  Untuk menemukan ID channel, buka halaman channel YouTube dan periksa URL-nya.
+  ID channel adalah rangkaian huruf dan angka setelah `/channel/` (contoh: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   Kamu telah mencapai batas %{limit} notifikasi.
+   Dengan upgrade ke [premium](%{premium}), kamu bisa mengatur hingga %{limitpremium} notifikasi.
+
+notify_youtube_limit_reached_premium: |
+   Kamu telah mencapai batas %{limit} notifikasi.
+   Ini adalah batas maksimal yang diperbolehkan. Pertimbangkan untuk menghapus beberapa notifikasi untuk memberi ruang bagi yang baru.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Tidak ada notifikasi yang ditemukan untuk username Twitch **%{twitchusername}**."
+notify_twitch_removed: "Kamu telah menghapus notifikasi untuk username Twitch **%{twitchusername}**."
+notify_twitch_disabled: "Fitur Notifikasi Twitch saat ini dinonaktifkan. Hubungi staf untuk informasi lebih lanjut."
+notify_twitch_already: "Kamu sudah mengatur notifikasi untuk channel Twitch %{twitchusername}."
+notify_twitch_invalid_channel: "Terjadi kesalahan dalam menentukan channel teks yang valid. Silakan periksa!"
+notify_twitch_set: "Notifikasi Twitch telah diatur untuk **%{twitchusername}** di %{channelid}."
+notify_twitch_error: "Terjadi kesalahan tak terduga saat memproses notifikasi Twitch untuk **{twitchusername}** di channel **{channelid}**. Silakan coba lagi atau hubungi dukungan jika masalah berlanjut."
+notify_twitch_limit_reached_non_premium: |
+   Kamu telah mencapai batas %{limit} notifikasi.
+   Dengan upgrade ke [premium](%{premium}), kamu bisa mengatur hingga %{limitpremium} notifikasi.
+
+notify_twitch_limit_reached_premium: |
+   Kamu telah mencapai batas %{limit} notifikasi.
+   Ini adalah batas maksimal yang diperbolehkan. Pertimbangkan untuk menghapus beberapa notifikasi untuk memberi ruang bagi yang baru.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Fitur Temp Voice telah %{status}."
+tempvoice_disabled: "Temp Voice telah dinonaktifkan."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Tidak valid... hanya %{text}."
+status_voice_channel_true: "Status Voice Channel telah diatur ke **%{type}**."
+status_voice_channel_false: "Status Voice Channel telah diatur ke **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "Perintah ini hanya bisa dijalankan di Server!"
+no_data_patreon: "Data Patreon tidak ditemukan (Kesalahan Database)"
+no_data_patreon_title: "Tidak Ditemukan"
+no_data_patreon_desc: |
+  Jika kamu sudah berlangganan, pastikan akun Discord-mu terhubung ke Patreon!
+no_data_patreon_footer: "Sinkronisasi Patreon mungkin membutuhkan waktu, silakan periksa kembali sebentar lagi"
+no_patreon_guild_membership: |
+  halo, paket patreon-mu adalah **user tier**.
+  silakan upgrade ke **server tier** untuk membuka akses premium server.
+patreon_guild_membership_full_quota: |
+  kamu telah menggunakan semua kuota server-mu!
+  **status:** %{status} server digunakan.
+
+  solusi:
+  1. upgrade tier-mu di patreon.
+  2. atau nonaktifkan premium di server lamamu.
+patreon_guild_membership_already_before: "Kamu sudah mengaktifkan premium di server ini sebelumnya!"
+patreon_guild_membership_already: "**SUDAH PREMIUM** karena disponsori oleh orang lain.\nSimpan kuotamu untuk server lain!"
+patreon_guild_membership_claim_title: "Konfirmasi Aktivasi"
+patreon_guild_membership_claim_desc: |
+  apakah kamu yakin ingin mengaktifkan **premium server** untuk:
+  **%{guildName}**
+
+  tindakan ini akan menggunakan **1 kuota server**.
+  sisa kuota: **%{status}**
+patreon_guild_membership_claim_success: |
+  berhasil! **%{guildName}** sekarang menjadi **premium server**.
+
+  **sponsor:** %{user}
+  **sisa kuota:** %{status}
+  terima kasih telah mendukung kami di patreon!
+patreon_guild_membership_claim_success_title: "💎 Premium Diaktifkan!"
+patreon_guild_membership_claim_cancel: "Aktivasi premium dibatalkan."
+patreon_guild_membership_claim_norespon: "Aktivasi dibatalkan secara otomatis karena tidak ada respon."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Server Ditukarkan (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **pengguna sponsor:** %{sponsorTag} %{sponsorId}
+  **server tujuan:** %{guildName} %{guildId}
+  **status kuota:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Kamu tidak bisa mencabut premium server ini karena kamu tidak mendaftarkannya."
+patreon_guild_unclaim_title: "Konfirmasi Pencabutan Premium"
+patreon_guild_unclaim_desc: |
+  Apakah kamu yakin ingin **MEMBATALKAN** status Premium server **%{guildName}**?
+  **Efek:** Fitur premium akan dinonaktifkan di server ini.
+  Kuota Server-mu akan dipulihkan (+1).
+  Sisa kuota saat ini: **%{status}**
+patreon_guild_unclaim_success_title: "Premium Dicabut"
+patreon_guild_unclaim_success: |
+  Status premium untuk **%{guildName}** telah berhasil dicabut.
+  **Kuota Dipulihkan:** 1 Server
+  **Sisa Kuota Baru:** %{status}
+patreon_guild_unclaim_cancel: "Proses pencabutan premium dibatalkan."
+patreon_guild_unclaim_norespon: "⏱️ Waktu habis. Proses dibatalkan."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Server Tidak Diklaim (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Pengguna:** %{sponsorTag} %{sponsorId}
+  **Server:** %{guildName}} %{guildId}
+  **Kuota Dipulihkan:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Pengguna:** %{userTag} (%{userId})
+  **Server:** %{guildName} (%{guildId})
+  **Kuota:** %{quota}
+  **Kedaluwarsa:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Aksi: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "ID Transaksi tidak ditemukan atau sudah diklaim."
+kofi_linked_success_title: "Pembayaran Berhasil Dihubungkan!"
+kofi_linked_success_desc: "Sekarang kamu bisa menggunakan `/premium claim <kofi>` tanpa TxID."
+kofi_no_data_title: "Data Tidak Ditemukan!"
+kofi_no_data_desc: |
+  Jika kamu sudah membayar tapi belum menghubungkan akun Discord-mu ke Kofi
+  gunakan: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Tidak ada kuota, tapi kamu adalah pengguna premium."
+kofi_full_server_quota_title: "Kuota Penuh!"
+kofi_full_server_quota_desc: "Kamu telah menggunakan **%{quota}** slot server."
+kofi_server_already_claim_desc: "**Sudah Aktif!**\nKamu sudah mengaktifkan Premium di server ini sebelumnya."
+kofi_server_already_active_desc: " **Sudah Premium!**\nServer ini sudah diaktifkan sebagai premium oleh pengguna lain."
+kofi_guild_membership_claim_success: |
+  Premium telah berhasil diaktifkan!
+  **Penggunaan Kuota:** %{quota}
+  **Kedaluwarsa Dalam:** %{expires}
+kofi_guild_membership_claim_footer: "Terima kasih atas dukunganmu!"
+kofi_action_title: "🏗️ Ko-fi Aksi: %{type}"
+kofi_action_description: "**Pengguna:** %{userTag} (`%{userId}`)\n**Server:** %{guildName} (`%{guildId}`)\n**Aksi:** %{action}\n**Kuota:** %{quota}"
+kofi_action_activation: "Server Diaktifkan"
+kofi_action_manual_link: "Pembayaran Manual Dihubungkan"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium Dicabut"
+kofi_guild_unclaim_success_desc: |
+  Status premium untuk **%{guildName}** telah berhasil dicabut.
+  **Kuota Dipulihkan:** 1 Server
+kofi_guild_not_owned_by_user: "Kamu tidak bisa mencabut premium server ini karena kamu tidak mendaftarkannya."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Server Tidak Diklaim %{platform}"
+premium_unclaim_log_desc: |
+  **Pengguna:** %{userTag} %{userId}
+  **Server:** %{guildName}} %{guildId}
+  **Kuota Dipulihkan:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "Sistem DJ Role telah **Dinonaktifkan**."
+dj_role_missing_role: "Kamu perlu memberikan role untuk menggunakan aksi `set`."
+dj_role_set: |
+  DJ Role telah diatur ke %{role}.
+  Status: **Diaktifkan**
+  **Perintah yang Terpengaruh:**
+  %{commands}

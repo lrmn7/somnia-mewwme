@@ -27,21 +27,10 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const defaultAvatarIndex = (() => {
-    if (!user) return 0;
-    const disc = Number.parseInt(user.discriminator || "", 10);
-    if (Number.isFinite(disc) && disc > 0) return disc % 5;
-    try {
-      return Number((BigInt(user.id) >> 22n) % 6n);
-    } catch {
-      return 0;
-    }
-  })();
-
   const avatarUrl = user?.avatar
     ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=64`
     : user
-    ? `https://cdn.discordapp.com/embed/avatars/${defaultAvatarIndex}.png`
+    ? `https://cdn.discordapp.com/embed/avatars/${parseInt(user.discriminator || "0") % 5}.png`
     : null;
 
   return (
@@ -122,6 +111,15 @@ const Navbar = () => {
                         </svg>
                         Global Stats
                       </a>
+                      <a
+                        href="/community"
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-white/10 transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                        </svg>
+                        Community
+                      </a>
                     </div>
                     <div className="p-1.5 border-t border-white/10">
                       <button
@@ -140,13 +138,11 @@ const Navbar = () => {
                   </motion.div>
                 )}
               </div>
-            ) : status === "loading" ? (
-              <div className="w-7 h-7 border-2 border-pink-500/30 border-t-pink-500 rounded-full animate-spin" />
             ) : (
-              <button onClick={login} className="btn-primary-glass text-sm py-2 px-4 flex items-center gap-2">
+              <a href="/login" className="btn-primary-glass text-sm py-2 px-4 flex items-center gap-2">
                 <DiscordIcon className="w-4 h-4" />
                 Login
-              </button>
+              </a>
             )}
           </div>
 
@@ -203,6 +199,12 @@ const Navbar = () => {
                   </svg>
                   Global Stats
                 </a>
+                <a href="/community" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2 px-2 flex items-center gap-2.5">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                  Community
+                </a>
                 <button
                   onClick={() => {
                     setMobileOpen(false);
@@ -216,15 +218,11 @@ const Navbar = () => {
                   Logout
                 </button>
               </>
-            ) : status === "loading" ? (
-              <div className="flex items-center justify-center py-3">
-                <div className="w-6 h-6 border-2 border-pink-500/30 border-t-pink-500 rounded-full animate-spin" />
-              </div>
             ) : (
-              <button onClick={login} className="btn-primary-glass text-sm py-2 px-4 justify-center flex items-center gap-2">
+              <a href='/login' className="btn-primary-glass text-sm py-2 px-4 justify-center flex items-center gap-2">
                 <DiscordIcon className="w-4 h-4" />
                 Login
-              </button>
+              </a>
             )}
           </motion.div>
         )}

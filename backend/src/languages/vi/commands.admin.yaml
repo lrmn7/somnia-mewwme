@@ -1,0 +1,34 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "Tôi không tìm thấy Guild đó..."
+blacklist_guild_already: "Có vẻ %{id} đã bị chặn rồi, nên tôi không thể làm gì thêm."
+blacklist_guild_add: "Sayonara, %{id}! Tôi đã thêm họ vào danh sách chặn. Có lẽ không phải duyên phận..."
+blacklist_guild_not_exist: "Bạn nói bạn đang tìm %{id}? Tôi không tìm thấy họ trong lịch trình tour..."
+blacklist_guild_delete: "Chào mừng trở lại, %{id}! Tôi có thể đi tour ở đó lần nữa, họ không còn bị chặn nữa."
+
+### Blacklist User
+blacklist_user_bot_owner: "Ơ! Tôi không thể chặn người tạo ra tôi! Bạn đang cố gây rắc rối cho tôi sao?"
+blacklist_user_not_found: "Tôi không tìm thấy người hâm mộ đó..."
+blacklist_user_already: "Có vẻ %{id} đã bị chặn rồi, nên tôi không thể làm gì thêm."
+blacklist_user_add: "Tạm biệt, %{id}! Buồn khi phải thêm một người hâm mộ vào danh sách chặn, nhưng chắc là vì lý do tốt..."
+blacklist_user_not_exist: "%{id}? Đó là ai? Tôi không tìm thấy họ trong câu lạc bộ người hâm mộ..."
+blacklist_user_delete: "Tuyệt vời! %{id} đã được phục hồi làm người hâm mộ! Tôi nóng lòng gặp họ tại buổi hòa nhạc tiếp theo!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "Không chắc đây là loại bảo trì gì, nhưng bạn chắc chắn nên sử dụng %{text} thay thế"
+maintenance_true: "Được rồi! Bây giờ tôi chỉ nghe lệnh từ bạn thôi!"
+maintenance_false: "Tôi đã quay lại nghe lệnh từ mọi người rồi!"
+

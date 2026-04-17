@@ -10,16 +10,18 @@ import { MewslinkEvents, MewslinkPluginType } from "../../Interface/Constants.js
 import { fetch } from "undici";
 import { Config } from "../../../@types/Config.js";
 import { ConfigDataService } from "../../../services/ConfigDataService.js";
+import { AppleTokenManager } from "./AppleTokenManager.js";
+
+type LoggerLike = {
+  info(className: string, msg: string): void;
+  warn(className: string, msg: string): void;
+};
+
 const data: Config = new ConfigDataService().data;
 const REGEX =
   /(?:https:\/\/music\.apple\.com\/)(?:.+)?(artist|album|music-video|playlist)\/([\w\-\.]+(\/)+[\w\-\.]+|[^&]+)\/([\w\-\.]+(\/)+[\w\-\.]+|[^&]+)/;
 const REGEX_SONG_ONLY =
   /(?:https:\/\/music\.apple\.com\/)(?:.+)?(artist|album|music-video|playlist)\/([\w\-\.]+(\/)+[\w\-\.]+|[^&]+)\/([\w\-\.]+(\/)+[\w\-\.]+|[^&]+)(\?|\&)([^=]+)\=([\w\-\.]+(\/)+[\w\-\.]+|[^&]+)/;
-
-type HeaderType = {
-  Authorization: string;
-  origin: string;
-};
 
 /** The mewslink spotify plugin options */
 export type AppleOptions = {
@@ -29,11 +31,11 @@ export type AppleOptions = {
   imageWidth?: number;
   /** Artwork height */
   imageHeight?: number;
+  /** Logger instance for consistent log formatting */
+  logger?: LoggerLike;
 };
 
-const credentials = {
-  APPLE_TOKEN: data.lavalink.APPLE_TOKEN,
-};
+const initialAppleToken = data.lavalink.APPLE_TOKEN;
 export class MewslinkPlugin extends SourceMewslinkPlugin {
   public options: AppleOptions;
   private manager: Mewslink | null;
@@ -42,7 +44,8 @@ export class MewslinkPlugin extends SourceMewslinkPlugin {
     options?: MewslinkSearchOptions
   ) => Promise<MewslinkSearchResult>;
   private readonly methods: Record<string, (id: string, requester: unknown) => Promise<Result>>;
-  private credentials: HeaderType;
+  private tokenManager: AppleTokenManager;
+  private appLogger: LoggerLike | null;
   private fetchURL: string;
   private baseURL: string;
   public countryCode: string;
@@ -91,6 +94,7 @@ export class MewslinkPlugin extends SourceMewslinkPlugin {
       track: this.getTrack.bind(this),
     };
     this.options = appleOptions;
+    this.appLogger = this.options?.logger ?? null;
     this.manager = null;
     this._search = undefined;
     this.countryCode = this.options?.countryCode ? this.options?.countryCode : "us";
@@ -98,10 +102,10 @@ export class MewslinkPlugin extends SourceMewslinkPlugin {
     this.imageWidth = this.options?.imageWidth ? this.options?.imageWidth : 600;
     this.baseURL = "https://api.music.apple.com/v1/";
     this.fetchURL = `https://amp-api.music.apple.com/v1/catalog/${this.countryCode}`;
-    this.credentials = {
-      Authorization: `Bearer ${credentials.APPLE_TOKEN}`,
-      origin: "https://music.apple.com",
-    };
+    this.tokenManager = new AppleTokenManager(
+      initialAppleToken,
+      (msg) => this.debug(msg)
+    );
   }
 
   /**
@@ -189,9 +193,23 @@ export class MewslinkPlugin extends SourceMewslinkPlugin {
   }
 
   private async getData<D = any>(params: string) {
+    const headers = await this.tokenManager.getHeaders();
     const req = await fetch(`${this.fetchURL}${params}`, {
-      headers: this.credentials,
+      headers,
     });
+
+    // If 401, token might be expired — force refresh and retry once
+    if (req.status === 401) {
+      this.debug("Token expired or invalid, refreshing...");
+      this.tokenManager.invalidate();
+      const freshHeaders = await this.tokenManager.getHeaders();
+      const retryReq = await fetch(`${this.fetchURL}${params}`, {
+        headers: freshHeaders,
+      });
+      const retryRes = (await retryReq.json()) as any;
+      return retryRes.data as D;
+    }
+
     const res = (await req.json()) as any;
     return res.data as D;
   }
@@ -311,10 +329,15 @@ export class MewslinkPlugin extends SourceMewslinkPlugin {
   }
 
   private debug(logs: string) {
-    this.manager
-      ? // @ts-ignore
-        this.manager.emit(MewslinkEvents.Debug, `[Mewslink] -> [Plugin] -> [Apple] | ${logs}`)
-      : true;
+    const className = "AppleTokenManager";
+    if (this.appLogger) {
+      this.appLogger.info(className, logs);
+    } else if (this.manager) {
+      // @ts-ignore
+      this.manager.emit(MewslinkEvents.Debug, `[Mewslink] -> [Plugin] -> [Apple] | ${logs}`);
+    } else {
+      console.log(`[Mewslink] -> [Plugin] -> [Apple] | ${logs}`);
+    }
   }
 }
 

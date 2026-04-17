@@ -1,0 +1,34 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "Ich konnte diesen Server nicht finden..."
+blacklist_guild_already: "Es sieht so aus, als ob %{id} bereits auf der Blacklist steht, also kann ich nichts tun."
+blacklist_guild_add: "Sayonara, %{id}! Ich habe sie zur Blacklist hinzugefuegt. Es sollte wohl nicht sein..."
+blacklist_guild_not_exist: "Du hast nach %{id} gesucht? Ich konnte sie nicht in meinen Tourrouten finden..."
+blacklist_guild_delete: "Willkommen zurueck, %{id}! Ich kann dort wieder auf Tour gehen, sie sind nicht mehr auf der Blacklist."
+
+### Blacklist User
+blacklist_user_bot_owner: "Wow! Ich kann meinen eigenen Erschaffer nicht auf die Blacklist setzen! Willst du mich in Schwierigkeiten bringen?"
+blacklist_user_not_found: "Ich konnte diesen Fan nicht finden..."
+blacklist_user_already: "Es sieht so aus, als ob %{id} bereits auf der Blacklist steht, also kann ich nichts tun."
+blacklist_user_add: "Tschuess, %{id}! Schade, dass ich einen Fan auf die Blacklist setzen muss, aber es ist wohl das Beste..."
+blacklist_user_not_exist: "%{id}? Wer ist das? Ich konnte sie nicht in meinem Fanclub finden..."
+blacklist_user_delete: "Super! %{id} wurde wieder als Fan aufgenommen! Ich kann es kaum erwarten, sie beim naechsten Konzert zu sehen!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "Ich bin mir nicht sicher, was fuer eine Wartung das ist, aber du solltest definitiv %{text} verwenden"
+maintenance_true: "In Ordnung! Ich hoere jetzt nur noch auf dich!"
+maintenance_false: "Ich hoere jetzt wieder allen zu!"
+

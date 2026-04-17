@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Berikan alasan untuk membuat tiket"
+ticket_already_open: "Kamu sudah memiliki tiket yang terbuka."
+ticket_already_closed: "Data tiket untuk pengguna %{id} tidak ditemukan atau Tiket sudah ditutup"
+ticket_close_user: "Kamu tidak diizinkan untuk menutup tiket."
+ticket_delete_user: "Kamu tidak diizinkan untuk menghapus tiket."
+ticket_deleting_action: "Menghapus tiket..."
+ticket_closed_label: "🔒 Ditutup"
+ticket_delete_label: "🗑️ Hapus"
+ticket_create: "Tiket telah dibuat. Pergi ke %{channel}"
+ticket_create_title: "Tunggu staf untuk merespon"
+ticket_create_desc: |
+  Terima kasih telah membuat tiket. Silakan tunggu staf untuk merespon.
+  `CATATAN: Tiket ini tidak memiliki backup. Pastikan untuk mem-backup informasi penting sendiri`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Tiket Ditutup"
+ticket_closed_desc: "Tiket telah berhasil ditutup!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Tiket telah ditutup."
+ticket_closed_dm_desc: |
+  Tiket yang kamu buka baru saja ditutup. Transkripmu dapat ditemukan di tautan di bawah.
+  Jika kamu mengalami masalah atau punya pertanyaan lebih lanjut, jangan ragu untuk membuka tiket baru. Kami di sini untuk membantu!
+
+

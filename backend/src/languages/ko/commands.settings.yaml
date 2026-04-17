@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "24/7 모드가 **활성화**되었습니다"
+247_off: "24/7 모드가 **비활성화**되었습니다"
+247_already: "24/7 모드가 이미 **%{mode}**입니다"
+247_arg_error: "잘못된 24/7 모드입니다. %{text}을(를) 사용해주세요"
+247_no_in_voice: "음성 채널에 접속해 있지 않습니다!"
+
+
+### Set Language command! ###
+provide_lang: "**잘못된 언어입니다. 다음을 사용해주세요** `%{languages}`"
+lang_set: "**언어가** `%{language}`**(으)로 설정되었습니다**"
+lang_change: "**언어가** `%{language}`**(으)로 변경되었습니다**"
+
+### Prefix command! ###
+prefix_arg: "유효한 접두사를 입력해주세요!"
+prefix_length: "**접두사는 10자를 초과할 수 없습니다**"
+prefix_set: "**접두사가** `%{prefix}`**(으)로 설정되었습니다**"
+prefix_change: "**접두사가** `%{prefix}`**(으)로 변경되었습니다**"
+
+### Control command!
+control_set: "**플레이어 제어 모드가 %{toggle}(으)로 설정되었습니다**"
+control_arg_error: "잘못된 인수입니다. %{text}을(를) 사용해주세요"
+control_already: "노래 알림이 이미 **%{mode}**입니다"
+
+### Setup Music Req command! ###
+setup_arg_error: "잘못되었습니다! %{text}을(를) 사용해주세요"
+setup_enable: "**이런! 음악 시스템이 이미 존재합니다.**"
+setup_topic: "♪ 노래하고 싶은 사람은 항상 노래를 찾습니다. ♪"
+setup_msg: "*`음악 시스템이 성공적으로 설정되었습니다`* %{channel}\n```참고: 정상적인 작동을 위해 제가 만든 메시지를 삭제하지 마세요.```"
+setup_null: "*`설정 채널이 성공적으로 삭제되었습니다!`*"
+setup_deleted: "*`설정 채널이 성공적으로 삭제되었습니다!`*"
+setup_null_inguild: "**이 서버에서 음악 시스템을 찾을 수 없습니다! 데이터 삭제 준비 중**"
+setup_queuemsg: "**음성 채널에 참여하고 여기에 노래 이름이나 URL을 입력하여 재생하세요!**"
+setup_playembed_author: "현재 재생 중인 노래가 없습니다"
+
+### Themes command!
+error_themes: "잘못되었습니다... 다시 시도해주세요."
+succes_themes: "**테마가 %{themes}(으)로 성공적으로 변경되었습니다**"
+
+### Last FM Login command!
+lastfm_login_footer: "참고: 이 링크는 %{expired} 후에 만료됩니다."
+lastfm_login_title: "Last.fm 로그인"
+lastfm_login_desc: "[Last.fm](https://www.last.fm/user/eleremen) 계정에 대한 인증을 허용하시겠습니까?\n허용하시려면 아래 버튼을 클릭하여 인증 절차를 시작하세요."
+lastfm_not_login_desc: "Last.fm에 로그인되어 있지 않습니다"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm 로그아웃"
+lastfm_logout_desc: "Last.fm에서 성공적으로 로그아웃되었습니다"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm 기능이 비활성화되었습니다."
+lastfm_feature_disabled_desc: "Last.fm 기능이 현재 비활성화되어 있습니다. 자세한 내용은 관리자에게 문의해주세요."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "YouTube 채널 **%{ytchannel}**에 대한 알림을 찾을 수 없습니다."
+notify_youtube_removed: "YouTube 채널 **%{ytchannel}**에 대한 알림이 제거되었습니다."
+notify_youtube_disabled: "YouTube 알림 기능이 현재 비활성화되어 있습니다. 자세한 내용은 스태프에게 문의해주세요."
+notify_youtube_already: "YouTube 채널 %{ytchannel}에 대한 알림이 이미 설정되어 있습니다."
+notify_youtube_invalid_channel: "유효한 텍스트 채널을 지정하는 데 오류가 발생했습니다. 확인해주세요!"
+notify_youtube_set: "YouTube 알림이 **%{ytchannel}**에 대해 %{channelid}에 설정되었습니다."
+notify_youtube_404: |
+  제공된 YouTube 채널 ID를 찾을 수 없습니다.
+  채널 ID를 찾으려면 YouTube 채널 페이지로 이동하여 URL을 확인하세요.
+  채널 ID는 `/channel/` 뒤에 있는 문자와 숫자의 문자열입니다 (예: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   알림 한도 %{limit}개에 도달했습니다.
+   [프리미엄](%{premium})으로 업그레이드하면 최대 %{limitpremium}개의 알림을 설정할 수 있습니다.
+
+notify_youtube_limit_reached_premium: |
+   알림 한도 %{limit}개에 도달했습니다.
+   이것이 허용되는 최대치입니다. 새로운 알림을 추가하려면 일부 알림을 삭제하는 것을 고려해주세요.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Twitch 사용자 **%{twitchusername}**에 대한 알림을 찾을 수 없습니다."
+notify_twitch_removed: "Twitch 사용자 **%{twitchusername}**에 대한 알림이 제거되었습니다."
+notify_twitch_disabled: "Twitch 알림 기능이 현재 비활성화되어 있습니다. 자세한 내용은 스태프에게 문의해주세요."
+notify_twitch_already: "Twitch 채널 %{twitchusername}에 대한 알림이 이미 설정되어 있습니다."
+notify_twitch_invalid_channel: "유효한 텍스트 채널을 지정하는 데 오류가 발생했습니다. 확인해주세요!"
+notify_twitch_set: "Twitch 알림이 **%{twitchusername}**에 대해 %{channelid}에 설정되었습니다."
+notify_twitch_error: "**{twitchusername}**에 대한 Twitch 알림을 **{channelid}** 채널에서 처리하는 중 예기치 않은 오류가 발생했습니다. 다시 시도하거나 문제가 지속되면 지원팀에 문의해주세요."
+notify_twitch_limit_reached_non_premium: |
+   알림 한도 %{limit}개에 도달했습니다.
+   [프리미엄](%{premium})으로 업그레이드하면 최대 %{limitpremium}개의 알림을 설정할 수 있습니다.
+
+notify_twitch_limit_reached_premium: |
+   알림 한도 %{limit}개에 도달했습니다.
+   이것이 허용되는 최대치입니다. 새로운 알림을 추가하려면 일부 알림을 삭제하는 것을 고려해주세요.
+
+### Temp Voice Feature command!
+tempvoice_setup: "임시 음성 기능이 %{status}되었습니다."
+tempvoice_disabled: "임시 음성이 비활성화되었습니다."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "잘못되었습니다... %{text}만 가능합니다."
+status_voice_channel_true: "음성 채널 상태가 **%{type}**(으)로 설정되었습니다."
+status_voice_channel_false: "음성 채널 상태가 **%{type}**(으)로 설정되었습니다."
+
+
+### Patreon Claim command!
+not_in_guild: "이 명령어는 서버에서만 실행할 수 있습니다!"
+no_data_patreon: "Patreon 데이터를 찾을 수 없습니다 (데이터베이스 오류)"
+no_data_patreon_title: "찾을 수 없음"
+no_data_patreon_desc: |
+  이미 구독하셨다면 Discord 계정이 Patreon에 연동되어 있는지 확인해주세요!
+no_data_patreon_footer: "Patreon 동기화에 시간이 걸릴 수 있습니다. 잠시 후 다시 확인해주세요"
+no_patreon_guild_membership: |
+  안녕하세요, 귀하의 Patreon 플랜은 **사용자 등급**입니다.
+  프리미엄 서버 접근 권한을 잠금 해제하려면 **서버 등급**으로 업그레이드해주세요.
+patreon_guild_membership_full_quota: |
+  서버 할당량을 모두 사용하셨습니다!
+  **상태:** %{status}개 서버 사용 중.
+
+  해결 방법:
+  1. Patreon에서 등급을 업그레이드하세요.
+  2. 또는 기존 서버에서 프리미엄을 비활성화하세요.
+patreon_guild_membership_already_before: "이 서버에서 이전에 이미 프리미엄을 활성화하셨습니다!"
+patreon_guild_membership_already: "다른 분이 후원하여 이미 **프리미엄**입니다.\n다른 서버를 위해 할당량을 아껴두세요!"
+patreon_guild_membership_claim_title: "활성화 확인"
+patreon_guild_membership_claim_desc: |
+  다음 서버에 **프리미엄 서버**를 활성화하시겠습니까:
+  **%{guildName}**
+
+  이 작업은 **서버 할당량 1개**를 사용합니다.
+  남은 할당량: **%{status}**
+patreon_guild_membership_claim_success: |
+  성공! **%{guildName}**이(가) 이제 **프리미엄 서버**입니다.
+
+  **후원자:** %{user}
+  **남은 할당량:** %{status}
+  Patreon에서 저희를 지원해주셔서 감사합니다!
+patreon_guild_membership_claim_success_title: "💎 프리미엄 활성화!"
+patreon_guild_membership_claim_cancel: "프리미엄 활성화가 취소되었습니다."
+patreon_guild_membership_claim_norespon: "응답이 없어 활성화가 자동으로 취소되었습니다."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 서버 사용됨 (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **후원 사용자:** %{sponsorTag} %{sponsorId}
+  **대상 서버:** %{guildName} %{guildId}
+  **할당량 상태:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "이 프리미엄 서버를 등록하지 않았으므로 해제할 수 없습니다."
+patreon_guild_unclaim_title: "프리미엄 해제 확인"
+patreon_guild_unclaim_desc: |
+  **%{guildName}** 서버의 프리미엄 상태를 **취소**하시겠습니까?
+  **효과:** 이 서버에서 프리미엄 기능이 비활성화됩니다.
+  서버 할당량이 복원됩니다 (+1).
+  현재 남은 할당량: **%{status}**
+patreon_guild_unclaim_success_title: "프리미엄 해제됨"
+patreon_guild_unclaim_success: |
+  **%{guildName}**의 프리미엄 상태가 성공적으로 해제되었습니다.
+  **복원된 할당량:** 서버 1개
+  **새 남은 할당량:** %{status}
+patreon_guild_unclaim_cancel: "프리미엄 해제 절차가 취소되었습니다."
+patreon_guild_unclaim_norespon: "⏱️ 시간 초과. 절차가 취소되었습니다."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "해제된 서버 (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **사용자:** %{sponsorTag} %{sponsorId}
+  **서버:** %{guildName}} %{guildId}
+  **복원된 할당량:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **사용자:** %{userTag} (%{userId})
+  **서버:** %{guildName} (%{guildId})
+  **할당량:** %{quota}
+  **만료:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} 작업: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "거래 ID를 찾을 수 없거나 이미 사용되었습니다."
+kofi_linked_success_title: "결제가 성공적으로 연동되었습니다!"
+kofi_linked_success_desc: "이제 TxID 없이 `/premium claim <kofi>`를 사용할 수 있습니다."
+kofi_no_data_title: "데이터를 찾을 수 없음!"
+kofi_no_data_desc: |
+  이미 결제했지만 Discord 계정을 Kofi에 연결하지 않은 경우
+  다음을 사용하세요: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "할당량이 없지만 프리미엄 사용자입니다."
+kofi_full_server_quota_title: "할당량 초과!"
+kofi_full_server_quota_desc: "**%{quota}**개의 서버 슬롯을 사용하셨습니다."
+kofi_server_already_claim_desc: "**이미 활성화됨!**\n이 서버에서 이전에 이미 프리미엄을 활성화하셨습니다."
+kofi_server_already_active_desc: " **이미 프리미엄!**\n이 서버는 다른 사용자에 의해 이미 프리미엄으로 활성화되었습니다."
+kofi_guild_membership_claim_success: |
+  프리미엄이 성공적으로 활성화되었습니다!
+  **할당량 사용:** %{quota}
+  **만료 예정:** %{expires}
+kofi_guild_membership_claim_footer: "지원해 주셔서 감사합니다!"
+kofi_action_title: "🏗️ Ko-fi 작업: %{type}"
+kofi_action_description: "**사용자:** %{userTag} (`%{userId}`)\n**서버:** %{guildName} (`%{guildId}`)\n**작업:** %{action}\n**할당량:** %{quota}"
+kofi_action_activation: "서버 활성화"
+kofi_action_manual_link: "수동 결제 연동"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "프리미엄 해제됨"
+kofi_guild_unclaim_success_desc: |
+  **%{guildName}**의 프리미엄 상태가 성공적으로 해제되었습니다.
+  **복원된 할당량:** 서버 1개
+kofi_guild_not_owned_by_user: "이 프리미엄 서버를 등록하지 않았으므로 해제할 수 없습니다."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "해제된 서버 %{platform}"
+premium_unclaim_log_desc: |
+  **사용자:** %{userTag} %{userId}
+  **서버:** %{guildName}} %{guildId}
+  **복원된 할당량:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "DJ 역할 시스템이 **비활성화**되었습니다."
+dj_role_missing_role: "`set` 작업을 사용하려면 역할을 지정해야 합니다."
+dj_role_set: |
+  DJ 역할이 %{role}(으)로 설정되었습니다.
+  상태: **활성화**
+  **영향받는 명령어:**
+  %{commands}

@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_add_match: "يرجى تقديم اسم أغنية أو رابط صالح!"
+pl_add_playlist: "تم البحث عن **%{title}** `%{duration}` • (**%{track} أغنية**) • %{user}"
+pl_add_track: "تم البحث عن **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "تم البحث عن **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "أنت لست **مالك قائمة التشغيل**!"
+pl_add_limit_track: "لا يمكنك إضافة أكثر من **%{limit} أغنية**"
+pl_add_added: "تمت إضافة **%{count} أغنية** إلى `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} أغنية**) • الإنشاء: `[منذ %{create}]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "الصفحة • %{page}/%{pages} | قوائم التشغيل • %{songs}"
+pl_all_view_notnumber: "يرجى إدخال رقم صفحة صالح!"
+pl_all_view_page_notfound: "يوجد فقط **%{page} صفحات**!"
+
+### pl-create commands ###
+pl_create_invalid: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_create_toolong: "لا يمكن أن يتجاوز اسم قائمة التشغيل **16 حرفاً**"
+pl_create_des_toolong: "لا يمكن أن يتجاوز وصف قائمة التشغيل **1000 حرف**"
+pl_create_limit_playlist: "لا يمكنك إنشاء أكثر من **%{limit} قائمة تشغيل**"
+create_created_title: "تم إنشاء قائمة تشغيل جديدة بنجاح!"
+pl_create_created_footer: "اكتب /pl editor لتعديل قائمة التشغيل الخاصة بك!"
+pl_create_created: |
+  **اسم قائمة التشغيل**
+  `%{playlist}`
+
+  **معرّف قائمة التشغيل**
+  `%{id}`
+
+  **الوصف**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+delete_notfound: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_delete_owner: "أنت لست **مالك قائمة التشغيل**"
+pl_delete_confirm: "هل تريد حذف `%{playlist_id}`"
+pl_delete_deleted: "تم **حذف** قائمة التشغيل `%{name}` بنجاح"
+pl_delete_no: "تم إلغاء **حذف** قائمة التشغيل!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "يرجى إدخال رقم صالح!"
+pl_detail_notfound: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_detail_private: "قائمة التشغيل **خاصة**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "قائمة التشغيل: %{name}"
+pl_detail_embed_footer: "الصفحة • %{page}/%{pages} | الأغاني • %{songs} | المدة الإجمالية • %{duration}"
+pl_detail_notnumber: "يرجى إدخال رقم صفحة صالح!"
+pl_detail_page_notfound: "يوجد فقط **%{page} صفحات**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "أدخل **معرّف قائمة التشغيل الجديد** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "أدخل **اسم قائمة التشغيل الجديد**"
+pl_edit_playlist_des_label: "أدخل **وصف قائمة التشغيل الجديد**"
+pl_edit_playlist_private_label: "أدخل **رؤية قائمة التشغيل الجديدة** `[public/private]`"
+pl_edit_success: "تم تعديل قائمة التشغيل بنجاح\nمعرّف قائمة التشغيل الجديد: `%{playlistId}`"
+pl_edit_arg: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_edit_notfound: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_edit_playlist_owner: "أنت لست **مالك قائمة التشغيل**!"
+pl_edit_invalid_id: "يرجى إدخال معرّف قائمة تشغيل صالح وغير موجود!"
+pl_edit_invalid_mode: "وضع الرؤية غير صالح. يرجى استخدام **public** أو **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "معرّف قائمة التشغيل الجديد"
+ineraction_edit_playlist_name_label: "اسم قائمة التشغيل الجديد"
+ineraction_edit_playlist_des_label: "وصف قائمة التشغيل الجديد"
+ineraction_edit_playlist_private_label: "رؤية قائمة التشغيل الجديدة"
+ineraction_edit_playlist_id_placeholder: "أدخل معرّف قائمة التشغيل الجديد! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "أدخل اسم قائمة التشغيل الجديد!"
+ineraction_edit_playlist_des_placeholder: "أدخل وصف قائمة التشغيل الجديد!"
+ineraction_edit_playlist_private_placeholder: "أدخل رؤية قائمة التشغيل الجديدة! [public/private]"
+ineraction_edit_success: "تم تعديل قائمة التشغيل بنجاح\nمعرّف قائمة التشغيل الجديد: `%{playlistId}`"
+ineraction_edit_playlist_error: "حدث خطأ ما. يرجى المحاولة مرة أخرى!"
+ineraction_edit_notfound: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+ineraction_edit_playlist_owner: "أنت لست **مالك قائمة التشغيل**"
+ineraction_edit_invalid_id: "يرجى إدخال معرّف قائمة تشغيل صالح وغير موجود!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### تمت إضافة قائمة التشغيل **%{name}** إلى قائمة الانتظار ♪"
+pl_import_imported_footer: "استمتع بـ %{tracks} أغنية • %{duration} • من النعيم الموسيقي!"
+pl_import_invalid: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_import_private: "قائمة التشغيل **خاصة**"
+pl_import_voice: "يجب أن تكون في قناة صوتية لاستخدام هذا الأمر!"
+pl_import_empty: "قائمة التشغيل **فارغة**"
+
+### pl-info commands! ###
+pl_info_owner: "المالك"
+pl_info_id: "المعرّف"
+pl_info_des: "الوصف"
+pl_info_no_des: "لم يتم تقديم وصف!"
+pl_info_private: "الرؤية"
+pl_public: "عام"
+pl_private: "خاص"
+pl_info_total: "إجمالي الأغاني"
+pl_info_created: "تاريخ الإنشاء"
+pl_info_invalid: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_remove_number_invalid: "يرجى إدخال رقم صالح!"
+pl_remove_notfound: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_remove_owner: "أنت لست **مالك قائمة التشغيل**"
+pl_remove_song_notfound: "لم يتم العثور على الأغنية!"
+pl_remove_removed: "تمت إزالة الأغنية رقم **%{position}** من `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_savequeue_notfound: "يرجى تقديم معرّف قائمة تشغيل صالح!"
+pl_savequeue_owner: "أنت لست **مالك قائمة التشغيل**!"
+pl_savequeue_no_tracks: "لا توجد أغنية قيد التشغيل حالياً!"
+pl_savequeue_no_new_saved: "الأغنية موجودة بالفعل في `%{name}`"
+pl_savequeue_saved: "تم حفظ **%{tracks} أغنية** في `%{name}`"
+
+pl_error_no_node: "لم يتم العثور على خادم Lavalink. يرجى المحاولة مرة أخرى بعد **5 دقائق**"

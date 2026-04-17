@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "REPRODUCIENDO AHORA"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Autor"
+track_requested_by: "Solicitado por"
+track_duration: "Duraci\u00f3n"
+no_same_voice: "\u00a1No est\u00e1s en el mismo canal de voz que yo!"
+filter_already: "**El filtro %{name} ya est\u00e1 activado**"
+filter_reset_on: "**El filtro ha sido Restablecido**"
+filter_reset_already: "**El filtro ya ha sido Restablecido**"
+no_player_filter: "**\u00a1No puedo aplicar un filtro!**"
+filter_menu_on: "**\u00a1Filtro %{name} activado!**"
+
+player_get_exception: "\u00a1Ups! Parece que hay un problema con la pista. \u00bfQuieres que lo intente de nuevo?"
+player_track_error: "La pista tuvo un problema, \u00bfPuedes intentarlo una vez m\u00e1s?"
+player_track_stuck: "Estoy muy triste :(, la pista se atascó. \u00bfQuiz\u00e1s un reintento nos anime?"
+queue_end_desc: "\u00a1Todas las canciones terminaron! \u00bfNecesitas m\u00e1s ritmos?\n\u00a1Usa **/play** para mantener la fiesta!"
+
+leave_pause: "Considerando que me dejaron solo :( El reproductor ha sido pausado."
+leave_resume: "Considerando que alguien se ha unido, el reproductor ha sido reanudado."
+
+player_end: "El canal ha estado vac\u00edo durante casi 15 minutos, as\u00ed que decid\u00ed irme porque no me gusta estar solo"
+
+### Last FM Scrobble ###
+expired_login_session: "Tu sesi\u00f3n de Last.fm ha expirado o es inv\u00e1lida.\nPor favor vuelve a autenticarte para continuar usando la funci\u00f3n de scrobble."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} \u2022 Aquellos que desean cantar siempre encuentran una canci\u00f3n \u266a"
+milestone_track_desc: |
+  ## OH Oye
+  \u00a1Has escuchado **%{total}** pistas! \u00bfTu lista de reproducci\u00f3n es infinita, o simplemente est\u00e1s obsesionado con la m\u00fasica?
+

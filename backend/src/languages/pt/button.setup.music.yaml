@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "A reproducao da musica foi parada. Espero que voce tenha curtido bastante!"
+skip_notfound: "Ops. Parece que nao ha nenhuma faixa para pular!"
+skip_msg: "Eu pulei a faixa. Espero que nao se importe :p"
+previous_msg: "Bom, acho que estamos rebobinando! Faixa anterior chegando <3"
+previous_notfound: "Desculpe, nao e possivel voltar mais. Nenhuma faixa anterior encontrada :("
+resume_msg: "A musica voltou! Vamos continuar curtindo o som ♪"
+pause_msg: "A musica foi pausada. Faca uma pausa e aproveite o silencio."
+loop_current: "Agora a musica atual vai tocar em loop. Aproveite a repeticao!"
+loop_all: "A fila agora esta configurada para loop. Deixe a musica tocar em repeticao!"
+unloop_all: "O modo de loop foi desativado. Aproveite a variedade de faixas!"
+
+### Need to join voice & same voice to use command!
+no_player: "Voce aperta um botao e nada acontece. Talvez voce devesse tocar algo primeiro!"
+no_same_voice: "Voce aperta um botao e ele fica vermelho. Voce nao esta no mesmo canal de voz que eu!"
+no_in_voice: "Todos os botoes nao reagem a voce. Voce nao esta em um canal de voz!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "TOCANDO AGORA"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Pedido por %{request}"
+setup_footer: "Faixas Restantes • %{totalsong} | Duracao Total • %{duration}"
+setup_queuemsg: "**Entre em um canal de voz e toque musicas usando o nome ou URL aqui!**"
+setup_playembed_author: "Nenhuma musica esta tocando no momento!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Adicionada **%{title}** • %{request}"
+play_playlist: "Adicionada **%{title}** • (**%{songs} Faixas**) • %{request}"
+play_result: "Adicionada **%{title}** • %{request}"
+play_emoji: "Nao sei como tocar isso... Nao e uma faixa nem uma playlist."
+setup_content: "**Ei! Meu deck esta pronto pra sua musica! E so mandar algo aqui!**"

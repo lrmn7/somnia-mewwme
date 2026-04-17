@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_add_match: "Пожалуйста, укажите корректное название песни или URL!"
+pl_add_playlist: "Найдено **%{title}** `%{duration}` • (**%{track} Песен**) • %{user}"
+pl_add_track: "Найдено **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Найдено **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Вы не являетесь **Владельцем плейлиста**!"
+pl_add_limit_track: "Вы не можете добавить больше **%{limit} Песен**"
+pl_add_added: "Добавлено **%{count} Песен** в `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Песен**) • Создан: `[%{create} назад]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Страница • %{page}/%{pages} | Плейлисты • %{songs}"
+pl_all_view_notnumber: "Пожалуйста, введите допустимый номер страницы!"
+pl_all_view_page_notfound: "Всего **%{page} Страниц(ы)**!"
+
+### pl-create commands ###
+pl_create_invalid: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_create_toolong: "Название плейлиста не может быть длиннее **16 символов**"
+pl_create_des_toolong: "Описание плейлиста не может быть длиннее **1000 символов**"
+pl_create_limit_playlist: "Вы не можете создать больше **%{limit} Плейлистов**"
+create_created_title: "Новый плейлист успешно создан!"
+pl_create_created_footer: "Введите /pl editor для редактирования плейлиста!"
+pl_create_created: |
+  **Название плейлиста**
+  `%{playlist}`
+
+  **ID плейлиста**
+  `%{id}`
+
+  **Описание**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Пожалуйста, укажите допустимый ID плейлиста!"
+delete_notfound: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_delete_owner: "Вы не являетесь **Владельцем плейлиста**"
+pl_delete_confirm: "Вы хотите удалить `%{playlist_id}`"
+pl_delete_deleted: "Плейлист `%{name}` был успешно **Удалён**"
+pl_delete_no: "**Удаление** плейлиста отменено!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Пожалуйста, введите допустимое число!"
+pl_detail_notfound: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_detail_private: "Плейлист **Приватный**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Плейлист: %{name}"
+pl_detail_embed_footer: "Страница • %{page}/%{pages} | Треки • %{songs} | Общая длительность • %{duration}"
+pl_detail_notnumber: "Пожалуйста, введите допустимый номер страницы!"
+pl_detail_page_notfound: "Всего **%{page} Страниц(ы)**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Введите ваш **Новый ID плейлиста** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Введите ваше **Новое название плейлиста**"
+pl_edit_playlist_des_label: "Введите ваше **Новое описание плейлиста**"
+pl_edit_playlist_private_label: "Введите **Новую видимость плейлиста** `[public/private]`"
+pl_edit_success: "Плейлист успешно отредактирован\nНовый ID плейлиста: `%{playlistId}`"
+pl_edit_arg: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_edit_notfound: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_edit_playlist_owner: "Вы не являетесь **Владельцем плейлиста**!"
+pl_edit_invalid_id: "Пожалуйста, введите допустимый и несуществующий ID плейлиста!"
+pl_edit_invalid_mode: "Недопустимый режим видимости. Пожалуйста, используйте **public** или **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Новый ID плейлиста"
+ineraction_edit_playlist_name_label: "Новое название плейлиста"
+ineraction_edit_playlist_des_label: "Новое описание плейлиста"
+ineraction_edit_playlist_private_label: "Новая видимость плейлиста"
+ineraction_edit_playlist_id_placeholder: "Введите ваш новый ID плейлиста! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Введите ваше новое название плейлиста!"
+ineraction_edit_playlist_des_placeholder: "Введите ваше новое описание плейлиста!"
+ineraction_edit_playlist_private_placeholder: "Введите новую видимость плейлиста! [public/private]"
+ineraction_edit_success: "Плейлист успешно отредактирован\nНовый ID плейлиста: `%{playlistId}`"
+ineraction_edit_playlist_error: "Что-то пошло не так. Пожалуйста, попробуйте ещё раз!"
+ineraction_edit_notfound: "Пожалуйста, укажите допустимый ID плейлиста!"
+ineraction_edit_playlist_owner: "Вы не являетесь **Владельцем плейлиста**"
+ineraction_edit_invalid_id: "Пожалуйста, введите допустимый и несуществующий ID плейлиста!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Плейлист **%{name}** добавлен в очередь ♪"
+pl_import_imported_footer: "Наслаждайтесь %{tracks} песнями • %{duration} • музыкального блаженства!"
+pl_import_invalid: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_import_private: "Плейлист **Приватный**"
+pl_import_voice: "Вы должны быть в голосовом канале, чтобы использовать эту команду!"
+pl_import_empty: "Плейлист **Пуст**"
+
+### pl-info commands! ###
+pl_info_owner: "Владелец"
+pl_info_id: "ID"
+pl_info_des: "Описание"
+pl_info_no_des: "Описание не указано!"
+pl_info_private: "Видимость"
+pl_public: "Публичный"
+pl_private: "Приватный"
+pl_info_total: "Всего песен"
+pl_info_created: "Создан"
+pl_info_invalid: "Пожалуйста, укажите допустимый ID плейлиста!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_remove_number_invalid: "Пожалуйста, введите допустимое число!"
+pl_remove_notfound: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_remove_owner: "Вы не являетесь **Владельцем плейлиста**"
+pl_remove_song_notfound: "Песня не найдена!"
+pl_remove_removed: "Удалена песня **номер %{position}** из `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_savequeue_notfound: "Пожалуйста, укажите допустимый ID плейлиста!"
+pl_savequeue_owner: "Вы не являетесь **Владельцем плейлиста**!"
+pl_savequeue_no_tracks: "Сейчас ничего не воспроизводится!"
+pl_savequeue_no_new_saved: "Песня уже существует в `%{name}`"
+pl_savequeue_saved: "Сохранено **%{tracks} Песен** в `%{name}`"
+
+pl_error_no_node: "Сервер Lavalink не найден. Пожалуйста, повторите попытку через **5 минут**"

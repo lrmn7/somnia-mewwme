@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **필터 %{name} 켜짐!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **이 소리가 마음에 드셨으면 좋겠어요!**
+filter_already: "뭐라고요? %{name} VST가 이미 켜져 있습니다... 아무 것도 할 수 없습니다."
+filter_number: "EQ에 입력할 수 있는 숫자가 아닙니다..."
+filter_greater: "**0**보다 큰 숫자여야 합니다!"
+filter_less: "와! 너무 큽니다! **10** 미만이 좋겠습니다..."
+
+### Bassboost command!
+bassboost_set: "**베이스부스트가 %{amount}dB로 설정되었습니다**"
+bassboost_limit: "**-10**에서 **10** 사이의 숫자를 사용해주세요"
+
+### Equalizer command!
+eq_author: "이퀄라이저"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  **-10**에서 **10**까지 설정할 수 있는 **10개의 밴드**가 있습니다.
+  모두 입력할 필요는 없으며, 변경하고 싶은 것만 입력하면 됩니다.
+  건너뛰고 싶은 밴드는 **0**으로 남겨두면 됩니다.
+eq_field_title: "예시:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "이퀄라이저 초기화 • %{prefix}eq reset"
+eq_on: "EQ가 **%{bands}**(으)로 설정되었습니다!"
+eq_number: "유효한 숫자를 입력해주세요!"
+eq_greater: "숫자는 **-10**보다 커야 합니다"
+eq_than: "숫자는 **10**보다 작아야 합니다"
+
+### Pitch command!
+pitch_on: "좋아요, 피치가 **%{amount}**(으)로 설정되었습니다!"
+
+### Rate command!
+rate_on:  "좋아요! 속도가 **%{amount}x**(으)로 설정되었습니다!"
+
+### Speed command!
+speed_on: "네, 속도를 **%{amount}x**(으)로 변경합니다!"
+
+### Reset command!
+reset_on: "**모든 VST 초기화 중!** 원래 소리로 돌아갑니다!"
+reset_already:  "VST가 **이미 꺼져 있습니다**, 잊으셨나요?"
+
+# Invalid Number
+number_invalid: "처리할 수 없는 숫자입니다... 유효한 숫자로 다시 시도해주세요."

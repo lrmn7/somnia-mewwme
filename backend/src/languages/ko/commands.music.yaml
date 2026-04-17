@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "추천 목록을 확인해보세요!~"
+search_desc: "### 이봐요! 요청하신 검색 결과를 찾았습니다"
+search_end_desc2: "### 이런! %{user}님, 시간 내에 노래를 선택하지 않으셨습니다\n**다시 시도해보세요!**"
+search_footer: "%{countSong}개의 트랙을 찾았습니다"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` 즐겨주세요 ♥"
+
+search_active: "이미 검색 중입니다! 이전 검색이 끝날 때까지 기다린 후 새로운 검색을 시작하세요."
+search_no_result: "검색 결과를 찾을 수 없습니다 :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` 즐겨주세요 ♥"
+no_songs_playing: "현재 재생 중인 노래가 없습니다!"
+
+### Autoplay command!
+autoplay_off: "자동재생이 **비활성화**되었습니다"
+autoplay_on: "자동재생이 **활성화**되었습니다"
+autoplay_no_songs_playing: "재생 중인 노래가 없습니다!"
+
+### ClearQueue command!
+clearqueue_msg: "대기열이 **초기화**되었습니다"
+
+### Forward command!
+forward_msg: "**%{user}님이 %{title}을(를)** `%{duration}`**(으)로 빨리감기했습니다**"
+forward_beyond: "노래가 곧 끝납니다. 그 이상으로 빨리감기할 수 없습니다!"
+
+### PlayNext command!
+playnext_desc: "### %{name} 다음에 재생 ♪"
+playnext_queue_empty: "대기열이 비어 있습니다. 먼저 노래를 추가해주세요"
+playnext_notfound: "노래를 찾을 수 없습니다!"
+
+# Execute when invalid
+no_node: "**Lavalink 서버를 찾을 수 없습니다. 5분 후에 다시 시도해주세요**"
+
+### Join command!
+join_msg: "플레이어가 성공적으로 생성되어 %{channel}에 참여했습니다"
+join_already: "이미 %{channel}에 있습니다"
+join_no_in_voice: "음성 채널에 접속해 있지 않습니다!"
+join_no_same_voice: "저와 같은 음성 채널에 있지 않습니다!"
+
+### Loop command!
+loop_current: "현재 %{title} 반복 재생 중"
+loop_all: "**대기열 반복 모드가 활성화되었습니다**"
+unloop_all: "**반복 재생 모드가 비활성화되었습니다**"
+loop_invalid: "잘못된 반복 모드입니다. **비활성화**를 사용해주세요"
+loop_already: "반복 모드가 이미 **%{mode}**입니다"
+
+### Lyrics command!
+provide_lyrics: "유효한 **노래 제목**을 입력해주세요"
+lyrics_title: "**%{song}**의 가사"
+lyrics_notfound: "**이 노래의 가사를 찾을 수 없습니다!**"
+lyrics_toolong: "**가사가 너무 깁니다. 최대 4048자까지 허용됩니다!**"
+lyrics_disable: " **가사 기능이 현재 비활성화되어 있습니다!**"
+lyrics_noquery: "**유효한 **노래 제목**을 입력해주세요"
+lyrics_error: "**오류: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "현재 재생 중"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "아티스트"
+nowplaying_total_duration_title: "재생시간"
+nowplaying_request_title: "요청한 사람"
+
+### Pause command!
+pause_msg: "**트랙 %{title}이(가) 일시정지되었습니다!"
+
+### Play command!
+play_no_same_voice: "저와 같은 음성 채널에 있지 않습니다!"
+play_no_in_voice: "음성 채널에 접속해 있지 않습니다!"
+play_arg: "유효한 노래 이름 또는 URL을 입력해주세요!"
+play_emoji: "**이런! 이모지입니다. 이모지로는 노래를 재생할 수 없습니다**"
+play_match: "**이런! 죄송합니다, 노래를 찾을 수 없습니다! 다시 시도해주세요**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## 간단하네요!
+  ### %{title}이(가) 대기열에 추가되었습니다
+
+play_queue_max: |
+  이런!>,.,< 대기열이 너무 깁니다. 최대 %{limitqueue}곡입니다.
+  [**프리미엄**](%{premium})으로 업그레이드하여 무제한 대기열을 이용하세요!
+
+play_playlist_max: |
+  이런!>,.,< 재생목록이 너무 깁니다. 최대 %{limitqueue}곡입니다.
+  [**프리미엄**](%{premium})으로 업그레이드하여 무제한 재생목록을 이용하세요!
+
+### Previous command!
+previous_notfound: |
+  **대기열에 이전 노래가 없습니다!
+  /play로 더 많은 트랙을 추가하고 음악을 계속 즐기세요!**
+previous_msg: |
+  **이전 노래로 돌아갑니다!
+  현재 재생 중: %{title}**
+
+### Queue command!
+queue_number_invalid: "유효한 숫자를 입력해주세요!"
+queue_title: "대기열 재생 중..."
+queue_description: "**%{title}**\n\n**나머지 대기열 %{rest}**"
+queue_footer: "페이지 • %{page}/%{pages} | 노래 • %{queue_lang} | 총 재생시간 • %{duration}"
+queue_notnumber: "유효한 페이지 번호를 입력해주세요!"
+queue_page_notfound: "**%{page}페이지**만 있습니다"
+
+### RemoveTrack command!
+removetrack_number_invalid: " 유효한 숫자를 입력해주세요!"
+removetrack_already: "**이미 재생 중인 노래는 제거할 수 없습니다**"
+removetrack_notfound: "**죄송합니다 %{user}님, 노래를 찾을 수 없습니다!**"
+removetrack_desc: "**대기열에서 %{title}이(가) 제거되었습니다!**"
+
+### Replay command!
+replay_msg: "**%{user}님이 %{title}을(를) 다시 재생합니다**"
+replay_not_seekable: "트랙 **%{title}**은(는) 다시 재생할 수 없습니다."
+
+### Resume command!
+resume_msg: "**%{title} 재생이 재개되었습니다"
+
+### Rewind command!
+rewind_msg: "**%{user}님이 %{title}을(를)** `%{duration}`**(으)로 되감기했습니다**"
+rewind_beyond: "노래가 방금 시작되었습니다. 그 이상으로 되감기할 수 없습니다!"
+
+### Seek command!
+seek_beyond: "노래 재생시간을 넘어서 탐색할 수 없습니다!"
+seek_invalid: "잘못된 탐색 시간입니다. 유효한 타임스탬프를 사용해주세요. 예: **1:30**"
+seek_msg: "**%{title}을(를)** `%{duration}`**(으)로 탐색했습니다**"
+seek_not_seekable: "트랙 **%{title}**은(는) 되감기 또는 빨리감기할 수 없습니다."
+
+### Skip command!
+skip_notfound: |
+  **건너뛸 노래가 없습니다! 건너뛸 곡이 없는 것 같습니다.
+  /play로 더 많은 트랙을 추가하여 음악을 계속 즐기세요!**
+skip_msg: "**%{title}이(가) 건너뛰어졌습니다**"
+skip_number_invalid: "유효한 숫자를 입력해주세요!"
+
+### Stop command!
+stop_msg: "**%{title}이(가) 정지되었습니다**"
+
+### Shuffle command!
+shuffle_title: "대기열을 셔플합니다"
+
+### Volume command!
+volume_number_invalid: "유효한 숫자를 입력해주세요!"
+volume_invalid: "잘못된 볼륨입니다. **1**에서 **100** 사이의 숫자를 사용해주세요"
+volume_msg: "**볼륨이 %{volume}%로 설정되었습니다, %{user}님 즐기세요**"
+volume_max: "**볼륨이 이미 최대 100%입니다**"
+
+### play source commands
+url_no_allowed: "노래 이름/아티스트 이름을 사용해주세요 (URL은 허용되지 않습니다)"
+play_arg_source: "유효한 노래 이름/아티스트를 입력해주세요!"
+
+## Temporarily disabled commands
+youtube_disabled: "YouTube 지원이 일시적으로 사용할 수 없습니다"
+autoplay_disabled: "자동재생이 일시적으로 비활성화되었습니다."

@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "Режим 24/7 теперь **Включён**"
+247_off: "Режим 24/7 теперь **Выключен**"
+247_already: "Режим 24/7 уже **%{mode}**"
+247_arg_error: "Недопустимый режим 24/7. Пожалуйста, используйте %{text}"
+247_no_in_voice: "Вы не в голосовом канале!"
+
+
+### Set Language command! ###
+provide_lang: "**Недопустимый язык. Пожалуйста, используйте** `%{languages}`"
+lang_set: "**Язык установлен на** `%{language}`"
+lang_change: "**Язык изменён на** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "Пожалуйста, укажите допустимый префикс!"
+prefix_length: "**Префикс не может быть длиннее 10 символов**"
+prefix_set: "**Префикс установлен на** `%{prefix}`"
+prefix_change: "**Префикс изменён на** `%{prefix}`"
+
+### Control command!
+control_set: "**Режим управления плеером установлен на %{toggle}**"
+control_arg_error: "Недопустимый аргумент. Пожалуйста, используйте %{text}"
+control_already: "Уведомления о песнях уже **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Недопустимо! Пожалуйста, используйте %{text}"
+setup_enable: "**Ой! Музыкальная система уже существует.**"
+setup_topic: "♪ Те, кто хочет петь, всегда найдут песню. ♪"
+setup_msg: "*`Музыкальная система успешно настроена в`* %{channel}\n```Примечание: Не удаляйте сообщения, которые я создал, чтобы я мог работать корректно.```"
+setup_null: "*`Канал настройки успешно удалён!`*"
+setup_deleted: "*`Канал настройки успешно удалён!`*"
+setup_null_inguild: "**Музыкальная система не найдена на этом сервере! Готов к удалению данных**"
+setup_queuemsg: "**Зайдите в голосовой канал и воспроизводите песни по названию или URL здесь!**"
+setup_playembed_author: "Сейчас ничего не воспроизводится"
+
+### Themes command!
+error_themes: "Ошибка... Пожалуйста, попробуйте ещё раз."
+succes_themes: "**Тема успешно изменена на %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "Примечание: Эта ссылка истечёт через %{expired}."
+lastfm_login_title: "Вход в Last.fm"
+lastfm_login_desc: "Хотите предоставить доступ к вашему аккаунту [Last.fm](https://www.last.fm/user/eleremen)?\nЕсли да, нажмите кнопку ниже, чтобы начать процесс авторизации."
+lastfm_not_login_desc: "Вы не вошли в Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Выход из Last.fm"
+lastfm_logout_desc: "Вы успешно вышли из Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Функция Last.fm отключена."
+lastfm_feature_disabled_desc: "Функция Last.fm в настоящее время отключена. Пожалуйста, свяжитесь с администратором для получения дополнительной информации."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "Уведомление для YouTube-канала **%{ytchannel}** не найдено."
+notify_youtube_removed: "Вы удалили уведомление для YouTube-канала **%{ytchannel}**."
+notify_youtube_disabled: "Функция уведомлений YouTube в настоящее время отключена. Свяжитесь с персоналом для получения дополнительной информации."
+notify_youtube_already: "Уведомления для YouTube-канала %{ytchannel} уже настроены."
+notify_youtube_invalid_channel: "Произошла ошибка при указании текстового канала. Пожалуйста, проверьте!"
+notify_youtube_set: "Уведомление YouTube настроено для **%{ytchannel}** в %{channelid}."
+notify_youtube_404: |
+  Указанный ID YouTube-канала не найден.
+  Чтобы найти ID канала, перейдите на страницу YouTube-канала и проверьте URL.
+  ID канала — это строка букв и цифр после `/channel/` (например: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   Вы достигли лимита в %{limit} уведомлений.
+   Перейдя на [premium](%{premium}), вы сможете настроить до %{limitpremium} уведомлений.
+
+notify_youtube_limit_reached_premium: |
+   Вы достигли лимита в %{limit} уведомлений.
+   Это максимально допустимое количество. Рассмотрите удаление некоторых уведомлений, чтобы освободить место для новых.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Уведомление для пользователя Twitch **%{twitchusername}** не найдено."
+notify_twitch_removed: "Вы удалили уведомление для пользователя Twitch **%{twitchusername}**."
+notify_twitch_disabled: "Функция уведомлений Twitch в настоящее время отключена. Свяжитесь с персоналом для получения дополнительной информации."
+notify_twitch_already: "Вы уже настроили уведомления для канала Twitch %{twitchusername}."
+notify_twitch_invalid_channel: "Произошла ошибка при указании текстового канала. Пожалуйста, проверьте!"
+notify_twitch_set: "Уведомление Twitch настроено для **%{twitchusername}** в %{channelid}."
+notify_twitch_error: "Произошла непредвиденная ошибка при обработке уведомления Twitch для **{twitchusername}** в канале **{channelid}**. Пожалуйста, попробуйте ещё раз или свяжитесь с поддержкой, если проблема сохраняется."
+notify_twitch_limit_reached_non_premium: |
+   Вы достигли лимита в %{limit} уведомлений.
+   Перейдя на [premium](%{premium}), вы сможете настроить до %{limitpremium} уведомлений.
+
+notify_twitch_limit_reached_premium: |
+   Вы достигли лимита в %{limit} уведомлений.
+   Это максимально допустимое количество. Рассмотрите удаление некоторых уведомлений, чтобы освободить место для новых.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Функция временных голосовых каналов %{status}."
+tempvoice_disabled: "Временные голосовые каналы отключены."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Ошибка... только %{text}."
+status_voice_channel_true: "Статус голосового канала установлен на **%{type}**."
+status_voice_channel_false: "Статус голосового канала установлен на **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "Эта команда может быть выполнена только на сервере!"
+no_data_patreon: "Данные Patreon не найдены (Ошибка базы данных)"
+no_data_patreon_title: "Не найдено"
+no_data_patreon_desc: |
+  Если вы уже подписались, убедитесь, что ваш аккаунт Discord привязан к Patreon!
+no_data_patreon_footer: "Синхронизация с Patreon может занять некоторое время, пожалуйста, проверьте позже"
+no_patreon_guild_membership: |
+  привет, ваш план patreon — **пользовательский уровень**.
+  пожалуйста, перейдите на **серверный уровень**, чтобы разблокировать premium-доступ для сервера.
+patreon_guild_membership_full_quota: |
+  вы использовали всю квоту серверов!
+  **статус:** %{status} серверов использовано.
+
+  решение:
+  1. повысьте свой уровень на patreon.
+  2. или отключите premium на старом сервере.
+patreon_guild_membership_already_before: "Вы уже активировали premium на этом сервере ранее!"
+patreon_guild_membership_already: "**УЖЕ PREMIUM**, так как спонсируется кем-то другим.\nСохраните свою квоту для других серверов!"
+patreon_guild_membership_claim_title: "Подтверждение активации"
+patreon_guild_membership_claim_desc: |
+  вы уверены, что хотите активировать **premium-сервер** для:
+  **%{guildName}**
+
+  это действие использует **1 серверную квоту**.
+  оставшаяся квота: **%{status}**
+patreon_guild_membership_claim_success: |
+  успешно! **%{guildName}** теперь **premium-сервер**.
+
+  **спонсор:** %{user}
+  **оставшаяся квота:** %{status}
+  спасибо за поддержку на patreon!
+patreon_guild_membership_claim_success_title: "💎 Premium активирован!"
+patreon_guild_membership_claim_cancel: "Активация premium отменена."
+patreon_guild_membership_claim_norespon: "Активация автоматически отменена из-за отсутствия ответа."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Сервер активирован (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **пользователь-спонсор:** %{sponsorTag} %{sponsorId}
+  **целевой сервер:** %{guildName} %{guildId}
+  **статус квоты:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Вы не можете отозвать premium этого сервера, так как не вы его регистрировали."
+patreon_guild_unclaim_title: "Подтверждение отзыва Premium"
+patreon_guild_unclaim_desc: |
+  Вы уверены, что хотите **ОТМЕНИТЬ** Premium-статус сервера **%{guildName}**?
+  **Последствия:** Premium-функции будут отключены на этом сервере.
+  Ваша серверная квота будет восстановлена (+1).
+  Текущая оставшаяся квота: **%{status}**
+patreon_guild_unclaim_success_title: "Premium отозван"
+patreon_guild_unclaim_success: |
+  Premium-статус для **%{guildName}** был успешно отозван.
+  **Квота восстановлена:** 1 Сервер
+  **Новая оставшаяся квота:** %{status}
+patreon_guild_unclaim_cancel: "Процесс отзыва premium отменён."
+patreon_guild_unclaim_norespon: "⏱️ Время истекло. Процесс отменён."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Деактивированные серверы (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Пользователь:** %{sponsorTag} %{sponsorId}
+  **Сервер:** %{guildName}} %{guildId}
+  **Квота восстановлена:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Пользователь:** %{userTag} (%{userId})
+  **Сервер:** %{guildName} (%{guildId})
+  **Квота:** %{quota}
+  **Истекает:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Действие: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "ID транзакции не найден или уже использован."
+kofi_linked_success_title: "Платёж успешно привязан!"
+kofi_linked_success_desc: "Теперь вы можете использовать `/premium claim <kofi>` без TxID."
+kofi_no_data_title: "Данные не найдены!"
+kofi_no_data_desc: |
+  Если вы уже оплатили, но не привязали аккаунт Discord к Kofi,
+  используйте: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Нет квоты, но вы являетесь premium-пользователем."
+kofi_full_server_quota_title: "Квота заполнена!"
+kofi_full_server_quota_desc: "Вы использовали **%{quota}** серверных слотов."
+kofi_server_already_claim_desc: "**Уже активно!**\nВы уже активировали Premium на этом сервере ранее."
+kofi_server_already_active_desc: " **Уже Premium!**\nЭтот сервер уже активирован как premium другим пользователем."
+kofi_guild_membership_claim_success: |
+  Premium успешно активирован!
+  **Использование квоты:** %{quota}
+  **Истекает через:** %{expires}
+kofi_guild_membership_claim_footer: "Спасибо за вашу поддержку!"
+kofi_action_title: "🏗️ Ko-fi Действие: %{type}"
+kofi_action_description: "**Пользователь:** %{userTag} (`%{userId}`)\n**Сервер:** %{guildName} (`%{guildId}`)\n**Действие:** %{action}\n**Квота:** %{quota}"
+kofi_action_activation: "Сервер активирован"
+kofi_action_manual_link: "Платёж привязан вручную"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium отозван"
+kofi_guild_unclaim_success_desc: |
+  Premium-статус для **%{guildName}** был успешно отозван.
+  **Квота восстановлена:** 1 Сервер
+kofi_guild_not_owned_by_user: "Вы не можете отозвать premium этого сервера, так как не вы его регистрировали."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Деактивированные серверы %{platform}"
+premium_unclaim_log_desc: |
+  **Пользователь:** %{userTag} %{userId}
+  **Сервер:** %{guildName}} %{guildId}
+  **Квота восстановлена:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "Система DJ-роли была **Отключена**."
+dj_role_missing_role: "Для действия `set` необходимо указать роль."
+dj_role_set: |
+  DJ-роль установлена на %{role}.
+  Статус: **Включена**
+  **Затронутые команды:**
+  %{commands}

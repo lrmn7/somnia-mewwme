@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ La lecture automatique est maintenant **Activee**"
+autoplay_off: "Hmmm~~ La lecture automatique est maintenant **Desactivee**"
+autoplay_no_song: "Aucune chanson en cours de lecture !"
+
+### Loop command!
+loop_current: "La chanson actuelle sera maintenant jouee en boucle. Profitez de la repetition !"
+loop_all: "La file d'attente est maintenant en boucle. Laissez la musique tourner en boucle !"
+unloop_all: "Le mode boucle a ete desactive. Profitez de la variete des morceaux !"
+
+### Pause command!
+pause_msg: "La musique est en pause. Faites une pause et profitez du silence."
+
+### Resume command!
+resume_msg: "La musique est de retour ! Continuons a groover ♪"
+
+previous_notfound: "Desole, impossible de revenir en arriere. Aucun morceau precedent trouve :("
+previous_msg: "Eh bien, on rembobine ! Morceau precedent en approche <3"
+
+### Queue command!
+queue_title: "File d'attente en cours..."
+queue_description: "**%{title} **\n\n**Reste de la file d'attente %{list_song}**"
+queue_footer: "Page • %{page}/%{pages} | Chansons • %{queue_lang} | Duree totale • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Devinez ce que j'ai fait ? J'ai melange la file d'attente pour vous !"
+
+### Skip command!
+skip_msg: "J'ai passe le morceau. J'espere que ca ne vous derange pas :p"
+skip_notfound: "Oups ! Il semble qu'il n'y ait aucun morceau a passer ! Continuez a groover avec le morceau actuel ♪"
+
+### Stop command!
+stop_msg: "La lecture de la musique a ete arretee. J'espere que vous avez passe un bon moment !"
+
+### Volume command!
+voldown_msg: "Le volume a ete diminue de %{volume}%. Profitez des vibrations plus douces !"
+volume_invalid: "Volume invalide. La plage disponible est entre **1** et **100**"
+volup_msg: "Le volume a ete augmente de %{volume}%. Montez le son !"
+volume_max: "Je ne peux pas monter le volume au-dessus de 100%"
+volume_min: "Ohno~~ deja au volume minimum !"

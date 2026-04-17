@@ -3,12 +3,6 @@ import Fastify from "fastify";
 // @ts-ignore — voucher-code-generator has no types
 import voucher from "voucher-code-generator";
 
-/**
- * POST /v1/playlists
- *
- * Creates a new playlist for a user.
- * Body: { userId, name, description?, private? }
- */
 export async function postCreatePlaylist(
   client: Manager,
   req: Fastify.FastifyRequest,
@@ -48,15 +42,13 @@ export async function postCreatePlaylist(
     tracks: [],
   });
 
-  res
-    .code(201)
-    .send({
-      id,
-      name,
-      owner: userId,
-      private: Boolean(isPrivate),
-      created: Date.now(),
-      description,
-      tracks: [],
-    });
+  res.code(201).send({
+    id,
+    name,
+    owner: userId,
+    private: Boolean(isPrivate),
+    created: Date.now(),
+    description,
+    tracks: [],
+  });
 }

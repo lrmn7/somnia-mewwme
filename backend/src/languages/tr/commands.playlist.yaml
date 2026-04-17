@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_add_match: "Lutfen gecerli bir sarki adi veya URL girin!"
+pl_add_playlist: "Arandi **%{title}** `%{duration}` • (**%{track} Sarki**) • %{user}"
+pl_add_track: "Arandi **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Arandi **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "**Oynatma Listesi Sahibi** degilsiniz!"
+pl_add_limit_track: "**%{limit} Sarki**'dan fazla ekleyemezsiniz"
+pl_add_added: "**%{count} Sarki** `%{playlist}` listesine eklendi"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Sarki**) • Olusturulma: `[%{create} once]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Sayfa • %{page}/%{pages} | Oynatma Listeleri • %{songs}"
+pl_all_view_notnumber: "Lutfen gecerli bir sayfa numarasi girin!"
+pl_all_view_page_notfound: "Sadece **%{page} Sayfa** var!"
+
+### pl-create commands ###
+pl_create_invalid: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_create_toolong: "Oynatma Listesi Adi **16 Karakter**'den uzun olamaz"
+pl_create_des_toolong: "Oynatma Listesi Aciklamasi **1000 Karakter**'den uzun olamaz"
+pl_create_limit_playlist: "**%{limit} Oynatma Listesi**'nden fazla olusturamazsiniz"
+create_created_title: "Yeni Oynatma Listesi Basariyla Olusturuldu!"
+pl_create_created_footer: "Oynatma listenizi duzenlemek icin /pl editor yazin!"
+pl_create_created: |
+  **Oynatma Listesi Adi**
+  `%{playlist}`
+
+  **Oynatma Listesi ID**
+  `%{id}`
+
+  **Aciklama**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+delete_notfound: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_delete_owner: "**Oynatma Listesi Sahibi** degilsiniz"
+pl_delete_confirm: "`%{playlist_id}` listesini silmek istiyor musunuz"
+pl_delete_deleted: "`%{name}` oynatma listesi basariyla **Silindi**"
+pl_delete_no: "Oynatma Listesi **Silme** islemi iptal edildi!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Lutfen gecerli bir sayi girin!"
+pl_detail_notfound: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_detail_private: "Oynatma Listesi **Gizli**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Oynatma Listesi: %{name}"
+pl_detail_embed_footer: "Sayfa • %{page}/%{pages} | Sarkilar • %{songs} | Toplam Sure • %{duration}"
+pl_detail_notnumber: "Lutfen gecerli bir sayfa numarasi girin!"
+pl_detail_page_notfound: "Sadece **%{page} Sayfa** var"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "**Yeni Oynatma Listesi ID'nizi** girin `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "**Yeni Oynatma Listesi Adinizi** girin"
+pl_edit_playlist_des_label: "**Yeni Oynatma Listesi Aciklamanizi** girin"
+pl_edit_playlist_private_label: "**Yeni Oynatma Listesi Gorunurlugunu** girin `[public/private]`"
+pl_edit_success: "Oynatma listesi basariyla duzenlendi\nYeni Oynatma Listesi ID: `%{playlistId}`"
+pl_edit_arg: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_edit_notfound: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_edit_playlist_owner: "**Oynatma Listesi Sahibi** degilsiniz!"
+pl_edit_invalid_id: "Lutfen gecerli ve mevcut olmayan bir Oynatma Listesi ID'si girin!"
+pl_edit_invalid_mode: "Gecersiz Gorunurluk modu. Lutfen **public** veya **private** kullanin"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Yeni Oynatma Listesi ID"
+ineraction_edit_playlist_name_label: "Yeni Oynatma Listesi Adi"
+ineraction_edit_playlist_des_label: "Yeni Oynatma Listesi Aciklamasi"
+ineraction_edit_playlist_private_label: "Yeni Oynatma Listesi Gorunurlugu"
+ineraction_edit_playlist_id_placeholder: "Yeni Oynatma Listesi ID'nizi girin! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Yeni Oynatma Listesi Adinizi girin!"
+ineraction_edit_playlist_des_placeholder: "Yeni Oynatma Listesi Aciklamanizi girin!"
+ineraction_edit_playlist_private_placeholder: "Yeni Oynatma Listesi Gorunurlugunu girin! [public/private]"
+ineraction_edit_success: "Oynatma listesi basariyla duzenlendi\nYeni Oynatma Listesi ID: `%{playlistId}`"
+ineraction_edit_playlist_error: "Bir seyler yanlis gitti. Lutfen tekrar deneyin!"
+ineraction_edit_notfound: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+ineraction_edit_playlist_owner: "**Oynatma Listesi Sahibi** degilsiniz"
+ineraction_edit_invalid_id: "Lutfen gecerli ve mevcut olmayan bir Oynatma Listesi ID'si girin!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### **%{name}** oynatma listesi siraya eklendi ♪"
+pl_import_imported_footer: "%{tracks} sarki • %{duration} • muzik keyfinin tadini cikar!"
+pl_import_invalid: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_import_private: "Oynatma Listesi **Gizli**"
+pl_import_voice: "Bu komutu kullanmak icin bir ses kanalinda olmalisiniz!"
+pl_import_empty: "Oynatma Listesi **Bos**"
+
+### pl-info commands! ###
+pl_info_owner: "Sahip"
+pl_info_id: "ID"
+pl_info_des: "Aciklama"
+pl_info_no_des: "Aciklama belirtilmemis!"
+pl_info_private: "Gorunurluk"
+pl_public: "Herkese Acik"
+pl_private: "Gizli"
+pl_info_total: "Toplam Sarki"
+pl_info_created: "Olusturulma"
+pl_info_invalid: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_remove_number_invalid: "Lutfen gecerli bir sayi girin!"
+pl_remove_notfound: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_remove_owner: "**Oynatma Listesi Sahibi** degilsiniz"
+pl_remove_song_notfound: "Sarki bulunamadi!"
+pl_remove_removed: "`%{name}` listesinden **%{position} Numarali** sarki kaldirildi"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_savequeue_notfound: "Lutfen gecerli bir Oynatma Listesi ID'si girin!"
+pl_savequeue_owner: "**Oynatma Listesi Sahibi** degilsiniz!"
+pl_savequeue_no_tracks: "Su anda calanan sarki yok!"
+pl_savequeue_no_new_saved: "Sarki zaten `%{name}` listesinde mevcut"
+pl_savequeue_saved: "**%{tracks} Sarki** `%{name}` listesine kaydedildi"
+
+pl_error_no_node: "Lavalink sunucusu bulunamadi. Lutfen **5 Dakika** sonra tekrar deneyin"

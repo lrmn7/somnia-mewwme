@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**איפה שמי שרוצה לשיר תמיד מוצא שיר ♪\nהצטרפו למנגינה בשרת הדיסקורד שלכם היום!**"
+about_desc2: |
+  ・קידומת הבוט לשרת זה היא `%{prefix}`
+  ・שנו קידומת עם `%{prefix} prefix <new prefix>`
+  ・הפעילו שיר לפי קישור או מונח חיפוש `%{prefix} play`
+  בקרו ב**[אתר](%{website})** שלנו או השתמשו בפקודה `%{prefix} help` לפקודות נוספות.
+about_desc3: |
+  **שימו לב!**
+  אני מעדיף הרשאות `Administrator`, אבל...
+  גם אם לא תתנו לי את ההרשאות האלה, אני עדיין יכול לעבוד, אבל ייתכן שלא אוכל לעשות הכל. רק אומר!
+
+  **עזרה ותמיכה**
+  הצטרפו ל**[שרת התמיכה](%{serversupport})** שלנו אם אתם צריכים עזרה, רוצים לקבל מידע על עדכונים ובעיות או רוצים להשתתף בקהילה!
+
+### Help command!
+finder_invalid: "פקודה לא חוקית"
+finder_example: "אני לא יכול לעזור לך למצוא את זה! חפש פקודה *אמיתית*!"
+finder_name: "**פקודה:**"
+finder_des: " **תיאור:**"
+finder_usage: "**שימוש:**"
+finder_access: "**נגיש על ידי:**"
+finder_aliases: "**כינויים:**"
+finder_slash: "**סלאש:**"
+finder_des_no: "לא הצלחתי למצוא תיאור, מצטער על כך..."
+finder_usage_no: "אני לא בטוח איך להשתמש בפקודה הזו."
+finder_aliases_prefix: "[קידומת בלבד]"
+finder_aliases_no: "אי אפשר להשתמש בפקודה הזו עם כינוי."
+finder_slash_enable: "מופעל"
+finder_slash_disable: "מושבת"
+command_not_found: "פקודה לא ידועה"
+select_menu: "תהנו ממוזיקה איתי!"
+help_timeout: "תפריט העזרה פג תוקף נסו להשתמש ב-**`%{prefix}help`** או **`/help`** שוב."
+homepage_title: "איפה שמי שרוצה לשיר תמיד מוצא שיר ♪\nהצטרפו למנגינה בשרת הדיסקורד שלכם היום!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **מוזיקה 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **חיבור Spotify**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **אודיו באיכות גבוהה**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **סקרובל עם Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **שחקו והתחרו במשחקוני**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer ועוד...**
+
+  <a:ask:1291123964080558121> **האם ברצונכם לשדרג ל[פרימיום](%{premium})?**
+### Rating bot commands! ###
+rating_desc: "תודה %{user} על דירוג הכוכבים לבוט המוזיקה שלנו בדיסקורד!"
+rating_succes: "תודה על הדירוג שלך!\nהדירוג שלך נשלח בהצלחה."
+rating_failure: "שליחת הדוח נכשלה. אנא נסו שוב מאוחר יותר."
+
+### Report command #####
+report_provide_desc: "אופס! פקודות לא חוקיות. אנא ספקו תיאור"
+report_failure: "שליחת הדוח נכשלה. אנא נסו שוב מאוחר יותר."
+report_success: "תודה על הדיווח שלכם.\nהדיווח נשלח בהצלחה לטיפול."
+
+### Suggestions command #####
+suggestions_provide_desc: "אופס! פקודות לא חוקיות. אנא ספקו תיאור"
+suggestions_failure: "שליחת ההצעה נכשלה. אנא נסו שוב מאוחר יותר."
+suggestions_success: "תודה על ההצעה שלכם!\nההצעה שלכם נשלחה בהצלחה."
+
+### MyStats command ####
+mystats_error: "אירעה שגיאה ביצירת הסטטיסטיקות שלכם. אנא נסו שוב מאוחר יותר."
+
+### TopStats command ####
+topstats_error: "אירעה שגיאה ביצירת הסטטיסטיקות שלכם. אנא נסו שוב מאוחר יותר."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **תוצאת סטטוס:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 זהות משתמש"
+patreon_logs_user_identity_value: |
+  **שם:** %{fullName}
+  **דיסקורד:** <@%{discordId}> (`%{discordId}`)
+  **אימייל:** %{email}
+
+patreon_logs_details_title: "פרטי Patreon"
+patreon_logs_details_value: |
+  **התחייבות:** $%{pledge}
+  **מזהה Patreon:** `%{patreonId}`
+  **סטטוס:** `%{status}`
+patreon_logs_date_title: "📅 תאריך"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "זהות משתמש"
+kofi_logs_user_identity_value: "**שם:** %{fullName}\n**אימייל:** ||%{email}||\n**ציבורי:** %{dataPublic}"
+kofi_logs_discord_identity_title: "זהות דיסקורד"
+kofi_logs_discord_identity_value: "**משתמש:** %{discordUser}\n**מזהה:** %{discordId}"
+kofi_logs_payment_details_title: "פרטי תשלום"
+kofi_logs_payment_details_value: "**סכום:** %{currency} %{amount}\n**דרגה:** **%{tierName}**\n**סוג:** %{type}"
+kofi_logs_sub_status_title: "סטטוס מנוי"
+kofi_logs_sub_status_value: "**מנוי:** %{isSub}\n**תשלום ראשון:** %{isFirst}"
+kofi_logs_message_title: "הודעה / סיבה"
+kofi_logs_tech_title: "טכני / מזהי עסקאות"
+kofi_logs_tech_value: "**מזהה עסקת Ko-fi:** %{kofiTxId}\n**מזהה הודעה:** %{msgId}\n**קישור:** [%{viewDetails}](%{url})\n**טוקן:** ||%{token}||"
+kofi_logs_view_details: "צפה בפרטים"
+

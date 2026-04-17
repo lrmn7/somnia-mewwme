@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**노래하고 싶은 사람은 항상 노래를 찾습니다 ♪\n오늘 당신의 Discord 서버에서 멜로디에 함께하세요!**"
+about_desc2: |
+  ・이 서버의 봇 접두사는 `%{prefix}`입니다
+  ・접두사 변경은 `%{prefix} prefix <새 접두사>`로 합니다
+  ・링크 또는 검색어로 트랙 재생 `%{prefix} play`
+  저희 **[웹사이트](%{website})**를 방문하거나 `%{prefix} help` 명령어를 사용하여 더 많은 명령어를 확인하세요.
+about_desc3: |
+  **참고!**
+  가급적 `관리자` 권한이 필요하지만...
+  해당 권한을 부여하지 않아도 작동하지만, 일부 기능을 사용하지 못할 수 있습니다. 참고만 해주세요!
+
+  **도움말 및 지원**
+  도움이 필요하거나, 업데이트 및 문제에 대한 정보를 얻거나, 커뮤니티에 참여하고 싶다면 저희 **[지원 서버](%{serversupport})**에 참여하세요!
+
+### Help command!
+finder_invalid: "잘못된 명령어"
+finder_example: "그건 찾을 수 없습니다! *실제* 명령어를 찾아보세요!"
+finder_name: "**명령어:**"
+finder_des: " **설명:**"
+finder_usage: "**사용법:**"
+finder_access: "**접근 권한:**"
+finder_aliases: "**별칭:**"
+finder_slash: "**슬래시:**"
+finder_des_no: "설명을 찾을 수 없습니다, 죄송합니다..."
+finder_usage_no: "이 명령어의 사용법을 잘 모르겠습니다."
+finder_aliases_prefix: "[접두사 전용]"
+finder_aliases_no: "이 명령어는 별칭으로 사용할 수 없습니다."
+finder_slash_enable: "활성화"
+finder_slash_disable: "비활성화"
+command_not_found: "알 수 없는 명령어"
+select_menu: "저와 함께 음악을 즐기세요!"
+help_timeout: "도움말 메뉴 시간이 초과되었습니다. **`%{prefix}help`** 또는 **`/help`**를 다시 사용해보세요."
+homepage_title: "노래하고 싶은 사람은 항상 노래를 찾습니다 ♪\n오늘 당신의 Discord 서버에서 멜로디에 함께하세요!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **연중무휴 음악**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify 연결**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **고품질 오디오**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Last.fm 스크로블 지원**
+  <:blank:1291123023679586324><:games:1311125732117843978> **미니 게임 플레이 및 경쟁**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer 등...**
+
+  <a:ask:1291123964080558121> **[프리미엄](%{premium}) 플랜으로 업그레이드하시겠습니까?**
+### Rating bot commands! ###
+rating_desc: "%{user}님, 저희 Discord 음악 봇에 별점을 주셔서 감사합니다!"
+rating_succes: "평가해 주셔서 감사합니다!\n평가가 성공적으로 제출되었습니다."
+rating_failure: "신고를 보내는 데 실패했습니다. 나중에 다시 시도해주세요."
+
+### Report command #####
+report_provide_desc: "이런! 잘못된 명령어입니다. 설명을 입력해주세요"
+report_failure: "신고를 보내는 데 실패했습니다. 나중에 다시 시도해주세요."
+report_success: "신고해 주셔서 감사합니다.\n신고가 해결을 위해 성공적으로 제출되었습니다."
+
+### Suggestions command #####
+suggestions_provide_desc: "이런! 잘못된 명령어입니다. 설명을 입력해주세요"
+suggestions_failure: "제안을 보내는 데 실패했습니다. 나중에 다시 시도해주세요."
+suggestions_success: "제안해 주셔서 감사합니다!\n제안이 성공적으로 제출되었습니다."
+
+### MyStats command ####
+mystats_error: "통계를 생성하는 중 오류가 발생했습니다. 나중에 다시 시도해주세요."
+
+### TopStats command ####
+topstats_error: "통계를 생성하는 중 오류가 발생했습니다. 나중에 다시 시도해주세요."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **상태 결과:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 사용자 정보"
+patreon_logs_user_identity_value: |
+  **이름:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **이메일:** %{email}
+
+patreon_logs_details_title: "Patreon 상세 정보"
+patreon_logs_details_value: |
+  **후원금:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **상태:** `%{status}`
+patreon_logs_date_title: "📅 날짜"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "사용자 정보"
+kofi_logs_user_identity_value: "**이름:** %{fullName}\n**이메일:** ||%{email}||\n**공개:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord 정보"
+kofi_logs_discord_identity_value: "**사용자:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "결제 상세 정보"
+kofi_logs_payment_details_value: "**금액:** %{currency} %{amount}\n**등급:** **%{tierName}**\n**유형:** %{type}"
+kofi_logs_sub_status_title: "구독 상태"
+kofi_logs_sub_status_value: "**구독 여부:** %{isSub}\n**최초 결제:** %{isFirst}"
+kofi_logs_message_title: "메시지 / 사유"
+kofi_logs_tech_title: "기술 / 거래 ID"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**메시지 ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**토큰:** ||%{token}||"
+kofi_logs_view_details: "상세 보기"
+

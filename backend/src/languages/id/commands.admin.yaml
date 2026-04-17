@@ -1,0 +1,34 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "Aku tidak bisa menemukan Guild itu..."
+blacklist_guild_already: "Sepertinya %{id} sudah di-blacklist, jadi aku tidak bisa melakukan apa-apa."
+blacklist_guild_add: "Sayonara, %{id}! Aku menambahkan mereka ke blacklist. Sepertinya memang tidak berjodoh..."
+blacklist_guild_not_exist: "Kamu bilang mencari %{id}? Aku tidak bisa menemukannya di rute tur-ku..."
+blacklist_guild_delete: "Selamat datang kembali, %{id}! Aku bisa tur ke sana lagi, mereka tidak lagi di-blacklist."
+
+### Blacklist User
+blacklist_user_bot_owner: "Woah! Aku tidak bisa mem-blacklist pembuatku sendiri! Kamu mau membuatku dalam masalah?"
+blacklist_user_not_found: "Aku tidak bisa menemukan fans itu..."
+blacklist_user_already: "Sepertinya %{id} sudah di-blacklist, jadi aku tidak bisa melakukan apa-apa."
+blacklist_user_add: "Sampai jumpa, %{id}! Sedih harus menambahkan fans ke blacklist, tapi kurasa ini yang terbaik..."
+blacklist_user_not_exist: "%{id}? Siapa itu? Aku tidak bisa menemukannya di fan club-ku..."
+blacklist_user_delete: "Luar biasa! %{id} telah dipulihkan sebagai fans! Aku tidak sabar bertemu mereka di konser berikutnya!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "Tidak yakin jenis pemeliharaan apa ini, tapi kamu pasti harus menggunakan %{text} sebagai gantinya"
+maintenance_true: "Baiklah! Sekarang aku hanya mendengarkanmu saja!"
+maintenance_false: "Aku kembali mendengarkan semua orang sekarang!"
+

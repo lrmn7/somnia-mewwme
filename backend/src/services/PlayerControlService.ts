@@ -11,6 +11,7 @@ import {
   MessageFlags,
 } from "discord.js";
 import { Manager } from "../manager.js";
+import { computeWeb3Quota } from "../web/route/web3Premium.js";
 import { TopggServiceEnum } from "./TopggService.js";
 
 export class PlayerControlService {
@@ -27,18 +28,59 @@ export class PlayerControlService {
     const userId = message instanceof Message ? message.author.id : message.user.id;
     const guildId = message.guild?.id;
 
-    const User = await client.db.premium.get(userId);
-    const Guild = await client.db.preGuild.get(String(guildId));
-    const isPremiumUser = User && User.isPremium;
-    const isPremiumGuild = Guild && Guild.isPremium;
+    const PremiumGuildID = client.config.PremiumRole.GuildID;
+    const PremiumRoleID = client.config.PremiumRole.RoleID;
+    const isPremiumRoleEnabled = client.config.PremiumRole.Enable !== false;
+    const supportGuild = isPremiumRoleEnabled
+      ? await client.guilds.fetch(PremiumGuildID).catch(() => null)
+      : null;
+    const supportMember = supportGuild
+      ? await supportGuild.members.fetch(userId).catch(() => null)
+      : null;
+    const isPremiumRole = supportMember ? supportMember.roles.cache.has(PremiumRoleID) : false;
 
-    const isOwner = userId == String(client.owner);
-    const isAdmin = client.config.bot.ADMIN.map(String).includes(userId);
+    const User = await client.db.PremiumUserLegacy.get(userId);
+    const Guild = await client.db.PremiumGuildLegacy.get(String(guildId));
+    const isPremiumUserCode = User && User.isPremium;
+    const isPremiumGuildCode = Guild && Guild.isPremium;
+
+    const isPremiumWeb3User = (await computeWeb3Quota(client, userId)) > 0;
+
+    let isPremiumWeb3Guild = false;
+
+    if (guildId) {
+      const allWeb3 = await client.db.Web3Premium.all();
+      const sponsorWeb3 = allWeb3.find((entry: any) => {
+        const data = entry.data || entry.value || entry;
+        return (
+          data.redeemedGuilds &&
+          Array.isArray(data.redeemedGuilds) &&
+          data.redeemedGuilds.includes(guildId) &&
+          data.expiresAt > Date.now()
+        );
+      });
+      if (sponsorWeb3) isPremiumWeb3Guild = true;
+    }
+
+    const isOwner = userId == client.owner;
+    const isAdmin = client.config.bot.ADMIN.includes(userId);
 
     const userPerm = {
       owner: isOwner,
       admin: isOwner || isAdmin,
-      Premium: isOwner || isAdmin || isPremiumUser || isPremiumGuild,
+      PremiumRole: isOwner || isAdmin || isPremiumRole,
+      PremiumWeb3User: isOwner || isAdmin || isPremiumWeb3User,
+      PremiumWeb3Guild: isOwner || isAdmin || isPremiumWeb3Guild,
+      PremiumUserCode: isOwner || isAdmin || isPremiumUserCode,
+      PremiumGuildCode: isOwner || isAdmin || isPremiumGuildCode,
+      Premium:
+        isOwner ||
+        isAdmin ||
+        isPremiumUserCode ||
+        isPremiumGuildCode ||
+        isPremiumWeb3User ||
+        isPremiumWeb3Guild ||
+        isPremiumRole,
     };
 
     const sendError = async (embedData: any, buttons: ActionRowBuilder<ButtonBuilder>[] = []) => {
@@ -133,7 +175,12 @@ export class PlayerControlService {
     };
 
     const isMissingPremium =
-      accessableby === "Premium" && !userPerm.Premium;
+      (accessableby === "PremiumRole" && !userPerm.PremiumRole) ||
+      (accessableby === "Premium" && !userPerm.Premium) ||
+      (accessableby === "UserPremiumCode" && !userPerm.PremiumUserCode) ||
+      (accessableby === "GuildPremiumCode" && !userPerm.PremiumGuildCode) ||
+      (accessableby === "Web3User" && !userPerm.PremiumWeb3User) ||
+      (accessableby === "Web3Guild" && !userPerm.PremiumWeb3Guild);
 
     if (isMissingPremium) {
       await createPremiumError("no_premium_author", "no_premium_desc", "no_premium_button");

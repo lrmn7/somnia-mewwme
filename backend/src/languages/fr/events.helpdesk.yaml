@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "Le centre d'aide a ete desactive"
+invalid_channel_helpdesk: "Le salon fourni est invalide"
+channel_viewable_helpdesk: "Le salon fourni ne m'est pas visible"
+setup_helpdesk_succes: "Le centre d'aide a ete configure dans %{channel} avec succes."
+
+embed1_title: "Bienvenue sur le serveur de support de %{bot} !"
+embed1_desc: "**%{bot} La ou ceux qui souhaitent chanter trouvent toujours une chanson ♪\nRejoignez la melodie dans votre serveur Discord des aujourd'hui !**"
+embed1_footer: "Merci d'avoir choisi %{bot} comme votre bot musical personnel !"
+
+embed2_title: "Centre d'aide %{bot}"
+embed2_desc: |
+  **%{button1} Qu'est-ce que %{bot} ?
+
+  %{button2} Comment inviter le bot musical %{bot} ?
+
+  %{button3} Comment utiliser le bot musical %{bot} ?
+
+  %{button4} Comment activer la fonctionnalite 24/7 ?
+
+  %{button5} %{bot} ne repond pas/est hors ligne.
+
+  %{button6} La qualite audio de %{bot} semble saccadee.
+
+  %{button7} Comment configurer le salon de demande de chansons ?
+
+  %{button8} %{bot} dit qu'il manque des permissions.
+
+  %{button9} %{bot} se deconnecte du salon vocal tout seul.
+
+  %{button10} Comment obtenir/activer le Premium et quels avantages est-ce que je recois ?**
+
+embed2_field1_name: "Site web"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Type"
+embed2_field2_value: "**Bot musical**"
+embed2_field3_name: "Obtenir le Premium"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Ceux qui souhaitent chanter trouvent toujours une chanson ♪"
+helpdesk1_desc: |
+  **%{bot} est un bot Discord qui revolutionne la facon dont vous vivez la musique sur Discord, offrant l'interface utilisateur la plus epuree, un audio de haute qualite et un large eventail de fonctionnalites liees a la musique.**
+
+  **Pourquoi %{bot} ?**
+  - **Mises a jour regulieres** : %{bot} est constamment mis a jour, vous assurant toujours le meilleur des dernieres fonctionnalites et corrections.
+  - **Fonctionnalites completes** : Le systeme musical simple de %{bot} permet une lecture fluide depuis plusieurs sources.
+  - **Communaute de support dediee** : Nous sommes un bot relativement nouveau sur Discord, et nous serions ravis que vous nous rejoigniez ! Assurer le bon fonctionnement du bot est notre priorite, c'est pourquoi nous avons besoin de vos retours et suggestions. Si vous avez des questions, n'hesitez pas a ouvrir un ticket de support.
+
+  **Liens utiles**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **Besoin d'aide ?**
+  - Soumettez un ticket pour une assistance supplementaire
+
+  **Qu'attendez-vous ? Invitez %{bot} sur votre serveur Discord des aujourd'hui et profitez d'une experience musicale illimitee et sans pareil !**
+  **[Cliquez ici pour inviter](%{invite})**
+
+helpdesk2_title: "Ajouter %{bot} a votre serveur"
+helpdesk2_desc: |
+  **Vous pouvez inviter %{bot} en utilisant ce [lien](%{invite}).**
+    Choisissez le serveur auquel vous souhaitez l'ajouter et cliquez sur **Autoriser**
+
+  > Notez que si vous souhaitez desactiver les permissions `Administrateur` pour %{bot}, cela peut affecter son fonctionnement. Bien que vous puissiez toujours acceder aux fonctionnalites musicales de base, certaines fonctionnalites peuvent ne pas fonctionner correctement.
+
+helpdesk3_title: "Comment utiliser le bot musical %{bot} ?"
+helpdesk3_desc: |
+  Rejoignez un salon vocal ou une scene puis tapez /play <nom chanson/urls> dans un salon textuel.
+  Vous pouvez interagir directement en utilisant les boutons de controle pour arreter, boucler, etc.
+  Tapez / (ou /help) et selectionnez l'icone de %{bot} pour obtenir la liste de toutes les commandes disponibles.
+
+helpdesk4_title: "Comment activer la fonctionnalite 24/7 ?"
+helpdesk4_desc: |
+  Rejoignez un salon vocal ou une scene puis tapez `/247 <enable/disable>` dans un salon textuel.
+
+  **Note :** *Cette fonctionnalite peut etre utilisee si vous avez la permission `gerer le serveur`, et il est prealablement assure que le bot est actuellement en train de jouer de la musique.*
+
+helpdesk5_title: "%{bot} ne repond pas/est hors ligne"
+helpdesk5_desc: |
+  Vous essayez d'utiliser une commande mais elle echoue sans cesse ? Eh bien, il n'est probablement pas en mesure de repondre, mais suivez les etapes ci-dessous pour corriger cela.
+
+  **%{bot} utilise maintenant les commandes slash !**
+  Assurez-vous d'utiliser les commandes slash car Discord exige maintenant que tous les bots les utilisent.
+  Commencez en tapant `/play` et `/help`
+
+  **%{bot} ne semble toujours pas repondre ?**
+  Le seul scenario restant dans cette situation est un probleme soit du cote de Discord, soit du notre. Verifiez que %{bot} n'est pas hors ligne sur votre serveur. S'il est hors ligne, votre meilleure option serait d'attendre jusqu'a 5 minutes et de voir si %{bot} revient en ligne. S'il est en ligne, dispose de toutes les permissions requises, vous devriez definitivement contacter l'un de nos membres du support.
+
+helpdesk6_title: "La qualite audio de %{bot} semble saccadee"
+helpdesk6_desc: |
+  Personne n'aime la musique saccadee, mais cela arrive parfois lors de l'ecoute de bots musicaux sur Discord. Voici quelques solutions possibles pour vous aider a corriger cela.
+
+  **Que dois-je faire ?**
+  Tout d'abord, vous devriez verifier votre connexion internet. Discord affiche votre dernier ping et votre ping moyen dans le coin inferieur gauche, cliquez simplement sur "Vocal connecte" et verifiez que votre ping est stable (si le graphique rouge saccade beaucoup, cela signifie qu'il n'est pas stable !) et que le dernier ainsi que le ping moyen est inferieur a 250 millisecondes. Si ces deux indicateurs montrent que votre connexion est mauvaise, vous devriez essayer de verifier votre WiFi/LAN. Redemarrer votre routeur pourrait aussi resoudre certains problemes.
+
+  **Vous avez un ping de 5ms et vous pouvez telecharger GTA 5 en 2 minutes ?**
+  Donc votre connexion internet ne semble pas etre le probleme. Dans 95% des cas ou %{bot} saccade, Discord a des problemes temporaires avec ses serveurs vocaux. Ils les redemarrent normalement a un moment donne mais vous pourriez forcer un changement vers un serveur different dans votre region. [Essayez de changer votre region de serveur](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3) afin d'obtenir un nouveau serveur vocal Discord.
+  Si vous avez toujours le meme probleme, n'hesitez pas a taper /report pour signaler votre probleme.
+
+helpdesk7_title: "Comment configurer le salon de demande de chansons ?"
+helpdesk7_desc: |
+  **Comment creer un salon de demande ?**
+  Assurez-vous que %{bot} dispose de la permission `gerer le serveur` puis tapez /setup avec l'option `create`, le bot creera automatiquement un salon special pour les demandes de chansons.
+
+  ```Note : Ne supprimez aucun message cree par %{bot} afin que je puisse fonctionner correctement.```
+
+  **Comment supprimer un salon de demande ?**
+  Comme precedemment, mais dans les options vous pouvez selectionner `delete`.
+
+helpdesk8_title: "%{bot} dit qu'il manque des permissions."
+helpdesk8_desc: |
+  Lorsque vous essayez d'executer certaines commandes, %{bot} peut manquer de certaines permissions. Dans ce cas, %{bot} refusera d'executer la commande tant que ces problemes ne seront pas resolus. Il est important de noter que ces permissions ne sont pas optionnelles ; %{bot} en a besoin pour executer la commande.
+
+  Si vous pensez que le bot dispose des permissions necessaires, assurez-vous de verifier les remplacements de roles du salon. Ces remplacements peuvent modifier les permissions des roles dans des salons specifiques.
+
+  Si vous ne parvenez toujours pas a determiner pourquoi %{bot} ne dispose pas des permissions requises, envisagez de donner a %{bot} la permission Administrateur. Cela devrait resoudre tous les problemes de permissions Discord.
+
+helpdesk9_title: "Mewwme se deconnecte du salon vocal tout seul"
+helpdesk9_desc: |
+  Dans des cas tres rares, meme avec le mode 24/7 active, Mewwme peut se deconnecter du salon vocal sans que quelqu'un utilise /stop ou le bouton Deconnecter de Discord. Voici quelques-unes des causes les plus courantes et une correction potentielle.
+
+  **Le mode 24/7 n'est pas active.**
+  Par defaut, Mewwme se deconnecte du salon vocal lorsqu'il est vide depuis 3 minutes.
+
+  **Correction :** Referez-vous a "4. Comment activer la fonctionnalite 24/7 ?" dans le premier embed d'aide pour activer le mode 24/7.
+
+  **Permissions manquantes.**
+  Chaque fois que Discord nous demande de nous reconnecter a un salon vocal, que ce soit en raison de redemarrages de serveur ou d'une panne d'API, nous reverifions les permissions du bot pour nous assurer qu'il peut rejoindre et parler dans le salon. Si quelque chose manque, vous devrez utiliser /play a nouveau pour inviter le bot dans un autre salon ou le meme apres avoir ajoute les permissions requises.
+
+  **Correction :** Assurez-vous d'utiliser les commandes /play pour ajouter le bot au salon vocal au lieu de le deplacer depuis un autre. En faisant cela, vous vous assurerez que le bot dispose de toutes les permissions requises pour se reconnecter en cas de besoin.
+
+  **Problemes de region du serveur.**
+  Dans certains cas, certaines regions vocales peuvent connaitre des problemes de reseau et de stabilite qui pourraient empecher le bot de rejoindre le salon vocal.
+
+  **Correction :** Passez a une autre region vocale en utilisant les parametres du salon vocal (choisissez celle la plus proche de votre pays).
+
+  **Quelque chose d'autre s'est mal passe.**
+  Si vous avez essaye toutes les corrections ci-dessus et que le probleme persiste, veuillez taper `report` ou ouvrir un ticket dans le support https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "Comment obtenir/activer le Premium et quels avantages est-ce que je recois ?"
+helpdesk10_desc: |
+  **Comment echanger mes avantages Premium ?**
+
+  pour activer les avantages de votre abonnement premium, veuillez suivre ces etapes :
+  1. **liez d'abord votre compte discord**
+    - avant d'acheter, assurez-vous que votre compte discord est connecte a la plateforme que vous utilisez (patreon ou ko-fi).
+    - c'est necessaire pour que le systeme puisse detecter votre paiement automatiquement.
+  2. **achetez votre abonnement**
+  - apres avoir lie votre discord, completez le paiement de l'abonnement selon le plan que vous souhaitez.
+  3. **attendez la synchronisation**
+    - une fois votre paiement reussi, veuillez attendre quelques minutes pour que le systeme synchronise votre abonnement.
+  4. **reclamez le premium sur votre serveur**
+    - allez sur le serveur discord que vous souhaitez ameliorer, puis utilisez cette commande :
+      `/premium claim`
+      choisissez la bonne option de plateforme (patreon ou ko-fi) lorsque demande.
+      assurez-vous d'executer la commande dans le serveur que vous souhaitez activer en premium.
+      une fois reclame, le premium sera active instantanement.
+
+  En suivant les etapes ci-dessus, vous pourrez activer et profiter de tous les avantages Premium offerts. Si vous rencontrez des problemes ou avez d'autres questions, n'hesitez pas a contacter notre equipe de support.
+
+helpdesk10_footer: "Merci de faire partie de notre aventure ! Nous esperons que vous passerez un bon moment ici."

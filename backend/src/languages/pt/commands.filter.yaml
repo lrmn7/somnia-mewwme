@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **Filtro %{name} ativado!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **Espero que voce goste do som desse!**
+filter_already: "Hein? O VST %{name} ja esta ativado... Nao posso fazer nada aqui."
+filter_number: "Isso nao e um numero que eu possa inserir no EQ..."
+filter_greater: "Tem que ser um numero maior que **0**!"
+filter_less: "Opa! Demais! Talvez menos que **10** seja melhor..."
+
+### Bassboost command!
+bassboost_set: "**O Bassboost foi definido para %{amount}dB**"
+bassboost_limit: "Por favor, use um numero entre **-10** e **10**"
+
+### Equalizer command!
+eq_author: "Equalizador"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  Existem **10 Bandas** que podem ser definidas de **-10** a **10**.
+  Voce nao precisa inserir todas, apenas as que deseja alterar.
+  Entao, se quiser pular uma, pode deixar como **0**.
+eq_field_title: "Exemplo:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Resetar Equalizador • %{prefix}eq reset"
+eq_on: "O EQ foi definido para **%{bands}**!"
+eq_number: "Por favor, forneca um numero valido!"
+eq_greater: "O numero deve ser maior que **-10**"
+eq_than: "O numero deve ser menor que **10**"
+
+### Pitch command!
+pitch_on: "Certo, o Pitch agora e **%{amount}**!"
+
+### Rate command!
+rate_on:  "Certo! A Taxa agora e **%{amount}x**!"
+
+### Speed command!
+speed_on: "Claro, alterando a velocidade para **%{amount}x**!"
+
+### Reset command!
+reset_on: "**Resetando** todos os VSTs! De volta ao som original!"
+reset_already:  "Os VSTs ja estao **desligados**, voce esqueceu?"
+
+# Invalid Number
+number_invalid: "Isso nao e um numero com o qual eu possa trabalhar... Tente novamente com um numero valido."

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Đã dừng phát nhạc. Hy vọng bạn đã có khoảng thời gian tuyệt vời!"
+skip_notfound: "Ối. Có vẻ như không có bản nhạc nào để bỏ qua!"
+skip_msg: "Tôi đã bỏ qua bản nhạc. Hy vọng bạn không phiền :p"
+previous_msg: "Chà, có vẻ chúng ta đang tua lại! Bản nhạc trước đang đến <3"
+previous_notfound: "Xin lỗi, không thể quay lại nữa. Không tìm thấy bản nhạc trước đó :("
+resume_msg: "Nhạc đã quay lại! Hãy tiếp tục cùng giai điệu ♪"
+pause_msg: "Nhạc đã tạm dừng. Nghỉ ngơi và tận hưởng sự yên tĩnh nhé."
+loop_current: "Bài hát hiện tại sẽ được phát lặp lại. Tận hưởng nhé!"
+loop_all: "Hàng đợi đã được đặt chế độ lặp. Hãy để âm nhạc phát lại liên tục!"
+unloop_all: "Chế độ lặp đã được tắt. Tận hưởng sự đa dạng của các bản nhạc!"
+
+### Need to join voice & same voice to use command!
+no_player: "Bạn nhấn nút nhưng không có gì xảy ra. Có lẽ bạn nên phát nhạc gì đó trước!"
+no_same_voice: "Bạn nhấn nút và nó nhấp nháy đỏ. Bạn không ở cùng kênh thoại với tôi!"
+no_in_voice: "Tất cả các nút đều không phản hồi bạn. Bạn không ở trong kênh thoại!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "ĐANG PHÁT"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Yêu cầu bởi %{request}"
+setup_footer: "Bài hát còn lại • %{totalsong} | Tổng thời lượng • %{duration}"
+setup_queuemsg: "**Tham gia kênh thoại và phát nhạc bằng tên hoặc URL tại đây!**"
+setup_playembed_author: "Không có bài hát nào đang phát!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Đã thêm **%{title}** • %{request}"
+play_playlist: "Đã thêm **%{title}** • (**%{songs} Bài hát**) • %{request}"
+play_result: "Đã thêm **%{title}** • %{request}"
+play_emoji: "Tôi không chắc cách phát cái đó... Đó không phải là bản nhạc hay danh sách phát."
+setup_content: "**Này! Bàn DJ của tôi đã sẵn sàng cho nhạc của bạn! Hãy gửi gì đó vào đây!**"

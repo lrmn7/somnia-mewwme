@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ Tự động phát đã được **Bật**"
+autoplay_off: "Hmmm~~ Tự động phát đã được **Tắt**"
+autoplay_no_song: "Không có bài hát nào đang phát!"
+
+### Loop command!
+loop_current: "Bài hát hiện tại sẽ được phát lặp lại. Tận hưởng nhé!"
+loop_all: "Hàng đợi đã được đặt chế độ lặp. Hãy để âm nhạc phát lại liên tục!"
+unloop_all: "Chế độ lặp đã được tắt. Tận hưởng sự đa dạng của các bản nhạc!"
+
+### Pause command!
+pause_msg: "Nhạc đã tạm dừng. Nghỉ ngơi và tận hưởng sự yên tĩnh nhé."
+
+### Resume command!
+resume_msg: "Nhạc đã quay lại! Hãy tiếp tục cùng giai điệu ♪"
+
+previous_notfound: "Xin lỗi, không thể quay lại nữa. Không tìm thấy bản nhạc trước đó :("
+previous_msg: "Chà, có vẻ chúng ta đang tua lại! Bản nhạc trước đang đến <3"
+
+### Queue command!
+queue_title: "Hàng đợi đang phát..."
+queue_description: "**%{title} **\n\n**Hàng đợi còn lại %{list_song}**"
+queue_footer: "Trang • %{page}/%{pages} | Bài hát • %{queue_lang} | Tổng thời lượng • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Đoán xem tôi đã làm gì? Tôi đã xáo trộn hàng đợi cho bạn!"
+
+### Skip command!
+skip_msg: "Tôi đã bỏ qua bản nhạc. Hy vọng bạn không phiền :p"
+skip_notfound: "Ối! Có vẻ như không có bản nhạc nào để bỏ qua! Hãy tiếp tục groove với bản nhạc hiện tại ♪"
+
+### Stop command!
+stop_msg: "Đã dừng phát nhạc. Hy vọng bạn đã có khoảng thời gian tuyệt vời!"
+
+### Volume command!
+voldown_msg: "Âm lượng đã giảm %{volume}%. Tận hưởng giai điệu nhẹ nhàng hơn!"
+volume_invalid: "Âm lượng không hợp lệ. Phạm vi cho phép là **1** đến **100**"
+volup_msg: "Âm lượng đã tăng %{volume}%. Tăng sức nóng lên nào!"
+volume_max: "Tôi không thể tăng âm lượng quá 100%"
+volume_min: "Ohno~~ đã ở mức âm lượng thấp nhất rồi!"

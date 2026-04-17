@@ -50,8 +50,6 @@ export class WebServer {
 
     this.expose();
     this.handleInteractions();
-
-    this.app.use("/transcript", express.static(path.join("transcript")));
   }
 
   alive() {
@@ -96,7 +94,6 @@ export class WebServer {
 
         await this.client.db.LastFm.set(`${userId}`, new_data);
 
-        // If the request originated from the dashboard, redirect back to the profile page
         const from = req.query.from as string;
         if (from === "dashboard") {
           const frontendUrl =

@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Veuillez fournir un ID de playlist valide !"
+pl_add_match: "Veuillez fournir un nom de chanson ou une URL valide !"
+pl_add_playlist: "Recherche de **%{title}** `%{duration}` • (**%{track} Chansons**) • %{user}"
+pl_add_track: "Recherche de **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Recherche de **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Vous n'etes pas le **proprietaire de la playlist** !"
+pl_add_limit_track: "Vous ne pouvez pas ajouter plus de **%{limit} chansons**"
+pl_add_added: "**%{count} chansons** ajoutees a `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Chansons**) • Creee : `[il y a %{create}]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Page • %{page}/%{pages} | Playlists • %{songs}"
+pl_all_view_notnumber: "Veuillez fournir un numero de page valide !"
+pl_all_view_page_notfound: "Il n'y a que **%{page} pages** !"
+
+### pl-create commands ###
+pl_create_invalid: "Veuillez fournir un ID de playlist valide !"
+pl_create_toolong: "Le nom de la playlist ne peut pas depasser **16 caracteres**"
+pl_create_des_toolong: "La description de la playlist ne peut pas depasser **1000 caracteres**"
+pl_create_limit_playlist: "Vous ne pouvez pas creer plus de **%{limit} playlists**"
+create_created_title: "Nouvelle playlist creee avec succes !"
+pl_create_created_footer: "Tapez /pl editor pour modifier votre playlist !"
+pl_create_created: |
+  **Nom de la playlist**
+  `%{playlist}`
+
+  **ID de la playlist**
+  `%{id}`
+
+  **Description**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Veuillez fournir un ID de playlist valide !"
+delete_notfound: "Veuillez fournir un ID de playlist valide !"
+pl_delete_owner: "Vous n'etes pas le **proprietaire de la playlist**"
+pl_delete_confirm: "Voulez-vous supprimer `%{playlist_id}` ?"
+pl_delete_deleted: "La playlist `%{name}` a ete **supprimee** avec succes"
+pl_delete_no: "**Suppression** de la playlist annulee !"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Veuillez fournir un nombre valide !"
+pl_detail_notfound: "Veuillez fournir un ID de playlist valide !"
+pl_detail_private: "La playlist est **privee**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Playlist : %{name}"
+pl_detail_embed_footer: "Page • %{page}/%{pages} | Chansons • %{songs} | Duree totale • %{duration}"
+pl_detail_notnumber: "Veuillez fournir un numero de page valide !"
+pl_detail_page_notfound: "Il n'y a que **%{page} pages**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Entrez votre **nouvel ID de playlist** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Entrez votre **nouveau nom de playlist**"
+pl_edit_playlist_des_label: "Entrez votre **nouvelle description de playlist**"
+pl_edit_playlist_private_label: "Entrez votre **nouvelle visibilite de playlist** `[public/private]`"
+pl_edit_success: "Playlist modifiee avec succes\nNouvel ID de playlist : `%{playlistId}`"
+pl_edit_arg: "Veuillez fournir un ID de playlist valide !"
+pl_edit_notfound: "Veuillez fournir un ID de playlist valide !"
+pl_edit_playlist_owner: "Vous n'etes pas le **proprietaire de la playlist** !"
+pl_edit_invalid_id: "Veuillez entrer un ID de playlist valide et non existant !"
+pl_edit_invalid_mode: "Mode de visibilite invalide. Veuillez utiliser **public** ou **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Nouvel ID de playlist"
+ineraction_edit_playlist_name_label: "Nouveau nom de playlist"
+ineraction_edit_playlist_des_label: "Nouvelle description de playlist"
+ineraction_edit_playlist_private_label: "Nouvelle visibilite de playlist"
+ineraction_edit_playlist_id_placeholder: "Entrez votre nouvel ID de playlist ! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Entrez votre nouveau nom de playlist !"
+ineraction_edit_playlist_des_placeholder: "Entrez votre nouvelle description de playlist !"
+ineraction_edit_playlist_private_placeholder: "Entrez votre nouvelle visibilite de playlist ! [public/private]"
+ineraction_edit_success: "Playlist modifiee avec succes\nNouvel ID de playlist : `%{playlistId}`"
+ineraction_edit_playlist_error: "Quelque chose s'est mal passe. Veuillez reessayer !"
+ineraction_edit_notfound: "Veuillez fournir un ID de playlist valide !"
+ineraction_edit_playlist_owner: "Vous n'etes pas le **proprietaire de la playlist**"
+ineraction_edit_invalid_id: "Veuillez entrer un ID de playlist valide et non existant !"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Playlist **%{name}** ajoutee a la file d'attente ♪"
+pl_import_imported_footer: "Profitez de %{tracks} chansons • %{duration} • de pur bonheur musical !"
+pl_import_invalid: "Veuillez fournir un ID de playlist valide !"
+pl_import_private: "La playlist est **privee**"
+pl_import_voice: "Vous devez etre dans un salon vocal pour utiliser cette commande !"
+pl_import_empty: "La playlist est **vide**"
+
+### pl-info commands! ###
+pl_info_owner: "Proprietaire"
+pl_info_id: "ID"
+pl_info_des: "Description"
+pl_info_no_des: "Aucune description fournie !"
+pl_info_private: "Visibilite"
+pl_public: "Publique"
+pl_private: "Privee"
+pl_info_total: "Nombre total de chansons"
+pl_info_created: "Creee"
+pl_info_invalid: "Veuillez fournir un ID de playlist valide !"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Veuillez fournir un ID de playlist valide !"
+pl_remove_number_invalid: "Veuillez fournir un nombre valide !"
+pl_remove_notfound: "Veuillez fournir un ID de playlist valide !"
+pl_remove_owner: "Vous n'etes pas le **proprietaire de la playlist**"
+pl_remove_song_notfound: "Chanson introuvable !"
+pl_remove_removed: "Chanson numero **%{position}** supprimee de `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Veuillez fournir un ID de playlist valide !"
+pl_savequeue_notfound: "Veuillez fournir un ID de playlist valide !"
+pl_savequeue_owner: "Vous n'etes pas le **proprietaire de la playlist** !"
+pl_savequeue_no_tracks: "Aucune chanson en cours de lecture !"
+pl_savequeue_no_new_saved: "La chanson existe deja dans `%{name}`"
+pl_savequeue_saved: "**%{tracks} chansons** sauvegardees dans `%{name}`"
+
+pl_error_no_node: "Aucun serveur Lavalink n'a ete trouve. Veuillez reessayer apres **5 minutes**"

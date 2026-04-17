@@ -50,7 +50,7 @@ export class MewslinkInit {
     const defaultPlugins: MewslinkPlugin[] = [
       new Plugin.Deezer(),
       new Plugin.Nico({ searchLimit: 10 }),
-      new Plugin.Apple({ countryCode: "us" }),
+      new Plugin.Apple({ countryCode: "us", logger: this.client.logger }),
     ];
 
     if (this.client.config.features.CONVERT_LINK.Enable)
@@ -65,6 +65,10 @@ export class MewslinkInit {
         new Plugin.Spotify({
           clientId: this.client.config.lavalink.SPOTIFY.id,
           clientSecret: this.client.config.lavalink.SPOTIFY.secret,
+          clients: this.client.config.lavalink.SPOTIFY.clients?.map((c) => ({
+            clientId: c.id,
+            clientSecret: c.secret,
+          })),
           playlistPageLimit: 1,
           albumPageLimit: 1,
           searchLimit: 10,

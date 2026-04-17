@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Politique de confidentialite de %{bot}"
+privacy_label: Politique de confidentialite
+privacy_desc: |
+  **Accord utilisateur**
+  L'utilisation de [%{bot}](%{serversupport}) ("bot") sur le serveur necessite la collecte de certaines donnees utilisateur. Les donnees collectees incluent, sans s'y limiter, l'identifiant Discord de l'utilisateur, le nom d'utilisateur Discord et les roles du serveur. L'utilisation du Bot est consideree comme une acceptation des termes de cette politique.
+
+  **Acces aux donnees**
+  L'acces aux donnees est uniquement autorise pour les developpeurs du bot et les services d'hebergement, et uniquement dans le cadre necessaire au developpement, aux tests et a l'implementation des fonctionnalites du bot. Les donnees ne sont ni vendues, ni cedees, ni partagees avec des tiers, sauf si la loi ou l'accord des Conditions d'utilisation l'exige. Vous pouvez consulter vos donnees sur demande aupres du [developpeur](%{developer}).
+
+  **Stockage des donnees**
+  Les donnees sont stockees dans une base de donnees [MYSQL](https://www.mysql.com/). La base de donnees est securisee pour empecher tout acces externe. Cependant, aucune garantie n'est fournie et le proprietaire du Bot n'est pas responsable des violations de donnees involontaires ou malveillantes. En cas d'acces non autorise aux donnees, le personnel du serveur informera les utilisateurs via le serveur de support.
+
+  **Droits des utilisateurs**
+  A tout moment, vous avez le droit de demander a consulter les donnees de votre compte Discord. Vous avez le droit de demander la suppression des donnees pertinentes. Pour ce faire, les utilisateurs doivent soumettre une demande via le serveur de support.
+
+  **Questions**
+  Si vous avez des questions ou des preoccupations concernant les donnees pouvant etre stockees a partir de votre compte, veuillez contacter le [personnel](%{serversupport}). Pour plus d'informations, consultez les Conditions d'utilisation de Discord.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Conditions d'utilisation de %{bot}"
+tos_label: "Conditions d'utilisation"
+termsofservice_desc: |
+  **Accord d'utilisation**
+  En invitant [%{bot}](%{serversupport}) ("bot") et en utilisant ses fonctionnalites, vous acceptez les Conditions d'utilisation et la Politique de confidentialite du bot.
+
+  Vous reconnaissez que vous pouvez utiliser le bot librement sur tout serveur Discord que vous partagez avec lui. Vous pouvez l'inviter sur tout serveur ou vous disposez des droits "Gerer le serveur", et ce privilege peut etre revoque si vous enfreignez les conditions d'utilisation ou la politique de confidentialite de ce bot, ou les Conditions d'utilisation, la Politique de confidentialite ou les Directives communautaires de Discord Inc.
+
+  En invitant le bot, celui-ci peut collecter certaines donnees telles que decrites dans sa Politique de confidentialite. L'utilisation prevue de ces donnees concerne les fonctionnalites principales du bot, telles que l'execution de commandes.
+
+  **Affiliation**
+  Le bot n'est pas affilie, soutenu ou cree par Discord Inc. Toute connexion directe avec Discord ou l'un de ses objets de marque est purement fortuite. Nous ne revendiquons aucun droit de propriete intellectuelle sur les actifs, marques ou autres proprietes intellectuelles de Discord.
+
+  **Utilisateurs mineurs**
+  Le bot n'est pas autorise aux mineurs de moins de 13 ans ou en dessous de l'age de consentement legal de leur pays. Cela est conforme aux Conditions d'utilisation de Discord. Aucune information ne sera sciemment stockee provenant d'un utilisateur mineur. S'il est decouvert qu'un utilisateur est mineur, nous prendrons toutes les mesures necessaires pour supprimer les donnees stockees.
+
+  **Responsabilite**
+  Les developpeurs et le proprietaire du bot ne peuvent etre tenus responsables des individus enfreignant ces Conditions a tout moment. Le droit de mettre a jour ces conditions est reserve a notre discretion, avec un delai d'une semaine (7 jours) pour se desengager de ces conditions. Un utilisateur peut se desengager en retirant le bot de tout serveur ou il a le droit de retirer le bot.

@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "เปิดใช้งาน"
+disable: "ปิดใช้งาน"
+
+# maintenance
+maintenance_title: "การบำรุงรักษา"
+maintenance_desc: |
+  %{bot} กำลังอยู่ระหว่างการบำรุงรักษา กรุณาลองอีกครั้งในภายหลัง
+  สำหรับข้อมูลเพิ่มเติม กรุณาเข้าร่วม [เซิร์ฟเวอร์สนับสนุน](%{serversupport}) ของเรา ขอบคุณ!
+
+# Getting error!
+unexpected_error: "เกิดข้อผิดพลาดบางอย่าง กรุณาลองอีกครั้งในภายหลัง!"
+
+### Rate limit!
+ratelimit: "คุณดำเนินการเร็วเกินไป กรุณารอ **%{time} วินาที**"
+
+# No permission!
+no_perms: "ฉันไม่มีสิทธิ์ **%{perm}**!\nกรุณาให้สิทธิ์ **%{perm}** แก่ฉันเพื่อดำเนินการคำสั่งนี้"
+
+no_manage_guild_perms: "คำสั่งนี้ต้องใช้สิทธิ์ **%{perm}**!\nคุณไม่มีสิทธิ์ดำเนินการคำสั่งนี้!"
+
+no_admin_perms: "คำสั่งนี้ต้องใช้สิทธิ์ **%{perm}**!\nคุณไม่มีสิทธิ์ดำเนินการคำสั่งนี้!"
+
+# No permission!
+no_perms_channel: "ฉันไม่มีสิทธิ์ **%{perm}** ใน %{channel} เพื่อดำเนินการคำสั่งนี้!"
+
+# Execute when invalid
+no_node: "**ไม่พบเซิร์ฟเวอร์ Lavalink กรุณาลองอีกครั้งหลังจาก 5 นาที**"
+
+# Client owner!
+owner_only: "คำสั่งนี้สามารถใช้ได้โดย**เจ้าของ**บอทเท่านั้น"
+
+# Need to join voice & same voice to use command!
+no_player: "ไม่มีเพลงที่กำลังเล่นอยู่!"
+no_same_voice: "คุณไม่ได้อยู่ในห้องเสียงเดียวกับฉัน!"
+no_in_voice: "คุณไม่ได้อยู่ในห้องเสียง!"
+
+# Blacklist User
+blacklist_user: "ดูเหมือนว่าคุณถูกขึ้นบัญชีดำ! คุณไม่ได้รับอนุญาตให้ใช้คำสั่ง\nกรุณาติดต่อ **[ผู้พัฒนา](%{serversupport})** หากคุณคิดว่านี่เป็นข้อผิดพลาด"
+
+# Blacklist Guild
+blacklist_guild: "เซิร์ฟเวอร์นี้ถูกขึ้นบัญชีดำ! คุณไม่ได้รับอนุญาตให้ใช้คำสั่งในเซิร์ฟเวอร์นี้\nกรุณาติดต่อ **[ผู้พัฒนา](%{serversupport})** หากคุณคิดว่านี่เป็นข้อผิดพลาด"
+
+### DjRole No Permission ###
+not_dj_role: "คุณต้องมีบทบาท %{role} เพื่อใช้คำสั่งนี้"
+
+### No Premium Event!
+no_premium_button: "รับ Premium"
+no_premium_author: "ไม่มีแผน Premium"
+no_premium_desc: "อุ๊ปส์! ดูเหมือนคุณยังไม่มีแผน Premium\nฟีเจอร์นี้ไม่สามารถเข้าถึงได้หากไม่มี"
+
+# Top.gg error
+topgg_error_author: "ข้อผิดพลาดการโหวต Top.gg"
+topgg_error_desc: "เกิดข้อผิดพลาดขณะตรวจสอบการโหวตของคุณบน top.gg อาจเป็นเพราะ Top.gg ล่มอยู่ กรุณาลองอีกครั้งใน 5-10 นาที\nหากปัญหานี้ยังคงอยู่ กรุณาติดต่อ [เซิร์ฟเวอร์สนับสนุน](%{serversupport}) ของเราเพื่อขอความช่วยเหลือเพิ่มเติม"
+
+# Top.gg unvote
+topgg_unvote_button: "โหวตเพื่อปลดล็อก"
+premium_button: "อัปเกรดเป็น Premium"
+topgg_unvote_author: "ต้องโหวตก่อน"
+topgg_unvote_desc: "คุณต้องโหวตเพื่อเข้าถึงคำสั่งนี้! ง่ายและฟรี\nหรือรับ Premium ที่ [หน้า Premium](%{premium}) ของเราเพื่อข้ามข้อความนี้และปลดล็อกฟีเจอร์พิเศษ"
+
+### Mention Desc ###
+mention_content: "คำนำหน้าของฉันสำหรับเซิร์ฟเวอร์นี้คือ `%{prefix}`\nคุณสามารถเมนชั่นฉันเพื่อใช้คำสั่งได้เช่นกัน หรือพิมพ์ </help:1294325423957741598> เพื่อดูคำสั่ง slash ของฉัน ♡"

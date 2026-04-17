@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "Bộ phận hỗ trợ đã bị tắt"
+invalid_channel_helpdesk: "Kênh được cung cấp không hợp lệ"
+channel_viewable_helpdesk: "Kênh được cung cấp không hiển thị với tôi"
+setup_helpdesk_succes: "Bộ phận hỗ trợ đã được thiết lập tại %{channel} thành công."
+
+embed1_title: "Chào mừng đến máy chủ hỗ trợ %{bot}!"
+embed1_desc: "**%{bot} Nơi những ai muốn hát luôn tìm thấy bài hát ♪\nTham gia giai điệu trong máy chủ Discord của bạn ngay hôm nay!**"
+embed1_footer: "Cảm ơn bạn đã chọn %{bot} làm Bot Nhạc cá nhân!"
+
+embed2_title: "Bộ phận hỗ trợ %{bot}"
+embed2_desc: |
+  **%{button1} %{bot} là gì?
+
+  %{button2} Làm thế nào để mời Bot Nhạc %{bot}?
+
+  %{button3} Cách sử dụng Bot Nhạc %{bot}?
+
+  %{button4} Cách bật tính năng 24/7?
+
+  %{button5} %{bot} không phản hồi/ngoại tuyến.
+
+  %{button6} Chất lượng âm thanh của %{bot} bị giật lag.
+
+  %{button7} Cách thiết lập kênh yêu cầu bài hát?
+
+  %{button8} %{bot} liên tục báo thiếu quyền.
+
+  %{button9} %{bot} tự ngắt kết nối khỏi kênh thoại.
+
+  %{button10} Làm sao để nhận/kích hoạt Premium và tôi nhận được những đặc quyền gì?**
+
+embed2_field1_name: "Website"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Loại"
+embed2_field2_value: "**Bot Nhạc**"
+embed2_field3_name: "Nhận Premium"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Những ai muốn hát luôn tìm thấy bài hát ♪"
+helpdesk1_desc: |
+  **%{bot} là bot Discord cách mạng hóa cách bạn trải nghiệm âm nhạc trên Discord, mang đến giao diện người dùng sạch sẽ nhất, âm thanh chất lượng cao và nhiều tính năng liên quan đến âm nhạc.**
+
+  **Tại sao chọn %{bot}?**
+  - **Cập nhật thường xuyên**: %{bot} được cập nhật liên tục, đảm bảo bạn luôn có những tính năng và bản sửa lỗi mới nhất.
+  - **Tính năng toàn diện**: Hệ thống nhạc đơn giản của %{bot} cho phép phát nhạc mượt mà từ nhiều nguồn.
+  - **Cộng đồng hỗ trợ tận tâm**: Chúng tôi là bot khá mới trên Discord, và chúng tôi rất muốn bạn tham gia! Đảm bảo bot hoạt động trơn tru là ưu tiên của chúng tôi, đó là lý do chúng tôi cần phản hồi và đề xuất từ bạn. Nếu bạn có bất kỳ câu hỏi nào, hãy mở ticket hỗ trợ.
+
+  **Liên kết hữu ích**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **Cần hỗ trợ?**
+  - Gửi ticket để được hỗ trợ thêm
+
+  **Bạn còn chờ gì nữa? Mời %{bot} vào máy chủ Discord của bạn ngay hôm nay và tận hưởng trải nghiệm âm nhạc vô hạn, không giới hạn!**
+  **[Nhấn vào đây để mời](%{invite})**
+
+helpdesk2_title: "Thêm %{bot} vào máy chủ của bạn"
+helpdesk2_desc: |
+  **Bạn có thể mời %{bot} bằng [liên kết](%{invite}) này.**
+    Chọn máy chủ bạn muốn thêm và nhấn **Authorize**
+
+  > Lưu ý rằng nếu bạn tắt quyền `Administrator` cho %{bot}, nó có thể ảnh hưởng đến chức năng của bot. Dù bạn vẫn có thể truy cập các tính năng nhạc cơ bản, một số chức năng có thể không hoạt động đúng.
+
+helpdesk3_title: "Cách sử dụng Bot Nhạc %{bot}?"
+helpdesk3_desc: |
+  Tham gia kênh thoại hoặc sân khấu rồi gõ /play <tên bài hát/url> trong kênh văn bản.
+  Bạn có thể tương tác trực tiếp bằng các nút điều khiển để dừng, lặp, v.v.
+  Gõ / (hoặc /help) và chọn biểu tượng của %{bot} để xem danh sách tất cả các lệnh có sẵn.
+
+helpdesk4_title: "Cách bật tính năng 24/7?"
+helpdesk4_desc: |
+  Tham gia kênh thoại hoặc sân khấu rồi gõ `/247 <enable/disable>` trong kênh văn bản.
+
+  **Lưu ý:** *Tính năng này có thể sử dụng nếu bạn có quyền `manage server`, và đảm bảo trước đó bot đang phát nhạc.*
+
+helpdesk5_title: "%{bot} không phản hồi/ngoại tuyến"
+helpdesk5_desc: |
+  Bạn đang cố sử dụng lệnh nhưng liên tục thất bại? Có thể bot không trả lời được, nhưng hãy làm theo các bước dưới đây để khắc phục.
+
+  **%{bot} hiện sử dụng lệnh slash!**
+  Hãy đảm bảo bạn đang sử dụng lệnh slash vì Discord hiện yêu cầu tất cả bot phải sử dụng chúng.
+  Bắt đầu bằng cách gõ `/play` và `/help`
+
+  **%{bot} vẫn không phản hồi?**
+  Tình huống duy nhất còn lại là vấn đề từ phía Discord hoặc phía chúng tôi. Kiểm tra xem %{bot} có ngoại tuyến trong máy chủ của bạn không. Nếu ngoại tuyến, cách tốt nhất là đợi tối đa 5 phút và xem %{bot} có trực tuyến lại không. Nếu bot trực tuyến, có tất cả các quyền cần thiết, bạn nên liên hệ với một trong các thành viên hỗ trợ của chúng tôi.
+
+helpdesk6_title: "Chất lượng âm thanh của %{bot} bị giật lag"
+helpdesk6_desc: |
+  Không ai thích nhạc bị giật, nhưng đôi khi điều đó xảy ra khi nghe bot nhạc trên Discord. Dưới đây là một số giải pháp khả thi để giúp bạn khắc phục.
+
+  **Tôi nên làm gì?**
+  Trước tiên bạn nên kiểm tra kết nối internet. Discord hiển thị ping cuối cùng và trung bình ở góc dưới bên trái, chỉ cần nhấn vào "Voice Connected" và kiểm tra ping có ổn định không (nếu biểu đồ đỏ nhấp nháy nhiều nghĩa là không ổn định!) và ping cuối cùng cũng như trung bình dưới 250 mili giây. Nếu cả hai chỉ số cho thấy kết nối kém, bạn nên kiểm tra WiFi/LAN. Khởi động lại router cũng có thể giải quyết một số vấn đề.
+
+  **Bạn có ping 5ms và có thể tải GTA 5 trong 2 phút?**
+  Vậy kết nối internet có vẻ không phải là vấn đề. Trong 95% trường hợp %{bot} bị lag, Discord đang gặp sự cố tạm thời với máy chủ thoại. Họ thường khởi động lại chúng, nhưng bạn có thể ép chuyển sang máy chủ khác trong khu vực.[Thử chuyển vùng máy chủ](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3) để có máy chủ thoại Discord mới.
+  Nếu bạn vẫn gặp sự cố, hãy gõ /report để báo cáo vấn đề.
+
+helpdesk7_title: "Cách thiết lập kênh yêu cầu bài hát?"
+helpdesk7_desc: |
+  **Làm sao để tạo kênh yêu cầu?**
+  Đảm bảo %{bot} được cấp quyền `manage server` rồi gõ /setup với tùy chọn `create`, bot sẽ tự động tạo kênh đặc biệt cho yêu cầu bài hát.
+
+  ```Lưu ý: Không xóa bất kỳ tin nhắn nào %{bot} đã tạo để tôi hoạt động đúng cách.```
+
+  **Làm sao để xóa kênh yêu cầu?**
+  Giống như trước, chỉ cần chọn tùy chọn `delete` trong các lựa chọn.
+
+helpdesk8_title: "%{bot} liên tục báo thiếu quyền."
+helpdesk8_desc: |
+  Khi cố chạy một số lệnh, %{bot} có thể thiếu một số quyền. Trong trường hợp đó, %{bot} sẽ từ chối chạy lệnh cho đến khi các vấn đề này được giải quyết. Điều quan trọng cần lưu ý là các quyền này không phải tùy chọn; %{bot} cần chúng để thực hiện lệnh.
+
+  Nếu bạn tin rằng bot đã có các quyền cần thiết, hãy kiểm tra các ghi đè vai trò của kênh. Các ghi đè này có thể thay đổi quyền vai trò trong các kênh cụ thể.
+
+  Nếu bạn vẫn không thể xác định tại sao %{bot} không có quyền cần thiết, hãy cân nhắc cấp quyền Administrator cho %{bot}. Điều này sẽ giải quyết mọi vấn đề quyền Discord.
+
+helpdesk9_title: "Mewwme tự ngắt kết nối khỏi kênh thoại"
+helpdesk9_desc: |
+  Trong trường hợp rất hiếm, ngay cả khi đã bật chế độ 24/7, Mewwme có thể ngắt kết nối khỏi kênh thoại mà không ai sử dụng /stop hoặc nút Disconnect của Discord. Một số nguyên nhân phổ biến nhất và cách khắc phục được liệt kê dưới đây.
+
+  **Chế độ 24/7 chưa được bật.**
+  Theo mặc định, Mewwme ngắt kết nối khỏi kênh thoại khi trống trong 3 phút.
+
+  **Khắc phục:** Tham khảo "4. Cách bật tính năng 24/7?" trong embed trợ giúp đầu tiên để bật chế độ 24/7.
+
+  **Thiếu quyền.**
+  Bất cứ khi nào Discord yêu cầu chúng tôi kết nối lại kênh thoại, do khởi động lại máy chủ hoặc sự cố API, chúng tôi kiểm tra lại quyền bot để đảm bảo có thể tham gia và nói trong kênh. Nếu thiếu quyền, bạn phải sử dụng /play lại để thêm bot vào kênh khác hoặc cùng kênh sau khi thêm quyền cần thiết.
+
+  **Khắc phục:** Đảm bảo sử dụng lệnh /play để thêm bot vào kênh thoại thay vì di chuyển từ kênh khác. Bằng cách đó, bạn đảm bảo bot có tất cả quyền cần thiết để kết nối lại khi cần.
+
+  **Vấn đề vùng máy chủ.**
+  Trong một số trường hợp, một số vùng thoại có thể gặp sự cố mạng và ổn định khiến bot không thể tham gia kênh thoại.
+
+  **Khắc phục:** Chuyển sang vùng thoại khác bằng cài đặt kênh thoại (chọn vùng gần quốc gia bạn nhất).
+
+  **Có vấn đề khác.**
+  Nếu bạn đã thử tất cả các cách khắc phục trên mà sự cố vẫn tiếp diễn, vui lòng gõ `report` hoặc mở ticket hỗ trợ tại https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "Làm sao để nhận/kích hoạt Premium và tôi nhận được những đặc quyền gì?"
+helpdesk10_desc: |
+  **Cách kích hoạt đặc quyền Premium?**
+
+  để kích hoạt đặc quyền thành viên premium, vui lòng làm theo các bước sau:
+  1. **liên kết tài khoản discord trước**
+    - trước khi mua, hãy đảm bảo tài khoản discord của bạn đã kết nối với nền tảng bạn sử dụng (patreon hoặc ko-fi).
+    - điều này cần thiết để hệ thống có thể tự động phát hiện thanh toán của bạn.
+  2. **mua gói thành viên**
+  - sau khi liên kết discord, hoàn tất thanh toán gói thành viên theo gói bạn muốn.
+  3. **chờ đồng bộ**
+    - sau khi thanh toán thành công, vui lòng đợi vài phút để hệ thống đồng bộ gói thành viên của bạn.
+  4. **nhận premium trong máy chủ**
+    - truy cập máy chủ discord bạn muốn nâng cấp, rồi sử dụng lệnh:
+      `/premium claim`
+      chọn đúng tùy chọn nền tảng (patreon hoặc ko-fi) khi được hỏi.
+      đảm bảo bạn chạy lệnh bên trong máy chủ bạn muốn kích hoạt premium.
+      sau khi nhận, premium sẽ được kích hoạt ngay lập tức.
+
+  Bằng cách làm theo các bước trên, bạn sẽ có thể kích hoạt và tận hưởng tất cả các đặc quyền Premium. Nếu gặp bất kỳ vấn đề nào hoặc có câu hỏi, hãy liên hệ đội ngũ hỗ trợ của chúng tôi.
+
+helpdesk10_footer: "Cảm ơn bạn đã là một phần trong hành trình của chúng tôi!, chúng tôi hy vọng bạn sẽ có thời gian vui vẻ ở đây."

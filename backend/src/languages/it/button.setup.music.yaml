@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "La riproduzione musicale e' stata fermata. Spero ti sia divertito a ballare!"
+skip_notfound: "Ops. Sembra che non ci sia nessun brano da saltare!"
+skip_msg: "Ho saltato il brano. Spero non ti dispiaccia :p"
+previous_msg: "Bene, facciamo un passo indietro! Brano precedente in arrivo <3"
+previous_notfound: "Spiacente, non posso tornare piu' indietro. Nessun brano precedente trovato :("
+resume_msg: "La musica e' tornata! Continuiamo a ballare ♪"
+pause_msg: "Musica in pausa. Prenditi una pausa e goditi il silenzio."
+loop_current: "Ora la canzone corrente verra' riprodotta in loop. Goditi la ripetizione!"
+loop_all: "La coda e' ora impostata in loop. Lascia che la musica si ripeta!"
+unloop_all: "La modalita' loop e' stata disattivata. Goditi la varieta' dei brani!"
+
+### Need to join voice & same voice to use command!
+no_player: "Premi un pulsante e non succede nulla. Forse dovresti prima riprodurre qualcosa!"
+no_same_voice: "Premi un pulsante e lampeggia rosso. Non sei nello stesso canale vocale in cui sono io!"
+no_in_voice: "Tutti i pulsanti non reagiscono. Non sei in un canale vocale!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "IN RIPRODUZIONE"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Richiesto da %{request}"
+setup_footer: "Brani rimanenti • %{totalsong} | Durata totale • %{duration}"
+setup_queuemsg: "**Entra in un canale vocale e riproduci brani usando il nome o l'URL qui!**"
+setup_playembed_author: "Nessun brano in riproduzione al momento!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Aggiunto **%{title}** • %{request}"
+play_playlist: "Aggiunta **%{title}** • (**%{songs} Brani**) • %{request}"
+play_result: "Aggiunto **%{title}** • %{request}"
+play_emoji: "Non so come riprodurre questo... Non e' un brano ne' una playlist."
+setup_content: "**Ehi! Il mio deck e' pronto per la tua musica! Manda qualcosa qui!**"

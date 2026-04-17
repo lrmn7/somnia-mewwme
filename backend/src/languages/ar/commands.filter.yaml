@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **فلتر %{name} مُفعّل!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **أتمنى أن يعجبك صوت هذا!**
+filter_already: "ماذا؟ فلتر %{name} مُفعّل بالفعل... لا يمكنني فعل شيء هنا."
+filter_number: "هذا ليس رقماً يمكنني إدخاله في المعادل..."
+filter_greater: "يجب أن يكون رقماً أكبر من **0**!"
+filter_less: "واو! كثير جداً! ربما أقل من **10** أفضل..."
+
+### Bassboost command!
+bassboost_set: "**تم ضبط تعزيز الباس على %{amount}dB**"
+bassboost_limit: "يرجى استخدام رقم بين **-10** و **10**"
+
+### Equalizer command!
+eq_author: "المعادل"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  يوجد **10 نطاقات** يمكن ضبطها من **-10** إلى **10**.
+  لا تحتاج لإدخالها جميعاً، فقط التي تريد تغييرها.
+  إذا أردت تخطي واحد، يمكنك تركه كـ **0**.
+eq_field_title: "مثال:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "إعادة تعيين المعادل • %{prefix}eq reset"
+eq_on: "تم ضبط المعادل على **%{bands}**!"
+eq_number: "يرجى إدخال رقم صالح!"
+eq_greater: "يجب أن يكون الرقم أكبر من **-10**"
+eq_than: "يجب أن يكون الرقم أقل من **10**"
+
+### Pitch command!
+pitch_on: "حسناً، طبقة الصوت الآن **%{amount}**!"
+
+### Rate command!
+rate_on:  "حسناً! المعدل الآن **%{amount}x**!"
+
+### Speed command!
+speed_on: "بالتأكيد، تغيير السرعة إلى **%{amount}x**!"
+
+### Reset command!
+reset_on: "**إعادة تعيين** جميع المؤثرات! العودة إلى الصوت الأصلي!"
+reset_already:  "المؤثرات **مُعطّلة بالفعل**، هل نسيت؟"
+
+# Invalid Number
+number_invalid: "هذا ليس رقماً يمكنني التعامل معه... حاول مرة أخرى برقم صالح."

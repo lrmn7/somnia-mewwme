@@ -1,0 +1,35 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "لم أتمكن من العثور على ذلك الخادم..."
+blacklist_guild_already: "يبدو أن %{id} محظور بالفعل، لذا لا يمكنني فعل شيء."
+blacklist_guild_add: "وداعاً، %{id}! أضفته إلى القائمة السوداء. يبدو أن الأمر لم يكن مقدراً..."
+blacklist_guild_not_exist: "قلت أنك تبحث عن %{id}؟ لم أتمكن من العثور عليه في قوائمي..."
+blacklist_guild_delete: "مرحباً بعودتك، %{id}! يمكنني زيارته مجدداً، لم يعد محظوراً."
+
+### Blacklist User
+blacklist_user_bot_owner: "واو! لا أستطيع حظر مُنشئي! هل تحاول إيقاعي في مشكلة؟"
+blacklist_user_not_found: "لم أتمكن من العثور على ذلك المعجب..."
+blacklist_user_already: "يبدو أن %{id} محظور بالفعل، لذا لا يمكنني فعل شيء."
+blacklist_user_add: "وداعاً، %{id}! محزن أن أضيف معجباً إلى القائمة السوداء، لكن أعتقد أنه للأفضل..."
+blacklist_user_not_exist: "%{id}؟ من هذا؟ لم أتمكن من العثور عليه في نادي المعجبين..."
+blacklist_user_delete: "رائع! تمت إعادة %{id} كمعجب! لا أطيق الانتظار لرؤيته في الحفلة القادمة!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "لست متأكداً ما نوع هذه الصيانة، لكن يجب عليك استخدام %{text} بدلاً من ذلك"
+maintenance_true: "حسناً! أنا أستمع إليك فقط الآن!"
+maintenance_false: "عدت للاستماع إلى الجميع الآن!"
+
+

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import BackgroundGlow from "@/components/BackgroundGlow";
+
 import { links } from '@/config/links';
 const TermsOfService = () => {
 const lastUpdated = "March 8, 2026";
@@ -97,7 +97,6 @@ const lastUpdated = "March 8, 2026";
 
   return (
     <div className="min-h-screen flex flex-col relative text-foreground">
-      <BackgroundGlow />
       <Navbar />
       <div className="h-20 lg:h-24" />
       <main className="flex-1">
@@ -110,8 +109,10 @@ const lastUpdated = "March 8, 2026";
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-mewwme">
-                Terms of Service
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-white">
+                  Terms of Service
+                </span>
               </h1>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                 The rules and guidelines for using the Mewwme Discord bot.

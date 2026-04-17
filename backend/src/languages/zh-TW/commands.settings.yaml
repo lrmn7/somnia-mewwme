@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "24/7 模式已**啟用**"
+247_off: "24/7 模式已**停用**"
+247_already: "24/7 模式已經是 **%{mode}**"
+247_arg_error: "無效的 24/7 模式。請使用 %{text}"
+247_no_in_voice: "你不在語音頻道中！"
+
+
+### Set Language command! ###
+provide_lang: "**無效的語言。請使用** `%{languages}`"
+lang_set: "**語言已設定為** `%{language}`"
+lang_change: "**語言已更改為** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "請提供有效的前綴！"
+prefix_length: "**前綴不能超過 10 個字元**"
+prefix_set: "**前綴已設定為** `%{prefix}`"
+prefix_change: "**前綴已更改為** `%{prefix}`"
+
+### Control command!
+control_set: "**播放器控制模式已設為 %{toggle}**"
+control_arg_error: "無效的參數。請使用 %{text}"
+control_already: "歌曲通知已經是 **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "無效！請使用 %{text}"
+setup_enable: "**糟糕！音樂系統已存在。**"
+setup_topic: "♪ 願意歌唱的人總能找到一首歌。♪"
+setup_msg: "*`已成功在`* %{channel} *`設定音樂系統`*\n```注意：請勿刪除我所建立的任何訊息，以確保我能正常運作。```"
+setup_null: "*`已成功刪除設定頻道！`*"
+setup_deleted: "*`已成功刪除設定頻道！`*"
+setup_null_inguild: "**此伺服器找不到音樂系統！準備刪除資料**"
+setup_queuemsg: "**加入語音頻道，在這裡使用歌曲名稱或網址來播放音樂！**"
+setup_playembed_author: "目前沒有正在播放的歌曲"
+
+### Themes command!
+error_themes: "無效... 請再試一次。"
+succes_themes: "**已成功將主題更改為 %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "注意：此連結將在 %{expired} 後過期。"
+lastfm_login_title: "Last.fm 登入"
+lastfm_login_desc: "你想授權你的 [Last.fm](https://www.last.fm/user/eleremen) 帳戶嗎？\n如果是，請點擊下方按鈕開始授權流程。"
+lastfm_not_login_desc: "你尚未登入 Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm 登出"
+lastfm_logout_desc: "你已成功登出 Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm 功能已停用。"
+lastfm_feature_disabled_desc: "Last.fm 功能目前已停用。如需更多資訊，請聯繫管理員。"
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "找不到 YouTube 頻道 **%{ytchannel}** 的通知。"
+notify_youtube_removed: "你已移除 YouTube 頻道 **%{ytchannel}** 的通知。"
+notify_youtube_disabled: "YouTube 通知功能目前已停用。如需更多資訊，請聯繫工作人員。"
+notify_youtube_already: "YouTube 頻道 %{ytchannel} 的通知已設定完成。"
+notify_youtube_invalid_channel: "指定的文字頻道有誤。請檢查！"
+notify_youtube_set: "YouTube 通知已為 **%{ytchannel}** 設定在 %{channelid}。"
+notify_youtube_404: |
+  找不到所提供的 YouTube 頻道 ID。
+  要找到頻道 ID，請前往 YouTube 頻道頁面並查看網址。
+  頻道 ID 是 `/channel/` 後面的字母和數字字串（例如：`UC_x5XG1OV2P6uZZ5FSM9Ttw`）。
+notify_youtube_limit_reached_non_premium: |
+   你已達到 %{limit} 則通知的上限。
+   升級到 [premium](%{premium}) 即可設定最多 %{limitpremium} 則通知。
+
+notify_youtube_limit_reached_premium: |
+   你已達到 %{limit} 則通知的上限。
+   這是允許的最大數量。請考慮刪除一些通知以騰出空間。
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "找不到 Twitch 使用者名稱 **%{twitchusername}** 的通知。"
+notify_twitch_removed: "你已移除 Twitch 使用者名稱 **%{twitchusername}** 的通知。"
+notify_twitch_disabled: "Twitch 通知功能目前已停用。如需更多資訊，請聯繫工作人員。"
+notify_twitch_already: "你已經為 Twitch 頻道 %{twitchusername} 設定了通知。"
+notify_twitch_invalid_channel: "指定的文字頻道有誤。請檢查！"
+notify_twitch_set: "Twitch 通知已為 **%{twitchusername}** 設定在 %{channelid}。"
+notify_twitch_error: "處理 **{twitchusername}** 在頻道 **{channelid}** 的 Twitch 通知時發生意外錯誤。請重試或聯繫支援團隊。"
+notify_twitch_limit_reached_non_premium: |
+   你已達到 %{limit} 則通知的上限。
+   升級到 [premium](%{premium}) 即可設定最多 %{limitpremium} 則通知。
+
+notify_twitch_limit_reached_premium: |
+   你已達到 %{limit} 則通知的上限。
+   這是允許的最大數量。請考慮刪除一些通知以騰出空間。
+
+### Temp Voice Feature command!
+tempvoice_setup: "臨時語音功能已 %{status}。"
+tempvoice_disabled: "臨時語音已停用。"
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "無效... 僅限 %{text}。"
+status_voice_channel_true: "語音頻道狀態已設為 **%{type}**。"
+status_voice_channel_false: "語音頻道狀態已設為 **%{type}**。"
+
+
+### Patreon Claim command!
+not_in_guild: "此指令只能在伺服器中執行！"
+no_data_patreon: "找不到 Patreon 資料（資料庫錯誤）"
+no_data_patreon_title: "未找到"
+no_data_patreon_desc: |
+  如果你已經訂閱，請確認你的 Discord 帳戶已連結到 Patreon！
+no_data_patreon_footer: "Patreon 同步可能需要一些時間，請稍後再查看"
+no_patreon_guild_membership: |
+  你好，你的 patreon 方案是**使用者方案**。
+  請升級到**伺服器方案**以解鎖進階版伺服器存取權。
+patreon_guild_membership_full_quota: |
+  你已用完所有伺服器配額！
+  **狀態：** %{status} 個伺服器已使用。
+
+  解決方案：
+  1. 在 patreon 上升級你的方案。
+  2. 或在你的舊伺服器上停用進階版。
+patreon_guild_membership_already_before: "你之前已經在此伺服器上啟用過進階版了！"
+patreon_guild_membership_already: "**已是進階版**，因為它由其他人贊助。\n將你的配額留給其他伺服器吧！"
+patreon_guild_membership_claim_title: "啟用確認"
+patreon_guild_membership_claim_desc: |
+  你確定要為以下伺服器啟用**進階版伺服器**嗎：
+  **%{guildName}**
+
+  此操作將使用 **1 個伺服器配額**。
+  剩餘配額：**%{status}**
+patreon_guild_membership_claim_success: |
+  成功！**%{guildName}** 現在是**進階版伺服器**了。
+
+  **贊助者：** %{user}
+  **剩餘配額：** %{status}
+  感謝你在 patreon 上支持我們！
+patreon_guild_membership_claim_success_title: "💎 進階版已啟用！"
+patreon_guild_membership_claim_cancel: "進階版啟用已取消。"
+patreon_guild_membership_claim_norespon: "由於無回應，啟用已自動取消。"
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 伺服器已兌換（Patreon）"
+patreon_guild_membership_claim_logs_desc: |
+  **贊助者：** %{sponsorTag} %{sponsorId}
+  **目標伺服器：** %{guildName} %{guildId}
+  **配額狀態：** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "你無法撤銷此進階版伺服器，因為不是由你註冊的。"
+patreon_guild_unclaim_title: "進階版撤銷確認"
+patreon_guild_unclaim_desc: |
+  你確定要**取消** **%{guildName}** 伺服器的進階版狀態嗎？
+  **影響：** 此伺服器的進階版功能將被停用。
+  你的伺服器配額將被恢復（+1）。
+  目前剩餘配額：**%{status}**
+patreon_guild_unclaim_success_title: "進階版已撤銷"
+patreon_guild_unclaim_success: |
+  **%{guildName}** 的進階版狀態已成功撤銷。
+  **已恢復配額：** 1 個伺服器
+  **新剩餘配額：** %{status}
+patreon_guild_unclaim_cancel: "進階版撤銷流程已取消。"
+patreon_guild_unclaim_norespon: "⏱️ 逾時。流程已取消。"
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "已取消認領的伺服器（Patreon）"
+patreon_guild_unclaim_logs_desc: |
+  **使用者：** %{sponsorTag} %{sponsorId}
+  **伺服器：** %{guildName}} %{guildId}
+  **已恢復配額：** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **使用者：** %{userTag} (%{userId})
+  **伺服器：** %{guildName} (%{guildId})
+  **配額：** %{quota}
+  **到期日：** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} 操作：%{action}"
+
+### Kofi Claim command!
+no_data_kofi: "找不到交易 ID 或已被認領。"
+kofi_linked_success_title: "付款連結成功！"
+kofi_linked_success_desc: "現在你可以使用 `/premium claim <kofi>` 而不需要 TxID。"
+kofi_no_data_title: "找不到資料！"
+kofi_no_data_desc: |
+  如果你已經付款但尚未將 Discord 帳戶連結到 Kofi
+  請使用：`/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "沒有配額，但你是進階版使用者。"
+kofi_full_server_quota_title: "配額已滿！"
+kofi_full_server_quota_desc: "你已使用 **%{quota}** 個伺服器名額。"
+kofi_server_already_claim_desc: "**已啟用！**\n你之前已經在此伺服器上啟用過進階版了。"
+kofi_server_already_active_desc: " **已是進階版！**\n此伺服器已被其他使用者啟用為進階版。"
+kofi_guild_membership_claim_success: |
+  進階版已成功啟用！
+  **配額使用：** %{quota}
+  **到期時間：** %{expires}
+kofi_guild_membership_claim_footer: "感謝你的支持！"
+kofi_action_title: "🏗️ Ko-fi 操作：%{type}"
+kofi_action_description: "**使用者：** %{userTag} (`%{userId}`)\n**伺服器：** %{guildName} (`%{guildId}`)\n**操作：** %{action}\n**配額：** %{quota}"
+kofi_action_activation: "伺服器已啟用"
+kofi_action_manual_link: "手動連結付款"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "進階版已撤銷"
+kofi_guild_unclaim_success_desc: |
+  **%{guildName}** 的進階版狀態已成功撤銷。
+  **已恢復配額：** 1 個伺服器
+kofi_guild_not_owned_by_user: "你無法撤銷此進階版伺服器，因為不是由你註冊的。"
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "已取消認領的伺服器 %{platform}"
+premium_unclaim_log_desc: |
+  **使用者：** %{userTag} %{userId}
+  **伺服器：** %{guildName}} %{guildId}
+  **已恢復配額：** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "DJ 身分組系統已**停用**。"
+dj_role_missing_role: "你需要提供一個身分組才能使用 `set` 操作。"
+dj_role_set: |
+  DJ 身分組已設為 %{role}。
+  狀態：**已啟用**
+  **受影響的指令：**
+  %{commands}

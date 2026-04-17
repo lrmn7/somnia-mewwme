@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "Helpdesk byl vypnut"
+invalid_channel_helpdesk: "Zadaný kanál je neplatný"
+channel_viewable_helpdesk: "Zadaný kanál pro mě není viditelný"
+setup_helpdesk_succes: "Helpdesk byl úspěšně nastaven v %{channel}."
+
+embed1_title: "Vítejte na serveru podpory %{bot}!"
+embed1_desc: "**%{bot} Kde ti, kdo chtějí zpívat, vždy najdou písničku ♪\nPřipojte se k melodii na svém Discord serveru ještě dnes!**"
+embed1_footer: "Děkujeme, že jste si vybrali %{bot} jako svého osobního hudebního bota!"
+
+embed2_title: "Helpdesk %{bot}"
+embed2_desc: |
+  **%{button1} Co je %{bot}?
+
+  %{button2} Jak pozvat hudebního bota %{bot}?
+
+  %{button3} Jak používat hudebního bota %{bot}?
+
+  %{button4} Jak zapnout funkci 24/7?
+
+  %{button5} %{bot} neodpovídá/je offline.
+
+  %{button6} Kvalita zvuku %{bot} je zpožděná.
+
+  %{button7} Jak nastavit kanál pro žádosti o skladby?
+
+  %{button8} %{bot} stále hlásí chybějící oprávnění.
+
+  %{button9} %{bot} se sám odpojuje z hlasového kanálu.
+
+  %{button10} Jak získám/aktivuji Premium a jaké výhody obdržím?**
+
+embed2_field1_name: "Webová stránka"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Typ"
+embed2_field2_value: "**Hudební bot**"
+embed2_field3_name: "Získat Premium"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Ti, kdo chtějí zpívat, vždy najdou písničku ♪"
+helpdesk1_desc: |
+  **%{bot} je Discord bot, který revolučním způsobem mění váš hudební zážitek na Discordu. Nabízí nejčistší uživatelské rozhraní, vysoce kvalitní zvuk a širokou škálu hudebních funkcí.**
+
+  **Proč %{bot}?**
+  - **Pravidelné aktualizace**: %{bot} je neustále aktualizován, abyste vždy měli to nejlepší z nejnovějších funkcí a oprav.
+  - **Komplexní funkce**: Jednoduchý hudební systém %{bot} umožňuje plynulé přehrávání z více zdrojů.
+  - **Oddaná komunita podpory**: Jsme relativně nový bot na Discordu a rádi bychom, abyste se k nám přidali! Zajištění hladkého chodu bota je naší prioritou, proto potřebujeme vaši pomoc se zpětnou vazbou a návrhy. Pokud máte jakékoli otázky, neváhejte otevřít tiket podpory.
+
+  **Užitečné odkazy**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **Potřebujete podporu?**
+  - Odešlete tiket pro další pomoc
+
+  **Na co čekáte? Pozvěte %{bot} na svůj Discord server ještě dnes a užijte si bezkonkurenční, neomezený hudební zážitek!**
+  **[Klikněte zde pro pozvání](%{invite})**
+
+helpdesk2_title: "Přidání %{bot} na váš server"
+helpdesk2_desc: |
+  **Můžete pozvat %{bot} pomocí tohoto [odkazu](%{invite}).**
+    Vyberte server, na který ho chcete přidat, a klikněte na **Autorizovat**
+
+  > Upozorňujeme, že pokud chcete zakázat oprávnění `Administrator` pro %{bot}, může to ovlivnit jeho funkčnost. Přestože budete mít stále přístup k základním hudebním funkcím, některé funkce nemusí fungovat správně.
+
+helpdesk3_title: "Jak používat hudebního bota %{bot}?"
+helpdesk3_desc: |
+  Připojte se k hlasovému nebo scénovému kanálu a poté zadejte /play <název skladby/URL> do textového kanálu.
+  Můžete přímo interagovat pomocí ovládacích tlačítek pro zastavení, smyčku atd.
+  Zadejte / (nebo /help) a vyberte ikonu %{bot} pro zobrazení seznamu všech dostupných příkazů.
+
+helpdesk4_title: "Jak zapnout funkci 24/7?"
+helpdesk4_desc: |
+  Připojte se k hlasovému nebo scénovému kanálu a poté zadejte `/247 <enable/disable>` do textového kanálu.
+
+  **Poznámka:** *Tuto funkci lze využít, pokud máte oprávnění `manage server`, a je předem zajištěno, že bot aktuálně přehrává hudbu.*
+
+helpdesk5_title: "%{bot} neodpovídá/je offline"
+helpdesk5_desc: |
+  Snažíte se použít příkaz, ale stále selhává? Pravděpodobně není schopen odpovědět, ale postupujte podle následujících kroků k vyřešení problému.
+
+  **%{bot} nyní používá slash příkazy!**
+  Ujistěte se, že používáte slash příkazy, protože Discord nyní vyžaduje, aby je všichni boti používali.
+  Začněte zadáním `/play` a `/help`
+
+  **%{bot} stále neodpovídá?**
+  Jediný zbývající scénář v této situaci je problém buď na straně Discordu, nebo na naší straně. Ověřte, že %{bot} není na vašem serveru offline. Pokud je offline, nejlepší bude počkat až 5 minut a zjistit, zda se %{bot} vrátí online. Pokud je online, má všechna potřebná oprávnění, měli byste se určitě obrátit na jednoho z našich členů podpory.
+
+helpdesk6_title: "Kvalita zvuku %{bot} je zpožděná"
+helpdesk6_desc: |
+  Nikdo nemá rád zpožděnou hudbu, ale to se někdy stává při poslechu hudebních botů na Discordu. Zde jsou některá možná řešení, která vám pomohou to opravit.
+
+  **Co mám dělat?**
+  Nejprve byste měli zkontrolovat své internetové připojení. Discord zobrazuje váš poslední a průměrný ping v levém dolním rohu, stačí kliknout na "Voice Connected" a ověřit, že se váš ping chová stabilně (pokud červený graf hodně kolísá, znamená to, že není stabilní!) a poslední i průměrný ping je pod 250 milisekund. Pokud oba tyto ukazatele ukazují, že vaše připojení je špatné, měli byste zkontrolovat své WiFi/LAN. Restart routeru může také vyřešit některé problémy.
+
+  **Máte ping 5ms a můžete stáhnout GTA 5 za 2 minuty?**
+  Takže vaše internetové připojení zřejmě není problém. V 95% případů, kdy %{bot} laguje, má Discord dočasné problémy se svými hlasovými servery. Obvykle je jednoduše restartují, ale můžete vynutit přepnutí na jiný server ve vašem regionu.[Zkuste přepnout region serveru](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3), abyste získali nový a čerstvý Discord hlasový server.
+  Pokud máte stále stejný problém, zadejte /report a nahlaste svůj problém.
+
+helpdesk7_title: "Jak nastavit kanál pro žádosti o skladby?"
+helpdesk7_desc: |
+  **Jak vytvořím kanál pro žádosti?**
+  Ujistěte se, že %{bot} má uděleno oprávnění `manage server`, poté zadejte /setup s možností `create` a bot automaticky vytvoří speciální kanál pro žádosti o skladby.
+
+  ```Poznámka: Nemažte žádné zprávy, které %{bot} vytvořil, abych mohl správně fungovat.```
+
+  **Jak smažu kanál pro žádosti?**
+  Stejně jako předtím, pouze v možnostech můžete vybrat `delete`.
+
+helpdesk8_title: "%{bot} stále hlásí chybějící oprávnění."
+helpdesk8_desc: |
+  Při pokusu o spuštění určitých příkazů může %{bot} postrádat určitá oprávnění. V takových případech %{bot} odmítne příkaz spustit, dokud nebudou tyto problémy vyřešeny. Je důležité poznamenat, že tato oprávnění nejsou volitelná; %{bot} je vyžaduje k provedení příkazu.
+
+  Pokud se domníváte, že bot má potřebná oprávnění, zkontrolujte přepsání rolí kanálu. Tato přepsání mohou upravit oprávnění rolí v konkrétních kanálech.
+
+  Pokud stále nemůžete zjistit, proč %{bot} nemá požadovaná oprávnění, zvažte udělení oprávnění Administrator botu %{bot}. To by mělo vyřešit jakékoliv problémy s oprávněními na Discordu.
+
+helpdesk9_title: "Mewwme se sám odpojuje z hlasového kanálu"
+helpdesk9_desc: |
+  Ve velmi neobvyklých případech se může Mewwme odpojit z hlasového kanálu i s povoleným režimem 24/7, aniž by někdo použil /stop nebo tlačítko Odpojit na Discordu. Některé z nejčastějších příčin a možné řešení jsou uvedeny níže.
+
+  **Režim 24/7 není povolen.**
+  Ve výchozím nastavení se Mewwme odpojí z hlasového kanálu, když je prázdný po dobu 3 minut.
+
+  **Řešení:** Postupujte podle bodu "4. Jak zapnout funkci 24/7?" v prvním helpdesku pro povolení režimu 24/7.
+
+  **Chybějící oprávnění.**
+  Kdykoli nás Discord požádá o opětovné připojení k hlasovému kanálu, ať už kvůli restartu serveru nebo výpadku API, znovu zkontrolujeme oprávnění bota, abychom se ujistili, že se může připojit a mluvit v kanálu. Pokud něco chybí, budete muset znovu použít /play pro pozvání bota do jiného nebo stejného kanálu po přidání požadovaných oprávnění.
+
+  **Řešení:** Ujistěte se, že používáte příkazy /play pro přidání bota do hlasového kanálu místo jeho přesouvání z jiného. Tím zajistíte, že bot bude mít všechna potřebná oprávnění pro opětovné připojení v případě potřeby.
+
+  **Problémy s regionem serveru.**
+  V určitých případech mohou některé hlasové regiony zaznamenat problémy se sítí a stabilitou, které mohou botu zabránit v připojení k hlasovému kanálu.
+
+  **Řešení:** Přepněte na jiný hlasový region pomocí nastavení hlasového kanálu (vyberte ten nejbližší vaší zemi).
+
+  **Něco jiného se pokazilo.**
+  Pokud jste vyzkoušeli všechna výše uvedená řešení a problém přetrvává, zadejte prosím `report` nebo otevřete tiket v podpoře https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "Jak získám/aktivuji Premium a jaké výhody obdržím?"
+helpdesk10_desc: |
+  **Jak uplatnit mé Premium výhody?**
+
+  pro aktivaci výhod prémiového členství prosím postupujte podle těchto kroků:
+  1. **nejprve propojte svůj discord účet**
+    - před nákupem se ujistěte, že je váš discord účet propojen s platformou, kterou používáte (patreon nebo ko-fi).
+    - to je vyžadováno, aby systém mohl automaticky detekovat vaši platbu.
+  2. **zakupte si členství**
+  - po propojení discordu dokončete platbu členství podle plánu, který chcete.
+  3. **počkejte na synchronizaci**
+    - jakmile je vaše platba úspěšná, počkejte prosím několik minut, než systém synchronizuje vaše členství.
+  4. **uplatněte premium na svém serveru**
+    - přejděte na discord server, který chcete upgradovat, a poté použijte tento příkaz:
+      `/premium claim`
+      při výzvě vyberte správnou možnost platformy (patreon nebo ko-fi).
+      ujistěte se, že příkaz spouštíte uvnitř serveru, pro který chcete premium aktivovat.
+      po uplatnění bude premium aktivováno okamžitě.
+
+  Dodržením výše uvedených kroků budete moci aktivovat a užívat si všechny nabízené Premium výhody. Pokud narazíte na jakékoli problémy nebo máte další otázky, neváhejte se obrátit na náš tým podpory.
+
+helpdesk10_footer: "Děkujeme, že jste součástí naší cesty! Doufáme, že se tu budete dobře bavit."

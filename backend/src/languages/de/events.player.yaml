@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "WIRD GERADE ABGESPIELT"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Interpret"
+track_requested_by: "Angefragt von"
+track_duration: "Dauer"
+no_same_voice: "Du bist nicht im selben Sprachkanal wie ich!"
+filter_already: "**%{name} Filter ist bereits aktiviert**"
+filter_reset_on: "**Filter wurde zurueckgesetzt**"
+filter_reset_already: "**Filter wurde bereits zurueckgesetzt**"
+no_player_filter: "**Ich kann keinen Filter anwenden!**"
+filter_menu_on: "**Filter %{name} an!**"
+
+player_get_exception: "Oh-oh! Es scheint ein Problem mit dem Track zu geben. Soll ich es nochmal versuchen?"
+player_track_error: "Der Track hatte ein Problem. Kannst du es bitte nochmal versuchen?"
+player_track_stuck: "Ich bin so traurig :(, der Track haengt fest. Vielleicht hilft ein erneuter Versuch?"
+queue_end_desc: "Alle Songs sind fertig! Brauchst du mehr Beats?\nVerwende **/play** um die Party am Laufen zu halten!"
+
+leave_pause: "Da ihr mich alle allein gelassen habt :( wurde der Player pausiert."
+leave_resume: "Da jemand zu mir gekommen ist, wurde der Player fortgesetzt."
+
+player_end: "Der Kanal war fast 15 Minuten leer, also habe ich beschlossen zu gehen, weil ich nicht gerne allein bin"
+
+### Last FM Scrobble ###
+expired_login_session: "Deine Last.fm-Sitzung ist abgelaufen oder ungueltig.\nBitte authentifiziere dich erneut, um die Scrobble-Funktion weiter zu nutzen."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Wer singen will, findet immer ein Lied ♪"
+milestone_track_desc: |
+  ## OH Hey
+  Du hast **%{total}** Tracks gehoert! Ist deine Playlist endlos, oder bist du einfach so musikbesessen?
+

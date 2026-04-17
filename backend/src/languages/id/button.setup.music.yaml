@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Pemutaran musik telah dihentikan. Semoga kamu senang bergoyang!"
+skip_notfound: "Ups. Sepertinya tidak ada lagu untuk dilewati!"
+skip_msg: "Aku melewati lagunya. Semoga kamu tidak keberatan :p"
+previous_msg: "Yah, sepertinya kita mundur! Lagu sebelumnya segera datang <3"
+previous_notfound: "Maaf, tidak bisa mundur lebih jauh lagi. Tidak ada lagu sebelumnya :("
+resume_msg: "Musik kembali diputar! Ayo lanjutkan groove-nya ♪"
+pause_msg: "Musik dijeda. Istirahat sebentar dan nikmati keheningan."
+loop_current: "Sekarang lagu yang sedang diputar akan diulang terus. Nikmati pengulangannya!"
+loop_all: "Antrean sekarang diatur untuk diulang. Biarkan musiknya terus berputar!"
+unloop_all: "Mode pengulangan telah dimatikan. Nikmati variasi lagunya!"
+
+### Need to join voice & same voice to use command!
+no_player: "Kamu menekan tombol tapi tidak terjadi apa-apa. Mungkin kamu harus memutar sesuatu dulu!"
+no_same_voice: "Kamu menekan tombol dan berkedip merah. Kamu tidak berada di voice channel yang sama denganku!"
+no_in_voice: "Semua tombol tidak merespon. Kamu tidak berada di voice channel!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "SEDANG DIPUTAR"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Diminta oleh %{request}"
+setup_footer: "Sisa Lagu • %{totalsong} | Total Durasi • %{duration}"
+setup_queuemsg: "**Bergabunglah ke voice channel dan putar lagu menggunakan nama atau URL di sini!**"
+setup_playembed_author: "Tidak ada lagu yang sedang diputar!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Ditambahkan **%{title}** • %{request}"
+play_playlist: "Ditambahkan **%{title}** • (**%{songs} Lagu**) • %{request}"
+play_result: "Ditambahkan **%{title}** • %{request}"
+play_emoji: "Aku tidak yakin cara memutarnya... Itu bukan lagu atau playlist."
+setup_content: "**Hei! Deck-ku sudah siap untuk musikmu! Lempar saja sesuatu ke sini!**"

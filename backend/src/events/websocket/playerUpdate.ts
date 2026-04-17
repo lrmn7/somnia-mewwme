@@ -3,10 +3,14 @@ import { MewslinkPlayer } from "../../mewslink/main.js";
 
 export default class {
   async execute(client: Manager, player: MewslinkPlayer) {
-    client.wsl.get(player.guildId)?.send({
-      op: "playerUpdate",
-      guild: player.guildId,
-      position: player.position,
-    });
+    try {
+      client.wsl.get(player.guildId)?.send({
+        op: "playerUpdate",
+        guild: player.guildId,
+        position: player.position,
+      });
+    } catch (err) {
+      client.logger.error("WebSocket:playerUpdate", `Failed to emit event: ${String(err)}`);
+    }
   }
 }

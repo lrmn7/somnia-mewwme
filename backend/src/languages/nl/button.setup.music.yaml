@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Het afspelen van muziek is gestopt. Hopelijk heb je genoten!"
+skip_notfound: "Oeps. Het lijkt erop dat er geen nummer is om naar over te slaan!"
+skip_msg: "Ik heb het nummer overgeslagen. Ik hoop dat je het niet erg vindt :p"
+previous_msg: "Oké, we spoelen terug! Vorig nummer komt eraan <3"
+previous_notfound: "Sorry, kan niet verder terug. Geen vorig nummer gevonden :("
+resume_msg: "Muziek is weer aan! Laten we verdergaan met de groove ♪"
+pause_msg: "Muziek is gepauzeerd. Neem een pauze en geniet van de stilte."
+loop_current: "Het huidige nummer wordt nu herhaald. Geniet van de herhaling!"
+loop_all: "De wachtrij staat nu op herhalen. Laat de muziek op repeat spelen!"
+unloop_all: "Herhaalmodus is uitgeschakeld. Geniet van de afwisseling!"
+
+### Need to join voice & same voice to use command!
+no_player: "Je drukt op een knop en er gebeurt niets. Misschien moet je eerst iets afspelen!"
+no_same_voice: "Je drukt op een knop en hij knippert rood. Je zit niet in hetzelfde spraakkanaal als ik!"
+no_in_voice: "Alle knoppen reageren niet op jou. Je zit niet in een spraakkanaal!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "NU AAN HET AFSPELEN"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Aangevraagd door %{request}"
+setup_footer: "Resterende nummers • %{totalsong} | Totale duur • %{duration}"
+setup_queuemsg: "**Ga naar een spraakkanaal en speel nummers af met naam of URL hier!**"
+setup_playembed_author: "Er wordt momenteel geen nummer afgespeeld!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Toegevoegd **%{title}** • %{request}"
+play_playlist: "Toegevoegd **%{title}** • (**%{songs} Nummers**) • %{request}"
+play_result: "Toegevoegd **%{title}** • %{request}"
+play_emoji: "Ik weet niet hoe ik dat moet afspelen... Het is geen nummer of afspeellijst."
+setup_content: "**Hé! Mijn deck is klaar voor jouw muziek! Gooi hier maar iets neer!**"

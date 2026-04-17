@@ -28,6 +28,7 @@ import {
   getGuildTextChannels,
 } from "./route/externalServices.js";
 import { getUserPremium } from "./route/getUserPremium.js";
+import { postPremiumUserLegacy, postPremiumGuildLegacy } from "./route/adminLegacyPremium.js";
 import dashboardPlugin from "./dashboard/DashboardPlugin.js";
 
 export class RestAPI {
@@ -56,6 +57,14 @@ export class RestAPI {
     await this.app.register(dashboardPlugin, { client });
 
     this.app.register(
+      async (fastify) => {
+        await fastify.register(WebsocketPlugin);
+        new WebsocketRoute(client).main(fastify);
+      },
+      { prefix: "v1" }
+    );
+
+    this.app.register(
       (fastify, _, done) => {
         fastify.addHook("preValidation", function hook(req, reply, done) {
           if (!req.headers["authorization"]) {
@@ -78,11 +87,6 @@ export class RestAPI {
           }
           done();
         });
-        fastify.register(WebsocketPlugin);
-        fastify.register((fastify, _, done) => {
-          new WebsocketRoute(client).main(fastify);
-          done();
-        });
         fastify.register(
           (fastify, _, done) => {
             new PlayerRoute(client).main(fastify);
@@ -96,6 +100,82 @@ export class RestAPI {
         fastify.get("/user/:userId/stats", (req, res) => getUserStats(client, req, res));
         fastify.get("/guild/:guildId/stats", (req, res) => getGuildStats(client, req, res));
         fastify.get("/global-stats", (req, res) => getGlobalStats(client, req, res));
+
+        // System status (shard/cluster monitoring)
+        fastify.get("/system-status", async (_req, res) => {
+          const memUsage = process.memoryUsage();
+          const uptime = process.uptime();
+
+          if (client.clusterManager) {
+            // Clustered mode: fetch aggregated metrics from primary process via IPC
+            try {
+              const ipcRes = await client.clusterManager.sendMaster("metrics_all");
+              const r = ipcRes.response as any;
+              return res.send({
+                mode: "clustered",
+                totalShards: r.totalShards ?? client.clusterManager.totalShards,
+                totalClusters: r.totalClusters ?? client.clusterManager.resolvedClusters,
+                totalGuilds: r.totalGuilds ?? 0,
+                totalUsers: r.totalUsers ?? 0,
+                totalStreams: r.perCluster?.reduce((s: number, c: any) => s + (c.streams ?? 0), 0) ?? 0,
+                totalMemory: r.perCluster?.reduce((s: number, c: any) => s + (c.memoryUsage ?? 0), 0) ?? 0,
+                uptime: Math.floor(uptime),
+                clusters: (r.perCluster ?? []).map((c: any) => ({
+                  id: c.clusterId,
+                  guilds: c.guilds ?? 0,
+                  users: c.users ?? 0,
+                  channels: c.channels ?? 0,
+                  memoryUsage: c.memoryUsage ?? 0,
+                  streams: c.streams ?? 0,
+                  status: c.status ?? "healthy",
+                  shards: c.shards ?? [],
+                  updatedAt: c.updatedAt ?? Date.now(),
+                })),
+              });
+            } catch {
+              // IPC failed, fall back to local data
+              return res.status(503).send({ error: "Cluster metrics unavailable" });
+            }
+          } else {
+            // Single process mode
+            const shardData = [];
+            for (const [shardId, shard] of client.ws.shards) {
+              const guildCount = client.guilds.cache.filter(g => g.shardId === shardId).size;
+              const userCount = client.guilds.cache.filter(g => g.shardId === shardId).reduce((acc, g) => acc + g.memberCount, 0);
+              shardData.push({
+                shardId,
+                clusterId: 0,
+                status: shard.status === 0 ? "ready" : "connected",
+                guilds: guildCount,
+                users: userCount,
+                ping: shard.ping,
+                updatedAt: Date.now(),
+              });
+            }
+
+            return res.send({
+              mode: "single",
+              totalShards: client.ws.shards.size,
+              totalClusters: 1,
+              totalGuilds: client.guilds.cache.size,
+              totalUsers: client.guilds.cache.reduce((acc, g) => acc + g.memberCount, 0),
+              totalStreams: client.mewslink?.players?.size ?? 0,
+              totalMemory: Math.round(memUsage.rss / 1024 / 1024),
+              uptime: Math.floor(uptime),
+              clusters: [{
+                id: 0,
+                guilds: client.guilds.cache.size,
+                users: client.guilds.cache.reduce((acc, g) => acc + g.memberCount, 0),
+                channels: client.channels.cache.size,
+                memoryUsage: Math.round(memUsage.rss / 1024 / 1024),
+                streams: client.mewslink?.players?.size ?? 0,
+                status: "healthy",
+                shards: shardData,
+                updatedAt: Date.now(),
+              }],
+            });
+          }
+        });
         fastify.get("/playlists/:userId", (req, res) => getUserPlaylists(client, req, res));
         fastify.post("/playlists", (req, res) => postCreatePlaylist(client, req, res));
         fastify.delete("/playlists/:id", (req, res) => deletePlaylist(client, req, res));
@@ -126,6 +206,9 @@ export class RestAPI {
         fastify.delete("/user/:userId/lastfm", (req, res) => lastfmLogout(client, req, res));
         // User premium status
         fastify.get("/user/:userId/premium", (req, res) => getUserPremium(client, req, res));
+        // Admin Legacy Premium
+        fastify.post("/admin/premium/user", (req, res) => postPremiumUserLegacy(client, req, res));
+        fastify.post("/admin/premium/guild", (req, res) => postPremiumGuildLegacy(client, req, res));
         done();
       },
       { prefix: "v1" }

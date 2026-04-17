@@ -12,9 +12,21 @@ export default {
         "2xl": "1400px",
       },
     },
+    screens: {
+      xs: "480px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      gridTemplateColumns: {
+        "14": "repeat(14, minmax(0, 1fr))",
+        "17": "repeat(17, minmax(0, 1fr))",
       },
       colors: {
         border: "hsl(var(--border))",

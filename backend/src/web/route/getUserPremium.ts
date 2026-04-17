@@ -1,14 +1,3 @@
-/**
- * User + Guild premium status check.
- *
- * GET /v1/user/:userId/premium
- * GET /v1/user/:userId/premium?guildId=123  (includes guild-level premium)
- *
- * Returns per-feature access flags driven by DASHBOARD_ACCESS config.
- * This allows the owner to control which dashboard features require premium
- * from config.yml — the same way COMMANDS_ACCESS works for bot commands.
- */
-
 import util from "node:util";
 import { Manager } from "../../manager.js";
 import Fastify from "fastify";
@@ -33,7 +22,6 @@ export async function getUserPremium(
     return res.code(400).send({ error: "Missing userId parameter." });
   }
 
-  // Accept optional guildId query param for guild-level premium checks
   const guildId = (req.query as Record<string, string | undefined>)["guildId"] || undefined;
 
   const perm = await buildDashboardUserPerm(client, userId, guildId);
@@ -41,7 +29,6 @@ export async function getUserPremium(
 
   const hasAccess = perm.isPremium || perm.isOwner || perm.isAdmin;
 
-  /** Helper: first element of the config array, used to tell the frontend what kind of gate to show */
   const primaryLevel = (arr: string[] | undefined) => arr?.[0] ?? "Premium";
 
   res.send({

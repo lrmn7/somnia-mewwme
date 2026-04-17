@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**Sarki soylemek isteyenler her zaman bir sarki bulur ♪\nBugun Discord sunucunuzda melodiye katil!**"
+about_desc2: |
+  ・Bu sunucu icin bot oneki `%{prefix}`
+  ・Oneki degistirmek icin `%{prefix} prefix <yeni onek>` yazin
+  ・Baglanti veya arama terimiyle parca cal `%{prefix} play`
+  Daha fazla komut icin **[web sitemizi](%{website})** ziyaret edin veya `%{prefix} help` komutunu kullanin.
+about_desc3: |
+  **Dikkat!**
+  Tercihen `Administrator` yetkilerine ihtiyacim var, ama...
+  Bu yetkileri vermezseniz bile calisabilirim, ancak yapabilecegim her seyi yapamayabilirim. Sadece soyleyeyim!
+
+  **Yardim ve Destek**
+  Yardima ihtiyaciniz varsa, guncellemeler ve sorunlar hakkinda bilgi almak istiyorsaniz veya toplulukla etkilesimde bulunmak istiyorsaniz **[destek sunucumuza](%{serversupport})** katilabilirsiniz!
+
+### Help command!
+finder_invalid: "Gecersiz Komut"
+finder_example: "Bunu bulmana yardim edemem! *Gercek* bir komut ara!"
+finder_name: "**Komut:**"
+finder_des: " **Aciklama:**"
+finder_usage: "**Kullanim:**"
+finder_access: "**Erisim:**"
+finder_aliases: "**Kisayollar:**"
+finder_slash: "**Slash:**"
+finder_des_no: "Bir aciklama bulunamadi, bunun icin uzgunum..."
+finder_usage_no: "Bu komutu nasil kullanacagimdan emin degilim."
+finder_aliases_prefix: "[Sadece Onek]"
+finder_aliases_no: "Bu komutu bir kisayol ile kullanamazsiniz."
+finder_slash_enable: "Etkin"
+finder_slash_disable: "Devre Disi"
+command_not_found: "Bilinmeyen komut"
+select_menu: "Benimle muzik keyfine var!"
+help_timeout: "Yardim Menusu zaman asimina ugradi, tekrar **`%{prefix}help`** veya **`/help`** kullanmayi deneyin."
+homepage_title: "Sarki soylemek isteyenler her zaman bir sarki bulur ♪\nBugun Discord sunucunuzda melodiye katil!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **7/24 Muzik**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify Baglantisi**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **Yuksek Kaliteli Ses**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Last.fm ile Scrobble**
+  <:blank:1291123023679586324><:games:1311125732117843978> **Mini Oyunlar Oyna ve Yaris**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer ve Daha Fazlasi...**
+
+  <a:ask:1291123964080558121> **[Premium](%{premium}) planina yukseltmek ister misiniz?**
+### Rating bot commands! ###
+rating_desc: "%{user} Discord muzik botumuza yildiz verdigi icin tesekkurler!"
+rating_succes: "Puanlamaniz icin tesekkurler!\nPuanlamaniz basariyla gonderildi."
+rating_failure: "Rapor gonderilemedi. Lutfen daha sonra tekrar deneyin."
+
+### Report command #####
+report_provide_desc: "Hay aksi! Gecersiz komutlar. Lutfen aciklamanizi girin"
+report_failure: "Rapor gonderilemedi. Lutfen daha sonra tekrar deneyin."
+report_success: "Raporunuz icin tesekkurler.\nRapor basariyla cozum icin gonderildi."
+
+### Suggestions command #####
+suggestions_provide_desc: "Hay aksi! Gecersiz komutlar. Lutfen aciklamanizi girin"
+suggestions_failure: "Oneri gonderilemedi. Lutfen daha sonra tekrar deneyin."
+suggestions_success: "Oneriniz icin tesekkurler!\nOneriniz basariyla gonderildi."
+
+### MyStats command ####
+mystats_error: "Istatistikleriniz olusturulurken bir hata meydana geldi. Lutfen daha sonra tekrar deneyin."
+
+### TopStats command ####
+topstats_error: "Istatistikleriniz olusturulurken bir hata meydana geldi. Lutfen daha sonra tekrar deneyin."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **Durum Sonucu:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 Kullanici Kimligi"
+patreon_logs_user_identity_value: |
+  **Ad:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **E-posta:** %{email}
+
+patreon_logs_details_title: "Patreon Detaylari"
+patreon_logs_details_value: |
+  **Destek:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **Durum:** `%{status}`
+patreon_logs_date_title: "📅 Tarih"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "Kullanici Kimligi"
+kofi_logs_user_identity_value: "**Ad:** %{fullName}\n**E-posta:** ||%{email}||\n**Herkese Acik:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord Kimligi"
+kofi_logs_discord_identity_value: "**Kullanici:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "Odeme Detaylari"
+kofi_logs_payment_details_value: "**Tutar:** %{currency} %{amount}\n**Kademe:** **%{tierName}**\n**Tur:** %{type}"
+kofi_logs_sub_status_title: "Abonelik Durumu"
+kofi_logs_sub_status_value: "**Abonelik mi:** %{isSub}\n**Ilk Odeme:** %{isFirst}"
+kofi_logs_message_title: "Mesaj / Sebep"
+kofi_logs_tech_title: "Teknik / Islem ID'leri"
+kofi_logs_tech_value: "**Ko-fi Islem ID:** %{kofiTxId}\n**Mesaj ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Token:** ||%{token}||"
+kofi_logs_view_details: "Detaylari Goruntule"
+

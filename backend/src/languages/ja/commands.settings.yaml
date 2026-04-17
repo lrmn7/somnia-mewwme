@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "24/7モードが**有効**になりました"
+247_off: "24/7モードが**無効**になりました"
+247_already: "24/7モードは既に**%{mode}**です"
+247_arg_error: "無効な24/7モードです。%{text}を使用してください"
+247_no_in_voice: "ボイスチャンネルに参加していません！"
+
+
+### Set Language command! ###
+provide_lang: "**無効な言語です。** `%{languages}`を使用してください"
+lang_set: "**言語が** `%{language}`に設定されました"
+lang_change: "**言語が** `%{language}`に変更されました"
+
+### Prefix command! ###
+prefix_arg: "有効なプレフィックスを入力してください！"
+prefix_length: "**プレフィックスは10文字以内にしてください**"
+prefix_set: "**プレフィックスが** `%{prefix}`に設定されました"
+prefix_change: "**プレフィックスが** `%{prefix}`に変更されました"
+
+### Control command!
+control_set: "**プレイヤーコントロールモードが%{toggle}に設定されました**"
+control_arg_error: "無効な引数です。%{text}を使用してください"
+control_already: "曲の通知は既に**%{mode}**です"
+
+### Setup Music Req command! ###
+setup_arg_error: "無効です！%{text}を使用してください"
+setup_enable: "**おっと！音楽システムは既に存在します。**"
+setup_topic: "♪ 歌いたい人はいつでも歌を見つけられる ♪"
+setup_msg: "*`音楽システムを正常にセットアップしました`* %{channel}\n```注意: 正常に動作するため、作成されたメッセージを削除しないでください。```"
+setup_null: "*`セットアップチャンネルを正常に削除しました！`*"
+setup_deleted: "*`セットアップチャンネルを正常に削除しました！`*"
+setup_null_inguild: "**このサーバーに音楽システムが見つかりません！データを削除する準備ができています**"
+setup_queuemsg: "**ボイスチャンネルに参加して、曲名やURLをここに入力して再生しましょう！**"
+setup_playembed_author: "現在再生中の曲はありません"
+
+### Themes command!
+error_themes: "無効です...もう一度お試しください。"
+succes_themes: "**テーマを%{themes}に正常に変更しました**"
+
+### Last FM Login command!
+lastfm_login_footer: "注意: このリンクは%{expired}で有効期限が切れます。"
+lastfm_login_title: "Last.fm ログイン"
+lastfm_login_desc: "[Last.fm](https://www.last.fm/user/eleremen)アカウントへの認証を許可しますか？\n許可する場合は、下のボタンをクリックして認証プロセスを開始してください。"
+lastfm_not_login_desc: "Last.fmにログインしていません"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm ログアウト"
+lastfm_logout_desc: "Last.fmから正常にログアウトしました"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm機能は無効です。"
+lastfm_feature_disabled_desc: "Last.fm機能は現在無効になっています。詳細については管理者にお問い合わせください。"
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "YouTubeチャンネル**%{ytchannel}**の通知が見つかりません。"
+notify_youtube_removed: "YouTubeチャンネル**%{ytchannel}**の通知を削除しました。"
+notify_youtube_disabled: "YouTube通知機能は現在無効です。詳細についてはスタッフにお問い合わせください。"
+notify_youtube_already: "YouTubeチャンネル%{ytchannel}の通知は既に設定されています。"
+notify_youtube_invalid_channel: "有効なテキストチャンネルの指定にエラーがありました。確認してください！"
+notify_youtube_set: "YouTube通知が**%{ytchannel}**に対して%{channelid}に設定されました。"
+notify_youtube_404: |
+  指定されたYouTubeチャンネルIDが見つかりませんでした。
+  チャンネルIDを見つけるには、YouTubeチャンネルページにアクセスしてURLを確認してください。
+  チャンネルIDは`/channel/`の後の英数字の文字列です（例: `UC_x5XG1OV2P6uZZ5FSM9Ttw`）。
+notify_youtube_limit_reached_non_premium: |
+   通知の上限%{limit}件に達しました。
+   [プレミアム](%{premium})にアップグレードすると、最大%{limitpremium}件の通知を設定できます。
+
+notify_youtube_limit_reached_premium: |
+   通知の上限%{limit}件に達しました。
+   これが許可されている最大数です。新しい通知を追加するには、既存の通知を削除してください。
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Twitchユーザー名**%{twitchusername}**の通知が見つかりません。"
+notify_twitch_removed: "Twitchユーザー名**%{twitchusername}**の通知を削除しました。"
+notify_twitch_disabled: "Twitch通知機能は現在無効です。詳細についてはスタッフにお問い合わせください。"
+notify_twitch_already: "Twitchチャンネル%{twitchusername}の通知は既に設定されています。"
+notify_twitch_invalid_channel: "有効なテキストチャンネルの指定にエラーがありました。確認してください！"
+notify_twitch_set: "Twitch通知が**%{twitchusername}**に対して%{channelid}に設定されました。"
+notify_twitch_error: "**{twitchusername}**のTwitch通知をチャンネル**{channelid}**で処理中に予期しないエラーが発生しました。もう一度お試しいただくか、問題が解決しない場合はサポートにお問い合わせください。"
+notify_twitch_limit_reached_non_premium: |
+   通知の上限%{limit}件に達しました。
+   [プレミアム](%{premium})にアップグレードすると、最大%{limitpremium}件の通知を設定できます。
+
+notify_twitch_limit_reached_premium: |
+   通知の上限%{limit}件に達しました。
+   これが許可されている最大数です。新しい通知を追加するには、既存の通知を削除してください。
+
+### Temp Voice Feature command!
+tempvoice_setup: "一時ボイス機能が%{status}になりました。"
+tempvoice_disabled: "一時ボイスが無効になりました。"
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "無効です...%{text}のみ使用できます。"
+status_voice_channel_true: "ステータスボイスチャンネルが**%{type}**に設定されました。"
+status_voice_channel_false: "ステータスボイスチャンネルが**%{type}**に設定されました。"
+
+
+### Patreon Claim command!
+not_in_guild: "このコマンドはサーバー内でのみ実行できます！"
+no_data_patreon: "Patreonデータが見つかりません（データベースエラー）"
+no_data_patreon_title: "見つかりません"
+no_data_patreon_desc: |
+  既にサブスクリプションに登録している場合は、DiscordアカウントがPatreonに連携されていることを確認してください！
+no_data_patreon_footer: "Patreonの同期には少し時間がかかる場合があります。しばらくしてからもう一度ご確認ください"
+no_patreon_guild_membership: |
+  こんにちは、あなたのPatreonプランは**ユーザーティア**です。
+  プレミアムサーバーアクセスを解除するには、**サーバーティア**にアップグレードしてください。
+patreon_guild_membership_full_quota: |
+  サーバー枠をすべて使い切りました！
+  **状態:** %{status}サーバー使用済み。
+
+  解決策:
+  1. Patreonでティアをアップグレードする。
+  2. または以前のサーバーでプレミアムを無効にする。
+patreon_guild_membership_already_before: "このサーバーでは既にプレミアムを有効化しています！"
+patreon_guild_membership_already: "他の方がスポンサーしているため**既にプレミアム**です。\n枠を他のサーバーのために取っておきましょう！"
+patreon_guild_membership_claim_title: "有効化の確認"
+patreon_guild_membership_claim_desc: |
+  以下のサーバーで**プレミアムサーバー**を有効化してよろしいですか：
+  **%{guildName}**
+
+  この操作で**サーバー枠を1つ**使用します。
+  残り枠: **%{status}**
+patreon_guild_membership_claim_success: |
+  成功！**%{guildName}**が**プレミアムサーバー**になりました。
+
+  **スポンサー:** %{user}
+  **残り枠:** %{status}
+  Patreonでのサポートありがとうございます！
+patreon_guild_membership_claim_success_title: "💎 プレミアム有効化！"
+patreon_guild_membership_claim_cancel: "プレミアムの有効化がキャンセルされました。"
+patreon_guild_membership_claim_norespon: "応答がないため、有効化が自動的にキャンセルされました。"
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 サーバー引き換え (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **スポンサーユーザー:** %{sponsorTag} %{sponsorId}
+  **対象サーバー:** %{guildName} %{guildId}
+  **枠の状態:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "このプレミアムサーバーはあなたが登録したものではないため、取り消すことはできません。"
+patreon_guild_unclaim_title: "プレミアム取り消しの確認"
+patreon_guild_unclaim_desc: |
+  **%{guildName}**サーバーのプレミアムステータスを**取り消し**てよろしいですか？
+  **影響:** このサーバーでプレミアム機能が無効になります。
+  サーバー枠が復元されます（+1）。
+  現在の残り枠: **%{status}**
+patreon_guild_unclaim_success_title: "プレミアム取り消し完了"
+patreon_guild_unclaim_success: |
+  **%{guildName}**のプレミアムステータスが正常に取り消されました。
+  **復元枠:** サーバー1つ
+  **新しい残り枠:** %{status}
+patreon_guild_unclaim_cancel: "プレミアム取り消しプロセスがキャンセルされました。"
+patreon_guild_unclaim_norespon: "⏱️ タイムアウト。プロセスがキャンセルされました。"
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "サーバー取り消し (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **ユーザー:** %{sponsorTag} %{sponsorId}
+  **サーバー:** %{guildName}} %{guildId}
+  **復元枠:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **ユーザー:** %{userTag} (%{userId})
+  **サーバー:** %{guildName} (%{guildId})
+  **枠:** %{quota}
+  **有効期限:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} アクション: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "トランザクションIDが見つからないか、既に引き換え済みです。"
+kofi_linked_success_title: "支払いの連携に成功しました！"
+kofi_linked_success_desc: "これでTxIDなしで`/premium claim <kofi>`を使用できます。"
+kofi_no_data_title: "データが見つかりません！"
+kofi_no_data_desc: |
+  既に支払い済みでDiscordアカウントをKofiに連携していない場合は
+  こちらを使用してください: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "枠はありませんが、プレミアムユーザーです。"
+kofi_full_server_quota_title: "枠が一杯です！"
+kofi_full_server_quota_desc: "**%{quota}**のサーバースロットを使用済みです。"
+kofi_server_already_claim_desc: "**既に有効です！**\nこのサーバーでは既にプレミアムを有効化しています。"
+kofi_server_already_active_desc: " **既にプレミアムです！**\nこのサーバーは既に他のユーザーによってプレミアムとして有効化されています。"
+kofi_guild_membership_claim_success: |
+  プレミアムが正常に有効化されました！
+  **枠の使用状況:** %{quota}
+  **有効期限:** %{expires}
+kofi_guild_membership_claim_footer: "サポートありがとうございます！"
+kofi_action_title: "🏗️ Ko-fi アクション: %{type}"
+kofi_action_description: "**ユーザー:** %{userTag} (`%{userId}`)\n**サーバー:** %{guildName} (`%{guildId}`)\n**アクション:** %{action}\n**枠:** %{quota}"
+kofi_action_activation: "サーバー有効化"
+kofi_action_manual_link: "手動支払い連携"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "プレミアム取り消し完了"
+kofi_guild_unclaim_success_desc: |
+  **%{guildName}**のプレミアムステータスが正常に取り消されました。
+  **復元枠:** サーバー1つ
+kofi_guild_not_owned_by_user: "このプレミアムサーバーはあなたが登録したものではないため、取り消すことはできません。"
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "サーバー取り消し %{platform}"
+premium_unclaim_log_desc: |
+  **ユーザー:** %{userTag} %{userId}
+  **サーバー:** %{guildName}} %{guildId}
+  **復元枠:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "DJロールシステムが**無効**になりました。"
+dj_role_missing_role: "`set`アクションを使用するにはロールを指定する必要があります。"
+dj_role_set: |
+  DJロールが%{role}に設定されました。
+  ステータス: **有効**
+  **影響を受けるコマンド:**
+  %{commands}

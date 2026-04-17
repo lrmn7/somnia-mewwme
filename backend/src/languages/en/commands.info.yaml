@@ -46,14 +46,14 @@ select_menu: "Enjoy music with me!"
 help_timeout: "Help Menu timed out try using **`%{prefix}help`** or **`/help`** again."
 homepage_title: "Where those who wish to sing always find a song ♪\nJoin the melody in your Discord server today!"
 homepage_desc: |
-  <:_blank:1292727587944140831><:_247:1292731694608285757> **Music 24/7**
-  <:_blank:1292727587944140831><:_sp:1268922568308559873> **Spotify Connect**
-  <:_blank:1292727587944140831><:_audio:1268962358198407190> **High-Quality Audio**
-  <:_blank:1292727587944140831><:_lastfm:1268923138394292224> **Scrobbled with Last.fm**
-  <:_blank:1292727587944140831><:_pingpong:1292732066768617565> **Play & Compete in Mini Games**
-  <:_blank:1292727587944140831><:_music:1268960759828713623> **Spotify, Apple Music, Deezer & More...**
+  <:blank:1291123023679586324><:247:1291128572764885092> **Music 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify Connect**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **High-Quality Audio**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Scrobbled with Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **Play & Compete in Mini Games**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer & More...**
 
-  <a:_ask:1292730018845167667> **Do you want to upgrade to the [Premium](%{premium}) plan?**
+  <a:ask:1291123964080558121> **Do you want to upgrade to the [Premium](%{premium}) plan?**
 ### Rating bot commands! ###
 rating_desc: "Thank you %{user} for rating stars for our Discord music bot!"
 rating_succes: "Thank you for your rating!\nYour rating has been successfully submitted."

@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**La ou ceux qui souhaitent chanter trouvent toujours une chanson ♪\nRejoignez la melodie dans votre serveur Discord des aujourd'hui !**"
+about_desc2: |
+  ・Le prefixe du bot pour ce serveur est `%{prefix}`
+  ・Changez le prefixe avec `%{prefix} prefix <nouveau prefixe>`
+  ・Jouez un morceau par lien ou terme de recherche `%{prefix} play`
+  Visitez notre **[site web](%{website})** ou utilisez la commande `%{prefix} help` pour plus de commandes.
+about_desc3: |
+  **Attention !**
+  Je necessite de preference les permissions `Administrateur`, mais...
+  Meme si vous ne me donnez pas ces permissions, je peux quand meme fonctionner, mais je ne pourrai peut-etre pas faire tout ce dont je suis capable. C'est tout !
+
+  **Aide et support**
+  Rejoignez notre **[serveur de support](%{serversupport})** si vous avez besoin d'aide, souhaitez obtenir des informations sur les mises a jour et les problemes ou si vous voulez interagir avec la communaute !
+
+### Help command!
+finder_invalid: "Commande invalide"
+finder_example: "Je ne peux pas vous aider a trouver ca ! Cherchez une *vraie* commande !"
+finder_name: "**Commande :**"
+finder_des: " **Description :**"
+finder_usage: "**Utilisation :**"
+finder_access: "**Accessible par :**"
+finder_aliases: "**Alias :**"
+finder_slash: "**Slash :**"
+finder_des_no: "Impossible de trouver une description, desole..."
+finder_usage_no: "Je ne suis pas sur de comment utiliser cette commande."
+finder_aliases_prefix: "[Prefixe uniquement]"
+finder_aliases_no: "Vous ne pouvez pas utiliser cette commande avec un alias."
+finder_slash_enable: "Active"
+finder_slash_disable: "Desactive"
+command_not_found: "Commande inconnue"
+select_menu: "Profitez de la musique avec moi !"
+help_timeout: "Le menu d'aide a expire, essayez d'utiliser **`%{prefix}help`** ou **`/help`** a nouveau."
+homepage_title: "La ou ceux qui souhaitent chanter trouvent toujours une chanson ♪\nRejoignez la melodie dans votre serveur Discord des aujourd'hui !"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **Musique 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify Connect**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **Audio haute qualite**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Scrobble avec Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **Jouez et rivalisez dans des mini-jeux**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer et plus...**
+
+  <a:ask:1291123964080558121> **Voulez-vous passer au plan [Premium](%{premium}) ?**
+### Rating bot commands! ###
+rating_desc: "Merci %{user} d'avoir attribue des etoiles a notre bot musical Discord !"
+rating_succes: "Merci pour votre note !\nVotre note a ete soumise avec succes."
+rating_failure: "Echec de l'envoi du rapport. Veuillez reessayer plus tard."
+
+### Report command #####
+report_provide_desc: "Oups ! Commandes invalides. Veuillez fournir votre description"
+report_failure: "Echec de l'envoi du rapport. Veuillez reessayer plus tard."
+report_success: "Merci pour votre rapport.\nLe rapport a ete soumis avec succes pour resolution."
+
+### Suggestions command #####
+suggestions_provide_desc: "Oups ! Commandes invalides. Veuillez fournir votre description"
+suggestions_failure: "Echec de l'envoi de la suggestion. Veuillez reessayer plus tard."
+suggestions_success: "Merci pour votre suggestion !\nVotre suggestion a ete soumise avec succes."
+
+### MyStats command ####
+mystats_error: "Une erreur est survenue lors de la generation de vos statistiques. Veuillez reessayer plus tard."
+
+### TopStats command ####
+topstats_error: "Une erreur est survenue lors de la generation de vos statistiques. Veuillez reessayer plus tard."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **Resultat du statut :**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 Identite de l'utilisateur"
+patreon_logs_user_identity_value: |
+  **Nom :** %{fullName}
+  **Discord :** <@%{discordId}> (`%{discordId}`)
+  **Email :** %{email}
+
+patreon_logs_details_title: "Details Patreon"
+patreon_logs_details_value: |
+  **Engagement :** $%{pledge}
+  **ID Patreon :** `%{patreonId}`
+  **Statut :** `%{status}`
+patreon_logs_date_title: "📅 Date"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "Identite de l'utilisateur"
+kofi_logs_user_identity_value: "**Nom :** %{fullName}\n**Email :** ||%{email}||\n**Public :** %{dataPublic}"
+kofi_logs_discord_identity_title: "Identite Discord"
+kofi_logs_discord_identity_value: "**Utilisateur :** %{discordUser}\n**ID :** %{discordId}"
+kofi_logs_payment_details_title: "Details du paiement"
+kofi_logs_payment_details_value: "**Montant :** %{currency} %{amount}\n**Palier :** **%{tierName}**\n**Type :** %{type}"
+kofi_logs_sub_status_title: "Statut de l'abonnement"
+kofi_logs_sub_status_value: "**Est abonne :** %{isSub}\n**Premier paiement :** %{isFirst}"
+kofi_logs_message_title: "Message / Raison"
+kofi_logs_tech_title: "Technique / ID de transaction"
+kofi_logs_tech_value: "**ID Tx Ko-fi :** %{kofiTxId}\n**ID Msg :** %{msgId}\n**URL :** [%{viewDetails}](%{url})\n**Token :** ||%{token}||"
+kofi_logs_view_details: "Voir les details"
+

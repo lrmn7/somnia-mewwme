@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "وضع 24/7 الآن **مُفعّل**"
+247_off: "وضع 24/7 الآن **مُعطّل**"
+247_already: "وضع 24/7 بالفعل **%{mode}**"
+247_arg_error: "وضع 24/7 غير صالح. يرجى استخدام %{text}"
+247_no_in_voice: "أنت لست في قناة صوتية!"
+
+
+### Set Language command! ###
+provide_lang: "**لغة غير صالحة. يرجى استخدام** `%{languages}`"
+lang_set: "**تم تعيين اللغة إلى** `%{language}`"
+lang_change: "**تم تغيير اللغة إلى** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "يرجى تقديم بادئة صالحة!"
+prefix_length: "**لا يمكن أن تتجاوز البادئة 10 أحرف**"
+prefix_set: "**تم تعيين البادئة إلى** `%{prefix}`"
+prefix_change: "**تم تغيير البادئة إلى** `%{prefix}`"
+
+### Control command!
+control_set: "**تم تعيين وضع التحكم في المشغل إلى %{toggle}**"
+control_arg_error: "وسيطة غير صالحة. يرجى استخدام %{text}"
+control_already: "إشعارات الأغاني بالفعل **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "غير صالح! يرجى استخدام %{text}"
+setup_enable: "**عفواً! نظام الموسيقى موجود بالفعل.**"
+setup_topic: "♪ من يرغب في الغناء دائماً يجد أغنية. ♪"
+setup_msg: "*`تم إعداد نظام الموسيقى بنجاح في`* %{channel}\n```ملاحظة: لا تحذف أي رسالة أنشأتها حتى أعمل بشكل صحيح.```"
+setup_null: "*`تم حذف قناة الإعداد بنجاح!`*"
+setup_deleted: "*`تم حذف قناة الإعداد بنجاح!`*"
+setup_null_inguild: "**لم يتم العثور على نظام الموسيقى في هذا الخادم! جاهز لحذف البيانات**"
+setup_queuemsg: "**انضم إلى قناة صوتية وشغّل الأغاني باستخدام الاسم أو الرابط هنا!**"
+setup_playembed_author: "لا توجد أغنية قيد التشغيل حالياً"
+
+### Themes command!
+error_themes: "غير صالح... يرجى المحاولة مرة أخرى."
+succes_themes: "**تم تغيير السمة بنجاح إلى %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "ملاحظة: ستنتهي صلاحية هذا الرابط في %{expired}."
+lastfm_login_title: "تسجيل دخول Last.fm"
+lastfm_login_desc: "هل ترغب في منح التفويض لحسابك على [Last.fm](https://www.last.fm/user/eleremen)؟\nإذا كانت الإجابة نعم، يرجى الضغط على الزر أدناه لبدء عملية التفويض."
+lastfm_not_login_desc: "أنت غير مسجل الدخول في Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "تسجيل خروج Last.fm"
+lastfm_logout_desc: "تم تسجيل خروجك من Last.fm بنجاح"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "ميزة Last.fm مُعطّلة."
+lastfm_feature_disabled_desc: "ميزة Last.fm مُعطّلة حالياً. يرجى التواصل مع المسؤول لمزيد من المعلومات."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "لم يتم العثور على إشعار لقناة YouTube **%{ytchannel}**."
+notify_youtube_removed: "لقد أزلت الإشعار لقناة YouTube **%{ytchannel}**."
+notify_youtube_disabled: "ميزة إشعارات YouTube مُعطّلة حالياً. تواصل مع فريق العمل لمزيد من المعلومات."
+notify_youtube_already: "إشعارات قناة YouTube %{ytchannel} مُعدّة بالفعل."
+notify_youtube_invalid_channel: "حدث خطأ في تحديد قناة نصية صالحة. يرجى التحقق!"
+notify_youtube_set: "تم تعيين إشعارات YouTube لـ **%{ytchannel}** في %{channelid}."
+notify_youtube_404: |
+  لم يتم العثور على معرّف قناة YouTube المُقدّم.
+  للعثور على معرّف القناة، اذهب إلى صفحة قناة YouTube وتحقق من الرابط.
+  معرّف القناة هو سلسلة الحروف والأرقام بعد `/channel/` (مثال: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   لقد وصلت إلى حد %{limit} إشعارات.
+   بالترقية إلى [premium](%{premium})، يمكنك إعداد ما يصل إلى %{limitpremium} إشعارات.
+
+notify_youtube_limit_reached_premium: |
+   لقد وصلت إلى حد %{limit} إشعارات.
+   هذا هو الحد الأقصى المسموح به. فكر في حذف بعض الإشعارات لإفساح المجال لإشعارات جديدة.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "لم يتم العثور على إشعار لاسم مستخدم Twitch **%{twitchusername}**."
+notify_twitch_removed: "لقد أزلت الإشعار لاسم مستخدم Twitch **%{twitchusername}**."
+notify_twitch_disabled: "ميزة إشعارات Twitch مُعطّلة حالياً. تواصل مع فريق العمل لمزيد من المعلومات."
+notify_twitch_already: "لقد أعددت بالفعل إشعارات لقناة Twitch %{twitchusername}."
+notify_twitch_invalid_channel: "حدث خطأ في تحديد قناة نصية صالحة. يرجى التحقق!"
+notify_twitch_set: "تم تعيين إشعارات Twitch لـ **%{twitchusername}** في %{channelid}."
+notify_twitch_error: "حدث خطأ غير متوقع أثناء معالجة إشعار Twitch لـ **{twitchusername}** في القناة **{channelid}**. يرجى المحاولة مرة أخرى أو التواصل مع الدعم إذا استمرت المشكلة."
+notify_twitch_limit_reached_non_premium: |
+   لقد وصلت إلى حد %{limit} إشعارات.
+   بالترقية إلى [premium](%{premium})، يمكنك إعداد ما يصل إلى %{limitpremium} إشعارات.
+
+notify_twitch_limit_reached_premium: |
+   لقد وصلت إلى حد %{limit} إشعارات.
+   هذا هو الحد الأقصى المسموح به. فكر في حذف بعض الإشعارات لإفساح المجال لإشعارات جديدة.
+
+### Temp Voice Feature command!
+tempvoice_setup: "تم %{status} ميزة القناة الصوتية المؤقتة."
+tempvoice_disabled: "تم تعطيل القناة الصوتية المؤقتة."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "غير صالح... فقط %{text}."
+status_voice_channel_true: "تم تعيين حالة القناة الصوتية إلى **%{type}**."
+status_voice_channel_false: "تم تعيين حالة القناة الصوتية إلى **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "هذا الأمر يمكن تنفيذه فقط على الخادم!"
+no_data_patreon: "لم يتم العثور على بيانات Patreon (خطأ في قاعدة البيانات)"
+no_data_patreon_title: "غير موجود"
+no_data_patreon_desc: |
+  إذا كنت مشتركاً بالفعل، تأكد من ربط حساب Discord الخاص بك بـ Patreon!
+no_data_patreon_footer: "قد تستغرق مزامنة Patreon لحظة، يرجى التحقق مرة أخرى قريباً"
+no_patreon_guild_membership: |
+  مرحباً، خطة patreon الخاصة بك هي **مستوى المستخدم**.
+  يرجى الترقية إلى **مستوى الخادم** لفتح وصول premium للخادم.
+patreon_guild_membership_full_quota: |
+  لقد استخدمت كل حصة خوادمك!
+  **الحالة:** %{status} خوادم مستخدمة.
+
+  الحل:
+  1. قم بترقية مستواك على patreon.
+  2. أو عطّل premium على خادمك القديم.
+patreon_guild_membership_already_before: "لقد فعّلت premium على هذا الخادم من قبل!"
+patreon_guild_membership_already: "**premium بالفعل** لأنه مُموّل من شخص آخر.\nاحفظ حصتك لخوادم أخرى!"
+patreon_guild_membership_claim_title: "تأكيد التفعيل"
+patreon_guild_membership_claim_desc: |
+  هل أنت متأكد أنك تريد تفعيل **خادم premium** لـ:
+  **%{guildName}**
+
+  سيستخدم هذا الإجراء **حصة خادم واحدة**.
+  الحصة المتبقية: **%{status}**
+patreon_guild_membership_claim_success: |
+  نجاح! **%{guildName}** أصبح الآن **خادم premium**.
+
+  **الراعي:** %{user}
+  **الحصة المتبقية:** %{status}
+  شكراً لدعمك على patreon!
+patreon_guild_membership_claim_success_title: "💎 تم تفعيل Premium!"
+patreon_guild_membership_claim_cancel: "تم إلغاء تفعيل premium."
+patreon_guild_membership_claim_norespon: "تم إلغاء التفعيل تلقائياً بسبب عدم الاستجابة."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 تم استرداد الخادم (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **المستخدم الراعي:** %{sponsorTag} %{sponsorId}
+  **الخادم المستهدف:** %{guildName} %{guildId}
+  **حالة الحصة:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "لا يمكنك إلغاء premium لهذا الخادم لأنك لم تسجله."
+patreon_guild_unclaim_title: "تأكيد إلغاء Premium"
+patreon_guild_unclaim_desc: |
+  هل أنت متأكد أنك تريد **إلغاء** حالة Premium لخادم **%{guildName}**؟
+  **التأثيرات:** سيتم تعطيل ميزات Premium على هذا الخادم.
+  سيتم استعادة حصة الخادم الخاصة بك (+1).
+  الحصة المتبقية الحالية: **%{status}**
+patreon_guild_unclaim_success_title: "تم إلغاء Premium"
+patreon_guild_unclaim_success: |
+  تم إلغاء حالة Premium لخادم **%{guildName}** بنجاح.
+  **الحصة المُستعادة:** خادم واحد
+  **الحصة المتبقية الجديدة:** %{status}
+patreon_guild_unclaim_cancel: "تم إلغاء عملية إلغاء Premium."
+patreon_guild_unclaim_norespon: "⏱️ انتهت المهلة. تم إلغاء العملية."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "إلغاء استرداد الخوادم (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **المستخدم:** %{sponsorTag} %{sponsorId}
+  **الخادم:** %{guildName}} %{guildId}
+  **الحصة المُستعادة:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **المستخدم:** %{userTag} (%{userId})
+  **الخادم:** %{guildName} (%{guildId})
+  **الحصة:** %{quota}
+  **تنتهي في:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} إجراء: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "لم يتم العثور على معرّف المعاملة أو تم استرداده بالفعل."
+kofi_linked_success_title: "تم ربط الدفع بنجاح!"
+kofi_linked_success_desc: "الآن يمكنك استخدام `/premium claim <kofi>` بدون معرّف المعاملة."
+kofi_no_data_title: "لم يتم العثور على بيانات!"
+kofi_no_data_desc: |
+  إذا كنت قد دفعت بالفعل ولكن لم تربط حساب Discord الخاص بك بـ Kofi
+  استخدم: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "لا توجد حصة، لكنك مستخدم premium."
+kofi_full_server_quota_title: "الحصة ممتلئة!"
+kofi_full_server_quota_desc: "لقد استخدمت **%{quota}** فتحات خادم."
+kofi_server_already_claim_desc: "**مُفعّل بالفعل!**\nلقد فعّلت Premium على هذا الخادم من قبل."
+kofi_server_already_active_desc: " **Premium بالفعل!**\nهذا الخادم تم تفعيله كـ premium من قِبل مستخدم آخر."
+kofi_guild_membership_claim_success: |
+  تم تفعيل Premium بنجاح!
+  **استخدام الحصة:** %{quota}
+  **تنتهي في:** %{expires}
+kofi_guild_membership_claim_footer: "شكراً لدعمك!"
+kofi_action_title: "🏗️ إجراء Ko-fi: %{type}"
+kofi_action_description: "**المستخدم:** %{userTag} (`%{userId}`)\n**الخادم:** %{guildName} (`%{guildId}`)\n**الإجراء:** %{action}\n**الحصة:** %{quota}"
+kofi_action_activation: "تفعيل الخادم"
+kofi_action_manual_link: "ربط الدفع يدوياً"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "تم إلغاء Premium"
+kofi_guild_unclaim_success_desc: |
+  تم إلغاء حالة Premium لخادم **%{guildName}** بنجاح.
+  **الحصة المُستعادة:** خادم واحد
+kofi_guild_not_owned_by_user: "لا يمكنك إلغاء premium لهذا الخادم لأنك لم تسجله."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "إلغاء استرداد الخوادم %{platform}"
+premium_unclaim_log_desc: |
+  **المستخدم:** %{userTag} %{userId}
+  **الخادم:** %{guildName}} %{guildId}
+  **الحصة المُستعادة:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "تم **تعطيل** نظام دور DJ."
+dj_role_missing_role: "تحتاج لتقديم دور لاستخدام إجراء `set`."
+dj_role_set: |
+  تم تعيين دور DJ إلى %{role}.
+  الحالة: **مُفعّل**
+  **الأوامر المتأثرة:**
+  %{commands}

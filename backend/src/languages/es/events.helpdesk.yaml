@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "El centro de ayuda ha sido desactivado"
+invalid_channel_helpdesk: "El canal proporcionado es inv\u00e1lido"
+channel_viewable_helpdesk: "El canal proporcionado no es visible para m\u00ed"
+setup_helpdesk_succes: "El centro de ayuda se ha configurado en %{channel} exitosamente."
+
+embed1_title: "\u00a1Bienvenido al servidor de soporte de %{bot}!"
+embed1_desc: "**%{bot} Donde aquellos que desean cantar siempre encuentran una canci\u00f3n \u266a\n\u00a1\u00danete a la melod\u00eda en tu servidor de Discord hoy!**"
+embed1_footer: "\u00a1Gracias por elegir a %{bot} como tu Bot de M\u00fasica personal!"
+
+embed2_title: "Centro de ayuda de %{bot}"
+embed2_desc: |
+  **%{button1} \u00bfQu\u00e9 es %{bot}?
+
+  %{button2} \u00bfC\u00f3mo invitar al Bot de M\u00fasica %{bot}?
+
+  %{button3} \u00bfC\u00f3mo usar el Bot de M\u00fasica %{bot}?
+
+  %{button4} \u00bfC\u00f3mo activar la funci\u00f3n 24/7?
+
+  %{button5} %{bot} no responde/est\u00e1 fuera de l\u00ednea.
+
+  %{button6} La calidad de audio de %{bot} suena con retraso.
+
+  %{button7} \u00bfC\u00f3mo configurar el canal de solicitud de canciones?
+
+  %{button8} %{bot} sigue diciendo que le faltan permisos.
+
+  %{button9} %{bot} se desconecta del canal de voz por s\u00ed solo.
+
+  %{button10} \u00bfC\u00f3mo obtengo/activo Premium y qu\u00e9 beneficios recibo?**
+
+embed2_field1_name: "Sitio Web"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Tipo"
+embed2_field2_value: "**Bot de M\u00fasica**"
+embed2_field3_name: "Obtener Premium"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Aquellos que desean cantar siempre encuentran una canci\u00f3n \u266a"
+helpdesk1_desc: |
+  **%{bot} es un bot de Discord que revoluciona la forma en que experimentas la m\u00fasica en Discord, ofreciendo la interfaz de usuario m\u00e1s limpia, audio de alta calidad y una amplia gama de funciones relacionadas con la m\u00fasica.**
+
+  **\u00bfPor qu\u00e9 %{bot}?**
+  - **Actualizaciones Regulares**: %{bot} se actualiza constantemente, asegurando que siempre obtengas lo mejor de las \u00faltimas funciones y correcciones.
+  - **Funciones Completas**: El sistema de m\u00fasica simple de %{bot} permite una reproducci\u00f3n fluida desde m\u00faltiples fuentes.
+  - **Comunidad de soporte dedicada**: Somos un bot relativamente nuevo en Discord, \u00a1y nos encantar\u00eda que te unieras! Asegurar que el bot funcione sin problemas es nuestra prioridad, por eso necesitamos tu ayuda con comentarios y sugerencias. Si tienes alguna pregunta, no dudes en abrir un ticket de soporte.
+
+  **Enlaces \u00datiles**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **\u00bfNecesitas Soporte?**
+  - Env\u00eda un ticket para obtener asistencia adicional
+
+  **\u00bfQu\u00e9 est\u00e1s esperando? \u00a1Invita a %{bot} a tu servidor de Discord hoy y disfruta de una experiencia musical sin l\u00edmites e incomparable!**
+  **[Haz clic aqu\u00ed para invitar](%{invite})**
+
+helpdesk2_title: "A\u00f1adir %{bot} a tu servidor"
+helpdesk2_desc: |
+  **Puedes invitar a %{bot} usando este [enlace](%{invite}).**
+    Elige el servidor donde quieres a\u00f1adirlo y haz clic en **Autorizar**
+
+  > Ten en cuenta que si deseas desactivar los permisos de `Administrador` para %{bot}, puede afectar su funcionalidad. Aunque a\u00fan podr\u00e1s acceder a las funciones b\u00e1sicas de m\u00fasica, algunas funcionalidades podr\u00edan no funcionar correctamente.
+
+helpdesk3_title: "\u00bfC\u00f3mo usar el Bot de M\u00fasica %{bot}?"
+helpdesk3_desc: |
+  \u00danete a un canal de voz o de escenario y luego escribe /play <nombre canci\u00f3n/url> en un canal de texto.
+  Puedes interactuar directamente usando los botones de control para detener, bucle, etc.
+  Escribe / (o /help) y selecciona el icono de %{bot} para obtener una lista de todos los comandos disponibles.
+
+helpdesk4_title: "\u00bfC\u00f3mo activar la funci\u00f3n 24/7?"
+helpdesk4_desc: |
+  \u00danete a un canal de voz o de escenario y luego escribe `/247 <enable/disable>` en un canal de texto.
+
+  **Nota:** *Esta funci\u00f3n se puede utilizar si tienes el permiso de `manage server`, y se asegura de antemano que el bot est\u00e9 reproduciendo m\u00fasica.*
+
+helpdesk5_title: "%{bot} no responde/est\u00e1 fuera de l\u00ednea"
+helpdesk5_desc: |
+  \u00bfEst\u00e1s intentando usar un comando pero sigue fallando? Bueno, probablemente no pueda responder, pero sigue los pasos a continuaci\u00f3n para solucionarlo.
+
+  **\u00a1%{bot} ahora usa comandos slash!**
+  Aseg\u00farate de estar usando comandos slash ya que Discord ahora requiere que todos los bots los usen.
+  Comienza escribiendo `/play` y `/help`
+
+  **\u00bf%{bot} a\u00fan no parece responder?**
+  El \u00fanico escenario restante en esa situaci\u00f3n es un problema ya sea del lado de Discord o del nuestro. Verifica que %{bot} no est\u00e9 fuera de l\u00ednea en tu servidor. Si est\u00e1 fuera de l\u00ednea, tu mejor opci\u00f3n ser\u00eda esperar hasta 5 minutos y ver si %{bot} vuelve a estar en l\u00ednea. Si est\u00e1 en l\u00ednea, tiene todos los permisos necesarios, definitivamente deber\u00edas ponerte en contacto con uno de nuestros miembros de soporte.
+
+helpdesk6_title: "La calidad de audio de %{bot} suena con retraso"
+helpdesk6_desc: |
+  A nadie le gusta la m\u00fasica con retraso, pero eso a veces sucede al escuchar bots de m\u00fasica en Discord. Aqu\u00ed hay algunas posibles soluciones para ayudarte a solucionarlo.
+
+  **\u00bfQu\u00e9 deber\u00eda hacer?**
+  Primero que nada, deber\u00edas verificar tu conexi\u00f3n a internet. Discord muestra tu ping \u00faltimo y promedio en la esquina inferior izquierda, solo haz clic en "Conectado a Voz" y verifica que tu ping se comporte de manera estable (si el gr\u00e1fico rojo tiembla mucho significa que no es estable) y que tanto el \u00faltimo como el ping promedio est\u00e9n por debajo de 250 milisegundos. Si ambos indicadores muestran que tu conexi\u00f3n es mala, deber\u00edas intentar verificar tu WiFi/LAN. Reiniciar tu router tambi\u00e9n podr\u00eda solucionar algunos problemas.
+
+  **\u00bfTienes un ping de 5ms y puedes descargar GTA 5 en 2 minutos?**
+  Entonces tu conexi\u00f3n a internet no parece ser el problema. En el 95% de los casos donde %{bot} tiene retraso, Discord est\u00e1 teniendo problemas temporales con sus servidores de voz. Normalmente solo los reinician en alg\u00fan momento, pero podr\u00edas forzar un cambio a un servidor diferente en tu regi\u00f3n. [Intenta cambiar la regi\u00f3n de tu servidor](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3) para obtener un servidor de voz de Discord nuevo y fresco.
+  Si a\u00fan tienes el mismo problema, no dudes en escribir /report para reportar tu problema.
+
+helpdesk7_title: "\u00bfC\u00f3mo configurar el canal de solicitud de canciones?"
+helpdesk7_desc: |
+  **\u00bfC\u00f3mo creo un canal de solicitud?**
+  Aseg\u00farate de que %{bot} tenga el permiso de `manage server` y luego escribe /setup con la opci\u00f3n `create`, entonces el bot crear\u00e1 autom\u00e1ticamente un canal especial para solicitudes de canciones.
+
+  ```Nota: No elimines ning\u00fan mensaje que %{bot} haya creado para que pueda funcionar correctamente.```
+
+  **\u00bfC\u00f3mo elimino un canal de solicitud?**
+  Como antes, solo que en las opciones puedes seleccionar `delete`.
+
+helpdesk8_title: "%{bot} sigue diciendo que le faltan permisos."
+helpdesk8_desc: |
+  Al intentar ejecutar ciertos comandos, %{bot} puede carecer de ciertos permisos. En tales casos, %{bot} se negar\u00e1 a ejecutar el comando hasta que estos problemas se resuelvan. Es importante tener en cuenta que estos permisos no son opcionales; %{bot} los necesita para ejecutar el comando.
+
+  Si crees que el bot tiene los permisos necesarios, aseg\u00farate de verificar las anulaciones de roles del canal. Estas anulaciones pueden modificar los permisos de roles en canales espec\u00edficos.
+
+  Si a\u00fan no puedes determinar por qu\u00e9 %{bot} no tiene los permisos requeridos, considera darle a %{bot} el permiso de Administrador. Esto deber\u00eda resolver cualquier problema de permisos de Discord.
+
+helpdesk9_title: "Mewwme se desconecta del canal de voz por s\u00ed solo"
+helpdesk9_desc: |
+  En casos muy poco comunes, incluso con el modo 24/7 activado, Mewwme puede desconectarse del canal de voz sin que alguien use /stop o el bot\u00f3n de Desconectar de Discord. Algunas de las causas m\u00e1s comunes y una posible soluci\u00f3n se enumeran a continuaci\u00f3n.
+
+  **El modo 24/7 no est\u00e1 activado.**
+  Por defecto, Mewwme se desconecta del canal de voz cuando est\u00e1 vac\u00edo en 3 minutos.
+
+  **Soluci\u00f3n:** Consulta "4. \u00bfC\u00f3mo activar la funci\u00f3n 24/7?" en el primer embed de ayuda para activar el modo 24/7.
+
+  **Faltan permisos.**
+  Cada vez que Discord nos pide reconectar a un canal de voz, ya sea por reinicios del servidor o una ca\u00edda de la API, verificamos los permisos del bot para asegurarnos de que pueda unirse y hablar en el canal. Si falta algo, tendr\u00e1s que usar /play de nuevo para invitar al bot a un canal diferente o al mismo despu\u00e9s de agregar los permisos necesarios.
+
+  **Soluci\u00f3n:** Aseg\u00farate de usar los comandos /play para agregar el bot al canal de voz en lugar de moverlo desde uno diferente. Al hacer eso, te asegurar\u00e1s de que el bot tenga todos los permisos necesarios para reconectar cuando sea necesario.
+
+  **Problemas de Regi\u00f3n del Servidor.**
+  En ciertos casos, algunas regiones de voz pueden experimentar problemas de red y estabilidad que podr\u00edan impedir que el bot se una al canal de voz.
+
+  **Soluci\u00f3n:** Cambia a otra regi\u00f3n de voz usando la configuraci\u00f3n del canal de voz (elige la m\u00e1s cercana a tu pa\u00eds).
+
+  **Algo m\u00e1s sali\u00f3 mal.**
+  Si has intentado todas las soluciones anteriores y el problema persiste, por favor escribe `report` o abre un ticket en soporte https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "\u00bfC\u00f3mo obtengo/activo Premium y qu\u00e9 beneficios recibo?"
+helpdesk10_desc: |
+  **\u00bfC\u00f3mo canjear mis beneficios Premium?**
+
+  para activar los beneficios de tu membres\u00eda premium, por favor sigue estos pasos:
+  1. **vincula tu cuenta de discord primero**
+    - antes de comprar, aseg\u00farate de que tu cuenta de discord est\u00e9 conectada a la plataforma que est\u00e1s usando (patreon o ko-fi).
+    - esto es necesario para que el sistema pueda detectar tu pago autom\u00e1ticamente.
+  2. **compra tu membres\u00eda**
+  - despu\u00e9s de vincular tu discord, completa el pago de la membres\u00eda seg\u00fan el plan que desees.
+  3. **espera la sincronizaci\u00f3n**
+    - una vez que tu pago sea exitoso, por favor espera unos minutos para que el sistema sincronice tu membres\u00eda.
+  4. **reclama premium en tu servidor**
+    - ve al servidor de discord que quieres mejorar, luego usa este comando:
+      `/premium claim`
+      elige la opci\u00f3n de plataforma correcta (patreon o ko-fi) cuando se te solicite.
+      aseg\u00farate de ejecutar el comando dentro del servidor que quieres activar como premium.
+      una vez reclamado, premium se activar\u00e1 instant\u00e1neamente.
+
+  Siguiendo los pasos anteriores, podr\u00e1s activar y disfrutar de todos los beneficios Premium ofrecidos. Si encuentras alg\u00fan problema o tienes m\u00e1s preguntas, no dudes en contactar a nuestro equipo de soporte.
+
+helpdesk10_footer: "Gracias por ser parte de nuestro viaje, \u00a1esperamos que la pases bien aqu\u00ed!"

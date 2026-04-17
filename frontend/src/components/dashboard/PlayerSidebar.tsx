@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
-import { FiHome, FiUser, FiServer, FiGlobe, FiBarChart2, FiHeart, FiMusic, FiRadio, FiFolder, FiSettings, FiLogOut, FiMessageCircle } from "react-icons/fi";
+import { FiHome, FiUser, FiServer, FiGlobe, FiBarChart2, FiHeart, FiMusic, FiRadio, FiFolder, FiSettings, FiLogOut, FiMessageCircle, FiUsers } from "react-icons/fi";
 import type { DashboardView, DiscordUser } from "@/types/player";
 
 interface Props {
@@ -210,6 +210,7 @@ export default function PlayerSidebar({
           <NavItem icon={<FiUser />} label="Profile" href="/profile" />
           <NavItem icon={<FiServer />} label="Servers" href="/servers" />
           <NavItem icon={<FiGlobe />} label="Global Stats" href="/global-stats" />
+          <NavItem icon={<FiUsers />} label="Community" href="/community" />
         </nav>
 
         <div className="mx-3 my-2 h-px bg-white/[0.06] md:mx-2" />

@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_add_match: "Будь ласка, вкажіть дійсну назву пісні або URL!"
+pl_add_playlist: "Знайдено **%{title}** `%{duration}` • (**%{track} пісень**) • %{user}"
+pl_add_track: "Знайдено **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Знайдено **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Ви не є **власником плейлиста**!"
+pl_add_limit_track: "Ви не можете додати більше ніж **%{limit} пісень**"
+pl_add_added: "Додано **%{count} пісень** до `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} пісень**) • Створено: `[%{create} тому]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Сторінка • %{page}/%{pages} | Плейлисти • %{songs}"
+pl_all_view_notnumber: "Будь ласка, введіть дійсний номер сторінки!"
+pl_all_view_page_notfound: "Усього лише **%{page} сторінок**!"
+
+### pl-create commands ###
+pl_create_invalid: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_create_toolong: "Назва плейлиста не може бути довшою за **16 символів**"
+pl_create_des_toolong: "Опис плейлиста не може бути довшим за **1000 символів**"
+pl_create_limit_playlist: "Ви не можете створити більше ніж **%{limit} плейлистів**"
+create_created_title: "Новий плейлист успішно створено!"
+pl_create_created_footer: "Введіть /pl editor для редагування плейлиста!"
+pl_create_created: |
+  **Назва плейлиста**
+  `%{playlist}`
+
+  **ID плейлиста**
+  `%{id}`
+
+  **Опис**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Будь ласка, вкажіть дійсний ID плейлиста!"
+delete_notfound: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_delete_owner: "Ви не є **власником плейлиста**"
+pl_delete_confirm: "Ви хочете видалити `%{playlist_id}`"
+pl_delete_deleted: "Плейлист `%{name}` успішно **видалено**"
+pl_delete_no: "Скасовано **видалення** плейлиста!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Будь ласка, введіть дійсне число!"
+pl_detail_notfound: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_detail_private: "Плейлист є **приватним**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Плейлист: %{name}"
+pl_detail_embed_footer: "Сторінка • %{page}/%{pages} | Пісні • %{songs} | Загальна тривалість • %{duration}"
+pl_detail_notnumber: "Будь ласка, введіть дійсний номер сторінки!"
+pl_detail_page_notfound: "Усього лише **%{page} сторінок**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Введіть ваш **новий ID плейлиста** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Введіть вашу **нову назву плейлиста**"
+pl_edit_playlist_des_label: "Введіть ваш **новий опис плейлиста**"
+pl_edit_playlist_private_label: "Введіть вашу **нову видимість плейлиста** `[public/private]`"
+pl_edit_success: "Плейлист успішно відредаговано\nНовий ID плейлиста: `%{playlistId}`"
+pl_edit_arg: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_edit_notfound: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_edit_playlist_owner: "Ви не є **власником плейлиста**!"
+pl_edit_invalid_id: "Будь ласка, введіть дійсний та неіснуючий ID плейлиста!"
+pl_edit_invalid_mode: "Недійсний режим видимості. Будь ласка, використовуйте **public** або **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Новий ID плейлиста"
+ineraction_edit_playlist_name_label: "Нова назва плейлиста"
+ineraction_edit_playlist_des_label: "Новий опис плейлиста"
+ineraction_edit_playlist_private_label: "Нова видимість плейлиста"
+ineraction_edit_playlist_id_placeholder: "Введіть ваш новий ID плейлиста! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Введіть вашу нову назву плейлиста!"
+ineraction_edit_playlist_des_placeholder: "Введіть ваш новий опис плейлиста!"
+ineraction_edit_playlist_private_placeholder: "Введіть вашу нову видимість плейлиста! [public/private]"
+ineraction_edit_success: "Плейлист успішно відредаговано\nНовий ID плейлиста: `%{playlistId}`"
+ineraction_edit_playlist_error: "Щось пішло не так. Будь ласка, спробуйте ще раз!"
+ineraction_edit_notfound: "Будь ласка, вкажіть дійсний ID плейлиста!"
+ineraction_edit_playlist_owner: "Ви не є **власником плейлиста**"
+ineraction_edit_invalid_id: "Будь ласка, введіть дійсний та неіснуючий ID плейлиста!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Плейлист **%{name}** додано до черги ♪"
+pl_import_imported_footer: "Насолоджуйтесь %{tracks} піснями • %{duration} • музичного блаженства!"
+pl_import_invalid: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_import_private: "Плейлист є **приватним**"
+pl_import_voice: "Ви повинні бути в голосовому каналі, щоб використовувати цю команду!"
+pl_import_empty: "Плейлист **порожній**"
+
+### pl-info commands! ###
+pl_info_owner: "Власник"
+pl_info_id: "ID"
+pl_info_des: "Опис"
+pl_info_no_des: "Опис не надано!"
+pl_info_private: "Видимість"
+pl_public: "Публічний"
+pl_private: "Приватний"
+pl_info_total: "Загальна кількість пісень"
+pl_info_created: "Створено"
+pl_info_invalid: "Будь ласка, вкажіть дійсний ID плейлиста!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_remove_number_invalid: "Будь ласка, введіть дійсне число!"
+pl_remove_notfound: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_remove_owner: "Ви не є **власником плейлиста**"
+pl_remove_song_notfound: "Пісню не знайдено!"
+pl_remove_removed: "Видалено **%{position} номер** пісні з `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_savequeue_notfound: "Будь ласка, вкажіть дійсний ID плейлиста!"
+pl_savequeue_owner: "Ви не є **власником плейлиста**!"
+pl_savequeue_no_tracks: "Наразі жодна пісня не грає!"
+pl_savequeue_no_new_saved: "Пісня вже існує в `%{name}`"
+pl_savequeue_saved: "Збережено **%{tracks} пісень** до `%{name}`"
+
+pl_error_no_node: "Сервер Lavalink не знайдено. Будь ласка, спробуйте через **5 хвилин**"

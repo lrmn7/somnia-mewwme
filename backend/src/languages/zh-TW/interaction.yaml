@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "已啟用"
+disable: "已停用"
+
+# maintenance
+maintenance_title: "維護中"
+maintenance_desc: |
+  %{bot} 目前正在進行維護。請稍後再試。
+  如需更多資訊，請加入我們的[支援伺服器](%{serversupport})。感謝你！
+
+# Getting error!
+unexpected_error: "發生了一些問題。請稍後再試！"
+
+### Rate limit!
+ratelimit: "你的操作過於頻繁。請等待 **%{time} 秒**"
+
+# No permission!
+no_perms: "我沒有 **%{perm}** 權限！\n請授予我 **%{perm}** 權限以執行此指令。"
+
+no_manage_guild_perms: "此指令需要 **%{perm}** 權限！\n你沒有權限執行此指令！"
+
+no_admin_perms: "此指令需要 **%{perm}** 權限！\n你沒有權限執行此指令！"
+
+# No permission!
+no_perms_channel: "我在 %{channel} 中沒有 **%{perm}** 權限來執行此指令！"
+
+# Execute when invalid
+no_node: "**找不到 Lavalink 伺服器。請在 5 分鐘後再試**"
+
+# Client owner!
+owner_only: "此指令只能由機器人**擁有者**執行"
+
+# Need to join voice & same voice to use command!
+no_player: "目前沒有正在播放的歌曲！"
+no_same_voice: "你和我不在同一個語音頻道！"
+no_in_voice: "你不在語音頻道中！"
+
+# Blacklist User
+blacklist_user: "你似乎已被列入黑名單！你無法使用指令。\n如果你認為這是錯誤的，請聯繫**[開發者](%{serversupport})**。"
+
+# Blacklist Guild
+blacklist_guild: "此伺服器已被列入黑名單！你無法在此伺服器中使用指令。\n如果你認為這是錯誤的，請聯繫**[開發者](%{serversupport})**。"
+
+### DjRole No Permission ###
+not_dj_role: "你必須擁有 %{role} 身分組才能使用此指令。"
+
+### No Premium Event!
+no_premium_button: "取得進階版"
+no_premium_author: "無進階版方案"
+no_premium_desc: "糟糕！看來你還沒有進階版方案。\n沒有進階版方案無法使用此功能。"
+
+# Top.gg error
+topgg_error_author: "Top.gg 投票錯誤"
+topgg_error_desc: "在 top.gg 上驗證你的投票時發生錯誤，可能是因為 Top.gg 暫時無法使用。請在 5-10 分鐘後再試。\n如果問題持續存在，請聯繫我們的[支援伺服器](%{serversupport})以獲得進一步協助。"
+
+# Top.gg unvote
+topgg_unvote_button: "投票解鎖"
+premium_button: "升級至進階版"
+topgg_unvote_author: "需要投票"
+topgg_unvote_desc: "你需要投票才能使用此指令！快速又免費。\n或者，在我們的[進階版頁面](%{premium})取得進階版，即可跳過此訊息並解鎖額外功能。"
+
+### Mention Desc ###
+mention_content: "此伺服器的前綴為 `%{prefix}`\n你也可以標記我來使用指令，或輸入 </help:1294325423957741598> 查看我的斜線指令 ♡"

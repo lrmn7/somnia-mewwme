@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Juhu~~ Autoodtwarzanie jest teraz **Włączone**"
+autoplay_off: "Hmmm~~ Autoodtwarzanie jest teraz **Wyłączone**"
+autoplay_no_song: "Żadne utwory nie są odtwarzane!"
+
+### Loop command!
+loop_current: "Teraz bieżący utwór będzie odtwarzany w pętli. Ciesz się powtórkami!"
+loop_all: "Kolejka jest teraz ustawiona na pętlę. Niech muzyka gra w kółko!"
+unloop_all: "Tryb pętli został wyłączony. Ciesz się różnorodnością utworów!"
+
+### Pause command!
+pause_msg: "Muzyka jest wstrzymana. Zrób sobie przerwę i ciesz się ciszą."
+
+### Resume command!
+resume_msg: "Muzyka wraca! Kontynuujmy zabawę ♪"
+
+previous_notfound: "Przepraszam, nie mogę cofnąć się dalej. Nie znaleziono poprzedniego utworu :("
+previous_msg: "No cóż, chyba cofamy się! Poprzedni utwór nadchodzi <3"
+
+### Queue command!
+queue_title: "Odtwarzanie kolejki..."
+queue_description: "**%{title} **\n\n**Reszta kolejki %{list_song}**"
+queue_footer: "Strona • %{page}/%{pages} | Utwory • %{queue_lang} | Łączny czas • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Zgadnij co zrobiłem? Przemieszałem kolejkę dla ciebie!"
+
+### Skip command!
+skip_msg: "Pominąłem utwór. Mam nadzieję, że nie masz nic przeciwko :p"
+skip_notfound: "Ups! Wygląda na to, że nie ma utworu do pominięcia! Baw się dalej przy obecnym utworze ♪"
+
+### Stop command!
+stop_msg: "Odtwarzanie muzyki zostało zatrzymane. Mam nadzieję, że świetnie się bawiłeś!"
+
+### Volume command!
+voldown_msg: "Głośność została zmniejszona o %{volume}%. Ciesz się łagodniejszym brzmieniem!"
+volume_invalid: "Nieprawidłowa głośność. Dostępny zakres to **1** do **100**"
+volup_msg: "Głośność została zwiększona o %{volume}%. Rozkręćmy imprezę!"
+volume_max: "Nie mogę ustawić głośności powyżej 100%"
+volume_min: "Ojej~~ już na minimalnej głośności!"

@@ -15,9 +15,9 @@ const CTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl font-bold mb-4 text-mewwme"
+          className="text-3xl sm:text-4xl font-bold mb-4 text-foreground"
         >
-          Transform Your Server
+          Transform Your{" "}<span className="text-mewwme">Server</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

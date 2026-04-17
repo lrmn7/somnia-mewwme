@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ Autoplay sekarang **Diaktifkan**"
+autoplay_off: "Hmmm~~ Autoplay sekarang **Dinonaktifkan**"
+autoplay_no_song: "Tidak ada lagu yang sedang diputar!"
+
+### Loop command!
+loop_current: "Sekarang lagu yang sedang diputar akan diulang terus. Nikmati pengulangannya!"
+loop_all: "Antrean sekarang diatur untuk diulang. Biarkan musiknya terus berputar!"
+unloop_all: "Mode pengulangan telah dimatikan. Nikmati variasi lagunya!"
+
+### Pause command!
+pause_msg: "Musik dijeda. Istirahat sebentar dan nikmati keheningan."
+
+### Resume command!
+resume_msg: "Musik kembali diputar! Ayo lanjutkan groove-nya ♪"
+
+previous_notfound: "Maaf, tidak bisa mundur lebih jauh lagi. Tidak ada lagu sebelumnya :("
+previous_msg: "Yah, sepertinya kita mundur! Lagu sebelumnya segera datang <3"
+
+### Queue command!
+queue_title: "Antrean sedang diputar..."
+queue_description: "**%{title} **\n\n**Sisa Antrean %{list_song}**"
+queue_footer: "Halaman • %{page}/%{pages} | Lagu • %{queue_lang} | Total Durasi • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Tebak apa yang aku lakukan? Aku mengacak antrean untukmu!"
+
+### Skip command!
+skip_msg: "Aku melewati lagunya. Semoga kamu tidak keberatan :p"
+skip_notfound: "Ups! Sepertinya tidak ada lagu untuk dilewati! Terus nikmati lagu yang sedang diputar ♪"
+
+### Stop command!
+stop_msg: "Pemutaran musik telah dihentikan. Semoga kamu senang bergoyang!"
+
+### Volume command!
+voldown_msg: "Volume telah dikurangi %{volume}%. Nikmati suasana yang lebih tenang!"
+volume_invalid: "Volume tidak valid. Rentang yang tersedia adalah **1** dan **100**"
+volup_msg: "Volume telah dinaikkan %{volume}%. Keraskan musiknya!"
+volume_max: "Aku tidak bisa menaikkan volume lebih dari 100%"
+volume_min: "Ohno~~ sudah di volume minimum!"

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "音樂播放已停止。希望你度過了愉快的時光！"
+skip_notfound: "糟糕。看起來沒有可以跳過的曲目！"
+skip_msg: "我跳過了這首歌。希望你不介意 :p"
+previous_msg: "好吧，看來我們要倒帶了！上一首曲目即將播放 <3"
+previous_notfound: "抱歉，無法再往前了。找不到上一首曲目 :("
+resume_msg: "音樂回來了！讓我們繼續律動吧 ♪"
+pause_msg: "音樂已暫停。休息一下，享受片刻的寧靜。"
+loop_current: "目前的歌曲將會循環播放。享受重複播放的樂趣吧！"
+loop_all: "播放佇列已設為循環模式。讓音樂不斷重複播放吧！"
+unloop_all: "循環模式已關閉。享受多樣化的曲目吧！"
+
+### Need to join voice & same voice to use command!
+no_player: "你按了一個按鈕但什麼都沒發生。也許你應該先播放些音樂！"
+no_same_voice: "你按了一個按鈕但它閃紅了。你和我不在同一個語音頻道！"
+no_in_voice: "所有按鈕對你都沒有反應。你不在語音頻道中！"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "正在播放"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** 由 %{request} 點播"
+setup_footer: "剩餘曲目 • %{totalsong} | 總時長 • %{duration}"
+setup_queuemsg: "**加入語音頻道，在這裡使用歌曲名稱或網址來播放音樂！**"
+setup_playembed_author: "目前沒有正在播放的歌曲！"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "已新增 **%{title}** • %{request}"
+play_playlist: "已新增 **%{title}** • (**%{songs} 首曲目**) • %{request}"
+play_result: "已新增 **%{title}** • %{request}"
+play_emoji: "我不確定怎麼播放那個... 它不是一首曲目或播放清單。"
+setup_content: "**嘿！我的音樂台已準備好了！直接在這裡點歌吧！**"

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "현재 재생 중"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "아티스트"
+track_requested_by: "요청한 사람"
+track_duration: "재생시간"
+no_same_voice: "저와 같은 음성 채널에 있지 않습니다!"
+filter_already: "**%{name} 필터가 이미 활성화되어 있습니다**"
+filter_reset_on: "**필터가 초기화되었습니다**"
+filter_reset_already: "**필터가 이미 초기화되어 있습니다**"
+no_player_filter: "**필터를 적용할 수 없습니다!**"
+filter_menu_on: "**필터 %{name} 켜짐!**"
+
+player_get_exception: "이런! 트랙에 문제가 발생한 것 같습니다. 다시 시도해볼까요?"
+player_track_error: "트랙에 문제가 있었습니다. 다시 한번 시도해주시겠어요?"
+player_track_stuck: "슬프네요 :(, 트랙이 멈춰버렸습니다. 재시도하면 나아질까요?"
+queue_end_desc: "모든 노래가 끝났습니다! 더 많은 비트가 필요하신가요?\n**/play**를 사용하여 파티를 계속하세요!"
+
+leave_pause: "모두 저를 혼자 두고 가셨네요 :( 플레이어가 일시정지되었습니다."
+leave_resume: "누군가 함께해 주셔서 플레이어가 재개되었습니다."
+
+player_end: "채널이 거의 15분간 비어 있어서 혼자 있는 것을 좋아하지 않아 나가기로 했습니다"
+
+### Last FM Scrobble ###
+expired_login_session: "Last.fm 세션이 만료되었거나 유효하지 않습니다.\n스크로블 기능을 계속 사용하려면 다시 인증해주세요."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • 노래하고 싶은 사람은 항상 노래를 찾습니다 ♪"
+milestone_track_desc: |
+  ## 오! 안녕하세요
+  **%{total}**곡을 들으셨습니다! 재생목록이 끝이 없는 건가요, 아니면 그냥 음악에 푹 빠지신 건가요?
+

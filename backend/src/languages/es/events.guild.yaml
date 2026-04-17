@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "\ud83d\udce5 \u00a1Se uni\u00f3 a un Servidor!"
+leave_title: "\ud83d\udce5 \u00a1Sali\u00f3 de un Servidor!"
+guild_name: "Nombre"
+guild_id: "ID"
+guild_owner: "Propietario"
+guild_member_count: "Cantidad de miembros"
+guild_creation_date: "Fecha de creaci\u00f3n"
+guild_join_date: "Fecha de uni\u00f3n"
+current_server_count: "Cantidad actual de servidores"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "\u00a1OMG! Hola a todos \u2727(\u2267\u25e1\u2266) \u2661"
+join_msg_desc: |
+  ### Gracias por invitarme a pasar el rato con ustedes (*\u2267\u25bd\u2266)
+  ### pueden mencionarme para usar comandos tambi\u00e9n! Escribe </help:1088430405033656341> para ver mis comandos slash \u2661

@@ -30,9 +30,9 @@ interface CacheEntry {
 }
 
 export function createSpotifyTopChartService(client: Manager) {
-  const CHARTGURU_BASE = "https://chartguru.meww.me/api/stats/tracks";
+  const CHARTGURU_BASE = "https://topchart-api.vercel.app/api/stats/tracks";
   const chartCache = new Map<string, CacheEntry>();
-  const CACHE_TTL = 6 * 60 * 60 * 1000; // 6 hours
+  const CACHE_TTL = 1 * 60 * 60 * 1000; // 1 hour
 
   async function fetchChartGuru(country: string): Promise<ChartTrack[]> {
     const { data } = await axios.get<{ tracks: ChartGuruTrack[] }>(

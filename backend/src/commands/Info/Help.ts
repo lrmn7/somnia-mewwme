@@ -168,10 +168,6 @@ export default class implements Command {
             .setValue("Info")
             .setEmoji(client.config.MENU_HELP_EMOJI.E_INFO || "❓"),
           new StringSelectMenuOptionBuilder()
-            .setLabel("Admin")
-            .setValue("Admin")
-            .setEmoji(client.config.MENU_HELP_EMOJI.E_ADMIN || "❓"),
-          new StringSelectMenuOptionBuilder()
             .setLabel("All Commands")
             .setValue("All")
             .setEmoji(client.config.MENU_HELP_EMOJI.E_ALLCMD || "❓"),

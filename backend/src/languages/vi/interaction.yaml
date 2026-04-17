@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "Đã bật"
+disable: "Đã tắt"
+
+# maintenance
+maintenance_title: "Bảo trì"
+maintenance_desc: |
+  %{bot} hiện đang trong quá trình bảo trì. Vui lòng thử lại sau.
+  Để biết thêm thông tin, vui lòng tham gia [máy chủ hỗ trợ](%{serversupport}) của chúng tôi. Cảm ơn bạn!
+
+# Getting error!
+unexpected_error: "Đã xảy ra lỗi. Vui lòng thử lại sau!"
+
+### Rate limit!
+ratelimit: "Bạn đang thực hiện hành động quá nhanh. Vui lòng đợi **%{time} Giây**"
+
+# No permission!
+no_perms: "Tôi không có quyền **%{perm}**!\nVui lòng cấp cho tôi quyền **%{perm}** để thực hiện lệnh này."
+
+no_manage_guild_perms: "Lệnh này yêu cầu quyền **%{perm}**!\nbạn không có quyền để thực hiện lệnh này!"
+
+no_admin_perms: "Lệnh này yêu cầu quyền **%{perm}**!\nbạn không có quyền để thực hiện lệnh này!"
+
+# No permission!
+no_perms_channel: "Tôi không có quyền **%{perm}** trong %{channel} để thực hiện lệnh này!"
+
+# Execute when invalid
+no_node: "**Không tìm thấy máy chủ Lavalink. Vui lòng thử lại sau 5 phút**"
+
+# Client owner!
+owner_only: "Lệnh này chỉ có thể được thực hiện bởi **Chủ sở hữu** bot"
+
+# Need to join voice & same voice to use command!
+no_player: "Không có bài hát nào đang phát!"
+no_same_voice: "Bạn không ở cùng kênh thoại với tôi!"
+no_in_voice: "Bạn không ở trong kênh thoại!"
+
+# Blacklist User
+blacklist_user: "Có vẻ bạn đã bị chặn! Bạn không được phép sử dụng lệnh.\nVui lòng liên hệ **[nhà phát triển](%{serversupport})** nếu bạn cho rằng đây là lỗi."
+
+# Blacklist Guild
+blacklist_guild: "Máy chủ này đã bị chặn! Bạn không được phép sử dụng lệnh trong máy chủ này.\nVui lòng liên hệ **[nhà phát triển](%{serversupport})** nếu bạn cho rằng đây là lỗi."
+
+### DjRole No Permission ###
+not_dj_role: "Bạn phải có vai trò %{role} để sử dụng lệnh này."
+
+### No Premium Event!
+no_premium_button: "Nhận Premium"
+no_premium_author: "Chưa có gói Premium"
+no_premium_desc: "Ối! Có vẻ bạn chưa có gói premium. \nTính năng này không thể truy cập nếu không có gói premium."
+
+# Top.gg error
+topgg_error_author: "Lỗi bình chọn Top.gg"
+topgg_error_desc: "Đã xảy ra lỗi khi xác minh bình chọn của bạn trên top.gg, có thể do Top.gg đang gặp sự cố. Vui lòng thử lại sau 5-10 phút.\nNếu sự cố vẫn tiếp diễn, vui lòng liên hệ [máy chủ hỗ trợ](%{serversupport}) của chúng tôi để được hỗ trợ thêm."
+
+# Top.gg unvote
+topgg_unvote_button: "Bình chọn để mở khóa"
+premium_button: "Nâng cấp lên premium"
+topgg_unvote_author: "Yêu cầu bình chọn"
+topgg_unvote_desc: "Bạn cần Bình chọn để truy cập lệnh này! Nhanh chóng và miễn phí.\nNgoài ra, nhận premium tại [Trang Premium](%{premium}) của chúng tôi để bỏ qua thông báo này và mở khóa thêm tính năng."
+
+### Mention Desc ###
+mention_content: "tiền tố của tôi cho máy chủ này `%{prefix}`\nbạn có thể ping tôi để sử dụng lệnh hoặc gõ </help:1294325423957741598> để xem các lệnh slash của tôi ♡"

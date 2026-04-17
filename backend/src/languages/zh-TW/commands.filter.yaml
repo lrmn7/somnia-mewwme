@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **濾鏡 %{name} 已開啟！**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **希望你喜歡這個音效！**
+filter_already: "嗯？%{name} VST 已經開啟了... 我什麼也做不了。"
+filter_number: "這不是我能輸入到等化器的數字..."
+filter_greater: "必須是大於 **0** 的數字！"
+filter_less: "哇！太多了！也許小於 **10** 會比較好..."
+
+### Bassboost command!
+bassboost_set: "**低音增強已設為 %{amount}dB**"
+bassboost_limit: "請使用 **-10** 到 **10** 之間的數字"
+
+### Equalizer command!
+eq_author: "等化器"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  共有 **10 個頻段**，可以設定為 **-10** 到 **10**。
+  你不必全部輸入，只需輸入你想更改的部分。
+  如果你想跳過某一個，只需留為 **0** 即可。
+eq_field_title: "範例："
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "重設等化器 • %{prefix}eq reset"
+eq_on: "等化器已設為 **%{bands}**！"
+eq_number: "請提供有效的數字！"
+eq_greater: "數字必須大於 **-10**"
+eq_than: "數字必須小於 **10**"
+
+### Pitch command!
+pitch_on: "好的，音高現在為 **%{amount}**！"
+
+### Rate command!
+rate_on:  "好的！速率現在為 **%{amount}x**！"
+
+### Speed command!
+speed_on: "沒問題，將速度調整為 **%{amount}x**！"
+
+### Reset command!
+reset_on: "**重設**所有 VST！恢復原始音效！"
+reset_already:  "VST **已經關閉**了，你忘了嗎？"
+
+# Invalid Number
+number_invalid: "這不是我能處理的數字... 請使用有效的數字再試一次。"

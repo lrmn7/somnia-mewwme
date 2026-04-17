@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 Bergabung ke Guild!"
+leave_title: "📥 Meninggalkan Guild!"
+guild_name: "Nama"
+guild_id: "ID"
+guild_owner: "Pemilik"
+guild_member_count: "Jumlah anggota"
+guild_creation_date: "Tanggal pembuatan"
+guild_join_date: "Tanggal bergabung"
+current_server_count: "Jumlah server saat ini"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "YA AMPUN! Haii semuanya ✧(≖◡≖) ♡"
+join_msg_desc: |
+  ### Terima kasih sudah mengundangku untuk nongkrong bareng kalian (*≧▽≦)
+  ### kamu bisa mention aku untuk menggunakan perintah juga! Ketik </help:1088430405033656341> untuk melihat slash commands-ku ♡

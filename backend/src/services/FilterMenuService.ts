@@ -41,10 +41,13 @@ export default class FilterMenuServices {
 
       const guildId = interaction.guild!.id;
       let guildModel = await client.db.language.get(guildId);
-      const language = (guildModel = await client.db.language.set(
-        guildId,
-        client.config.bot.LANGUAGE
-      ));
+      if (!guildModel) {
+        guildModel = await client.db.language.set(
+          guildId,
+          client.config.bot.LANGUAGE
+        );
+      }
+      const language = guildModel;
 
       if (interaction.customId == "filter") {
         const { values } = interaction;

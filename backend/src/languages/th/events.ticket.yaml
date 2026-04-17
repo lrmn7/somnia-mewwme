@@ -1,0 +1,37 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "ระบุเหตุผลในการสร้างตั๋ว"
+ticket_already_open: "คุณมีตั๋วที่เปิดอยู่แล้ว"
+ticket_already_closed: "ไม่พบข้อมูลตั๋วสำหรับผู้ใช้ %{id} หรือตั๋วถูกปิดไปแล้ว"
+ticket_close_user: "คุณไม่ได้รับอนุญาตให้ปิดตั๋ว"
+ticket_delete_user: "คุณไม่ได้รับอนุญาตให้ลบตั๋ว"
+ticket_deleting_action: "กำลังลบตั๋ว..."
+ticket_closed_label: "🔒 ปิดแล้ว"
+ticket_delete_label: "🗑️ ลบ"
+ticket_create: "ตั๋วถูกสร้างแล้ว ไปที่ %{channel}"
+ticket_create_title: "รอทีมงานตอบกลับ"
+ticket_create_desc: |
+  ขอบคุณที่สร้างตั๋ว กรุณารอทีมงานตอบกลับ
+  `หมายเหตุ: ตั๋วนี้ไม่มีการสำรองข้อมูล กรุณาสำรองข้อมูลสำคัญด้วยตัวเอง`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 ตั๋วถูกปิด"
+ticket_closed_desc: "ตั๋วถูกปิดเรียบร้อยแล้ว!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "ตั๋วถูกปิดแล้ว"
+ticket_closed_dm_desc: |
+  ตั๋วที่คุณเปิดเพิ่งถูกปิด บันทึกการสนทนาของคุณสามารถดูได้ที่ลิงก์ด้านล่าง
+  หากคุณพบปัญหาหรือมีคำถามเพิ่มเติม สามารถเปิดตั๋วใหม่ได้ เราพร้อมช่วยเหลือ!
+

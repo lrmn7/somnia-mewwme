@@ -15,16 +15,29 @@ export class ConfigDataService {
       res.features.DATABASE.config = old_data.features.DATABASE.config;
     }
 
-    // ── RestAPI env overrides (.env takes priority over config.yml) ──────────
     if (process.env.RESTAPI_AUTH) {
       res.features.RestAPI.auth = process.env.RESTAPI_AUTH;
     }
     if (process.env.RESTAPI_PORT) {
       res.features.RestAPI.port = Number(process.env.RESTAPI_PORT);
     }
+    if (process.env.SESSION_SECRET) {
+      res.features.RestAPI.SessionSecret = process.env.SESSION_SECRET;
+    }
+    if (process.env.DISCORD_CLIENT_ID) {
+      res.features.RestAPI.DiscordClientId = process.env.DISCORD_CLIENT_ID;
+    }
+    if (process.env.DISCORD_CLIENT_SECRET) {
+      res.features.RestAPI.DiscordClientSecret = process.env.DISCORD_CLIENT_SECRET;
+    }
+    if (process.env.DISCORD_REDIRECT_URI) {
+      res.features.RestAPI.DiscordRedirectUri = process.env.DISCORD_REDIRECT_URI;
+    }
+    if (process.env.FRONTEND_URL) {
+      res.features.RestAPI.DashboardUrl = process.env.FRONTEND_URL;
+    }
 
     if (process.env.DOCKER_COMPOSE_MODE) {
-      // Change lavalink data
       const lavalink_changedata = res.lavalink.NODES[0];
       lavalink_changedata.host = String(process.env.NODE_HOST);
       lavalink_changedata.port = Number(process.env.NODE_PORT);
@@ -33,7 +46,6 @@ export class ConfigDataService {
       lavalink_changedata.secure = false;
 
       if (process.env.DOCKER_COMPOSE_DATABASE) {
-        // Change db data
         const db_chnagedata = res.features.DATABASE;
         if (db_chnagedata.driver == "mongodb") {
           db_chnagedata.config.uri = String(process.env.MONGO_URI);
@@ -73,8 +85,6 @@ export class ConfigDataService {
       );
   }
 
-  // Modded from:
-  // https://github.com/shipgirlproject/Shoukaku/blob/2677ecdf123ffef1c254c2113c5342b250ac4396/src/Utils.ts#L9-L23
   mergeDefault<T extends { [key: string]: any }>(def: T, given: T): Required<T> {
     if (!given) return def as Required<T>;
     const defaultKeys: (keyof T)[] = Object.keys(def);

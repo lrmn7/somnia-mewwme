@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "Yardim masasi devre disi birakildi"
+invalid_channel_helpdesk: "Belirtilen kanal gecersiz"
+channel_viewable_helpdesk: "Belirtilen kanal benim tarafimdan gorunur degil"
+setup_helpdesk_succes: "Yardim masasi basariyla %{channel} kanalina kuruldu."
+
+embed1_title: "%{bot} destek sunucusuna hos geldiniz!"
+embed1_desc: "**%{bot} Sarki soylemek isteyenler her zaman bir sarki bulur ♪\nBugun Discord sunucunuzda melodiye katil!**"
+embed1_footer: "%{bot}'u kisisel Muzik Botunuz olarak sectiniz icin tesekkurler!"
+
+embed2_title: "%{bot} Yardim Masasi"
+embed2_desc: |
+  **%{button1} %{bot} nedir?
+
+  %{button2} %{bot} Muzik Botunu nasil davet edebilirim?
+
+  %{button3} %{bot} Muzik Botunu nasil kullanirim?
+
+  %{button4} 7/24 ozelligini nasil etkinlestiririm?
+
+  %{button5} %{bot} yanit vermiyor/cevrimdisi.
+
+  %{button6} %{bot} ses kalitesi kesilmeli geliyor.
+
+  %{button7} Sarki istek kanalini nasil kurarim?
+
+  %{button8} %{bot} surekli izinlerin eksik oldugunu soyluyor.
+
+  %{button9} %{bot} ses kanalindan kendi kendine cikiyor.
+
+  %{button10} Premium'u nasil alirim/etkinlestiririm ve hangi ayricaliklari alirim?**
+
+embed2_field1_name: "Web Sitesi"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Tur"
+embed2_field2_value: "**Muzik Botu**"
+embed2_field3_name: "Premium Al"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Sarki soylemek isteyenler her zaman bir sarki bulur ♪"
+helpdesk1_desc: |
+  **%{bot}, Discord'da muzik deneyiminizde devrim yaratan, en temiz kullanici arayuzu, yuksek kaliteli ses ve genis muzik ozellikleri sunan bir Discord botudur.**
+
+  **Neden %{bot}?**
+  - **Duzenlii Guncellemeler**: %{bot} surekli guncellenir, boylece her zaman en son ozellikleri ve duzeltmeleri alirsiniz.
+  - **Kapsamli Ozellikler**: %{bot} basit muzik sistemi, birden fazla kaynaktan sorunsuz oynatma saglar.
+  - **Ozel destek toplulugu**: Discord'da nispeten yeni bir botuz ve bize katilmanizi cok isteriz! Botun sorunsuz calismasini saglamak oncelimiz, bu yuzden geri bildirimlerinize ve onerilerinize ihtiyacimiz var. Herhangi bir sorunuz varsa, bir destek bileti acmaktan cekinmeyin.
+
+  **Faydali Baglantilar**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **Destege mi ihtiyaciniz var?**
+  - Ek yardim icin bir bilet gonderin
+
+  **Daha ne bekliyorsunuz? %{bot}'u bugun Discord sunucunuza davet edin ve esssiz, sinirsiz bir muzik deneyiminin tadini cikarin!**
+  **[Davet etmek icin tiklayin](%{invite})**
+
+helpdesk2_title: "%{bot}'u sunucunuza ekleme"
+helpdesk2_desc: |
+  **%{bot}'u bu [baglanti](%{invite}) ile davet edebilirsiniz.**
+    Eklemek istediginiz sunucuyu secin ve **Yetkilendir** tiklayin
+
+  > %{bot} icin `Administrator` izinlerini devre disi birakiarsaniz, islevselligini etkileyebilecegini unutmayin. Temel muzik ozelliklerine erisebilirsiniz ancak bazi islevler duzgun calismayabilir.
+
+helpdesk3_title: "%{bot} Muzik Botunu nasil kullanirim?"
+helpdesk3_desc: |
+  Bir ses veya sahne kanalina katildiktan sonra bir metin kanalinda /play <sarki adi/url> yazin.
+  Durdurma, dongu vb. icin kontrol butonlarini kullanarak dogrudan etkilesimde bulunabilirsiniz.
+  Mevcut tum komutlarin listesini almak icin / (veya /help) yazin ve %{bot} simgesini secin.
+
+helpdesk4_title: "7/24 ozelligini nasil etkinlestiririm?"
+helpdesk4_desc: |
+  Bir ses veya sahne kanalina katildiktan sonra bir metin kanalinda `/247 <enable/disable>` yazin.
+
+  **Not:** *Bu ozellik `sunucu yonetimi` izniniz varsa kullanilabilir ve botun su anda muzik caldiginden onceden emin olunmalidir.*
+
+helpdesk5_title: "%{bot} yanit vermiyor/cevrimdisi"
+helpdesk5_desc: |
+  Bir komut kullanmaya calisiyorsunuz ama surekli basarisiz mi oluyor? Muhtemelen yanitlayamiyor, ancak bunu duzeltmek icin asagidaki adimlari izleyin.
+
+  **%{bot} artik slash komutlari kullaniyor!**
+  Discord artik tum botlarin slash komutlari kullanmasini gerektirdiginden, slash komutlari kullandiginizdan emin olun.
+  `/play` ve `/help` yazarak baslayin
+
+  **%{bot} hala yanitlamiyor mu?**
+  Bu durumda kalan tek senaryo Discord'un veya bizim tarafimizda bir sorun olmasi. %{bot}'un sunucunuzda cevrimdisi olmadigini dogrulayin. Cevrimdisiyse, en iyi secenek 5 dakikaya kadar beklemek ve %{bot}'un tekrar cevrimici olup olmadigini gormektir. Cevrimiciyse, gerekli tum izinlere sahipse, kesinlikle destek uyelerimizden biriyle iletisime gecmelisiniz.
+
+helpdesk6_title: "%{bot} ses kalitesi kesilmeli geliyor"
+helpdesk6_desc: |
+  Kimse kesilmeli muzik sevmez, ama Discord'da muzik botlari dinlerken bazen bu olur. Bunu duzeltmenize yardimci olacak bazi olasi cozumler.
+
+  **Ne yapmaliyim?**
+  Oncelikle internet baglantinizi kontrol etmelisiniz. Discord sol alt kosede son ve ortalama ping degerinizi gosterir, "Sese Baglandi" yazisina tiklayin ve pinginizin kararli oldugunu dogrulayin (kirmizi grafik cok titriyorsa kararli degil demektir!) ve hem son hem de ortalama ping 250 milisaniyenin altinda olmalidir. Bu gostergelerin her ikisi de baglantinizin kotu oldugunu gosteriyorsa WiFi/LAN'inizi kontrol etmeyi deneyin. Yonlendiricinizi yeniden baslatmak da bazi sorunlari giderebilir.
+
+  **5ms ping'in var ve GTA 5'i 2 dakikada indirebiliyor musun?**
+  Yani internet baglantiniz sorun degil gibi gorunuyor. %{bot}'un gecikmeli oldugu durumlarin %95'inde Discord'un ses sunuculariyla gecici sorunlar yasiyor. Normalde bir noktada yeniden baslatiyorlar ama bolgenizde farkli bir sunucuya gecis zorlayabilirsiniz. Yeni ve taze bir Discord ses sunucusu almak icin [Sunucu bolgenizi degistirmeyi deneyin](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3).
+  Hala ayni sorunu yasiyorsaniz /report yazarak sorununuzu bildirebilirsiniz.
+
+helpdesk7_title: "Sarki istek kanalini nasil kurarim?"
+helpdesk7_desc: |
+  **Istek kanali nasil olusturulur?**
+  %{bot}'a `sunucu yonetimi` izni verildiginden emin olun, ardindan `create` secenegiyle /setup yazin, bot otomatik olarak sarki istekleri icin ozel bir kanal olusturacaktir.
+
+  ```Not: Duzgun calisabilmem icin %{bot}'un olusturdugu mesajlari silmeyin.```
+
+  **Istek kanali nasil silinir?**
+  Onceki gibi sadece seceneklerde `delete` secebilirsiniz.
+
+helpdesk8_title: "%{bot} surekli izinlerin eksik oldugunu soyluyor."
+helpdesk8_desc: |
+  Belirli komutlari calistirmaya calisirken %{bot}'un belirli izinleri eksik olabilir. Bu durumlarda %{bot} bu sorunlar cozulene kadar komutu calistirmayi reddedecektir. Bu izinlerin opsiyonel olmadigini not etmek onemlidir; %{bot}'un komutu yerine getirmek icin bunlara ihtiyaci vardir.
+
+  Botun gerekli izinlere sahip olduguna inaniyorsaniz, kanalin rol geersiz kilmalarini kontrol ettiginizden emin olun. Bu geersiz kilmalar belirli kanallardaki rol izinlerini degistirebilir.
+
+  %{bot}'un neden gerekli izinlere sahip olmadigini hala belirleyemiyorsaniz, %{bot}'a Administrator izni vermeyi dusunun. Bu, tum Discord izin sorunlarini cozmelidir.
+
+helpdesk9_title: "Mewwme ses kanalindan kendi kendine cikiyor"
+helpdesk9_desc: |
+  Cok nadir durumlarda, 7/24 modu etkin olsa bile, Mewwme birisi /stop kullanmadan veya Discord'un Baglanti Kes butonuna basmadan ses kanalindan cikabilir. En yaygin nedenlerden bazilari ve olasi bir duzeltme asagida listelenmistar.
+
+  **7/24 modu etkin degil.**
+  Varsayilan olarak Mewwme, ses kanali 3 dakika bos kaldiginda kanaldan ayrilir.
+
+  **Duzeltme:** 7/24 modunu etkinlestirmek icin ilk yardim gomulu bilgisindeki "4. 7/24 ozelligini nasil etkinlestiririm?" bolumune bakiniz.
+
+  **Eksik izinler.**
+  Discord bize sunucu yeniden baslatmalari veya API kesintisi nedeniyle bir ses kanalina yeniden baglanmamizi istediginde, botun kanala katilip konusabildigindan emin olmak icin bot izinlerini tekrar kontrol ediyoruz. Eksik olan bir sey varsa, gerekli izinleri ekledikten sonra botu farkli bir kanala veya ayni kanala davet etmek icin /play komutunu tekrar kullanmaniz gerekecektir.
+
+  **Duzeltme:** Botu farkli bir kanaldan tasimak yerine ses kanalina eklemek icin /play komutlarini kullandiginizdan emin olun. Bunu yaparak, botun gerektiginde yeniden baglanmak icin gerekli tum izinlere sahip olmasini saglayacaksiniz.
+
+  **Sunucu Bolgesi sorunlari.**
+  Belirli durumlarda bazi ses bolgeleri, botun ses kanalina katilmasini engelleyebilecek ag ve kararlilik sorunlari yasayabilir.
+
+  **Duzeltme:** Ses kanali ayarlarini kullanarak baska bir ses bolgesine gecin (ulkenize en yakin olani secin).
+
+  **Baska bir sey yanlis gitti.**
+  Yukaridaki tum duzeltmeleri denediyseniz ve sorun devam ediyorsa, lutfen `report` yazin veya destek sayfasinda bilet acin https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "Premium'u nasil alirim/etkinlestiririm ve hangi ayricaliklari alirim?"
+helpdesk10_desc: |
+  **Premium ayricaliklami nasil kullanim?**
+
+  premium uyelik ayricaliklarnizi etkinlestirmek icin lutfen su adimlari izleyin:
+  1. **once discord hesabinizi baglayin**
+    - satin almadan once discord hesabinizin kullandiginiz platforma (patreon veya ko-fi) bagli oldugundan emin olun.
+    - bu, sistemin odemenizi otomatik olarak algilayabilmesi icin gereklidir.
+  2. **uyeliginizi satin alin**
+  - discord'unuzu bagladiktan sonra istediginiz plana gore uyelik odemesini tamamlayin.
+  3. **senkronizasyonu bekleyin**
+    - odemeniz basarili olduktan sonra, sistemin uyeliginizi senkronize etmesi icin lutfen birkac dakika bekleyin.
+  4. **sunucunuzda premium'u talep edin**
+    - yukseltmek istediginiz discord sunucusuna gidin, ardindan su komutu kullanin:
+      `/premium claim`
+      istendiginde dogru platform secenegini (patreon veya ko-fi) secin.
+      komutu premium'u etkinlestirmek istediginiz sunucunun icinde calistirdiginizdan emin olun.
+      talep edildikten sonra premium aninda etkinlestirilecektir.
+
+  Yukaridaki adimlari izleyerek sunulan tum Premium avantajlari etkinlestirebilir ve keyfini cikarabilirsiniz. Herhangi bir sorunla karsilasirsiniz veya baska sorularniz varsa, destek ekibimize ulasmaktan cekinmeyin.
+
+helpdesk10_footer: "Yolculugumuzun bir parcasi oldugunuz icin tesekkurler!, burada iyi vakit gecirmenizi umuyoruz."

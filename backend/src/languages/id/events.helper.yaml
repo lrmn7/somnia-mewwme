@@ -1,0 +1,91 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+## Helper setup ##
+setup_helper_content: |
+  ## Selamat datang di Komunitas %{guild}!
+  *Jika kamu baru di Discord, maka kamu datang ke tempat yang tepat! Channel ini didedikasikan untuk membantumu bernavigasi di server.*
+  ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+  %{bot} adalah bot Discord yang meningkatkan pengalaman musikmu dengan antarmuka yang bersih, audio berkualitas tinggi, dan berbagai fitur musik.
+
+  Server Discord ini adalah tempat yang sempurna untuk berkumpul di jantung Komunitas %{guild}.
+  Nikmati obrolan, bagikan rekomendasi musik, dan jelajahi semua fitur yang ditawarkan oleh bot %{bots}!
+
+  Ingin mengundang temanmu ke server? Kirimkan mereka link ini: %{serversupport}
+
+disable_helper: "Helper telah dinonaktifkan"
+invalid_channel_helper: "Channel yang diberikan tidak valid"
+channel_viewable_helper: "Channel yang diberikan tidak terlihat olehku"
+setup_helper_succes: "Helper telah berhasil diatur ke %{channel}."
+
+## RULES Events ##
+rules_title: "Aturan Server untuk Komunitas %{guild}!"
+rules_desc: |
+  - **Saling menghormati**
+    Selalu ikuti [ToS](https://discord.com/terms) dan [Panduan](https://discord.com/guidelines) Discord.
+  - **Kode Bantuan**
+    Saat kamu meminta bantuan, pastikan memberikan detail sebanyak mungkin beserta error-nya.
+  - **Dilarang Ujaran Kebencian atau Pelecehan**
+    Dilarang percakapan yang mengandung ujaran kebencian atau pelecehan terhadap individu atau kelompok.
+  - **Dilarang Trolling atau Flaming**
+    Dilarang tindakan yang bertujuan mengganggu atau memprovokasi konflik dengan cara apapun.
+  - **Hormati Kekayaan Intelektual**
+    Hormati hak kekayaan intelektual, termasuk tetapi tidak terbatas pada hak cipta, merek dagang, dan paten.
+  - **Dilarang Spoiler Tanpa Peringatan**
+    Jika membahas konten yang belum dikonsumsi semua anggota, berikan peringatan spoiler untuk menghindari kekecewaan.
+  - **Gunakan Channel yang Sesuai**
+    Gunakan channel yang relevan untuk topik tertentu, hindari diskusi di luar topik di channel yang tidak terkait.
+  - **Dilarang Kapitalisasi Berlebihan atau Spam**
+    Hindari penggunaan huruf kapital secara berlebihan atau mengirim pesan berulang dengan cepat.
+  - **Jaga Voice Channel Tetap Bersih**
+    Jika menggunakan voice channel, pastikan tidak ada kebisingan yang mengganggu dan bicara dengan sopan.
+  - **Dilarang Bot atau Automation Tidak Resmi**
+    Hanya bot yang diotorisasi oleh moderator yang diizinkan beroperasi di server.
+  - **Laporkan Pelanggaran**
+    Jika kamu menyaksikan pelanggaran aturan, laporkan ke moderator atau admin.
+  - **Bersenang-senanglah!**
+    Yang terpenting, nikmati waktumu di server ini dengan menghormati semua anggota dan menjaga lingkungan yang positif.
+
+  Terima kasih telah bergabung, kami harap kamu akan bersenang-senang di sini.
+
+### SUPPORT US BUTTON ###
+support_us_title: "Cara Mendukung %{bot}"
+support_us_desc: "Kamu bisa mendukungku dengan memvote %{bot}, mengundang %{bot} ke servermu, atau bergabung dengan keanggotaan premium."
+support_us_footer: "Terima kasih telah mempertimbangkan mendukung %{bot}! Aku sangat menghargainya."
+
+## ROLES EVENTS ##
+role_title: "Kamu bisa menambah atau menghapus role dari daftar di bawah."
+role_added: "**[Berhasil]** Role %{rolename} telah berhasil ditambahkan!"
+role_removed: "**[Dihapus]** Role %{rolename} telah dihapus."
+role_rules_added: "%{user} semoga kamu akan mengikuti semua aturan, sekarang kamu memiliki akses ke semua server"
+role_rules_already: "%{user} kamu sudah menerima aturan"
+role_desc: "Kami hanya ingin memastikan kamu manusia dan bukan bot. Silakan bantu kami mengonfirmasi keaslianmu dengan menyelesaikan tugas verifikasi singkat."
+
+### Top gg vote logs event
+vote_desc: |
+  %{voteuser} telah memvote %{votebot} di **[Top.gg](%{voteurl})**
+  Terima kasih telah menunjukkan dukunganmu! Kami harap kamu memiliki hari yang menyenangkan!
+vote_footer: "Total Vote %{count}, Tetap di imajinasimu!"
+
+### Top gg vote logs reminder event
+reminder_label_name: "Pengingat untuk Vote"
+reminder_label_emoji: "⏰"
+reminder_title: "Pengingat Vote"
+reminder_desc: "Saatnya! Kamu sekarang bisa vote lagi di **[Top.gg](%{voteurl})**."
+reminder_set_content: "Pengingat diatur! Aku akan mengingatkanmu untuk vote lagi dalam 12 jam"
+reminder_cancel_content: "Pengingat dibatalkan. Kamu tidak akan diingatkan untuk vote lagi"
+reminder_no_vote_warning: "Kamu harus vote terlebih dahulu sebelum mengatur pengingat"
+
+### Welcomer events!
+welcome_desc: "Selamat datang di %{guildname} %{member}, Tetap di imajinasimu!"
+leave_desc: "Terima kasih telah bersama kami! Selamat tinggal %{member}"

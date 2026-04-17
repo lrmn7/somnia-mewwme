@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 הצטרפתי לשרת!"
+leave_title: "📥 עזבתי שרת!"
+guild_name: "שם"
+guild_id: "מזהה"
+guild_owner: "בעלים"
+guild_member_count: "מספר חברים"
+guild_creation_date: "תאריך יצירה"
+guild_join_date: "תאריך הצטרפות"
+current_server_count: "מספר שרתים נוכחי"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "אוי! היי לכולם ✧(≧◡≦) ♡"
+join_msg_desc: |
+  ### תודה שהזמנתם אותי לבלות איתכם (*≧▽≦)
+  ### אתם יכולים לתייג אותי כדי להשתמש בפקודות גם! הקלידו </help:1088430405033656341> כדי לצפות בפקודות הסלאש שלי ♡

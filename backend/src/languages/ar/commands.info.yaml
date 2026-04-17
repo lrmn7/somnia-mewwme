@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**حيث يجد من يرغب في الغناء دائماً أغنية ♪\nانضم إلى اللحن في خادم Discord الخاص بك اليوم!**"
+about_desc2: |
+  ・بادئة البوت لهذا الخادم هي `%{prefix}`
+  ・غيّر البادئة بـ `%{prefix} prefix <new prefix>`
+  ・شغّل مقطعاً بالرابط أو مصطلح البحث `%{prefix} play`
+  قم بزيارة **[موقعنا](%{website})** أو استخدم الأمر `%{prefix} help` لمزيد من الأوامر.
+about_desc3: |
+  **تنبيه!**
+  أفضّل الحصول على صلاحيات `Administrator`، لكن...
+  حتى لو لم تمنحني تلك الصلاحيات، يمكنني العمل، لكن قد لا أتمكن من فعل كل ما أستطيع. فقط للعلم!
+
+  **المساعدة والدعم**
+  انضم إلى **[خادم الدعم](%{serversupport})** إذا كنت بحاجة للمساعدة، أو تريد الحصول على معلومات حول التحديثات والمشكلات أو تريد التفاعل مع المجتمع!
+
+### Help command!
+finder_invalid: "أمر غير صالح"
+finder_example: "لا أستطيع مساعدتك في العثور على ذلك! ابحث عن أمر *حقيقي*!"
+finder_name: "**الأمر:**"
+finder_des: " **الوصف:**"
+finder_usage: "**الاستخدام:**"
+finder_access: "**متاح لـ:**"
+finder_aliases: "**الأسماء البديلة:**"
+finder_slash: "**السلاش:**"
+finder_des_no: "لم أتمكن من العثور على وصف، عذراً..."
+finder_usage_no: "لست متأكداً كيف أستخدم هذا الأمر."
+finder_aliases_prefix: "[البادئة فقط]"
+finder_aliases_no: "لا يمكنك استخدام هذا الأمر باسم بديل."
+finder_slash_enable: "مُفعّل"
+finder_slash_disable: "مُعطّل"
+command_not_found: "أمر غير معروف"
+select_menu: "استمتع بالموسيقى معي!"
+help_timeout: "انتهت مهلة قائمة المساعدة، جرب استخدام **`%{prefix}help`** أو **`/help`** مرة أخرى."
+homepage_title: "حيث يجد من يرغب في الغناء دائماً أغنية ♪\nانضم إلى اللحن في خادم Discord الخاص بك اليوم!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **موسيقى 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **ربط Spotify**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **جودة صوت عالية**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **تسجيل مع Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **العب وتنافس في ألعاب صغيرة**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer والمزيد...**
+
+  <a:ask:1291123964080558121> **هل تريد الترقية إلى خطة [Premium](%{premium})؟**
+### Rating bot commands! ###
+rating_desc: "شكراً لك %{user} على تقييم بوت الموسيقى في Discord بالنجوم!"
+rating_succes: "شكراً على تقييمك!\nتم تقديم تقييمك بنجاح."
+rating_failure: "فشل في إرسال التقرير. يرجى المحاولة مرة أخرى لاحقاً."
+
+### Report command #####
+report_provide_desc: "عفواً! أوامر غير صالحة. يرجى تقديم الوصف الخاص بك"
+report_failure: "فشل في إرسال التقرير. يرجى المحاولة مرة أخرى لاحقاً."
+report_success: "شكراً على تقريرك.\nتم تقديم التقرير بنجاح للمعالجة."
+
+### Suggestions command #####
+suggestions_provide_desc: "عفواً! أوامر غير صالحة. يرجى تقديم الوصف الخاص بك"
+suggestions_failure: "فشل في إرسال الاقتراح. يرجى المحاولة مرة أخرى لاحقاً."
+suggestions_success: "شكراً على اقتراحك!\nتم تقديم اقتراحك بنجاح."
+
+### MyStats command ####
+mystats_error: "حدث خطأ أثناء إنشاء إحصائياتك. يرجى المحاولة مرة أخرى لاحقاً."
+
+### TopStats command ####
+topstats_error: "حدث خطأ أثناء إنشاء إحصائياتك. يرجى المحاولة مرة أخرى لاحقاً."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **نتيجة الحالة:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 هوية المستخدم"
+patreon_logs_user_identity_value: |
+  **الاسم:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **البريد الإلكتروني:** %{email}
+
+patreon_logs_details_title: "تفاصيل Patreon"
+patreon_logs_details_value: |
+  **التعهد:** $%{pledge}
+  **معرّف Patreon:** `%{patreonId}`
+  **الحالة:** `%{status}`
+patreon_logs_date_title: "📅 التاريخ"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "هوية المستخدم"
+kofi_logs_user_identity_value: "**الاسم:** %{fullName}\n**البريد الإلكتروني:** ||%{email}||\n**عام:** %{dataPublic}"
+kofi_logs_discord_identity_title: "هوية Discord"
+kofi_logs_discord_identity_value: "**المستخدم:** %{discordUser}\n**المعرّف:** %{discordId}"
+kofi_logs_payment_details_title: "تفاصيل الدفع"
+kofi_logs_payment_details_value: "**المبلغ:** %{currency} %{amount}\n**المستوى:** **%{tierName}**\n**النوع:** %{type}"
+kofi_logs_sub_status_title: "حالة الاشتراك"
+kofi_logs_sub_status_value: "**اشتراك:** %{isSub}\n**دفعة أولى:** %{isFirst}"
+kofi_logs_message_title: "الرسالة / السبب"
+kofi_logs_tech_title: "تقني / معرّفات المعاملات"
+kofi_logs_tech_value: "**معرّف معاملة Ko-fi:** %{kofiTxId}\n**معرّف الرسالة:** %{msgId}\n**الرابط:** [%{viewDetails}](%{url})\n**الرمز:** ||%{token}||"
+kofi_logs_view_details: "عرض التفاصيل"
+

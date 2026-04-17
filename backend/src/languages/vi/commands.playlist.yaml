@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_add_match: "Vui lòng cung cấp tên bài hát hoặc URL hợp lệ!"
+pl_add_playlist: "Đã tìm **%{title}** `%{duration}` • (**%{track} Bài hát**) • %{user}"
+pl_add_track: "Đã tìm **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Đã tìm **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Bạn không phải là **Chủ sở hữu danh sách phát**!"
+pl_add_limit_track: "Bạn không thể thêm quá **%{limit} Bài hát**"
+pl_add_added: "Đã thêm **%{count} Bài hát** vào `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Bài hát**) • Tạo: `[%{create} trước]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Trang • %{page}/%{pages} | Danh sách phát • %{songs}"
+pl_all_view_notnumber: "Vui lòng cung cấp số trang hợp lệ!"
+pl_all_view_page_notfound: "Chỉ có **%{page} Trang**!"
+
+### pl-create commands ###
+pl_create_invalid: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_create_toolong: "Tên danh sách phát không thể dài hơn **16 Ký tự**"
+pl_create_des_toolong: "Mô tả danh sách phát không thể dài hơn **1000 Ký tự**"
+pl_create_limit_playlist: "Bạn không thể tạo quá **%{limit} Danh sách phát**"
+create_created_title: "Tạo danh sách phát mới thành công!"
+pl_create_created_footer: "Nhập /pl editor để chỉnh sửa danh sách phát của bạn!"
+pl_create_created: |
+  **Tên danh sách phát**
+  `%{playlist}`
+
+  **ID danh sách phát**
+  `%{id}`
+
+  **Mô tả**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+delete_notfound: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_delete_owner: "Bạn không phải là **Chủ sở hữu danh sách phát**"
+pl_delete_confirm: "Bạn có muốn xóa `%{playlist_id}` không"
+pl_delete_deleted: "Danh sách phát `%{name}` đã được **Xóa** thành công"
+pl_delete_no: "Đã hủy **Xóa** danh sách phát!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Vui lòng cung cấp một số hợp lệ!"
+pl_detail_notfound: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_detail_private: "Danh sách phát ở chế độ **Riêng tư**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Danh sách phát: %{name}"
+pl_detail_embed_footer: "Trang • %{page}/%{pages} | Bài hát • %{songs} | Tổng thời lượng • %{duration}"
+pl_detail_notnumber: "Vui lòng cung cấp số trang hợp lệ!"
+pl_detail_page_notfound: "Chỉ có **%{page} Trang**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Nhập **ID danh sách phát mới** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Nhập **Tên danh sách phát mới**"
+pl_edit_playlist_des_label: "Nhập **Mô tả danh sách phát mới**"
+pl_edit_playlist_private_label: "Nhập **Chế độ hiển thị mới** `[public/private]`"
+pl_edit_success: "Chỉnh sửa danh sách phát thành công\nID danh sách phát mới: `%{playlistId}`"
+pl_edit_arg: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_edit_notfound: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_edit_playlist_owner: "Bạn không phải là **Chủ sở hữu danh sách phát**!"
+pl_edit_invalid_id: "Vui lòng nhập ID danh sách phát hợp lệ và chưa tồn tại!"
+pl_edit_invalid_mode: "Chế độ hiển thị không hợp lệ. Vui lòng sử dụng **public** hoặc **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "ID danh sách phát mới"
+ineraction_edit_playlist_name_label: "Tên danh sách phát mới"
+ineraction_edit_playlist_des_label: "Mô tả danh sách phát mới"
+ineraction_edit_playlist_private_label: "Chế độ hiển thị mới"
+ineraction_edit_playlist_id_placeholder: "Nhập ID danh sách phát mới! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Nhập tên danh sách phát mới!"
+ineraction_edit_playlist_des_placeholder: "Nhập mô tả danh sách phát mới!"
+ineraction_edit_playlist_private_placeholder: "Nhập chế độ hiển thị mới! [public/private]"
+ineraction_edit_success: "Chỉnh sửa danh sách phát thành công\nID danh sách phát mới: `%{playlistId}`"
+ineraction_edit_playlist_error: "Đã xảy ra lỗi. Vui lòng thử lại!"
+ineraction_edit_notfound: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+ineraction_edit_playlist_owner: "Bạn không phải là **Chủ sở hữu danh sách phát**"
+ineraction_edit_invalid_id: "Vui lòng nhập ID danh sách phát hợp lệ và chưa tồn tại!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Danh sách phát **%{name}** đã được thêm vào hàng đợi ♪"
+pl_import_imported_footer: "Thưởng thức %{tracks} bài hát • %{duration} • âm nhạc tuyệt vời!"
+pl_import_invalid: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_import_private: "Danh sách phát ở chế độ **Riêng tư**"
+pl_import_voice: "Bạn cần ở trong kênh thoại để sử dụng lệnh này!"
+pl_import_empty: "Danh sách phát **Trống**"
+
+### pl-info commands! ###
+pl_info_owner: "Chủ sở hữu"
+pl_info_id: "ID"
+pl_info_des: "Mô tả"
+pl_info_no_des: "Chưa có mô tả!"
+pl_info_private: "Chế độ hiển thị"
+pl_public: "Công khai"
+pl_private: "Riêng tư"
+pl_info_total: "Tổng bài hát"
+pl_info_created: "Ngày tạo"
+pl_info_invalid: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_remove_number_invalid: "Vui lòng cung cấp một số hợp lệ!"
+pl_remove_notfound: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_remove_owner: "Bạn không phải là **Chủ sở hữu danh sách phát**"
+pl_remove_song_notfound: "Không tìm thấy bài hát!"
+pl_remove_removed: "Đã xóa bài hát **số %{position}** khỏi `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_savequeue_notfound: "Vui lòng cung cấp ID danh sách phát hợp lệ!"
+pl_savequeue_owner: "Bạn không phải là **Chủ sở hữu danh sách phát**!"
+pl_savequeue_no_tracks: "Không có bài hát nào đang phát!"
+pl_savequeue_no_new_saved: "Bài hát đã tồn tại trong `%{name}`"
+pl_savequeue_saved: "Đã lưu **%{tracks} Bài hát** vào `%{name}`"
+
+pl_error_no_node: "Không tìm thấy máy chủ Lavalink. Vui lòng thử lại sau **5 Phút**"

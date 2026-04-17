@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { api } from "@/lib/api";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import BackgroundGlow from "@/components/BackgroundGlow";
+
 
 interface Command {
   name: string;
@@ -71,7 +71,6 @@ export default function Commands() {
 
   return (
     <div className="min-h-screen flex flex-col relative text-foreground">
-      <BackgroundGlow />
       <Navbar />
       <div className="h-20 lg:h-24" />
       <main className="flex-1">

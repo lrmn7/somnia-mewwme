@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Confira minhas escolhas pra voce!~"
+search_desc: "### EI! Encontrei resultados para sua busca"
+search_end_desc2: "### OMG! %{user}, voce nao selecionou uma musica a tempo\n**Tente novamente!**"
+search_footer: "%{countSong} faixas encontradas"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` aproveite ♥"
+
+search_active: "Voce ja esta buscando algo! Espere a ultima busca terminar antes de iniciar uma nova."
+search_no_result: "Nenhum resultado encontrado para sua busca :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` aproveite ♥"
+no_songs_playing: "Nenhuma musica esta tocando no momento!"
+
+### Autoplay command!
+autoplay_off: "A reproducao automatica agora esta **Desativada**"
+autoplay_on: "A reproducao automatica agora esta **Ativada**"
+autoplay_no_songs_playing: "Nenhuma musica esta tocando!"
+
+### ClearQueue command!
+clearqueue_msg: "A fila foi **Limpa**"
+
+### Forward command!
+forward_msg: "**%{user} Avancou %{title} para** `%{duration}`"
+forward_beyond: "A musica esta prestes a terminar. Voce nao pode avancar alem dela!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Proxima a Tocar ♪"
+playnext_queue_empty: "A fila esta vazia. Por favor, adicione algumas musicas primeiro"
+playnext_notfound: "Musica nao encontrada!"
+
+# Execute when invalid
+no_node: "**Nenhum servidor Lavalink foi encontrado. Por favor, tente novamente apos 5 Minutos**"
+
+### Join command!
+join_msg: "O player foi criado com sucesso e entrou em %{channel}"
+join_already: "Eu ja estou em %{channel}"
+join_no_in_voice: "Voce nao esta em um canal de voz!"
+join_no_same_voice: "Voce nao esta no mesmo canal de voz que eu!"
+
+### Loop command!
+loop_current: "Agora Repetindo %{title}"
+loop_all: "**O modo de loop da FILA foi ativado**"
+unloop_all: "**O modo de loop foi DESATIVADO**"
+loop_invalid: "Modo de loop invalido. Por favor, use **Disabled**"
+loop_already: "O modo de loop ja esta **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Por favor, forneca um **Nome de Musica** valido"
+lyrics_title: "Letra de **%{song}**"
+lyrics_notfound: "**Nao foi possivel encontrar a letra desta musica!**"
+lyrics_toolong: "**Letra muito longa, maximo de 4048 caracteres permitidos!**"
+lyrics_disable: " **A funcao de letras esta desativada no momento!**"
+lyrics_noquery: "**Por favor, forneca um **Nome de Musica** valido"
+lyrics_error: "**Erro: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "TOCANDO AGORA"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Autor"
+nowplaying_total_duration_title: "Duracao"
+nowplaying_request_title: "Pedido Por"
+
+### Pause command!
+pause_msg: "**A faixa %{title} esta pausada no momento!"
+
+### Play command!
+play_no_same_voice: "Voce nao esta no mesmo canal de voz que eu!"
+play_no_in_voice: "Voce nao esta em um canal de voz!"
+play_arg: "Por favor, forneca um nome de musica ou URL valido!"
+play_emoji: "**Ops! Isso e um emoji, voce nao pode tocar musicas usando emoji**"
+play_match: "**Ops! Desculpe, musica nao encontrada! Por favor, tente novamente**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## Isso foi facil!
+  ### Sua %{title} foi adicionada a fila
+
+play_queue_max: |
+  OMG!>,.,< A fila esta muito longa. Maximo de %{limitqueue} musicas.
+  Faca upgrade para o [**premium**](%{premium}) para acesso ilimitado a fila!
+
+play_playlist_max: |
+  OMG!>,.,< A playlist esta muito longa. Maximo de %{limitqueue} musicas.
+  Faca upgrade para o [**premium**](%{premium}) para acesso ilimitado a playlist!
+
+### Previous command!
+previous_notfound: |
+  **Nenhuma musica anterior encontrada na fila!
+  Que tal /play mais faixas e manter a musica tocando?**
+previous_msg: |
+  **Voltando para a musica anterior!
+  Agora tocando %{title}**
+
+### Queue command!
+queue_number_invalid: "Por favor, forneca um numero valido!"
+queue_title: "Fila em reproducao..."
+queue_description: "**%{title}**\n\n**Resto da Fila %{rest}**"
+queue_footer: "Pagina • %{page}/%{pages} | Musicas • %{queue_lang} | Duracao Total • %{duration}"
+queue_notnumber: "Por favor, forneca um numero de pagina valido!"
+queue_page_notfound: "Existem apenas **%{page} Paginas**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Por favor, forneca um numero valido!"
+removetrack_already: "**Nao posso remover uma musica que ja esta tocando**"
+removetrack_notfound: "**Desculpe %{user}, musica nao encontrada!**"
+removetrack_desc: "**%{title} foi removida da Fila!**"
+
+### Replay command!
+replay_msg: "**%{user} Deu Replay em %{title}**"
+replay_not_seekable: "A faixa **%{title}** nao pode ser reproduzida novamente."
+
+### Resume command!
+resume_msg: "**Reproducao Retomada %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} Rebobinou %{title} para** `%{duration}`"
+rewind_beyond: "A musica acabou de comecar. Voce nao pode rebobinar alem disso!"
+
+### Seek command!
+seek_beyond: "Voce nao pode avancar alem da duracao da musica!"
+seek_invalid: "Duracao de busca invalida. Por favor, use um timestamp valido. Exemplo: **1:30**"
+seek_msg: "**Avancou %{title} para** `%{duration}`"
+seek_not_seekable: "A faixa **%{title}** nao pode ser rebobinada ou avancada."
+
+### Skip command!
+skip_notfound: |
+  **Nenhuma musica encontrada para pular! Parece que nao ha nada para pular.
+  Vamos /play continuar a musica adicionando mais faixas!**
+skip_msg: "**%{title} Foi Pulada**"
+skip_number_invalid: "Por favor, forneca um numero valido!"
+
+### Stop command!
+stop_msg: "**%{title} Foi parada**"
+
+### Shuffle command!
+shuffle_title: "Embaralha a Fila"
+
+### Volume command!
+volume_number_invalid: "Por favor, forneca um numero valido!"
+volume_invalid: "Volume invalido. Por favor, use um numero entre **1** e **100**"
+volume_msg: "**Volume definido para %{volume}%, Aproveite %{user}**"
+volume_max: "**O volume ja esta no maximo de 100%**"
+
+### play source commands
+url_no_allowed: "Por favor, use o nome da musica/nome do artista (url nao permitida)"
+play_arg_source: "Por favor, forneca um nome de musica/artista valido!"
+
+## Temporarily disabled commands
+youtube_disabled: "O suporte ao YouTube esta temporariamente indisponivel"
+autoplay_disabled: "A reproducao automatica esta temporariamente desativada."

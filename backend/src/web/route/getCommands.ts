@@ -8,11 +8,9 @@ export function getCommands(
 ) {
   client.logger.info("CommandRouterService", `${req.method} ${req.routeOptions.url} payload={}`);
 
-  // Read directly from the bot's internal command registry (loaded command files)
   const grouped = new Map<string, Array<{ name: string; description: string }>>();
 
   client.commands.forEach((cmd) => {
-    // cmd.name is an array like ["modlogs", "toggle"] → "/modlogs toggle"
     const name = `/${cmd.name.join(" ")}`;
     const category = cmd.category || "General";
 
@@ -23,7 +21,6 @@ export function getCommands(
     });
   });
 
-  // Sort categories and commands alphabetically
   const result = Array.from(grouped.entries())
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([category, commands]) => ({

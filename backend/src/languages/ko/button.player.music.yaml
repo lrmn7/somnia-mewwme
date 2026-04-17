@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "야호~~ 자동재생이 **활성화**되었습니다"
+autoplay_off: "흠~~ 자동재생이 **비활성화**되었습니다"
+autoplay_no_song: "재생 중인 노래가 없습니다!"
+
+### Loop command!
+loop_current: "현재 노래가 반복 재생됩니다. 반복을 즐겨보세요!"
+loop_all: "대기열이 반복 재생으로 설정되었습니다. 음악을 반복해서 즐기세요!"
+unloop_all: "반복 재생 모드가 해제되었습니다. 다양한 트랙을 즐겨보세요!"
+
+### Pause command!
+pause_msg: "음악이 일시정지되었습니다. 잠시 쉬면서 고요함을 즐기세요."
+
+### Resume command!
+resume_msg: "음악이 다시 재생됩니다! 계속 즐겨봅시다 ♪"
+
+previous_notfound: "죄송합니다, 더 이상 뒤로 갈 수 없습니다. 이전 트랙을 찾을 수 없습니다 :("
+previous_msg: "되감기 시작! 이전 트랙이 재생됩니다 <3"
+
+### Queue command!
+queue_title: "대기열 재생 중..."
+queue_description: "**%{title} **\n\n**나머지 대기열 %{list_song}**"
+queue_footer: "페이지 • %{page}/%{pages} | 노래 • %{queue_lang} | 총 재생시간 • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "대기열을 셔플했습니다!"
+
+### Skip command!
+skip_msg: "트랙을 건너뛰었습니다. 괜찮으시죠? :p"
+skip_notfound: "이런! 건너뛸 트랙이 없습니다! 현재 트랙을 계속 즐겨주세요 ♪"
+
+### Stop command!
+stop_msg: "음악 재생이 중지되었습니다. 즐거운 시간이었길 바랍니다!"
+
+### Volume command!
+voldown_msg: "볼륨이 %{volume}% 감소되었습니다. 부드러운 분위기를 즐겨보세요!"
+volume_invalid: "잘못된 볼륨입니다. 사용 가능한 범위는 **1**에서 **100**입니다"
+volup_msg: "볼륨이 %{volume}% 증가되었습니다. 신나게 즐겨보세요!"
+volume_max: "볼륨을 100% 이상으로 올릴 수 없습니다"
+volume_min: "이런~~ 이미 최소 볼륨입니다!"

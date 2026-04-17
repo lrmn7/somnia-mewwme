@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "\u00a1La reproducci\u00f3n de m\u00fasica se ha detenido. Espero que hayas disfrutado del ritmo!"
+skip_notfound: "\u00a1Ups! \u00a1Parece que no hay pista a la que saltar!"
+skip_msg: "\u00a1Salt\u00e9 la pista. Espero que no te importe :p"
+previous_msg: "Bueno, \u00a1parece que estamos rebobinando! Viene la pista anterior <3"
+previous_notfound: "Lo siento, no puedo retroceder m\u00e1s. No se encontr\u00f3 una pista anterior :("
+resume_msg: "\u00a1La m\u00fasica ha vuelto! Sigamos con el ritmo \u266a"
+pause_msg: "La m\u00fasica est\u00e1 en pausa. T\u00f3mate un descanso y disfruta del silencio."
+loop_current: "\u00a1Ahora la canci\u00f3n actual se reproducir\u00e1 en bucle. Disfruta la repetici\u00f3n!"
+loop_all: "\u00a1La cola est\u00e1 configurada en bucle. Que la m\u00fasica se repita!"
+unloop_all: "\u00a1El modo de bucle ha sido desactivado. Disfruta la variedad de canciones!"
+
+### Need to join voice & same voice to use command!
+no_player: "\u00a1Pulsas un bot\u00f3n y no pasa nada. Quiz\u00e1s deber\u00edas reproducir algo primero!"
+no_same_voice: "\u00a1Pulsas un bot\u00f3n y parpadea en rojo. No est\u00e1s en el mismo canal de voz que yo!"
+no_in_voice: "\u00a1Todos los botones no reaccionan a ti. No est\u00e1s en un canal de voz!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "REPRODUCIENDO AHORA"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Solicitado por %{request}"
+setup_footer: "Pistas Restantes \u2022 %{totalsong} | Duraci\u00f3n Total \u2022 %{duration}"
+setup_queuemsg: "**\u00danete a un canal de voz y reproduce canciones usando el nombre o URL aqu\u00ed!**"
+setup_playembed_author: "\u00a1No se est\u00e1 reproduciendo ninguna canci\u00f3n!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "A\u00f1adida **%{title}** \u2022 %{request}"
+play_playlist: "A\u00f1adida **%{title}** \u2022 (**%{songs} Pistas**) \u2022 %{request}"
+play_result: "A\u00f1adida **%{title}** \u2022 %{request}"
+play_emoji: "No estoy seguro de c\u00f3mo reproducir eso... No es una pista ni una lista de reproducci\u00f3n."
+setup_content: "**\u00a1Oye! \u00a1Mi mesa est\u00e1 lista para tu m\u00fasica! \u00a1Solo pon algo aqu\u00ed!**"

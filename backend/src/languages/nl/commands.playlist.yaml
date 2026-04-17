@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_add_match: "Geef alsjeblieft een geldige naam of URL van een nummer op!"
+pl_add_playlist: "Gezocht **%{title}** `%{duration}` • (**%{track} Nummers**) • %{user}"
+pl_add_track: "Gezocht **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Gezocht **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Je bent niet de **eigenaar van de afspeellijst**!"
+pl_add_limit_track: "Je kunt niet meer dan **%{limit} nummers** toevoegen"
+pl_add_added: "**%{count} nummers** toegevoegd aan `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} Nummers**) • Aangemaakt: `[%{create} geleden]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Pagina • %{page}/%{pages} | Afspeellijsten • %{songs}"
+pl_all_view_notnumber: "Voer alsjeblieft een geldig paginanummer in!"
+pl_all_view_page_notfound: "Er zijn slechts **%{page} pagina's**!"
+
+### pl-create commands ###
+pl_create_invalid: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_create_toolong: "Naam van de afspeellijst mag niet langer zijn dan **16 tekens**"
+pl_create_des_toolong: "Beschrijving van de afspeellijst mag niet langer zijn dan **1000 tekens**"
+pl_create_limit_playlist: "Je kunt niet meer dan **%{limit} afspeellijsten** aanmaken"
+create_created_title: "Nieuwe afspeellijst succesvol aangemaakt!"
+pl_create_created_footer: "Typ /pl editor om je afspeellijst te bewerken!"
+pl_create_created: |
+  **Naam afspeellijst**
+  `%{playlist}`
+
+  **Afspeellijst-ID**
+  `%{id}`
+
+  **Beschrijving**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+delete_notfound: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_delete_owner: "Je bent niet de **eigenaar van de afspeellijst**"
+pl_delete_confirm: "Wil je `%{playlist_id}` verwijderen"
+pl_delete_deleted: "Afspeellijst `%{name}` is succesvol **Verwijderd**"
+pl_delete_no: "**Verwijdering** van afspeellijst geannuleerd!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Voer alsjeblieft een geldig getal in!"
+pl_detail_notfound: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_detail_private: "Afspeellijst is **Privé**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Afspeellijst: %{name}"
+pl_detail_embed_footer: "Pagina • %{page}/%{pages} | Nummers • %{songs} | Totale duur • %{duration}"
+pl_detail_notnumber: "Voer alsjeblieft een geldig paginanummer in!"
+pl_detail_page_notfound: "Er zijn slechts **%{page} pagina's**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Voer je **Nieuw afspeellijst-ID** in `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Voer je **Nieuwe afspeellijstnaam** in"
+pl_edit_playlist_des_label: "Voer je **Nieuwe afspeellijstbeschrijving** in"
+pl_edit_playlist_private_label: "Voer je **Nieuwe afspeellijstzichtbaarheid** in `[public/private]`"
+pl_edit_success: "Afspeellijst succesvol bewerkt\nNieuw afspeellijst-ID: `%{playlistId}`"
+pl_edit_arg: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_edit_notfound: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_edit_playlist_owner: "Je bent niet de **eigenaar van de afspeellijst**!"
+pl_edit_invalid_id: "Voer alsjeblieft een geldig en niet-bestaand afspeellijst-ID in!"
+pl_edit_invalid_mode: "Ongeldige zichtbaarheidsmodus. Gebruik alsjeblieft **public** of **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Nieuw afspeellijst-ID"
+ineraction_edit_playlist_name_label: "Nieuwe afspeellijstnaam"
+ineraction_edit_playlist_des_label: "Nieuwe afspeellijstbeschrijving"
+ineraction_edit_playlist_private_label: "Nieuwe afspeellijstzichtbaarheid"
+ineraction_edit_playlist_id_placeholder: "Voer je nieuw afspeellijst-ID in! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Voer je nieuwe afspeellijstnaam in!"
+ineraction_edit_playlist_des_placeholder: "Voer je nieuwe afspeellijstbeschrijving in!"
+ineraction_edit_playlist_private_placeholder: "Voer je nieuwe afspeellijstzichtbaarheid in! [public/private]"
+ineraction_edit_success: "Afspeellijst succesvol bewerkt\nNieuw afspeellijst-ID: `%{playlistId}`"
+ineraction_edit_playlist_error: "Er is iets misgegaan. Probeer het opnieuw!"
+ineraction_edit_notfound: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+ineraction_edit_playlist_owner: "Je bent niet de **eigenaar van de afspeellijst**"
+ineraction_edit_invalid_id: "Voer alsjeblieft een geldig en niet-bestaand afspeellijst-ID in!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Afspeellijst **%{name}** toegevoegd aan de wachtrij ♪"
+pl_import_imported_footer: "Geniet van %{tracks} nummers • %{duration} • muzikaal geluk!"
+pl_import_invalid: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_import_private: "Afspeellijst is **Privé**"
+pl_import_voice: "Je moet in een spraakkanaal zitten om dit commando te gebruiken!"
+pl_import_empty: "Afspeellijst is **Leeg**"
+
+### pl-info commands! ###
+pl_info_owner: "Eigenaar"
+pl_info_id: "ID"
+pl_info_des: "Beschrijving"
+pl_info_no_des: "Er is geen beschrijving opgegeven!"
+pl_info_private: "Zichtbaarheid"
+pl_public: "Openbaar"
+pl_private: "Privé"
+pl_info_total: "Totaal aantal nummers"
+pl_info_created: "Aangemaakt"
+pl_info_invalid: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_remove_number_invalid: "Voer alsjeblieft een geldig getal in!"
+pl_remove_notfound: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_remove_owner: "Je bent niet de **eigenaar van de afspeellijst**"
+pl_remove_song_notfound: "Nummer niet gevonden!"
+pl_remove_removed: "Nummer **%{position}** verwijderd uit `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_savequeue_notfound: "Geef alsjeblieft een geldig afspeellijst-ID op!"
+pl_savequeue_owner: "Je bent niet de **eigenaar van de afspeellijst**!"
+pl_savequeue_no_tracks: "Er wordt momenteel geen nummer afgespeeld!"
+pl_savequeue_no_new_saved: "Nummer bestaat al in `%{name}`"
+pl_savequeue_saved: "**%{tracks} nummers** opgeslagen in `%{name}`"
+
+pl_error_no_node: "Er is geen Lavalink-server gevonden. Probeer het opnieuw na **5 minuten**"

@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "Ativado"
+disable: "Desativado"
+
+# maintenance
+maintenance_title: "Manutencao"
+maintenance_desc: |
+  %{bot} esta em manutencao no momento. Por favor, tente novamente mais tarde.
+  Para mais informacoes, entre no nosso [servidor de suporte](%{serversupport}). Obrigado!
+
+# Getting error!
+unexpected_error: "Algo deu errado. Por favor, tente novamente mais tarde!"
+
+### Rate limit!
+ratelimit: "Voce esta realizando acoes rapido demais. Por favor, aguarde **%{time} Segundos**"
+
+# No permission!
+no_perms: "Eu nao tenho permissao de **%{perm}**!\nPor favor, me conceda a permissao **%{perm}** para executar este comando."
+
+no_manage_guild_perms: "Este comando requer permissao de **%{perm}**!\nVoce nao tem permissao para executar este comando!"
+
+no_admin_perms: "Este comando requer permissao de **%{perm}**!\nVoce nao tem permissao para executar este comando!"
+
+# No permission!
+no_perms_channel: "Eu nao tenho permissao de **%{perm}** em %{channel} para executar este comando!"
+
+# Execute when invalid
+no_node: "**Nenhum servidor Lavalink foi encontrado. Por favor, tente novamente apos 5 Minutos**"
+
+# Client owner!
+owner_only: "Este comando so pode ser executado pelo **Dono** do bot"
+
+# Need to join voice & same voice to use command!
+no_player: "Nenhuma musica esta tocando no momento!"
+no_same_voice: "Voce nao esta no mesmo canal de voz que eu!"
+no_in_voice: "Voce nao esta em um canal de voz!"
+
+# Blacklist User
+blacklist_user: "Parece que voce esta na lista negra! Voce nao tem permissao para usar comandos.\nPor favor, entre em contato com o **[desenvolvedor](%{serversupport})** se achar que isso e um erro."
+
+# Blacklist Guild
+blacklist_guild: "Este servidor esta na lista negra! Voce nao tem permissao para usar comandos neste servidor.\nPor favor, entre em contato com o **[desenvolvedor](%{serversupport})** se achar que isso e um erro."
+
+### DjRole No Permission ###
+not_dj_role: "Voce precisa ter o cargo %{role} para usar este comando."
+
+### No Premium Event!
+no_premium_button: "Obter Premium"
+no_premium_author: "Sem Plano Premium"
+no_premium_desc: "Ops! Parece que voce ainda nao tem um plano premium. \nEste recurso nao esta acessivel sem um."
+
+# Top.gg error
+topgg_error_author: "Erro no Top.gg ao votar"
+topgg_error_desc: "Ocorreu um erro ao verificar seu voto no top.gg, possivelmente devido ao Top.gg estar fora do ar. Por favor, tente novamente em 5-10 minutos.\nSe este problema persistir, entre em contato com nosso [servidor de suporte](%{serversupport}) para assistencia adicional."
+
+# Top.gg unvote
+topgg_unvote_button: "Vote para desbloquear"
+premium_button: "Fazer upgrade para premium"
+topgg_unvote_author: "Voto Necessario"
+topgg_unvote_desc: "Voce precisa Votar para acessar este comando! E rapido e gratuito.\nAlternativamente, obtenha o premium na nossa [Pagina Premium](%{premium}) para pular esta mensagem e desbloquear recursos extras."
+
+### Mention Desc ###
+mention_content: "meu prefixo para este servidor `%{prefix}`\nvoce pode me mencionar para usar comandos tambem ou digitar </help:1294325423957741598> para ver meus comandos slash ♡"

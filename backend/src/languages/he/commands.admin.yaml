@@ -1,0 +1,33 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "לא הצלחתי למצוא את השרת הזה..."
+blacklist_guild_already: "נראה ש-%{id} כבר ברשימה השחורה, אז אין לי מה לעשות."
+blacklist_guild_add: "להתראות, %{id}! הוספתי אותם לרשימה השחורה. כנראה זה לא היה אמור להיות..."
+blacklist_guild_not_exist: "אמרת שאתה מחפש את %{id}? לא הצלחתי למצוא אותם במסלולי הסיור שלי..."
+blacklist_guild_delete: "ברוכים השבים, %{id}! אני יכול לצאת לסיור שם שוב, הם כבר לא ברשימה השחורה."
+
+### Blacklist User
+blacklist_user_bot_owner: "וואו! אני לא יכול לחסום את היוצר שלי! אתה מנסה להכניס אותי לצרות?"
+blacklist_user_not_found: "לא הצלחתי למצוא את המעריץ הזה..."
+blacklist_user_already: "נראה ש-%{id} כבר ברשימה השחורה, אז אין לי מה לעשות."
+blacklist_user_add: "להתראות, %{id}! עצוב שאני צריך להוסיף מעריץ לרשימה השחורה, אבל כנראה זה לטובה..."
+blacklist_user_not_exist: "%{id}? מי זה? לא הצלחתי למצוא אותם במועדון המעריצים שלי..."
+blacklist_user_delete: "מעולה! %{id} הוחזר כמעריץ! אני לא יכול לחכות לראות אותם בהופעה הבאה!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "לא בטוח איזה סוג תחזוקה זה, אבל בהחלט כדאי להשתמש ב-%{text} במקום"
+maintenance_true: "בסדר! אני מקשיב רק לך עכשיו!"
+maintenance_false: "חזרתי להקשיב לכולם עכשיו!"

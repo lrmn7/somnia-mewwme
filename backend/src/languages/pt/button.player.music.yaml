@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ A reproducao automatica agora esta **Ativada**"
+autoplay_off: "Hmmm~~ A reproducao automatica agora esta **Desativada**"
+autoplay_no_song: "Nenhuma musica esta tocando!"
+
+### Loop command!
+loop_current: "Agora a musica atual vai tocar em loop. Aproveite a repeticao!"
+loop_all: "A fila agora esta configurada para loop. Deixe a musica tocar em repeticao!"
+unloop_all: "O modo de loop foi desativado. Aproveite a variedade de faixas!"
+
+### Pause command!
+pause_msg: "A musica foi pausada. Faca uma pausa e aproveite o silencio."
+
+### Resume command!
+resume_msg: "A musica voltou! Vamos continuar curtindo o som ♪"
+
+previous_notfound: "Desculpe, nao e possivel voltar mais. Nenhuma faixa anterior encontrada :("
+previous_msg: "Bom, acho que estamos rebobinando! Faixa anterior chegando <3"
+
+### Queue command!
+queue_title: "Fila em reproducao..."
+queue_description: "**%{title} **\n\n**Resto da Fila %{list_song}**"
+queue_footer: "Pagina • %{page}/%{pages} | Musicas • %{queue_lang} | Duracao Total • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Adivinha o que eu fiz? Embaralhei a fila pra voce!"
+
+### Skip command!
+skip_msg: "Eu pulei a faixa. Espero que nao se importe :p"
+skip_notfound: "Ops! Parece que nao ha nenhuma faixa para pular! Continue curtindo a faixa atual ♪"
+
+### Stop command!
+stop_msg: "A reproducao da musica foi parada. Espero que voce tenha curtido bastante!"
+
+### Volume command!
+voldown_msg: "O volume foi diminuido %{volume}%. Aproveite as vibes mais suaves!"
+volume_invalid: "Volume invalido. O intervalo disponivel e entre **1** e **100**"
+volup_msg: "O volume foi aumentado %{volume}%. Aumente o som!"
+volume_max: "Nao consigo aumentar meu volume acima de 100%"
+volume_min: "Ohno~~ ja esta no volume minimo!"

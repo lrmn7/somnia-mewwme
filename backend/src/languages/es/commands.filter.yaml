@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **\u00a1Filtro %{name} activado!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **\u00a1Espero que te guste c\u00f3mo suena este!**
+filter_already: "\u00bfEh? El VST %{name} ya est\u00e1 activado... No puedo hacer nada aqu\u00ed."
+filter_number: "Ese no es un n\u00famero que pueda introducir en el EQ..."
+filter_greater: "\u00a1Tiene que ser un n\u00famero mayor que **0**!"
+filter_less: "\u00a1Woah! \u00a1Demasiado! Quiz\u00e1s menos de **10** sea mejor..."
+
+### Bassboost command!
+bassboost_set: "**El bassboost se ha establecido en %{amount}dB**"
+bassboost_limit: "Por favor usa un n\u00famero entre **-10** y **10**"
+
+### Equalizer command!
+eq_author: "Ecualizador"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  Hay **10 Bandas** que se pueden configurar de **-10** a **10**.
+  No tienes que introducir todas, solo las que quieras cambiar.
+  Si quieres saltar una, puedes dejarla como **0**.
+eq_field_title: "Ejemplo:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Restablecer Ecualizador \u2022 %{prefix}eq reset"
+eq_on: "\u00a1El EQ se ha configurado en **%{bands}**!"
+eq_number: "\u00a1Por favor proporciona un n\u00famero v\u00e1lido!"
+eq_greater: "El n\u00famero debe ser mayor que **-10**"
+eq_than: "El n\u00famero debe ser menor que **10**"
+
+### Pitch command!
+pitch_on: "\u00a1De acuerdo, el tono ahora es **%{amount}**!"
+
+### Rate command!
+rate_on:  "\u00a1De acuerdo! \u00a1La velocidad ahora es **%{amount}x**!"
+
+### Speed command!
+speed_on: "\u00a1Por supuesto, cambiando la velocidad a **%{amount}x**!"
+
+### Reset command!
+reset_on: "\u00a1**Restableciendo** todos los VSTs! \u00a1De vuelta al sonido original!"
+reset_already:  "Los VSTs ya est\u00e1n **desactivados**, \u00bflo olvidaste?"
+
+# Invalid Number
+number_invalid: "Ese no es un n\u00famero con el que pueda trabajar... Int\u00e9ntalo de nuevo con un n\u00famero v\u00e1lido."

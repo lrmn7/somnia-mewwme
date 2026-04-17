@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "Prosím zadejte platné ID playlistu!"
+pl_add_match: "Prosím zadejte platný název skladby nebo URL!"
+pl_add_playlist: "Vyhledáno **%{title}** `%{duration}` • (**%{track} skladeb**) • %{user}"
+pl_add_track: "Vyhledáno **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "Vyhledáno **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "Nejste **vlastníkem playlistu**!"
+pl_add_limit_track: "Nemůžete přidat více než **%{limit} skladeb**"
+pl_add_added: "Přidáno **%{count} skladeb** do `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} skladeb**) • Vytvořen: `[před %{create}]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "Stránka • %{page}/%{pages} | Playlisty • %{songs}"
+pl_all_view_notnumber: "Prosím zadejte platné číslo stránky!"
+pl_all_view_page_notfound: "Existuje pouze **%{page} stránek**!"
+
+### pl-create commands ###
+pl_create_invalid: "Prosím zadejte platné ID playlistu!"
+pl_create_toolong: "Název playlistu nesmí být delší než **16 znaků**"
+pl_create_des_toolong: "Popis playlistu nesmí být delší než **1000 znaků**"
+pl_create_limit_playlist: "Nemůžete vytvořit více než **%{limit} playlistů**"
+create_created_title: "Nový playlist byl úspěšně vytvořen!"
+pl_create_created_footer: "Zadejte /pl editor pro úpravu playlistu!"
+pl_create_created: |
+  **Název playlistu**
+  `%{playlist}`
+
+  **ID playlistu**
+  `%{id}`
+
+  **Popis**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "Prosím zadejte platné ID playlistu!"
+delete_notfound: "Prosím zadejte platné ID playlistu!"
+pl_delete_owner: "Nejste **vlastníkem playlistu**"
+pl_delete_confirm: "Chcete smazat `%{playlist_id}`"
+pl_delete_deleted: "Playlist `%{name}` byl úspěšně **smazán**"
+pl_delete_no: "Mazání playlistu bylo **zrušeno**!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "Prosím zadejte platné číslo!"
+pl_detail_notfound: "Prosím zadejte platné ID playlistu!"
+pl_detail_private: "Playlist je **soukromý**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Playlist: %{name}"
+pl_detail_embed_footer: "Stránka • %{page}/%{pages} | Skladby • %{songs} | Celková délka • %{duration}"
+pl_detail_notnumber: "Prosím zadejte platné číslo stránky!"
+pl_detail_page_notfound: "Existuje pouze **%{page} stránek**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Zadejte vaše **nové ID playlistu** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Zadejte váš **nový název playlistu**"
+pl_edit_playlist_des_label: "Zadejte váš **nový popis playlistu**"
+pl_edit_playlist_private_label: "Zadejte vaši **novou viditelnost playlistu** `[public/private]`"
+pl_edit_success: "Playlist byl úspěšně upraven\nNové ID playlistu: `%{playlistId}`"
+pl_edit_arg: "Prosím zadejte platné ID playlistu!"
+pl_edit_notfound: "Prosím zadejte platné ID playlistu!"
+pl_edit_playlist_owner: "Nejste **vlastníkem playlistu**!"
+pl_edit_invalid_id: "Prosím zadejte platné a neexistující ID playlistu!"
+pl_edit_invalid_mode: "Neplatný režim viditelnosti. Prosím použijte **public** nebo **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Nové ID playlistu"
+ineraction_edit_playlist_name_label: "Nový název playlistu"
+ineraction_edit_playlist_des_label: "Nový popis playlistu"
+ineraction_edit_playlist_private_label: "Nová viditelnost playlistu"
+ineraction_edit_playlist_id_placeholder: "Zadejte vaše nové ID playlistu! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "Zadejte váš nový název playlistu!"
+ineraction_edit_playlist_des_placeholder: "Zadejte váš nový popis playlistu!"
+ineraction_edit_playlist_private_placeholder: "Zadejte vaši novou viditelnost playlistu! [public/private]"
+ineraction_edit_success: "Playlist byl úspěšně upraven\nNové ID playlistu: `%{playlistId}`"
+ineraction_edit_playlist_error: "Něco se pokazilo. Zkuste to prosím znovu!"
+ineraction_edit_notfound: "Prosím zadejte platné ID playlistu!"
+ineraction_edit_playlist_owner: "Nejste **vlastníkem playlistu**"
+ineraction_edit_invalid_id: "Prosím zadejte platné a neexistující ID playlistu!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Playlist **%{name}** byl přidán do fronty ♪"
+pl_import_imported_footer: "Užijte si %{tracks} skladeb • %{duration} • hudebního potěšení!"
+pl_import_invalid: "Prosím zadejte platné ID playlistu!"
+pl_import_private: "Playlist je **soukromý**"
+pl_import_voice: "Pro použití tohoto příkazu musíte být v hlasovém kanálu!"
+pl_import_empty: "Playlist je **prázdný**"
+
+### pl-info commands! ###
+pl_info_owner: "Vlastník"
+pl_info_id: "ID"
+pl_info_des: "Popis"
+pl_info_no_des: "Žádný popis nebyl uveden!"
+pl_info_private: "Viditelnost"
+pl_public: "Veřejný"
+pl_private: "Soukromý"
+pl_info_total: "Celkem skladeb"
+pl_info_created: "Vytvořeno"
+pl_info_invalid: "Prosím zadejte platné ID playlistu!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "Prosím zadejte platné ID playlistu!"
+pl_remove_number_invalid: "Prosím zadejte platné číslo!"
+pl_remove_notfound: "Prosím zadejte platné ID playlistu!"
+pl_remove_owner: "Nejste **vlastníkem playlistu**"
+pl_remove_song_notfound: "Skladba nebyla nalezena!"
+pl_remove_removed: "Odebrána skladba číslo **%{position}** z `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "Prosím zadejte platné ID playlistu!"
+pl_savequeue_notfound: "Prosím zadejte platné ID playlistu!"
+pl_savequeue_owner: "Nejste **vlastníkem playlistu**!"
+pl_savequeue_no_tracks: "Momentálně se nepřehrává žádná skladba!"
+pl_savequeue_no_new_saved: "Skladba již existuje v `%{name}`"
+pl_savequeue_saved: "Uloženo **%{tracks} skladeb** do `%{name}`"
+
+pl_error_no_node: "Nebyl nalezen žádný Lavalink server. Zkuste to prosím znovu za **5 minut**"

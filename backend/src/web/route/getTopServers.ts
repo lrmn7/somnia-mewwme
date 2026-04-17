@@ -8,7 +8,6 @@ export function getTopServers(
 ) {
   client.logger.info("TopServersRouterService", `${req.method} ${req.routeOptions.url} payload={}`);
 
-  // Get top guilds from cache sorted by memberCount descending
   const sorted = client.guilds.cache
     .sort((a, b) => b.memberCount - a.memberCount)
     .first(12)

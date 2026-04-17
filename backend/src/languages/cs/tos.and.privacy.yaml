@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Zásady ochrany osobních údajů %{bot}"
+privacy_label: Zásady ochrany osobních údajů
+privacy_desc: |
+  **Uživatelská smlouva**
+  Používání [%{bot}](%{serversupport}) ("bot") na serveru vyžaduje shromažďování určitých uživatelských dat. Shromažďovaná data zahrnují, ale nejsou omezena na, Discord ID uživatele, uživatelské jméno na Discordu a serverové role. Používáním bota se považuje za souhlas s těmito podmínkami zásad.
+
+  **Přístup k datům**
+  Přístup k datům je povolen pouze vývojářům bota a hostingovým službám a pouze v rozsahu nezbytném pro vývoj, testování a implementaci funkcí bota. Data nejsou prodávána, poskytována ani sdílena s žádnou třetí stranou, s výjimkou případů vyžadovaných zákonem nebo smlouvou o podmínkách služby. Svá data si můžete zobrazit na požádání od [vývojáře](%{developer}).
+
+  **Ukládání dat**
+  Data jsou uložena v databázi [MYSQL](https://www.mysql.com/). Databáze je zabezpečena proti externímu přístupu. Nejsou však poskytovány žádné záruky a vlastník bota nenese odpovědnost za neúmyslné nebo záměrné narušení dat. V případě neoprávněného přístupu k datům bude personál serveru informovat uživatele prostřednictvím serveru podpory.
+
+  **Práva uživatelů**
+  Kdykoli máte právo požádat o zobrazení dat vašeho Discord účtu. Máte právo požádat o smazání příslušných dat. Za tímto účelem musí uživatelé podat žádost prostřednictvím serveru podpory.
+
+  **Dotazy**
+  Máte-li dotazy nebo obavy ohledně toho, jaká data mohou být z vašeho účtu uložena, kontaktujte prosím [personál](%{serversupport}). Pro více informací si prostudujte Podmínky služby Discordu.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Podmínky služby %{bot}"
+tos_label: "Podmínky služby"
+termsofservice_desc: |
+  **Smlouva o používání**
+  Pozváním [%{bot}](%{serversupport}) ("bot") a používáním jeho funkcí souhlasíte s Podmínkami služby a Zásadami ochrany osobních údajů bota.
+
+  Berete na vědomí, že můžete bota volně používat na jakémkoli Discord serveru, který s ním sdílíte. Můžete ho pozvat na jakýkoli server, na kterém máte oprávnění "Manage Server", a toto oprávnění může být odebráno, pokud porušíte podmínky služby nebo zásady ochrany osobních údajů tohoto bota nebo Podmínky služby, Zásady ochrany osobních údajů či Pokyny komunity společnosti Discord Inc.
+
+  Prostřednictvím pozvání může bot shromažďovat specifická data, jak je popsáno v jeho Zásadách ochrany osobních údajů. Zamýšlené použití těchto dat je pro základní funkce bota, jako je provádění příkazů.
+
+  **Přidružení**
+  Bot není přidružen k, podporován nebo vytvořen společností Discord Inc. Jakékoli přímé spojení s Discordem nebo jakýmikoli jeho ochrannými známkami je čistě náhodné. Nenárokujeme si vlastnictví autorských práv k aktivům, ochranným známkám nebo jinému duševnímu vlastnictví Discordu.
+
+  **Nezletilí uživatelé**
+  Bot není povolen pro nezletilé mladší 13 let nebo pod zákonným souhlasem jejich země. To je v souladu s Podmínkami služby Discordu. Žádné informace nebudou vědomě uchovávány od nezletilého uživatele. Pokud se zjistí, že uživatel je nezletilý, podnikneme veškeré nezbytné kroky ke smazání uložených dat.
+
+  **Odpovědnost**
+  Vývojáři a vlastník bota nemohou být v žádném okamžiku činěni odpovědnými za jednotlivce porušující tyto Podmínky. Právo na aktualizaci těchto podmínek si vyhrazujeme dle vlastního uvážení s lhůtou 1 týden (7 dní) na odmítnutí těchto podmínek. Uživatel může odmítnout odebráním bota z jakéhokoli serveru, kde má uživatel právo bota odebrat.

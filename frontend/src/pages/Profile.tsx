@@ -3,16 +3,24 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { api } from "@/lib/api";
 import { toast } from "sonner";
-import { FiLock, FiMusic, FiUsers, FiHeart, FiDisc, FiServer, FiZap } from "react-icons/fi";
+import { FiLock, FiMusic, FiUsers, FiHeart, FiDisc, FiServer, FiZap, FiX, FiCopy } from "react-icons/fi";
+import { Wallet } from "lucide-react";
 import type { UserStats, Playlist, LikedTrack } from "@/types/player";
 import Navbar from "@/components/Navbar";
-import BackgroundGlow from "@/components/BackgroundGlow";
+
 import Footer from "@/components/Footer";
-import { useEmbeddedWallet } from "@/hooks/useEmbeddedWallet";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { useWallet } from "@/hooks/useWallet";
-import { shortenAddress } from "@/lib/web3";
-import { PRIVY_APP_ID } from "@/lib/config";
-import { usePrivy } from "@privy-io/react-auth";
+import { truncateAddress } from "@/lib/web3";
 
 interface LastfmStatus {
   connected: boolean;
@@ -52,38 +60,42 @@ interface LastfmProfileItem {
   image: string | null;
 }
 
-interface Web3PremiumGuild {
-  guildId: string;
-  name: string;
-  icon: string | null;
-  activatedAt: number;
-  expiresAt: number | "lifetime";
+interface SubscriptionRecord {
+  userId: string;
+  txHash: string;
+  walletAddress: string;
+  tier: string;
+  quotaValue: number;
+  amount: string;
+  startTime: number;
+  expiredAt: number;
+  status: "active" | "expired";
 }
 
-interface Web3UserGuild {
+interface PremiumPlatformData {
+  computedQuota: number;
+  usedQuota: number;
+  redeemedGuilds: string[];
+  subscriptions: SubscriptionRecord[];
+}
+
+interface MutualGuild {
   id: string;
   name: string;
   icon: string | null;
-  memberCount: number;
-  isActivated: boolean;
-  hasPremiumFromOther: boolean;
 }
 
-interface Web3PremiumStatusData {
-  isPremium: boolean;
-  expiresAt: number | "lifetime" | null;
-  plan: string | null;
-  maxQuota: number;
-  usedQuota: number;
-  activatedGuilds: Web3PremiumGuild[];
-  userGuilds: Web3UserGuild[];
-  subscriptions?: {
-    id: string;
-    tier: "basic" | "plus" | "pro";
-    quota: number;
-    expiresAt: number;
-    isActive: boolean;
-  }[];
+interface RedeemedGuildInfo {
+  id: string;
+  name: string;
+  platform: string;
+}
+
+interface PremiumUserStatus {
+  success: boolean;
+  web3: PremiumPlatformData | null;
+  mutualGuilds: MutualGuild[];
+  redeemedGuilds: RedeemedGuildInfo[];
 }
 
 interface LastfmProfile {
@@ -160,25 +172,19 @@ export default function Profile() {
   const [lastfmProfileLoading, setLastfmProfileLoading] = useState(false);
   const [premiumStatus, setPremiumStatus] = useState<PremiumStatus | null>(null);
 
+  // Premium management state
+  const [premiumUserStatus, setPremiumUserStatus] = useState<PremiumUserStatus | null>(null);
+  const [premiumLoading, setPremiumLoading] = useState(false);
+  const [claimingGuild, setClaimingGuild] = useState<string | null>(null);
+  const [unclaimingGuild, setUnclaimingGuild] = useState<string | null>(null);
+  const selectedPlatform = "web3" as const;
+
   // Connection action state
   const [lastfmLoggingIn, setLastfmLoggingIn] = useState(false);
   const [lastfmLoggingOut, setLastfmLoggingOut] = useState(false);
 
   // Tab state
-  const [activeTab, setActiveTab] = useState<"overview" | "lastfm" | "activated">("overview");
-
-  // Web3 premium state
-  const [web3Status, setWeb3Status] = useState<Web3PremiumStatusData | null>(null);
-  const [web3Loading, setWeb3Loading] = useState(false);
-  const [activatingGuild, setActivatingGuild] = useState<string | null>(null);
-  const [selectedGuildId, setSelectedGuildId] = useState<string>("");
-
-  // Wallet address (inline in profile header)
-  const { address: embeddedAddress } = useEmbeddedWallet();
-  const { wallet: backendWallet } = useWallet();
-  const { exportWallet } = usePrivy();
-  const walletAddress = embeddedAddress || backendWallet.walletAddress || null;
-  const [walletCopied, setWalletCopied] = useState(false);
+  const [activeTab, setActiveTab] = useState<"overview" | "lastfm" | "premium" | "wallet">("overview");
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -205,15 +211,15 @@ export default function Profile() {
     setPremiumStatus(prem.data);
   }, []);
 
-  const fetchWeb3Status = useCallback(async () => {
-    setWeb3Loading(true);
+  const fetchPremiumUserStatus = useCallback(async () => {
+    setPremiumLoading(true);
     try {
-      const { data } = await api.get<Web3PremiumStatusData>("/api/web3/premium-status");
-      setWeb3Status(data);
+      const { data } = await api.get<PremiumUserStatus>("/api/premium/status");
+      setPremiumUserStatus(data);
     } catch {
-      // Web3 not available or not configured
+      setPremiumUserStatus(null);
     } finally {
-      setWeb3Loading(false);
+      setPremiumLoading(false);
     }
   }, []);
 
@@ -225,11 +231,11 @@ export default function Profile() {
       api.get<Playlist[]>("/api/playlists").then(({ data }) => setPlaylists(data || [])).catch(() => {}),
       api.get<LikedTrack[]>("/api/liked").then(({ data }) => setLiked(data || [])).catch(() => {}),
       fetchConnectionStatus(),
-      fetchWeb3Status(),
+      fetchPremiumUserStatus(),
     ])
       .catch(() => setError("Failed to load profile data"))
       .finally(() => setLoading(false));
-  }, [status, fetchConnectionStatus, fetchWeb3Status]);
+  }, [status, fetchConnectionStatus]);
 
   // Fetch Last.fm profile when connected
   useEffect(() => {
@@ -278,33 +284,49 @@ export default function Profile() {
     }
   }
 
-  async function handleActivateGuild() {
-    if (!selectedGuildId) return;
-    setActivatingGuild(selectedGuildId);
+  // Confirmation dialog state for claim/unclaim
+  const [confirmAction, setConfirmAction] = useState<{
+    type: "claim" | "unclaim";
+    guildId: string;
+    guildName?: string;
+    platform?: string;
+  } | null>(null);
+
+  function requestClaim(guildId: string, guildName?: string) {
+    setConfirmAction({ type: "claim", guildId, guildName });
+  }
+
+  function requestUnclaim(guildId: string, guildName?: string, platform?: string) {
+    setConfirmAction({ type: "unclaim", guildId, guildName, platform });
+  }
+
+  async function handleClaim(guildId: string) {
+    setClaimingGuild(guildId);
     try {
-      const { data } = await api.post("/api/web3/guild/activate", { guildId: selectedGuildId });
-      toast.success(data.message);
-      setSelectedGuildId("");
-      await fetchWeb3Status();
+      const { data } = await api.post("/api/premium/web3/claim", { guildId });
+      toast.success(data.message?.replace(/\*\*/g, "") ?? "Premium claimed successfully!");
+      await fetchPremiumUserStatus();
+      await fetchConnectionStatus();
     } catch (err) {
       const e = err as { response?: { data?: { error?: string } } };
-      toast.error(e?.response?.data?.error ?? "Failed to activate premium");
+      toast.error(e?.response?.data?.error ?? "Failed to claim premium.");
     } finally {
-      setActivatingGuild(null);
+      setClaimingGuild(null);
     }
   }
 
-  async function handleDeactivateGuild(guildId: string) {
-    setActivatingGuild(guildId);
+  async function handleUnclaim(guildId: string, _platform: string) {
+    setUnclaimingGuild(guildId);
     try {
-      const { data } = await api.post("/api/web3/guild/deactivate", { guildId });
-      toast.success(data.message);
-      await fetchWeb3Status();
+      const { data } = await api.post("/api/premium/web3/unclaim", { guildId });
+      toast.success(data.message?.replace(/\*\*/g, "") ?? "Premium unclaimed successfully!");
+      await fetchPremiumUserStatus();
+      await fetchConnectionStatus();
     } catch (err) {
       const e = err as { response?: { data?: { error?: string } } };
-      toast.error(e?.response?.data?.error ?? "Failed to deactivate premium");
+      toast.error(e?.response?.data?.error ?? "Failed to unclaim premium.");
     } finally {
-      setActivatingGuild(null);
+      setUnclaimingGuild(null);
     }
   }
 
@@ -317,9 +339,8 @@ export default function Profile() {
 
   if (status === "loading" || loading) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen flex flex-col relative text-foreground">
         <Navbar />
-        <BackgroundGlow />
         <div className="flex items-center justify-center min-h-screen">
           <div className="w-12 h-12 border-4 border-pink-500/30 border-t-pink-500 rounded-full animate-spin" />
         </div>
@@ -329,26 +350,16 @@ export default function Profile() {
 
   if (!user) return null;
 
-  const defaultAvatarIndex = (() => {
-    const disc = Number.parseInt(user.discriminator || "", 10);
-    if (Number.isFinite(disc) && disc > 0) return disc % 5;
-    try {
-      return Number((BigInt(user.id) >> 22n) % 6n);
-    } catch {
-      return 0;
-    }
-  })();
-
   const avatarUrl = user.avatar
     ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=128`
-    : `https://cdn.discordapp.com/embed/avatars/${defaultAvatarIndex}.png`;
+    : `https://cdn.discordapp.com/embed/avatars/${parseInt(user.discriminator || "0") % 5}.png`;
 
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen flex flex-col relative text-foreground">
       <Navbar />
-      <BackgroundGlow />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-20">
+      <main className="flex-1">
+        <section className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-20">
         {error && (
           <div className="mb-6 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
             {error}
@@ -374,10 +385,24 @@ export default function Profile() {
               <h1 className="text-2xl font-bold text-foreground">
                 {user.global_name || user.username}
               </h1>
-              {user.global_name && user.global_name !== user.username && (
-                <p className="text-sm text-muted-foreground mt-1">@{user.username}</p>
-              )}
-              <div className="flex items-center justify-center sm:justify-start gap-2 mt-2">
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mt-2">
+                {premiumStatus?.isOwner && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-yellow-500/15 text-yellow-400 text-xs font-medium border border-yellow-500/25">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M2.5 19h19l-1.5-9-5.5 5-3-7.5-3 7.5L3.5 10 2.5 19zm0 0" />
+                      <path d="M5 21h14v1H5z" />
+                    </svg>
+                    Bot Owner
+                  </span>
+                )}
+                {premiumStatus?.isAdmin && !premiumStatus?.isOwner && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-blue-500/15 text-blue-400 text-xs font-medium border border-blue-500/25">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                    </svg>
+                    Bot Admin
+                  </span>
+                )}
                 {isPremium ? (
                   <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-green-500/15 text-green-400 text-xs font-medium">
                     <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
@@ -395,40 +420,6 @@ export default function Profile() {
                 <p className="text-xs text-muted-foreground mt-2">
                   Member since {new Date(stats.firstLogin).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
                 </p>
-              )}
-              {PRIVY_APP_ID && walletAddress && (
-                <div className="flex flex-wrap items-center gap-4 mt-3">
-                  <button
-                    onClick={() => {
-                      navigator.clipboard.writeText(walletAddress);
-                      setWalletCopied(true);
-                      toast.success("Address copied to clipboard");
-                      setTimeout(() => setWalletCopied(false), 2000);
-                    }}
-                    className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-purple-400 transition group"
-                  >
-                    <span className="opacity-60">address:</span>
-                    <span className="font-mono font-medium">{shortenAddress(walletAddress)}</span>
-                    {walletCopied ? (
-                      <svg className="h-3 w-3 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    ) : (
-                      <svg className="h-3 w-3 opacity-40 group-hover:opacity-100 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
-                      </svg>
-                    )}
-                  </button>
-                  <button
-                    onClick={() => exportWallet()}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-purple-500/30 bg-purple-500/10 text-xs font-semibold text-purple-400 hover:bg-purple-500/20 transition"
-                  >
-                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-                    </svg>
-                    Export Wallet
-                  </button>
-                </div>
               )}
             </div>
           </div>
@@ -461,19 +452,28 @@ export default function Profile() {
               Last.fm
             </button>
           )}
-          {(isPremium || web3Status?.isPremium) && (
-            <button
-              onClick={() => setActiveTab("activated")}
-              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 ${
-                activeTab === "activated"
-                  ? "bg-white/10 text-white shadow-sm"
-                  : "text-muted-foreground hover:text-white hover:bg-white/5"
-              }`}
-            >
-              <FiZap className="h-3.5 w-3.5 text-purple-400" />
-              Activated
-            </button>
-          )}
+          <button
+            onClick={() => setActiveTab("premium")}
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 ${
+              activeTab === "premium"
+                ? "bg-white/10 text-white shadow-sm"
+                : "text-muted-foreground hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <FiZap className="h-3.5 w-3.5 text-yellow-400" />
+            Premium
+          </button>
+          <button
+            onClick={() => setActiveTab("wallet")}
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 ${
+              activeTab === "wallet"
+                ? "bg-white/10 text-white shadow-sm"
+                : "text-muted-foreground hover:text-white hover:bg-white/5"
+            }`}
+          >
+            <Wallet className="h-3.5 w-3.5 text-emerald-400" />
+            Wallet
+          </button>
         </div>
 
         {activeTab === "overview" && (
@@ -743,163 +743,488 @@ export default function Profile() {
           </div>
         )}
 
-        {activeTab === "activated" && (
-          <div className="space-y-6">
-            {web3Loading ? (
-              <div className="glass-card rounded-2xl p-8 flex items-center justify-center">
-                <div className="w-8 h-8 border-3 border-purple-500/30 border-t-purple-500 rounded-full animate-spin" />
+        {activeTab === "premium" && (
+          <div className="space-y-5">
+            {premiumLoading ? (
+              <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-12 flex items-center justify-center">
+                <div className="w-8 h-8 border-3 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin" />
               </div>
-            ) : !web3Status?.isPremium ? (
-              <div className="glass-card rounded-2xl p-8 text-center space-y-3">
-                <FiZap className="w-8 h-8 text-purple-400 mx-auto" />
-                <h3 className="text-lg font-bold text-foreground">No Active Premium</h3>
-                <p className="text-sm text-muted-foreground">
-                  Subscribe to premium with USDC to activate premium on your servers.
-                </p>
-                <a href="/premium" className="inline-block mt-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-sm font-semibold text-purple-400 hover:bg-purple-500/30 transition">
-                  Get Premium
-                </a>
+            ) : !premiumUserStatus?.web3 ? (
+              <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 text-center space-y-4">
+                <div className="flex justify-center">
+                  <div className="h-14 w-14 rounded-2xl bg-yellow-500/10 flex items-center justify-center">
+                    <FiZap className="h-7 w-7 text-yellow-400" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-white">No Premium Subscription</h3>
+                  <p className="text-sm text-muted-foreground mt-1.5 max-w-sm mx-auto">
+                    Purchase premium via Web3 on the <a href="/premium" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2 transition-colors">Premium page</a> to unlock features for your servers.
+                  </p>
+                </div>
               </div>
-            ) : (
-              <>
-                {/* Premium Status Card */}
-                <div className="glass-card rounded-2xl p-5 sm:p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/20">
-                      <FiZap className="h-5 w-5 text-purple-400" />
+            ) : (() => {
+              const web3 = premiumUserStatus.web3;
+              const totalQuota = web3.computedQuota;
+              const usedQuota = web3.usedQuota;
+              const availableQuota = totalQuota - usedQuota;
+              const redeemedIds = new Set(premiumUserStatus.redeemedGuilds.map((g) => g.id));
+              const availableGuilds = (premiumUserStatus?.mutualGuilds ?? []).filter((g) => !redeemedIds.has(g.id));
+              const activeSubs = web3.subscriptions.filter(s => s.status === "active");
+              const expiredSubs = web3.subscriptions.filter(s => s.status === "expired");
+
+              return (
+                <>
+                  {/* Quota Overview */}
+                  <div className="rounded-2xl border border-emerald-500/15 bg-gradient-to-br from-emerald-500/[0.06] to-transparent p-5">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="h-10 w-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+                        <Wallet className="h-5 w-5 text-emerald-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-bold text-white">Web3 Premium</h3>
+                        <p className="text-xs text-muted-foreground">
+                          {activeSubs.length} active subscription{activeSubs.length !== 1 ? "s" : ""}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-sm font-bold text-white">Premium Active</h3>
-                      <p className="text-[11px] text-muted-foreground">
-                        Total Quota: {web3Status.maxQuota} server{web3Status.maxQuota !== 1 ? "s" : ""}
-                        {web3Status.expiresAt && web3Status.expiresAt !== "lifetime" && (
-                          <> &middot; Next expiry: {new Date(web3Status.expiresAt).toLocaleDateString()}</>
-                        )}
-                      </p>
+
+                    <div className="grid grid-cols-3 gap-3 mb-4">
+                      <div className="rounded-xl bg-white/[0.04] border border-white/[0.06] p-3 text-center">
+                        <p className="text-lg font-bold text-white">{totalQuota}</p>
+                        <p className="text-[10px] text-muted-foreground uppercase tracking-wider mt-0.5">Total</p>
+                      </div>
+                      <div className="rounded-xl bg-white/[0.04] border border-white/[0.06] p-3 text-center">
+                        <p className="text-lg font-bold text-emerald-400">{usedQuota}</p>
+                        <p className="text-[10px] text-muted-foreground uppercase tracking-wider mt-0.5">Used</p>
+                      </div>
+                      <div className="rounded-xl bg-white/[0.04] border border-white/[0.06] p-3 text-center">
+                        <p className={`text-lg font-bold ${availableQuota > 0 ? "text-white" : "text-red-400"}`}>{availableQuota}</p>
+                        <p className="text-[10px] text-muted-foreground uppercase tracking-wider mt-0.5">Available</p>
+                      </div>
                     </div>
-                    <span className="flex items-center gap-1.5 rounded-full bg-purple-500/15 px-2.5 py-1 text-[10px] font-semibold text-purple-400">
-                      <span className="h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse" />
-                      {web3Status.usedQuota}/{web3Status.maxQuota} Server
-                    </span>
+
+                    <div className="w-full h-2 rounded-full bg-white/[0.06]">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400 transition-all duration-500"
+                        style={{ width: `${totalQuota > 0 ? Math.min(100, (usedQuota / totalQuota) * 100) : 0}%` }}
+                      />
+                    </div>
+
+                    <p className="text-[11px] text-muted-foreground mt-3">
+                      <span className="text-emerald-400/70">Quota</span> = number of servers you can activate premium on. Claim a server to use a slot, unclaim to free it up.
+                    </p>
                   </div>
 
-                  {/* Activate Server Section */}
-                  {web3Status.usedQuota < web3Status.maxQuota && (
-                    <div className="rounded-lg bg-purple-500/[0.06] border border-purple-500/20 p-4 space-y-3">
-                      <p className="text-xs font-semibold text-purple-400">Activate Premium on a Server</p>
-                      <div className="flex items-center gap-2">
-                        <select
-                          value={selectedGuildId}
-                          onChange={(e) => setSelectedGuildId(e.target.value)}
-                          className="flex-1 rounded-lg bg-white/5 border border-white/10 px-3 py-2 text-sm text-foreground focus:outline-none focus:border-purple-500/40 transition"
-                        >
-                          <option value="" className="bg-[#1a1a2e]">Select a server...</option>
-                          {web3Status.userGuilds
-                            .filter((g) => !g.isActivated && !g.hasPremiumFromOther)
-                            .map((g) => (
-                              <option key={g.id} value={g.id} className="bg-[#1a1a2e]">
-                                {g.name} ({g.memberCount} members)
-                              </option>
-                            ))}
-                        </select>
-                        <button
-                          onClick={handleActivateGuild}
-                          disabled={!selectedGuildId || !!activatingGuild}
-                          className="px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-sm font-semibold text-purple-400 hover:bg-purple-500/30 disabled:opacity-40 disabled:cursor-not-allowed transition"
-                        >
-                          {activatingGuild === selectedGuildId ? "Activating..." : "Activate"}
-                        </button>
+                  {/* Active Subscriptions */}
+                  {activeSubs.length > 0 && (
+                    <div className="space-y-2.5">
+                      <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-1">Active Subscriptions</h4>
+                      <div className="space-y-2">
+                        {activeSubs.map((sub) => (
+                          <div key={sub.txHash} className="flex items-center justify-between rounded-xl bg-emerald-500/[0.04] border border-emerald-500/15 px-4 py-3">
+                            <div className="flex items-center gap-3 min-w-0">
+                              <div className="h-8 w-8 rounded-lg bg-emerald-500/15 flex items-center justify-center shrink-0">
+                                <FiZap className="h-4 w-4 text-emerald-400" />
+                              </div>
+                              <div className="min-w-0">
+                                <p className="text-sm font-medium text-white">
+                                  {sub.tier.replace("guild_", "").replace(/^\w/, c => c.toUpperCase())}
+                                  <span className="text-emerald-400 ml-1.5">+{sub.quotaValue} server{sub.quotaValue !== 1 ? "s" : ""}</span>
+                                </p>
+                                <p className="text-[10px] text-muted-foreground">Expires {new Date(sub.expiredAt).toLocaleDateString()}</p>
+                              </div>
+                            </div>
+                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold bg-emerald-500/15 text-emerald-400 shrink-0">Active</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   )}
-                </div>
 
-                {/* Active Subscriptions */}
-                {web3Status.subscriptions && web3Status.subscriptions.length > 0 && (
-                  <div className="mt-4 space-y-2">
-                    <p className="text-xs font-semibold text-white/40 uppercase tracking-wider">Active Subscriptions</p>
-                    {web3Status.subscriptions.map((sub) => {
-                      const tierColors = {
-                        basic: "text-yellow-400 bg-yellow-500/10 border-yellow-500/20",
-                        plus: "text-purple-400 bg-purple-500/10 border-purple-500/20",
-                        pro: "text-pink-400 bg-pink-500/10 border-pink-500/20",
-                      };
-                      const tierLabels = { basic: "Guild Basic", plus: "Guild Plus", pro: "Guild Pro" };
-                      return (
-                        <div key={sub.id} className={`flex items-center justify-between rounded-lg border px-3 py-2 ${tierColors[sub.tier]}`}>
-                          <div className="flex items-center gap-2">
-                            <span className="text-xs font-bold">{tierLabels[sub.tier]}</span>
-                            <span className="text-[10px] opacity-60">{sub.quota} server{sub.quota !== 1 ? "s" : ""}</span>
+                  {/* Expired Subscriptions */}
+                  {expiredSubs.length > 0 && (
+                    <details className="group">
+                      <summary className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-1 cursor-pointer select-none flex items-center gap-1.5 hover:text-muted-foreground/80 transition-colors">
+                        <svg className="h-3.5 w-3.5 transition-transform group-open:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                        Expired Subscriptions ({expiredSubs.length})
+                      </summary>
+                      <div className="space-y-2 mt-2.5">
+                        {expiredSubs.map((sub) => (
+                          <div key={sub.txHash} className="flex items-center justify-between rounded-xl bg-white/[0.02] border border-white/[0.06] px-4 py-3 opacity-50">
+                            <div className="flex items-center gap-3 min-w-0">
+                              <div className="h-8 w-8 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0">
+                                <FiZap className="h-4 w-4 text-muted-foreground" />
+                              </div>
+                              <div className="min-w-0">
+                                <p className="text-sm font-medium text-white">
+                                  {sub.tier.replace("guild_", "").replace(/^\w/, c => c.toUpperCase())}
+                                  <span className="text-muted-foreground ml-1.5">+{sub.quotaValue} server{sub.quotaValue !== 1 ? "s" : ""}</span>
+                                </p>
+                                <p className="text-[10px] text-muted-foreground">Expired {new Date(sub.expiredAt).toLocaleDateString()}</p>
+                              </div>
+                            </div>
+                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold bg-red-500/10 text-red-400 shrink-0">Expired</span>
                           </div>
-                          <span className="text-[10px] opacity-60">
-                            Expires: {new Date(sub.expiresAt).toLocaleDateString()}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-
-                {/* Activated Servers List */}
-                {web3Status.activatedGuilds.length > 0 && (
-                  <div className="space-y-3">
-                    <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-muted-foreground/60">
-                      <span className="w-0.5 h-4 rounded-full bg-purple-500" />
-                      Activated Servers
-                    </h2>
-                    {web3Status.activatedGuilds.map((guild) => (
-                      <div
-                        key={guild.guildId}
-                        className="glass-card rounded-2xl p-4 flex items-center gap-4 hover:scale-[1.01] transition-transform"
-                      >
-                        {guild.icon ? (
-                          <img src={guild.icon} alt={guild.name} className="w-12 h-12 rounded-xl object-cover shrink-0" />
-                        ) : (
-                          <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-lg font-bold text-purple-400 shrink-0">
-                            {guild.name.charAt(0).toUpperCase()}
-                          </div>
-                        )}
-                        <div className="flex-1 min-w-0">
-                          <h4 className="text-sm font-bold text-foreground truncate">{guild.name}</h4>
-                          <div className="flex items-center gap-2 mt-0.5">
-                            <span className="flex items-center gap-1 text-[10px] text-green-400 font-semibold">
-                              <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
-                              Premium Active
-                            </span>
-                            {guild.expiresAt && guild.expiresAt !== "lifetime" && (
-                              <span className="text-[10px] text-muted-foreground">
-                                Expires: {new Date(guild.expiresAt as number).toLocaleDateString()}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                        <button
-                          onClick={() => handleDeactivateGuild(guild.guildId)}
-                          disabled={!!activatingGuild}
-                          className="px-3 py-1.5 rounded-lg border border-red-500/30 bg-red-500/10 text-xs font-semibold text-red-400 hover:bg-red-500/20 disabled:opacity-40 transition"
-                        >
-                          {activatingGuild === guild.guildId ? "..." : "Deactivate"}
-                        </button>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )}
+                    </details>
+                  )}
 
-                {/* No activated servers yet */}
-                {web3Status.activatedGuilds.length === 0 && web3Status.usedQuota === 0 && (
-                  <div className="glass-card rounded-2xl p-6 text-center">
-                    <FiServer className="w-6 h-6 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">
-                      You haven't activated premium on any server yet. Use the dropdown above to select a server.
-                    </p>
+                  {/* Your Servers */}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between px-1">
+                      <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Your Servers</h4>
+                      <span className="text-[11px] text-muted-foreground">
+                        {premiumUserStatus.redeemedGuilds.length + availableGuilds.length} server{(premiumUserStatus.redeemedGuilds.length + availableGuilds.length) !== 1 ? "s" : ""}
+                      </span>
+                    </div>
+
+                    {premiumUserStatus.redeemedGuilds.length === 0 && availableGuilds.length === 0 ? (
+                      <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 text-center">
+                        <FiServer className="h-6 w-6 text-muted-foreground/40 mx-auto mb-2" />
+                        <p className="text-sm text-muted-foreground">No mutual servers found.</p>
+                        <p className="text-xs text-muted-foreground/60 mt-1">Add the bot to a server first.</p>
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        {premiumUserStatus.redeemedGuilds.map((g) => {
+                          const mutual = premiumUserStatus.mutualGuilds.find(m => m.id === g.id);
+                          return (
+                            <div
+                              key={g.id}
+                              className="group relative flex items-center gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.04] px-4 py-3 transition-all hover:bg-emerald-500/[0.07]"
+                            >
+                              {mutual?.icon ? (
+                                <img src={mutual.icon} alt={g.name} className="h-9 w-9 rounded-full shrink-0" />
+                              ) : (
+                                <div className="h-9 w-9 rounded-full bg-emerald-500/15 flex items-center justify-center text-xs font-bold text-emerald-400 shrink-0">
+                                  {g.name.charAt(0).toUpperCase()}
+                                </div>
+                              )}
+                              <div className="min-w-0 flex-1">
+                                <p className="text-sm font-medium text-white truncate">{g.name}</p>
+                                <div className="flex items-center gap-1.5 mt-0.5">
+                                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-400">
+                                    <FiZap className="h-2.5 w-2.5" /> Premium Active
+                                  </span>
+                                </div>
+                              </div>
+                              <button
+                                onClick={() => requestUnclaim(g.id, g.name, g.platform)}
+                                disabled={unclaimingGuild === g.id}
+                                className="flex items-center gap-1.5 rounded-lg border border-red-500/20 bg-red-500/10 px-3 py-1.5 text-[11px] font-semibold text-red-400 hover:bg-red-500/20 disabled:opacity-40 transition shrink-0"
+                              >
+                                {unclaimingGuild === g.id ? (
+                                  <div className="w-3 h-3 border-2 border-red-400/30 border-t-red-400 rounded-full animate-spin" />
+                                ) : (
+                                  <FiX className="h-3 w-3" />
+                                )}
+                                Unclaim
+                              </button>
+                            </div>
+                          );
+                        })}
+
+                        {availableGuilds.map((g) => (
+                          <div
+                            key={g.id}
+                            className="group relative flex items-center gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 transition-all hover:bg-white/[0.04]"
+                          >
+                            {g.icon ? (
+                              <img src={g.icon} alt={g.name} className="h-9 w-9 rounded-full shrink-0" />
+                            ) : (
+                              <div className="h-9 w-9 rounded-full bg-white/[0.08] flex items-center justify-center text-xs font-bold text-muted-foreground shrink-0">
+                                {g.name.charAt(0).toUpperCase()}
+                              </div>
+                            )}
+                            <div className="min-w-0 flex-1">
+                              <p className="text-sm font-medium text-white truncate">{g.name}</p>
+                              <p className="text-[10px] text-muted-foreground mt-0.5">No premium</p>
+                            </div>
+                            <button
+                              onClick={() => requestClaim(g.id, g.name)}
+                              disabled={availableQuota <= 0 || claimingGuild === g.id}
+                              className="flex items-center gap-1.5 rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-[11px] font-semibold text-emerald-400 hover:bg-emerald-500/20 disabled:opacity-40 transition shrink-0"
+                            >
+                              {claimingGuild === g.id ? (
+                                <div className="w-3 h-3 border-2 border-emerald-400/30 border-t-emerald-400 rounded-full animate-spin" />
+                              ) : (
+                                <FiZap className="h-3 w-3" />
+                              )}
+                              Claim
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {availableQuota <= 0 && availableGuilds.length > 0 && (
+                      <p className="text-xs text-amber-400/80 px-1">
+                        No quota available. Unclaim a server or <a href="/premium" className="underline underline-offset-2 hover:text-amber-300 transition-colors">upgrade your plan</a> to claim more.
+                      </p>
+                    )}
                   </div>
-                )}
-              </>
+                </>
+              );
+            })()}
+          </div>
+        )}
+
+        {activeTab === "wallet" && (
+          <WalletSection />
+        )}
+
+        </section>
+      </main>
+
+      {/* Confirmation Dialog for Claim/Unclaim */}
+      <AlertDialog open={!!confirmAction} onOpenChange={(open) => { if (!open) setConfirmAction(null); }}>
+        <AlertDialogContent className="border-white/10 bg-background">
+          <AlertDialogHeader>
+            <AlertDialogTitle>
+              {confirmAction?.type === "claim" ? "Claim Premium" : "Unclaim Premium"}
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              {confirmAction?.type === "claim"
+                ? `Are you sure you want to activate premium on "${confirmAction?.guildName || confirmAction?.guildId}"? This will use 1 of your available server slots.`
+                : `Are you sure you want to remove premium from "${confirmAction?.guildName || confirmAction?.guildId}"? The server will lose premium features.`}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="border-white/10">Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              className={confirmAction?.type === "claim"
+                ? "bg-green-600 hover:bg-green-700 text-white"
+                : "bg-red-600 hover:bg-red-700 text-white"}
+              onClick={() => {
+                if (!confirmAction) return;
+                if (confirmAction.type === "claim") {
+                  handleClaim(confirmAction.guildId);
+                } else {
+                  handleUnclaim(confirmAction.guildId, confirmAction.platform || "web3");
+                }
+                setConfirmAction(null);
+              }}
+            >
+              {confirmAction?.type === "claim" ? "Yes, Claim" : "Yes, Unclaim"}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <Footer />
+    </div>
+  );
+}
+
+function WalletSection() {
+  const {
+    address,
+    isConnected,
+    isBound,
+    boundAddress,
+    isCorrectChain,
+    isBinding,
+    isLoadingBinding,
+    isCooldownActive,
+    walletChangeAvailableAt,
+    connectWallet,
+    switchToSomnia,
+    bindWallet,
+    unbindCurrentWallet,
+    loadBinding,
+  } = useWallet();
+
+  const [showChangeConfirm, setShowChangeConfirm] = useState(false);
+  const [cooldownText, setCooldownText] = useState("");
+
+  const copyAddress = () => {
+    if (boundAddress) {
+      navigator.clipboard.writeText(boundAddress);
+      toast.success("Wallet address copied!");
+    }
+  };
+
+  // Cooldown countdown timer
+  useEffect(() => {
+    if (!walletChangeAvailableAt || walletChangeAvailableAt <= Date.now()) {
+      setCooldownText("");
+      return;
+    }
+    const update = () => {
+      const remaining = walletChangeAvailableAt - Date.now();
+      if (remaining <= 0) { setCooldownText(""); return; }
+      const days = Math.floor(remaining / 86400000);
+      const hours = Math.floor((remaining % 86400000) / 3600000);
+      const mins = Math.floor((remaining % 3600000) / 60000);
+      if (days > 0) setCooldownText(`${days}d ${hours}h`);
+      else if (hours > 0) setCooldownText(`${hours}h ${mins}m`);
+      else setCooldownText(`${mins}m`);
+    };
+    update();
+    const iv = setInterval(update, 60000);
+    return () => clearInterval(iv);
+  }, [walletChangeAvailableAt]);
+
+  // After user confirms change: unbind and reset to initial state
+  const handleConfirmChange = async () => {
+    setShowChangeConfirm(false);
+    await unbindCurrentWallet();
+  };
+
+  // Loading state
+  if (isLoadingBinding) {
+    return (
+      <div className="space-y-6">
+        <div className="glass-card rounded-2xl p-6">
+          <div className="flex items-center justify-center py-12">
+            <div className="w-8 h-8 border-3 border-pink-500/30 border-t-pink-500 rounded-full animate-spin" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── ALREADY BOUND: Show address + copy + Change Wallet ──
+  if (isBound && boundAddress) {
+    return (
+      <div className="space-y-6">
+        <div className="glass-card rounded-2xl p-6">
+          <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+            <Wallet className="h-5 w-5 text-emerald-400" />
+            Wallet
+          </h3>
+          <div className="flex items-center justify-between p-4 rounded-xl bg-white/[0.03] border border-white/[0.08]">
+            <div className="min-w-0">
+              <p className="text-[11px] text-muted-foreground mb-0.5">Bound Wallet</p>
+              <p className="text-sm font-mono text-emerald-400 truncate">{boundAddress}</p>
+            </div>
+            <button
+              onClick={copyAddress}
+              className="shrink-0 ml-3 h-8 px-3 rounded-lg flex items-center gap-1.5 text-xs text-white/40 hover:text-white hover:bg-white/[0.06] transition-all"
+              title="Copy address"
+            >
+              <FiCopy className="h-3.5 w-3.5" />
+              Copy
+            </button>
+          </div>
+
+          {/* Change Wallet */}
+          <div className="mt-4">
+            <button
+              onClick={() => setShowChangeConfirm(true)}
+              disabled={isCooldownActive || isBinding}
+              className="text-xs text-muted-foreground hover:text-pink-400 transition disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              Change Wallet
+            </button>
+            {isCooldownActive && cooldownText && (
+              <p className="text-[11px] text-white/25 mt-1">
+                You can change wallet in {cooldownText}
+              </p>
             )}
+          </div>
+        </div>
+
+        {/* Change Wallet Confirmation Dialog */}
+        {showChangeConfirm && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+            <div className="glass-card rounded-2xl p-6 max-w-sm w-full">
+              <h3 className="text-lg font-bold text-foreground mb-3">Change Wallet</h3>
+              <p className="text-sm text-muted-foreground mb-6">
+                Are you sure you want to change your wallet? You will not be able to change again for <span className="text-pink-400 font-semibold">7 days</span>.
+              </p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowChangeConfirm(false)}
+                  className="flex-1 py-2.5 rounded-xl border border-white/10 text-sm font-semibold text-white/60 hover:bg-white/[0.06] transition"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleConfirmChange}
+                  disabled={isBinding}
+                  className="flex-1 py-2.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-sm font-semibold text-white transition disabled:opacity-50"
+                >
+                  {isBinding ? "Unbinding..." : "Yes, Change"}
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </div>
-      <Footer />
+    );
+  }
+
+  // ── NOT BOUND: Connect + Bind flow ──
+  return (
+    <div className="space-y-6">
+      <div className="glass-card rounded-2xl p-6">
+        <div className="text-center py-8">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-emerald-500/10 flex items-center justify-center">
+            <Wallet className="h-8 w-8 text-emerald-400" />
+          </div>
+          <h3 className="text-lg font-bold text-foreground mb-2">Connect Wallet</h3>
+          <p className="text-sm text-muted-foreground mb-6 max-w-sm mx-auto">
+            Connect and sign to bind your EVM wallet to your Discord account. This is a one-time setup.
+          </p>
+
+          {!isConnected ? (
+            <button
+              onClick={connectWallet}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition"
+            >
+              <Wallet className="h-4 w-4" />
+              Connect Wallet
+            </button>
+          ) : !isCorrectChain ? (
+            <button
+              onClick={switchToSomnia}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-yellow-600 hover:bg-yellow-500 text-white font-semibold transition"
+            >
+              Switch to Somnia Testnet
+            </button>
+          ) : (
+            <button
+              onClick={bindWallet}
+              disabled={isBinding}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-semibold transition disabled:opacity-50"
+            >
+              {isBinding ? (
+                <>
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Signing...
+                </>
+              ) : (
+                <>
+                  <FiLock className="h-4 w-4" />
+                  Sign &amp; Bind Wallet
+                </>
+              )}
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Info */}
+      <div className="glass-card rounded-2xl p-6">
+        <h3 className="text-sm font-semibold text-muted-foreground mb-3">Why bind your wallet?</h3>
+        <ul className="space-y-2 text-sm text-muted-foreground">
+          <li className="flex items-start gap-2">
+            <FiZap className="h-4 w-4 text-yellow-400 mt-0.5 shrink-0" />
+            Purchase premium subscriptions on-chain with STT tokens
+          </li>
+          <li className="flex items-start gap-2">
+            <FiHeart className="h-4 w-4 text-pink-400 mt-0.5 shrink-0" />
+            Send tips to your favorite Discord servers
+          </li>
+          <li className="flex items-start gap-2">
+            <FiServer className="h-4 w-4 text-emerald-400 mt-0.5 shrink-0" />
+            Create tipping contracts for servers you manage
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

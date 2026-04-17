@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 एक गिल्ड में शामिल हुए!"
+leave_title: "📥 एक गिल्ड छोड़ दिया!"
+guild_name: "नाम"
+guild_id: "ID"
+guild_owner: "मालिक"
+guild_member_count: "सदस्य संख्या"
+guild_creation_date: "निर्माण तिथि"
+guild_join_date: "शामिल होने की तिथि"
+current_server_count: "वर्तमान सर्वर संख्या"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "अरे! हैलो सब ✧(≧◡≦) ♡"
+join_msg_desc: |
+  ### मुझे आप सबके साथ घूमने के लिए आमंत्रित करने के लिए धन्यवाद (*≧▽≦)
+  ### आप मुझे पिंग करके भी कमांड इस्तेमाल कर सकते हैं! मेरे स्लैश कमांड देखने के लिए </help:1088430405033656341> टाइप करें ♡

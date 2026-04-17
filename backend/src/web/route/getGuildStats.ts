@@ -1,15 +1,6 @@
 import { Manager } from "../../manager.js";
 import Fastify from "fastify";
 
-/**
- * GET /v1/guild/:guildId/stats
- *
- * Returns guild-level music statistics:
- * - listenTimeMs
- * - tracksPlayed
- * - topTracks  (top 10 by play_count DESC)
- * - topArtists (top 10 by play_count DESC)
- */
 export async function getGuildStats(
   client: Manager,
   req: Fastify.FastifyRequest,

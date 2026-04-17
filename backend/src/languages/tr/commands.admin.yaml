@@ -1,0 +1,33 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "O Sunucuyu bulamadim..."
+blacklist_guild_already: "Gorunuse gore %{id} zaten kara listede, yapabilecegim bir sey yok."
+blacklist_guild_add: "Hosca kal, %{id}! Onlari kara listeye ekledim. Demek ki olmayacakmis..."
+blacklist_guild_not_exist: "%{id} mi ariyordun? Tur rotalarimda bulamadim..."
+blacklist_guild_delete: "Tekrar hos geldin, %{id}! Artik oraya tekrar turneye gidebilirim, kara listeden cikarildilar."
+
+### Blacklist User
+blacklist_user_bot_owner: "Vay canina! Kendi yaraticimi kara listeye alamam! Beni belaya mi sokmaya calisiyorsun?"
+blacklist_user_not_found: "O hayrani bulamadim..."
+blacklist_user_already: "Gorunuse gore %{id} zaten kara listede, yapabilecegim bir sey yok."
+blacklist_user_add: "Gorusuruz, %{id}! Bir hayrani kara listeye eklemek uzucu ama saniriim en iyisi bu..."
+blacklist_user_not_exist: "%{id} mi? O kim? Hayran kulubumde bulamadim..."
+blacklist_user_delete: "Harika! %{id} tekrar hayran olarak iade edildi! Bir sonraki konserde onlari gormek icin sabrsizlaniyorum!"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "Bunun ne tur bir bakim oldugunu bilmiyorum ama kesinlikle bunun yerine %{text} kullanmalisin"
+maintenance_true: "Tamam! Artik sadece seni dinliyorum!"
+maintenance_false: "Artik tekrar herkesi dinliyorum!"

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Přehrávání hudby bylo zastaveno. Doufám, že jste si to užili!"
+skip_notfound: "Jejda. Vypadá to, že není žádná skladba k přeskočení!"
+skip_msg: "Přeskočil jsem skladbu. Doufám, že vám to nevadí :p"
+previous_msg: "No, asi se vracíme! Předchozí skladba přichází <3"
+previous_notfound: "Omlouvám se, nemůžu se vrátit dál. Žádná předchozí skladba nebyla nalezena :("
+resume_msg: "Hudba je zpět! Pokračujeme v groovu ♪"
+pause_msg: "Hudba je pozastavena. Dejte si pauzu a užijte si ticho."
+loop_current: "Aktuální skladba se nyní bude přehrávat ve smyčce. Užijte si opakování!"
+loop_all: "Fronta je nyní nastavena na smyčku. Nechte hudbu hrát dokola!"
+unloop_all: "Režim smyčky byl vypnut. Užijte si různorodost skladeb!"
+
+### Need to join voice & same voice to use command!
+no_player: "Ťukli jste na tlačítko a nic se nestalo. Možná byste měli nejdříve něco přehrát!"
+no_same_voice: "Ťukli jste na tlačítko a zablikalo červeně. Nejste ve stejném hlasovém kanálu jako já!"
+no_in_voice: "Všechna tlačítka na vás nereagují. Nejste v hlasovém kanálu!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "PRÁVĚ HRAJE"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Vyžádal %{request}"
+setup_footer: "Zbývající skladby • %{totalsong} | Celková délka • %{duration}"
+setup_queuemsg: "**Připojte se k hlasovému kanálu a přehrávejte skladby pomocí názvu nebo URL zde!**"
+setup_playembed_author: "Momentálně se nepřehrává žádná skladba!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Přidáno **%{title}** • %{request}"
+play_playlist: "Přidáno **%{title}** • (**%{songs} skladeb**) • %{request}"
+play_result: "Přidáno **%{title}** • %{request}"
+play_emoji: "Nejsem si jistý, jak tohle přehrát... Není to skladba ani playlist."
+setup_content: "**Hej! Můj pult je připravený na vaši hudbu! Prostě sem něco hoďte!**"

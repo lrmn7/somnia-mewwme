@@ -1,0 +1,91 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+## Helper setup ##
+setup_helper_content: |
+  ## Welkom bij de %{guild} community!
+  *Als je nieuw bent op Discord, dan ben je hier aan het juiste adres! Dit kanaal is bedoeld om je te helpen je weg te vinden op de server.*
+  ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+  %{bot} is een Discord-bot die je muziekervaring verbetert met een strakke interface, hoogwaardige audio en allerlei muziekfuncties.
+
+  Deze Discord-server is de perfecte plek om rond te hangen in het hart van de %{guild} community.
+  Geniet van gesprekken, deel muziekaanbevelingen en ontdek alle functies die de %{bots} bot biedt!
+
+  Wil je je vrienden uitnodigen voor de server? Stuur ze deze link: %{serversupport}
+
+disable_helper: "De helper is uitgeschakeld"
+invalid_channel_helper: "Het opgegeven kanaal is ongeldig"
+channel_viewable_helper: "Het opgegeven kanaal is niet zichtbaar voor mij"
+setup_helper_succes: "De helper is succesvol ingesteld in %{channel}."
+
+## RULES Events ##
+rules_title: "Serverregels voor de %{guild} community!"
+rules_desc: |
+  - **Wees respectvol**
+    Volg altijd de Discord [Servicevoorwaarden](https://discord.com/terms) en [Richtlijnen](https://discord.com/guidelines).
+  - **Hulpcode**
+    Wanneer je om hulp vraagt, zorg er dan voor dat je zoveel mogelijk details geeft met foutmeldingen.
+  - **Geen haatdragende taal of intimidatie**
+    Geen gesprekken met haatdragende taal of intimidatie jegens individuen of groepen.
+  - **Geen trollen of provoceren**
+    Geen acties bedoeld om conflicten te verstoren of uit te lokken op welke manier dan ook.
+  - **Respecteer intellectueel eigendom**
+    Respecteer intellectuele eigendomsrechten, inclusief maar niet beperkt tot auteursrechten, handelsmerken en patenten.
+  - **Geen spoilers zonder waarschuwing**
+    Als je content bespreekt die nog niet door alle leden is bekeken, geef dan spoilerwaarschuwingen om teleurstelling te voorkomen.
+  - **Gebruik de juiste kanalen**
+    Gebruik relevante kanalen voor specifieke onderwerpen, vermijd off-topic gesprekken in niet-gerelateerde kanalen.
+  - **Geen overmatig gebruik van hoofdletters of spam**
+    Vermijd overmatig gebruik van hoofdletters of het snel achter elkaar versturen van herhaalde berichten.
+  - **Houd spraakkanalen rustig**
+    Als je spraakkanalen gebruikt, zorg er dan voor dat er geen storend geluid is en spreek beleefd.
+  - **Geen ongeautoriseerde bots of automatisering**
+    Alleen bots die door moderators zijn geautoriseerd mogen op de server draaien.
+  - **Meld overtredingen**
+    Als je regelovertredingen ziet, meld deze dan bij een moderator of beheerder.
+  - **Veel plezier!**
+    Het belangrijkste is dat je geniet van je tijd op deze server door alle leden te respecteren en een positieve omgeving te behouden.
+
+  Bedankt voor je deelname, we hopen dat je hier een goede tijd zult hebben.
+
+### SUPPORT US BUTTON ###
+support_us_title: "Hoe %{bot} te ondersteunen"
+support_us_desc: "Je kunt me ondersteunen door te stemmen op %{bot}, %{bot} uit te nodigen op je server, of door lid te worden van het premium-abonnement."
+support_us_footer: "Bedankt dat je overweegt %{bot} te ondersteunen! Ik waardeer het enorm."
+
+## ROLES EVENTS ##
+role_title: "Je kunt rollen toevoegen of verwijderen uit de onderstaande lijst."
+role_added: "**[Gelukt]** De rol %{rolename} is succesvol toegevoegd!"
+role_removed: "**[Verwijderd]** De rol %{rolename} is verwijderd."
+role_rules_added: "%{user} we hopen dat je alle regels zult volgen, je hebt nu toegang tot de hele server"
+role_rules_already: "%{user} je hebt de regels al geaccepteerd"
+role_desc: "We willen er alleen zeker van zijn dat je een mens bent en geen bot. Help ons alsjeblieft je authenticiteit te bevestigen door een snelle verificatietaak te voltooien."
+
+### Top gg vote logs event
+vote_desc: |
+  %{voteuser} heeft gestemd op %{votebot} op **[Top.gg](%{voteurl})**
+  Bedankt voor je steun! We hopen dat je een fijne dag hebt!
+vote_footer: "Totaal stemmen %{count}, Blijf in je verbeelding!"
+
+### Top gg vote logs reminder event
+reminder_label_name: "Herinnering om te stemmen"
+reminder_label_emoji: "⏰"
+reminder_title: "Stemherinnering"
+reminder_desc: "Het is tijd! Je kunt nu opnieuw stemmen op **[Top.gg](%{voteurl})**."
+reminder_set_content: "Herinnering ingesteld! Ik herinner je over 12 uur om opnieuw te stemmen"
+reminder_cancel_content: "Herinnering geannuleerd. Je wordt niet meer herinnerd om te stemmen"
+reminder_no_vote_warning: "Je moet eerst stemmen voordat je een herinnering kunt instellen"
+
+### Welcomer events!
+welcome_desc: "Welkom bij %{guildname} %{member}, Blijf in je verbeelding!"
+leave_desc: "Bedankt dat je bij ons was! Tot ziens %{member}"

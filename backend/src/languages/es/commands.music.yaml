@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "\u00a1Mira mis selecciones para ti!~"
+search_desc: "### \u00a1OYE! Se encontraron resultados para tu solicitud"
+search_end_desc2: "### \u00a1OMG! %{user}, no seleccionaste una canci\u00f3n a tiempo\n**\u00a1Int\u00e9ntalo de nuevo!**"
+search_footer: "%{countSong} pistas encontradas"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` \u00a1disfruta! \u2665"
+
+search_active: "\u00a1Ya est\u00e1s buscando algo! Espera a que termine la \u00faltima b\u00fasqueda antes de iniciar una nueva."
+search_no_result: "No se encontraron resultados para tu b\u00fasqueda :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` \u00a1disfruta! \u2665"
+no_songs_playing: "\u00a1No se est\u00e1 reproduciendo ninguna canci\u00f3n!"
+
+### Autoplay command!
+autoplay_off: "La reproducci\u00f3n autom\u00e1tica est\u00e1 ahora **Desactivada**"
+autoplay_on: "La reproducci\u00f3n autom\u00e1tica est\u00e1 ahora **Activada**"
+autoplay_no_songs_playing: "\u00a1No se est\u00e1 reproduciendo ninguna canci\u00f3n!"
+
+### ClearQueue command!
+clearqueue_msg: "La cola ha sido **Limpiada**"
+
+### Forward command!
+forward_msg: "**%{user} Adelant\u00f3 %{title} a** `%{duration}`"
+forward_beyond: "\u00a1La canci\u00f3n est\u00e1 por terminar. No puedes adelantar m\u00e1s all\u00e1!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Siguiente en Reproducir \u266a"
+playnext_queue_empty: "La cola est\u00e1 vac\u00eda. Por favor a\u00f1ade algunas canciones primero"
+playnext_notfound: "\u00a1Canci\u00f3n no encontrada!"
+
+# Execute when invalid
+no_node: "**No se encontr\u00f3 ning\u00fan servidor Lavalink. Por favor int\u00e9ntalo de nuevo despu\u00e9s de 5 Minutos**"
+
+### Join command!
+join_msg: "El reproductor se ha creado exitosamente y se uni\u00f3 a %{channel}"
+join_already: "Ya estoy en %{channel}"
+join_no_in_voice: "\u00a1No est\u00e1s en un canal de voz!"
+join_no_same_voice: "\u00a1No est\u00e1s en el mismo canal de voz que yo!"
+
+### Loop command!
+loop_current: "Ahora en Bucle %{title}"
+loop_all: "**Se ha activado el modo de bucle de COLA**"
+unloop_all: "**El modo de bucle ha sido DESACTIVADO**"
+loop_invalid: "Modo de bucle inv\u00e1lido. Por favor usa **Disabled**"
+loop_already: "El modo de bucle ya est\u00e1 en **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Por favor proporciona un **Nombre de Canci\u00f3n** v\u00e1lido"
+lyrics_title: "Letra de **%{song}**"
+lyrics_notfound: "**\u00a1No se pudo encontrar la letra de esta canci\u00f3n!**"
+lyrics_toolong: "**\u00a1La letra es demasiado larga, m\u00e1ximo 4048 caracteres permitidos!**"
+lyrics_disable: " **\u00a1La funci\u00f3n de letras est\u00e1 actualmente desactivada!**"
+lyrics_noquery: "**Por favor proporciona un **Nombre de Canci\u00f3n** v\u00e1lido"
+lyrics_error: "**Error: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "REPRODUCIENDO AHORA"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Autor"
+nowplaying_total_duration_title: "Duraci\u00f3n"
+nowplaying_request_title: "Solicitado Por"
+
+### Pause command!
+pause_msg: "**\u00a1La pista %{title} est\u00e1 actualmente en pausa!"
+
+### Play command!
+play_no_same_voice: "\u00a1No est\u00e1s en el mismo canal de voz que yo!"
+play_no_in_voice: "\u00a1No est\u00e1s en un canal de voz!"
+play_arg: "\u00a1Por favor proporciona un nombre de canci\u00f3n o URL v\u00e1lido!"
+play_emoji: "**\u00a1Ups! Esto es un emoji, no puedes reproducir canciones usando emojis**"
+play_match: "**\u00a1Ups! Lo siento, \u00a1canci\u00f3n no encontrada! Por favor int\u00e9ntalo de nuevo**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## \u00a1Eso fue f\u00e1cil!
+  ### Tu %{title} fue a\u00f1adida a la cola
+
+play_queue_max: |
+  \u00a1OMG!>,.,< La cola es demasiado larga. M\u00e1ximo %{limitqueue} canciones.
+  \u00a1Mejora a [**premium**](%{premium}) para acceso ilimitado a la cola!
+
+play_playlist_max: |
+  \u00a1OMG!>,.,< La lista de reproducci\u00f3n es demasiado larga. M\u00e1ximo %{limitqueue} canciones.
+  \u00a1Mejora a [**premium**](%{premium}) para acceso ilimitado a listas de reproducci\u00f3n!
+
+### Previous command!
+previous_notfound: |
+  **\u00a1No se encontr\u00f3 ninguna canci\u00f3n anterior en la cola!
+  \u00bfPor qu\u00e9 no usas /play para a\u00f1adir m\u00e1s pistas y mantener la m\u00fasica sonando?**
+previous_msg: |
+  **\u00a1De vuelta a la canci\u00f3n anterior!
+  Ahora reproduciendo %{title}**
+
+### Queue command!
+queue_number_invalid: "\u00a1Por favor proporciona un n\u00famero v\u00e1lido!"
+queue_title: "Reproduciendo cola..."
+queue_description: "**%{title}**\n\n**Resto de la Cola %{rest}**"
+queue_footer: "P\u00e1gina \u2022 %{page}/%{pages} | Canciones \u2022 %{queue_lang} | Duraci\u00f3n Total \u2022 %{duration}"
+queue_notnumber: "\u00a1Por favor proporciona un n\u00famero de p\u00e1gina v\u00e1lido!"
+queue_page_notfound: "Solo hay **%{page} P\u00e1ginas**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " \u00a1Por favor proporciona un n\u00famero v\u00e1lido!"
+removetrack_already: "**No puedo eliminar una canci\u00f3n que ya se est\u00e1 reproduciendo**"
+removetrack_notfound: "**Lo siento %{user}, \u00a1canci\u00f3n no encontrada!**"
+removetrack_desc: "**\u00a1%{title} eliminada de la Cola!**"
+
+### Replay command!
+replay_msg: "**%{user} Repite %{title}**"
+replay_not_seekable: "La pista **%{title}** no se puede repetir."
+
+### Resume command!
+resume_msg: "**Reproducci\u00f3n Reanudada %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} Retrajo %{title} a** `%{duration}`"
+rewind_beyond: "\u00a1La canci\u00f3n acaba de empezar. No puedes retroceder m\u00e1s all\u00e1!"
+
+### Seek command!
+seek_beyond: "\u00a1No puedes buscar m\u00e1s all\u00e1 de la duraci\u00f3n de la canci\u00f3n!"
+seek_invalid: "Duraci\u00f3n de b\u00fasqueda inv\u00e1lida. Por favor usa una marca de tiempo v\u00e1lida. Ejemplo: **1:30**"
+seek_msg: "**%{title} posicionada en** `%{duration}`"
+seek_not_seekable: "La pista **%{title}** no se puede rebobinar ni adelantar."
+
+### Skip command!
+skip_notfound: |
+  **\u00a1No se encontr\u00f3 ninguna canci\u00f3n a la que saltar! Parece que no hay nada que saltar.
+  \u00a1Usemos /play para mantener la m\u00fasica sonando a\u00f1adiendo m\u00e1s pistas!**
+skip_msg: "**%{title} Ha sido Saltada**"
+skip_number_invalid: "\u00a1Por favor proporciona un n\u00famero v\u00e1lido!"
+
+### Stop command!
+stop_msg: "**%{title} Ha sido detenida**"
+
+### Shuffle command!
+shuffle_title: "Mezclar la Cola"
+
+### Volume command!
+volume_number_invalid: "\u00a1Por favor proporciona un n\u00famero v\u00e1lido!"
+volume_invalid: "Volumen inv\u00e1lido. Por favor usa un n\u00famero entre **1** y **100**"
+volume_msg: "**Volumen establecido en %{volume}%, Disfruta %{user}**"
+volume_max: "**El volumen ya est\u00e1 al m\u00e1ximo 100%**"
+
+### play source commands
+url_no_allowed: "Por favor usa el nombre de la canci\u00f3n/nombre del artista (URL no permitida)"
+play_arg_source: "\u00a1Por favor proporciona un nombre de canci\u00f3n/artista v\u00e1lido!"
+
+## Temporarily disabled commands
+youtube_disabled: "El soporte de YouTube no est\u00e1 disponible temporalmente"
+autoplay_disabled: "La reproducci\u00f3n autom\u00e1tica est\u00e1 temporalmente desactivada."

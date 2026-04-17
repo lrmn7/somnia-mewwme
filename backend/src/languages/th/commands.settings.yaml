@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "โหมด 24/7 ถูก**เปิดใช้งาน**แล้ว"
+247_off: "โหมด 24/7 ถูก**ปิดใช้งาน**แล้ว"
+247_already: "โหมด 24/7 เป็น **%{mode}** อยู่แล้ว"
+247_arg_error: "โหมด 24/7 ไม่ถูกต้อง กรุณาใช้ %{text}"
+247_no_in_voice: "คุณไม่ได้อยู่ในห้องเสียง!"
+
+
+### Set Language command! ###
+provide_lang: "**ภาษาไม่ถูกต้อง กรุณาใช้** `%{languages}`"
+lang_set: "**ตั้งค่าภาษาเป็น** `%{language}` แล้ว"
+lang_change: "**เปลี่ยนภาษาเป็น** `%{language}` แล้ว"
+
+### Prefix command! ###
+prefix_arg: "กรุณาระบุคำนำหน้าที่ถูกต้อง!"
+prefix_length: "**คำนำหน้าไม่สามารถยาวเกิน 10 ตัวอักษร**"
+prefix_set: "**ตั้งค่าคำนำหน้าเป็น** `%{prefix}` แล้ว"
+prefix_change: "**เปลี่ยนคำนำหน้าเป็น** `%{prefix}` แล้ว"
+
+### Control command!
+control_set: "**โหมดควบคุมเครื่องเล่นถูกตั้งค่าเป็น %{toggle}**"
+control_arg_error: "อาร์กิวเมนต์ไม่ถูกต้อง กรุณาใช้ %{text}"
+control_already: "การแจ้งเตือนเพลงเป็น **%{mode}** อยู่แล้ว"
+
+### Setup Music Req command! ###
+setup_arg_error: "ไม่ถูกต้อง! กรุณาใช้ %{text}"
+setup_enable: "**อุ๊ปส์! ระบบเพลงมีอยู่แล้ว**"
+setup_topic: "♪ ผู้ที่ปรารถนาจะร้องเพลงจะพบเพลงเสมอ ♪"
+setup_msg: "*`ตั้งค่าระบบเพลงใน`* %{channel} *`สำเร็จแล้ว`*\n```หมายเหตุ: อย่าลบข้อความใดๆ ที่ฉันสร้างขึ้นเพื่อให้ฉันทำงานได้ถูกต้อง```"
+setup_null: "*`ลบช่องตั้งค่าสำเร็จแล้ว!`*"
+setup_deleted: "*`ลบช่องตั้งค่าสำเร็จแล้ว!`*"
+setup_null_inguild: "**ไม่พบระบบเพลงในเซิร์ฟเวอร์นี้! พร้อมลบข้อมูล**"
+setup_queuemsg: "**เข้าร่วมห้องเสียงและเล่นเพลงโดยใช้ชื่อหรือ URL ที่นี่!**"
+setup_playembed_author: "ไม่มีเพลงที่กำลังเล่นอยู่"
+
+### Themes command!
+error_themes: "ไม่ถูกต้อง... กรุณาลองอีกครั้ง"
+succes_themes: "**เปลี่ยนธีมเป็น %{themes} สำเร็จ**"
+
+### Last FM Login command!
+lastfm_login_footer: "หมายเหตุ: ลิงก์นี้จะหมดอายุใน %{expired}"
+lastfm_login_title: "เข้าสู่ระบบ Last.fm"
+lastfm_login_desc: "คุณต้องการอนุญาตการเข้าถึงบัญชี [Last.fm](https://www.last.fm/user/eleremen) ของคุณหรือไม่?\nหากใช่ กรุณาคลิกปุ่มด้านล่างเพื่อเริ่มกระบวนการอนุญาต"
+lastfm_not_login_desc: "คุณยังไม่ได้เข้าสู่ระบบ Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "ออกจากระบบ Last.fm"
+lastfm_logout_desc: "คุณออกจากระบบ Last.fm สำเร็จแล้ว"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "ฟีเจอร์ Last.fm ถูกปิดใช้งาน"
+lastfm_feature_disabled_desc: "ฟีเจอร์ Last.fm ถูกปิดใช้งานอยู่ในขณะนี้ กรุณาติดต่อผู้ดูแลระบบสำหรับข้อมูลเพิ่มเติม"
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "ไม่พบการแจ้งเตือนสำหรับช่อง YouTube **%{ytchannel}**"
+notify_youtube_removed: "คุณได้ลบการแจ้งเตือนสำหรับช่อง YouTube **%{ytchannel}** แล้ว"
+notify_youtube_disabled: "ฟีเจอร์แจ้งเตือน YouTube ถูกปิดใช้งานอยู่ในขณะนี้ ติดต่อทีมงานสำหรับข้อมูลเพิ่มเติม"
+notify_youtube_already: "การแจ้งเตือนสำหรับช่อง YouTube %{ytchannel} ถูกตั้งค่าไว้อยู่แล้ว"
+notify_youtube_invalid_channel: "เกิดข้อผิดพลาดในการระบุช่องข้อความที่ถูกต้อง กรุณาตรวจสอบ!"
+notify_youtube_set: "ตั้งค่าแจ้งเตือน YouTube สำหรับ **%{ytchannel}** ใน %{channelid} แล้ว"
+notify_youtube_404: |
+  ไม่พบ YouTube channel ID ที่ระบุ
+  หากต้องการหา channel ID ให้ไปที่หน้าช่อง YouTube และดูที่ URL
+  Channel ID คือชุดตัวอักษรและตัวเลขหลัง `/channel/` (ตัวอย่าง: `UC_x5XG1OV2P6uZZ5FSM9Ttw`)
+notify_youtube_limit_reached_non_premium: |
+   คุณถึงขีดจำกัด %{limit} การแจ้งเตือนแล้ว
+   เมื่ออัปเกรดเป็น [premium](%{premium}) คุณสามารถตั้งค่าได้ถึง %{limitpremium} การแจ้งเตือน
+
+notify_youtube_limit_reached_premium: |
+   คุณถึงขีดจำกัด %{limit} การแจ้งเตือนแล้ว
+   นี่คือจำนวนสูงสุดที่อนุญาต พิจารณาลบการแจ้งเตือนบางรายการเพื่อเปิดพื้นที่สำหรับรายการใหม่
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "ไม่พบการแจ้งเตือนสำหรับ Twitch username **%{twitchusername}**"
+notify_twitch_removed: "คุณได้ลบการแจ้งเตือนสำหรับ Twitch username **%{twitchusername}** แล้ว"
+notify_twitch_disabled: "ฟีเจอร์แจ้งเตือน Twitch ถูกปิดใช้งานอยู่ในขณะนี้ ติดต่อทีมงานสำหรับข้อมูลเพิ่มเติม"
+notify_twitch_already: "คุณได้ตั้งค่าการแจ้งเตือนสำหรับช่อง Twitch %{twitchusername} ไว้อยู่แล้ว"
+notify_twitch_invalid_channel: "เกิดข้อผิดพลาดในการระบุช่องข้อความที่ถูกต้อง กรุณาตรวจสอบ!"
+notify_twitch_set: "ตั้งค่าแจ้งเตือน Twitch สำหรับ **%{twitchusername}** ใน %{channelid} แล้ว"
+notify_twitch_error: "เกิดข้อผิดพลาดที่ไม่คาดคิดขณะประมวลผลการแจ้งเตือน Twitch สำหรับ **{twitchusername}** ในช่อง **{channelid}** กรุณาลองอีกครั้งหรือติดต่อฝ่ายสนับสนุนหากปัญหายังคงอยู่"
+notify_twitch_limit_reached_non_premium: |
+   คุณถึงขีดจำกัด %{limit} การแจ้งเตือนแล้ว
+   เมื่ออัปเกรดเป็น [premium](%{premium}) คุณสามารถตั้งค่าได้ถึง %{limitpremium} การแจ้งเตือน
+
+notify_twitch_limit_reached_premium: |
+   คุณถึงขีดจำกัด %{limit} การแจ้งเตือนแล้ว
+   นี่คือจำนวนสูงสุดที่อนุญาต พิจารณาลบการแจ้งเตือนบางรายการเพื่อเปิดพื้นที่สำหรับรายการใหม่
+
+### Temp Voice Feature command!
+tempvoice_setup: "ฟีเจอร์ห้องเสียงชั่วคราวถูก %{status} แล้ว"
+tempvoice_disabled: "ห้องเสียงชั่วคราวถูกปิดใช้งานแล้ว"
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "ไม่ถูกต้อง... เฉพาะ %{text} เท่านั้น"
+status_voice_channel_true: "สถานะห้องเสียงถูกตั้งค่าเป็น **%{type}** แล้ว"
+status_voice_channel_false: "สถานะห้องเสียงถูกตั้งค่าเป็น **%{type}** แล้ว"
+
+
+### Patreon Claim command!
+not_in_guild: "คำสั่งนี้สามารถใช้ได้บนเซิร์ฟเวอร์เท่านั้น!"
+no_data_patreon: "ไม่พบข้อมูล Patreon (ข้อผิดพลาดฐานข้อมูล)"
+no_data_patreon_title: "ไม่พบ"
+no_data_patreon_desc: |
+  หากคุณได้สมัครสมาชิกแล้ว ให้แน่ใจว่าบัญชี Discord ของคุณเชื่อมต่อกับ Patreon แล้ว!
+no_data_patreon_footer: "การซิงค์ Patreon อาจใช้เวลาสักครู่ กรุณาตรวจสอบอีกครั้งในไม่ช้า"
+no_patreon_guild_membership: |
+  สวัสดี แผน Patreon ของคุณคือ **user tier**
+  กรุณาอัปเกรดเป็น **server tier** เพื่อปลดล็อกการเข้าถึงเซิร์ฟเวอร์ Premium
+patreon_guild_membership_full_quota: |
+  คุณใช้โควตาเซิร์ฟเวอร์หมดแล้ว!
+  **สถานะ:** ใช้ %{status} เซิร์ฟเวอร์แล้ว
+
+  วิธีแก้:
+  1. อัปเกรดระดับของคุณบน Patreon
+  2. หรือปิดใช้งาน Premium บนเซิร์ฟเวอร์เก่าของคุณ
+patreon_guild_membership_already_before: "คุณได้เปิดใช้งาน Premium บนเซิร์ฟเวอร์นี้ไปก่อนแล้ว!"
+patreon_guild_membership_already: "**เป็น PREMIUM อยู่แล้ว** เพราะได้รับการสนับสนุนจากคนอื่น\nเก็บโควตาของคุณไว้สำหรับเซิร์ฟเวอร์อื่น!"
+patreon_guild_membership_claim_title: "ยืนยันการเปิดใช้งาน"
+patreon_guild_membership_claim_desc: |
+  คุณแน่ใจหรือไม่ว่าต้องการเปิดใช้งาน **เซิร์ฟเวอร์ Premium** สำหรับ:
+  **%{guildName}**
+
+  การดำเนินการนี้จะใช้ **1 โควตาเซิร์ฟเวอร์**
+  โควตาที่เหลือ: **%{status}**
+patreon_guild_membership_claim_success: |
+  สำเร็จ! **%{guildName}** เป็น**เซิร์ฟเวอร์ Premium** แล้ว
+
+  **ผู้สนับสนุน:** %{user}
+  **โควตาที่เหลือ:** %{status}
+  ขอบคุณที่สนับสนุนเราบน Patreon!
+patreon_guild_membership_claim_success_title: "💎 เปิดใช้งาน Premium แล้ว!"
+patreon_guild_membership_claim_cancel: "ยกเลิกการเปิดใช้งาน Premium แล้ว"
+patreon_guild_membership_claim_norespon: "การเปิดใช้งานถูกยกเลิกโดยอัตโนมัติเนื่องจากไม่มีการตอบสนอง"
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 แลกเซิร์ฟเวอร์ (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **ผู้สนับสนุน:** %{sponsorTag} %{sponsorId}
+  **เซิร์ฟเวอร์เป้าหมาย:** %{guildName} %{guildId}
+  **สถานะโควตา:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "คุณไม่สามารถเพิกถอนเซิร์ฟเวอร์ Premium นี้ได้เพราะคุณไม่ได้เป็นผู้ลงทะเบียน"
+patreon_guild_unclaim_title: "ยืนยันการเพิกถอน Premium"
+patreon_guild_unclaim_desc: |
+  คุณแน่ใจหรือไม่ว่าต้องการ**ยกเลิก**สถานะ Premium ของเซิร์ฟเวอร์ **%{guildName}**?
+  **ผลกระทบ:** ฟีเจอร์ Premium จะถูกปิดใช้งานบนเซิร์ฟเวอร์นี้
+  โควตาเซิร์ฟเวอร์ของคุณจะถูกคืน (+1)
+  โควตาที่เหลือปัจจุบัน: **%{status}**
+patreon_guild_unclaim_success_title: "เพิกถอน Premium แล้ว"
+patreon_guild_unclaim_success: |
+  สถานะ Premium สำหรับ **%{guildName}** ถูกเพิกถอนเรียบร้อยแล้ว
+  **โควตาที่คืน:** 1 เซิร์ฟเวอร์
+  **โควตาที่เหลือใหม่:** %{status}
+patreon_guild_unclaim_cancel: "ยกเลิกกระบวนการเพิกถอน Premium แล้ว"
+patreon_guild_unclaim_norespon: "⏱️ หมดเวลา ยกเลิกกระบวนการแล้ว"
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "ยกเลิกเซิร์ฟเวอร์ (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **ผู้ใช้:** %{sponsorTag} %{sponsorId}
+  **เซิร์ฟเวอร์:** %{guildName}} %{guildId}
+  **โควตาที่คืน:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **ผู้ใช้:** %{userTag} (%{userId})
+  **เซิร์ฟเวอร์:** %{guildName} (%{guildId})
+  **โควตา:** %{quota}
+  **หมดอายุ:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} การดำเนินการ: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "ไม่พบ Transaction ID หรือถูกเคลมไปแล้ว"
+kofi_linked_success_title: "เชื่อมต่อการชำระเงินสำเร็จ!"
+kofi_linked_success_desc: "ตอนนี้คุณสามารถใช้ `/premium claim <kofi>` โดยไม่ต้องใส่ TxID"
+kofi_no_data_title: "ไม่พบข้อมูล!"
+kofi_no_data_desc: |
+  หากคุณชำระเงินแล้วแต่ยังไม่ได้เชื่อมต่อบัญชี Discord กับ Kofi
+  ใช้: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "ไม่มีโควตา แต่คุณเป็นผู้ใช้ Premium"
+kofi_full_server_quota_title: "โควตาเต็ม!"
+kofi_full_server_quota_desc: "คุณใช้สล็อตเซิร์ฟเวอร์ **%{quota}** สล็อตแล้ว"
+kofi_server_already_claim_desc: "**เปิดใช้งานอยู่แล้ว!**\nคุณได้เปิดใช้งาน Premium บนเซิร์ฟเวอร์นี้ไปก่อนแล้ว"
+kofi_server_already_active_desc: " **เป็น Premium อยู่แล้ว!**\nเซิร์ฟเวอร์นี้ถูกเปิดใช้งานเป็น Premium โดยผู้ใช้คนอื่นแล้ว"
+kofi_guild_membership_claim_success: |
+  เปิดใช้งาน Premium สำเร็จแล้ว!
+  **การใช้โควตา:** %{quota}
+  **หมดอายุใน:** %{expires}
+kofi_guild_membership_claim_footer: "ขอบคุณสำหรับการสนับสนุน!"
+kofi_action_title: "🏗️ Ko-fi การดำเนินการ: %{type}"
+kofi_action_description: "**ผู้ใช้:** %{userTag} (`%{userId}`)\n**เซิร์ฟเวอร์:** %{guildName} (`%{guildId}`)\n**การดำเนินการ:** %{action}\n**โควตา:** %{quota}"
+kofi_action_activation: "เปิดใช้งานเซิร์ฟเวอร์"
+kofi_action_manual_link: "เชื่อมต่อการชำระเงินด้วยตนเอง"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "เพิกถอน Premium แล้ว"
+kofi_guild_unclaim_success_desc: |
+  สถานะ Premium สำหรับ **%{guildName}** ถูกเพิกถอนเรียบร้อยแล้ว
+  **โควตาที่คืน:** 1 เซิร์ฟเวอร์
+kofi_guild_not_owned_by_user: "คุณไม่สามารถเพิกถอนเซิร์ฟเวอร์ Premium นี้ได้เพราะคุณไม่ได้เป็นผู้ลงทะเบียน"
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "ยกเลิกเซิร์ฟเวอร์ %{platform}"
+premium_unclaim_log_desc: |
+  **ผู้ใช้:** %{userTag} %{userId}
+  **เซิร์ฟเวอร์:** %{guildName}} %{guildId}
+  **โควตาที่คืน:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "ระบบ DJ Role ถูก**ปิดใช้งาน**แล้ว"
+dj_role_missing_role: "คุณต้องระบุบทบาทเพื่อใช้การดำเนินการ `set`"
+dj_role_set: |
+  DJ Role ถูกตั้งค่าเป็น %{role}
+  สถานะ: **เปิดใช้งาน**
+  **คำสั่งที่ได้รับผลกระทบ:**
+  %{commands}

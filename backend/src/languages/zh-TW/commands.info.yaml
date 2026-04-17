@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**願意歌唱的人總能找到一首歌 ♪\n今天就在你的 Discord 伺服器中加入這段旋律吧！**"
+about_desc2: |
+  ・此伺服器的機器人前綴為 `%{prefix}`
+  ・使用 `%{prefix} prefix <新前綴>` 更改前綴
+  ・使用連結或搜尋詞彙播放曲目 `%{prefix} play`
+  造訪我們的**[網站](%{website})**或使用 `%{prefix} help` 指令來查看更多指令。
+about_desc3: |
+  **注意！**
+  我最好能擁有 `管理員` 權限，但是...
+  即使你不給我這些權限，我仍然可以運作，但我可能無法發揮所有功能。只是提醒一下！
+
+  **幫助與支援**
+  如果你需要幫助、想獲取更新與問題的資訊，或想與社群互動，請加入我們的**[支援伺服器](%{serversupport})**！
+
+### Help command!
+finder_invalid: "無效的指令"
+finder_example: "我無法幫你找到那個！請搜尋一個*真正的*指令！"
+finder_name: "**指令：**"
+finder_des: " **說明：**"
+finder_usage: "**用法：**"
+finder_access: "**可存取者：**"
+finder_aliases: "**別名：**"
+finder_slash: "**斜線指令：**"
+finder_des_no: "找不到說明，抱歉..."
+finder_usage_no: "我不確定如何使用這個指令。"
+finder_aliases_prefix: "[僅限前綴]"
+finder_aliases_no: "你無法使用別名來執行這個指令。"
+finder_slash_enable: "已啟用"
+finder_slash_disable: "已停用"
+command_not_found: "未知的指令"
+select_menu: "和我一起享受音樂吧！"
+help_timeout: "幫助選單已逾時，請再次使用 **`%{prefix}help`** 或 **`/help`**。"
+homepage_title: "願意歌唱的人總能找到一首歌 ♪\n今天就在你的 Discord 伺服器中加入這段旋律吧！"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **全天候音樂 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify 連結**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **高品質音訊**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **與 Last.fm 同步記錄**
+  <:blank:1291123023679586324><:games:1311125732117843978> **遊玩與競爭迷你遊戲**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify、Apple Music、Deezer 等更多...**
+
+  <a:ask:1291123964080558121> **你想升級到 [進階版](%{premium}) 方案嗎？**
+### Rating bot commands! ###
+rating_desc: "感謝 %{user} 為我們的 Discord 音樂機器人評分！"
+rating_succes: "感謝你的評分！\n你的評分已成功提交。"
+rating_failure: "無法送出評分。請稍後再試。"
+
+### Report command #####
+report_provide_desc: "糟糕！無效的指令。請提供你的描述"
+report_failure: "無法送出報告。請稍後再試。"
+report_success: "感謝你的報告。\n報告已成功提交以供處理。"
+
+### Suggestions command #####
+suggestions_provide_desc: "糟糕！無效的指令。請提供你的描述"
+suggestions_failure: "無法送出建議。請稍後再試。"
+suggestions_success: "感謝你的建議！\n你的建議已成功提交。"
+
+### MyStats command ####
+mystats_error: "產生你的統計資料時發生錯誤。請稍後再試。"
+
+### TopStats command ####
+topstats_error: "產生統計資料時發生錯誤。請稍後再試。"
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **狀態結果：**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 使用者身分"
+patreon_logs_user_identity_value: |
+  **名稱：** %{fullName}
+  **Discord：** <@%{discordId}> (`%{discordId}`)
+  **電子郵件：** %{email}
+
+patreon_logs_details_title: "Patreon 詳細資訊"
+patreon_logs_details_value: |
+  **贊助金額：** $%{pledge}
+  **Patreon ID：** `%{patreonId}`
+  **狀態：** `%{status}`
+patreon_logs_date_title: "📅 日期"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "使用者身分"
+kofi_logs_user_identity_value: "**名稱：** %{fullName}\n**電子郵件：** ||%{email}||\n**公開：** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord 身分"
+kofi_logs_discord_identity_value: "**使用者：** %{discordUser}\n**ID：** %{discordId}"
+kofi_logs_payment_details_title: "付款詳情"
+kofi_logs_payment_details_value: "**金額：** %{currency} %{amount}\n**方案：** **%{tierName}**\n**類型：** %{type}"
+kofi_logs_sub_status_title: "訂閱狀態"
+kofi_logs_sub_status_value: "**是否訂閱：** %{isSub}\n**首次付款：** %{isFirst}"
+kofi_logs_message_title: "訊息 / 原因"
+kofi_logs_tech_title: "技術 / 交易 ID"
+kofi_logs_tech_value: "**Ko-fi Tx ID：** %{kofiTxId}\n**訊息 ID：** %{msgId}\n**網址：** [%{viewDetails}](%{url})\n**Token：** ||%{token}||"
+kofi_logs_view_details: "查看詳情"
+

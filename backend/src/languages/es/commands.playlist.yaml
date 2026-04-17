@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_add_match: "\u00a1Por favor proporciona un nombre de canci\u00f3n o URL v\u00e1lido!"
+pl_add_playlist: "Buscada **%{title}** `%{duration}` \u2022 (**%{track} Canciones**) \u2022 %{user}"
+pl_add_track: "Buscada **%{title}** \u2022 `%{duration}` \u2022 %{user}"
+pl_add_search: "Buscada **%{title}** \u2022 `%{duration}` \u2022 %{user}"
+pl_add_owner: "\u00a1No eres el **Propietario de la Lista de Reproducci\u00f3n**!"
+pl_add_limit_track: "No puedes a\u00f1adir m\u00e1s de **%{limit} Canciones**"
+pl_add_added: "A\u00f1adidas **%{count} Canciones** a `%{playlist}`"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` \u2022 (**%{tracks} Canciones**) \u2022 Creada: `[hace %{create}]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "P\u00e1gina \u2022 %{page}/%{pages} | Listas de Reproducci\u00f3n \u2022 %{songs}"
+pl_all_view_notnumber: "\u00a1Por favor proporciona un n\u00famero de p\u00e1gina v\u00e1lido!"
+pl_all_view_page_notfound: "\u00a1Solo hay **%{page} P\u00e1ginas**!"
+
+### pl-create commands ###
+pl_create_invalid: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_create_toolong: "El nombre de la Lista de Reproducci\u00f3n no puede tener m\u00e1s de **16 Caracteres**"
+pl_create_des_toolong: "La descripci\u00f3n de la Lista de Reproducci\u00f3n no puede tener m\u00e1s de **1000 Caracteres**"
+pl_create_limit_playlist: "No puedes crear m\u00e1s de **%{limit} Listas de Reproducci\u00f3n**"
+create_created_title: "\u00a1Nueva Lista de Reproducci\u00f3n Creada Exitosamente!"
+pl_create_created_footer: "\u00a1Escribe /pl editor para editar tu lista de reproducci\u00f3n!"
+pl_create_created: |
+  **Nombre de la Lista de Reproducci\u00f3n**
+  `%{playlist}`
+
+  **ID de la Lista de Reproducci\u00f3n**
+  `%{id}`
+
+  **Descripci\u00f3n**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+delete_notfound: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_delete_owner: "No eres el **Propietario de la Lista de Reproducci\u00f3n**"
+pl_delete_confirm: "\u00bfQuieres eliminar `%{playlist_id}`?"
+pl_delete_deleted: "La Lista de Reproducci\u00f3n `%{name}` ha sido **Eliminada** exitosamente"
+pl_delete_no: "\u00a1**Eliminaci\u00f3n** de Lista de Reproducci\u00f3n Cancelada!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "\u00a1Por favor proporciona un n\u00famero v\u00e1lido!"
+pl_detail_notfound: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_detail_private: "La Lista de Reproducci\u00f3n es **Privada**"
+pl_detail_track: "%{num}. **%{title}** \u2022 **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "Lista de Reproducci\u00f3n: %{name}"
+pl_detail_embed_footer: "P\u00e1gina \u2022 %{page}/%{pages} | Canciones \u2022 %{songs} | Duraci\u00f3n Total \u2022 %{duration}"
+pl_detail_notnumber: "\u00a1Por favor proporciona un n\u00famero de p\u00e1gina v\u00e1lido!"
+pl_detail_page_notfound: "Solo hay **%{page} P\u00e1ginas**"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "Ingresa tu **Nuevo ID de Lista de Reproducci\u00f3n** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "Ingresa tu **Nuevo Nombre de Lista de Reproducci\u00f3n**"
+pl_edit_playlist_des_label: "Ingresa tu **Nueva Descripci\u00f3n de Lista de Reproducci\u00f3n**"
+pl_edit_playlist_private_label: "Ingresa tu **Nueva Visibilidad de Lista de Reproducci\u00f3n** `[public/private]`"
+pl_edit_success: "Lista de reproducci\u00f3n editada exitosamente\nNuevo ID de Lista de Reproducci\u00f3n: `%{playlistId}`"
+pl_edit_arg: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_edit_notfound: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_edit_playlist_owner: "\u00a1No eres el **Propietario de la Lista de Reproducci\u00f3n**!"
+pl_edit_invalid_id: "\u00a1Por favor ingresa un ID de Lista de Reproducci\u00f3n v\u00e1lido y que no exista!"
+pl_edit_invalid_mode: "Modo de visibilidad inv\u00e1lido. Por favor usa **public** o **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Nuevo ID de Lista de Reproducci\u00f3n"
+ineraction_edit_playlist_name_label: "Nuevo Nombre de Lista de Reproducci\u00f3n"
+ineraction_edit_playlist_des_label: "Nueva Descripci\u00f3n de Lista de Reproducci\u00f3n"
+ineraction_edit_playlist_private_label: "Nueva Visibilidad de Lista de Reproducci\u00f3n"
+ineraction_edit_playlist_id_placeholder: "\u00a1Ingresa tu Nuevo ID de Lista de Reproducci\u00f3n! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "\u00a1Ingresa tu Nuevo Nombre de Lista de Reproducci\u00f3n!"
+ineraction_edit_playlist_des_placeholder: "\u00a1Ingresa tu Nueva Descripci\u00f3n de Lista de Reproducci\u00f3n!"
+ineraction_edit_playlist_private_placeholder: "\u00a1Ingresa tu Nueva Visibilidad de Lista de Reproducci\u00f3n! [public/private]"
+ineraction_edit_success: "Lista de reproducci\u00f3n editada exitosamente\nNuevo ID de Lista de Reproducci\u00f3n: `%{playlistId}`"
+ineraction_edit_playlist_error: "\u00a1Algo sali\u00f3 mal. Por favor int\u00e9ntalo de nuevo!"
+ineraction_edit_notfound: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+ineraction_edit_playlist_owner: "No eres el **Propietario de la Lista de Reproducci\u00f3n**"
+ineraction_edit_invalid_id: "\u00a1Por favor ingresa un ID de Lista de Reproducci\u00f3n v\u00e1lido y que no exista!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### Lista de Reproducci\u00f3n **%{name}** a\u00f1adida a la cola \u266a"
+pl_import_imported_footer: "\u00a1Disfruta %{tracks} canciones \u2022 %{duration} \u2022 de m\u00fasica!"
+pl_import_invalid: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_import_private: "La Lista de Reproducci\u00f3n es **Privada**"
+pl_import_voice: "\u00a1Necesitas estar en un canal de voz para usar este comando!"
+pl_import_empty: "La Lista de Reproducci\u00f3n est\u00e1 **Vac\u00eda**"
+
+### pl-info commands! ###
+pl_info_owner: "Propietario"
+pl_info_id: "ID"
+pl_info_des: "Descripci\u00f3n"
+pl_info_no_des: "\u00a1No se proporcion\u00f3 ninguna descripci\u00f3n!"
+pl_info_private: "Visibilidad"
+pl_public: "P\u00fablica"
+pl_private: "Privada"
+pl_info_total: "Total de Canciones"
+pl_info_created: "Creada"
+pl_info_invalid: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_remove_number_invalid: "\u00a1Por favor proporciona un n\u00famero v\u00e1lido!"
+pl_remove_notfound: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_remove_owner: "No eres el **Propietario de la Lista de Reproducci\u00f3n**"
+pl_remove_song_notfound: "\u00a1Canci\u00f3n no encontrada!"
+pl_remove_removed: "Eliminada la canci\u00f3n **N\u00famero %{position}** de `%{name}`"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_savequeue_notfound: "\u00a1Por favor proporciona un ID de Lista de Reproducci\u00f3n v\u00e1lido!"
+pl_savequeue_owner: "\u00a1No eres el **Propietario de la Lista de Reproducci\u00f3n**!"
+pl_savequeue_no_tracks: "\u00a1No se est\u00e1 reproduciendo ninguna canci\u00f3n!"
+pl_savequeue_no_new_saved: "La canci\u00f3n ya existe en `%{name}`"
+pl_savequeue_saved: "Guardadas **%{tracks} Canciones** en `%{name}`"
+
+pl_error_no_node: "No se encontr\u00f3 ning\u00fan servidor Lavalink. Por favor int\u00e9ntalo de nuevo despu\u00e9s de **5 Minutos**"

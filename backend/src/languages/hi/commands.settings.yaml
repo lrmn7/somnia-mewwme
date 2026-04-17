@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "24/7 मोड अब **सक्षम** है"
+247_off: "24/7 मोड अब **अक्षम** है"
+247_already: "24/7 मोड पहले से **%{mode}** है"
+247_arg_error: "अमान्य 24/7 मोड। कृपया %{text} का उपयोग करें"
+247_no_in_voice: "आप किसी वॉइस चैनल में नहीं हैं!"
+
+
+### Set Language command! ###
+provide_lang: "**अमान्य भाषा। कृपया उपयोग करें** `%{languages}`"
+lang_set: "**भाषा सेट की गई** `%{language}`"
+lang_change: "**भाषा बदली गई** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "कृपया एक मान्य प्रीफ़िक्स दें!"
+prefix_length: "**प्रीफ़िक्स 10 अक्षरों से लंबा नहीं हो सकता**"
+prefix_set: "**प्रीफ़िक्स सेट किया गया** `%{prefix}`"
+prefix_change: "**प्रीफ़िक्स बदला गया** `%{prefix}`"
+
+### Control command!
+control_set: "**प्लेयर कंट्रोल मोड %{toggle} पर सेट किया गया है**"
+control_arg_error: "अमान्य तर्क। कृपया %{text} का उपयोग करें"
+control_already: "गाने की सूचनाएँ पहले से **%{mode}** हैं"
+
+### Setup Music Req command! ###
+setup_arg_error: "अमान्य! कृपया %{text} का उपयोग करें"
+setup_enable: "**उफ़! संगीत प्रणाली पहले से मौजूद है।**"
+setup_topic: "♪ जो गाना चाहते हैं उन्हें हमेशा एक गीत मिलता है। ♪"
+setup_msg: "*`संगीत प्रणाली सफलतापूर्वक सेट की गई`* %{channel}\n```नोट: मेरे ठीक से काम करने के लिए कृपया मेरे द्वारा बनाए गए किसी भी संदेश को न हटाएँ।```"
+setup_null: "*`सेटअप चैनल सफलतापूर्वक हटाया गया!`*"
+setup_deleted: "*`सेटअप चैनल सफलतापूर्वक हटाया गया!`*"
+setup_null_inguild: "**इस सर्वर में संगीत प्रणाली नहीं मिली! डेटा हटाने के लिए तैयार**"
+setup_queuemsg: "**एक वॉइस चैनल में शामिल हों और यहाँ नाम या URL का उपयोग करके गाने बजाएँ!**"
+setup_playembed_author: "वर्तमान में कोई गाना नहीं बज रहा"
+
+### Themes command!
+error_themes: "अमान्य... कृपया फिर से प्रयास करें।"
+succes_themes: "**थीम सफलतापूर्वक %{themes} में बदली गई**"
+
+### Last FM Login command!
+lastfm_login_footer: "नोट: यह लिंक %{expired} में समाप्त हो जाएगा।"
+lastfm_login_title: "Last.fm लॉगिन"
+lastfm_login_desc: "क्या आप अपने [Last.fm](https://www.last.fm/user/eleremen) खाते को अधिकृत करना चाहेंगे?\nयदि हाँ, तो कृपया प्राधिकरण प्रक्रिया शुरू करने के लिए नीचे दिए गए बटन पर क्लिक करें।"
+lastfm_not_login_desc: "आप Last.fm पर लॉगिन नहीं हैं"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm लॉगआउट"
+lastfm_logout_desc: "आपने Last.fm से सफलतापूर्वक लॉगआउट कर लिया है"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm सुविधा अक्षम है।"
+lastfm_feature_disabled_desc: "Last.fm सुविधा वर्तमान में अक्षम है। अधिक जानकारी के लिए कृपया व्यवस्थापक से संपर्क करें।"
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "YouTube चैनल **%{ytchannel}** के लिए कोई सूचना नहीं मिली।"
+notify_youtube_removed: "आपने YouTube चैनल **%{ytchannel}** के लिए सूचना हटा दी है।"
+notify_youtube_disabled: "YouTube सूचना सुविधा वर्तमान में अक्षम है। अधिक जानकारी के लिए स्टाफ़ से संपर्क करें।"
+notify_youtube_already: "YouTube चैनल %{ytchannel} के लिए सूचनाएँ पहले से सेट हैं।"
+notify_youtube_invalid_channel: "एक मान्य टेक्स्ट चैनल निर्दिष्ट करने में त्रुटि हुई। कृपया जाँच करें!"
+notify_youtube_set: "YouTube सूचना **%{ytchannel}** के लिए %{channelid} में सेट की गई है।"
+notify_youtube_404: |
+  दिया गया YouTube चैनल ID नहीं मिल सका।
+  चैनल ID खोजने के लिए, YouTube चैनल पेज पर जाएँ और URL जाँचें।
+  चैनल ID `/channel/` के बाद अक्षरों और संख्याओं की स्ट्रिंग है (उदाहरण: `UC_x5XG1OV2P6uZZ5FSM9Ttw`)।
+notify_youtube_limit_reached_non_premium: |
+   आप %{limit} सूचनाओं की सीमा पर पहुँच गए हैं।
+   [premium](%{premium}) में अपग्रेड करके, आप %{limitpremium} सूचनाएँ तक सेट कर सकते हैं।
+
+notify_youtube_limit_reached_premium: |
+   आप %{limit} सूचनाओं की सीमा पर पहुँच गए हैं।
+   यह अधिकतम अनुमत सीमा है। नई सूचनाओं के लिए जगह बनाने हेतु कुछ सूचनाएँ हटाने पर विचार करें।
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Twitch उपयोगकर्ता नाम **%{twitchusername}** के लिए कोई सूचना नहीं मिली।"
+notify_twitch_removed: "आपने Twitch उपयोगकर्ता नाम **%{twitchusername}** के लिए सूचना हटा दी है।"
+notify_twitch_disabled: "Twitch सूचना सुविधा वर्तमान में अक्षम है। अधिक जानकारी के लिए स्टाफ़ से संपर्क करें।"
+notify_twitch_already: "आपने Twitch चैनल %{twitchusername} के लिए पहले से सूचनाएँ सेट कर रखी हैं।"
+notify_twitch_invalid_channel: "एक मान्य टेक्स्ट चैनल निर्दिष्ट करने में त्रुटि हुई। कृपया जाँच करें!"
+notify_twitch_set: "Twitch सूचना **%{twitchusername}** के लिए %{channelid} में सेट की गई है।"
+notify_twitch_error: "Twitch सूचना **{twitchusername}** चैनल **{channelid}** में प्रोसेस करते समय एक अप्रत्याशित त्रुटि हुई। कृपया पुनः प्रयास करें या समस्या बनी रहने पर सपोर्ट से संपर्क करें।"
+notify_twitch_limit_reached_non_premium: |
+   आप %{limit} सूचनाओं की सीमा पर पहुँच गए हैं।
+   [premium](%{premium}) में अपग्रेड करके, आप %{limitpremium} सूचनाएँ तक सेट कर सकते हैं।
+
+notify_twitch_limit_reached_premium: |
+   आप %{limit} सूचनाओं की सीमा पर पहुँच गए हैं।
+   यह अधिकतम अनुमत सीमा है। नई सूचनाओं के लिए जगह बनाने हेतु कुछ सूचनाएँ हटाने पर विचार करें।
+
+### Temp Voice Feature command!
+tempvoice_setup: "टेम्प वॉइस सुविधा %{status} कर दी गई है।"
+tempvoice_disabled: "टेम्प वॉइस अक्षम कर दिया गया है।"
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "अमान्य... केवल %{text}।"
+status_voice_channel_true: "स्टेटस वॉइस चैनल **%{type}** पर सेट किया गया है।"
+status_voice_channel_false: "स्टेटस वॉइस चैनल **%{type}** पर सेट किया गया है।"
+
+
+### Patreon Claim command!
+not_in_guild: "यह कमांड केवल सर्वर पर ही चलाया जा सकता है!"
+no_data_patreon: "Patreon डेटा नहीं मिला (डेटाबेस त्रुटि)"
+no_data_patreon_title: "नहीं मिला"
+no_data_patreon_desc: |
+  यदि आपने पहले ही सदस्यता ले ली है, तो सुनिश्चित करें कि आपका Discord खाता Patreon से जुड़ा हुआ है!
+no_data_patreon_footer: "Patreon सिंक में कुछ समय लग सकता है, कृपया कुछ देर बाद फिर से जाँच करें"
+no_patreon_guild_membership: |
+  नमस्ते, आपकी patreon योजना **उपयोगकर्ता टियर** है।
+  प्रीमियम सर्वर एक्सेस अनलॉक करने के लिए कृपया **सर्वर टियर** में अपग्रेड करें।
+patreon_guild_membership_full_quota: |
+  आपने अपने सभी सर्वर कोटा का उपयोग कर लिया है!
+  **स्थिति:** %{status} सर्वर उपयोग किए गए।
+
+  समाधान:
+  1. patreon पर अपना टियर अपग्रेड करें।
+  2. या अपने पुराने सर्वर पर प्रीमियम अक्षम करें।
+patreon_guild_membership_already_before: "आपने इस सर्वर पर पहले ही प्रीमियम सक्रिय कर लिया है!"
+patreon_guild_membership_already: "**पहले से प्रीमियम** क्योंकि यह किसी और द्वारा प्रायोजित है।\nअपना कोटा अन्य सर्वरों के लिए बचाएँ!"
+patreon_guild_membership_claim_title: "सक्रियण पुष्टि"
+patreon_guild_membership_claim_desc: |
+  क्या आप वाकई इसके लिए **प्रीमियम सर्वर** सक्रिय करना चाहते हैं:
+  **%{guildName}**
+
+  यह क्रिया **1 सर्वर कोटा** का उपयोग करेगी।
+  शेष कोटा: **%{status}**
+patreon_guild_membership_claim_success: |
+  सफलता! **%{guildName}** अब एक **प्रीमियम सर्वर** है।
+
+  **प्रायोजक:** %{user}
+  **शेष कोटा:** %{status}
+  patreon पर हमारा समर्थन करने के लिए धन्यवाद!
+patreon_guild_membership_claim_success_title: "💎 प्रीमियम सक्रिय!"
+patreon_guild_membership_claim_cancel: "प्रीमियम सक्रियण रद्द किया गया।"
+patreon_guild_membership_claim_norespon: "कोई प्रतिक्रिया न मिलने के कारण सक्रियण स्वचालित रूप से रद्द कर दिया गया।"
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 सर्वर रिडीम किया गया (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **प्रायोजक उपयोगकर्ता:** %{sponsorTag} %{sponsorId}
+  **लक्ष्य सर्वर:** %{guildName} %{guildId}
+  **कोटा स्थिति:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "आप इस प्रीमियम सर्वर को रद्द नहीं कर सकते क्योंकि आपने इसे पंजीकृत नहीं किया है।"
+patreon_guild_unclaim_title: "प्रीमियम रद्दीकरण पुष्टि"
+patreon_guild_unclaim_desc: |
+  क्या आप वाकई **%{guildName}** सर्वर की प्रीमियम स्थिति **रद्द** करना चाहते हैं?
+  **प्रभाव:** इस सर्वर पर प्रीमियम सुविधाएँ अक्षम हो जाएँगी।
+  आपका सर्वर कोटा बहाल हो जाएगा (+1)।
+  वर्तमान शेष कोटा: **%{status}**
+patreon_guild_unclaim_success_title: "प्रीमियम रद्द किया गया"
+patreon_guild_unclaim_success: |
+  **%{guildName}** के लिए प्रीमियम स्थिति सफलतापूर्वक रद्द कर दी गई है।
+  **कोटा बहाल:** 1 सर्वर
+  **नया शेष कोटा:** %{status}
+patreon_guild_unclaim_cancel: "प्रीमियम रद्दीकरण प्रक्रिया रद्द की गई।"
+patreon_guild_unclaim_norespon: "⏱️ समय समाप्त। प्रक्रिया रद्द की गई।"
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "अनक्लेम किए गए सर्वर (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **उपयोगकर्ता:** %{sponsorTag} %{sponsorId}
+  **सर्वर:** %{guildName}} %{guildId}
+  **कोटा बहाल:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **उपयोगकर्ता:** %{userTag} (%{userId})
+  **सर्वर:** %{guildName} (%{guildId})
+  **कोटा:** %{quota}
+  **समाप्ति:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} कार्रवाई: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "लेन-देन ID नहीं मिला या पहले से क्लेम किया जा चुका है।"
+kofi_linked_success_title: "भुगतान सफलतापूर्वक लिंक किया गया!"
+kofi_linked_success_desc: "अब आप TxID के बिना `/premium claim <kofi>` का उपयोग कर सकते हैं।"
+kofi_no_data_title: "कोई डेटा नहीं मिला!"
+kofi_no_data_desc: |
+  यदि आपने पहले ही भुगतान कर दिया है लेकिन अपना Discord खाता Kofi से नहीं जोड़ा है
+  उपयोग करें: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "कोई कोटा नहीं, लेकिन आप एक प्रीमियम उपयोगकर्ता हैं।"
+kofi_full_server_quota_title: "कोटा भर गया!"
+kofi_full_server_quota_desc: "आपने **%{quota}** सर्वर स्लॉट का उपयोग कर लिया है।"
+kofi_server_already_claim_desc: "**पहले से सक्रिय!**\nआपने इस सर्वर पर पहले ही प्रीमियम सक्रिय कर लिया है।"
+kofi_server_already_active_desc: " **पहले से प्रीमियम!**\nयह सर्वर किसी अन्य उपयोगकर्ता द्वारा पहले ही प्रीमियम के रूप में सक्रिय किया जा चुका है।"
+kofi_guild_membership_claim_success: |
+  प्रीमियम सफलतापूर्वक सक्रिय किया गया!
+  **कोटा उपयोग:** %{quota}
+  **समाप्ति:** %{expires}
+kofi_guild_membership_claim_footer: "आपके समर्थन के लिए धन्यवाद!"
+kofi_action_title: "🏗️ Ko-fi कार्रवाई: %{type}"
+kofi_action_description: "**उपयोगकर्ता:** %{userTag} (`%{userId}`)\n**सर्वर:** %{guildName} (`%{guildId}`)\n**कार्रवाई:** %{action}\n**कोटा:** %{quota}"
+kofi_action_activation: "सर्वर सक्रिय"
+kofi_action_manual_link: "मैनुअल भुगतान लिंक किया गया"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "प्रीमियम रद्द किया गया"
+kofi_guild_unclaim_success_desc: |
+  **%{guildName}** के लिए प्रीमियम स्थिति सफलतापूर्वक रद्द कर दी गई है।
+  **कोटा बहाल:** 1 सर्वर
+kofi_guild_not_owned_by_user: "आप इस प्रीमियम सर्वर को रद्द नहीं कर सकते क्योंकि आपने इसे पंजीकृत नहीं किया है।"
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "अनक्लेम किए गए सर्वर %{platform}"
+premium_unclaim_log_desc: |
+  **उपयोगकर्ता:** %{userTag} %{userId}
+  **सर्वर:** %{guildName}} %{guildId}
+  **कोटा बहाल:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "DJ भूमिका प्रणाली **अक्षम** कर दी गई है।"
+dj_role_missing_role: "`set` कार्रवाई का उपयोग करने के लिए आपको एक भूमिका प्रदान करनी होगी।"
+dj_role_set: |
+  DJ भूमिका %{role} पर सेट की गई है।
+  स्थिति: **सक्षम**
+  **प्रभावित कमांड:**
+  %{commands}

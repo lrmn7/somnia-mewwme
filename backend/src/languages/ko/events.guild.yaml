@@ -1,0 +1,28 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+joined_title: "📥 서버에 참여했습니다!"
+leave_title: "📥 서버를 떠났습니다!"
+guild_name: "이름"
+guild_id: "ID"
+guild_owner: "소유자"
+guild_member_count: "멤버 수"
+guild_creation_date: "생성일"
+guild_join_date: "참여일"
+current_server_count: "현재 서버 수"
+
+### message that the bot will send if it has just joined the server
+join_msg_title: "OMG! 안녕하세요 여러분 ✧(≖◡≖) ♡"
+join_msg_desc: |
+  ### 저와 함께해 주셔서 감사합니다 (*≧▽≦)
+  ### 저를 멘션해서 명령어를 사용할 수도 있어요! </help:1088430405033656341>을 입력하여 슬래시 명령어를 확인하세요 ♡

@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "やったー！自動再生が**有効**になりました"
+autoplay_off: "うーん、自動再生が**無効**になりました"
+autoplay_no_song: "再生中の曲がありません！"
+
+### Loop command!
+loop_current: "現在の曲がループ再生されます。繰り返しをお楽しみください！"
+loop_all: "キューがループに設定されました。音楽をリピートでお楽しみください！"
+unloop_all: "ループモードがオフになりました。さまざまな曲をお楽しみください！"
+
+### Pause command!
+pause_msg: "音楽が一時停止されました。少し休憩して静寂をお楽しみください。"
+
+### Resume command!
+resume_msg: "音楽が再開されました！グルーヴを続けましょう ♪"
+
+previous_notfound: "申し訳ありません、これ以上戻れません。前の曲が見つかりません :("
+previous_msg: "巻き戻しますね！前の曲をお届けします <3"
+
+### Queue command!
+queue_title: "キュー再生中..."
+queue_description: "**%{title} **\n\n**残りのキュー %{list_song}**"
+queue_footer: "ページ • %{page}/%{pages} | 曲数 • %{queue_lang} | 合計時間 • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "キューをシャッフルしましたよ！"
+
+### Skip command!
+skip_msg: "曲をスキップしました。気にしないでね :p"
+skip_notfound: "おっと！スキップする曲がありません！今の曲を楽しんでね ♪"
+
+### Stop command!
+stop_msg: "音楽の再生が停止されました。楽しい時間を過ごせましたか？"
+
+### Volume command!
+voldown_msg: "音量が%{volume}%下がりました。落ち着いた雰囲気をお楽しみください！"
+volume_invalid: "無効な音量です。**1**から**100**の範囲で指定してください"
+volup_msg: "音量が%{volume}%上がりました。盛り上がっていきましょう！"
+volume_max: "音量を100%以上にすることはできません"
+volume_min: "あらら、もう最小音量です！"

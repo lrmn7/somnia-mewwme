@@ -23,7 +23,6 @@ export async function getMemberStatus(
     return;
   }
   const Member = await Guild.members.fetch(userId).catch(() => undefined);
-  // true only when the user is in the exact same channel as the bot
   if (Member && Member.voice.channelId && Member.voice.channelId === player.voiceId) {
     isMemeberInVoice = true;
   }

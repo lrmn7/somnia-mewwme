@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "已启用"
+disable: "已禁用"
+
+# maintenance
+maintenance_title: "维护中"
+maintenance_desc: |
+  %{bot} 目前正在进行维护。请稍后再试。
+  如需更多信息，请加入我们的 [支持服务器](%{serversupport})。谢谢！
+
+# Getting error!
+unexpected_error: "出了点问题。请稍后再试！"
+
+### Rate limit!
+ratelimit: "你的操作过于频繁。请等待 **%{time} 秒**"
+
+# No permission!
+no_perms: "我没有 **%{perm}** 权限！\n请授予我 **%{perm}** 权限以执行此命令。"
+
+no_manage_guild_perms: "此命令需要 **%{perm}** 权限！\n你没有权限执行此命令！"
+
+no_admin_perms: "此命令需要 **%{perm}** 权限！\n你没有权限执行此命令！"
+
+# No permission!
+no_perms_channel: "我在 %{channel} 中没有 **%{perm}** 权限来执行此命令！"
+
+# Execute when invalid
+no_node: "**未找到 Lavalink 服务器。请在 5 分钟后重试**"
+
+# Client owner!
+owner_only: "此命令只能由机器人**所有者**执行"
+
+# Need to join voice & same voice to use command!
+no_player: "当前没有歌曲在播放！"
+no_same_voice: "你和我不在同一个语音频道！"
+no_in_voice: "你不在语音频道中！"
+
+# Blacklist User
+blacklist_user: "看起来你已被列入黑名单！你没有权限使用命令。\n如果你认为这是一个错误，请联系**[开发者](%{serversupport})**。"
+
+# Blacklist Guild
+blacklist_guild: "此服务器已被列入黑名单！你没有权限在此服务器中使用命令。\n如果你认为这是一个错误，请联系**[开发者](%{serversupport})**。"
+
+### DjRole No Permission ###
+not_dj_role: "你必须拥有 %{role} 身份组才能使用此命令。"
+
+### No Premium Event!
+no_premium_button: "获取 Premium"
+no_premium_author: "无 Premium 方案"
+no_premium_desc: "糟糕！看起来你还没有 premium 方案。\n没有方案就无法使用此功能。"
+
+# Top.gg error
+topgg_error_author: "Top.gg 投票错误"
+topgg_error_desc: "在 top.gg 上验证你的投票时出错，可能是 Top.gg 服务器宕机。请在 5-10 分钟后重试。\n如果此问题持续存在，请联系我们的 [支持服务器](%{serversupport}) 以获取进一步帮助。"
+
+# Top.gg unvote
+topgg_unvote_button: "投票解锁"
+premium_button: "升级到 premium"
+topgg_unvote_author: "需要投票"
+topgg_unvote_desc: "你需要投票才能使用此命令！投票快速且免费。\n或者，在我们的 [Premium 页面](%{premium}) 获取 premium，跳过此消息并解锁额外功能。"
+
+### Mention Desc ###
+mention_content: "此服务器的前缀是 `%{prefix}`\n你也可以通过 @ 我来使用命令，或输入 </help:1294325423957741598> 查看我的斜杠命令 ♡"

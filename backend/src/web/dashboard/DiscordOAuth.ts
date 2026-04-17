@@ -78,13 +78,6 @@ export function createDiscordOAuth(cfg: OAuthConfig) {
       return res.data;
     },
 
-    async fetchUserById(userId: string): Promise<DiscordUser> {
-      const res = await axios.get<DiscordUser>(`${DISCORD_API}/users/${userId}`, {
-        headers: { Authorization: `Bot ${cfg.botToken}` },
-      });
-      return res.data;
-    },
-
     async fetchBotGuilds(): Promise<DiscordGuild[]> {
       if (botGuildsCache && Date.now() - botGuildsCacheAt < BOT_GUILDS_TTL_MS) {
         return botGuildsCache;

@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "Aktiviert"
+disable: "Deaktiviert"
+
+# maintenance
+maintenance_title: "Wartung"
+maintenance_desc: |
+  %{bot} wird derzeit gewartet. Bitte versuche es spaeter erneut.
+  Fuer weitere Informationen tritt bitte unserem [Support-Server](%{serversupport}) bei. Danke!
+
+# Getting error!
+unexpected_error: "Etwas ist schiefgelaufen. Bitte versuche es spaeter erneut!"
+
+### Rate limit!
+ratelimit: "Du fuehrst Aktionen zu schnell aus. Bitte warte **%{time} Sekunden**"
+
+# No permission!
+no_perms: "Ich habe keine **%{perm}**-Berechtigung!\nBitte erteile mir die **%{perm}**-Berechtigung, um diesen Befehl auszufuehren."
+
+no_manage_guild_perms: "Dieser Befehl erfordert die **%{perm}**-Berechtigung!\nDu hast keine Berechtigung, diesen Befehl auszufuehren!"
+
+no_admin_perms: "Dieser Befehl erfordert die **%{perm}**-Berechtigung!\nDu hast keine Berechtigung, diesen Befehl auszufuehren!"
+
+# No permission!
+no_perms_channel: "Ich habe keine **%{perm}**-Berechtigung in %{channel}, um diesen Befehl auszufuehren!"
+
+# Execute when invalid
+no_node: "**Kein Lavalink-Server gefunden. Bitte versuche es in 5 Minuten erneut**"
+
+# Client owner!
+owner_only: "Dieser Befehl kann nur vom Bot-**Besitzer** ausgefuehrt werden"
+
+# Need to join voice & same voice to use command!
+no_player: "Es wird gerade kein Song abgespielt!"
+no_same_voice: "Du bist nicht im selben Sprachkanal wie ich!"
+no_in_voice: "Du bist in keinem Sprachkanal!"
+
+# Blacklist User
+blacklist_user: "Es sieht so aus, als ob du auf der Blacklist stehst! Du darfst keine Befehle verwenden.\nBitte kontaktiere den **[Entwickler](%{serversupport})**, wenn du glaubst, dass dies ein Fehler ist."
+
+# Blacklist Guild
+blacklist_guild: "Dieser Server steht auf der Blacklist! Du darfst auf diesem Server keine Befehle verwenden.\nBitte kontaktiere den **[Entwickler](%{serversupport})**, wenn du glaubst, dass dies ein Fehler ist."
+
+### DjRole No Permission ###
+not_dj_role: "Du musst die Rolle %{role} haben, um diesen Befehl zu verwenden."
+
+### No Premium Event!
+no_premium_button: "Premium holen"
+no_premium_author: "Kein Premium-Plan"
+no_premium_desc: "Hoppla! Es sieht so aus, als haettest du noch keinen Premium-Plan.\nDiese Funktion ist ohne einen nicht zugaenglich."
+
+# Top.gg error
+topgg_error_author: "Vote Top.gg Fehler"
+topgg_error_desc: "Beim Verifizieren deiner Stimme auf top.gg ist ein Fehler aufgetreten, moeglicherweise weil Top.gg nicht erreichbar ist. Bitte versuche es in 5-10 Minuten erneut.\nWenn dieses Problem weiterhin besteht, kontaktiere bitte unseren [Support-Server](%{serversupport}) fuer weitere Hilfe."
+
+# Top.gg unvote
+topgg_unvote_button: "Abstimmen zum Freischalten"
+premium_button: "Auf Premium upgraden"
+topgg_unvote_author: "Abstimmung erforderlich"
+topgg_unvote_desc: "Du musst abstimmen, um auf diesen Befehl zugreifen zu koennen! Es ist schnell und kostenlos.\nAlternativ erhalte Premium auf unserer [Premium-Seite](%{premium}), um diese Nachricht zu ueberspringen und zusaetzliche Funktionen freizuschalten."
+
+### Mention Desc ###
+mention_content: "Mein Praefix fuer diesen Server `%{prefix}`\nDu kannst mich auch anpingen, um Befehle zu verwenden, oder tippe </help:1294325423957741598> um meine Slash-Befehle anzuzeigen ♡"

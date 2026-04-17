@@ -2,17 +2,10 @@ import { Manager } from "../../manager.js";
 import Fastify from "fastify";
 import { ChannelType, PermissionsBitField } from "discord.js";
 
-/* ── In-memory caches ─────────────────────────────────────────────────────── */
-
-/** Full response cache – 60 s TTL */
 let cachedResponse: object | null = null;
 let cacheExpiry = 0;
-
-/** Invite link cache – 10 min TTL per guild */
 const inviteCache = new Map<string, { url: string | null; expiresAt: number }>();
 const INVITE_TTL_MS = 10 * 60 * 1000; // 10 minutes
-
-/* ── Helpers ───────────────────────────────────────────────────────────────── */
 
 async function resolveInvite(client: Manager, guildId: string): Promise<string | null> {
   const now = Date.now();
@@ -31,7 +24,6 @@ async function resolveInvite(client: Manager, guildId: string): Promise<string |
     return null;
   }
 
-  // Find a text channel where we can create an invite
   const channel = guild.channels.cache.find(
     (c) =>
       c.type === ChannelType.GuildText &&
@@ -54,17 +46,6 @@ async function resolveInvite(client: Manager, guildId: string): Promise<string |
   }
 }
 
-/* ── Route handler ─────────────────────────────────────────────────────────── */
-
-/**
- * GET /v1/global-stats
- *
- * Returns aggregated global music statistics:
- * - globalListenTimeMs, globalTracksPlayed
- * - topGuilds  (top 10 by tracksPlayed)
- * - topTracks  (top 10 across all guilds)
- * - topArtists (top 10 across all guilds)
- */
 export async function getGlobalStats(
   client: Manager,
   _req: Fastify.FastifyRequest,
@@ -72,19 +53,16 @@ export async function getGlobalStats(
 ) {
   const now = Date.now();
 
-  // Return cached response if still fresh
   if (cachedResponse && cacheExpiry > now) {
     return res.send(cachedResponse);
   }
 
-  // ── Fetch all guild data in parallel ─────────────────────────────────────
   const [allStats, allTopTracks, allTopArtists] = await Promise.all([
     (client.db.GuildStats as any).all() as Promise<{ id: string; value: any }[]>,
     (client.db.GuildTopTrack as any).all() as Promise<{ id: string; value: any }[]>,
     (client.db.GuildTopArtist as any).all() as Promise<{ id: string; value: any }[]>,
   ]);
 
-  // ── Global totals ────────────────────────────────────────────────────────
   let globalListenTimeMs = 0;
   let globalTracksPlayed = 0;
 
@@ -93,7 +71,6 @@ export async function getGlobalStats(
     globalTracksPlayed += entry.value?.tracksPlayed ?? 0;
   }
 
-  // ── Top 10 guilds by tracksPlayed ────────────────────────────────────────
   const guildEntries = allStats
     .filter((e) => e.value && e.value.tracksPlayed > 0)
     .sort((a, b) => (b.value.tracksPlayed ?? 0) - (a.value.tracksPlayed ?? 0))
@@ -116,7 +93,6 @@ export async function getGlobalStats(
     })
   );
 
-  // ── Aggregate top tracks across all guilds ───────────────────────────────
   const trackMap = new Map<
     string,
     {
@@ -150,7 +126,6 @@ export async function getGlobalStats(
   }
   const topTracks = [...trackMap.values()].sort((a, b) => b.count - a.count).slice(0, 10);
 
-  // ── Aggregate top artists across all guilds ──────────────────────────────
   const artistMap = new Map<
     string,
     {
@@ -183,7 +158,6 @@ export async function getGlobalStats(
   }
   const topArtists = [...artistMap.values()].sort((a, b) => b.count - a.count).slice(0, 10);
 
-  // ── Build & cache response ───────────────────────────────────────────────
   const response = {
     globalListenTimeMs,
     globalTracksPlayed,

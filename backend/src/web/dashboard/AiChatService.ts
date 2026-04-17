@@ -19,7 +19,7 @@ export interface AiChatResponse {
   error?: string;
 }
 
-const SYSTEM_PROMPT = `You are Mewwme — a chill music friend living inside a Discord music bot dashboard. Created by L RMN.
+const SYSTEM_PROMPT = `You are Mewwme a chill music friend living inside a Discord music bot dashboard. Created by L RMN.
 
 You're not a search engine. You're not an assistant. You're a friend who happens to love music.
 
@@ -115,7 +115,6 @@ Be a friend first. Music buddy second. Never be a robot. Chat naturally. Only su
 const MAX_HISTORY = 20;
 const MAX_SONGS = 10;
 
-/** Function signature for searching tracks via the bot API */
 export type SearchFn = (query: string) => Promise<{ thumbnail: string | null } | null>;
 
 export function createAiChatService(client: Manager, searchFn?: SearchFn) {
@@ -129,7 +128,6 @@ export function createAiChatService(client: Manager, searchFn?: SearchFn) {
     client.logger.warn("AiChatService", "GeminiAiChat.ApiKeys is empty AI Chat will be disabled");
   }
 
-  // Create a GenAI instance per API key
   const genAIInstances = apiKeys.map((key) => new GoogleGenerativeAI(key));
 
   function parseSongs(text: string): { cleanText: string; songs: AiChatSong[] } {
@@ -192,7 +190,6 @@ export function createAiChatService(client: Manager, searchFn?: SearchFn) {
     );
   }
 
-  /** Enrich songs with artwork thumbnails by searching the bot's music API */
   async function enrichWithArtwork(songs: AiChatSong[]): Promise<AiChatSong[]> {
     if (!searchFn || songs.length === 0) return songs;
 
@@ -223,7 +220,6 @@ export function createAiChatService(client: Manager, searchFn?: SearchFn) {
 
     let lastError: any = null;
 
-    // Try each API key, and for each key try the model chain
     for (let k = 0; k < genAIInstances.length; k++) {
       const genAI = genAIInstances[k];
 
@@ -250,7 +246,6 @@ export function createAiChatService(client: Manager, searchFn?: SearchFn) {
               );
               continue;
             }
-            // Last model — break to try next key
             client.logger.warn(
               "AiChatService",
               `Key[${k}] all models exhausted (${errMsg.slice(0, 80)}), trying next key`
@@ -258,7 +253,6 @@ export function createAiChatService(client: Manager, searchFn?: SearchFn) {
             break;
           }
 
-          // Non-retryable error — stop entirely
           client.logger.error("AiChatService", `Non-retryable error: ${errMsg.slice(0, 120)}`);
           k = genAIInstances.length; // break outer loop
           break;

@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**Di mana mereka yang ingin bernyanyi selalu menemukan lagu ♪\nBergabunglah dengan melodi di server Discord-mu hari ini!**"
+about_desc2: |
+  ・Prefix bot untuk server ini adalah `%{prefix}`
+  ・Ubah prefix dengan `%{prefix} prefix <prefix baru>`
+  ・Putar lagu dengan link atau kata kunci `%{prefix} play`
+  Kunjungi **[website](%{website})** kami atau gunakan perintah `%{prefix} help` untuk perintah lainnya.
+about_desc3: |
+  **Perhatian!**
+  Saya lebih baik memiliki izin `Administrator`, tapi...
+  Meskipun kamu tidak memberikan izin tersebut, saya masih bisa bekerja, tapi mungkin tidak bisa melakukan semua hal yang saya mampu. Hanya memberitahu!
+
+  **Bantuan dan Dukungan**
+  Bergabunglah ke **[server dukungan](%{serversupport})** kami jika kamu butuh bantuan, ingin mendapatkan informasi tentang pembaruan dan masalah, atau ingin berinteraksi dengan komunitas!
+
+### Help command!
+finder_invalid: "Perintah Tidak Valid"
+finder_example: "Aku tidak bisa membantumu menemukan itu! Cari perintah yang *sebenarnya*!"
+finder_name: "**Perintah:**"
+finder_des: " **Deskripsi:**"
+finder_usage: "**Penggunaan:**"
+finder_access: "**Dapat diakses oleh:**"
+finder_aliases: "**Alias:**"
+finder_slash: "**Slash:**"
+finder_des_no: "Tidak bisa menemukan deskripsi, maaf tentang itu..."
+finder_usage_no: "Aku tidak yakin cara menggunakan perintah ini."
+finder_aliases_prefix: "[Prefix saja]"
+finder_aliases_no: "Kamu tidak bisa menggunakan perintah ini dengan alias."
+finder_slash_enable: "Aktif"
+finder_slash_disable: "Nonaktif"
+command_not_found: "Perintah tidak dikenal"
+select_menu: "Nikmati musik bersamaku!"
+help_timeout: "Menu Bantuan telah habis waktu coba gunakan **`%{prefix}help`** atau **`/help`** lagi."
+homepage_title: "Di mana mereka yang ingin bernyanyi selalu menemukan lagu ♪\nBergabunglah dengan melodi di server Discord-mu hari ini!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **Musik 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify Connect**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **Audio Berkualitas Tinggi**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Scrobble dengan Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **Main & Berkompetisi di Mini Games**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer & Lainnya...**
+
+  <a:ask:1291123964080558121> **Apakah kamu ingin upgrade ke paket [Premium](%{premium})?**
+### Rating bot commands! ###
+rating_desc: "Terima kasih %{user} telah memberikan bintang untuk bot musik Discord kami!"
+rating_succes: "Terima kasih atas penilaianmu!\nPenilaianmu telah berhasil dikirim."
+rating_failure: "Gagal mengirim laporan. Silakan coba lagi nanti."
+
+### Report command #####
+report_provide_desc: "Ups! Perintah tidak valid. Silakan berikan deskripsimu"
+report_failure: "Gagal mengirim laporan. Silakan coba lagi nanti."
+report_success: "Terima kasih atas laporanmu.\nLaporan telah berhasil dikirim untuk diselesaikan."
+
+### Suggestions command #####
+suggestions_provide_desc: "Ups! Perintah tidak valid. Silakan berikan deskripsimu"
+suggestions_failure: "Gagal mengirim saran. Silakan coba lagi nanti."
+suggestions_success: "Terima kasih atas saranmu!\nSaranmu telah berhasil dikirim."
+
+### MyStats command ####
+mystats_error: "Terjadi kesalahan saat membuat statistikmu. Silakan coba lagi nanti."
+
+### TopStats command ####
+topstats_error: "Terjadi kesalahan saat membuat statistikmu. Silakan coba lagi nanti."
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **Hasil Status:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 Identitas Pengguna"
+patreon_logs_user_identity_value: |
+  **Nama:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **Email:** %{email}
+
+patreon_logs_details_title: "Detail Patreon"
+patreon_logs_details_value: |
+  **Pledge:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **Status:** `%{status}`
+patreon_logs_date_title: "📅 Tanggal"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "Identitas Pengguna"
+kofi_logs_user_identity_value: "**Nama:** %{fullName}\n**Email:** ||%{email}||\n**Publik:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Identitas Discord"
+kofi_logs_discord_identity_value: "**Pengguna:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "Detail Pembayaran"
+kofi_logs_payment_details_value: "**Jumlah:** %{currency} %{amount}\n**Tier:** **%{tierName}**\n**Tipe:** %{type}"
+kofi_logs_sub_status_title: "Status Langganan"
+kofi_logs_sub_status_value: "**Langganan:** %{isSub}\n**Pembayaran Pertama:** %{isFirst}"
+kofi_logs_message_title: "Pesan / Alasan"
+kofi_logs_tech_title: "Teknis / ID Transaksi"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**Msg ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Token:** ||%{token}||"
+kofi_logs_view_details: "Lihat Detail"
+

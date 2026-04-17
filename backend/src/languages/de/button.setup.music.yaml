@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Die Musikwiedergabe wurde gestoppt. Hoffentlich hattest du eine tolle Zeit!"
+skip_notfound: "Hoppla. Es gibt keinen Track zum Ueberspringen!"
+skip_msg: "Ich habe den Track uebersprungen. Hoffentlich stoert es dich nicht :p"
+previous_msg: "Na gut, wir spulen zurueck! Vorheriger Track kommt <3"
+previous_notfound: "Tut mir leid, ich kann nicht weiter zurueckspulen. Kein vorheriger Track gefunden :("
+resume_msg: "Musik ist wieder an! Lass uns weitermachen ♪"
+pause_msg: "Musik ist pausiert. Mach eine Pause und geniesse die Stille."
+loop_current: "Der aktuelle Song wird jetzt in Schleife abgespielt. Viel Spass beim Wiederholen!"
+loop_all: "Die Warteschlange wird jetzt in Schleife abgespielt. Lass die Musik auf Repeat laufen!"
+unloop_all: "Der Schleifenmodus wurde deaktiviert. Geniesse die Vielfalt der Tracks!"
+
+### Need to join voice & same voice to use command!
+no_player: "Du drueckst einen Button und nichts passiert. Vielleicht solltest du zuerst etwas abspielen!"
+no_same_voice: "Du drueckst einen Button und er leuchtet rot. Du bist nicht im selben Sprachkanal wie ich!"
+no_in_voice: "Alle Buttons reagieren nicht auf dich. Du bist in keinem Sprachkanal!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "WIRD GERADE ABGESPIELT"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** Angefragt von %{request}"
+setup_footer: "Verbleibende Tracks • %{totalsong} | Gesamtdauer • %{duration}"
+setup_queuemsg: "**Tritt einem Sprachkanal bei und spiele Songs per Name oder URL hier ab!**"
+setup_playembed_author: "Es wird gerade kein Song abgespielt!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Hinzugefuegt **%{title}** • %{request}"
+play_playlist: "Hinzugefuegt **%{title}** • (**%{songs} Tracks**) • %{request}"
+play_result: "Hinzugefuegt **%{title}** • %{request}"
+play_emoji: "Ich bin mir nicht sicher, wie ich das abspielen soll... Es ist kein Track oder eine Playlist."
+setup_content: "**Hey! Mein Deck ist bereit fuer deine Musik! Wirf einfach etwas hier rein!**"

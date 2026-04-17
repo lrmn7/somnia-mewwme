@@ -17,7 +17,18 @@ export class WebsocketRoute {
       });
       if (!this.checker(socket, req)) return;
       this.client.wsl.set(String(req.headers["guild-id"]), {
-        send: (data) => socket.send(JSON.stringify(data)),
+        send: (data) => {
+          try {
+            if (socket.readyState === socket.OPEN) {
+              socket.send(JSON.stringify(data));
+            }
+          } catch (err) {
+            this.client.logger.warn(
+              WebsocketRoute.name,
+              `Failed to send to guild ${req.headers["guild-id"]}: ${String(err)}`
+            );
+          }
+        },
       });
       this.client.logger.info(
         WebsocketRoute.name,
@@ -43,9 +54,11 @@ export class WebsocketRoute {
       return false;
     }
     if (this.client.wsl.get(String(req.headers["guild-id"]))) {
-      socket.send(JSON.stringify({ error: "Already hae connection on this guild" }));
-      socket.close(1000, JSON.stringify({ error: "Alreary hae connection on this guild" }));
-      return false;
+      this.client.logger.warn(
+        WebsocketRoute.name,
+        `Replacing stale WSL connection for guild ${req.headers["guild-id"]}`
+      );
+      this.client.wsl.delete(String(req.headers["guild-id"]));
     }
     return true;
   }

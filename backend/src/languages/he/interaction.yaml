@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "מופעל"
+disable: "מושבת"
+
+# maintenance
+maintenance_title: "תחזוקה"
+maintenance_desc: |
+  %{bot} עובר כרגע תחזוקה. אנא נסו שוב מאוחר יותר.
+  למידע נוסף, אנא הצטרפו ל[שרת התמיכה](%{serversupport}) שלנו. תודה!
+
+# Getting error!
+unexpected_error: "משהו השתבש. אנא נסו שוב מאוחר יותר!"
+
+### Rate limit!
+ratelimit: "אתם מבצעים פעולות מהר מדי. אנא המתינו **%{time} שניות**"
+
+# No permission!
+no_perms: "אין לי הרשאת **%{perm}**!\nאנא תנו לי הרשאת **%{perm}** כדי לבצע פקודה זו."
+
+no_manage_guild_perms: "פקודה זו דורשת הרשאת **%{perm}**!\nאין לכם הרשאה לבצע פקודה זו!"
+
+no_admin_perms: "פקודה זו דורשת הרשאת **%{perm}**!\nאין לכם הרשאה לבצע פקודה זו!"
+
+# No permission!
+no_perms_channel: "אין לי הרשאת **%{perm}** ב-%{channel} כדי לבצע פקודה זו!"
+
+# Execute when invalid
+no_node: "**לא נמצא שרת Lavalink. אנא נסו שוב לאחר 5 דקות**"
+
+# Client owner!
+owner_only: "פקודה זו ניתנת לביצוע רק על ידי **בעל** הבוט"
+
+# Need to join voice & same voice to use command!
+no_player: "אין שיר מתנגן כרגע!"
+no_same_voice: "אתה לא באותו ערוץ קולי כמוני!"
+no_in_voice: "אתה לא בערוץ קולי!"
+
+# Blacklist User
+blacklist_user: "נראה שאתה ברשימה השחורה! אינך מורשה להשתמש בפקודות.\nאנא פנו ל**[מפתח](%{serversupport})** אם אתם חושבים שזו שגיאה."
+
+# Blacklist Guild
+blacklist_guild: "שרת זה ברשימה השחורה! אינכם מורשים להשתמש בפקודות בשרת זה.\nאנא פנו ל**[מפתח](%{serversupport})** אם אתם חושבים שזו שגיאה."
+
+### DjRole No Permission ###
+not_dj_role: "עליכם להחזיק בתפקיד %{role} כדי להשתמש בפקודה זו."
+
+### No Premium Event!
+no_premium_button: "קבלו פרימיום"
+no_premium_author: "אין תוכנית פרימיום"
+no_premium_desc: "אופס! נראה שאין לכם תוכנית פרימיום עדיין.\nתכונה זו אינה נגישה ללא אחת כזו."
+
+# Top.gg error
+topgg_error_author: "שגיאת הצבעה ב-Top.gg"
+topgg_error_desc: "אירעה שגיאה באימות ההצבעה שלכם ב-top.gg, ייתכן בגלל ש-Top.gg לא זמין. אנא נסו שוב בעוד 5-10 דקות.\nאם הבעיה נמשכת, אנא פנו ל[שרת התמיכה](%{serversupport}) שלנו לקבלת סיוע נוסף."
+
+# Top.gg unvote
+topgg_unvote_button: "הצביעו לפתיחה"
+premium_button: "שדרגו לפרימיום"
+topgg_unvote_author: "נדרשת הצבעה"
+topgg_unvote_desc: "עליכם להצביע כדי לגשת לפקודה זו! זה מהיר וחינם.\nלחלופין, קבלו פרימיום ב[דף הפרימיום](%{premium}) שלנו כדי לדלג על הודעה זו ולפתוח תכונות נוספות."
+
+### Mention Desc ###
+mention_content: "הקידומת שלי לשרת זה `%{prefix}`\nאתם יכולים לתייג אותי כדי להשתמש בפקודות גם או להקליד </help:1294325423957741598> כדי לצפות בפקודות הסלאש שלי ♡"

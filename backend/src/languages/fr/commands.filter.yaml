@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **Filtre %{name} active !**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **J'espere que ce son vous plait !**
+filter_already: "Hein ? Le VST %{name} est deja active... Je ne peux rien faire ici."
+filter_number: "Ce n'est pas un nombre que je peux entrer dans l'EQ..."
+filter_greater: "Ca doit etre un nombre superieur a **0** !"
+filter_less: "Woah ! Trop ! Peut-etre moins de **10** serait mieux..."
+
+### Bassboost command!
+bassboost_set: "**Le Bassboost a ete regle a %{amount}dB**"
+bassboost_limit: "Veuillez utiliser un nombre entre **-10** et **10**"
+
+### Equalizer command!
+eq_author: "Egaliseur"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  Il y a **10 bandes** qui peuvent etre reglees de **-10** a **10**.
+  Vous n'avez pas besoin de toutes les renseigner, juste celles que vous voulez modifier.
+  Donc si vous voulez en sauter une, vous pouvez simplement la laisser a **0**.
+eq_field_title: "Exemple :"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Reinitialiser l'egaliseur • %{prefix}eq reset"
+eq_on: "L'EQ a ete regle sur **%{bands}** !"
+eq_number: "Veuillez fournir un nombre valide !"
+eq_greater: "Le nombre doit etre superieur a **-10**"
+eq_than: "Le nombre doit etre inferieur a **10**"
+
+### Pitch command!
+pitch_on: "C'est fait, la hauteur est maintenant a **%{amount}** !"
+
+### Rate command!
+rate_on:  "C'est fait ! Le debit est maintenant a **%{amount}x** !"
+
+### Speed command!
+speed_on: "Bien sur, changement de vitesse a **%{amount}x** !"
+
+### Reset command!
+reset_on: "**Reinitialisation** de tous les VSTs ! Retour au son original !"
+reset_already:  "Les VSTs sont **deja desactives**, vous avez oublie ?"
+
+# Invalid Number
+number_invalid: "Ce n'est pas un nombre avec lequel je peux travailler... Reessayez avec un nombre valide."

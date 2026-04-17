@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_add_match: "กรุณาระบุชื่อเพลงหรือ URL ที่ถูกต้อง!"
+pl_add_playlist: "ค้นหาแล้ว **%{title}** `%{duration}` • (**%{track} เพลง**) • %{user}"
+pl_add_track: "ค้นหาแล้ว **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "ค้นหาแล้ว **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "คุณไม่ใช่**เจ้าของเพลย์ลิสต์**!"
+pl_add_limit_track: "คุณไม่สามารถเพิ่มเพลงมากกว่า **%{limit} เพลง**"
+pl_add_added: "เพิ่ม **%{count} เพลง** ลงใน `%{playlist}` แล้ว"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks} เพลง**) • สร้างเมื่อ: `[%{create} ที่แล้ว]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "หน้า • %{page}/%{pages} | เพลย์ลิสต์ • %{songs}"
+pl_all_view_notnumber: "กรุณาระบุหมายเลขหน้าที่ถูกต้อง!"
+pl_all_view_page_notfound: "มีเพียง **%{page} หน้า** เท่านั้น!"
+
+### pl-create commands ###
+pl_create_invalid: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_create_toolong: "ชื่อเพลย์ลิสต์ไม่สามารถยาวเกิน **16 ตัวอักษร**"
+pl_create_des_toolong: "คำอธิบายเพลย์ลิสต์ไม่สามารถยาวเกิน **1000 ตัวอักษร**"
+pl_create_limit_playlist: "คุณไม่สามารถสร้างเพลย์ลิสต์มากกว่า **%{limit} เพลย์ลิสต์**"
+create_created_title: "สร้างเพลย์ลิสต์ใหม่สำเร็จ!"
+pl_create_created_footer: "พิมพ์ /pl editor เพื่อแก้ไขเพลย์ลิสต์ของคุณ!"
+pl_create_created: |
+  **ชื่อเพลย์ลิสต์**
+  `%{playlist}`
+
+  **Playlist ID**
+  `%{id}`
+
+  **คำอธิบาย**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+delete_notfound: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_delete_owner: "คุณไม่ใช่**เจ้าของเพลย์ลิสต์**"
+pl_delete_confirm: "คุณต้องการลบ `%{playlist_id}` หรือไม่"
+pl_delete_deleted: "เพลย์ลิสต์ `%{name}` ถูก**ลบ**เรียบร้อยแล้ว"
+pl_delete_no: "ยกเลิกการ**ลบ**เพลย์ลิสต์แล้ว!"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "กรุณาระบุตัวเลขที่ถูกต้อง!"
+pl_detail_notfound: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_detail_private: "เพลย์ลิสต์เป็น**ส่วนตัว**"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "เพลย์ลิสต์: %{name}"
+pl_detail_embed_footer: "หน้า • %{page}/%{pages} | เพลง • %{songs} | ระยะเวลาทั้งหมด • %{duration}"
+pl_detail_notnumber: "กรุณาระบุหมายเลขหน้าที่ถูกต้อง!"
+pl_detail_page_notfound: "มีเพียง **%{page} หน้า** เท่านั้น"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "กรอก **Playlist ID ใหม่ของคุณ** `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "กรอก **ชื่อเพลย์ลิสต์ใหม่ของคุณ**"
+pl_edit_playlist_des_label: "กรอก **คำอธิบายเพลย์ลิสต์ใหม่ของคุณ**"
+pl_edit_playlist_private_label: "กรอก **การมองเห็นเพลย์ลิสต์ใหม่ของคุณ** `[public/private]`"
+pl_edit_success: "แก้ไขเพลย์ลิสต์สำเร็จ\nPlaylist ID ใหม่: `%{playlistId}`"
+pl_edit_arg: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_edit_notfound: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_edit_playlist_owner: "คุณไม่ใช่**เจ้าของเพลย์ลิสต์**!"
+pl_edit_invalid_id: "กรุณากรอก Playlist ID ที่ถูกต้องและไม่ซ้ำกับที่มีอยู่!"
+pl_edit_invalid_mode: "โหมดการมองเห็นไม่ถูกต้อง กรุณาใช้ **public** หรือ **private**"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "Playlist ID ใหม่"
+ineraction_edit_playlist_name_label: "ชื่อเพลย์ลิสต์ใหม่"
+ineraction_edit_playlist_des_label: "คำอธิบายเพลย์ลิสต์ใหม่"
+ineraction_edit_playlist_private_label: "การมองเห็นเพลย์ลิสต์ใหม่"
+ineraction_edit_playlist_id_placeholder: "กรอก Playlist ID ใหม่ของคุณ! [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "กรอกชื่อเพลย์ลิสต์ใหม่ของคุณ!"
+ineraction_edit_playlist_des_placeholder: "กรอกคำอธิบายเพลย์ลิสต์ใหม่ของคุณ!"
+ineraction_edit_playlist_private_placeholder: "กรอกการมองเห็นเพลย์ลิสต์ใหม่ของคุณ! [public/private]"
+ineraction_edit_success: "แก้ไขเพลย์ลิสต์สำเร็จ\nPlaylist ID ใหม่: `%{playlistId}`"
+ineraction_edit_playlist_error: "มีบางอย่างผิดพลาด กรุณาลองอีกครั้ง!"
+ineraction_edit_notfound: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+ineraction_edit_playlist_owner: "คุณไม่ใช่**เจ้าของเพลย์ลิสต์**"
+ineraction_edit_invalid_id: "กรุณากรอก Playlist ID ที่ถูกต้องและไม่ซ้ำกับที่มีอยู่!"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### เพลย์ลิสต์ **%{name}** ถูกเพิ่มเข้าคิวแล้ว ♪"
+pl_import_imported_footer: "สนุกกับ %{tracks} เพลง • %{duration} • ของความสุขทางดนตรี!"
+pl_import_invalid: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_import_private: "เพลย์ลิสต์เป็น**ส่วนตัว**"
+pl_import_voice: "คุณต้องอยู่ในห้องเสียงเพื่อใช้คำสั่งนี้!"
+pl_import_empty: "เพลย์ลิสต์**ว่างเปล่า**"
+
+### pl-info commands! ###
+pl_info_owner: "เจ้าของ"
+pl_info_id: "ID"
+pl_info_des: "คำอธิบาย"
+pl_info_no_des: "ไม่มีคำอธิบาย!"
+pl_info_private: "การมองเห็น"
+pl_public: "สาธารณะ"
+pl_private: "ส่วนตัว"
+pl_info_total: "จำนวนเพลงทั้งหมด"
+pl_info_created: "สร้างเมื่อ"
+pl_info_invalid: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+
+### pl-remove commands! ###
+pl_remove_invalid: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_remove_number_invalid: "กรุณาระบุตัวเลขที่ถูกต้อง!"
+pl_remove_notfound: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_remove_owner: "คุณไม่ใช่**เจ้าของเพลย์ลิสต์**"
+pl_remove_song_notfound: "ไม่พบเพลง!"
+pl_remove_removed: "ลบเพลง**ลำดับที่ %{position}** ออกจาก `%{name}` แล้ว"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_savequeue_notfound: "กรุณาระบุ Playlist ID ที่ถูกต้อง!"
+pl_savequeue_owner: "คุณไม่ใช่**เจ้าของเพลย์ลิสต์**!"
+pl_savequeue_no_tracks: "ไม่มีเพลงที่กำลังเล่นอยู่!"
+pl_savequeue_no_new_saved: "เพลงมีอยู่ใน `%{name}` อยู่แล้ว"
+pl_savequeue_saved: "บันทึก **%{tracks} เพลง** ลงใน `%{name}` แล้ว"
+
+pl_error_no_node: "ไม่พบเซิร์ฟเวอร์ Lavalink กรุณาลองอีกครั้งหลังจาก **5 นาที**"

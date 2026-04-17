@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Button Music Request ! ###
+stop_msg: "Muzik oynatma durduruldu. Umarim harika vakit gecirmissindir!"
+skip_notfound: "Hay aksi. Atlayacak parca yok!"
+skip_msg: "Parcayi atladim. Umarim aldirmamissindir :p"
+previous_msg: "Tamam, geri sariyoruz! Onceki parca geliyor <3"
+previous_notfound: "Uzgunum, daha geriye gidemiyorum. Onceki parca bulunamadi :("
+resume_msg: "Muzik geri geldi! Ritme devam edelim ♪"
+pause_msg: "Muzik duraklatildi. Bir mola ver ve sessizligin tadini cikar."
+loop_current: "Mevcut sarki artik dongude calacak. Tekrarin tadini cikar!"
+loop_all: "Sira artik donguye ayarlandi. Muzik tekrar tekrar calsin!"
+unloop_all: "Dongu modu kapatildi. Farkli parcalarin tadini cikar!"
+
+### Need to join voice & same voice to use command!
+no_player: "Bir butona bastin ama hicbir sey olmadi. Belki once bir seyler calmalsin!"
+no_same_voice: "Bir butona bastin ve kirmizi yandi. Benimle ayni ses kanalinda degilsin!"
+no_in_voice: "Tum butonlar sana tepki vermiyor. Bir ses kanalinda degilsin!"
+
+### HANDLER MUSIC REQUEST ! ###
+### load update ###
+player_setup_author: "SIMDI CALINIYOR"
+player_setup_icon_author: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+setup_content_queue: "%{index}. **%{title}** %{request} tarafindan istendi"
+setup_footer: "Kalan Parcalar • %{totalsong} | Toplam Sure • %{duration}"
+setup_queuemsg: "**Bir ses kanalina katil ve buraya isim veya URL yazarak sarki cal!**"
+setup_playembed_author: "Su anda calanan sarki yok!"
+
+### load content ###
+player_setup_title: "**%{title}**"
+play_track: "Eklendi **%{title}** • %{request}"
+play_playlist: "Eklendi **%{title}** • (**%{songs} Parca**) • %{request}"
+play_result: "Eklendi **%{title}** • %{request}"
+play_emoji: "Bunu nasil calacagimdan emin degilim... Bu bir parca veya oynatma listesi degil."
+setup_content: "**Hey! Dekim muzigine hazir! Buraya bir seyler at!**"

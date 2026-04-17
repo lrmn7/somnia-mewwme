@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import CanvasCurvedLoop from "@/components/ui/curved-text";
 const sources = [
   { name: "YouTube", icon: "https://cdn.simpleicons.org/youtube/white", url: "https://youtube.com/" },
   { name: "YouTube Music", icon: "https://cdn.simpleicons.org/youtubemusic/white", url: "https://music.youtube.com/" },
@@ -38,21 +38,37 @@ const MusicSources = () => {
   return (
     <section className="relative z-10 py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto text-center mb-10">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl font-bold mb-4 text-foreground"
+          className="mb-0"
         >
-          Stream From <span className="text-mewwme">Anywhere</span>
-        </motion.h2>
+          <div className="w-full max-w-7xl px-4 mx-auto marquee-mask">
+            <CanvasCurvedLoop
+              textSegments={[
+                { text: "Stream From " },
+                { text: "Anywhere", color: "#ec4899" },
+              ]}
+              speed={0.7}
+              curveHeight={34}
+              fontSize={44}
+              height={116}
+              gap={0.5}
+              easing={0.05}
+              direction="left"
+              interactive={true}
+              className="rounded-lg overflow-hidden text-black dark:text-white"
+            />
+          </div>
+        </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-muted-foreground"
+          className="text-muted-foreground -mt-6"
         >
           One bot, endless music sources at your fingertips
         </motion.p>

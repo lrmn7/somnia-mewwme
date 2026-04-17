@@ -1,14 +1,3 @@
-/**
- * Guild Settings Adapter — exposes guild configuration systems to the web dashboard.
- *
- * This adapter calls the SAME database methods used by slash commands.
- * No core logic is duplicated; no DB models are rewritten.
- *
- * GET  /v1/guild/:guildId/settings         → Read all guild settings
- * PATCH /v1/guild/:guildId/settings        → Update writable settings
- * GET  /v1/guild/:guildId/settings/locales  → List available locales
- */
-
 import util from "node:util";
 import { ChannelType, PermissionsBitField } from "discord.js";
 import { Manager } from "../../manager.js";
@@ -20,7 +9,6 @@ import {
   buildSourceAccessMap,
 } from "./resolveDashboardAccess.js";
 
-// ── Writable field names ─────────────────────────────────────────────────────
 const WRITABLE_FIELDS = new Set([
   "prefix",
   "language",
@@ -33,7 +21,6 @@ const WRITABLE_FIELDS = new Set([
   "defaultSource",
 ]);
 
-// ── GET handler ──────────────────────────────────────────────────────────────
 
 export async function getGuildSettings(
   client: Manager,
@@ -51,14 +38,14 @@ export async function getGuildSettings(
     return;
   }
 
-  // Verify guild exists in the bot's cache
+
   const guild = client.guilds.cache.get(guildId);
   if (!guild) {
     res.code(404).send({ error: "Guild not found or bot is not in this guild." });
     return;
   }
 
-  // Read every guild-scoped setting using the SAME db calls as commands
+
   const [
     prefix,
     language,
@@ -87,7 +74,6 @@ export async function getGuildSettings(
     client.db.GuildDefaultSource.get(guildId),
   ]);
 
-  // ── Premium & access flags (config-driven via DASHBOARD_ACCESS) ─────────
   const headerUserId = req.headers["user-id"] as string | undefined;
   const perm = await buildDashboardUserPerm(client, headerUserId, guildId);
   const dashAccess = getDashboardAccessConfig(client);
@@ -121,7 +107,6 @@ export async function getGuildSettings(
   const requirementControlButton = dashAccess.ControlButton?.[0] ?? "Member";
   const voteUrl = `https://top.gg/bot/${client.user?.id}/vote`;
 
-  // Fetch guild roles for the DJ Role dropdown (exclude @everyone, sort by position desc)
   const fetchedRoles = await guild.roles.fetch().catch(() => guild.roles.cache);
   const guildRoles = [...fetchedRoles.values()]
     .filter((r) => r.id !== guild.id) // exclude @everyone
@@ -131,8 +116,6 @@ export async function getGuildSettings(
   res.send({
     guildId,
     guildName: guild.name,
-
-    // ── Writable settings ──────────────────────────────────────
     prefix: prefix ?? client.prefix ?? "me",
     language: language ?? "en",
     statusVoiceChannel: statusVoiceChannel ?? false,
@@ -140,19 +123,14 @@ export async function getGuildSettings(
     controlButton: controlButton ?? "enable",
     autoplaySetting: autoplaySetting ?? false,
     roles: guildRoles,
-
-    // ── Read-only settings (complex flows / side effects) ──────
     twentyfourseven: autoreconnect?.twentyfourseven ?? false,
     notifyTwitch: notifyTwitch ?? null,
     notifyYoutube: notifyYoutube ?? null,
     setup: setup ?? null,
     tempVoiceChannel: tempVoiceChannelSetting ?? null,
-
-    // ── Premium & permission flags ─────────────────────────────
     isPremium: perm.isPremium,
     isOwner: perm.isOwner,
     isAdmin: perm.isAdmin,
-    isGuildOwner: headerUserId === guild.ownerId,
     hasManageGuild: perm.hasManageGuild,
     has247Access,
     requirement247,
@@ -178,7 +156,6 @@ export async function getGuildSettings(
   });
 }
 
-// ── PATCH handler ────────────────────────────────────────────────────────────
 
 export async function patchGuildSettings(
   client: Manager,
@@ -216,16 +193,13 @@ export async function patchGuildSettings(
     return;
   }
 
-  // Extract internal-only fields injected by the proxy layer
   const _userId = body["_userId"] as string | undefined;
   delete body["_userId"];
 
-  // ── Premium & permission checks (config-driven via DASHBOARD_ACCESS) ───
   const perm = await buildDashboardUserPerm(client, _userId, guildId);
   const dashAccess = getDashboardAccessConfig(client);
   const { isPremium, isOwner, isAdmin, hasManageGuild } = perm;
 
-  // Reject any key that is not writable
   for (const key of Object.keys(body)) {
     if (!WRITABLE_FIELDS.has(key)) {
       res.code(400).send({
@@ -238,20 +212,15 @@ export async function patchGuildSettings(
   const updated: Record<string, unknown> = {};
 
   try {
-    // ── prefix ─────────────────────────────────────────────────────────────
     if ("prefix" in body) {
-      // Access gate: check DASHBOARD_ACCESS.Prefix config
       if (!hasFeatureAccess(dashAccess.Prefix, perm)) {
-        res
-          .code(403)
-          .send({
-            error:
-              "Changing prefix requires the configured access level. Check DASHBOARD_ACCESS.Prefix in config.",
-            premiumRequired: true,
-          });
+        res.code(403).send({
+          error:
+            "Changing prefix requires the configured access level. Check DASHBOARD_ACCESS.Prefix in config.",
+          premiumRequired: true,
+        });
         return;
       }
-      // Manage Guild permission required (owner/admin bypass)
       if (!(hasManageGuild || isOwner || isAdmin)) {
         res
           .code(403)
@@ -268,25 +237,19 @@ export async function patchGuildSettings(
         res.code(400).send({ error: "prefix must be 10 characters or fewer." });
         return;
       }
-      // Same call as src/commands/Settings/Prefix.ts
       await client.db.prefix.set(guildId, val);
       updated["prefix"] = val;
     }
 
-    // ── language ───────────────────────────────────────────────────────────
     if ("language" in body) {
-      // Access gate: check DASHBOARD_ACCESS.Language config
       if (!hasFeatureAccess(dashAccess.Language, perm)) {
-        res
-          .code(403)
-          .send({
-            error:
-              "Changing language requires the configured access level. Check DASHBOARD_ACCESS.Language in config.",
-            premiumRequired: true,
-          });
+        res.code(403).send({
+          error:
+            "Changing language requires the configured access level. Check DASHBOARD_ACCESS.Language in config.",
+          premiumRequired: true,
+        });
         return;
       }
-      // Manage Guild permission required (owner/admin bypass)
       if (!(hasManageGuild || isOwner || isAdmin)) {
         res
           .code(403)
@@ -299,7 +262,6 @@ export async function patchGuildSettings(
         res.code(400).send({ error: "language must be a string." });
         return;
       }
-      // Same validation as src/commands/Settings/Language.ts
       const locales = client.i18n.getLocales();
       if (!locales.includes(val)) {
         res.code(400).send({
@@ -311,26 +273,19 @@ export async function patchGuildSettings(
       updated["language"] = val;
     }
 
-    // ── statusVoiceChannel ─────────────────────────────────────────────────
     if ("statusVoiceChannel" in body) {
-      // Access gate: check DASHBOARD_ACCESS.StatusVoiceChannel config
       if (!hasFeatureAccess(dashAccess.StatusVoiceChannel, perm)) {
-        res
-          .code(403)
-          .send({
-            error:
-              "Changing Voice Channel Status requires the configured access level. Check DASHBOARD_ACCESS.StatusVoiceChannel in config.",
-            premiumRequired: true,
-          });
+        res.code(403).send({
+          error:
+            "Changing Voice Channel Status requires the configured access level. Check DASHBOARD_ACCESS.StatusVoiceChannel in config.",
+          premiumRequired: true,
+        });
         return;
       }
-      // Manage Guild permission required (owner/admin bypass)
       if (!(hasManageGuild || isOwner || isAdmin)) {
-        res
-          .code(403)
-          .send({
-            error: "You need the Manage Server permission to change the Voice Channel Status.",
-          });
+        res.code(403).send({
+          error: "You need the Manage Server permission to change the Voice Channel Status.",
+        });
         return;
       }
 
@@ -339,25 +294,19 @@ export async function patchGuildSettings(
         res.code(400).send({ error: "statusVoiceChannel must be a boolean." });
         return;
       }
-      // Same call as src/commands/Settings/StatusVoiceChannel.ts
       await client.db.StatusVoiceChannel.set(guildId, val);
       updated["statusVoiceChannel"] = val;
     }
 
-    // ── djRole ─────────────────────────────────────────────────────────────
     if ("djRole" in body) {
-      // Access gate: check DASHBOARD_ACCESS.DjRole config
       if (!hasFeatureAccess(dashAccess.DjRole, perm)) {
-        res
-          .code(403)
-          .send({
-            error:
-              "Changing DJ Role requires the configured access level. Check DASHBOARD_ACCESS.DjRole in config.",
-            premiumRequired: true,
-          });
+        res.code(403).send({
+          error:
+            "Changing DJ Role requires the configured access level. Check DASHBOARD_ACCESS.DjRole in config.",
+          premiumRequired: true,
+        });
         return;
       }
-      // Manage Guild permission required (owner/admin bypass)
       if (!(hasManageGuild || isOwner || isAdmin)) {
         res
           .code(403)
@@ -383,7 +332,6 @@ export async function patchGuildSettings(
           .send({ error: "djRole.roleid must be a non-empty string when enable is true." });
         return;
       }
-      // Same pattern as src/commands/Settings/DjRole.ts
       const djData = {
         guild: guildId,
         enable,
@@ -393,26 +341,20 @@ export async function patchGuildSettings(
       updated["djRole"] = djData;
     }
 
-    // ── controlButton ──────────────────────────────────────────────────────
     if ("controlButton" in body) {
       // Access gate: check DASHBOARD_ACCESS.ControlButton config
       if (!hasFeatureAccess(dashAccess.ControlButton, perm)) {
-        res
-          .code(403)
-          .send({
-            error:
-              "Changing Player Control Buttons requires the configured access level. Check DASHBOARD_ACCESS.ControlButton in config.",
-            premiumRequired: true,
-          });
+        res.code(403).send({
+          error:
+            "Changing Player Control Buttons requires the configured access level. Check DASHBOARD_ACCESS.ControlButton in config.",
+          premiumRequired: true,
+        });
         return;
       }
-      // Manage Guild permission required (owner/admin bypass)
       if (!(hasManageGuild || isOwner || isAdmin)) {
-        res
-          .code(403)
-          .send({
-            error: "You need the Manage Server permission to change the Player Control Buttons.",
-          });
+        res.code(403).send({
+          error: "You need the Manage Server permission to change the Player Control Buttons.",
+        });
         return;
       }
 
@@ -421,25 +363,19 @@ export async function patchGuildSettings(
         res.code(400).send({ error: "controlButton must be 'enable' or 'disable'." });
         return;
       }
-      // Same call as src/commands/Settings/ControlMode.ts
       await client.db.ControlButton.set(guildId, val);
       updated["controlButton"] = val;
     }
 
-    // ── autoplaySetting ────────────────────────────────────────────────────
     if ("autoplaySetting" in body) {
-      // Access gate: check DASHBOARD_ACCESS.Autoplay config
       if (!hasFeatureAccess(dashAccess.Autoplay, perm)) {
-        res
-          .code(403)
-          .send({
-            error:
-              "Changing Autoplay setting requires the configured access level. Check DASHBOARD_ACCESS.Autoplay in config.",
-            premiumRequired: true,
-          });
+        res.code(403).send({
+          error:
+            "Changing Autoplay setting requires the configured access level. Check DASHBOARD_ACCESS.Autoplay in config.",
+          premiumRequired: true,
+        });
         return;
       }
-      // Manage Guild permission required (owner/admin bypass)
       if (!(hasManageGuild || isOwner || isAdmin)) {
         res
           .code(403)
@@ -456,9 +392,7 @@ export async function patchGuildSettings(
       updated["autoplaySetting"] = val;
     }
 
-    // ── defaultSource ─────────────────────────────────────────────────────
     if ("defaultSource" in body) {
-      // Manage Guild permission required (owner/admin bypass)
       if (!(hasManageGuild || isOwner || isAdmin)) {
         res
           .code(403)
@@ -472,12 +406,10 @@ export async function patchGuildSettings(
         return;
       }
 
-      // Import helpers for source validation
       const { getDefaultSourceDashboardConfig, DASHBOARD_SOURCES } =
         await import("./resolveDashboardAccess.js");
       const sourceCfg = getDefaultSourceDashboardConfig(client);
 
-      // Map frontend ids back to config keys
       const FE_TO_CFG: Record<string, string> = {
         soundcloud: "soundcloud",
         apple: "apple_music",
@@ -497,7 +429,6 @@ export async function patchGuildSettings(
         return;
       }
 
-      // Check if the guild has the required access level for this source
       const sourceAccessLevels = sourceCfg[cfgKey];
       if (!hasFeatureAccess(sourceAccessLevels, perm)) {
         const requirement = sourceAccessLevels[0] ?? "Premium";
@@ -512,7 +443,6 @@ export async function patchGuildSettings(
       updated["defaultSource"] = val;
     }
 
-    // ── twentyfourseven ────────────────────────────────────────────────────
     if ("twentyfourseven" in body) {
       const val = body["twentyfourseven"];
       if (typeof val !== "boolean") {
@@ -520,26 +450,21 @@ export async function patchGuildSettings(
         return;
       }
 
-      // Access gate: check DASHBOARD_ACCESS.TwentyFourSeven config
       if (!hasFeatureAccess(dashAccess.TwentyFourSeven, perm)) {
-        res
-          .code(403)
-          .send({
-            error:
-              "24/7 mode requires the configured access level. Check DASHBOARD_ACCESS.TwentyFourSeven in config.",
-            premiumRequired: true,
-          });
+        res.code(403).send({
+          error:
+            "24/7 mode requires the configured access level. Check DASHBOARD_ACCESS.TwentyFourSeven in config.",
+          premiumRequired: true,
+        });
         return;
       }
 
-      // Manage Guild permission required (owner/admin bypass)
       if (!(hasManageGuild || isOwner || isAdmin)) {
         res.code(403).send({ error: "You need the Manage Server permission to change 24/7 mode." });
         return;
       }
 
       if (val) {
-        // Require the requesting user to be in a voice channel
         let memberVoice: { channelId: string | null } | undefined;
         if (_userId) {
           const member = await guild.members.fetch(_userId).catch(() => null);
@@ -549,7 +474,7 @@ export async function patchGuildSettings(
           res.code(400).send({ error: "You must be in a voice channel to enable 24/7 mode." });
           return;
         }
-        // Enable 24/7 — create/update the autoreconnect record
+
         const existing = await client.db.autoreconnect.get(guildId);
         const player = client.mewslink?.players?.get(guildId);
         await client.db.autoreconnect.set(`${guildId}`, {
@@ -562,40 +487,30 @@ export async function patchGuildSettings(
           twentyfourseven: true,
         });
       } else {
-        // Disable 24/7 — delete the autoreconnect record (same as command)
         await client.db.autoreconnect.delete(guildId);
       }
       updated["twentyfourseven"] = val;
     }
 
-    // ── setup (Player Setup Channel) ───────────────────────────────────────
     if ("setup" in body) {
-      // Check DASHBOARD_ACCESS.PlayerSetup config level first
       if (!hasFeatureAccess(dashAccess.SongRequest, perm)) {
-        res
-          .code(403)
-          .send({
-            error:
-              "Player Setup Channel requires the configured access level. Check DASHBOARD_ACCESS.PlayerSetup in config.",
-            premiumRequired: true,
-          });
+        res.code(403).send({
+          error:
+            "Player Setup Channel requires the configured access level. Check DASHBOARD_ACCESS.PlayerSetup in config.",
+          premiumRequired: true,
+        });
         return;
       }
-      // Always requires Manage Guild permission regardless of DASHBOARD_ACCESS level
       if (!(hasManageGuild || isOwner || isAdmin)) {
-        res
-          .code(403)
-          .send({
-            error: "You need the Manage Server permission to manage the Player Setup Channel.",
-          });
+        res.code(403).send({
+          error: "You need the Manage Server permission to manage the Player Setup Channel.",
+        });
         return;
       }
       const val = body["setup"];
       if (typeof val === "string" && val === "delete") {
-        // Delete existing setup — same logic as src/commands/Settings/Setup.ts "delete"
         const existing = await client.db.setup.get(guildId);
         if (existing && existing.enable) {
-          // Attempt to clean up the channels/category
           if (existing.category) {
             const cat = await guild.channels.fetch(existing.category).catch(() => null);
             if (cat) await cat.delete().catch(() => null);
@@ -612,7 +527,6 @@ export async function patchGuildSettings(
         await client.db.setup.delete(guildId);
         updated["setup"] = null;
       } else if (typeof val === "string" && val === "create") {
-        // Create setup — same logic as src/commands/Settings/Setup.ts "create"
         const existing = await client.db.setup.get(guildId);
         if (existing && existing.enable) {
           res.code(400).send({ error: "Setup is already active. Delete it first." });
@@ -671,8 +585,6 @@ export async function patchGuildSettings(
 
   res.send({ updated });
 }
-
-// ── Locales endpoint ─────────────────────────────────────────────────────────
 
 export async function getAvailableLocales(
   client: Manager,

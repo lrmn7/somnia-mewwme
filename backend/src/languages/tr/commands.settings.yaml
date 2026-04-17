@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "7/24 modu artik **Etkin**"
+247_off: "7/24 modu artik **Devre Disi**"
+247_already: "7/24 modu zaten **%{mode}**"
+247_arg_error: "Gecersiz 7/24 modu. Lutfen %{text} kullanin"
+247_no_in_voice: "Bir ses kanalinda degilsiniz!"
+
+
+### Set Language command! ###
+provide_lang: "**Gecersiz Dil. Lutfen** `%{languages}` **kullanin**"
+lang_set: "**Dil** `%{language}` **olarak ayarlandi**"
+lang_change: "**Dil** `%{language}` **olarak degistirildi**"
+
+### Prefix command! ###
+prefix_arg: "Lutfen gecerli bir Onek girin!"
+prefix_length: "**Onek 10 Karakterden uzun olamaz**"
+prefix_set: "**Onek** `%{prefix}` **olarak ayarlandi**"
+prefix_change: "**Onek** `%{prefix}` **olarak degistirildi**"
+
+### Control command!
+control_set: "**Oynatici kontrol modu %{toggle} olarak ayarlandi**"
+control_arg_error: "Gecersiz arguman. Lutfen %{text} kullanin"
+control_already: "Sarki Bildirimleri zaten **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Gecersiz! Lutfen %{text} kullanin"
+setup_enable: "**Hay aksi! Muzik Sistemi zaten mevcut.**"
+setup_topic: "♪ Sarki soylemek isteyenler her zaman bir sarki bulur. ♪"
+setup_msg: "*`Muzik Sistemi basariyla kuruldu`* %{channel}\n```Not: Duzgun calisabilmem icin olusturdugum mesajlari silmeyin.```"
+setup_null: "*`Kurulum kanali basariyla silindi!`*"
+setup_deleted: "*`Kurulum kanali basariyla silindi!`*"
+setup_null_inguild: "**Bu sunucuda Muzik Sistemi bulunamadi! Veri silmeye hazir**"
+setup_queuemsg: "**Bir ses kanalina katil ve buraya isim veya URL yazarak sarki cal!**"
+setup_playembed_author: "Su Anda Calanan Sarki Yok"
+
+### Themes command!
+error_themes: "Gecersiz... Lutfen tekrar deneyin."
+succes_themes: "**Tema basariyla %{themes} olarak degistirildi**"
+
+### Last FM Login command!
+lastfm_login_footer: "Not: Bu baglanti %{expired} icinde sona erecektir."
+lastfm_login_title: "Last.fm Girisi"
+lastfm_login_desc: "[Last.fm](https://www.last.fm/user/eleremen) hesabiniza yetki vermek ister misiniz?\nEvetse, yetkilendirme islemini baslatmak icin lutfen asagidaki butona tiklayin."
+lastfm_not_login_desc: "Last.fm'e giris yapmadiniz"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm Cikisi"
+lastfm_logout_desc: "Last.fm'den basariyla cikis yaptiniz"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm Ozelligi devre disi."
+lastfm_feature_disabled_desc: "Last.fm ozelligi su anda devre disi birakilmistir. Daha fazla bilgi icin lutfen yonetici ile iletisime gecin."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "**%{ytchannel}** YouTube kanali icin bildirim bulunamadi."
+notify_youtube_removed: "**%{ytchannel}** YouTube kanali icin bildirimi kaldirdiniz."
+notify_youtube_disabled: "YouTube Bildirimi ozelligi su anda devre disi. Daha fazla bilgi icin yetkililere basvurun."
+notify_youtube_already: "%{ytchannel} YouTube kanali icin bildirimler zaten ayarlanmis."
+notify_youtube_invalid_channel: "Gecerli bir metin kanali belirtirken bir hata olustu. Lutfen kontrol edin!"
+notify_youtube_set: "**%{ytchannel}** icin YouTube Bildirimi %{channelid} kanalinda ayarlandi."
+notify_youtube_404: |
+  Belirtilen YouTube kanal ID'si bulunamadi.
+  Kanal ID'sini bulmak icin YouTube kanal sayfasina gidin ve URL'yi kontrol edin.
+  Kanal ID'si `/channel/` den sonraki harf ve rakam dizisidir (ornegin: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   %{limit} bildirim sinirina ulastiniz.
+   [Premium](%{premium}) planina yukselttiginde %{limitpremium} bildirime kadar ayarlayabilirsin.
+
+notify_youtube_limit_reached_premium: |
+   %{limit} bildirim sinirina ulastiniz.
+   Bu izin verilen maksimum degerdir. Yenilerine yer acmak icin bazi bildirimleri silmeyi dusunun.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "**%{twitchusername}** Twitch kullanici adi icin bildirim bulunamadi."
+notify_twitch_removed: "**%{twitchusername}** Twitch kullanici adi icin bildirimi kaldirdiniz."
+notify_twitch_disabled: "Twitch Bildirimi ozelligi su anda devre disi. Daha fazla bilgi icin yetkililere basvurun."
+notify_twitch_already: "%{twitchusername} Twitch kanali icin bildirimler zaten ayarlanmis."
+notify_twitch_invalid_channel: "Gecerli bir metin kanali belirtirken bir hata olustu. Lutfen kontrol edin!"
+notify_twitch_set: "**%{twitchusername}** icin Twitch Bildirimi %{channelid} kanalinda ayarlandi."
+notify_twitch_error: "**{twitchusername}** icin **{channelid}** kanalinda Twitch bildirimi islenirken beklenmeyen bir hata olustu. Lutfen tekrar deneyin veya sorun devam ederse destek ile iletisime gecin."
+notify_twitch_limit_reached_non_premium: |
+   %{limit} bildirim sinirina ulastiniz.
+   [Premium](%{premium}) planina yukselttiginde %{limitpremium} bildirime kadar ayarlayabilirsin.
+
+notify_twitch_limit_reached_premium: |
+   %{limit} bildirim sinirina ulastiniz.
+   Bu izin verilen maksimum degerdir. Yenilerine yer acmak icin bazi bildirimleri silmeyi dusunun.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Gecici Ses ozelligi %{status} olarak ayarlandi."
+tempvoice_disabled: "Gecici Ses devre disi birakildi."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Gecersiz... sadece %{text}."
+status_voice_channel_true: "Ses Kanali Durumu **%{type}** olarak ayarlandi."
+status_voice_channel_false: "Ses Kanali Durumu **%{type}** olarak ayarlandi."
+
+
+### Patreon Claim command!
+not_in_guild: "Bu komut yalnizca Sunucuda calistirilabilir!"
+no_data_patreon: "Patreon verisi bulunamadi (Veritabani Hatasi)"
+no_data_patreon_title: "Bulunamadi"
+no_data_patreon_desc: |
+  Zaten abone olduysaniz, Discord hesabinizin Patreon'a baglandiginden emin olun!
+no_data_patreon_footer: "Patreon senkronizasyonu biraz zaman alabilir, lutfen kisa sure sonra tekrar kontrol edin"
+no_patreon_guild_membership: |
+  merhaba, patreon planiniz **kullanici kademesi**.
+  premium sunucu erisiminin kilidini acmak icin lutfen **sunucu kademesi**ne yukseltin.
+patreon_guild_membership_full_quota: |
+  tum sunucu kotanizi kullandiniz!
+  **durum:** %{status} sunucu kullanildi.
+
+  cozum:
+  1. patreon'da kademenizi yukseltin.
+  2. veya eski sunucunuzda premium'u devre disi birakin.
+patreon_guild_membership_already_before: "Bu sunucuda daha once zaten premium'u etkinlestirmistiniz!"
+patreon_guild_membership_already: "**ZATEN PREMIUM** cunku baskasi tarafindan sponsor ediliyor.\nKotanizi diger sunucular icin saklayin!"
+patreon_guild_membership_claim_title: "Aktivasyon Onayi"
+patreon_guild_membership_claim_desc: |
+  su sunucu icin **premium sunucu** etkinlestirmek istediginizden emin misiniz:
+  **%{guildName}**
+
+  bu islem **1 sunucu kotasi** kullanacak.
+  kalan kota: **%{status}**
+patreon_guild_membership_claim_success: |
+  basarili! **%{guildName}** artik bir **premium sunucu**.
+
+  **sponsor:** %{user}
+  **kalan kota:** %{status}
+  patreon'da bizi desteklediginiz icin tesekkurler!
+patreon_guild_membership_claim_success_title: "💎 Premium Etkinlestirildi!"
+patreon_guild_membership_claim_cancel: "Premium aktivasyonu iptal edildi."
+patreon_guild_membership_claim_norespon: "Yanit alinmadigi icin aktivasyon otomatik olarak iptal edildi."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Sunucu Kullanildi (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **sponsor kullanici:** %{sponsorTag} %{sponsorId}
+  **hedef sunucu:** %{guildName} %{guildId}
+  **kota durumu:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Bu premium sunucuyu iptal edemezsiniz cunku siz kayit ettirmediniz."
+patreon_guild_unclaim_title: "Premium Iptal Onayi"
+patreon_guild_unclaim_desc: |
+  **%{guildName}** sunucusunun Premium durumunu **IPTAL** etmek istediginizden emin misiniz?
+  **Etkiler:** Bu sunucuda premium ozellikler devre disi birakilacaktir.
+  Sunucu Kotaniz geri yuklenecektir (+1).
+  Mevcut kalan kota: **%{status}**
+patreon_guild_unclaim_success_title: "Premium Iptal Edildi"
+patreon_guild_unclaim_success: |
+  **%{guildName}** icin premium durumu basariyla iptal edildi.
+  **Geri Yuklenen Kota:** 1 Sunucu
+  **Yeni Kalan Kota:** %{status}
+patreon_guild_unclaim_cancel: "Premium iptal islemi vazgecildi."
+patreon_guild_unclaim_norespon: "⏱️ Zaman asimi. Islem iptal edildi."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Iptal Edilen Sunucular (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Kullanici:** %{sponsorTag} %{sponsorId}
+  **Sunucu:** %{guildName}} %{guildId}
+  **Geri Yuklenen Kota:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Kullanici:** %{userTag} (%{userId})
+  **Sunucu:** %{guildName} (%{guildId})
+  **Kota:** %{quota}
+  **Son Kullanma:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Islemi: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "Islem ID'si bulunamadi veya zaten kullanilmis."
+kofi_linked_success_title: "Odeme Basariyla Baglandi!"
+kofi_linked_success_desc: "Artik TxID olmadan `/premium claim <kofi>` kullanabilirsiniz."
+kofi_no_data_title: "Veri Bulunamadi!"
+kofi_no_data_desc: |
+  Zaten odeme yaptiysiniz ancak Discord hesabinizi Kofi'ye baglamadiysaniz
+  su komutu kullanin: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Kota yok, ancak premium kullanicisiniz."
+kofi_full_server_quota_title: "Kota Dolu!"
+kofi_full_server_quota_desc: "**%{quota}** sunucu yuvasi kullandiniz."
+kofi_server_already_claim_desc: "**Zaten Aktif!**\nBu sunucuda daha once Premium'u etkinlestirmistiniz."
+kofi_server_already_active_desc: " **Zaten Premium!**\nBu sunucu baska bir kullanici tarafindan zaten premium olarak etkinlestirilmis."
+kofi_guild_membership_claim_success: |
+  Premium basariyla etkinlestirildi!
+  **Kota Kullanimi:** %{quota}
+  **Son Kullanma:** %{expires}
+kofi_guild_membership_claim_footer: "Desteginiz icin tesekkurler!"
+kofi_action_title: "🏗️ Ko-fi Islemi: %{type}"
+kofi_action_description: "**Kullanici:** %{userTag} (`%{userId}`)\n**Sunucu:** %{guildName} (`%{guildId}`)\n**Islem:** %{action}\n**Kota:** %{quota}"
+kofi_action_activation: "Sunucu Etkinlestirildi"
+kofi_action_manual_link: "Manuel Odeme Baglandi"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium Iptal Edildi"
+kofi_guild_unclaim_success_desc: |
+  **%{guildName}** icin premium durumu basariyla iptal edildi.
+  **Geri Yuklenen Kota:** 1 Sunucu
+kofi_guild_not_owned_by_user: "Bu premium sunucuyu iptal edemezsiniz cunku siz kayit ettirmediniz."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Iptal Edilen Sunucular %{platform}"
+premium_unclaim_log_desc: |
+  **Kullanici:** %{userTag} %{userId}
+  **Sunucu:** %{guildName}} %{guildId}
+  **Geri Yuklenen Kota:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "DJ Rolu sistemi **Devre Disi Birakildi**."
+dj_role_missing_role: "`set` islemini kullanmak icin bir rol belirtmeniz gerekiyor."
+dj_role_set: |
+  DJ Rolu %{role} olarak ayarlandi.
+  Durum: **Etkin**
+  **Etkilenen Komutlar:**
+  %{commands}

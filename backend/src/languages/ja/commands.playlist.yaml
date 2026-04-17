@@ -1,0 +1,129 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### pl-add commands ###
+pl_add_invalid: "有効なプレイリストIDを入力してください！"
+pl_add_match: "有効な曲名またはURLを入力してください！"
+pl_add_playlist: "検索結果 **%{title}** `%{duration}` • (**%{track}曲**) • %{user}"
+pl_add_track: "検索結果 **%{title}** • `%{duration}` • %{user}"
+pl_add_search: "検索結果 **%{title}** • `%{duration}` • %{user}"
+pl_add_owner: "あなたは**プレイリストのオーナー**ではありません！"
+pl_add_limit_track: "**%{limit}曲**以上追加することはできません"
+pl_add_added: "**%{count}曲**を`%{playlist}`に追加しました"
+
+### pl-all commands ###
+pl_all_view_embed_playlist: "%{num}. `%{name}` • (**%{tracks}曲**) • 作成日: `[%{create}前]`"
+pl_all_view_embed_title: "%{user}"
+pl_all_view_embed_footer: "ページ • %{page}/%{pages} | プレイリスト • %{songs}"
+pl_all_view_notnumber: "有効なページ番号を入力してください！"
+pl_all_view_page_notfound: "**%{page}ページ**しかありません！"
+
+### pl-create commands ###
+pl_create_invalid: "有効なプレイリストIDを入力してください！"
+pl_create_toolong: "プレイリスト名は**16文字**以内にしてください"
+pl_create_des_toolong: "プレイリストの説明は**1000文字**以内にしてください"
+pl_create_limit_playlist: "**%{limit}個**以上のプレイリストは作成できません"
+create_created_title: "新しいプレイリストの作成に成功しました！"
+pl_create_created_footer: "/pl editorと入力してプレイリストを編集してください！"
+pl_create_created: |
+  **プレイリスト名**
+  `%{playlist}`
+
+  **プレイリストID**
+  `%{id}`
+
+  **説明**
+  `%{desc}`
+
+### pl-delete commands ###
+pl_delete_invalid: "有効なプレイリストIDを入力してください！"
+delete_notfound: "有効なプレイリストIDを入力してください！"
+pl_delete_owner: "あなたは**プレイリストのオーナー**ではありません"
+pl_delete_confirm: "`%{playlist_id}`を削除しますか？"
+pl_delete_deleted: "プレイリスト`%{name}`が正常に**削除**されました"
+pl_delete_no: "プレイリストの**削除**がキャンセルされました！"
+
+### pl-detail commands ###
+pl_detail_number_invalid: "有効な数値を入力してください！"
+pl_detail_notfound: "有効なプレイリストIDを入力してください！"
+pl_detail_private: "プレイリストは**非公開**です"
+pl_detail_track: "%{num}. **%{title}** • **%{author}** `[%{duration}]`"
+pl_detail_embed_title: "プレイリスト: %{name}"
+pl_detail_embed_footer: "ページ • %{page}/%{pages} | 曲数 • %{songs} | 合計時間 • %{duration}"
+pl_detail_notnumber: "有効なページ番号を入力してください！"
+pl_detail_page_notfound: "**%{page}ページ**しかありません"
+
+### pl-editor commands! ###
+pl_edit_playlist_id_label: "**新しいプレイリストID**を入力してください `[a-z, A-Z, 0-9]`"
+pl_edit_playlist_name_label: "**新しいプレイリスト名**を入力してください"
+pl_edit_playlist_des_label: "**新しいプレイリストの説明**を入力してください"
+pl_edit_playlist_private_label: "**新しいプレイリストの公開設定**を入力してください `[public/private]`"
+pl_edit_success: "プレイリストの編集に成功しました\n新しいプレイリストID: `%{playlistId}`"
+pl_edit_arg: "有効なプレイリストIDを入力してください！"
+pl_edit_notfound: "有効なプレイリストIDを入力してください！"
+pl_edit_playlist_owner: "あなたは**プレイリストのオーナー**ではありません！"
+pl_edit_invalid_id: "有効で既存でないプレイリストIDを入力してください！"
+pl_edit_invalid_mode: "無効な公開設定です。**public**または**private**を使用してください"
+
+### Editor interaction!
+ineraction_edit_playlist_id_label: "新しいプレイリストID"
+ineraction_edit_playlist_name_label: "新しいプレイリスト名"
+ineraction_edit_playlist_des_label: "新しいプレイリストの説明"
+ineraction_edit_playlist_private_label: "新しいプレイリストの公開設定"
+ineraction_edit_playlist_id_placeholder: "新しいプレイリストIDを入力！ [a-z, A-Z, 0-9]"
+ineraction_edit_playlist_name_placeholder: "新しいプレイリスト名を入力！"
+ineraction_edit_playlist_des_placeholder: "新しいプレイリストの説明を入力！"
+ineraction_edit_playlist_private_placeholder: "新しいプレイリストの公開設定を入力！ [public/private]"
+ineraction_edit_success: "プレイリストの編集に成功しました\n新しいプレイリストID: `%{playlistId}`"
+ineraction_edit_playlist_error: "エラーが発生しました。もう一度お試しください！"
+ineraction_edit_notfound: "有効なプレイリストIDを入力してください！"
+ineraction_edit_playlist_owner: "あなたは**プレイリストのオーナー**ではありません"
+ineraction_edit_invalid_id: "有効で既存でないプレイリストIDを入力してください！"
+
+### pl-import commands! ###
+pl_import_imported_desc: "### プレイリスト **%{name}** がキューに追加されました ♪"
+pl_import_imported_footer: "%{tracks}曲をお楽しみください • %{duration} • 音楽の至福を！"
+pl_import_invalid: "有効なプレイリストIDを入力してください！"
+pl_import_private: "プレイリストは**非公開**です"
+pl_import_voice: "このコマンドを使用するにはボイスチャンネルに参加する必要があります！"
+pl_import_empty: "プレイリストは**空**です"
+
+### pl-info commands! ###
+pl_info_owner: "オーナー"
+pl_info_id: "ID"
+pl_info_des: "説明"
+pl_info_no_des: "説明が設定されていません！"
+pl_info_private: "公開設定"
+pl_public: "公開"
+pl_private: "非公開"
+pl_info_total: "合計曲数"
+pl_info_created: "作成日"
+pl_info_invalid: "有効なプレイリストIDを入力してください！"
+
+### pl-remove commands! ###
+pl_remove_invalid: "有効なプレイリストIDを入力してください！"
+pl_remove_number_invalid: "有効な数値を入力してください！"
+pl_remove_notfound: "有効なプレイリストIDを入力してください！"
+pl_remove_owner: "あなたは**プレイリストのオーナー**ではありません"
+pl_remove_song_notfound: "曲が見つかりません！"
+pl_remove_removed: "`%{name}`から**%{position}番目**の曲を削除しました"
+
+### pl-SaveQueue command! ###
+pl_savequeue_invalid: "有効なプレイリストIDを入力してください！"
+pl_savequeue_notfound: "有効なプレイリストIDを入力してください！"
+pl_savequeue_owner: "あなたは**プレイリストのオーナー**ではありません！"
+pl_savequeue_no_tracks: "現在再生中の曲はありません！"
+pl_savequeue_no_new_saved: "曲は既に`%{name}`に存在します"
+pl_savequeue_saved: "**%{tracks}曲**を`%{name}`に保存しました"
+
+pl_error_no_node: "Lavalinkサーバーが見つかりませんでした。**5分後**にもう一度お試しください"

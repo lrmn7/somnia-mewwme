@@ -1,0 +1,76 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+# Mode
+enable: "Ingeschakeld"
+disable: "Uitgeschakeld"
+
+# maintenance
+maintenance_title: "Onderhoud"
+maintenance_desc: |
+  %{bot} ondergaat momenteel onderhoud. Probeer het later opnieuw.
+  Voor meer informatie, word lid van onze [ondersteuningsserver](%{serversupport}). Bedankt!
+
+# Getting error!
+unexpected_error: "Er is iets misgegaan. Probeer het later opnieuw!"
+
+### Rate limit!
+ratelimit: "Je voert acties te snel uit. Wacht alsjeblieft **%{time} seconden**"
+
+# No permission!
+no_perms: "Ik heb geen **%{perm}**-rechten!\nGeef me alsjeblieft de **%{perm}**-rechten om dit commando uit te voeren."
+
+no_manage_guild_perms: "Dit commando vereist **%{perm}**-rechten!\nJe hebt geen toestemming om dit commando uit te voeren!"
+
+no_admin_perms: "Dit commando vereist **%{perm}**-rechten!\nJe hebt geen toestemming om dit commando uit te voeren!"
+
+# No permission!
+no_perms_channel: "Ik heb geen **%{perm}**-rechten in %{channel} om dit commando uit te voeren!"
+
+# Execute when invalid
+no_node: "**Er is geen Lavalink-server gevonden. Probeer het opnieuw na 5 minuten**"
+
+# Client owner!
+owner_only: "Dit commando kan alleen worden uitgevoerd door de bot-**eigenaar**"
+
+# Need to join voice & same voice to use command!
+no_player: "Er wordt momenteel geen nummer afgespeeld!"
+no_same_voice: "Je zit niet in hetzelfde spraakkanaal als ik!"
+no_in_voice: "Je zit niet in een spraakkanaal!"
+
+# Blacklist User
+blacklist_user: "Het lijkt erop dat je op de zwarte lijst staat! Je mag geen commando's gebruiken.\nNeem contact op met de **[ontwikkelaar](%{serversupport})** als je denkt dat dit een fout is."
+
+# Blacklist Guild
+blacklist_guild: "Deze server staat op de zwarte lijst! Je mag geen commando's gebruiken op deze server.\nNeem contact op met de **[ontwikkelaar](%{serversupport})** als je denkt dat dit een fout is."
+
+### DjRole No Permission ###
+not_dj_role: "Je moet de %{role}-rol hebben om dit commando te gebruiken."
+
+### No Premium Event!
+no_premium_button: "Premium verkrijgen"
+no_premium_author: "Geen Premium-abonnement"
+no_premium_desc: "Oeps! Het lijkt erop dat je nog geen premium-abonnement hebt.\nDeze functie is niet toegankelijk zonder abonnement."
+
+# Top.gg error
+topgg_error_author: "Stem Top.gg fout"
+topgg_error_desc: "Er is een fout opgetreden bij het verifieren van je stem op top.gg, mogelijk doordat Top.gg niet beschikbaar is. Probeer het opnieuw over 5-10 minuten.\nAls dit probleem aanhoudt, neem dan contact op met onze [ondersteuningsserver](%{serversupport}) voor verdere hulp."
+
+# Top.gg unvote
+topgg_unvote_button: "Stem om te ontgrendelen"
+premium_button: "Upgraden naar premium"
+topgg_unvote_author: "Stem vereist"
+topgg_unvote_desc: "Je moet stemmen om toegang te krijgen tot dit commando! Het is snel en gratis.\nJe kunt ook premium nemen via onze [Premium-pagina](%{premium}) om dit bericht over te slaan en extra functies te ontgrendelen."
+
+### Mention Desc ###
+mention_content: "mijn prefix voor deze server is `%{prefix}`\nje kunt me ook pingen om commando's te gebruiken of typ </help:1294325423957741598> om mijn slash-commando's te bekijken ♡"

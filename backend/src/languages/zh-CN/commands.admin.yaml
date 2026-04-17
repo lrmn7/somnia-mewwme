@@ -1,0 +1,34 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "我找不到那个服务器..."
+blacklist_guild_already: "看起来 %{id} 已经在黑名单中了，我无能为力。"
+blacklist_guild_add: "再见了，%{id}！我已将其加入黑名单。看来缘分未到..."
+blacklist_guild_not_exist: "你说的 %{id}？我在我的巡演路线中找不到..."
+blacklist_guild_delete: "欢迎回来，%{id}！我可以再去那里巡演了，他们已不再被列入黑名单。"
+
+### Blacklist User
+blacklist_user_bot_owner: "哇！我不能把我自己的创造者列入黑名单！你是想让我惹麻烦吗？"
+blacklist_user_not_found: "我找不到那位粉丝..."
+blacklist_user_already: "看起来 %{id} 已经在黑名单中了，我无能为力。"
+blacklist_user_add: "再见了，%{id}！很遗憾要把一位粉丝加入黑名单，但这可能是最好的选择..."
+blacklist_user_not_exist: "%{id}？那是谁？我在粉丝俱乐部里找不到..."
+blacklist_user_delete: "太好了！%{id} 已恢复粉丝身份！我迫不及待想在下一场演唱会见到他们！"
+
+
+### Maintenance Commands! ###
+maintenance_arg_error: "不确定这是什么类型的维护，但你一定要使用 %{text} 代替"
+maintenance_true: "好的！现在我只听你的！"
+maintenance_false: "我又开始听所有人的了！"
+

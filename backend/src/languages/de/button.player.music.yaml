@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "Yay~~ Autoplay ist jetzt **Aktiviert**"
+autoplay_off: "Hmmm~~ Autoplay ist jetzt **Deaktiviert**"
+autoplay_no_song: "Es werden keine Songs abgespielt!"
+
+### Loop command!
+loop_current: "Der aktuelle Song wird jetzt in Schleife abgespielt. Viel Spass beim Wiederholen!"
+loop_all: "Die Warteschlange wird jetzt in Schleife abgespielt. Lass die Musik auf Repeat laufen!"
+unloop_all: "Der Schleifenmodus wurde deaktiviert. Geniesse die Vielfalt der Tracks!"
+
+### Pause command!
+pause_msg: "Musik ist pausiert. Mach eine Pause und geniesse die Stille."
+
+### Resume command!
+resume_msg: "Musik ist wieder an! Lass uns weitermachen ♪"
+
+previous_notfound: "Tut mir leid, ich kann nicht weiter zurueckspulen. Kein vorheriger Track gefunden :("
+previous_msg: "Na gut, wir spulen zurueck! Vorheriger Track kommt <3"
+
+### Queue command!
+queue_title: "Warteschlange wird abgespielt..."
+queue_description: "**%{title} **\n\n**Rest der Warteschlange %{list_song}**"
+queue_footer: "Seite • %{page}/%{pages} | Songs • %{queue_lang} | Gesamtdauer • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "Rate mal was ich gemacht habe? Ich habe die Warteschlange fuer dich gemischt!"
+
+### Skip command!
+skip_msg: "Ich habe den Track uebersprungen. Hoffentlich stoert es dich nicht :p"
+skip_notfound: "Hoppla! Es gibt keinen Track zum Ueberspringen! Groove weiter mit dem aktuellen Track ♪"
+
+### Stop command!
+stop_msg: "Die Musikwiedergabe wurde gestoppt. Hoffentlich hattest du eine tolle Zeit!"
+
+### Volume command!
+voldown_msg: "Lautstaerke wurde um %{volume}% verringert. Geniesse die sanfteren Klaenge!"
+volume_invalid: "Ungueltige Lautstaerke. Der verfuegbare Bereich liegt zwischen **1** und **100**"
+volup_msg: "Lautstaerke wurde um %{volume}% erhoeht. Dreh die Musik auf!"
+volume_max: "Ich kann meine Lautstaerke nicht ueber 100% erhoehen"
+volume_min: "Ohno~~ bereits auf minimaler Lautstaerke!"

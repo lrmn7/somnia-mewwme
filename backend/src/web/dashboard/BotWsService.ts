@@ -10,9 +10,8 @@ export type WSOpCode =
   | "playerEnd"
   | "memberJoin"
   | "memberLeave"
-  // Emitted after any dashboard control mutation (loop, volume, queue add, seek)
-  // so the frontend can apply a full partial-state patch without polling.
-  | "playerState";
+  | "playerState"
+  | "queueUpdate";
 
 export interface WSTrackData {
   title: string;
@@ -33,7 +32,6 @@ export interface WSMessage {
   data?: WSTrackData;
   userId?: string;
   mode?: string;
-  // ── playerState payload fields ─────────────────────────────────────────────
   loop?: string;
   pause?: boolean;
   volume?: number;
@@ -64,18 +62,25 @@ export function createBotWsService(wsBaseUrl: string, apiToken: string) {
       try {
         const msg = JSON.parse(raw.toString()) as WSMessage;
         for (const handler of conn.handlers) handler(msg);
-      } catch {}
+      } catch (err) {
+       // console.warn(`[BotWsService] Failed to parse message for guild ${guildId}:`, err);
+      }
     });
 
     ws.on("close", () => {
-      // console.info(`[BotWsService] close -> guild=${guildId} time=${Date.now()}`);
+     // console.info(`[BotWsService] WebSocket closed for guild ${guildId}, reconnecting in 3s`);
       if (!connections.has(guildId)) return;
       conn.reconnectTimer = setTimeout(() => {
-        if (conn.handlers.size > 0) openConnection(guildId, conn);
+        if (conn.handlers.size > 0) {
+          console.info(`[BotWsService] Reconnecting guild ${guildId}`);
+          openConnection(guildId, conn);
+        }
       }, 3_000);
     });
 
-    ws.on("error", () => {});
+    ws.on("error", (err) => {
+     // console.warn(`[BotWsService] WebSocket error for guild ${guildId}:`, (err as Error).message);
+    });
   }
 
   return {

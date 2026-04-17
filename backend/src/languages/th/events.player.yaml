@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "กำลังเล่น"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "ศิลปิน"
+track_requested_by: "ขอโดย"
+track_duration: "ระยะเวลา"
+no_same_voice: "คุณไม่ได้อยู่ในห้องเสียงเดียวกับฉัน!"
+filter_already: "**เปิดฟิลเตอร์ %{name} อยู่แล้ว**"
+filter_reset_on: "**ฟิลเตอร์ถูกรีเซ็ตแล้ว**"
+filter_reset_already: "**ฟิลเตอร์ถูกรีเซ็ตไปแล้ว**"
+no_player_filter: "**ฉันไม่สามารถใช้ฟิลเตอร์ได้!**"
+filter_menu_on: "**เปิดฟิลเตอร์ %{name} แล้ว!**"
+
+player_get_exception: "อุ๊ปส์! ดูเหมือนจะมีปัญหากับเพลง ต้องการให้ฉันลองอีกครั้งไหม?"
+player_track_error: "เพลงมีปัญหา คุณช่วยลองอีกครั้งได้ไหม?"
+player_track_stuck: "ฉันเศร้ามาก :( เพลงค้างอยู่ บางทีการลองใหม่จะทำให้เราสดใสขึ้น?"
+queue_end_desc: "เพลงทั้งหมดจบแล้ว! ต้องการเพลงเพิ่มไหม?\nใช้ **/play** เพื่อให้ปาร์ตี้ดำเนินต่อไป!"
+
+leave_pause: "เนื่องจากพวกคุณทิ้งฉันไว้คนเดียว :( เครื่องเล่นถูกหยุดชั่วคราวแล้ว"
+leave_resume: "เนื่องจากมีคนเข้ามาร่วม เครื่องเล่นถูกเล่นต่อแล้ว"
+
+player_end: "ช่องว่างเปล่ามาเกือบ 15 นาทีแล้ว ฉันเลยตัดสินใจออกไปเพราะฉันไม่ชอบอยู่คนเดียว"
+
+### Last FM Scrobble ###
+expired_login_session: "เซสชัน Last.fm ของคุณหมดอายุหรือไม่ถูกต้อง\nกรุณายืนยันตัวตนอีกครั้งเพื่อใช้ฟีเจอร์ scrobble ต่อไป"
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • ผู้ที่ปรารถนาจะร้องเพลงจะพบเพลงเสมอ ♪"
+milestone_track_desc: |
+  ## โอ้ เฮ้
+  คุณฟังเพลงไปแล้ว **%{total}** เพลง! เพลย์ลิสต์ของคุณไม่มีที่สิ้นสุด หรือคุณหมกมุ่นกับดนตรีขนาดนั้น?
+

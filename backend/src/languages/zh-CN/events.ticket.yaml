@@ -1,0 +1,37 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "提供创建工单的原因"
+ticket_already_open: "你已经有一个打开的工单了。"
+ticket_already_closed: "用户 %{id} 的工单数据未找到或工单已关闭"
+ticket_close_user: "你没有权限关闭此工单。"
+ticket_delete_user: "你没有权限删除此工单。"
+ticket_deleting_action: "正在删除工单..."
+ticket_closed_label: "🔒 已关闭"
+ticket_delete_label: "🗑️ 删除"
+ticket_create: "工单已创建。前往 %{channel}"
+ticket_create_title: "等待工作人员回复"
+ticket_create_desc: |
+  感谢你创建工单。请等待工作人员回复。
+  `注意：此工单没有备份。请确保自行备份任何重要信息`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 已关闭的工单"
+ticket_closed_desc: "工单已成功关闭！"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "工单已关闭。"
+ticket_closed_dm_desc: |
+  你打开的一个工单刚刚被关闭了。你的聊天记录可以在下方链接中找到。
+  如果你遇到任何问题或有进一步的疑问，请随时打开新工单。我们随时为你提供帮助！
+

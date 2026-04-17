@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Bekijk mijn keuzes voor jou!~"
+search_desc: "### HEY! Resultaten gevonden voor je zoekopdracht"
+search_end_desc2: "### OMG! %{user}, je hebt niet op tijd een nummer gekozen\n**Probeer het opnieuw!**"
+search_footer: "%{countSong} nummers gevonden"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` veel plezier ermee ♥"
+
+search_active: "Je bent al iets aan het zoeken! Wacht tot de vorige zoekopdracht is afgelopen voordat je een nieuwe start."
+search_no_result: "Geen resultaten gevonden voor je zoekopdracht :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` veel plezier ermee ♥"
+no_songs_playing: "Er wordt momenteel geen nummer afgespeeld!"
+
+### Autoplay command!
+autoplay_off: "Autoplay is nu **Uitgeschakeld**"
+autoplay_on: "Autoplay is nu **Ingeschakeld**"
+autoplay_no_songs_playing: "Er worden geen nummers afgespeeld!"
+
+### ClearQueue command!
+clearqueue_msg: "Wachtrij is **Gewist**"
+
+### Forward command!
+forward_msg: "**%{user} heeft %{title} vooruitgespoeld naar** `%{duration}`"
+forward_beyond: "Nummer is bijna afgelopen. Je kunt niet verder vooruitspoelen!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Volgende om af te spelen ♪"
+playnext_queue_empty: "De wachtrij is leeg. Voeg eerst wat nummers toe"
+playnext_notfound: "Nummer niet gevonden!"
+
+# Execute when invalid
+no_node: "**Er is geen Lavalink-server gevonden. Probeer het opnieuw na 5 minuten**"
+
+### Join command!
+join_msg: "De speler is succesvol aangemaakt en is verbonden met %{channel}"
+join_already: "Ik zit al in %{channel}"
+join_no_in_voice: "Je zit niet in een spraakkanaal!"
+join_no_same_voice: "Je zit niet in hetzelfde spraakkanaal als ik!"
+
+### Loop command!
+loop_current: "Nu wordt %{title} herhaald"
+loop_all: "**Wachtrij-herhaalmodus is ingeschakeld**"
+unloop_all: "**Herhaalmodus is UITGESCHAKELD**"
+loop_invalid: "Ongeldige herhaalmodus. Gebruik alsjeblieft **Disabled**"
+loop_already: "Herhaalmodus is al **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Geef alsjeblieft een geldige **Naam van het nummer** op"
+lyrics_title: "Songtekst voor **%{song}**"
+lyrics_notfound: "**Kon de songtekst voor dit nummer niet vinden!**"
+lyrics_toolong: "**Songtekst te lang, maximaal 4048 tekens toegestaan!**"
+lyrics_disable: " **Songteksten zijn momenteel uitgeschakeld!**"
+lyrics_noquery: "**Geef alsjeblieft een geldige **Naam van het nummer** op"
+lyrics_error: "**Fout: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "NU AAN HET AFSPELEN"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Artiest"
+nowplaying_total_duration_title: "Duur"
+nowplaying_request_title: "Aangevraagd door"
+
+### Pause command!
+pause_msg: "**Het nummer %{title} is momenteel gepauzeerd!"
+
+### Play command!
+play_no_same_voice: "Je zit niet in hetzelfde spraakkanaal als ik!"
+play_no_in_voice: "Je zit niet in een spraakkanaal!"
+play_arg: "Geef alsjeblieft een geldige naam of URL van een nummer op!"
+play_emoji: "**Oeps! Dit is een emoji, je kunt geen nummers afspelen met emoji's**"
+play_match: "**Oeps! Sorry, nummer niet gevonden! Probeer het opnieuw**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## Dat was makkelijk!
+  ### Je %{title} is toegevoegd aan de wachtrij
+
+play_queue_max: |
+  OMG!>,.,< De wachtrij is te lang. Maximaal %{limitqueue} nummers.
+  Upgrade naar [**premium**](%{premium}) voor onbeperkte wachtrijtoegang!
+
+play_playlist_max: |
+  OMG!>,.,< De afspeellijst is te lang. Maximaal %{limitqueue} nummers.
+  Upgrade naar [**premium**](%{premium}) voor onbeperkte afspeellijsttoegang!
+
+### Previous command!
+previous_notfound: |
+  **Geen vorig nummer gevonden in de wachtrij!
+  Waarom niet /play meer nummers toevoegen en de muziek laten doorgaan?**
+previous_msg: |
+  **Terug naar het vorige nummer!
+  Nu wordt %{title} afgespeeld**
+
+### Queue command!
+queue_number_invalid: "Voer alsjeblieft een geldig getal in!"
+queue_title: "Wachtrij wordt afgespeeld..."
+queue_description: "**%{title}**\n\n**Rest van de wachtrij %{rest}**"
+queue_footer: "Pagina • %{page}/%{pages} | Nummers • %{queue_lang} | Totale duur • %{duration}"
+queue_notnumber: "Voer alsjeblieft een geldig paginanummer in!"
+queue_page_notfound: "Er zijn slechts **%{page} pagina's**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Voer alsjeblieft een geldig getal in!"
+removetrack_already: "**Ik kan een nummer dat al wordt afgespeeld niet verwijderen**"
+removetrack_notfound: "**Sorry %{user}, nummer niet gevonden!**"
+removetrack_desc: "**%{title} is verwijderd uit de wachtrij!**"
+
+### Replay command!
+replay_msg: "**%{user} speelt %{title} opnieuw af**"
+replay_not_seekable: "Het nummer **%{title}** kan niet opnieuw worden afgespeeld."
+
+### Resume command!
+resume_msg: "**Afspelen hervat %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} heeft %{title} teruggespoeld naar** `%{duration}`"
+rewind_beyond: "Nummer is net begonnen. Je kunt niet verder terugspoelen!"
+
+### Seek command!
+seek_beyond: "Je kunt niet voorbij de duur van het nummer spoelen!"
+seek_invalid: "Ongeldige spoelduur. Gebruik alsjeblieft een geldig tijdstempel. Voorbeeld: **1:30**"
+seek_msg: "**%{title} gespoeld naar** `%{duration}`"
+seek_not_seekable: "Het nummer **%{title}** kan niet worden teruggespoeld of vooruitgespoeld."
+
+### Skip command!
+skip_notfound: |
+  **Er is geen nummer gevonden om naar over te slaan! Het lijkt erop dat er niets is om over te slaan.
+  Laten we /play de muziek laten doorgaan door meer nummers toe te voegen!**
+skip_msg: "**%{title} is overgeslagen**"
+skip_number_invalid: "Voer alsjeblieft een geldig getal in!"
+
+### Stop command!
+stop_msg: "**%{title} is gestopt**"
+
+### Shuffle command!
+shuffle_title: "Schudt de wachtrij"
+
+### Volume command!
+volume_number_invalid: "Voer alsjeblieft een geldig getal in!"
+volume_invalid: "Ongeldig volume. Gebruik alsjeblieft een getal tussen **1** en **100**"
+volume_msg: "**Volume ingesteld op %{volume}%, geniet ervan %{user}**"
+volume_max: "**Volume staat al op maximaal 100%**"
+
+### play source commands
+url_no_allowed: "Gebruik alsjeblieft de naam van het nummer/artiest (URL niet toegestaan)"
+play_arg_source: "Geef alsjeblieft een geldige naam van het nummer/artiest op!"
+
+## Temporarily disabled commands
+youtube_disabled: "YouTube-ondersteuning is tijdelijk niet beschikbaar"
+autoplay_disabled: "Autoplay is tijdelijk uitgeschakeld."

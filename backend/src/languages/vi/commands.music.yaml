@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Xem những lựa chọn của tôi dành cho bạn!~"
+search_desc: "### NÀY! Đã tìm thấy kết quả cho yêu cầu của bạn"
+search_end_desc2: "### ỐI! %{user}, bạn đã không chọn bài hát kịp thời\n**Hãy thử lại nhé!**"
+search_footer: "%{countSong} bài hát được tìm thấy"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` thưởng thức nhé ♥"
+
+search_active: "Bạn đang tìm kiếm thứ gì đó rồi! Hãy đợi tìm kiếm trước kết thúc trước khi bắt đầu tìm kiếm mới."
+search_no_result: "Không tìm thấy kết quả cho tìm kiếm của bạn :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` thưởng thức nhé ♥"
+no_songs_playing: "Không có bài hát nào đang phát!"
+
+### Autoplay command!
+autoplay_off: "Tự động phát đã được **Tắt**"
+autoplay_on: "Tự động phát đã được **Bật**"
+autoplay_no_songs_playing: "Không có bài hát nào đang phát!"
+
+### ClearQueue command!
+clearqueue_msg: "Hàng đợi đã được **Xóa**"
+
+### Forward command!
+forward_msg: "**%{user} đã tua nhanh %{title} đến** `%{duration}`"
+forward_beyond: "Bài hát sắp kết thúc. Bạn không thể tua nhanh quá giới hạn!"
+
+### PlayNext command!
+playnext_desc: "### %{name} Tiếp theo sẽ phát ♪"
+playnext_queue_empty: "Hàng đợi trống. Vui lòng thêm bài hát trước"
+playnext_notfound: "Không tìm thấy bài hát!"
+
+# Execute when invalid
+no_node: "**Không tìm thấy máy chủ Lavalink. Vui lòng thử lại sau 5 phút**"
+
+### Join command!
+join_msg: "Trình phát đã được tạo thành công và đã tham gia %{channel}"
+join_already: "Tôi đã ở trong %{channel} rồi"
+join_no_in_voice: "Bạn không ở trong kênh thoại!"
+join_no_same_voice: "Bạn không ở cùng kênh thoại với tôi!"
+
+### Loop command!
+loop_current: "Đang lặp %{title}"
+loop_all: "**Đã bật chế độ lặp HÀNG ĐỢI**"
+unloop_all: "**Chế độ lặp đã được TẮT**"
+loop_invalid: "Chế độ lặp không hợp lệ. Vui lòng sử dụng **Disabled**"
+loop_already: "Chế độ lặp đã là **%{mode}** rồi"
+
+### Lyrics command!
+provide_lyrics: "Vui lòng cung cấp **Tên bài hát** hợp lệ"
+lyrics_title: "Lời bài hát cho **%{song}**"
+lyrics_notfound: "**Không tìm thấy lời cho bài hát này!**"
+lyrics_toolong: "**Lời bài hát quá dài, tối đa 4048 ký tự được phép!**"
+lyrics_disable: " **Lời bài hát hiện đang bị tắt!**"
+lyrics_noquery: "**Vui lòng cung cấp **Tên bài hát** hợp lệ"
+lyrics_error: "**Lỗi: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "ĐANG PHÁT"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Tác giả"
+nowplaying_total_duration_title: "Thời lượng"
+nowplaying_request_title: "Yêu cầu bởi"
+
+### Pause command!
+pause_msg: "**Bài hát %{title} hiện đang tạm dừng!"
+
+### Play command!
+play_no_same_voice: "Bạn không ở cùng kênh thoại với tôi!"
+play_no_in_voice: "Bạn không ở trong kênh thoại!"
+play_arg: "Vui lòng cung cấp tên bài hát hoặc URL hợp lệ!"
+play_emoji: "**Ối! Đây là emoji, Bạn không thể phát nhạc bằng emoji**"
+play_match: "**Ối! Xin lỗi, không tìm thấy bài hát! Vui lòng thử lại**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## Dễ quá!
+  ### %{title} của bạn đã được thêm vào hàng đợi
+
+play_queue_max: |
+  ÔI!>,.,< Hàng đợi quá dài. Tối đa %{limitqueue} bài hát.
+  Nâng cấp lên [**premium**](%{premium}) để có quyền truy cập hàng đợi không giới hạn!
+
+play_playlist_max: |
+  ÔI!>,.,< Danh sách phát quá dài. Tối đa %{limitqueue} bài hát.
+  Nâng cấp lên [**premium**](%{premium}) để có quyền truy cập danh sách phát không giới hạn!
+
+### Previous command!
+previous_notfound: |
+  **Không tìm thấy bài hát trước trong hàng đợi!
+  Sao không /play thêm bài hát và tiếp tục thưởng thức âm nhạc?**
+previous_msg: |
+  **Quay lại bài hát trước!
+  Đang phát %{title}**
+
+### Queue command!
+queue_number_invalid: "Vui lòng cung cấp một số hợp lệ!"
+queue_title: "Hàng đợi đang phát..."
+queue_description: "**%{title}**\n\n**Hàng đợi còn lại %{rest}**"
+queue_footer: "Trang • %{page}/%{pages} | Bài hát • %{queue_lang} | Tổng thời lượng • %{duration}"
+queue_notnumber: "Vui lòng cung cấp số trang hợp lệ!"
+queue_page_notfound: "Chỉ có **%{page} Trang**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Vui lòng cung cấp một số hợp lệ!"
+removetrack_already: "**Tôi không thể xóa bài hát đang phát**"
+removetrack_notfound: "**Xin lỗi %{user}, không tìm thấy bài hát!**"
+removetrack_desc: "**Đã xóa %{title} khỏi hàng đợi!**"
+
+### Replay command!
+replay_msg: "**%{user} phát lại %{title}**"
+replay_not_seekable: "Bài hát **%{title}** không thể phát lại."
+
+### Resume command!
+resume_msg: "**Tiếp tục phát %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} đã tua lại %{title} đến** `%{duration}`"
+rewind_beyond: "Bài hát vừa mới bắt đầu. Bạn không thể tua lại quá giới hạn!"
+
+### Seek command!
+seek_beyond: "Bạn không thể tua quá thời lượng bài hát!"
+seek_invalid: "Thời gian tua không hợp lệ. Vui lòng sử dụng mốc thời gian hợp lệ. Ví dụ: **1:30**"
+seek_msg: "**Đã tua %{title} đến** `%{duration}`"
+seek_not_seekable: "Bài hát **%{title}** không thể tua lại hoặc tua nhanh."
+
+### Skip command!
+skip_notfound: |
+  **Không tìm thấy bài hát để bỏ qua! Có vẻ không có gì để bỏ qua.
+  Hãy /play tiếp tục thưởng thức âm nhạc bằng cách thêm bài hát!**
+skip_msg: "**%{title} đã được bỏ qua**"
+skip_number_invalid: "Vui lòng cung cấp một số hợp lệ!"
+
+### Stop command!
+stop_msg: "**%{title} đã được dừng**"
+
+### Shuffle command!
+shuffle_title: "Xáo trộn hàng đợi"
+
+### Volume command!
+volume_number_invalid: "Vui lòng cung cấp một số hợp lệ!"
+volume_invalid: "Âm lượng không hợp lệ. Vui lòng sử dụng số từ **1** đến **100**"
+volume_msg: "**Âm lượng đặt thành %{volume}%, Thưởng thức nhé %{user}**"
+volume_max: "**Âm lượng đã ở mức tối đa 100%**"
+
+### play source commands
+url_no_allowed: "Vui lòng sử dụng tên bài hát/tên nghệ sĩ (không cho phép url)"
+play_arg_source: "Vui lòng cung cấp tên bài hát/nghệ sĩ hợp lệ!"
+
+## Temporarily disabled commands
+youtube_disabled: "Hỗ trợ YouTube tạm thời không khả dụng"
+autoplay_disabled: "Tự động phát tạm thời bị tắt."

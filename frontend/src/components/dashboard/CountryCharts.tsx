@@ -15,6 +15,7 @@ interface Country {
 
 const COUNTRIES: Country[] = [
   { code: "id", name: "Indonesia", flag: "🇮🇩" },
+  { code: "my", name: "Malaysia", flag: "🇲🇾" },
   { code: "us", name: "United States", flag: "🇺🇸" },
   { code: "gb", name: "United Kingdom", flag: "🇬🇧" },
   { code: "jp", name: "Japan", flag: "🇯🇵" },

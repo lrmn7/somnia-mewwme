@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Autoplay command!
+autoplay_on: "耶~~ 自動播放已**啟用**"
+autoplay_off: "嗯~~ 自動播放已**停用**"
+autoplay_no_song: "目前沒有正在播放的歌曲！"
+
+### Loop command!
+loop_current: "目前的歌曲將會循環播放。享受重複播放的樂趣吧！"
+loop_all: "播放佇列已設為循環模式。讓音樂不斷重複播放吧！"
+unloop_all: "循環模式已關閉。享受多樣化的曲目吧！"
+
+### Pause command!
+pause_msg: "音樂已暫停。休息一下，享受片刻的寧靜。"
+
+### Resume command!
+resume_msg: "音樂回來了！讓我們繼續律動吧 ♪"
+
+previous_notfound: "抱歉，無法再往前了。找不到上一首曲目 :("
+previous_msg: "好吧，看來我們要倒帶了！上一首曲目即將播放 <3"
+
+### Queue command!
+queue_title: "播放佇列..."
+queue_description: "**%{title} **\n\n**其餘佇列 %{list_song}**"
+queue_footer: "頁面 • %{page}/%{pages} | 歌曲 • %{queue_lang} | 總時長 • %{total_duration}"
+
+### Shuffle command!
+shuffle_msg: "猜猜我做了什麼？我幫你隨機打亂了播放佇列！"
+
+### Skip command!
+skip_msg: "我跳過了這首歌。希望你不介意 :p"
+skip_notfound: "糟糕！看起來沒有可以跳過的曲目！繼續享受目前的曲目吧 ♪"
+
+### Stop command!
+stop_msg: "音樂播放已停止。希望你度過了愉快的時光！"
+
+### Volume command!
+voldown_msg: "音量已降低 %{volume}%。享受更柔和的氛圍吧！"
+volume_invalid: "無效的音量。可用範圍為 **1** 到 **100**"
+volup_msg: "音量已提高 %{volume}%。讓節奏更強勁吧！"
+volume_max: "我的音量無法超過 100%"
+volume_min: "哎呀~~ 已經是最小音量了！"

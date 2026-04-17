@@ -64,7 +64,6 @@ export async function lastfmLogout(
     return res.code(404).send({ error: "User is not connected to Last.fm." });
   }
 
-  // Same call as src/commands/Settings/LastFM.ts "logout" action
   await client.db.LastFm.delete(userId);
 
   client.logger.info("ExternalServicesRoute", `Last.fm disconnected for user ${userId}`);
@@ -72,7 +71,6 @@ export async function lastfmLogout(
   res.send({ success: true });
 }
 
-// ── Guild text channels list (for Twitch/YouTube channel selector) ───────────
 
 export async function getGuildTextChannels(
   client: Manager,

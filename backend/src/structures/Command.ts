@@ -5,10 +5,15 @@ import { CommandHandler } from "./CommandHandler.js";
 export enum Accessableby {
   Owner = "Owner",
   Admin = "Admin",
+  UserPremiumCode = "UserPremiumCode",
+  GuildPremiumCode = "GuildPremiumCode",
   Premium = "Premium",
+  PremiumRole = "PremiumRole",
   Manager = "Manager",
   Voter = "Voter",
   Member = "Member",
+  Web3User = "Web3User",
+  Web3Guild = "Web3Guild",
 }
 
 export type CommandOptionChoiceInterface = {

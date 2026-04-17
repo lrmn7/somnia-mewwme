@@ -1,0 +1,177 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### HELPDESK EVENTS ###
+disable_helpdesk: "Helpdesk telah dinonaktifkan"
+invalid_channel_helpdesk: "Channel yang diberikan tidak valid"
+channel_viewable_helpdesk: "Channel yang diberikan tidak terlihat olehku"
+setup_helpdesk_succes: "Helpdesk telah berhasil diatur ke %{channel}."
+
+embed1_title: "Selamat datang di server dukungan %{bot}!"
+embed1_desc: "**%{bot} Di mana mereka yang ingin bernyanyi selalu menemukan lagu ♪\nBergabunglah dengan melodi di server Discord-mu hari ini!**"
+embed1_footer: "Terima kasih telah memilih %{bot} sebagai Bot Musik pribadimu!"
+
+embed2_title: "%{bot} Help desk"
+embed2_desc: |
+  **%{button1} Apa itu %{bot}?
+
+  %{button2} Bagaimana cara mengundang Bot Musik %{bot}?
+
+  %{button3} Bagaimana cara menggunakan Bot Musik %{bot}?
+
+  %{button4} Bagaimana cara mengaktifkan fitur 24/7?
+
+  %{button5} %{bot} tidak merespon/offline.
+
+  %{button6} Kualitas audio %{bot} terdengar lag.
+
+  %{button7} Bagaimana cara mengatur channel request lagu?
+
+  %{button8} %{bot} terus mengatakan tidak memiliki izin.
+
+  %{button9} %{bot} terputus dari voice channel dengan sendirinya.
+
+  %{button10} Bagaimana cara mendapatkan/mengaktifkan Premium dan keuntungan apa yang saya dapatkan?**
+
+embed2_field1_name: "Website"
+embed2_field1_value: "**[Meww.me](%{website})**"
+embed2_field2_name: "Tipe"
+embed2_field2_value: "**Bot Musik**"
+embed2_field3_name: "Dapatkan Premium"
+embed2_field3_value: "**[Premium](%{premium})**"
+
+### BUTTON HELPDESK 1 ###
+helpdesk1_title: "Mereka yang ingin bernyanyi selalu menemukan lagu ♪"
+helpdesk1_desc: |
+  **%{bot} adalah bot Discord yang merevolusi cara kamu menikmati musik di Discord, menawarkan antarmuka pengguna yang paling bersih, audio berkualitas tinggi, dan berbagai fitur terkait musik.**
+
+  **Mengapa %{bot}?**
+  - **Pembaruan Rutin**: %{bot} terus diperbarui, memastikan kamu selalu mendapatkan fitur dan perbaikan terbaru.
+  - **Fitur Komprehensif**: Sistem musik sederhana %{bot} memungkinkan pemutaran yang lancar dari berbagai sumber.
+  - **Komunitas dukungan yang berdedikasi**: Kami adalah bot yang relatif baru di Discord, dan kami ingin kamu bergabung! Memastikan bot berjalan lancar adalah prioritas kami, itulah mengapa kami membutuhkan bantuanmu dengan umpan balik dan saran. Jika kamu punya pertanyaan, jangan ragu untuk membuka tiket dukungan.
+
+  **Tautan Berguna**
+  - %{server}
+  - %{vote}
+  - %{website}
+  - %{premium}
+
+  **Butuh Dukungan?**
+  - Kirim tiket untuk bantuan tambahan
+
+  **Apa yang kamu tunggu? Undang %{bot} ke server Discord-mu hari ini dan nikmati pengalaman musik tanpa batas!**
+  **[Klik di sini untuk mengundang](%{invite})**
+
+helpdesk2_title: "Menambahkan %{bot} ke servermu"
+helpdesk2_desc: |
+  **Kamu bisa mengundang %{bot} menggunakan [link](%{invite}) ini.**
+    Pilih server yang ingin kamu tambahkan dan klik **Authorize**
+
+  > Perlu diketahui bahwa jika kamu menonaktifkan izin `Administrator` untuk %{bot}, hal itu mungkin mempengaruhi fungsionalitasnya. Meskipun kamu masih bisa mengakses fitur musik dasar, beberapa fungsionalitas mungkin tidak berfungsi dengan baik.
+
+helpdesk3_title: "Bagaimana cara menggunakan Bot Musik %{bot}?"
+helpdesk3_desc: |
+  Bergabunglah ke voice atau stage channel lalu ketik /play <nama lagu/url> di text channel.
+  Kamu bisa berinteraksi langsung menggunakan tombol kontrol untuk stop, loop dll.
+  Ketik / (atau /help) dan pilih ikon %{bot} untuk mendapatkan daftar semua perintah yang tersedia.
+
+helpdesk4_title: "Bagaimana cara mengaktifkan fitur 24/7?"
+helpdesk4_desc: |
+  Bergabunglah ke voice atau stage channel lalu ketik `/247 <enable/disable>` di text channel.
+
+  **Catatan:** *Fitur ini dapat digunakan jika kamu memiliki izin `manage server`, dan dipastikan sebelumnya bahwa bot sedang memutar musik.*
+
+helpdesk5_title: "%{bot} tidak merespon/offline"
+helpdesk5_desc: |
+  Kamu mencoba menggunakan perintah tapi terus gagal? Mungkin bot tidak bisa menjawab, tapi ikuti langkah-langkah di bawah untuk memperbaikinya.
+
+  **%{bot} sekarang menggunakan slash commands!**
+  Pastikan kamu menggunakan slash commands karena Discord sekarang mewajibkan semua bot menggunakannya.
+  Mulai dengan mengetik `/play` dan `/help`
+
+  **%{bot} masih tidak merespon?**
+  Skenario yang tersisa dalam situasi itu adalah masalah di sisi Discord atau kami. Verifikasi bahwa %{bot} tidak offline di servermu. Jika offline, langkah terbaik adalah menunggu hingga 5 menit dan lihat apakah %{bot} kembali online. Jika online, memiliki semua izin yang diperlukan, kamu harus menghubungi salah satu anggota dukungan kami.
+
+helpdesk6_title: "Kualitas audio %{bot} terdengar lag"
+helpdesk6_desc: |
+  Tidak ada yang suka musik yang lag, tapi hal itu terkadang terjadi saat mendengarkan bot musik di Discord. Berikut beberapa solusi yang mungkin membantu memperbaikinya.
+
+  **Apa yang harus saya lakukan?**
+  Pertama-tama kamu harus memeriksa koneksi internetmu. Discord menampilkan ping terakhir dan rata-rata di pojok kiri bawah, cukup klik "Voice Connected" dan verifikasi bahwa ping-mu stabil (jika grafik merah berkedip-kedip banyak berarti tidak stabil!) dan ping terakhir serta rata-rata di bawah 250 milidetik. Jika kedua indikator menunjukkan koneksimu buruk, kamu harus mencoba memeriksa WiFi/LAN-mu. Merestart router juga bisa membersihkan beberapa masalah.
+
+  **Kamu punya ping 5ms dan bisa download GTA 5 dalam 2 menit?**
+  Jadi koneksi internetmu sepertinya bukan masalahnya. Dalam 95% kasus di mana %{bot} lag, Discord mengalami masalah sementara dengan voice server mereka. Mereka biasanya akan merestart server pada suatu saat tapi kamu bisa memaksa pindah ke server yang berbeda di regionmu.[Coba pindahkan region servermu](https://support.discord.com/hc/en-us/articles/1500007645701-Voice-Regions-on-Discord-FAQ#h_01F3RXJ4YCHYS652ETKWJ499Y3) untuk mendapatkan voice server Discord yang baru dan segar.
+  Jika kamu masih mengalami masalah yang sama, silakan ketik /report untuk melaporkan masalahmu.
+
+helpdesk7_title: "Bagaimana cara mengatur channel request lagu?"
+helpdesk7_desc: |
+  **Bagaimana cara membuat channel request?**
+  Pastikan %{bot} diberikan izin `manage server` lalu ketik /setup dengan opsi `create` kemudian bot akan otomatis membuat channel khusus untuk request lagu.
+
+  ```Catatan: Jangan hapus pesan apapun yang dibuat %{bot} agar aku bisa bekerja dengan baik.```
+
+  **Bagaimana cara menghapus channel request?**
+  Seperti sebelumnya hanya saja di opsi kamu bisa memilih `delete`.
+
+helpdesk8_title: "%{bot} terus mengatakan tidak memiliki izin."
+helpdesk8_desc: |
+  Saat mencoba menjalankan perintah tertentu, %{bot} mungkin kekurangan izin tertentu. Dalam kasus tersebut, %{bot} akan menolak menjalankan perintah sampai masalah ini diselesaikan. Penting untuk diketahui bahwa izin-izin ini tidak opsional; %{bot} membutuhkannya untuk menjalankan perintah.
+
+  Jika kamu yakin bot memiliki izin yang diperlukan, pastikan untuk memeriksa override role di channel. Override ini dapat mengubah izin role di channel tertentu.
+
+  Jika kamu masih tidak bisa menentukan mengapa %{bot} tidak memiliki izin yang diperlukan, pertimbangkan untuk memberikan %{bot} izin Administrator. Ini seharusnya menyelesaikan masalah izin Discord apapun.
+
+helpdesk9_title: "Mewwme terputus dari voice channel dengan sendirinya"
+helpdesk9_desc: |
+  Dalam kasus yang sangat jarang, bahkan dengan mode 24/7 diaktifkan, Mewwme mungkin terputus dari voice channel tanpa seseorang menggunakan /stop atau tombol Disconnect Discord. Beberapa penyebab paling umum dan perbaikan potensial tercantum di bawah.
+
+  **Mode 24/7 tidak diaktifkan.**
+  Secara default, Mewwme terputus dari voice channel saat kosong dalam 3 menit.
+
+  **Perbaikan:** Lihat "4. Bagaimana cara mengaktifkan fitur 24/7?" di embed bantuan pertama untuk mengaktifkan mode 24/7.
+
+  **Izin tidak lengkap.**
+  Setiap kali Discord meminta kami untuk terhubung kembali ke voice channel, baik karena restart server atau gangguan API, kami memeriksa ulang izin bot untuk memastikan bisa bergabung dan berbicara di channel. Jika ada yang kurang, kamu harus menggunakan /play lagi untuk mengundang bot ke channel yang berbeda atau yang sama setelah menambahkan izin yang diperlukan.
+
+  **Perbaikan:** Pastikan menggunakan perintah /play untuk menambahkan bot ke voice channel daripada memindahkannya dari channel yang berbeda. Dengan begitu, kamu memastikan bahwa bot memiliki semua izin yang diperlukan untuk terhubung kembali saat dibutuhkan.
+
+  **Masalah Region Server.**
+  Dalam kasus tertentu, beberapa voice region mungkin mengalami masalah jaringan dan stabilitas yang bisa mencegah bot bergabung ke voice channel.
+
+  **Perbaikan:** Pindah ke voice region lain menggunakan pengaturan voice channel (pilih yang paling dekat dengan negaramu).
+
+  **Ada yang salah lainnya.**
+  Jika kamu sudah mencoba semua perbaikan di atas dan masalah masih berlanjut, silakan ketik `report` atau buka tiket di dukungan https://discord.com/channels/1088032923443277824/1169558722738147378
+
+helpdesk10_title: "Bagaimana cara mendapatkan/mengaktifkan Premium dan keuntungan apa yang saya dapatkan?"
+helpdesk10_desc: |
+  **Bagaimana cara menukarkan keuntungan Premium saya?**
+
+  untuk mengaktifkan keuntungan keanggotaan premium-mu, silakan ikuti langkah-langkah berikut:
+  1. **hubungkan akun discord-mu terlebih dahulu**
+    - sebelum membeli, pastikan akun discord-mu terhubung ke platform yang kamu gunakan (patreon atau ko-fi).
+    - ini diperlukan agar sistem dapat mendeteksi pembayaranmu secara otomatis.
+  2. **beli keanggotaanmu**
+  - setelah menghubungkan discord-mu, selesaikan pembayaran keanggotaan sesuai paket yang kamu inginkan.
+  3. **tunggu sinkronisasi**
+    - setelah pembayaranmu berhasil, silakan tunggu beberapa menit agar sistem menyinkronkan keanggotaanmu.
+  4. **klaim premium di servermu**
+    - buka server discord yang ingin kamu upgrade, lalu gunakan perintah ini:
+      `/premium claim`
+      pilih opsi platform yang benar (patreon atau ko-fi) saat diminta.
+      pastikan kamu menjalankan perintah di dalam server yang ingin kamu aktifkan premium-nya.
+      setelah diklaim, premium akan langsung aktif.
+
+  Dengan mengikuti langkah-langkah di atas, kamu akan bisa mengaktifkan dan menikmati semua keuntungan Premium yang ditawarkan. Jika kamu mengalami masalah atau punya pertanyaan lebih lanjut, jangan ragu untuk menghubungi tim dukungan kami.
+
+helpdesk10_footer: "Terima kasih telah menjadi bagian dari perjalanan kami!, kami harap kamu akan bersenang-senang di sini."

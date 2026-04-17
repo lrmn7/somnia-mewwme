@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **フィルター %{name} オン！**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **この音が気に入ってくれるといいな！**
+filter_already: "え？%{name} VSTは既にオンです...何もできません。"
+filter_number: "EQに入力できる数値ではありません..."
+filter_greater: "**0**より大きい数値にしてください！"
+filter_less: "わっ！大きすぎます！**10**未満がいいですよ..."
+
+### Bassboost command!
+bassboost_set: "**バスブーストが%{amount}dBに設定されました**"
+bassboost_limit: "**-10**から**10**の間の数値を使用してください"
+
+### Equalizer command!
+eq_author: "イコライザー"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  **-10**から**10**まで設定できる**10バンド**があります。
+  すべてを入力する必要はなく、変更したいものだけで構いません。
+  スキップしたい場合は**0**のままにしてください。
+eq_field_title: "例:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "イコライザーをリセット • %{prefix}eq reset"
+eq_on: "EQが**%{bands}**に設定されました！"
+eq_number: "有効な数値を入力してください！"
+eq_greater: "数値は**-10**より大きくしてください"
+eq_than: "数値は**10**より小さくしてください"
+
+### Pitch command!
+pitch_on: "了解、ピッチが**%{amount}**になりました！"
+
+### Rate command!
+rate_on:  "了解！レートが**%{amount}x**になりました！"
+
+### Speed command!
+speed_on: "もちろん、速度を**%{amount}x**に変更します！"
+
+### Reset command!
+reset_on: "**すべてのVSTをリセット中！**元の音に戻ります！"
+reset_already:  "VSTは**既にオフ**です。忘れていましたか？"
+
+# Invalid Number
+number_invalid: "その数値では処理できません...有効な数値で再度お試しください。"

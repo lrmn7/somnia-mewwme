@@ -1,0 +1,91 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+## Helper setup ##
+setup_helper_content: |
+  ## %{guild} 커뮤니티에 오신 것을 환영합니다!
+  *Discord가 처음이시라면 잘 찾아오셨습니다! 이 채널은 서버를 둘러보는 데 도움을 드리기 위해 만들어졌습니다.*
+  ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+  %{bot}은(는) 깔끔한 인터페이스, 고품질 오디오, 다양한 음악 기능으로 음악 경험을 향상시켜주는 Discord 봇입니다.
+
+  이 Discord 서버는 %{guild} 커뮤니티의 중심에서 어울리기에 완벽한 장소입니다.
+  채팅을 즐기고, 음악 추천을 공유하고, %{bots} 봇이 제공하는 모든 기능을 탐색해보세요!
+
+  친구들을 서버에 초대하고 싶으시다면 이 링크를 보내주세요: %{serversupport}
+
+disable_helper: "도우미가 비활성화되었습니다"
+invalid_channel_helper: "제공된 채널이 유효하지 않습니다"
+channel_viewable_helper: "제공된 채널을 볼 수 없습니다"
+setup_helper_succes: "도우미가 %{channel}에 성공적으로 설정되었습니다."
+
+## RULES Events ##
+rules_title: "%{guild} 커뮤니티 서버 규칙!"
+rules_desc: |
+  - **상호 존중**
+    항상 Discord [서비스 약관](https://discord.com/terms)과 [가이드라인](https://discord.com/guidelines)을 준수하세요.
+  - **도움 요청 시 유의사항**
+    도움을 요청할 때는 오류 내용과 함께 가능한 한 자세한 정보를 제공하세요.
+  - **혐오 발언 및 괴롭힘 금지**
+    개인이나 단체에 대한 혐오 발언이나 괴롭힘이 포함된 대화는 금지됩니다.
+  - **트롤링 및 도발 금지**
+    어떤 방식으로든 분쟁을 유발하거나 방해하려는 행위는 금지됩니다.
+  - **지적 재산권 존중**
+    저작권, 상표권, 특허 등 지적 재산권을 존중해주세요.
+  - **스포일러 경고 없이 공개 금지**
+    모든 멤버가 아직 소비하지 않은 콘텐츠를 논의할 때는 실망을 방지하기 위해 스포일러 경고를 제공하세요.
+  - **적절한 채널 사용**
+    특정 주제에 맞는 관련 채널을 사용하고, 관련 없는 채널에서 주제와 벗어난 토론을 피하세요.
+  - **과도한 대문자 사용 또는 스팸 금지**
+    과도한 대문자 사용이나 반복적인 메시지 빠르게 보내기를 피하세요.
+  - **음성 채널 청결 유지**
+    음성 채널을 사용할 때는 방해가 되는 소음이 없도록 하고 예의 바르게 말하세요.
+  - **무단 봇 또는 자동화 금지**
+    관리자가 승인한 봇만 서버에서 운영할 수 있습니다.
+  - **위반 사항 신고**
+    규칙 위반을 목격하면 관리자 또는 운영자에게 신고하세요.
+  - **즐기세요!**
+    가장 중요한 것은 모든 멤버를 존중하고 긍정적인 환경을 유지하면서 이 서버에서 즐거운 시간을 보내는 것입니다.
+
+  참여해 주셔서 감사합니다. 즐거운 시간 되시길 바랍니다.
+
+### SUPPORT US BUTTON ###
+support_us_title: "%{bot}을(를) 지원하는 방법"
+support_us_desc: "%{bot}에 투표하거나, %{bot}을(를) 서버에 초대하거나, 프리미엄 멤버십에 가입하여 저를 지원할 수 있습니다."
+support_us_footer: "%{bot} 지원을 고려해 주셔서 감사합니다! 정말 감사드립니다."
+
+## ROLES EVENTS ##
+role_title: "아래 목록에서 역할을 추가하거나 제거할 수 있습니다."
+role_added: "**[성공]** %{rolename} 역할이 성공적으로 추가되었습니다!"
+role_removed: "**[제거됨]** %{rolename} 역할이 제거되었습니다."
+role_rules_added: "%{user}님, 모든 규칙을 따라주시길 바라며, 이제 서버 전체에 접근할 수 있습니다"
+role_rules_already: "%{user}님, 이미 규칙에 동의하셨습니다"
+role_desc: "봇이 아닌 실제 사람인지 확인하고 싶습니다. 간단한 인증 작업을 완료하여 본인 확인을 해주세요."
+
+### Top gg vote logs event
+vote_desc: |
+  %{voteuser}님이 **[Top.gg](%{voteurl})**에서 %{votebot}에 투표했습니다
+  지원해 주셔서 감사합니다! 좋은 하루 되세요!
+vote_footer: "총 투표 수 %{count}, 상상력을 펼쳐보세요!"
+
+### Top gg vote logs reminder event
+reminder_label_name: "투표 알림"
+reminder_label_emoji: "⏰"
+reminder_title: "투표 알림"
+reminder_desc: "시간이 되었습니다! **[Top.gg](%{voteurl})**에서 다시 투표할 수 있습니다."
+reminder_set_content: "알림이 설정되었습니다! 12시간 후에 다시 투표하라고 알려드리겠습니다"
+reminder_cancel_content: "알림이 취소되었습니다. 다시 투표하라는 알림을 받지 않습니다"
+reminder_no_vote_warning: "알림을 설정하려면 먼저 투표해야 합니다"
+
+### Welcomer events!
+welcome_desc: "%{guildname}에 오신 것을 환영합니다 %{member}님, 상상력을 펼쳐보세요!"
+leave_desc: "함께해 주셔서 감사합니다! 안녕히 가세요 %{member}님"

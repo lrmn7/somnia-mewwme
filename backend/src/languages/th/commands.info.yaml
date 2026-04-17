@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**ที่ซึ่งผู้ที่ปรารถนาจะร้องเพลงจะพบเพลงเสมอ ♪\nมาร่วมทำนองเพลงในเซิร์ฟเวอร์ Discord ของคุณวันนี้!**"
+about_desc2: |
+  ・คำนำหน้าบอทสำหรับเซิร์ฟเวอร์นี้คือ `%{prefix}`
+  ・เปลี่ยนคำนำหน้าด้วย `%{prefix} prefix <คำนำหน้าใหม่>`
+  ・เล่นเพลงด้วยลิงก์หรือคำค้นหา `%{prefix} play`
+  เยี่ยมชม **[เว็บไซต์](%{website})** ของเราหรือใช้คำสั่ง `%{prefix} help` สำหรับคำสั่งเพิ่มเติม
+about_desc3: |
+  **หมายเหตุ!**
+  ฉันต้องการสิทธิ์ `Administrator` เป็นอย่างยิ่ง แต่...
+  แม้ว่าคุณจะไม่ให้สิทธิ์เหล่านั้น ฉันก็ยังทำงานได้ แต่อาจไม่สามารถทำทุกอย่างที่ฉันทำได้ แค่บอกให้รู้!
+
+  **ความช่วยเหลือและการสนับสนุน**
+  เข้าร่วม **[เซิร์ฟเวอร์สนับสนุน](%{serversupport})** ของเราหากคุณต้องการความช่วยเหลือ ต้องการรับข้อมูลเกี่ยวกับการอัปเดตและปัญหา หรือต้องการมีส่วนร่วมกับชุมชน!
+
+### Help command!
+finder_invalid: "คำสั่งไม่ถูกต้อง"
+finder_example: "ฉันช่วยคุณหาสิ่งนั้นไม่ได้! มองหาคำสั่ง *จริง* สิ!"
+finder_name: "**คำสั่ง:**"
+finder_des: " **คำอธิบาย:**"
+finder_usage: "**การใช้งาน:**"
+finder_access: "**เข้าถึงได้โดย:**"
+finder_aliases: "**ชื่อเรียกอื่น:**"
+finder_slash: "**Slash:**"
+finder_des_no: "ไม่พบคำอธิบาย ขออภัยด้วย..."
+finder_usage_no: "ฉันไม่แน่ใจว่าจะใช้คำสั่งนี้อย่างไร"
+finder_aliases_prefix: "[เฉพาะ Prefix]"
+finder_aliases_no: "คุณไม่สามารถใช้คำสั่งนี้ด้วยชื่อเรียกอื่นได้"
+finder_slash_enable: "เปิดใช้งาน"
+finder_slash_disable: "ปิดใช้งาน"
+command_not_found: "ไม่พบคำสั่ง"
+select_menu: "สนุกกับเพลงกับฉัน!"
+help_timeout: "เมนูช่วยเหลือหมดเวลาแล้ว ลองใช้ **`%{prefix}help`** หรือ **`/help`** อีกครั้ง"
+homepage_title: "ที่ซึ่งผู้ที่ปรารถนาจะร้องเพลงจะพบเพลงเสมอ ♪\nมาร่วมทำนองเพลงในเซิร์ฟเวอร์ Discord ของคุณวันนี้!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **เพลง 24/7**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **เชื่อมต่อ Spotify**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **เสียงคุณภาพสูง**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **บันทึกด้วย Last.fm**
+  <:blank:1291123023679586324><:games:1311125732117843978> **เล่นและแข่งขันในมินิเกม**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer และอื่นๆ...**
+
+  <a:ask:1291123964080558121> **คุณต้องการอัปเกรดเป็นแผน [Premium](%{premium}) หรือไม่?**
+### Rating bot commands! ###
+rating_desc: "ขอบคุณ %{user} ที่ให้ดาวสำหรับบอทเพลง Discord ของเรา!"
+rating_succes: "ขอบคุณสำหรับการให้คะแนน!\nการให้คะแนนของคุณถูกส่งเรียบร้อยแล้ว"
+rating_failure: "ไม่สามารถส่งรายงานได้ กรุณาลองอีกครั้งในภายหลัง"
+
+### Report command #####
+report_provide_desc: "อุ๊ปส์! คำสั่งไม่ถูกต้อง กรุณาระบุคำอธิบายของคุณ"
+report_failure: "ไม่สามารถส่งรายงานได้ กรุณาลองอีกครั้งในภายหลัง"
+report_success: "ขอบคุณสำหรับรายงานของคุณ\nรายงานถูกส่งเพื่อดำเนินการแก้ไขเรียบร้อยแล้ว"
+
+### Suggestions command #####
+suggestions_provide_desc: "อุ๊ปส์! คำสั่งไม่ถูกต้อง กรุณาระบุคำอธิบายของคุณ"
+suggestions_failure: "ไม่สามารถส่งข้อเสนอแนะได้ กรุณาลองอีกครั้งในภายหลัง"
+suggestions_success: "ขอบคุณสำหรับข้อเสนอแนะของคุณ!\nข้อเสนอแนะของคุณถูกส่งเรียบร้อยแล้ว"
+
+### MyStats command ####
+mystats_error: "เกิดข้อผิดพลาดในการสร้างสถิติของคุณ กรุณาลองอีกครั้งในภายหลัง"
+
+### TopStats command ####
+topstats_error: "เกิดข้อผิดพลาดในการสร้างสถิติของคุณ กรุณาลองอีกครั้งในภายหลัง"
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **ผลลัพธ์สถานะ:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 ตัวตนผู้ใช้"
+patreon_logs_user_identity_value: |
+  **ชื่อ:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **อีเมล:** %{email}
+
+patreon_logs_details_title: "รายละเอียด Patreon"
+patreon_logs_details_value: |
+  **การสนับสนุน:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **สถานะ:** `%{status}`
+patreon_logs_date_title: "📅 วันที่"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "ตัวตนผู้ใช้"
+kofi_logs_user_identity_value: "**ชื่อ:** %{fullName}\n**อีเมล:** ||%{email}||\n**สาธารณะ:** %{dataPublic}"
+kofi_logs_discord_identity_title: "ตัวตน Discord"
+kofi_logs_discord_identity_value: "**ผู้ใช้:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "รายละเอียดการชำระเงิน"
+kofi_logs_payment_details_value: "**จำนวน:** %{currency} %{amount}\n**ระดับ:** **%{tierName}**\n**ประเภท:** %{type}"
+kofi_logs_sub_status_title: "สถานะการสมัครสมาชิก"
+kofi_logs_sub_status_value: "**เป็นสมาชิก:** %{isSub}\n**จ่ายครั้งแรก:** %{isFirst}"
+kofi_logs_message_title: "ข้อความ / เหตุผล"
+kofi_logs_tech_title: "ข้อมูลทางเทคนิค / Transaction IDs"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**Msg ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Token:** ||%{token}||"
+kofi_logs_view_details: "ดูรายละเอียด"
+

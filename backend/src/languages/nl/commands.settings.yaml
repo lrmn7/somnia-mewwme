@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "24/7-modus is nu **Ingeschakeld**"
+247_off: "24/7-modus is nu **Uitgeschakeld**"
+247_already: "24/7-modus is al **%{mode}**"
+247_arg_error: "Ongeldige 24/7-modus. Gebruik alsjeblieft %{text}"
+247_no_in_voice: "Je zit niet in een spraakkanaal!"
+
+
+### Set Language command! ###
+provide_lang: "**Ongeldige taal. Gebruik alsjeblieft** `%{languages}`"
+lang_set: "**Taal is ingesteld op** `%{language}`"
+lang_change: "**Taal is gewijzigd naar** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "Geef alsjeblieft een geldige prefix op!"
+prefix_length: "**Prefix mag niet langer zijn dan 10 tekens**"
+prefix_set: "**Prefix is ingesteld op** `%{prefix}`"
+prefix_change: "**Prefix is gewijzigd naar** `%{prefix}`"
+
+### Control command!
+control_set: "**Afspeelbediening is ingesteld op %{toggle}**"
+control_arg_error: "Ongeldig argument. Gebruik alsjeblieft %{text}"
+control_already: "Nummermeldingen zijn al **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Ongeldig! Gebruik alsjeblieft %{text}"
+setup_enable: "**Oeps! Muzieksysteem bestaat al.**"
+setup_topic: "♪ Waar zij die willen zingen altijd een lied vinden. ♪"
+setup_msg: "*`Muzieksysteem succesvol ingesteld in`* %{channel}\n```Opmerking: Verwijder geen berichten die ik heb aangemaakt, zodat ik goed kan functioneren.```"
+setup_null: "*`Instellingenkanaal succesvol verwijderd!`*"
+setup_deleted: "*`Instellingenkanaal succesvol verwijderd!`*"
+setup_null_inguild: "**Muzieksysteem niet gevonden op deze server! Klaar om gegevens te verwijderen**"
+setup_queuemsg: "**Ga naar een spraakkanaal en speel nummers af met naam of URL hier!**"
+setup_playembed_author: "Er wordt momenteel geen nummer afgespeeld"
+
+### Themes command!
+error_themes: "Ongeldig... Probeer het opnieuw."
+succes_themes: "**Thema succesvol gewijzigd naar %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "Opmerking: Deze link verloopt over %{expired}."
+lastfm_login_title: "Last.fm Inloggen"
+lastfm_login_desc: "Wil je autorisatie verlenen aan je [Last.fm](https://www.last.fm/user/eleremen)-account?\nZo ja, klik dan op de knop hieronder om het autorisatieproces te starten."
+lastfm_not_login_desc: "Je bent niet ingelogd bij Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Last.fm Uitloggen"
+lastfm_logout_desc: "Je bent succesvol uitgelogd bij Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Last.fm-functie is uitgeschakeld."
+lastfm_feature_disabled_desc: "De Last.fm-functie is momenteel uitgeschakeld. Neem contact op met de beheerder voor meer informatie."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "Geen melding gevonden voor het YouTube-kanaal **%{ytchannel}**."
+notify_youtube_removed: "Je hebt de melding voor het YouTube-kanaal **%{ytchannel}** verwijderd."
+notify_youtube_disabled: "YouTube-meldingsfunctie is momenteel uitgeschakeld. Neem contact op met het team voor meer informatie."
+notify_youtube_already: "Meldingen voor het YouTube-kanaal %{ytchannel} zijn al ingesteld."
+notify_youtube_invalid_channel: "Er is een fout opgetreden bij het opgeven van een geldig tekstkanaal. Controleer het alsjeblieft!"
+notify_youtube_set: "YouTube-melding is ingesteld voor **%{ytchannel}** in %{channelid}."
+notify_youtube_404: |
+  Het opgegeven YouTube-kanaal-ID kon niet worden gevonden.
+  Om het kanaal-ID te vinden, ga naar de YouTube-kanaalpagina en controleer de URL.
+  Het kanaal-ID is de reeks letters en cijfers na `/channel/` (bijvoorbeeld: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   Je hebt de limiet van %{limit} meldingen bereikt.
+   Door te upgraden naar [premium](%{premium}) kun je tot %{limitpremium} meldingen instellen.
+
+notify_youtube_limit_reached_premium: |
+   Je hebt de limiet van %{limit} meldingen bereikt.
+   Dit is het maximaal toegestane aantal. Overweeg om enkele meldingen te verwijderen om ruimte te maken voor nieuwe.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Geen melding gevonden voor de Twitch-gebruikersnaam **%{twitchusername}**."
+notify_twitch_removed: "Je hebt de melding voor de Twitch-gebruikersnaam **%{twitchusername}** verwijderd."
+notify_twitch_disabled: "Twitch-meldingsfunctie is momenteel uitgeschakeld. Neem contact op met het team voor meer informatie."
+notify_twitch_already: "Je hebt al meldingen ingesteld voor het Twitch-kanaal %{twitchusername}."
+notify_twitch_invalid_channel: "Er is een fout opgetreden bij het opgeven van een geldig tekstkanaal. Controleer het alsjeblieft!"
+notify_twitch_set: "Twitch-melding is ingesteld voor **%{twitchusername}** in %{channelid}."
+notify_twitch_error: "Er is een onverwachte fout opgetreden bij het verwerken van de Twitch-melding voor **{twitchusername}** in kanaal **{channelid}**. Probeer het opnieuw of neem contact op met ondersteuning als het probleem aanhoudt."
+notify_twitch_limit_reached_non_premium: |
+   Je hebt de limiet van %{limit} meldingen bereikt.
+   Door te upgraden naar [premium](%{premium}) kun je tot %{limitpremium} meldingen instellen.
+
+notify_twitch_limit_reached_premium: |
+   Je hebt de limiet van %{limit} meldingen bereikt.
+   Dit is het maximaal toegestane aantal. Overweeg om enkele meldingen te verwijderen om ruimte te maken voor nieuwe.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Tijdelijke spraakfunctie is %{status}."
+tempvoice_disabled: "Tijdelijk spraakkanaal is uitgeschakeld."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Ongeldig... alleen %{text}."
+status_voice_channel_true: "Status spraakkanaal is ingesteld op **%{type}**."
+status_voice_channel_false: "Status spraakkanaal is ingesteld op **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "Dit commando kan alleen op de server worden uitgevoerd!"
+no_data_patreon: "Patreon-gegevens niet gevonden (Databasefout)"
+no_data_patreon_title: "Niet gevonden"
+no_data_patreon_desc: |
+  Als je al een abonnement hebt, zorg ervoor dat je Discord-account gekoppeld is aan Patreon!
+no_data_patreon_footer: "Patreon-synchronisatie kan even duren, controleer het binnenkort opnieuw"
+no_patreon_guild_membership: |
+  hallo, je patreon-abonnement is **gebruikerstier**.
+  upgrade alsjeblieft naar **servertier** om premium servertoegang te ontgrendelen.
+patreon_guild_membership_full_quota: |
+  je hebt al je serverquota opgebruikt!
+  **status:** %{status} servers gebruikt.
+
+  oplossing:
+  1. upgrade je tier op patreon.
+  2. of schakel premium uit op je oude server.
+patreon_guild_membership_already_before: "Je hebt premium al eerder op deze server geactiveerd!"
+patreon_guild_membership_already: "**AL PREMIUM** omdat het gesponsord wordt door iemand anders.\nBewaar je quota voor andere servers!"
+patreon_guild_membership_claim_title: "Activeringsbevestiging"
+patreon_guild_membership_claim_desc: |
+  weet je zeker dat je **premium server** wilt activeren voor:
+  **%{guildName}**
+
+  deze actie gebruikt **1 serverquota**.
+  resterend quota: **%{status}**
+patreon_guild_membership_claim_success: |
+  gelukt! **%{guildName}** is nu een **premium server**.
+
+  **sponsor:** %{user}
+  **resterend quota:** %{status}
+  bedankt voor je steun op patreon!
+patreon_guild_membership_claim_success_title: "💎 Premium geactiveerd!"
+patreon_guild_membership_claim_cancel: "Premium-activering geannuleerd."
+patreon_guild_membership_claim_norespon: "Activering is automatisch geannuleerd wegens geen reactie."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Server ingewisseld (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **sponsorgebruiker:** %{sponsorTag} %{sponsorId}
+  **doelserver:** %{guildName} %{guildId}
+  **quotastatus:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Je kunt deze premium server niet intrekken omdat je deze niet hebt geregistreerd."
+patreon_guild_unclaim_title: "Bevestiging intrekking Premium"
+patreon_guild_unclaim_desc: |
+  Weet je zeker dat je de Premium-status van de **%{guildName}** server wilt **ANNULEREN**?
+  **Gevolgen:** Premium-functies worden uitgeschakeld op deze server.
+  Je serverquota wordt hersteld (+1).
+  Huidig resterend quota: **%{status}**
+patreon_guild_unclaim_success_title: "Premium ingetrokken"
+patreon_guild_unclaim_success: |
+  Premium-status voor **%{guildName}** is succesvol ingetrokken.
+  **Quota hersteld:** 1 server
+  **Nieuw resterend quota:** %{status}
+patreon_guild_unclaim_cancel: "Premium-intrekkingsproces geannuleerd."
+patreon_guild_unclaim_norespon: "⏱️ Time-out. Proces geannuleerd."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Ontkoppelde servers (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Gebruiker:** %{sponsorTag} %{sponsorId}
+  **Server:** %{guildName}} %{guildId}
+  **Quota hersteld:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Gebruiker:** %{userTag} (%{userId})
+  **Server:** %{guildName} (%{guildId})
+  **Quota:** %{quota}
+  **Verloopt:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Actie: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "Transactie-ID niet gevonden of al ingewisseld."
+kofi_linked_success_title: "Betaling succesvol gekoppeld!"
+kofi_linked_success_desc: "Nu kun je `/premium claim <kofi>` gebruiken zonder een TxID."
+kofi_no_data_title: "Geen gegevens gevonden!"
+kofi_no_data_desc: |
+  Als je al hebt betaald maar je Discord-account niet hebt gekoppeld aan Ko-fi
+  gebruik: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Geen quota, maar je bent een premium-gebruiker."
+kofi_full_server_quota_title: "Quota vol!"
+kofi_full_server_quota_desc: "Je hebt **%{quota}** serverslots gebruikt."
+kofi_server_already_claim_desc: "**Al actief!**\nJe hebt premium al eerder op deze server geactiveerd."
+kofi_server_already_active_desc: " **Al Premium!**\nDeze server is al als premium geactiveerd door een andere gebruiker."
+kofi_guild_membership_claim_success: |
+  Premium is succesvol geactiveerd!
+  **Quotagebruik:** %{quota}
+  **Verloopt over:** %{expires}
+kofi_guild_membership_claim_footer: "Bedankt voor je steun!"
+kofi_action_title: "🏗️ Ko-fi Actie: %{type}"
+kofi_action_description: "**Gebruiker:** %{userTag} (`%{userId}`)\n**Server:** %{guildName} (`%{guildId}`)\n**Actie:** %{action}\n**Quota:** %{quota}"
+kofi_action_activation: "Server geactiveerd"
+kofi_action_manual_link: "Handmatige betaling gekoppeld"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium ingetrokken"
+kofi_guild_unclaim_success_desc: |
+  Premium-status voor **%{guildName}** is succesvol ingetrokken.
+  **Quota hersteld:** 1 server
+kofi_guild_not_owned_by_user: "Je kunt deze premium server niet intrekken omdat je deze niet hebt geregistreerd."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Ontkoppelde servers %{platform}"
+premium_unclaim_log_desc: |
+  **Gebruiker:** %{userTag} %{userId}
+  **Server:** %{guildName}} %{guildId}
+  **Quota hersteld:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "Het DJ-rolsysteem is **Uitgeschakeld**."
+dj_role_missing_role: "Je moet een rol opgeven om de `set`-actie te gebruiken."
+dj_role_set: |
+  De DJ-rol is ingesteld op %{role}.
+  Status: **Ingeschakeld**
+  **Betrokken commando's:**
+  %{commands}

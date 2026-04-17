@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **Filter %{name} an!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **Ich hoffe, dir gefaellt der Klang davon!**
+filter_already: "Hm? Das %{name} VST ist bereits an... Ich kann hier nichts tun."
+filter_number: "Das ist keine Zahl, die ich in den EQ eingeben kann..."
+filter_greater: "Es muss eine Zahl groesser als **0** sein!"
+filter_less: "Wow! Zu viel! Vielleicht ist weniger als **10** besser..."
+
+### Bassboost command!
+bassboost_set: "**Bassboost wurde auf %{amount}dB gesetzt**"
+bassboost_limit: "Bitte verwende eine Zahl zwischen **-10** und **10**"
+
+### Equalizer command!
+eq_author: "Equalizer"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  Es gibt **10 Baender**, die von **-10** bis **10** eingestellt werden koennen.
+  Du musst nicht alle eingeben, nur die, die du aendern moechtest.
+  Wenn du also eines ueberspringen willst, kannst du es einfach als **0** lassen.
+eq_field_title: "Beispiel:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Equalizer zuruecksetzen • %{prefix}eq reset"
+eq_on: "EQ wurde auf **%{bands}** gesetzt!"
+eq_number: "Bitte gib eine gueltige Zahl ein!"
+eq_greater: "Die Zahl muss groesser als **-10** sein"
+eq_than: "Die Zahl muss kleiner als **10** sein"
+
+### Pitch command!
+pitch_on: "In Ordnung, Tonhoehe ist jetzt **%{amount}**!"
+
+### Rate command!
+rate_on:  "In Ordnung! Rate ist jetzt **%{amount}x**!"
+
+### Speed command!
+speed_on: "Klar doch, Geschwindigkeit wird auf **%{amount}x** geaendert!"
+
+### Reset command!
+reset_on: "**Zuruecksetzen** aller VSTs! Zurueck zum Originalklang!"
+reset_already:  "VSTs sind **bereits aus**, hast du das vergessen?"
+
+# Invalid Number
+number_invalid: "Das ist keine Zahl, mit der ich arbeiten kann... Versuch es nochmal mit einer gueltigen Zahl."

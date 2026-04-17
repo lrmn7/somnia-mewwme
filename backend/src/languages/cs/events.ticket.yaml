@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Uveďte důvod vytvoření tiketu"
+ticket_already_open: "Již máte otevřený tiket."
+ticket_already_closed: "Data tiketu pro uživatele %{id} nebyla nalezena nebo je tiket již uzavřen"
+ticket_close_user: "Nemáte oprávnění uzavřít tento tiket."
+ticket_delete_user: "Nemáte oprávnění smazat tento tiket."
+ticket_deleting_action: "Mažu tikety..."
+ticket_closed_label: "🔒 Uzavřeno"
+ticket_delete_label: "🗑️ Smazat"
+ticket_create: "Tiket byl vytvořen. Přejděte na %{channel}"
+ticket_create_title: "Čekejte na odpověď personálu"
+ticket_create_desc: |
+  Děkujeme za vytvoření tiketu. Prosím čekejte na odpověď personálu.
+  `POZNÁMKA: Tento tiket nemá zálohu. Prosím ujistěte se, že si sami zálohujete důležité informace`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Uzavřený tiket"
+ticket_closed_desc: "Tiket byl úspěšně uzavřen!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Tiket byl uzavřen."
+ticket_closed_dm_desc: |
+  Tiket, který jste otevřeli, byl právě uzavřen. Váš přepis naleznete na odkazu níže.
+  Pokud narazíte na jakékoli problémy nebo máte další otázky, neváhejte otevřít nový tiket. Jsme tu, abychom pomohli!
+
+

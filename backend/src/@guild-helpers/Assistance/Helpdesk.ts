@@ -67,7 +67,6 @@ export class Helpdesk {
           )
           .setColor(this.client.color_main);
 
-        // Opsional: Menambahkan footer pada customId yang ditentukan
         if (customId === "helpdesk10") {
           helpdeskEmbed.setFooter({
             text: `${this.client.i18n.get(
@@ -83,7 +82,6 @@ export class Helpdesk {
           });
         }
 
-        // Lampirkan tombol hanya jika customId adalah helpdesk10
         if (customId === "helpdesk10") {
           const helpdeskButton = new ActionRowBuilder<ButtonBuilder>().addComponents(
             new ButtonBuilder()
@@ -117,7 +115,6 @@ export class Helpdesk {
           });
         }
 
-        // Log button usage
         if (this.client.config.HELPDESK.HELPDESK_LOGS_CHANNEL_ID) {
           const channel = this.client.channels.cache.get(
             this.client.config.HELPDESK.HELPDESK_LOGS_CHANNEL_ID

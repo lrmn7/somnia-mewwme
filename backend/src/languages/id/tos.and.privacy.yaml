@@ -1,0 +1,52 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### privacy policy commands
+privacy_title: "Kebijakan Privasi %{bot}"
+privacy_label: Kebijakan Privasi
+privacy_desc: |
+  **Persetujuan Pengguna**
+  Menggunakan [%{bot}](%{serversupport}) ("bot") di server memerlukan pengumpulan data pengguna tertentu. Data yang dikumpulkan termasuk tetapi tidak terbatas pada ID Discord pengguna, username Discord, dan role server. Menggunakan Bot dianggap sebagai penerimaan ketentuan kebijakan ini.
+
+  **Akses Data**
+  Akses ke data hanya diperbolehkan untuk pengembang bot dan layanan hosting dan hanya dalam lingkup yang diperlukan untuk pengembangan bot, pengujian, dan implementasi fitur. Data tidak dijual, diberikan, atau dibagikan kepada pihak ketiga manapun, kecuali sebagaimana diwajibkan oleh hukum atau perjanjian Ketentuan Layanan. Kamu dapat melihat datamu dengan mengajukan permintaan kepada [developer](%{developer}).
+
+  **Penyimpanan Data**
+  Data disimpan di database [MYSQL](https://www.mysql.com/). Database diamankan untuk mencegah akses eksternal. Namun, tidak ada jaminan yang diberikan, dan pemilik Bot tidak bertanggung jawab atas pelanggaran data yang tidak disengaja atau berbahaya. Jika ada akses Data yang tidak sah, staf server akan memberi tahu pengguna melalui Server Dukungan.
+
+  **Hak Pengguna**
+  Kapan saja, kamu berhak untuk meminta melihat data akun Discord-mu. Kamu berhak untuk meminta penghapusan Data yang relevan. Untuk melakukan ini, pengguna harus mengajukan permintaan melalui Server Dukungan.
+
+  **Pertanyaan**
+  Jika kamu memiliki pertanyaan atau kekhawatiran tentang data apa yang mungkin disimpan dari akunmu, silakan hubungi [staf](%{serversupport}). Untuk informasi lebih lanjut, periksa Ketentuan Layanan Discord.
+
+### The following terms and conditions apply to the use of the bot.
+### terms of services commands
+termsofservice_title: "Ketentuan Layanan %{bot}"
+tos_label: "Ketentuan Layanan"
+termsofservice_desc: |
+  **Persetujuan Penggunaan**
+  Dengan mengundang [%{bot}](%{serversupport}) ("bot") dan menggunakan fitur-fiturnya, kamu menyetujui Ketentuan Layanan dan Kebijakan Privasi bot.
+
+  Kamu mengakui bahwa kamu dapat menggunakan bot secara bebas di Server Discord manapun yang kamu bagikan. Kamu dapat mengundangnya ke Server manapun yang kamu miliki hak "Manage Server", dan hak istimewa ini dapat dicabut jika kamu melanggar ketentuan layanan atau kebijakan privasi bot ini atau Ketentuan Layanan, Kebijakan Privasi, atau Panduan Komunitas Discord Inc.
+
+  Melalui pengundangan, bot dapat mengumpulkan data tertentu sebagaimana dijelaskan dalam Kebijakan Privasinya. Penggunaan data ini ditujukan untuk fungsionalitas inti bot, seperti menjalankan perintah.
+
+  **Afiliasi**
+  Bot ini tidak terafiliasi dengan, didukung, atau dibuat oleh Discord Inc. Koneksi langsung apapun ke Discord atau objek Merek Dagang-nya adalah murni kebetulan. Kami tidak mengklaim kepemilikan hak cipta atas aset, merek dagang, atau kekayaan intelektual Discord lainnya.
+
+  **Pengguna di bawah umur**
+  Bot tidak diizinkan untuk anak di bawah umur di bawah usia 13 tahun atau di bawah persetujuan hukum negara mereka. Ini sesuai dengan Ketentuan Layanan Discord. Tidak ada informasi yang akan secara sadar disimpan dari pengguna di bawah umur. Jika diketahui bahwa seorang pengguna di bawah umur, kami akan mengambil semua tindakan yang diperlukan untuk menghapus data yang tersimpan.
+
+  **Tanggung Jawab**
+  Pengembang dan pemilik bot tidak dapat dimintai pertanggungjawaban atas individu yang melanggar Ketentuan ini kapan saja. Hak untuk memperbarui ketentuan ini dilindungi atas kebijakan kami, dengan memberikan periode 1-Minggu (7 hari) untuk memilih keluar dari ketentuan ini. Pengguna dapat memilih keluar dengan menghapus bot dari server manapun di mana pengguna memiliki hak untuk menghapus bot.

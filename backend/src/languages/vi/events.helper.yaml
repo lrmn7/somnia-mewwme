@@ -1,0 +1,91 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+## Helper setup ##
+setup_helper_content: |
+  ## Chào mừng đến Cộng đồng %{guild}!
+  *Nếu bạn mới sử dụng Discord, thì bạn đã đến đúng nơi! Kênh này được tạo để giúp bạn tìm hiểu cách sử dụng máy chủ.*
+  ⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤
+  %{bot} là bot Discord nâng cao trải nghiệm âm nhạc của bạn với giao diện sạch sẽ, âm thanh chất lượng cao và nhiều tính năng âm nhạc đa dạng.
+
+  Máy chủ Discord này là nơi tuyệt vời để giao lưu trong trái tim của Cộng đồng %{guild}.
+  Tận hưởng trò chuyện, chia sẻ đề xuất nhạc và khám phá tất cả các tính năng của bot %{bots}!
+
+  Muốn mời bạn bè vào máy chủ? Gửi cho họ liên kết này: %{serversupport}
+
+disable_helper: "Trợ giúp đã bị tắt"
+invalid_channel_helper: "Kênh được cung cấp không hợp lệ"
+channel_viewable_helper: "Kênh được cung cấp không hiển thị với tôi"
+setup_helper_succes: "Trợ giúp đã được thiết lập tại %{channel} thành công."
+
+## RULES Events ##
+rules_title: "Nội quy máy chủ cho Cộng đồng %{guild}!"
+rules_desc: |
+  - **Tôn trọng lẫn nhau**
+    Luôn tuân thủ [Điều khoản dịch vụ](https://discord.com/terms) và [Nguyên tắc cộng đồng](https://discord.com/guidelines) của Discord.
+  - **Mã trợ giúp**
+    Khi bạn yêu cầu trợ giúp, hãy cung cấp càng nhiều chi tiết càng tốt cùng với lỗi.
+  - **Không phát ngôn thù hận hoặc quấy rối**
+    Không có cuộc trò chuyện chứa phát ngôn thù hận hoặc quấy rối đối với cá nhân hoặc nhóm.
+  - **Không câu kéo hoặc gây hấn**
+    Không có hành động cố tình gây rối hoặc kích động xung đột dưới bất kỳ hình thức nào.
+  - **Tôn trọng quyền sở hữu trí tuệ**
+    Tôn trọng quyền sở hữu trí tuệ, bao gồm nhưng không giới hạn ở bản quyền, nhãn hiệu và bằng sáng chế.
+  - **Không tiết lộ nội dung mà không cảnh báo**
+    Nếu thảo luận nội dung chưa được tất cả thành viên xem, hãy cảnh báo spoiler để tránh thất vọng.
+  - **Sử dụng đúng kênh**
+    Sử dụng các kênh phù hợp cho chủ đề cụ thể, tránh thảo luận lạc đề trong các kênh không liên quan.
+  - **Không viết hoa quá mức hoặc spam**
+    Tránh sử dụng quá nhiều chữ viết hoa hoặc gửi tin nhắn lặp đi lặp lại nhanh chóng.
+  - **Giữ kênh thoại sạch sẽ**
+    Nếu sử dụng kênh thoại, đảm bảo không có tiếng ồn gây rối và nói chuyện lịch sự.
+  - **Không sử dụng bot hoặc tự động hóa trái phép**
+    Chỉ có bot được quản trị viên cho phép mới được hoạt động trên máy chủ.
+  - **Báo cáo vi phạm**
+    Nếu bạn chứng kiến vi phạm nội quy, hãy báo cáo cho quản trị viên hoặc admin.
+  - **Vui vẻ nhé!**
+    Quan trọng nhất, hãy tận hưởng thời gian trên máy chủ này bằng cách tôn trọng tất cả thành viên và duy trì môi trường tích cực.
+
+  Cảm ơn bạn đã tham gia, chúng tôi hy vọng bạn sẽ có thời gian vui vẻ ở đây.
+
+### SUPPORT US BUTTON ###
+support_us_title: "Cách hỗ trợ %{bot}"
+support_us_desc: "Bạn có thể hỗ trợ tôi bằng cách bình chọn cho %{bot}, mời %{bot} vào máy chủ của bạn, hoặc tham gia gói thành viên premium."
+support_us_footer: "Cảm ơn bạn đã cân nhắc hỗ trợ %{bot}! Tôi thực sự trân trọng điều đó."
+
+## ROLES EVENTS ##
+role_title: "Bạn có thể thêm hoặc xóa vai trò từ danh sách bên dưới."
+role_added: "**[Thành công]** Vai trò %{rolename} đã được thêm thành công!"
+role_removed: "**[Đã xóa]** Vai trò %{rolename} đã được xóa."
+role_rules_added: "%{user} hy vọng bạn sẽ tuân thủ mọi nội quy, bây giờ bạn có quyền truy cập toàn bộ máy chủ"
+role_rules_already: "%{user} bạn đã chấp nhận nội quy rồi"
+role_desc: "Chúng tôi chỉ muốn đảm bảo bạn là người thật chứ không phải bot. Vui lòng giúp chúng tôi xác nhận bằng cách hoàn thành một nhiệm vụ xác minh nhanh."
+
+### Top gg vote logs event
+vote_desc: |
+  %{voteuser} đã bình chọn cho %{votebot} trên **[Top.gg](%{voteurl})**
+  Cảm ơn bạn đã thể hiện sự ủng hộ! Chúng tôi hy vọng bạn có một ngày tuyệt vời!
+vote_footer: "Tổng bình chọn %{count}, Hãy ở trong trí tưởng tượng của bạn!"
+
+### Top gg vote logs reminder event
+reminder_label_name: "Nhắc nhở bình chọn"
+reminder_label_emoji: "⏰"
+reminder_title: "Nhắc nhở bình chọn"
+reminder_desc: "Đã đến lúc! Bạn có thể bình chọn lại trên **[Top.gg](%{voteurl})**."
+reminder_set_content: "Đã đặt nhắc nhở! Tôi sẽ nhắc bạn bình chọn lại sau 12 giờ"
+reminder_cancel_content: "Đã hủy nhắc nhở. Bạn sẽ không được nhắc bình chọn lại"
+reminder_no_vote_warning: "Bạn phải bình chọn trước khi đặt nhắc nhở"
+
+### Welcomer events!
+welcome_desc: "Chào mừng đến %{guildname} %{member}, Hãy ở trong trí tưởng tượng của bạn!"
+leave_desc: "Cảm ơn đã ở bên chúng tôi! Tạm biệt %{member}"

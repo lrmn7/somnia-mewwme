@@ -1,0 +1,38 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### Ticket Events ###
+ticket_reason: "Geef de reden op voor het aanmaken van een ticket"
+ticket_already_open: "Je hebt al een open ticket."
+ticket_already_closed: "Ticketgegevens voor gebruiker %{id} niet gevonden of ticket is al gesloten"
+ticket_close_user: "Je hebt geen toestemming om het ticket te sluiten."
+ticket_delete_user: "Je hebt geen toestemming om het ticket te verwijderen."
+ticket_deleting_action: "Tickets worden verwijderd..."
+ticket_closed_label: "🔒 Gesloten"
+ticket_delete_label: "🗑️ Verwijderen"
+ticket_create: "Het ticket is aangemaakt. Ga naar %{channel}"
+ticket_create_title: "Wacht op reactie van het team"
+ticket_create_desc: |
+  Bedankt voor het aanmaken van je ticket. Wacht alsjeblieft op een reactie van het team.
+  `OPMERKING: Dit ticket heeft geen back-up. Zorg ervoor dat je belangrijke informatie zelf opslaat`
+
+### Closed Ticket Events ###
+ticket_closed_title: "🔒 Gesloten ticket"
+ticket_closed_desc: "Het ticket is succesvol gesloten!"
+
+### Closed Ticket DM User ###
+ticket_closed_dm_title: "Het ticket is gesloten."
+ticket_closed_dm_desc: |
+  Een ticket dat je hebt geopend is zojuist gesloten. Je transcript is te vinden via de onderstaande link.
+  Als je problemen tegenkomt of verdere vragen hebt, open dan gerust een nieuw ticket. We staan klaar om te helpen!
+
+

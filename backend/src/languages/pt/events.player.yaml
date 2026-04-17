@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "TOCANDO AGORA"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Autor"
+track_requested_by: "Pedido por"
+track_duration: "Duracao"
+no_same_voice: "Voce nao esta no mesmo canal de voz que eu!"
+filter_already: "**O filtro %{name} ja esta ativado**"
+filter_reset_on: "**O Filtro foi Resetado**"
+filter_reset_already: "**O Filtro ja foi Resetado**"
+no_player_filter: "**Nao consigo aplicar um filtro!**"
+filter_menu_on: "**Filtro %{name} ativado!**"
+
+player_get_exception: "Opa! Parece que houve um problema com a faixa. Quer que eu tente de novo?"
+player_track_error: "A faixa teve um problema. Voce pode tentar mais uma vez, por favor?"
+player_track_stuck: "Estou tao triste :(, a faixa travou. Talvez tentar de novo nos anime?"
+queue_end_desc: "Todas as musicas acabaram! Precisa de mais batidas?\nUse **/play** para manter a festa rolando!"
+
+leave_pause: "Considerando que voces me deixaram sozinho :( O player foi pausado."
+leave_resume: "Considerando que alguem se juntou a mim, o player foi retomado."
+
+player_end: "O canal ficou vazio por quase 15 minutos, entao decidi sair porque nao gosto de ficar sozinho"
+
+### Last FM Scrobble ###
+expired_login_session: "Sua sessao do Last.fm expirou ou e invalida.\nPor favor, autentique-se novamente para continuar usando o recurso de scrobble."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Aqueles que desejam cantar sempre encontram uma cancao ♪"
+milestone_track_desc: |
+  ## EI, Ola
+  Voce ouviu **%{total}** faixas! Sua playlist e infinita, ou voce e simplesmente obcecado por musica?
+

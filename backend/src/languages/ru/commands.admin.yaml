@@ -1,0 +1,32 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Blacklist Guild
+blacklist_guild_not_found: "Я не смог найти этот сервер..."
+blacklist_guild_already: "Похоже, %{id} уже в чёрном списке, так что я ничего не могу сделать."
+blacklist_guild_add: "Прощай, %{id}! Я добавил их в чёрный список. Видимо, не судьба..."
+blacklist_guild_not_exist: "Вы искали %{id}? Я не смог найти их в моих маршрутах..."
+blacklist_guild_delete: "С возвращением, %{id}! Я снова могу туда заходить, они больше не в чёрном списке."
+
+### Blacklist User
+blacklist_user_bot_owner: "Ого! Я не могу заблокировать своего создателя! Вы хотите навлечь на меня неприятности?"
+blacklist_user_not_found: "Я не смог найти этого пользователя..."
+blacklist_user_already: "Похоже, %{id} уже в чёрном списке, так что я ничего не могу сделать."
+blacklist_user_add: "Пока, %{id}! Жаль, что приходится добавлять фаната в чёрный список, но, видимо, так лучше..."
+blacklist_user_not_exist: "%{id}? Кто это? Я не смог найти их в моём фан-клубе..."
+blacklist_user_delete: "Отлично! %{id} снова в фан-клубе! Жду не дождусь увидеть их на следующем концерте!"
+
+### Maintenance Commands! ###
+maintenance_arg_error: "Не уверен, что это за обслуживание, но вам определённо стоит использовать %{text} вместо этого"
+maintenance_true: "Хорошо! Теперь я слушаю только вас!"
+maintenance_false: "Теперь я снова слушаю всех!"

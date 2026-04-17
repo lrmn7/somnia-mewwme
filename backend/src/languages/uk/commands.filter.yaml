@@ -1,0 +1,55 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+### All filter command!
+filter_on: |
+  <:singing:1291127658448424990> **Фільтр %{name} увімкнено!**
+  <:blank:1291123023679586324><:sparkles:1291517200771059754> **Сподіваюся, вам сподобається це звучання!**
+filter_already: "Га? VST %{name} вже увімкнений... Я нічого не можу тут зробити."
+filter_number: "Це не число, яке я можу ввести в еквалайзер..."
+filter_greater: "Число має бути більше за **0**!"
+filter_less: "Ого! Забагато! Може, менше за **10** буде краще..."
+
+### Bassboost command!
+bassboost_set: "**Бас-буст встановлено на %{amount}дБ**"
+bassboost_limit: "Будь ласка, використовуйте число від **-10** до **10**"
+
+### Equalizer command!
+eq_author: "Еквалайзер"
+eq_icon: "https://i.pinimg.com/originals/cb/17/b8/cb17b80a942d7c317a35ff1324fae12f.gif"
+eq_desc: |
+  Є **10 смуг**, які можна встановити від **-10** до **10**.
+  Вам не потрібно вводити всі, лише ті, які хочете змінити.
+  Якщо хочете пропустити одну, просто залиште її як **0**.
+eq_field_title: "Приклад:"
+eq_field_value: "%{prefix}eq 2 3 0 8 0 5 0 -5 0 0"
+eq_footer: "Скинути еквалайзер • %{prefix}eq reset"
+eq_on: "Еквалайзер встановлено на **%{bands}**!"
+eq_number: "Будь ласка, введіть дійсне число!"
+eq_greater: "Число має бути більше за **-10**"
+eq_than: "Число має бути менше за **10**"
+
+### Pitch command!
+pitch_on: "Гаразд, висота тону тепер **%{amount}**!"
+
+### Rate command!
+rate_on:  "Гаразд! Швидкість тепер **%{amount}x**!"
+
+### Speed command!
+speed_on: "Звичайно, змінюю швидкість на **%{amount}x**!"
+
+### Reset command!
+reset_on: "**Скидання** всіх VST! Повертаємо оригінальне звучання!"
+reset_already:  "VST **вже вимкнені**, забули?"
+
+# Invalid Number
+number_invalid: "Це не число, з яким я можу працювати... Спробуйте ще раз з дійсним числом."

@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "شاهد اختياراتي لك!~"
+search_desc: "### مرحباً! وجدت نتائج لطلبك"
+search_end_desc2: "### يا إلهي! %{user}، لم تختر أغنية في الوقت المحدد\n**حاول مرة أخرى!**"
+search_footer: "تم العثور على %{countSong} مقطع"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` استمتع بها ♥"
+
+search_active: "أنت تبحث عن شيء بالفعل! انتظر حتى ينتهي البحث الأخير قبل بدء بحث جديد."
+search_no_result: "لم يتم العثور على نتائج لبحثك :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` استمتع بها ♥"
+no_songs_playing: "لا توجد أغنية قيد التشغيل حالياً!"
+
+### Autoplay command!
+autoplay_off: "التشغيل التلقائي الآن **مُعطّل**"
+autoplay_on: "التشغيل التلقائي الآن **مُفعّل**"
+autoplay_no_songs_playing: "لا توجد أغانٍ قيد التشغيل!"
+
+### ClearQueue command!
+clearqueue_msg: "تم **مسح** قائمة الانتظار"
+
+### Forward command!
+forward_msg: "**%{user} تقدّم بـ %{title} إلى** `%{duration}`"
+forward_beyond: "الأغنية على وشك الانتهاء. لا يمكنك التقدم أبعد من ذلك!"
+
+### PlayNext command!
+playnext_desc: "### %{name} التالي في التشغيل ♪"
+playnext_queue_empty: "قائمة الانتظار فارغة. يرجى إضافة بعض الأغاني أولاً"
+playnext_notfound: "لم يتم العثور على الأغنية!"
+
+# Execute when invalid
+no_node: "**لم يتم العثور على خادم Lavalink. يرجى المحاولة مرة أخرى بعد 5 دقائق**"
+
+### Join command!
+join_msg: "تم إنشاء المشغل بنجاح والانضمام إلى %{channel}"
+join_already: "أنا بالفعل في %{channel}"
+join_no_in_voice: "أنت لست في قناة صوتية!"
+join_no_same_voice: "أنت لست في نفس القناة الصوتية معي!"
+
+### Loop command!
+loop_current: "الآن يتم تكرار %{title}"
+loop_all: "**تم تفعيل وضع تكرار قائمة الانتظار**"
+unloop_all: "**تم تعطيل وضع التكرار**"
+loop_invalid: "وضع تكرار غير صالح. يرجى استخدام **Disabled**"
+loop_already: "وضع التكرار بالفعل **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "يرجى تقديم **اسم أغنية** صالح"
+lyrics_title: "كلمات **%{song}**"
+lyrics_notfound: "**تعذر العثور على كلمات هذه الأغنية!**"
+lyrics_toolong: "**الكلمات طويلة جداً، الحد الأقصى 4048 حرفاً!**"
+lyrics_disable: " **الكلمات مُعطّلة حالياً!**"
+lyrics_noquery: "**يرجى تقديم **اسم أغنية** صالح"
+lyrics_error: "**خطأ: %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "يعمل الآن"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "الفنان"
+nowplaying_total_duration_title: "المدة"
+nowplaying_request_title: "طُلب بواسطة"
+
+### Pause command!
+pause_msg: "**المقطع %{title} متوقف مؤقتاً حالياً!"
+
+### Play command!
+play_no_same_voice: "أنت لست في نفس القناة الصوتية معي!"
+play_no_in_voice: "أنت لست في قناة صوتية!"
+play_arg: "يرجى تقديم اسم أغنية أو رابط صالح!"
+play_emoji: "**عفواً! هذا إيموجي، لا يمكنك تشغيل الأغاني باستخدام الإيموجي**"
+play_match: "**عفواً! الأغنية غير موجودة! يرجى المحاولة مرة أخرى**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## كان ذلك سهلاً!
+  ### تمت إضافة %{title} إلى قائمة الانتظار
+
+play_queue_max: |
+  يا إلهي!>,.,< قائمة الانتظار طويلة جداً. الحد الأقصى %{limitqueue} أغنية.
+  قم بالترقية إلى [**premium**](%{premium}) للوصول غير المحدود لقائمة الانتظار!
+
+play_playlist_max: |
+  يا إلهي!>,.,< قائمة التشغيل طويلة جداً. الحد الأقصى %{limitqueue} أغنية.
+  قم بالترقية إلى [**premium**](%{premium}) للوصول غير المحدود لقائمة التشغيل!
+
+### Previous command!
+previous_notfound: |
+  **لم يتم العثور على أغنية سابقة في قائمة الانتظار!
+  لماذا لا تستخدم /play لإضافة المزيد من المقاطع ومواصلة الموسيقى؟**
+previous_msg: |
+  **العودة إلى الأغنية السابقة!
+  يتم الآن تشغيل %{title}**
+
+### Queue command!
+queue_number_invalid: "يرجى إدخال رقم صالح!"
+queue_title: "قائمة الانتظار قيد التشغيل..."
+queue_description: "**%{title}**\n\n**باقي قائمة الانتظار %{rest}**"
+queue_footer: "الصفحة • %{page}/%{pages} | الأغاني • %{queue_lang} | المدة الإجمالية • %{duration}"
+queue_notnumber: "يرجى إدخال رقم صفحة صالح!"
+queue_page_notfound: "يوجد فقط **%{page} صفحات**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " يرجى إدخال رقم صالح!"
+removetrack_already: "**لا أستطيع إزالة أغنية قيد التشغيل بالفعل**"
+removetrack_notfound: "**عذراً %{user}، لم يتم العثور على الأغنية!**"
+removetrack_desc: "**تمت إزالة %{title} من قائمة الانتظار!**"
+
+### Replay command!
+replay_msg: "**%{user} أعاد تشغيل %{title}**"
+replay_not_seekable: "لا يمكن إعادة تشغيل المقطع **%{title}**."
+
+### Resume command!
+resume_msg: "**تم استئناف التشغيل %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} أرجع %{title} إلى** `%{duration}`"
+rewind_beyond: "الأغنية بدأت للتو. لا يمكنك الإرجاع أبعد من ذلك!"
+
+### Seek command!
+seek_beyond: "لا يمكنك التقدم إلى ما بعد مدة الأغنية!"
+seek_invalid: "مدة تقدم غير صالحة. يرجى استخدام طابع زمني صالح. مثال: **1:30**"
+seek_msg: "**تم التقدم في %{title} إلى** `%{duration}`"
+seek_not_seekable: "لا يمكن إرجاع أو تقديم المقطع **%{title}**."
+
+### Skip command!
+skip_notfound: |
+  **لم يتم العثور على أغنية للتخطي إليها! يبدو أنه لا يوجد شيء للتخطي.
+  لنستمر بـ /play وإضافة المزيد من المقاطع!**
+skip_msg: "**تم تخطي %{title}**"
+skip_number_invalid: "يرجى إدخال رقم صالح!"
+
+### Stop command!
+stop_msg: "**تم إيقاف %{title}**"
+
+### Shuffle command!
+shuffle_title: "خلط قائمة الانتظار"
+
+### Volume command!
+volume_number_invalid: "يرجى إدخال رقم صالح!"
+volume_invalid: "مستوى صوت غير صالح. يرجى استخدام رقم بين **1** و **100**"
+volume_msg: "**تم ضبط مستوى الصوت على %{volume}%، استمتع %{user}**"
+volume_max: "**مستوى الصوت بالفعل على الحد الأقصى 100%**"
+
+### play source commands
+url_no_allowed: "يرجى استخدام اسم الأغنية/اسم الفنان (الروابط غير مسموحة)"
+play_arg_source: "يرجى تقديم اسم أغنية/فنان صالح!"
+
+## Temporarily disabled commands
+youtube_disabled: "دعم YouTube غير متاح مؤقتاً"
+autoplay_disabled: "التشغيل التلقائي مُعطّل مؤقتاً."

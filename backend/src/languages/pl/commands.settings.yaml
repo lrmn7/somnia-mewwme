@@ -1,0 +1,231 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### 24/7 command!
+247_on: "Tryb 24/7 jest teraz **Włączony**"
+247_off: "Tryb 24/7 jest teraz **Wyłączony**"
+247_already: "Tryb 24/7 jest już **%{mode}**"
+247_arg_error: "Nieprawidłowy tryb 24/7. Proszę użyj %{text}"
+247_no_in_voice: "Nie jesteś na kanale głosowym!"
+
+
+### Set Language command! ###
+provide_lang: "**Nieprawidłowy język. Proszę użyj** `%{languages}`"
+lang_set: "**Język został ustawiony na** `%{language}`"
+lang_change: "**Język został zmieniony na** `%{language}`"
+
+### Prefix command! ###
+prefix_arg: "Proszę podaj prawidłowy prefix!"
+prefix_length: "**Prefix nie może być dłuższy niż 10 znaków**"
+prefix_set: "**Prefix został ustawiony na** `%{prefix}`"
+prefix_change: "**Prefix został zmieniony na** `%{prefix}`"
+
+### Control command!
+control_set: "**Tryb sterowania odtwarzaczem został ustawiony na %{toggle}**"
+control_arg_error: "Nieprawidłowy argument. Proszę użyj %{text}"
+control_already: "Powiadomienia o utworach są już **%{mode}**"
+
+### Setup Music Req command! ###
+setup_arg_error: "Nieprawidłowe! Proszę użyj %{text}"
+setup_enable: "**Ups! System muzyczny już istnieje.**"
+setup_topic: "♪ Ci, którzy chcą śpiewać, zawsze znajdą piosenkę. ♪"
+setup_msg: "*`Pomyślnie skonfigurowano system muzyczny w`* %{channel}\n```Uwaga: Nie usuwaj żadnych wiadomości, które utworzyłem, aby mógł poprawnie działać.```"
+setup_null: "*`Pomyślnie usunięto kanał konfiguracji!`*"
+setup_deleted: "*`Pomyślnie usunięto kanał konfiguracji!`*"
+setup_null_inguild: "**Nie znaleziono systemu muzycznego na tym serwerze! Gotowy do usunięcia danych**"
+setup_queuemsg: "**Dołącz do kanału głosowego i odtwarzaj utwory używając nazwy lub URL tutaj!**"
+setup_playembed_author: "Żaden utwór nie jest obecnie odtwarzany"
+
+### Themes command!
+error_themes: "Nieprawidłowe... Spróbuj ponownie."
+succes_themes: "**Pomyślnie zmieniono motyw na %{themes}**"
+
+### Last FM Login command!
+lastfm_login_footer: "Uwaga: Ten link wygaśnie za %{expired}."
+lastfm_login_title: "Logowanie Last.fm"
+lastfm_login_desc: "Czy chcesz udzielić autoryzacji do swojego konta [Last.fm](https://www.last.fm/user/eleremen)?\nJeśli tak, kliknij przycisk poniżej, aby rozpocząć proces autoryzacji."
+lastfm_not_login_desc: "Nie jesteś zalogowany na Last.fm"
+
+### Last FM Logout command!
+lastfm_logout_title: "Wylogowanie Last.fm"
+lastfm_logout_desc: "Pomyślnie wylogowano z Last.fm"
+
+### Last FM Feature Disable!
+lastfm_feature_disabled_title: "Funkcja Last.fm jest wyłączona."
+lastfm_feature_disabled_desc: "Funkcja Last.fm jest obecnie wyłączona. Skontaktuj się z administratorem, aby uzyskać więcej informacji."
+
+### Notify Youtube Feature command!
+notify_youtube_not_found: "Nie znaleziono powiadomienia dla kanału YouTube **%{ytchannel}**."
+notify_youtube_removed: "Usunięto powiadomienie dla kanału YouTube **%{ytchannel}**."
+notify_youtube_disabled: "Funkcja powiadomień YouTube jest obecnie wyłączona. Skontaktuj się z zespołem, aby uzyskać więcej informacji."
+notify_youtube_already: "Powiadomienia dla kanału YouTube %{ytchannel} są już skonfigurowane."
+notify_youtube_invalid_channel: "Wystąpił błąd przy określaniu prawidłowego kanału tekstowego. Proszę sprawdź!"
+notify_youtube_set: "Powiadomienie YouTube zostało ustawione dla **%{ytchannel}** w %{channelid}."
+notify_youtube_404: |
+  Nie można znaleźć podanego ID kanału YouTube.
+  Aby znaleźć ID kanału, przejdź na stronę kanału YouTube i sprawdź URL.
+  ID kanału to ciąg liter i cyfr po `/channel/` (na przykład: `UC_x5XG1OV2P6uZZ5FSM9Ttw`).
+notify_youtube_limit_reached_non_premium: |
+   Osiągnięto limit %{limit} powiadomień.
+   Ulepszając do [premium](%{premium}), możesz ustawić do %{limitpremium} powiadomień.
+
+notify_youtube_limit_reached_premium: |
+   Osiągnięto limit %{limit} powiadomień.
+   To jest maksymalny dozwolony limit. Rozważ usunięcie niektórych powiadomień, aby zrobić miejsce na nowe.
+
+### Notify Twitch Feature command!
+notify_twitch_not_found: "Nie znaleziono powiadomienia dla nazwy użytkownika Twitch **%{twitchusername}**."
+notify_twitch_removed: "Usunięto powiadomienie dla nazwy użytkownika Twitch **%{twitchusername}**."
+notify_twitch_disabled: "Funkcja powiadomień Twitch jest obecnie wyłączona. Skontaktuj się z zespołem, aby uzyskać więcej informacji."
+notify_twitch_already: "Masz już skonfigurowane powiadomienia dla kanału Twitch %{twitchusername}."
+notify_twitch_invalid_channel: "Wystąpił błąd przy określaniu prawidłowego kanału tekstowego. Proszę sprawdź!"
+notify_twitch_set: "Powiadomienie Twitch zostało ustawione dla **%{twitchusername}** w %{channelid}."
+notify_twitch_error: "Wystąpił nieoczekiwany błąd podczas przetwarzania powiadomienia Twitch dla **{twitchusername}** na kanale **{channelid}**. Spróbuj ponownie lub skontaktuj się z pomocą techniczną, jeśli problem będzie się powtarzał."
+notify_twitch_limit_reached_non_premium: |
+   Osiągnięto limit %{limit} powiadomień.
+   Ulepszając do [premium](%{premium}), możesz ustawić do %{limitpremium} powiadomień.
+
+notify_twitch_limit_reached_premium: |
+   Osiągnięto limit %{limit} powiadomień.
+   To jest maksymalny dozwolony limit. Rozważ usunięcie niektórych powiadomień, aby zrobić miejsce na nowe.
+
+### Temp Voice Feature command!
+tempvoice_setup: "Funkcja tymczasowego kanału głosowego została %{status}."
+tempvoice_disabled: "Tymczasowy kanał głosowy został wyłączony."
+
+### Status Voice Channel Feature command!
+status_voice_channel_error: "Nieprawidłowe... tylko %{text}."
+status_voice_channel_true: "Status kanału głosowego został ustawiony na **%{type}**."
+status_voice_channel_false: "Status kanału głosowego został ustawiony na **%{type}**."
+
+
+### Patreon Claim command!
+not_in_guild: "Ta komenda może być wykonana tylko na serwerze!"
+no_data_patreon: "Nie znaleziono danych Patreon (błąd bazy danych)"
+no_data_patreon_title: "Nie znaleziono"
+no_data_patreon_desc: |
+  Jeśli już subskrybujesz, upewnij się, że twoje konto Discord jest połączone z Patreon!
+no_data_patreon_footer: "Synchronizacja Patreon może chwilę potrwać, proszę sprawdź ponownie wkrótce"
+no_patreon_guild_membership: |
+  witaj, twój plan patreon to **poziom użytkownika**.
+  proszę ulepsz do **poziomu serwera**, aby odblokować dostęp do premium serwera.
+patreon_guild_membership_full_quota: |
+  wykorzystałeś cały limit serwerów!
+  **status:** %{status} serwerów wykorzystanych.
+
+  rozwiązanie:
+  1. ulepsz swój poziom na patreon.
+  2. lub wyłącz premium na swoim starym serwerze.
+patreon_guild_membership_already_before: "Już wcześniej aktywowałeś premium na tym serwerze!"
+patreon_guild_membership_already: "**JUŻ PREMIUM**, ponieważ jest sponsorowany przez kogoś innego.\nZachowaj swój limit dla innych serwerów!"
+patreon_guild_membership_claim_title: "Potwierdzenie aktywacji"
+patreon_guild_membership_claim_desc: |
+  czy na pewno chcesz aktywować **premium serwera** dla:
+  **%{guildName}**
+
+  ta akcja wykorzysta **1 limit serwera**.
+  pozostały limit: **%{status}**
+patreon_guild_membership_claim_success: |
+  sukces! **%{guildName}** jest teraz **serwerem premium**.
+
+  **sponsor:** %{user}
+  **pozostały limit:** %{status}
+  dziękujemy za wsparcie na patreon!
+patreon_guild_membership_claim_success_title: "💎 Premium aktywowane!"
+patreon_guild_membership_claim_cancel: "Aktywacja premium anulowana."
+patreon_guild_membership_claim_norespon: "Aktywacja została automatycznie anulowana z powodu braku odpowiedzi."
+
+### Patreon Claim command Logs!
+patreon_guild_membership_claim_logs_title: "🏰 Serwer aktywowany (Patreon)"
+patreon_guild_membership_claim_logs_desc: |
+  **sponsor:** %{sponsorTag} %{sponsorId}
+  **docelowy serwer:** %{guildName} %{guildId}
+  **status limitu:** %{status}
+
+### Patreon UNClaim command!
+patreon_guild_not_owned_by_user: "Nie możesz cofnąć premium tego serwera, ponieważ go nie zarejestrowałeś."
+patreon_guild_unclaim_title: "Potwierdzenie cofnięcia Premium"
+patreon_guild_unclaim_desc: |
+  Czy na pewno chcesz **ANULOWAĆ** status Premium serwera **%{guildName}**?
+  **Skutki:** Funkcje premium zostaną wyłączone na tym serwerze.
+  Twój limit serwerów zostanie przywrócony (+1).
+  Obecny pozostały limit: **%{status}**
+patreon_guild_unclaim_success_title: "Premium cofnięte"
+patreon_guild_unclaim_success: |
+  Status premium dla **%{guildName}** został pomyślnie cofnięty.
+  **Przywrócony limit:** 1 serwer
+  **Nowy pozostały limit:** %{status}
+patreon_guild_unclaim_cancel: "Proces cofnięcia premium anulowany."
+patreon_guild_unclaim_norespon: "⏱️ Upłynął czas. Proces anulowany."
+
+### Patreon UNClaim command Logs!
+patreon_guild_unclaim_logs_title: "Cofnięte serwery (Patreon)"
+patreon_guild_unclaim_logs_desc: |
+  **Użytkownik:** %{sponsorTag} %{sponsorId}
+  **Serwer:** %{guildName}} %{guildId}
+  **Przywrócony limit:** %{status}
+
+patreon_kofi_claim_log_desc: |
+  **Użytkownik:** %{userTag} (%{userId})
+  **Serwer:** %{guildName} (%{guildId})
+  **Limit:** %{quota}
+  **Wygasa:** %{expires}
+
+patreon_kofi_claim_log_title: "🏗️ %{platform} Akcja: %{action}"
+
+### Kofi Claim command!
+no_data_kofi: "Nie znaleziono ID transakcji lub został już wykorzystany."
+kofi_linked_success_title: "Płatność połączona pomyślnie!"
+kofi_linked_success_desc: "Teraz możesz używać `/premium claim <kofi>` bez TxID."
+kofi_no_data_title: "Nie znaleziono danych!"
+kofi_no_data_desc: |
+  Jeśli już zapłaciłeś, ale nie połączyłeś swojego konta Discord z Kofi
+  użyj: `/premium claim <kofi> <transaction_id>`
+kofi_no_server_quota_desc: "Brak limitu, ale jesteś użytkownikiem premium."
+kofi_full_server_quota_title: "Limit pełny!"
+kofi_full_server_quota_desc: "Wykorzystałeś **%{quota}** miejsc na serwery."
+kofi_server_already_claim_desc: "**Już aktywne!**\nJuż wcześniej aktywowałeś Premium na tym serwerze."
+kofi_server_already_active_desc: " **Już Premium!**\nTen serwer został już aktywowany jako premium przez innego użytkownika."
+kofi_guild_membership_claim_success: |
+  Premium zostało pomyślnie aktywowane!
+  **Wykorzystanie limitu:** %{quota}
+  **Wygasa za:** %{expires}
+kofi_guild_membership_claim_footer: "Dziękujemy za wsparcie!"
+kofi_action_title: "🏗️ Ko-fi Akcja: %{type}"
+kofi_action_description: "**Użytkownik:** %{userTag} (`%{userId}`)\n**Serwer:** %{guildName} (`%{guildId}`)\n**Akcja:** %{action}\n**Limit:** %{quota}"
+kofi_action_activation: "Serwer aktywowany"
+kofi_action_manual_link: "Płatność ręcznie połączona"
+
+## Premium Kofi UnClaim
+kofi_guild_unclaim_success_title: "Premium cofnięte"
+kofi_guild_unclaim_success_desc: |
+  Status premium dla **%{guildName}** został pomyślnie cofnięty.
+  **Przywrócony limit:** 1 serwer
+kofi_guild_not_owned_by_user: "Nie możesz cofnąć premium tego serwera, ponieważ go nie zarejestrowałeś."
+
+## Premium UnClaim logs
+premium_unclaim_log_title: "Cofnięte serwery %{platform}"
+premium_unclaim_log_desc: |
+  **Użytkownik:** %{userTag} %{userId}
+  **Serwer:** %{guildName}} %{guildId}
+  **Przywrócony limit:** %{quota}
+
+
+### DjRole ###
+dj_role_disabled: "System roli DJ został **wyłączony**."
+dj_role_missing_role: "Musisz podać rolę, aby użyć akcji `set`."
+dj_role_set: |
+  Rola DJ została ustawiona na %{role}.
+  Status: **Włączony**
+  **Dotknięte komendy:**
+  %{commands}

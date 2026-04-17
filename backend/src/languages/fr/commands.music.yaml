@@ -1,0 +1,163 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### Search command!
+search_placeholder: "Decouvrez mes choix pour vous !~"
+search_desc: "### HE ! Des resultats trouves pour votre demande"
+search_end_desc2: "### OMG ! %{user}, vous n'avez pas selectionne de chanson a temps\n**Reessayez !**"
+search_footer: "%{countSong} morceaux trouves"
+search_end_desc1: "## [`%{title}`](%{url}) `%{author}` bonne ecoute ♥"
+
+search_active: "Vous etes deja en train de chercher quelque chose ! Attendez que la derniere recherche se termine avant d'en lancer une nouvelle."
+search_no_result: "Aucun resultat trouve pour votre recherche :("
+play_search_track: "## [`%{title}`](%{url}) `%{author}` bonne ecoute ♥"
+no_songs_playing: "Aucune chanson en cours de lecture !"
+
+### Autoplay command!
+autoplay_off: "La lecture automatique est maintenant **Desactivee**"
+autoplay_on: "La lecture automatique est maintenant **Activee**"
+autoplay_no_songs_playing: "Aucune chanson en cours de lecture !"
+
+### ClearQueue command!
+clearqueue_msg: "La file d'attente a ete **Videe**"
+
+### Forward command!
+forward_msg: "**%{user} a avance %{title} a** `%{duration}`"
+forward_beyond: "La chanson est sur le point de se terminer. Vous ne pouvez pas avancer au-dela !"
+
+### PlayNext command!
+playnext_desc: "### %{name} Prochain a jouer ♪"
+playnext_queue_empty: "La file d'attente est vide. Veuillez d'abord ajouter des chansons"
+playnext_notfound: "Chanson introuvable !"
+
+# Execute when invalid
+no_node: "**Aucun serveur Lavalink n'a ete trouve. Veuillez reessayer apres 5 minutes**"
+
+### Join command!
+join_msg: "Le lecteur a ete cree avec succes et a rejoint %{channel}"
+join_already: "Je suis deja dans %{channel}"
+join_no_in_voice: "Vous n'etes pas dans un salon vocal !"
+join_no_same_voice: "Vous n'etes pas dans le meme salon vocal que moi !"
+
+### Loop command!
+loop_current: "Lecture en boucle de %{title}"
+loop_all: "**Le mode boucle de la FILE D'ATTENTE a ete active**"
+unloop_all: "**Le mode boucle a ete DESACTIVE**"
+loop_invalid: "Mode de boucle invalide. Veuillez utiliser **Disabled**"
+loop_already: "Le mode boucle est deja **%{mode}**"
+
+### Lyrics command!
+provide_lyrics: "Veuillez fournir un **nom de chanson** valide"
+lyrics_title: "Paroles de **%{song}**"
+lyrics_notfound: "**Impossible de trouver les paroles de cette chanson !**"
+lyrics_toolong: "**Paroles trop longues, maximum 4048 caracteres autorises !**"
+lyrics_disable: " **Les paroles sont actuellement desactivees !**"
+lyrics_noquery: "**Veuillez fournir un **nom de chanson** valide"
+lyrics_error: "**Erreur : %{error}**"
+
+### Nowplaying command!
+nowplaying_track_author: "EN COURS DE LECTURE"
+nowplaying_track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+
+nowplaying_author_title: "Auteur"
+nowplaying_total_duration_title: "Duree"
+nowplaying_request_title: "Demande par"
+
+### Pause command!
+pause_msg: "**Le morceau %{title} est actuellement en pause !"
+
+### Play command!
+play_no_same_voice: "Vous n'etes pas dans le meme salon vocal que moi !"
+play_no_in_voice: "Vous n'etes pas dans un salon vocal !"
+play_arg: "Veuillez fournir un nom de chanson ou une URL valide !"
+play_emoji: "**Oups ! C'est un emoji, vous ne pouvez pas jouer de chansons avec un emoji**"
+play_match: "**Oups ! Desole, chanson introuvable ! Veuillez reessayer**"
+play_track: "### %{title}"
+play_result: "### %{title}"
+play_playlist: |
+  ## C'etait facile !
+  ### Votre %{title} a ete ajoutee a la file d'attente
+
+play_queue_max: |
+  OMG !>,.,< La file d'attente est trop longue. Maximum %{limitqueue} chansons.
+  Passez au [**premium**](%{premium}) pour un acces illimite a la file d'attente !
+
+play_playlist_max: |
+  OMG !>,.,< La playlist est trop longue. Maximum %{limitqueue} chansons.
+  Passez au [**premium**](%{premium}) pour un acces illimite aux playlists !
+
+### Previous command!
+previous_notfound: |
+  **Aucune chanson precedente trouvee dans la file d'attente !
+  Pourquoi ne pas /play plus de morceaux et continuer la musique ?**
+previous_msg: |
+  **Retour a la chanson precedente !
+  Lecture en cours de %{title}**
+
+### Queue command!
+queue_number_invalid: "Veuillez fournir un nombre valide !"
+queue_title: "File d'attente en cours..."
+queue_description: "**%{title}**\n\n**Reste de la file d'attente %{rest}**"
+queue_footer: "Page • %{page}/%{pages} | Chansons • %{queue_lang} | Duree totale • %{duration}"
+queue_notnumber: "Veuillez fournir un numero de page valide !"
+queue_page_notfound: "Il n'y a que **%{page} pages**"
+
+### RemoveTrack command!
+removetrack_number_invalid: " Veuillez fournir un nombre valide !"
+removetrack_already: "**Je ne peux pas supprimer une chanson qui est deja en cours de lecture**"
+removetrack_notfound: "**Desole %{user}, chanson introuvable !**"
+removetrack_desc: "**%{title} a ete supprime de la file d'attente !**"
+
+### Replay command!
+replay_msg: "**%{user} rejoue %{title}**"
+replay_not_seekable: "Le morceau **%{title}** ne peut pas etre rejoue."
+
+### Resume command!
+resume_msg: "**Lecture reprise %{title}"
+
+### Rewind command!
+rewind_msg: "**%{user} a rembobine %{title} a** `%{duration}`"
+rewind_beyond: "La chanson vient de commencer. Vous ne pouvez pas rembobiner au-dela !"
+
+### Seek command!
+seek_beyond: "Vous ne pouvez pas avancer au-dela de la duree de la chanson !"
+seek_invalid: "Duree de recherche invalide. Veuillez utiliser un horodatage valide. Exemple : **1:30**"
+seek_msg: "**%{title} avance a** `%{duration}`"
+seek_not_seekable: "Le morceau **%{title}** ne peut pas etre rembobine ou avance."
+
+### Skip command!
+skip_notfound: |
+  **Aucune chanson trouvee a passer ! Il semble qu'il n'y ait rien a passer.
+  Continuons /play en ajoutant plus de morceaux !**
+skip_msg: "**%{title} a ete passe**"
+skip_number_invalid: "Veuillez fournir un nombre valide !"
+
+### Stop command!
+stop_msg: "**%{title} a ete arrete**"
+
+### Shuffle command!
+shuffle_title: "Melange la file d'attente"
+
+### Volume command!
+volume_number_invalid: "Veuillez fournir un nombre valide !"
+volume_invalid: "Volume invalide. Veuillez utiliser un nombre entre **1** et **100**"
+volume_msg: "**Volume regle a %{volume}%, Profitez-en %{user}**"
+volume_max: "**Le volume est deja au maximum de 100%**"
+
+### play source commands
+url_no_allowed: "Veuillez utiliser le nom de la chanson/artiste (URL non autorisee)"
+play_arg_source: "Veuillez fournir un nom de chanson/artiste valide !"
+
+## Temporarily disabled commands
+youtube_disabled: "Le support YouTube est temporairement indisponible"
+autoplay_disabled: "La lecture automatique est temporairement desactivee."

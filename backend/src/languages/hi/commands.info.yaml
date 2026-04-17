@@ -1,0 +1,110 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### About commands
+about_desc1: "**जहाँ गाने की इच्छा रखने वालों को हमेशा एक गीत मिलता है ♪\nआज ही अपने Discord सर्वर में संगीत की धुन से जुड़ें!**"
+about_desc2: |
+  ・इस सर्वर के लिए बॉट प्रीफ़िक्स `%{prefix}` है
+  ・प्रीफ़िक्स बदलने के लिए `%{prefix} prefix <new prefix>` का उपयोग करें
+  ・लिंक या सर्च टर्म से ट्रैक बजाएँ `%{prefix} play`
+  अधिक कमांड्स के लिए हमारी **[वेबसाइट](%{website})** पर जाएँ या `%{prefix} help` कमांड का उपयोग करें।
+about_desc3: |
+  **ध्यान दें!**
+  मुझे प्राथमिक रूप से `Administrator` अनुमतियाँ चाहिए, लेकिन...
+  अगर आप मुझे वो अनुमतियाँ नहीं भी देते हैं, तो भी मैं काम कर सकता हूँ, लेकिन हो सकता है मैं वो सब कुछ न कर पाऊँ जो मैं कर सकता हूँ। बस बता रहा हूँ!
+
+  **सहायता और समर्थन**
+  अगर आपको मदद चाहिए, अपडेट और समस्याओं के बारे में जानकारी पाना चाहते हैं या समुदाय से जुड़ना चाहते हैं तो हमारे **[सपोर्ट सर्वर](%{serversupport})** से जुड़ें!
+
+### Help command!
+finder_invalid: "अमान्य कमांड"
+finder_example: "मैं आपकी इसे ढूँढने में मदद नहीं कर सकता! कोई *असली* कमांड खोजें!"
+finder_name: "**कमांड:**"
+finder_des: " **विवरण:**"
+finder_usage: "**उपयोग:**"
+finder_access: "**उपलब्ध:**"
+finder_aliases: "**उपनाम:**"
+finder_slash: "**स्लैश:**"
+finder_des_no: "विवरण नहीं मिल सका, इसके लिए माफ़ी..."
+finder_usage_no: "मुझे नहीं पता यह कमांड कैसे उपयोग करें।"
+finder_aliases_prefix: "[केवल प्रीफ़िक्स]"
+finder_aliases_no: "आप इस कमांड को उपनाम के साथ उपयोग नहीं कर सकते।"
+finder_slash_enable: "सक्षम"
+finder_slash_disable: "अक्षम"
+command_not_found: "अज्ञात कमांड"
+select_menu: "मेरे साथ संगीत का आनंद लें!"
+help_timeout: "सहायता मेन्यू का समय समाप्त हो गया, **`%{prefix}help`** या **`/help`** फिर से उपयोग करें।"
+homepage_title: "जहाँ गाने की इच्छा रखने वालों को हमेशा एक गीत मिलता है ♪\nआज ही अपने Discord सर्वर में संगीत की धुन से जुड़ें!"
+homepage_desc: |
+  <:blank:1291123023679586324><:247:1291128572764885092> **24/7 संगीत**
+  <:blank:1291123023679586324><:spotify:1279314159326068787> **Spotify कनेक्ट**
+  <:blank:1291123023679586324><:audio:1294292417423609918> **उच्च-गुणवत्ता ऑडियो**
+  <:blank:1291123023679586324><:lastfm:1279313820837482517> **Last.fm के साथ स्क्रोबल**
+  <:blank:1291123023679586324><:games:1311125732117843978> **मिनी गेम्स खेलें और प्रतिस्पर्धा करें**
+  <:blank:1291123023679586324><:music:1279313846665744425> **Spotify, Apple Music, Deezer और भी बहुत कुछ...**
+
+  <a:ask:1291123964080558121> **क्या आप [प्रीमियम](%{premium}) प्लान में अपग्रेड करना चाहते हैं?**
+### Rating bot commands! ###
+rating_desc: "हमारे Discord म्यूज़िक बॉट को स्टार रेटिंग देने के लिए धन्यवाद %{user}!"
+rating_succes: "आपकी रेटिंग के लिए धन्यवाद!\nआपकी रेटिंग सफलतापूर्वक सबमिट की गई है।"
+rating_failure: "रिपोर्ट भेजने में विफल। कृपया बाद में पुनः प्रयास करें।"
+
+### Report command #####
+report_provide_desc: "उफ़! अमान्य कमांड्स। कृपया अपना विवरण प्रदान करें"
+report_failure: "रिपोर्ट भेजने में विफल। कृपया बाद में पुनः प्रयास करें।"
+report_success: "आपकी रिपोर्ट के लिए धन्यवाद।\nरिपोर्ट समाधान के लिए सफलतापूर्वक सबमिट की गई है।"
+
+### Suggestions command #####
+suggestions_provide_desc: "उफ़! अमान्य कमांड्स। कृपया अपना विवरण प्रदान करें"
+suggestions_failure: "सुझाव भेजने में विफल। कृपया बाद में पुनः प्रयास करें।"
+suggestions_success: "आपके सुझाव के लिए धन्यवाद!\nआपका सुझाव सफलतापूर्वक सबमिट किया गया है।"
+
+### MyStats command ####
+mystats_error: "आपके आँकड़े जनरेट करने में त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।"
+
+### TopStats command ####
+topstats_error: "आँकड़े जनरेट करने में त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।"
+
+### Patreon Service Logs ###
+patreon_logs_desc: |
+  **स्थिति परिणाम:**
+  %{desc}
+
+patreon_logs_user_identity_title: "👤 उपयोगकर्ता पहचान"
+patreon_logs_user_identity_value: |
+  **नाम:** %{fullName}
+  **Discord:** <@%{discordId}> (`%{discordId}`)
+  **ईमेल:** %{email}
+
+patreon_logs_details_title: "Patreon विवरण"
+patreon_logs_details_value: |
+  **प्लेज:** $%{pledge}
+  **Patreon ID:** `%{patreonId}`
+  **स्थिति:** `%{status}`
+patreon_logs_date_title: "📅 तिथि"
+
+
+### Kofi Service Logs ###
+kofi_logs_user_identity_title: "उपयोगकर्ता पहचान"
+kofi_logs_user_identity_value: "**नाम:** %{fullName}\n**ईमेल:** ||%{email}||\n**सार्वजनिक:** %{dataPublic}"
+kofi_logs_discord_identity_title: "Discord पहचान"
+kofi_logs_discord_identity_value: "**उपयोगकर्ता:** %{discordUser}\n**ID:** %{discordId}"
+kofi_logs_payment_details_title: "भुगतान विवरण"
+kofi_logs_payment_details_value: "**राशि:** %{currency} %{amount}\n**टियर:** **%{tierName}**\n**प्रकार:** %{type}"
+kofi_logs_sub_status_title: "सदस्यता स्थिति"
+kofi_logs_sub_status_value: "**सदस्यता है:** %{isSub}\n**पहला भुगतान:** %{isFirst}"
+kofi_logs_message_title: "संदेश / कारण"
+kofi_logs_tech_title: "तकनीकी / लेन-देन ID"
+kofi_logs_tech_value: "**Ko-fi Tx ID:** %{kofiTxId}\n**Msg ID:** %{msgId}\n**URL:** [%{viewDetails}](%{url})\n**Token:** ||%{token}||"
+kofi_logs_view_details: "विवरण देखें"
+

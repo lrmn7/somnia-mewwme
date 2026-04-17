@@ -49,10 +49,17 @@ export default class {
           const wasInBotChannel = oldState.channelId === botChannelId;
           const nowInBotChannel = newState.channelId === botChannelId;
           if (wasInBotChannel !== nowInBotChannel) {
+            const user = newState.member?.user;
             client.dashboardEmit(
               newState.guild.id,
               nowInBotChannel ? "memberJoin" : "memberLeave",
-              { userId }
+              {
+                userId,
+                username: user?.username ?? userId,
+                globalName: user?.globalName ?? null,
+                avatarURL: user?.displayAvatarURL({ size: 64 }) ?? null,
+                bot: user?.bot ?? false,
+              }
             );
           }
         }

@@ -1,0 +1,45 @@
+#
+#  __  __            Made by Tragic              _
+# |  \/  |   L RMN - https://lrmn.is-a.dev      ( )
+# | \  / | _____      ____      ___ __ ___   ___|/ ___
+# | |\/| |/ _ \ \ /\ / /\ \ /\ / / '_ ` _ \ / _ \ / __|
+# | |  | |  __/\ V  V /  \ V  V /| | | | | |  __/ \__ \
+# |_|  |_|\___| \_/\_/    \_/\_/ |_| |_| |_|\___| |___/
+#
+#     Discord Support: https://meww.me/support
+#     Community Resources: https://meww.me/premium
+#
+
+
+### PLAYER MUSIC ###
+track_author: "EN COURS DE LECTURE"
+track_author_icon: "https://media.tenor.com/Sb0yPHMgNaUAAAAi/music-disc.gif"
+track_song_author: "Auteur"
+track_requested_by: "Demande par"
+track_duration: "Duree"
+no_same_voice: "Vous n'etes pas dans le meme canal vocal que moi !"
+filter_already: "**Le filtre %{name} est deja active**"
+filter_reset_on: "**Le filtre a ete reinitialise**"
+filter_reset_already: "**Le filtre a deja ete reinitialise**"
+no_player_filter: "**Je ne peux pas appliquer de filtre !**"
+filter_menu_on: "**Filtre %{name} active !**"
+
+player_get_exception: "Oups ! On dirait qu'il y a un probleme avec la piste. Voulez-vous que je reessaie ?"
+player_track_error: "La piste a rencontre un probleme. Pouvez-vous reessayer une fois de plus ?"
+player_track_stuck: "Je suis tellement triste :(, la piste est bloquee. Peut-etre qu'un nouvel essai nous remontera le moral ?"
+queue_end_desc: "Toutes les chansons sont terminees ! Besoin de plus de musique ?\nUtilisez **/play** pour continuer la fete !"
+
+leave_pause: "Etant donne que vous m'avez tous laisse seul :( Le lecteur a ete mis en pause."
+leave_resume: "Etant donne que quelqu'un m'a rejoint, le lecteur a repris la lecture."
+
+player_end: "Le canal est reste vide pendant presque 15 minutes, j'ai donc decide de partir car je n'aime pas etre seul"
+
+### Last FM Scrobble ###
+expired_login_session: "Votre session Last.fm a expire ou est invalide.\nVeuillez vous reauthentifier pour continuer a utiliser la fonctionnalite de scrobble."
+
+### Milestone Track ###
+milestone_track_footer: "%{user} • Ceux qui souhaitent chanter trouvent toujours une chanson ♪"
+milestone_track_desc: |
+  ## OH Hey
+  Vous avez ecoute **%{total}** pistes ! Votre playlist est-elle infinie, ou etes-vous simplement aussi passionne de musique ?
+
